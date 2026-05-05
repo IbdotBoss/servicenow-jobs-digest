@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Hunt UK Scraper using API endpoint
+Reed.co.uk Scraper using API endpoint
 """
 
 import asyncio
@@ -12,7 +12,7 @@ from playwright.async_api import async_playwright
 
 from ..job_model import Job
 
-class HuntUKScraper:
+class ReedScraper:
     async def scrape_jobs(self) -> List[Job]:
         jobs = []
         try:
@@ -31,15 +31,14 @@ class HuntUKScraper:
             await page.set_extra_http_headers({
                 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
                 'Accept': 'application/json',
-                'Referer': 'https://huntukvisasponsors.com/jobs',
+                'Referer': 'https://www.reed.co.uk/jobs/jobs-in-united-kingdom?q=ServiceNow',
             })
             
             # Build API URL
-            base_url = "https://api.huntukvisasponsors.com/api/v1/search/jobs/facets"
+            base_url = "https://www.reed.co.uk/jobs/jobs-in-united-kingdom"
             params = {
-                "search": "ServiceNow",
-                "location": "United Kingdom",
-                "limit": 50,
+                "q": "ServiceNow",
+                "format": "rss",
             }
             url = f"{base_url}?{'&'.join([f'{k}={v}' for k, v in params.items()])}"
             
@@ -56,34 +55,33 @@ class HuntUKScraper:
                         if status == 200:
                             body = await response.text()
                             try:
-                                json_data = json.loads(body)
-                                if 'jobs' in json_data:
-                                    for job_item in json_data['jobs'][:50]:
-                                        try:
-                                            title = job_item.get('title', '')
-                                            if not any(kw in title.lower() for kw in ['service-now', 'servicenow', 'service now']):
-                                                continue
-                                                
-                                            company = job_item.get('company', {}).get('name', '')
-                                            location = job_item.get('location', {}).get('name', '')
-                                            link = job_item.get('url', '')
-                                            if link and not link.startswith('http'):
-                                                link = f"https://huntukvisasponsors.com{link}"
+                                # Parse the HTML content to extract job data
+                                soup = BeautifulSoup(body, 'html.parser')
+                                job_items = soup.find_all('item')
+                                print(f"Found {len(job_items)} job items")
+                                
+                                for job_item in job_items[:50]:
+                                    try:
+                                        title = job_item.title.text if job_item.title else ''
+                                        if not any(kw in title.lower() for kw in ['service-now', 'servicenow', 'service now']):
+                                            continue
                                             
-                                            job = Job(
-                                                title=title,
-                                                company=company,
-                                                location=location,
-                                                link=link,
-                                                source="Hunt UK",
-                                                timestamp=datetime.now().isoformat()
-                                            )
-                                            jobs.append(job)
-                                            print(f"✅ Found job: {title} at {company}")
-                                        except Exception as e:
-                                            print(f"Error processing job item: {e}")
-                                else:
-                                    print(f"JSON response: {json.dumps(json_data, indent=2)[:200]}...")
+                                        company = job_item.find('recruiter').text if job_item.find('recruiter') else ''
+                                        location = job_item.find('location').text if job_item.find('location') else ''
+                                        link = job_item.link.text if job_item.link else ''
+                                        
+                                        job = Job(
+                                            title=title,
+                                            company=company,
+                                            location=location,
+                                            link=link,
+                                            source="Reed",
+                                            timestamp=datetime.now().isoformat()
+                                        )
+                                        jobs.append(job)
+                                        print(f"✅ Found job: {title} at {company}")
+                                    except Exception as e:
+                                        print(f"Error processing job item: {e}")
                                 break  # Success, break retry loop
                             except json.JSONDecodeError:
                                 print(f"Failed to parse JSON: {body[:500]}...")
@@ -105,7 +103,7 @@ class HuntUKScraper:
             await playwright.stop()
             
         except Exception as e:
-            print(f"Error scraping Hunt UK: {e}")
+            print(f"Error scraping Reed: {e}")
             
         return jobs
 
@@ -150,11 +148,11 @@ class HuntUKScraper:
             await self.save_to_db(jobs)
             return jobs
         except Exception as e:
-            print(f"Error in HuntUKScraper.run: {e}")
+            print(f"Error in ReedScraper.run: {e}")
             return []
 
 if __name__ == "__main__":
     from ..job_model import Job
-    scraper = HuntUKScraper()
+    scraper = ReedScraper()
     jobs = asyncio.run(scraper.run())
-    print(f"Found {len(jobs)} jobs from Hunt UK")
+    print(f"Found {len(jobs)} jobs from Reed")

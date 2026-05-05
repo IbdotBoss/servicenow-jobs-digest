@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test JSON Loading</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
+</head>
+<body>
+    <h1>Test JSON Loading</h1>
+    <div id="result"></div>
+    <script>
+        fetch('data/jobs.json')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('result').innerHTML = 
+                    `Loaded ${data.length} jobs successfully!`;
+            })
+            .catch(error => {
+                document.getElementById('result').innerHTML = 
+                    `Error: ${error.message}`;
+            });
+    </script>
+</body>
+</html>

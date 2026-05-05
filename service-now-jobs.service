@@ -1,0 +1,14 @@
+[Unit]
+Description=ServiceNow Jobs Scraper
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/hermes-workspace/servicenow-jobs-digest
+ExecStart=/usr/bin/python3 /home/ubuntu/hermes-workspace/servicenow-jobs-digest/scripts/scrape_all.py
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

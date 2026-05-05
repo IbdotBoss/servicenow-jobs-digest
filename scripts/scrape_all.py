@@ -1,251 +1,159 @@
 #!/usr/bin/env python3
 """
-ServiceNow Jobs Scraper - All-in-One
-Scrapes multiple sources and saves to JSON
+Hunt UK Scraper using API endpoint
 """
 
-import requests
-from bs4 import BeautifulSoup
-import re
-from datetime import datetime
-from job_model import Job, parse_date, normalize_location, extract_tags
+import asyncio
+from playwright.async_api import async_playwright
 import json
-from pathlib import Path
+from datetime import datetime
+from typing import List, Dict, Any, Optional
 
-# Configuration
-DATA_DIR = Path.home() / "hermes-workspace" / "servicenow-jobs-digest" / "docs" / "data"
-JSON_FILE = DATA_DIR / "jobs.json"
-DATA_DIR.mkdir(parents=True, exist_ok=True)
+from scripts.job_model import Job
 
-# Common headers
-HEADERS = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
-    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
-    "Accept-Language": "en-US,en;q=0.5",
-    "Accept-Encoding": "gzip, deflate",
-    "Connection": "keep-alive",
-    "Upgrade-Insecure-Requests": "1"
-}
+class HuntUKScraper:
+    async def scrape_jobs(self) -> List[Job]:
+        jobs = []
+        try:
+            # Use Playwright to make the API request with proper headers
+            playwright = await async_playwright().start()
+            browser = await playwright.chromium.launch(
+                headless=True,
+                args=['--no-sandbox', '--disable-dev-shm-usage']
+            )
+            context = await browser.new_context(
+                viewport={'width': 1920, 'height': 1080}
+            )
+            page = await context.new_page()
+            
+            # Set headers to mimic a real browser
+            await page.set_extra_http_headers({
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+                'Accept': 'application/json',
+                'Referer': 'https://huntukvisasponsors.com/jobs',
+            })
+            
+            # Build API URL
+            base_url = "https://api.huntukvisasponsors.com/api/v1/search/jobs/facets"
+            params = {
+                "search": "ServiceNow",
+                "location": "United Kingdom",
+                "limit": 50,
+            }
+            url = f"{base_url}?{'&'.join([f'{k}={v}' for k, v in params.items()])}"
+            
+            print(f"Fetching job data from API: {url}")
+            
+            # Handle rate limiting with retries
+            max_retries = 3
+            for attempt in range(max_retries):
+                try:
+                    response = await page.goto(url, timeout=30000)
+                    if response:
+                        status = response.status
+                        print(f"API response status: {status}")
+                        if status == 200:
+                            body = await response.text()
+                            try:
+                                json_data = json.loads(body)
+                                if 'jobs' in json_data:
+                                    for job_item in json_data['jobs'][:50]:
+                                        try:
+                                            title = job_item.get('title', '')
+                                            if not any(kw in title.lower() for kw in ['service-now', 'servicenow', 'service now']):
+                                                continue
+                                                
+                                            company = job_item.get('company', {}).get('name', '')
+                                            location = job_item.get('location', {}).get('name', '')
+                                            link = job_item.get('url', '')
+                                            if link and not link.startswith('http'):
+                                                link = f"https://huntukvisasponsors.com{link}"
+                                            
+                                            job = Job(
+                                                title=title,
+                                                company=company,
+                                                location=location,
+                                                link=link,
+                                                source="Hunt UK",
+                                                timestamp=datetime.now().isoformat()
+                                            )
+                                            jobs.append(job)
+                                            print(f"✅ Found job: {title} at {company}")
+                                        except Exception as e:
+                                            print(f"Error processing job item: {e}")
+                                else:
+                                    print(f"JSON response: {json.dumps(json_data, indent=2)[:200]}...")
+                                break  # Success, break retry loop
+                            except json.JSONDecodeError:
+                                print(f"Failed to parse JSON: {body[:500]}...")
+                                break
+                        elif status == 429:  # Too Many Requests
+                            print(f"Rate limited. Attempt {attempt + 1}/{max_retries}. Waiting 10 seconds...")
+                            await asyncio.sleep(10)
+                        else:
+                            print(f"Error: {await response.text()[:500]}")
+                            break
+                    else:
+                        print("No response from API")
+                        break
+                except Exception as e:
+                    print(f"Request failed: {e}")
+                    await asyncio.sleep(5)
+            
+            await browser.close()
+            await playwright.stop()
+            
+        except Exception as e:
+            print(f"Error scraping Hunt UK: {e}")
+            
+        return jobs
 
-def scrape_hunt_uk() -> list[Job]:
-    """Scrape Hunt UK Visa Sponsors"""
-    jobs = []
-    url = "https://huntukvisasponsors.com/job/search/?search=servicenow"
-    
-    try:
-        response = requests.get(url, headers=HEADERS, timeout=30)
-        response.raise_for_status()
-        soup = BeautifulSoup(response.text, 'html.parser')
+    async def save_to_db(self, jobs: List[Job]):
+        conn = sqlite3.connect("jobs.db")
+        cursor = conn.cursor()
         
-        job_cards = soup.find_all('div', class_=re.compile(r'job-listing|job-card|job-item'))
-        if not job_cards:
-            job_cards = soup.find_all('article')
+        cursor.execute('''
+            CREATE TABLE IF NOT EXISTS jobs (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                title TEXT NOT NULL,
+                company TEXT,
+                location TEXT,
+                link TEXT UNIQUE,
+                source TEXT,
+                timestamp TEXT,
+                visa_sponsorship TEXT,
+                remote_work TEXT
+            )
+        ''')
         
-        for card in job_cards[:15]:
+        for job in jobs:
             try:
-                job = parse_hunt_uk_job(card)
-                if job:
-                    jobs.append(job)
+                cursor.execute('''
+                    INSERT OR IGNORE INTO jobs 
+                    (title, company, location, link, source, timestamp, visa_sponsorship, remote_work)
+                    VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+                ''', (
+                    job.title, job.company, job.location, job.link, job.source,
+                    job.timestamp, job.visa_sponsorship, job.remote_work
+                ))
             except Exception as e:
-                continue
+                print(f"Error inserting job {job.link}: {e}")
                 
-    except Exception as e:
-        print(f"[Hunt UK] Error: {e}")
-    
-    return jobs
-
-def parse_hunt_uk_job(card) -> Job | None:
-    title_elem = card.find('h2') or card.find('h3') or card.find('a', class_=re.compile(r'title|job-title'))
-    if not title_elem:
-        return None
-    title = title_elem.get_text(strip=True)
-    
-    link_elem = card.find('a', href=True)
-    if not link_elem:
-        return None
-    link = link_elem['href']
-    if link.startswith('/'):
-        link = "https://huntukvisasponsors.com" + link
-    
-    company_elem = card.find('span', class_=re.compile(r'company|recruiter|employer'))
-    company = company_elem.get_text(strip=True) if company_elem else "Unknown Company"
-    
-    location_elem = card.find('span', class_=re.compile(r'location|place'))
-    location = location_elem.get_text(strip=True) if location_elem else "UK"
-    
-    date_elem = card.find('time') or card.find('span', class_=re.compile(r'date|posted'))
-    date_str = date_elem.get_text(strip=True) if date_elem else datetime.now().strftime("%Y-%m-%d")
-    date_str = re.sub(r'[^\d\w\s/]', '', date_str)
-    date = parse_date(date_str)
-    
-    return Job(
-        title=title,
-        company=company,
-        location=normalize_location(location),
-        date=date,
-        link=link,
-        source="hunt_uk",
-        sponsorship_confirmed=True,
-        tags=extract_tags(title, "")
-    )
-
-def scrape_linkedin() -> list[Job]:
-    jobs = []
-    base_url = "https://www.linkedin.com/jobs"
-    
-    params = {
-        "keywords": "ServiceNow",
-        "location": "United Kingdom",
-        "trk": "jobs_search_button",
-        "f_TP": "1"
-    }
-    
-    try:
-        response = requests.get(base_url, params=params, headers=HEADERS, timeout=30)
-        if response.status_code == 200:
-            soup = BeautifulSoup(response.text, 'html.parser')
-            job_cards = soup.find_all('li', class_=re.compile(r'job-card|job-item|base-card'))
-            for card in job_cards[:10]:
-                try:
-                    job = parse_linkedin_job(card)
-                    if job:
-                        job.source = "linkedin"
-                        job.sponsorship_confirmed = False
-                        jobs.append(job)
-                except: pass
-    except: pass
-    
-    return jobs
-
-def parse_linkedin_job(card) -> Job | None:
-    title_elem = card.find('h2') or card.find('h3')
-    if not title_elem: return None
-    title = title_elem.get_text(strip=True)
-    
-    link_elem = card.find('a', href=True)
-    if not link_elem: return None
-    link = link_elem['href']
-    if link and not link.startswith('http'):
-        link = f"https://www.linkedin.com{link}"
-    
-    company_elem = card.find('span', class_=re.compile(r'company|org|business-name'))
-    company = company_elem.get_text(strip=True) if company_elem else "Unknown"
-    
-    location_elem = card.find('span', class_=re.compile(r'location|place'))
-    location = location_elem.get_text(strip=True) if location_elem else "UK"
-    
-    date_elem = card.find('span', class_=re.compile(r'date|posted'))
-    date_str = date_elem.get_text(strip=True) if date_elem else datetime.now().strftime("%Y-%m-%d")
-    date_str = re.sub(r' ago', '', date_str)
-    date = parse_date(date_str)
-    
-    return Job(
-        title=title,
-        company=company,
-        location=normalize_location(location),
-        date=date,
-        link=link,
-        tags=extract_tags(title, "")
-    )
-
-def scrape_indeed() -> list[Job]:
-    jobs = []
-    base_url = "https://www.indeed.co.uk"
-    
-    params = {
-        "q": "ServiceNow",
-        "l": "United Kingdom",
-        "sort": "date",
-        "fromage": "7"
-    }
-    
-    try:
-        response = requests.get(base_url, params=params, headers=HEADERS, timeout=30)
-        if response.status_code == 200:
-            soup = BeautifulSoup(response.text, 'html.parser')
-            job_cards = soup.find_all('div', class_=re.compile(r'jobsearch-SerpJobCard|job_card'))
-            for card in job_cards[:20]:
-                try:
-                    job = parse_indeed_job(card)
-                    if job:
-                        job.source = "indeed"
-                        job.sponsorship_confirmed = False
-                        jobs.append(job)
-                except: pass
-    except: pass
-    
-    return jobs
-
-def parse_indeed_job(card) -> Job | None:
-    title_elem = card.find('h2', class_=re.compile(r'title|jobTitle'))
-    if not title_elem: return None
-    title_elem = title_elem.find('a') or title_elem
-    title = title_elem.get_text(strip=True)
-    
-    link_elem = card.find('a', href=True)
-    if not link_elem: return None
-    link = "https://www.indeed.co.uk" + link_elem['href']
-    
-    company_elem = card.find('span', class_=re.compile(r'company|companyName'))
-    company = company_elem.get_text(strip=True) if company_elem else "Unknown"
-    
-    location_elem = card.find('span', class_=re.compile(r'location|workLocation'))
-    location = location_elem.get_text(strip=True) if location_elem else "UK"
-    
-    date_elem = card.find('span', class_=re.compile(r'date|jobAge'))
-    date_str = date_elem.get_text(strip=True) if date_elem else datetime.now().strftime("%Y-%m-%d")
-    date = parse_date(date_str)
-    
-    return Job(
-        title=title,
-        company=company,
-        location=normalize_location(location),
-        date=date,
-        link=link,
-        tags=extract_tags(title, "")
-    )
-
-def main():
-    print("="*60)
-    print("SERVICE NOW JOBS SCRAPER")
-    print("="*60)
-    
-    all_jobs = []
-    
-    # Hunt UK
-    print("\n1. Scraping Hunt UK...")
-    hunt_jobs = scrape_hunt_uk()
-    all_jobs.extend(hunt_jobs)
-    print(f"   Found {len(hunt_jobs)} jobs")
-    
-    # LinkedIn
-    print("\n2. Scraping LinkedIn...")
-    linkedin_jobs = scrape_linkedin()
-    all_jobs.extend(linkedin_jobs)
-    print(f"   Found {len(linkedin_jobs)} jobs")
-    
-    # Indeed
-    print("\n3. Scraping Indeed...")
-    indeed_jobs = scrape_indeed()
-    all_jobs.extend(indeed_jobs)
-    print(f"   Found {len(indeed_jobs)} jobs")
-    
-    # Deduplicate
-    seen = set()
-    unique_jobs = []
-    for job in all_jobs:
-        if job.link and job.link not in seen:
-            seen.add(job.link)
-            unique_jobs.append(job)
-    
-    print(f"\nTotal unique jobs: {len(unique_jobs)}")
-    
-    # Save JSON
-    with open(JSON_FILE, 'w') as f:
-        json.dump([j.to_dict() for j in unique_jobs], f, indent=2)
-    
-    print(f"\n✅ Saved to {JSON_FILE}")
-    print("="*60)
+        conn.commit()
+        conn.close()
+        
+    async def run(self):
+        """Run the scraper and save results"""
+        try:
+            jobs = await self.scrape_jobs()
+            await self.save_to_db(jobs)
+            return jobs
+        except Exception as e:
+            print(f"Error in HuntUKScraper.run: {e}")
+            return []
 
 if __name__ == "__main__":
-    main()
+    from scripts.job_model import Job
+    scraper = HuntUKScraper()
+    jobs = asyncio.run(scraper.run())
+    print(f"Found {len(jobs)} jobs from Hunt UK")

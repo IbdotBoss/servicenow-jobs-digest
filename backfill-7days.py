@@ -6,6 +6,7 @@ Uses browser automation to extract structured job listings.
 
 import re
 import subprocess
+import os
 from datetime import datetime, timedelta
 from pathlib import Path
 
