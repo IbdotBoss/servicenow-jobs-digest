@@ -44,7 +44,7 @@ TODAY_JOBS = [
         "title": "Senior ServiceNow Developer / Architect",
         "company": "IBM UK Ltd",
         "location": "United Kingdom",
-        "url": "https://huntukvisaspons.com/job/senior-servicenow-developer-architect-at-ibm-pbmqjkzfpkm",
+        "url": "https://huntukvisasponsors.com/job/senior-servicenow-developer-architect-at-ibm-pbmqjkzfpkm",
         "date": "Recent"
     },
     {
