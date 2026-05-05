@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
-"""
-Indeed Scraper for ServiceNow jobs
-"""
+"""Indeed Scraper for ServiceNow jobs"""
+
+import sys
+import os
+# Add project root to path to enable absolute imports
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 import requests
 from bs4 import BeautifulSoup
@@ -12,14 +15,15 @@ import json
 import os
 from typing import Optional, List, Dict, Any
 
-from ..job_model import Job
+from job_model import Job
+
 
 class IndeedScraper:
     def __init__(self, db_path: str = "jobs.db"):
         self.db_path = db_path
         self.base_url = "https://www.indeed.com/jobs"
-        
-    async def scrape_jobs(self) -> List[Job]:
+
+    def scrape_jobs(self) -> List[Job]:
         """Scrape job listings from Indeed"""
         jobs = []
         
@@ -92,10 +96,10 @@ class IndeedScraper:
                     
         except requests.RequestException as e:
             print(f"Error fetching Indeed jobs: {e}")
-            
-        return jobs
         
-    async def save_to_db(self, jobs: List[Job]):
+        return jobs
+
+    def save_to_db(self, jobs: List[Job]):
         """Save jobs to SQLite database with deduplication"""
         conn = sqlite3.connect(self.db_path)
         cursor = conn.cursor()
@@ -128,14 +132,14 @@ class IndeedScraper:
                 ))
             except sqlite3.Error as e:
                 print(f"Error inserting job {job.link}: {e}")
-                
+        
         conn.commit()
         conn.close()
-        
-    async def run(self):
+
+    def run(self) -> List[Job]:
         """Run the scraper and save results"""
-        jobs = await self.scrape_jobs()
-        await self.save_to_db(jobs)
+        jobs = self.scrape_jobs()
+        self.save_to_db(jobs)
         return jobs
 
 if __name__ == "__main__":

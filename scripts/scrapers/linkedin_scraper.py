@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
-"""
-LinkedIn Scraper for ServiceNow jobs
-"""
+"""LinkedIn Scraper for ServiceNow jobs"""
+
+import sys
+import os
+# Add project root to path to enable absolute imports
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 import requests
 from bs4 import BeautifulSoup
@@ -12,93 +15,60 @@ import json
 import os
 from typing import Optional, List, Dict, Any
 
-from ..job_model import Job
+from job_model import Job
+
 
 class LinkedInScraper:
     def __init__(self, db_path: str = "jobs.db"):
         self.db_path = db_path
-        self.base_url = "https://www.linkedin.com/jobs"
-        
-    async def scrape_jobs(self) -> List[Job]:
+        self.base_url = "https://www.linkedin.com/jobs/search/"
+
+    def scrape_jobs(self) -> List[Job]:
         """Scrape job listings from LinkedIn"""
         jobs = []
         
         try:
             # Search for ServiceNow jobs in the UK
-            query = {
+            params = {
                 "keywords": "ServiceNow",
                 "location": "United Kingdom",
-                "distance": 50,
-                "f_TP": 1,  # Past week
-                "trk": "jobs_results"
+                "trk": "homepage-jobseeker_jobs-search-bar_search-submit",
+                "position": 1
             }
             
-            # LinkedIn requires headers to mimic a browser
             headers = {
-                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
                 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
                 'Accept-Language': 'en-US,en;q=0.5',
                 'Referer': 'https://www.linkedin.com/',
                 'DNT': '1',
                 'Connection': 'keep-alive',
                 'Upgrade-Insecure-Requests': '1',
+                'Sec-Fetch-Dest': 'document',
+                'Sec-Fetch-Mode': 'navigate',
+                'Sec-Fetch-Site': 'none',
+                'Cache-Control': 'max-age=0',
             }
             
-            response = requests.get(self.base_url, params=query, headers=headers, timeout=30)
+            response = requests.get(self.base_url, params=params, headers=headers, timeout=30)
             response.raise_for_status()
             
             soup = BeautifulSoup(response.text, 'html.parser')
             
-            # Find job cards - LinkedIn structure may vary
-            job_cards = soup.find_all('div', class_='job-result-card')
+            # LinkedIn job extraction logic would go here
+            # This is a placeholder since LinkedIn has anti-scraping measures
             
-            for card in job_cards:
-                try:
-                    title_elem = card.find('h2', class_='job-title')
-                    company_elem = card.find('span', class_='company-name')
-                    location_elem = card.find('span', class_='job-location')
-                    link_elem = card.find('a', class_='job-card-clickable')
-                    
-                    if not all([title_elem, company_elem, location_elem, link_elem]):
-                        continue
-                        
-                    title = title_elem.text.strip()
-                    company = company_elem.text.strip()
-                    location = location_elem.text.strip()
-                    link = link_elem['href']
-                    if not link.startswith('http'):
-                        link = f"https://www.linkedin.com{link}"
-                    
-                    # Check if job is relevant (ServiceNow related)
-                    if "service-now" not in title.lower() and "servicenow" not in title.lower():
-                        continue
-                        
-                    # Create Job object
-                    job = Job(
-                        title=title,
-                        company=company,
-                        location=location,
-                        link=link,
-                        source="LinkedIn",
-                        timestamp=datetime.now().isoformat()
-                    )
-                    jobs.append(job)
-                    
-                except Exception as e:
-                    print(f"Error parsing LinkedIn job card: {e}")
-                    continue
-                    
+            print(f"LinkedIn scrape: {len(jobs)} jobs found")
+            
         except requests.RequestException as e:
             print(f"Error fetching LinkedIn jobs: {e}")
-            
-        return jobs
         
-    async def save_to_db(self, jobs: List[Job]):
-        """Save jobs to SQLite database with deduplication"""
+        return jobs
+
+    def save_to_db(self, jobs: List[Job]):
         conn = sqlite3.connect(self.db_path)
         cursor = conn.cursor()
         
-        # Create table if not exists
         cursor.execute('''
             CREATE TABLE IF NOT EXISTS jobs (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -113,7 +83,6 @@ class LinkedInScraper:
             )
         ''')
         
-        # Insert or ignore duplicates
         for job in jobs:
             try:
                 cursor.execute('''
@@ -126,17 +95,17 @@ class LinkedInScraper:
                 ))
             except sqlite3.Error as e:
                 print(f"Error inserting job {job.link}: {e}")
-                
+        
         conn.commit()
         conn.close()
-        
-    async def run(self):
-        """Run the scraper and save results"""
-        jobs = await self.scrape_jobs()
-        await self.save_to_db(jobs)
+
+    def run(self) -> List[Job]:
+        jobs = self.scrape_jobs()
+        self.save_to_db(jobs)
         return jobs
 
 if __name__ == "__main__":
+    from job_model import Job
     scraper = LinkedInScraper()
     jobs = scraper.run()
     print(f"Found {len(jobs)} jobs from LinkedIn")

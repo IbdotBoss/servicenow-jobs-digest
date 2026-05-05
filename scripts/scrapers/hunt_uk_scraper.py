@@ -1,16 +1,21 @@
 #!/usr/bin/env python3
-"""
-Hunt UK Scraper using API endpoint
-"""
+"""Hunt UK Scraper using API endpoint"""
+
+import sys
+import os
+# Add project root to path to enable absolute imports
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 import asyncio
 import sqlite3
 import json
 from datetime import datetime
 from typing import List, Dict, Any, Optional
+
+from job_model import Job
+
 from playwright.async_api import async_playwright
 
-from ..job_model import Job
 
 class HuntUKScraper:
     async def scrape_jobs(self) -> List[Job]:
@@ -106,7 +111,7 @@ class HuntUKScraper:
             
         except Exception as e:
             print(f"Error scraping Hunt UK: {e}")
-            
+        
         return jobs
 
     async def save_to_db(self, jobs: List[Job]):
@@ -139,10 +144,10 @@ class HuntUKScraper:
                 ))
             except Exception as e:
                 print(f"Error inserting job {job.link}: {e}")
-                
+        
         conn.commit()
         conn.close()
-        
+
     async def run(self):
         """Run the scraper and save results"""
         try:
@@ -154,7 +159,7 @@ class HuntUKScraper:
             return []
 
 if __name__ == "__main__":
-    from ..job_model import Job
+    from job_model import Job
     scraper = HuntUKScraper()
     jobs = asyncio.run(scraper.run())
     print(f"Found {len(jobs)} jobs from Hunt UK")
