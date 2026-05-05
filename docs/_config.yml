@@ -1,22 +1,21 @@
-theme: minima
+# ServiceNow Jobs Digest Jekyll Config
+# No theme — using minimal Jekyll with custom CSS
 
 title: ServiceNow Jobs Digest UK
 description: Daily curated ServiceNow jobs in the UK with visa sponsorship filtering
-baseurl: ""  # Set to repo name if deploying to GitHub Pages e.g. /servicenow-jobs-digest
+baseurl: ""
 
-# Geist font via Google Fonts (hosted on fonts.geist.xyz alternative)
+# Plugins
 plugins:
   - jekyll-feed
-  - jekyll-seo-tag
 
-# Custom CSS
-sass:
-  style: compressed
+# Build settings
+markdown: kramdown
+highlighter: rouge
 
 # Defaults
 defaults:
   - scope:
       path: ""
-      type: "pages"
     values:
       layout: default
