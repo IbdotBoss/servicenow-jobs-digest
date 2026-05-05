@@ -1,30 +1,35 @@
 #!/bin/bash
 
-# ServiceNow Jobs Digest - Daily Cron Script
-# Runs daily at 05:00 UK time to scrape jobs and update GitHub Pages
+# ServiceNow Jobs Digest - Daily Cron
+# Runs at 05:00 UK time daily
 
-# Activate virtual environment (if applicable)
-# source /path/to/venv/bin/activate
+# Activate virtual environment if exists
+VENV_PATH="/home/ubuntu/hermes-workspace/servicenow-jobs-digest/venv"
+if [ -d "$VENV_PATH" ]; then
+    source "$VENV_PATH/bin/activate"
+fi
 
-# Set project directory
-cd /home/ubuntu/hermes-workspace/servicenow-jobs-digest
+# Change to project directory
+cd /home/ubuntu/hermes-workspace/servicenow-jobs-digest || exit 1
 
-# Run multi-source scrape
-echo "Running multi-source scrape..."
+# Run the multi-source scrape
+echo "Starting daily scrape at $(date)"
 python3 scripts/multi_scrape.py
 
-# Check if jobs.json was created
+# Generate archive HTML
 if [ -f "docs/data/jobs.json" ]; then
-    echo "Jobs JSON created. Generating archive..."
+    echo "Generating archive HTML..."
     python3 scripts/generate_archive.py
     
     echo "Updating index HTML..."
     python3 scripts/update_digest.py
     
-    echo "Committing and pushing to GitHub..."
+    # Commit and push to GitHub
     git add .
     git commit -m "Daily digest update - $(date +%Y-%m-%d)"
     git push origin main
-else:
-    echo "No jobs JSON created. Something went wrong."
+else
+    echo "No jobs JSON found. Skipping HTML generation."
 fi
+
+echo "Daily cron completed at $(date)"

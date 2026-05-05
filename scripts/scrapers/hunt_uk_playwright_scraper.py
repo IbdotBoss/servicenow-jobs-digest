@@ -15,6 +15,8 @@ from typing import List, Dict, Any, Optional
 
 from job_model import Job
 
+from playwright.async_api import async_playwright
+
 
 class HuntUKPlaywrightScraper:
     def __init__(self, db_path: str = "jobs.db"):

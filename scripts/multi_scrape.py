@@ -1,25 +1,23 @@
 #!/usr/bin/env python3
-"""
-Multi-source ServiceNow Jobs Orchestrator
-- Loads all scrapers from scrapers directory
-- Runs them in parallel
-- Aggregates and deduplicates results
-- Saves to JSON for processing
-"""
+"""Multi-source ServiceNow Jobs Orchestrator"""
+
+import sys
+import os
+# Add project root to path for imports
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 import importlib.util
-import os
 from datetime import datetime
 from pathlib import Path
 from job_model import Job
 
 SCRAPERS_DIR = Path(__file__).parent / "scrapers"
-OUTPUT_DIR = Path.home() / "hermes-workspace" / "servicenow-jobs-digest" / "data"
+OUTPUT_DIR = Path.home() / "hermes-workspace" / "servicenow-jobs-digest" / "docs" / "data"
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-OUTPUT_FILE = OUTPUT_DIR / "all_jobs.json"
+OUTPUT_FILE = OUTPUT_DIR / "jobs.json"
 
 def load_scraper(name: str):
-    """Load a scraper module dynamically"""
+    """Load a scraper module"""
     scraper_file = SCRAPERS_DIR / f"{name}_scraper.py"
     if not scraper_file.exists():
         return None
@@ -32,6 +30,30 @@ def load_scraper(name: str):
     except Exception as e:
         print(f"[Orchestrator] Error loading {name}: {e}")
         return None
+
+def run_scraper(module, name: str):
+    """Run a scraper and return jobs"""
+    try:
+        # Try to get the run method first
+        if hasattr(module, "run"):
+            scraper = module.run()
+            if hasattr(scraper, "__await__"):
+                import asyncio
+                return asyncio.run(scraper)
+            return scraper
+        elif hasattr(module, "scrape_jobs"):
+            if hasattr(module.scrape_jobs, "__await__"):
+                import asyncio
+                return asyncio.run(module.scrape_jobs())
+            return module.scrape_jobs()
+        elif hasattr(module, "scrape"):
+            if hasattr(module.scrape, "__await__"):
+                import asyncio
+                return asyncio.run(module.scrape())
+            return module.scrape()
+    except Exception as e:
+        print(f"[Orchestrator] Error running {name}: {e}")
+    return []
 
 def run_all_scrapers():
     """Run all scrapers from the scrapers directory"""
@@ -51,21 +73,16 @@ def run_all_scrapers():
         print(f"\n[Orchestrator] Loading scraper for {source_name}...")
         module = load_scraper(source_name)
         if module:
-            try:
-                # Try to get the scrape function
-                if hasattr(module, 'scrape'):
-                    jobs = module.scrape()
-                    if jobs:
-                        print(f"[Orchestrator] {source_name}: {len(jobs)} jobs")
-                        all_jobs.extend(jobs)
-                        seen_sources.add(source_name)
-            except Exception as e:
-                print(f"[Orchestrator] Error running {source_name}: {e}")
+            jobs = run_scraper(module, source_name)
+            if jobs:
+                print(f"[Orchestrator] {source_name}: {len(jobs)} jobs")
+                all_jobs.extend(jobs)
+                seen_sources.add(source_name)
     
     print(f"\n[Orchestrator] Total sources loaded: {len(seen_sources)}")
     return all_jobs
 
-def deduplicate_jobs(jobs: list[Job]) -> list[Job]:
+def deduplicate_jobs(jobs):
     """Remove duplicate jobs based on link or hash"""
     unique_jobs = []
     seen = set()
@@ -79,7 +96,7 @@ def deduplicate_jobs(jobs: list[Job]) -> list[Job]:
     
     return unique_jobs
 
-def save_jobs(jobs: list[Job], path: Path):
+def save_jobs(jobs, path):
     """Save jobs to JSON file"""
     import json
     data = [job.to_dict() for job in jobs]
