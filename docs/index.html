@@ -3,59 +3,173 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ServiceNow Jobs Digest UK</title>
+  <title>ServiceNow Jobs UK — Sponsorship Digest</title>
   <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: #0a0a0a;
+      background: #ffffff;
+      line-height: 1.6;
+      font-size: 16px;
+    }
+    
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 60px 20px 100px;
+    }
+    
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      margin-bottom: 8px;
+    }
+    
+    .subtitle {
+      color: rgba(0,0,0,0.5);
+      font-size: 0.9rem;
+      margin-bottom: 60px;
+    }
+    
+    h2 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin: 48px 0 16px;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      color: rgba(0,0,0,0.4);
+    }
+    
+    ul { list-style: none; }
+    
+    li {
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+    }
+    
+    li a {
+      color: #0a0a0a;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    
+    li a:hover {
+      text-decoration: underline;
+    }
+    
+    li .date {
+      color: rgba(0,0,0,0.4);
+      font-size: 0.85rem;
+      margin-left: 8px;
+    }
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+      font-size: 0.9rem;
+    }
+    
+    th {
+      text-align: left;
+      font-weight: 700;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: rgba(0,0,0,0.4);
+      padding: 8px 12px 8px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+    
+    td {
+      padding: 12px 12px 12px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+    }
+    
+    td a {
+      color: #0a0a0a;
+      text-decoration: none;
+    }
+    
+    td a:hover {
+      text-decoration: underline;
+    }
+    
+    .symbol {
+      font-size: 0.9rem;
+    }
+    
+    footer {
+      margin-top: 80px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(0,0,0,0.06);
+      font-size: 0.85rem;
+      color: rgba(0,0,0,0.4);
+    }
+    
+    footer a {
+      color: #0a0a0a;
+    }
+  </style>
 </head>
 <body>
-  <div class="wrapper">
-    <header>
-      <h1>ServiceNow Jobs Digest 🇬🇧</h1>
-      <p class="subtitle">Daily curated ServiceNow jobs in the UK with visa sponsorship filtering.</p>
-    </header>
+  <div class="container">
+    <h1>ServiceNow Jobs UK</h1>
+    <p class="subtitle">Daily digest of ServiceNow roles offering UK visa sponsorship.</p>
     
-    <main>
-      <section>
-        <h2>Latest Digest</h2>
-        <ul id="digest-links">
-          <!-- Auto-populated by cron -->
-          <li><a href="all-jobs.html">View Master Job Table →</a></li>
-        </ul>
-      </section>
+    <section>
+      <h2>Master Archive</h2>
+      <p style="margin-bottom: 16px; color: rgba(0,0,0,0.5); font-size: 0.9rem;">
+        All jobs ever found, sorted by date (newest → oldest).
+        <br><strong>SC</strong> = Security Clearance needed · <strong>Sponsorship</strong> = ✓ Confirmed / ✗ Not mentioned
+      </p>
       
-      <section>
-        <h2>Master Archive</h2>
-        <p>All jobs ever found, sorted by date (newest → oldest):</p>
-        <p><a href="all-jobs.html" class="btn">📋 View Master Job Table</a></p>
-      </section>
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Job Title</th>
+            <th>Company</th>
+            <th>Location</th>
+            <th>✓</th>
+            <th>SC</th>
+          </tr>
+        </thead>
+        <tbody id="job-table-body">
+          <!-- Populated from all-jobs.md or via JS -->
+        </tbody>
+      </table>
       
-      <section>
-        <h2>About</h2>
-        <p>This digest is automatically updated daily at 08:00 UK time via a cron job running on an Oracle Ampere VPS. Jobs are sourced from:</p>
-        <ul>
-          <li>LinkedIn</li>
-          <li>Indeed</li>
-          <li>CWJobs</li>
-          <li>Technojobs</li>
-          <li>Prospects</li>
-          <li>Gradcracker</li>
-          <li>Milkround</li>
-          <li>CareerJet</li>
-          <li>Adzuna</li>
-        </ul>
-        <p><strong>Sponsorship (SC):</strong> ✓ = Confirmed sponsorship / ✗ = No sponsorship mentioned</p>
-      </section>
-    </main>
+      <p style="margin-top: 16px;">
+        <a href="all-jobs.md" style="font-size: 0.9rem;">View full markdown table →</a>
+      </p>
+    </section>
+    
+    <section>
+      <h2>Daily Digests</h2>
+      <ul id="digest-links">
+        <li><a href="2026-05-05.md">2026-05-05</a> <span class="date">4 jobs</span></li>
+      </ul>
+    </section>
+    
+    <section>
+      <h2>About</h2>
+      <p style="color: rgba(0,0,0,0.5); font-size: 0.9rem; line-height: 1.8;">
+        Auto-updated daily at 05:00 UK time.
+        <br>Sources: Hunt UK Visa Sponsors, Indeed, CWJobs, Technojobs.
+        <br>Built by <a href="https://github.com/IbdotBoss/servicenow-jobs-digest">Hermes Agent</a>.
+      </p>
+    </section>
     
     <footer>
-      <p><em>Last updated: <span id="last-updated">Loading...</span></em></p>
-      <p>Auto-generated by Hermes Agent | <a href="https://github.com/IbdotBoss/servicenow-jobs-digest">View on GitHub</a></p>
+      <p>Last updated: 2026-05-05</p>
     </footer>
   </div>
-  
-  <script>
-    // Update last-updated date
-    document.getElementById('last-updated').textContent = new Date().toISOString().split('T')[0];
-  </script>
 </body>
 </html>
