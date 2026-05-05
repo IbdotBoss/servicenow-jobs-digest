@@ -1,7 +1,3 @@
----
-title: All Jobs - Master Archive
----
-
 # Master Job Archive
 
 All ServiceNow jobs ever found, sorted by date (newest → oldest).
@@ -10,13 +6,11 @@ All ServiceNow jobs ever found, sorted by date (newest → oldest).
 - **SC** = Security Clearance needed
 - **Sponsorship** = ✓ Confirmed / ✗ Not mentioned
 
-**Total jobs:** {% raw %}{{ site.data.jobs | size }}{% endraw %}
-
 ---
 
 | Date | Job Title | Company | Location | Salary | Sponsorship | SC | Link |
 |------|-----------|---------|----------|--------|-------------|----|------|
-| *No jobs yet. Run the daily cron to populate.* | | | | | | | |
+| *No jobs yet. Run the daily cron to populate.* | | | | | | |
 
 ---
 
