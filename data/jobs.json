@@ -1,0 +1,80 @@
+[
+    {
+        "title": "Senior ServiceNow Developer",
+        "company": "IBM UK Ltd",
+        "location": "London, UK",
+        "date": "2026-05-05",
+        "link": "https://example.com/ibm-job1",
+        "source": "hunt_uk",
+        "sponsorship_confirmed": true,
+        "remote": false,
+        "tags": ["senior", "permanent", "remote"],
+        "salary_min": 70000,
+        "salary_max": 85000
+    },
+    {
+        "title": "ServiceNow Developer (Contract)",
+        "company": "Delt Shared Services Ltd",
+        "location": "Manchester, UK",
+        "date": "2026-05-04",
+        "link": "https://example.com/delt-job1",
+        "source": "hunt_uk",
+        "sponsorship_confirmed": true,
+        "remote": true,
+        "tags": ["mid", "contract", "remote"],
+        "salary_min": 500,
+        "salary_max": 600
+    },
+    {
+        "title": "ServiceNow Administrator",
+        "company": "State Street Bank",
+        "location": "London, UK",
+        "date": "2026-05-03",
+        "link": "https://example.com/statestreet-job1",
+        "source": "linkedin",
+        "sponsorship_confirmed": false,
+        "remote": false,
+        "tags": ["entry", "permanent"],
+        "salary_min": 35000,
+        "salary_max": 45000
+    },
+    {
+        "title": "ServiceNow Architect",
+        "company": "Capgemini UK PLC",
+        "location": "Birmingham, UK",
+        "date": "2026-05-02",
+        "link": "https://example.com/capgemini-job1",
+        "source": "indeed",
+        "sponsorship_confirmed": true,
+        "remote": false,
+        "tags": ["senior", "permanent"],
+        "salary_min": 90000,
+        "salary_max": 110000
+    },
+    {
+        "title": "ServiceNow Consultant",
+        "company": "NTT DATA Business Solutions",
+        "location": "Remote, UK",
+        "date": "2026-05-01",
+        "link": "https://example.com/ntt-data-job1",
+        "source": "hunt_uk",
+        "sponsorship_confirmed": true,
+        "remote": true,
+        "tags": ["mid", "contract", "remote"],
+        "salary_min": 450,
+        "salary_max": 550
+    },
+    {
+        "title": "ServiceNow Developer",
+        "company": "GAUBERT'S BROTHERS LIMITED",
+        "location": "Leeds, UK",
+        "date": "2026-04-30",
+        "link": "https://example.com/gauberts-job1",
+        "source": "hunt_uk",
+        "sponsorship_confirmed": true,
+        "remote": false,
+        "tags": ["senior", "contract"],
+        "salary_min": 550,
+        "salary_max": 650
+    }
+]
