@@ -22,8 +22,9 @@ class Job:
     source: str  # e.g., 'hunt_uk', 'linkedin', 'indeed'
     
     # Sponsorship & clearance
-    sponsorship_confirmed: bool = False
+    sponsorship_confirmed: bool = False  # Could be "required", "provided", etc.
     security_clearance: bool = False
+    remote_work: Optional[str] = None  # Could be "hybrid", "remote", "onsite"
     
     # Metadata & tags
     tags: List[str] = None

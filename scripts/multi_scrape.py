@@ -9,7 +9,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import importlib.util
 from datetime import datetime
 from pathlib import Path
-from job_model import Job
+from scripts.job_model import Job
 
 SCRAPERS_DIR = Path(__file__).parent / "scrapers"
 OUTPUT_DIR = Path.home() / "hermes-workspace" / "servicenow-jobs-digest" / "docs" / "data"

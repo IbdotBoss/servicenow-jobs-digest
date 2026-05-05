@@ -1,35 +1,34 @@
 #!/bin/bash
 
-# ServiceNow Jobs Digest - Daily Cron
-# Runs at 05:00 UK time daily
+# Daily ServiceNow Jobs Digest Scraper
+# Runs all scrapers and updates GitHub Pages
 
-# Activate virtual environment if exists
-VENV_PATH="/home/ubuntu/hermes-workspace/servicenow-jobs-digest/venv"
-if [ -d "$VENV_PATH" ]; then
-    source "$VENV_PATH/bin/activate"
-fi
+set -e  # Exit on error
 
-# Change to project directory
-cd /home/ubuntu/hermes-workspace/servicenow-jobs-digest || exit 1
-
-# Run the multi-source scrape
 echo "Starting daily scrape at $(date)"
+
+# Navigate to project directory
+cd /home/ubuntu/hermes-workspace/servicenow-jobs-digest
+
+# Activate virtual environment if needed
+# source venv/bin/activate
+
+# Run the orchestrator
 python3 scripts/multi_scrape.py
 
-# Generate archive HTML
+# Check if jobs.json was created
 if [ -f "docs/data/jobs.json" ]; then
-    echo "Generating archive HTML..."
-    python3 scripts/generate_archive.py
+    echo "Jobs JSON created successfully"
     
-    echo "Updating index HTML..."
-    python3 scripts/update_digest.py
-    
-    # Commit and push to GitHub
-    git add .
-    git commit -m "Daily digest update - $(date +%Y-%m-%d)"
+    # Commit and push to GitHub Pages
+    git add docs/data/jobs.json
+    git commit -m "Update jobs digest - $(date)"
     git push origin main
+    
+    echo "GitHub Pages updated successfully"
 else
-    echo "No jobs JSON found. Skipping HTML generation."
+    echo "Error: jobs.json not created!"
+    exit 1
 fi
 
-echo "Daily cron completed at $(date)"
+echo "Daily scrape completed at $(date)"

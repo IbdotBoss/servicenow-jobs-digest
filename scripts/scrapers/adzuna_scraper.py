@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Indeed Scraper using Playwright with Proxy Rotation"""
+"""Adzuna Scraper using Playwright"""
 
 import asyncio
 import sqlite3
@@ -9,25 +9,21 @@ from typing import List, Dict, Any, Optional
 from bs4 import BeautifulSoup
 from scripts.job_model import Job
 from playwright.async_api import async_playwright
-from scripts.proxy_rotation import ProxyRotator
 
-class IndeedScraper:
-    def __init__(self, db_path: str = "jobs.db", proxy_list: List[str] = None):
+class AdzunaScraper:
+    def __init__(self, db_path: str = "jobs.db"):
         self.db_path = db_path
         self.playwright = None
         self.browser = None
         self.context = None
         self.page = None
         self.jobs = []
-        self.proxy_rotator = ProxyRotator(proxy_list)
 
     async def initialize(self):
         self.playwright = await async_playwright().start()
-        proxy = self.proxy_rotator.get_proxy()
         self.browser = await self.playwright.chromium.launch(
             headless=True,
-            args=['--no-sandbox', '--disable-dev-shm-usage'],
-            proxy={"server": proxy} if proxy else None
+            args=['--no-sandbox', '--disable-dev-shm-usage']
         )
         self.context = await self.browser.new_context(
             viewport={'width': 1920, 'height': 1080}
@@ -48,8 +44,8 @@ class IndeedScraper:
         try:
             await self.initialize()
             
-            search_url = "https://www.indeed.com/jobs?q=ServiceNow&l=United+Kingdom&radius=50&fromage=7&limit=50"
-            print(f"[Indeed] Navigating to: {search_url}")
+            search_url = "https://www.adzuna.co.uk/jobs/search?q=ServiceNow"
+            print(f"[Adzuna] Navigating to: {search_url}")
             
             await self.page.goto(search_url, timeout=30000)
             await self.page.wait_for_load_state('load')
@@ -57,41 +53,55 @@ class IndeedScraper:
             await asyncio.sleep(5)
             
             content = await self.page.content()
-            print(f"[Indeed] Page length: {len(content)} characters")
+            print(f"[Adzuna] Page length: {len(content)} characters")
             
-            with open('/tmp/indeed_page.html', 'w') as f:
+            with open('/tmp/adzuna_page.html', 'w') as f:
                 f.write(content)
-            print("[Indeed] Page saved to /tmp/indeed_page.html")
+            print("[Adzuna] Page saved to /tmp/adzuna_page.html")
             
             soup = BeautifulSoup(content, 'html.parser')
             
-            job_cards = soup.find_all('div', class_='jobsearch-SerpJobCard')
-            print(f"[Indeed] Found {len(job_cards)} job cards")
+            job_cards = soup.find_all(['div', 'article'], class_=lambda x: x and any(
+                kw in x.lower() 
+                for kw in ['job', 'vacancy', 'listing', 'result-item', 'card', 'item']
+            ))
+            print(f"[Adzuna] Found {len(job_cards)} job cards")
             
             for card in job_cards[:50]:
                 try:
-                    title_elem = card.find('a', class_='jobtitle')
-                    company_elem = card.find('span', class_='company')
-                    location_elem = card.find('span', class_='location')
-                    link_elem = card.find('a', class_='jobtitle')
-                    
-                    if not all([title_elem, company_elem, location_elem, link_elem]):
+                    title_elem = card.find('a', class_=lambda x: x and 'title' in x.lower() if x else False)
+                    if not title_elem:
+                        title_elem = card.find('h2') or card.find('h3')
+                    if not title_elem:
                         continue
                     
                     title = title_elem.text.strip()
-                    company = company_elem.text.strip()
-                    location = location_elem.text.strip()
-                    link = "https://www.indeed.com" + link_elem['href']
                     
-                    if "service-now" not in title.lower() and "servicenow" not in title.lower():
+                    if not any(kw in title.lower() for kw in ['servicenow', 'service-now', 'service now']):
                         continue
+                    
+                    company_elem = card.find('span', class_=lambda x: x and 'company' in x.lower() if x else False)
+                    if not company_elem:
+                        company_elem = card.find('div', class_=lambda x: x and 'company' in x.lower() if x else False)
+                    company = company_elem.text.strip() if company_elem else ''
+                    
+                    location_elem = card.find('span', class_=lambda x: x and 'location' in x.lower() if x else False)
+                    location = location_elem.text.strip() if location_elem else ''
+                    
+                    link_elem = card.find('a', href=True)
+                    if not link_elem:
+                        continue
+                    
+                    link = link_elem['href']
+                    if not link.startswith('http'):
+                        link = f"https://www.adzuna.co.uk{link}"
                     
                     job = Job(
                         title=title,
                         company=company,
                         location=location,
                         link=link,
-                        source="Indeed",
+                        source="Adzuna",
                         date=datetime.now().strftime("%Y-%m-%d"),
                         sponsorship_confirmed=True,
                         remote_work="Not specified"
@@ -100,13 +110,13 @@ class IndeedScraper:
                     print(f"✅ Found job: {title} at {company}")
                     
                 except Exception as e:
-                    print(f"Error parsing Indeed card: {e}")
+                    print(f"Error parsing Adzuna card: {e}")
                     continue
             
             await self.close()
             
         except Exception as e:
-            print(f"Error scraping Indeed: {e}")
+            print(f"Error scraping Adzuna: {e}")
             import traceback
             traceback.print_exc()
         
@@ -152,7 +162,7 @@ class IndeedScraper:
             await self.save_to_db(jobs)
             return jobs
         except Exception as e:
-            print(f"Error in IndeedScraper.run: {e}")
+            print(f"Error in AdzunaScraper.run: {e}")
             import traceback
             traceback.print_exc()
             return []

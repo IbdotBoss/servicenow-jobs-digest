@@ -1,38 +1,58 @@
 #!/usr/bin/env python3
-"""Indeed Scraper using Playwright with Proxy Rotation"""
+"""Indeed Scraper using Playwright"""
+
+import sys
+import os
+# Add project root to path to enable absolute imports
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 import asyncio
 import sqlite3
 import json
 from datetime import datetime
 from typing import List, Dict, Any, Optional
-from bs4 import BeautifulSoup
-from scripts.job_model import Job
-from playwright.async_api import async_playwright
-from scripts.proxy_rotation import ProxyRotator
 
-class IndeedScraper:
-    def __init__(self, db_path: str = "jobs.db", proxy_list: List[str] = None):
+from bs4 import BeautifulSoup
+from job_model import Job
+
+from playwright.async_api import async_playwright
+
+
+class IndeedPlaywrightScraper:
+    def __init__(self, db_path: str = "jobs.db"):
         self.db_path = db_path
         self.playwright = None
         self.browser = None
         self.context = None
         self.page = None
         self.jobs = []
-        self.proxy_rotator = ProxyRotator(proxy_list)
 
     async def initialize(self):
         self.playwright = await async_playwright().start()
-        proxy = self.proxy_rotator.get_proxy()
         self.browser = await self.playwright.chromium.launch(
             headless=True,
-            args=['--no-sandbox', '--disable-dev-shm-usage'],
-            proxy={"server": proxy} if proxy else None
+            args=['--no-sandbox', '--disable-dev-shm-usage']
         )
         self.context = await self.browser.new_context(
             viewport={'width': 1920, 'height': 1080}
         )
         self.page = await self.context.new_page()
+        
+        # Set realistic fingerprints
+        await self.page.set_extra_http_headers({
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+            'Accept-Language': 'en-US,en;q=0.5',
+            'Referer': 'https://www.google.com/',
+            'DNT': '1',
+            'Connection': 'keep-alive',
+            'Upgrade-Insecure-Requests': '1',
+            'Sec-Fetch-Dest': 'document',
+            'Sec-Fetch-Mode': 'navigate',
+            'Sec-Fetch-Site': 'none',
+            'Cache-Control': 'max-age=0',
+        })
+        await self.page.set_viewport_size({'width': 1920, 'height': 1080})
 
     async def close(self):
         if self.page:
@@ -46,29 +66,21 @@ class IndeedScraper:
 
     async def scrape_jobs(self):
         try:
-            await self.initialize()
-            
-            search_url = "https://www.indeed.com/jobs?q=ServiceNow&l=United+Kingdom&radius=50&fromage=7&limit=50"
-            print(f"[Indeed] Navigating to: {search_url}")
-            
-            await self.page.goto(search_url, timeout=30000)
-            await self.page.wait_for_load_state('load')
-            await asyncio.sleep(10)  # Wait for JavaScript to execute
-            await asyncio.sleep(5)
+            await self.page.goto("https://www.indeed.com/jobs?q=ServiceNow&l=United+Kingdom", timeout=30000)
+            await self.page.wait_for_load_state('networkidle', timeout=30000)
+            await asyncio.sleep(10)
             
             content = await self.page.content()
-            print(f"[Indeed] Page length: {len(content)} characters")
-            
+            print(f"Indeed page length: {len(content)} characters")
             with open('/tmp/indeed_page.html', 'w') as f:
                 f.write(content)
-            print("[Indeed] Page saved to /tmp/indeed_page.html")
+            print("Indeed page saved to /tmp/indeed_page.html")
             
             soup = BeautifulSoup(content, 'html.parser')
-            
             job_cards = soup.find_all('div', class_='jobsearch-SerpJobCard')
-            print(f"[Indeed] Found {len(job_cards)} job cards")
+            print(f"Found {len(job_cards)} job cards")
             
-            for card in job_cards[:50]:
+            for card in job_cards:
                 try:
                     title_elem = card.find('a', class_='jobtitle')
                     company_elem = card.find('span', class_='company')
@@ -92,18 +104,14 @@ class IndeedScraper:
                         location=location,
                         link=link,
                         source="Indeed",
-                        date=datetime.now().strftime("%Y-%m-%d"),
-                        sponsorship_confirmed=True,
-                        remote_work="Not specified"
+                        timestamp=datetime.now().isoformat()
                     )
                     self.jobs.append(job)
                     print(f"✅ Found job: {title} at {company}")
                     
                 except Exception as e:
-                    print(f"Error parsing Indeed card: {e}")
+                    print(f"Error parsing Indeed job card: {e}")
                     continue
-            
-            await self.close()
             
         except Exception as e:
             print(f"Error scraping Indeed: {e}")
@@ -124,8 +132,8 @@ class IndeedScraper:
                 location TEXT,
                 link TEXT UNIQUE,
                 source TEXT,
-                date TEXT,
-                sponsorship_confirmed BOOLEAN DEFAULT 0,
+                timestamp TEXT,
+                visa_sponsorship TEXT,
                 remote_work TEXT
             )
         ''')
@@ -134,25 +142,30 @@ class IndeedScraper:
             try:
                 cursor.execute('''
                     INSERT OR IGNORE INTO jobs 
-                    (title, company, location, link, source, date, sponsorship_confirmed, remote_work)
+                    (title, company, location, link, source, timestamp, visa_sponsorship, remote_work)
                     VALUES (?, ?, ?, ?, ?, ?, ?, ?)
                 ''', (
                     job.title, job.company, job.location, job.link, job.source,
-                    job.date, job.sponsorship_confirmed, job.remote_work
+                    job.timestamp, job.visa_sponsorship, job.remote_work
                 ))
             except sqlite3.Error as e:
                 print(f"Error inserting job {job.link}: {e}")
         
         conn.commit()
-
+        conn.close()
 
     async def run(self):
         try:
+            await self.initialize()
             jobs = await self.scrape_jobs()
             await self.save_to_db(jobs)
             return jobs
-        except Exception as e:
-            print(f"Error in IndeedScraper.run: {e}")
-            import traceback
-            traceback.print_exc()
-            return []
+        finally:
+            await self.close()
+
+
+if __name__ == "__main__":
+    from job_model import Job
+    scraper = IndeedPlaywrightScraper()
+    jobs = asyncio.run(scraper.run())
+    print(f"Found {len(jobs)} jobs from Indeed")

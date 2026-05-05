@@ -63,7 +63,8 @@ class HuntUKPlaywrightScraper:
             await self.page.goto("https://huntukvisasponsors.com/jobs", timeout=30000)
             
             # Wait for page to load and JavaScript to execute
-            await self.page.wait_for_load_state('networkidle', timeout=30000)
+            await self.page.wait_for_load_state('load')
+            await asyncio.sleep(10)  # Wait for JavaScript to execute
             
             # Wait a bit more for dynamic content to render
             await asyncio.sleep(10)
