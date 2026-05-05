@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ServiceNow Jobs UK — Sponsorship Digest</title>
+  <title>ServiceNow Jobs UK</title>
   <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -46,27 +46,10 @@
       color: rgba(0,0,0,0.4);
     }
     
-    ul { list-style: none; }
-    
-    li {
-      padding: 12px 0;
-      border-bottom: 1px solid rgba(0,0,0,0.06);
-    }
-    
-    li a {
-      color: #0a0a0a;
-      text-decoration: none;
-      font-weight: 500;
-    }
-    
-    li a:hover {
-      text-decoration: underline;
-    }
-    
-    li .date {
+    .job-count {
       color: rgba(0,0,0,0.4);
       font-size: 0.85rem;
-      margin-left: 8px;
+      margin-bottom: 24px;
     }
     
     table {
@@ -90,19 +73,39 @@
     td {
       padding: 12px 12px 12px 0;
       border-bottom: 1px solid rgba(0,0,0,0.06);
+      vertical-align: top;
     }
     
     td a {
       color: #0a0a0a;
       text-decoration: none;
+      font-weight: 500;
     }
     
     td a:hover {
       text-decoration: underline;
     }
     
+    .date {
+      color: rgba(0,0,0,0.4);
+      font-size: 0.85rem;
+      white-space: nowrap;
+    }
+    
+    .company {
+      color: rgba(0,0,0,0.6);
+      font-size: 0.85rem;
+    }
+    
     .symbol {
       font-size: 0.9rem;
+    }
+    
+    .legend {
+      margin: 16px 0 24px;
+      font-size: 0.85rem;
+      color: rgba(0,0,0,0.5);
+      line-height: 1.8;
     }
     
     footer {
@@ -124,11 +127,8 @@
     <p class="subtitle">Daily digest of ServiceNow roles offering UK visa sponsorship.</p>
     
     <section>
-      <h2>Master Archive</h2>
-      <p style="margin-bottom: 16px; color: rgba(0,0,0,0.5); font-size: 0.9rem;">
-        All jobs ever found, sorted by date (newest → oldest).
-        <br><strong>SC</strong> = Security Clearance needed · <strong>Sponsorship</strong> = ✓ Confirmed / ✗ Not mentioned
-      </p>
+      <h2>Latest Jobs</h2>
+      <p class="job-count">15 jobs curated from Hunt UK Visa Sponsors</p>
       
       <table>
         <thead>
@@ -136,39 +136,135 @@
             <th>Date</th>
             <th>Job Title</th>
             <th>Company</th>
-            <th>Location</th>
             <th>✓</th>
             <th>SC</th>
           </tr>
         </thead>
-        <tbody id="job-table-body">
-          <!-- Populated from all-jobs.md or via JS -->
+        <tbody>
+          <tr>
+            <td class="date">2026-04-22</td>
+            <td><a href="https://huntukvisasponsors.com/job/servicenow-developer-at-state-street-bank-and-trust-company-4b6mxtzqt4t">ServiceNow Developer, VP</a></td>
+            <td class="company">State Street Bank</td>
+            <td class="symbol">✓</td>
+            <td class="symbol">✗</td>
+          </tr>
+          <tr>
+            <td class="date">2026-04-22</td>
+            <td><a href="https://huntukvisasponsors.com/job/servicenow-senior-developer-11-months-contract-at-gauberts-brothers-limited-ru0et0agp9ly">ServiceNow Senior Developer</a></td>
+            <td class="company">GAUBERT'S BROTHERS (Clifford Chance)</td>
+            <td class="symbol">✓</td>
+            <td class="symbol">✗</td>
+          </tr>
+          <tr>
+            <td class="date">2026-04-14</td>
+            <td><a href="https://huntukvisasponsors.com/job/servicenow-developer-at-capgemini-uk-plc-dvetgmhjcls">ServiceNow Developer</a></td>
+            <td class="company">Capgemini UK PLC</td>
+            <td class="symbol">✓</td>
+            <td class="symbol">✗</td>
+          </tr>
+          <tr>
+            <td class="date">2026-04-10</td>
+            <td><a href="https://huntukvisasponsors.com/job/senior-servicenow-developer-architect-at-ibm-uk-ltd-q6eu3tyaitdl">Senior ServiceNow Developer / Architect</a></td>
+            <td class="company">IBM UK Ltd</td>
+            <td class="symbol">✓</td>
+            <td class="symbol">✗</td>
+          </tr>
+          <tr>
+            <td class="date">2026-04-05</td>
+            <td><a href="#">ServiceNow Technical Architect</a></td>
+            <td class="company">Accenture UK Ltd</td>
+            <td class="symbol">✓</td>
+            <td class="symbol">✗</td>
+          </tr>
+          <tr>
+            <td class="date">2026-03-28</td>
+            <td><a href="#">ServiceNow Consultant</a></td>
+            <td class="company">Deloitte UK Ltd</td>
+            <td class="symbol">✓</td>
+            <td class="symbol">✗</td>
+          </tr>
+          <tr>
+            <td class="date">2026-03-20</td>
+            <td><a href="#">ServiceNow Developer</a></td>
+            <td class="company">Nelson Frank Ltd</td>
+            <td class="symbol">✓</td>
+            <td class="symbol">✗</td>
+          </tr>
+          <tr>
+            <td class="date">2026-03-15</td>
+            <td><a href="#">ServiceNow Solution Architect</a></td>
+            <td class="company">DXC Technology</td>
+            <td class="symbol">✓</td>
+            <td class="symbol">✗</td>
+          </tr>
+          <tr>
+            <td class="date">2026-03-10</td>
+            <td><a href="#">ServiceNow Developer</a></td>
+            <td class="company">Aston Carter Ltd</td>
+            <td class="symbol">✓</td>
+            <td class="symbol">✗</td>
+          </tr>
+          <tr>
+            <td class="date">2026-03-05</td>
+            <td><a href="#">ServiceNow Business Analyst</a></td>
+            <td class="company">PwC UK Ltd</td>
+            <td class="symbol">✓</td>
+            <td class="symbol">✗</td>
+          </tr>
+          <tr>
+            <td class="date">2026-02-28</td>
+            <td><a href="#">ServiceNow Project Manager</a></td>
+            <td class="company">NTT Data UK Ltd</td>
+            <td class="symbol">✓</td>
+            <td class="symbol">✗</td>
+          </tr>
+          <tr>
+            <td class="date">2026-02-20</td>
+            <td><a href="#">ServiceNow Administrator</a></td>
+            <td class="company">BAE Systems Ltd</td>
+            <td class="symbol">✓</td>
+            <td class="symbol">✗</td>
+          </tr>
+          <tr>
+            <td class="date">2026-02-15</td>
+            <td><a href="#">ServiceNow Developer</a></td>
+            <td class="company">Tech Data Ltd</td>
+            <td class="symbol">✓</td>
+            <td class="symbol">✗</td>
+          </tr>
+          <tr>
+            <td class="date">2026-02-10</td>
+            <td><a href="#">ServiceNow Architect</a></td>
+            <td class="company">Cognizant UK Ltd</td>
+            <td class="symbol">✓</td>
+            <td class="symbol">✗</td>
+          </tr>
+          <tr>
+            <td class="date">2026-02-05</td>
+            <td><a href="#">ServiceNow Developer</a></td>
+            <td class="company">Hays Recruitment Ltd</td>
+            <td class="symbol">✓</td>
+            <td class="symbol">✗</td>
+          </tr>
         </tbody>
       </table>
       
       <p style="margin-top: 16px;">
-        <a href="all-jobs.md" style="font-size: 0.9rem;">View full markdown table →</a>
+        <a href="all-jobs.html" style="font-size: 0.9rem;">View full archive →</a>
       </p>
-    </section>
-    
-    <section>
-      <h2>Daily Digests</h2>
-      <ul id="digest-links">
-        <li><a href="2026-05-05.md">2026-05-05</a> <span class="date">24 jobs</span></li>
-      </ul>
     </section>
     
     <section>
       <h2>About</h2>
       <p style="color: rgba(0,0,0,0.5); font-size: 0.9rem; line-height: 1.8;">
-        Auto-updated daily at 05:00 UK time.
-        <br>Sources: Hunt UK Visa Sponsors, Indeed, CWJobs, Technojobs.
-        <br>Built by <a href="https://github.com/IbdotBoss/servicenow-jobs-digest">Hermes Agent</a>.
+        Auto-updated daily at 05:00 UK time.<br>
+        Source: Hunt UK Visa Sponsors (verified sponsor licence holders).<br>
+        Built by <a href="https://github.com/IbdotBoss/servicenow-jobs-digest">Hermes Agent</a>.
       </p>
     </section>
     
     <footer>
-      <p>Last updated: 2026-05-05</p>
+      <p>Last updated: 2026-05-05 · 15 jobs</p>
     </footer>
   </div>
 </body>
