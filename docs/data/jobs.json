@@ -1,16 +1,19 @@
 {
   "updated": "2026-05-06",
-  "total": 10,
-  "verified": 5,
-  "sc_blocked": 2,
+  "total": 12,
+  "verified": 4,
+  "sc_blocked": 3,
+  "unavailable": 1,
   "grad_schemes": 1,
-  "live_links": 5,
+  "live_links": 7,
   "fresh_today": 3,
   "sources": {
-    "reed": 1,
-    "hunt_uk": 4,
-    "linkedin": 3,
-    "other": 2
+    "LinkedIn": 3,
+    "Experis": 1,
+    "Hunt UK": 5,
+    "Capgemini Careers": 1,
+    "Reed": 1,
+    "Totaljobs": 1
   },
   "jobs": [
     {
@@ -30,8 +33,8 @@
       "sc_clearance": false,
       "grad_scheme": false,
       "link_status": "live",
-      "visa_sponsorship": "verified",
-      "description": "Boutique ServiceNow consultancy. Hands-on technical implementations on ServiceNow platform. Customer workflow experts. 144 applicants."
+      "visa_sponsorship": "unavailable",
+      "description": "Boutique ServiceNow consultancy. Hands-on technical implementations. CSM certified. 144 applicants. ❌ Job listing states \"No need for visa sponsorship\" — not available for international candidates."
     },
     {
       "title": "ServiceNow Developer",
@@ -217,6 +220,47 @@
       "link_status": "stale",
       "visa_sponsorship": "verified",
       "description": "Visa Sponsorship (Skilled Worker Visa) can be provided. Posted January — may be filled."
+    },
+    {
+      "title": "ServiceNow Developer (12-month FTC)",
+      "company": "Syntax Consultancy",
+      "location": "Newbury, Berkshire",
+      "salary_display": "Not listed",
+      "salary_min": 0,
+      "salary_max": 0,
+      "date_posted": "2026-03-15",
+      "url": "https://www.totaljobs.com/job/servicenow-developer/syntax-consultancy-limited-job106974694",
+      "source": "Totaljobs",
+      "source_type": "agency",
+      "role_type": "developer",
+      "remote": "hybrid",
+      "employment": "contract",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "agency_unknown",
+      "description": "12-month fixed-term contract. Newbury-based, hybrid (3 days WFH, 2 days onsite). Start ASAP March/April 2026. Agency listing — verify sponsorship with employer."
+    },
+    {
+      "title": "ServiceNow Implementation Specialist",
+      "company": "Capgemini UK",
+      "location": "England",
+      "salary_display": "Not listed",
+      "salary_min": 0,
+      "salary_max": 0,
+      "date_posted": "2026-04-29",
+      "url": "https://huntukvisasponsors.com/job/servicenow-implementation-specialist-at-capgemini-occxnhvmrvw9",
+      "fallback_url": "https://www.capgemini.com/gb-en/careers/",
+      "source": "Hunt UK",
+      "source_type": "direct",
+      "role_type": "consultant",
+      "remote": "hybrid",
+      "employment": "permanent",
+      "sc_clearance": true,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "sc_blocked",
+      "description": "Develop and integrate ServiceNow solutions across CSM, ITSM, ITOM, HRSD. JavaScript, Flow Designer, Integration Hub. SC clearance required — 5yr UK residency."
     }
   ]
 }
