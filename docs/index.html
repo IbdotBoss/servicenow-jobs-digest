@@ -1,285 +1,296 @@
-<![CDATA[<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ServiceNow Jobs UK</title>
-<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap">
+<title>ServiceNow Jobs UK — Sponsorship-Verified Roles</title>
 <style>
   :root {
-    --text: #0a0a0a; --muted: rgba(0,0,0,0.5); --faint: rgba(0,0,0,0.28);
-    --border: rgba(0,0,0,0.07); --sponsor: #0d9488; --sponsor-bg: #f0fdfa;
-    --warn: #d97706; --warn-bg: #fffbeb; --bad: #dc2626; --bad-bg: #fef2f2;
+    --bg: #ffffff; --bg-alt: #f8f9fa;
+    --text: #121212; --text-mid: #4a4a4a; --text-light: #6b7280;
+    --border: #e5e7eb;
+    --accent: #0066cc; --accent-light: #e8f0fe;
+    --sponsor: #0d9488; --sponsor-bg: #f0fdfa;
+    --sc: #dc2626; --sc-bg: #fef2f2;
+    --agency: #6b7280; --agency-bg: #f3f4f6;
+    --stale: #d97706;
   }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
   body {
-    font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
-    color: var(--text); background: #ffffff; line-height: 1.55; font-size: 15px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    font-size: 14px; line-height: 1.5; color: var(--text); background: var(--bg);
     -webkit-font-smoothing: antialiased;
   }
-  .container { max-width: 720px; margin: 0 auto; padding: 64px 24px 120px; }
 
-  /* Hero */
-  .hero { margin-bottom: 40px; }
-  h1 { font-size: 2rem; font-weight: 700; letter-spacing: -0.03em; margin-bottom: 6px; }
-  .subtitle { font-size: 0.88rem; color: var(--muted); max-width: 500px; line-height: 1.6; }
-
-  /* Stat bar */
-  .stat-bar {
-    display: flex; gap: 24px; padding: 14px 0;
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
-    margin-bottom: 24px;
-    font-size: 0.82rem; color: var(--muted);
+  /* ── Top bar ── */
+  .topbar {
+    background: var(--bg); border-bottom: 1px solid var(--border);
+    padding: 0 24px; position: sticky; top: 0; z-index: 10;
   }
-  .stat { text-align: center; }
-  .stat .num { font-size: 1.35rem; font-weight: 700; color: var(--text); display: block; line-height: 1.1; }
-  .stat .num.good { color: var(--sponsor); }
-  .stat .num.warn { color: var(--warn); }
-  .stat .num.bad { color: var(--bad); }
-  .stat .label { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--faint); }
-
-  /* Filters */
-  .filters {
-    display: flex; flex-wrap: wrap; gap: 6px 24px; margin-bottom: 20px;
-    font-size: 0.82rem; color: var(--muted);
+  .topbar-inner {
+    max-width: 960px; margin: 0 auto;
+    display: flex; align-items: center; gap: 16px; height: 48px;
   }
-  .filter-group { display: flex; gap: 10px; align-items: center; }
+  .logo { font-weight: 700; font-size: 15px; color: var(--text); white-space: nowrap; }
+  .logo span { color: var(--accent); }
+  .topbar-stats {
+    display: flex; gap: 16px; margin-left: auto;
+    font-size: 12px; color: var(--text-light);
+  }
+  .topbar-stats strong { color: var(--text); }
+
+  /* ── Main layout ── */
+  .main { max-width: 960px; margin: 0 auto; padding: 0 24px 80px; }
+
+  /* ── Header ── */
+  .page-header {
+    padding: 32px 0 20px;
+    border-bottom: 1px solid var(--border); margin-bottom: 0;
+  }
+  .page-header h1 { font-size: 22px; font-weight: 700; margin-bottom: 4px; }
+  .page-header p { font-size: 13px; color: var(--text-light); }
+
+  /* ── Filters ── */
+  .filter-bar {
+    display: flex; flex-wrap: wrap; gap: 6px 20px;
+    padding: 12px 0; border-bottom: 1px solid var(--border);
+    font-size: 13px; align-items: center;
+  }
   .filter-label {
-    font-weight: 700; font-size: 0.67rem; text-transform: uppercase;
-    letter-spacing: 0.1em; color: var(--faint);
+    font-weight: 600; font-size: 11px; text-transform: uppercase;
+    letter-spacing: 0.06em; color: var(--text-light);
   }
-  .filter-link {
-    cursor: pointer; color: var(--muted); text-decoration: none;
-    padding: 3px 0; border-bottom: 2px solid transparent; transition: all 0.12s;
-    font-size: 0.82rem;
+  .filter-group { display: flex; gap: 4px; }
+  .filter-btn {
+    cursor: pointer; padding: 4px 10px; border-radius: 4px;
+    border: 1px solid transparent; background: none;
+    color: var(--text-mid); font-size: 13px; transition: all 0.12s;
+    white-space: nowrap;
   }
-  .filter-link:hover { color: var(--text); }
-  .filter-link.active { color: var(--text); border-bottom-color: var(--text); }
+  .filter-btn:hover { background: var(--bg-alt); }
+  .filter-btn.active { border-color: var(--border); background: var(--bg-alt); color: var(--text); font-weight: 500; }
 
-  /* Sort */
-  .sort-row {
-    font-size: 0.78rem; color: var(--muted); margin-bottom: 24px;
-    display: flex; gap: 10px; align-items: center;
+  /* ── Sort ── */
+  .sort-bar {
+    display: flex; gap: 8px; align-items: center;
+    padding: 10px 0; font-size: 13px; color: var(--text-light);
   }
-  .sort-link {
-    cursor: pointer; color: var(--muted); text-decoration: none;
-    padding: 2px 0; border-bottom: 2px solid transparent; transition: all 0.12s;
+  .sort-btn {
+    cursor: pointer; background: none; border: none; color: var(--text-light);
+    font-size: 13px; padding: 2px 0; border-bottom: 2px solid transparent;
   }
-  .sort-link:hover { color: var(--text); }
-  .sort-link.active { color: var(--text); border-bottom-color: var(--text); }
-  .sort-count { margin-left: auto; font-size: 0.75rem; color: var(--faint); }
+  .sort-btn:hover { color: var(--text); }
+  .sort-btn.active { color: var(--text); border-bottom-color: var(--text); font-weight: 500; }
+  .result-count { margin-left: auto; font-size: 12px; color: var(--text-light); }
 
-  /* Job cards */
-  .job-list { display: flex; flex-direction: column; }
-  .job-card {
-    padding: 18px 0 16px;
+  /* ── Job list ── */
+  .job-list { border-top: 1px solid var(--border); }
+  .job-row {
+    display: grid;
+    grid-template-columns: 1fr 140px;
+    gap: 12px;
+    padding: 14px 0;
     border-bottom: 1px solid var(--border);
+    align-items: start;
     transition: background 0.1s;
-    position: relative;
   }
-  .job-card:hover { background: rgba(0,0,0,0.006); }
-  .job-card.expired { opacity: 0.6; }
-  .job-card.expired:hover { opacity: 0.8; }
+  .job-row:nth-child(even) { background: var(--bg-alt); }
+  .job-row:hover { background: #f0f4ff; }
+  .job-row.expired { opacity: 0.55; }
+  .job-row.expired:hover { opacity: 0.75; }
 
-  .job-header {
-    display: flex; justify-content: space-between; align-items: flex-start;
-    gap: 16px; margin-bottom: 4px;
-  }
+  .job-main { min-width: 0; }
   .job-title {
-    font-size: 0.95rem; font-weight: 700; line-height: 1.3;
+    font-size: 14px; font-weight: 600; line-height: 1.35;
+    margin-bottom: 1px;
   }
-  .job-title a { color: var(--text); text-decoration: none; }
+  .job-title a { color: var(--accent); text-decoration: none; }
+  .job-title a:visited { color: #551a8b; }
   .job-title a:hover { text-decoration: underline; }
-  .job-title .expired-tag {
-    font-size: 0.65rem; font-weight: 500; color: var(--bad);
-    text-transform: uppercase; letter-spacing: 0.06em;
-    margin-left: 6px; vertical-align: middle;
+  .job-title span { color: var(--text); }
+  .job-title .tag {
+    display: inline-block; font-size: 10px; font-weight: 600; 
+    text-transform: uppercase; letter-spacing: 0.05em;
+    padding: 1px 5px; border-radius: 3px; margin-left: 6px;
+    vertical-align: middle; position: relative; top: -1px;
   }
-  .job-title .stale-tag {
-    font-size: 0.65rem; font-weight: 500; color: var(--warn);
-    text-transform: uppercase; letter-spacing: 0.06em;
-    margin-left: 6px; vertical-align: middle;
-  }
+  .tag-expired { color: var(--sc); background: var(--sc-bg); }
+  .tag-stale { color: var(--stale); background: #fffbeb; }
+  .tag-grad { color: var(--sponsor); background: var(--sponsor-bg); }
 
-  .job-right {
-    text-align: right; min-width: 100px; flex-shrink: 0;
-  }
-  .job-salary { font-weight: 700; white-space: nowrap; color: var(--text); font-size: 0.9rem; }
-  .job-salary.na { color: var(--muted); font-weight: 500; }
-  .job-date { font-size: 0.72rem; color: var(--faint); margin-top: 1px; }
-  .job-source { font-size: 0.67rem; color: rgba(0,0,0,0.15); }
-
+  .job-company { font-size: 13px; color: var(--text-mid); margin-bottom: 2px; }
+  .job-location { font-size: 12px; color: var(--text-light); }
   .job-meta {
-    font-size: 0.8rem; color: var(--muted); display: flex; flex-wrap: wrap;
-    gap: 2px 10px;
+    display: flex; flex-wrap: wrap; gap: 4px 8px;
+    font-size: 12px; color: var(--text-light); margin-top: 2px;
   }
-  .job-meta .company-name { color: var(--text); font-weight: 500; }
+  .job-meta span { white-space: nowrap; }
 
+  .job-right { text-align: right; }
+  .job-salary { font-weight: 600; font-size: 14px; white-space: nowrap; }
+  .job-salary-na { color: var(--text-light); font-weight: 400; }
+  .job-date { font-size: 11px; color: var(--text-light); margin-top: 2px; }
+  .job-source { font-size: 10px; color: #c4c4c4; margin-top: 1px; }
+  .job-apply {
+    display: inline-block; margin-top: 6px; padding: 3px 10px;
+    background: var(--accent); color: #fff; border-radius: 3px;
+    font-size: 12px; font-weight: 500; text-decoration: none;
+  }
+  .job-apply:hover { background: #0052a3; }
+
+  /* ── Note badge ── */
   .job-note {
-    font-size: 0.75rem; margin-top: 6px; line-height: 1.5;
-    padding: 6px 10px; border-radius: 4px;
+    font-size: 12px; margin-top: 6px; padding: 6px 10px;
+    border-radius: 4px; line-height: 1.45;
   }
   .job-note.sponsor { color: var(--sponsor); background: var(--sponsor-bg); }
-  .job-note.agency { color: #64748b; background: #f1f5f9; }
-  .job-note.sc-blocked { color: var(--bad); background: var(--bad-bg); }
-  .job-note.warn { color: var(--warn); background: var(--warn-bg); }
+  .job-note.sc-blocked { color: var(--sc); background: var(--sc-bg); }
+  .job-note.agency { color: var(--agency); background: var(--agency-bg); }
+  .job-note.warn { color: var(--stale); background: #fffbeb; }
 
-  .fallback-link {
-    font-size: 0.72rem; color: var(--faint); margin-top: 4px;
-  }
-  .fallback-link a { color: var(--faint); }
+  .job-fallback { font-size: 12px; color: var(--text-light); margin-top: 4px; }
+  .job-fallback a { color: var(--text-light); }
 
-  .no-results { text-align: center; padding: 80px 20px; color: var(--muted); }
+  .no-results { text-align: center; padding: 60px 20px; color: var(--text-light); }
 
   footer {
-    margin-top: 80px; padding-top: 24px; border-top: 1px solid var(--border);
-    font-size: 0.78rem; color: var(--faint); line-height: 1.6;
+    margin-top: 48px; padding: 20px 0; border-top: 1px solid var(--border);
+    font-size: 12px; color: var(--text-light); line-height: 1.6;
   }
-  footer a { color: var(--text); }
+  footer a { color: var(--accent); }
 
-  @media (max-width: 500px) {
-    .container { padding: 36px 16px 80px; }
-    h1 { font-size: 1.5rem; }
-    .stat-bar { gap: 14px; flex-wrap: wrap; }
-    .stat { min-width: 60px; }
-    .job-header { flex-direction: column; gap: 4px; }
-    .job-right { text-align: left; display: flex; gap: 10px; align-items: baseline; }
-    .filters { gap: 6px 14px; }
+  @media (max-width: 640px) {
+    .job-row { grid-template-columns: 1fr; }
+    .job-right { text-align: left; display: flex; gap: 12px; align-items: baseline; flex-wrap: wrap; }
+    .topbar-inner { gap: 8px; }
+    .topbar-stats { gap: 8px; font-size: 11px; }
   }
 </style>
 </head>
 <body>
-<div class="container">
-  <div class="hero">
-    <h1>ServiceNow Jobs UK</h1>
-    <p class="subtitle">ServiceNow roles in the United Kingdom. Cross-referenced against the UK Government sponsor register. Refreshed daily.</p>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="logo">ServiceNow <span>Jobs UK</span></div>
+    <div class="topbar-stats" id="topbar-stats"></div>
+  </div>
+</div>
+
+<div class="main">
+  <div class="page-header">
+    <h1>ServiceNow Roles — United Kingdom</h1>
+    <p>Cross-referenced against the UK Government sponsor register. Refreshed daily.</p>
   </div>
 
-  <div class="stat-bar" id="stat-bar"></div>
-
-  <div class="filters" id="filters">
+  <div class="filter-bar" id="filters">
     <span class="filter-label">Sponsorship</span>
     <div class="filter-group" data-filter="sponsorship">
-      <span class="filter-link active" data-value="all">All</span>
-      <span class="filter-link" data-value="verified">Verified</span>
-      <span class="filter-link" data-value="sc_blocked">SC blocked</span>
-      <span class="filter-link" data-value="agency_unknown">Agency</span>
-      <span class="filter-link" data-value="unavailable">Not available</span>
+      <span class="filter-btn active" data-value="all">All</span>
+      <span class="filter-btn" data-value="sponsor_verified">Sponsored</span>
+      <span class="filter-btn" data-value="sc_blocked">SC Blocked</span>
+      <span class="filter-btn" data-value="agency_unknown">Agency</span>
+      <span class="filter-btn" data-value="unavailable">Not Available</span>
+      <span class="filter-btn" data-value="unknown">Unknown</span>
     </div>
     <span class="filter-label">Role</span>
     <div class="filter-group" data-filter="role">
-      <span class="filter-link active" data-value="all">All</span>
-      <span class="filter-link" data-value="developer">Developer</span>
-      <span class="filter-link" data-value="architect">Architect</span>
-      <span class="filter-link" data-value="consultant">Consultant</span>
-    </div>
-    <span class="filter-label">Status</span>
-    <div class="filter-group" data-filter="status">
-      <span class="filter-link active" data-value="all">All</span>
-      <span class="filter-link" data-value="live">Live</span>
-      <span class="filter-link" data-value="grad">Grad</span>
+      <span class="filter-btn active" data-value="all">All</span>
+      <span class="filter-btn" data-value="developer">Developer</span>
+      <span class="filter-btn" data-value="architect">Architect</span>
+      <span class="filter-btn" data-value="consultant">Consultant</span>
+      <span class="filter-btn" data-value="admin">Admin</span>
+      <span class="filter-btn" data-value="manager">Manager</span>
     </div>
   </div>
 
-  <div class="sort-row">
-    Sort by
-    <span class="sort-link active" data-sort="date">Newest</span>
-    <span class="sort-link" data-sort="salary">Salary</span>
-    <span class="sort-link" data-sort="company">Company</span>
-    <span class="sort-count" id="sort-count"></span>
+  <div class="sort-bar">
+    Sort
+    <span class="sort-btn active" data-sort="date">Newest</span>
+    <span class="sort-btn" data-sort="salary">Salary</span>
+    <span class="sort-btn" data-sort="company">Company</span>
+    <span class="result-count" id="result-count"></span>
   </div>
 
   <div class="job-list" id="job-list"></div>
-  <div class="no-results" id="no-results" style="display:none"><p>No jobs match your filters</p></div>
+  <div class="no-results" id="no-results" style="display:none">No jobs match your filters</div>
 
   <footer>
-    <p>Updated <span id="update-date">daily</span> · Data from Reed, Hunt UK, LinkedIn, and company career pages.</p>
-    <p style="margin-top: 4px;">Sponsor verification via <a href="https://www.gov.uk/government/publications/register-of-licensed-sponsors-workers">UK Government register</a> · <a href="all-jobs.html">Master archive</a></p>
-    <p style="margin-top: 8px; font-size: 0.72rem; color: rgba(0,0,0,0.18);">
-      Built by <a href="https://github.com/IbdotBoss/servicenow-jobs-digest" style="color: inherit;">Mr Faajii</a>
-    </p>
+    <p>Updated <strong id="update-date">daily</strong> · Data from LinkedIn, JobServe, Reed, Hunt UK, and company career pages.</p>
+    <p>Sponsor data via <a href="https://www.gov.uk/government/publications/register-of-licensed-sponsors-workers">UK Government register</a> · <a href="all-jobs.html">Full archive</a></p>
+    <p style="margin-top: 8px; color: #c4c4c4;">Built by <a href="https://github.com/IbdotBoss/servicenow-jobs-digest" style="color: inherit;">Mr Faajii</a> & Stage</p>
   </footer>
 </div>
 
 <script>
 let allJobs = [];
-let filters = { sponsorship: 'all', role: 'all', status: 'all' };
+let filters = { sponsorship: 'all', role: 'all' };
 let sortBy = 'date';
 
 async function init() {
   const resp = await fetch('data/jobs.json');
   const data = await resp.json();
-  allJobs = data.jobs;
-  document.getElementById('update-date').textContent = data.updated;
-  updateStats();
+  allJobs = data.jobs || [];
+  document.getElementById('update-date').textContent = data.updated || 'today';
+  updateTopbar();
   render();
 }
 
-function updateStats() {
+function updateTopbar() {
   const total = allJobs.length;
-  const verified = allJobs.filter(j => j.visa_sponsorship === 'verified').length;
-  const sc_blocked = allJobs.filter(j => j.visa_sponsorship === 'sc_blocked').length;
-  const grad = allJobs.filter(j => j.grad_scheme).length;
-  const live = allJobs.filter(j => j.link_status === 'live').length;
-  document.getElementById('stat-bar').innerHTML = `
-    <div class="stat"><span class="num">${total}</span><span class="label">Total</span></div>
-    <div class="stat"><span class="num good">${verified}</span><span class="label">Sponsored</span></div>
-    <div class="stat"><span class="num bad">${sc_blocked}</span><span class="label">SC blocked</span></div>
-    <div class="stat"><span class="num">${grad}</span><span class="label">Grad</span></div>
-    <div class="stat"><span class="num warn">${live}</span><span class="label">Live links</span></div>
-  `;
+  const verified = allJobs.filter(j => j.visa_sponsorship === 'sponsor_verified' || j.visa_sponsorship === 'verified').length;
+  const sc = allJobs.filter(j => j.visa_sponsorship === 'sc_blocked').length;
+  document.getElementById('topbar-stats').innerHTML = 
+    `<span>${total} roles</span><span>${verified} sponsored</span><span>${sc} SC-blocked</span>`;
 }
 
 function getFiltered() {
   return allJobs.filter(j => {
-    if (filters.sponsorship !== 'all' && j.visa_sponsorship !== filters.sponsorship) return false;
+    if (filters.sponsorship !== 'all') {
+      // Map old 'verified' to new 'sponsor_verified'
+      const sp = j.visa_sponsorship;
+      if (filters.sponsorship === 'sponsor_verified' && sp !== 'sponsor_verified' && sp !== 'verified') return false;
+      if (filters.sponsorship !== 'sponsor_verified' && sp !== filters.sponsorship) return false;
+    }
     if (filters.role !== 'all' && j.role_type !== filters.role) return false;
-    if (filters.status === 'live' && j.link_status !== 'live') return false;
-    if (filters.status === 'grad' && !j.grad_scheme) return false;
     return true;
   });
 }
 
 function sortJobs(jobs) {
   return [...jobs].sort((a, b) => {
-    if (sortBy === 'date') return b.date_posted.localeCompare(a.date_posted);
+    if (sortBy === 'date') return (b.date_posted || '').localeCompare(a.date_posted || '');
     if (sortBy === 'salary') return (b.salary_max || b.salary_min || 0) - (a.salary_max || a.salary_min || 0);
-    if (sortBy === 'company') return a.company.localeCompare(b.company);
+    if (sortBy === 'company') return (a.company || '').localeCompare(b.company || '');
     return 0;
   });
 }
 
-function buildNote(j) {
+function noteHtml(j) {
   const sp = j.visa_sponsorship;
-
   if (sp === 'unavailable') {
-    return `<div class="job-note sc-blocked">Job listing states visa sponsorship is NOT available for this role.</div>`;
+    return '<div class="job-note sc-blocked">Visa sponsorship NOT available for this role.</div>';
   }
   if (sp === 'sc_blocked') {
-    return `<div class="job-note sc-blocked">SC clearance required → 5 years continuous UK residency needed. Sponsorship not possible for international candidates.</div>`;
+    return '<div class="job-note sc-blocked">SC/DV clearance required → 5yr UK residency. Sponsorship not possible.</div>';
   }
-  if (sp === 'verified' && j.link_status === 'expired') {
-    return `<div class="job-note sponsor">Sponsor verified ✓ — Company holds a valid UK sponsor licence. Original listing expired — check company career page.</div>`;
+  if ((sp === 'sponsor_verified' || sp === 'verified') && j.link_status === 'expired') {
+    return '<div class="job-note sponsor">✓ Sponsor verified — Company holds valid UK sponsor licence. Listing expired.</div>';
   }
-  if (sp === 'verified' && j.link_status === 'stale') {
-    return `<div class="job-note sponsor">Sponsor verified ✓ — Posted ${j.date_posted}, may be filled. Check company career page for current openings.</div>`;
+  if ((sp === 'sponsor_verified' || sp === 'verified') && j.link_status === 'stale') {
+    return '<div class="job-note sponsor">✓ Sponsor verified — Posted ' + j.date_posted + ', may be filled.</div>';
   }
-  if (sp === 'verified') {
-    return `<div class="job-note sponsor">Sponsor verified ✓ — Company holds a valid UK sponsor licence.</div>`;
+  if (sp === 'sponsor_verified' || sp === 'verified') {
+    return '<div class="job-note sponsor">✓ Sponsor verified — Company holds valid UK sponsor licence.</div>';
   }
   if (sp === 'agency_unknown') {
-    return `<div class="job-note agency">Posted by recruitment agency — sponsorship depends on the actual employer, not the agency. Verify directly.</div>`;
+    return '<div class="job-note agency">Agency listing — sponsorship depends on actual employer.</div>';
   }
   return '';
 }
 
-function buildFallback(j) {
-  if (j.link_status === 'expired' && j.fallback_url) {
-    return `<div class="fallback-link">Company career page: <a href="${j.fallback_url}" target="_blank" rel="noopener">${j.company} careers →</a></div>`;
-  }
-  if (j.link_status === 'stale' && j.fallback_url) {
-    return `<div class="fallback-link">Current openings: <a href="${j.fallback_url}" target="_blank" rel="noopener">${j.company} careers →</a></div>`;
+function fallbackHtml(j) {
+  if ((j.link_status === 'expired' || j.link_status === 'stale') && j.fallback_url) {
+    return '<div class="job-fallback">Company page: <a href="' + j.fallback_url + '" target="_blank" rel="noopener">' + j.company + ' careers →</a></div>';
   }
   return '';
 }
@@ -287,7 +298,7 @@ function buildFallback(j) {
 function render() {
   const filtered = getFiltered();
   const sorted = sortJobs(filtered);
-  document.getElementById('sort-count').textContent = `${sorted.length} job${sorted.length !== 1 ? 's' : ''}`;
+  document.getElementById('result-count').textContent = sorted.length + ' job' + (sorted.length !== 1 ? 's' : '');
 
   const list = document.getElementById('job-list');
   const no = document.getElementById('no-results');
@@ -295,66 +306,79 @@ function render() {
   no.style.display = 'none';
 
   list.innerHTML = sorted.map(j => {
-    const cardClass = j.link_status === 'expired' ? ' expired' : '';
-    const titleTags = [];
-    if (j.link_status === 'expired') titleTags.push('<span class="expired-tag">Expired</span>');
-    if (j.link_status === 'stale') titleTags.push('<span class="stale-tag">Stale</span>');
-    if (j.grad_scheme) titleTags.push('<span class="stale-tag">Grad</span>');
+    const rowClass = (j.link_status === 'expired') ? ' expired' : '';
+    
+    // Title with tags
+    let titleTags = '';
+    if (j.link_status === 'expired') titleTags += '<span class="tag tag-expired">Expired</span>';
+    if (j.link_status === 'stale') titleTags += '<span class="tag tag-stale">Stale</span>';
+    if (j.grad_scheme) titleTags += '<span class="tag tag-grad">Grad</span>';
 
-    const meta = [`<span class="company-name">${j.company}</span>`];
-    if (j.location) meta.push(j.location);
-    const tagParts = [];
-    if (j.remote === 'hybrid') tagParts.push('Hybrid');
-    else if (j.remote === 'remote') tagParts.push('Remote');
-    else if (j.remote === 'onsite') tagParts.push('Onsite');
-    if (j.employment === 'contract') tagParts.push('Contract');
-    if (j.employment === 'internship') tagParts.push('Internship');
-    if (j.source_type === 'agency') tagParts.push('via agency');
-    if (tagParts.length) meta.push(tagParts.join(' · '));
+    // Meta line
+    let metaItems = [];
+    if (j.remote === 'remote') metaItems.push('Remote');
+    else if (j.remote === 'hybrid') metaItems.push('Hybrid');
+    else if (j.remote === 'on-site' || j.remote === 'onsite') metaItems.push('On-site');
+    if (j.employment === 'contract') metaItems.push('Contract');
+    if (j.employment === 'internship') metaItems.push('Internship');
+    if (j.source_type === 'agency') metaItems.push('via agency');
+    if (j.source) metaItems.push(j.source);
+    let meta = metaItems.length ? '<div class="job-meta">' + metaItems.map(m => '<span>' + m + '</span>').join(' · ') + '</div>' : '';
 
-    const note = buildNote(j);
-    const fallback = buildFallback(j);
+    let salaryClass = (j.salary_display === 'Not listed' || !j.salary_display) ? ' job-salary-na' : '';
+    let salary = j.salary_display || 'Not listed';
 
-    return `
-      <div class="job-card${cardClass}">
-        <div class="job-header">
-          <div class="job-title">
-            ${j.url && j.link_status !== 'expired' ? `<a href="${j.url}" target="_blank" rel="noopener">${j.title}</a>` : j.title}
-            ${titleTags.join('')}
-          </div>
-          <div class="job-right">
-            <div class="job-salary${j.salary_display === 'Not listed' ? ' na' : ''}">${j.salary_display}</div>
-            <div class="job-date">${j.date_posted}</div>
-            <div class="job-source">${j.source}</div>
-          </div>
-        </div>
-        <div class="job-meta">${meta.join(' · ')}</div>
-        ${note}
-        ${fallback}
-      </div>`;
+    let note = noteHtml(j);
+    let fallback = fallbackHtml(j);
+    
+    let titleHtml = (j.url && j.link_status !== 'expired')
+      ? '<a href="' + j.url + '" target="_blank" rel="noopener">' + j.title + '</a>'
+      : '<span>' + j.title + '</span>';
+
+    let applyBtn = (j.url && j.link_status !== 'expired')
+      ? '<a class="job-apply" href="' + j.url + '" target="_blank" rel="noopener">Apply →</a>'
+      : '';
+
+    return '<div class="job-row' + rowClass + '">' +
+      '<div class="job-main">' +
+        '<div class="job-title">' + titleHtml + titleTags + '</div>' +
+        '<div class="job-company">' + j.company + '</div>' +
+        '<div class="job-location">' + (j.location || 'UK') + '</div>' +
+        meta +
+        note +
+        fallback +
+      '</div>' +
+      '<div class="job-right">' +
+        '<div class="job-salary' + salaryClass + '">' + salary + '</div>' +
+        '<div class="job-date">' + (j.date_posted || '') + '</div>' +
+        '<div class="job-source" style="color:#c4c4c4;font-size:10px;">' + (j.source || '') + '</div>' +
+        applyBtn +
+      '</div>' +
+    '</div>';
   }).join('');
 }
 
+// Event listeners
 document.getElementById('filters').addEventListener('click', e => {
-  const link = e.target.closest('.filter-link');
-  if (!link) return;
-  const group = link.closest('.filter-group');
-  group.querySelectorAll('.filter-link').forEach(l => l.classList.remove('active'));
-  link.classList.add('active');
-  filters[group.dataset.filter] = link.dataset.value;
+  const btn = e.target.closest('.filter-btn');
+  if (!btn) return;
+  const group = btn.closest('.filter-group');
+  group.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  filters[group.dataset.filter] = btn.dataset.value;
   render();
 });
 
-document.querySelector('.sort-row').addEventListener('click', e => {
-  const link = e.target.closest('.sort-link');
-  if (!link) return;
-  document.querySelectorAll('.sort-link').forEach(l => l.classList.remove('active'));
-  link.classList.add('active');
-  sortBy = link.dataset.sort;
+document.querySelector('.sort-bar').addEventListener('click', e => {
+  const btn = e.target.closest('.sort-btn');
+  if (!btn) return;
+  document.querySelectorAll('.sort-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  sortBy = btn.dataset.sort;
   render();
 });
 
 init();
 </script>
 </body>
-</html>]]>
+</html>
