@@ -1,8 +1,8 @@
 {
   "updated": "2026-05-06",
-  "total": 95,
-  "verified": 22,
-  "sc_blocked": 9,
+  "total": 94,
+  "verified": 32,
+  "sc_blocked": 16,
   "unavailable": 1,
   "grad_schemes": 1,
   "live_links": 23,
@@ -60,8 +60,9 @@
       "sc_clearance": false,
       "grad_scheme": false,
       "link_status": "live",
-      "visa_sponsorship": "agency_unknown",
-      "description": "ServiceNow Developer. Remote (must be UK-based). \u00a345k-\u00a348k. 12-month fixed term contract initially. Analyse and understand ServiceNow environments."
+      "visa_sponsorship": "sc_blocked",
+      "description": "ServiceNow Developer. Remote (must be UK-based). \u00a345k-\u00a348k. 12-month fixed term contract initially. Analyse and understand ServiceNow environments.",
+      "sponsorship_scan": "Security clearance required"
     },
     {
       "title": "ServiceNow HR Developer (Contract to Dec 2026)",
@@ -101,8 +102,9 @@
       "sc_clearance": false,
       "grad_scheme": false,
       "link_status": "live",
-      "visa_sponsorship": "verified",
-      "description": "Lead ServiceNow implementation projects. Effort estimation, planning, architectural analysis. API integration, cloud platforms. IBM Consulting \u2014 verified A-rated sponsor."
+      "visa_sponsorship": "sponsor_verified",
+      "description": "Lead ServiceNow implementation projects. Effort estimation, planning, architectural analysis. API integration, cloud platforms. IBM Consulting \u2014 verified A-rated sponsor.",
+      "sponsorship_scan": "Skilled Worker visa mentioned"
     },
     {
       "title": "ServiceNow Senior Developer (11m Contract)",
@@ -123,7 +125,8 @@
       "grad_scheme": false,
       "link_status": "expired",
       "visa_sponsorship": "verified",
-      "description": "Maintenance, configuration and development of the Firm's ITSM tool. Check Clifford Chance careers page."
+      "description": "Maintenance, configuration and development of the Firm's ITSM tool. Check Clifford Chance careers page.",
+      "sponsorship_scan": "fetch_error: HTTP Error 410: Gone"
     },
     {
       "title": "ServiceNow Developer, AVP",
@@ -144,7 +147,8 @@
       "grad_scheme": false,
       "link_status": "expired",
       "visa_sponsorship": "sc_blocked",
-      "description": "SC clearance required \u2014 5yr UK residency. Not available for international candidates."
+      "description": "SC clearance required \u2014 5yr UK residency. Not available for international candidates.",
+      "sponsorship_scan": "fetch_error: HTTP Error 410: Gone"
     },
     {
       "title": "ServiceNow Developer",
@@ -165,7 +169,8 @@
       "grad_scheme": false,
       "link_status": "expired",
       "visa_sponsorship": "sc_blocked",
-      "description": "SC clearance required \u2014 5yr UK residency. Not available for international candidates."
+      "description": "SC clearance required \u2014 5yr UK residency. Not available for international candidates.",
+      "sponsorship_scan": "fetch_error: HTTP Error 410: Gone"
     },
     {
       "title": "Graduate ServiceNow Technical Consultant 2026",
@@ -245,7 +250,8 @@
       "grad_scheme": false,
       "link_status": "live",
       "visa_sponsorship": "agency_unknown",
-      "description": "12-month fixed-term contract. Newbury-based, hybrid (3 days WFH, 2 days onsite). Start ASAP March/April 2026. Agency listing \u2014 verify sponsorship with employer."
+      "description": "12-month fixed-term contract. Newbury-based, hybrid (3 days WFH, 2 days onsite). Start ASAP March/April 2026. Agency listing \u2014 verify sponsorship with employer.",
+      "sponsorship_scan": "fetch_error: The read operation timed out"
     },
     {
       "title": "ServiceNow Implementation Specialist",
@@ -266,7 +272,8 @@
       "grad_scheme": false,
       "link_status": "live",
       "visa_sponsorship": "sc_blocked",
-      "description": "Develop and integrate ServiceNow solutions across CSM, ITSM, ITOM, HRSD. JavaScript, Flow Designer, Integration Hub. SC clearance required \u2014 5yr UK residency."
+      "description": "Develop and integrate ServiceNow solutions across CSM, ITSM, ITOM, HRSD. JavaScript, Flow Designer, Integration Hub. SC clearance required \u2014 5yr UK residency.",
+      "sponsorship_scan": "Security clearance required"
     },
     {
       "title": "ServiceNow Developer",
@@ -306,7 +313,8 @@
       "grad_scheme": false,
       "link_status": "live",
       "visa_sponsorship": "sc_blocked",
-      "description": "IRM (Risk, Policy & Compliance, Vendor Risk, Audit) and SecOps. Must be eligible for Security Clearance. Akkodis is an agency \u2014 SC requirement blocks sponsorship."
+      "description": "IRM (Risk, Policy & Compliance, Vendor Risk, Audit) and SecOps. Must be eligible for Security Clearance. Akkodis is an agency \u2014 SC requirement blocks sponsorship.",
+      "sponsorship_scan": "Security clearance required"
     },
     {
       "title": "ServiceNow HR Developer (HRSD)",
@@ -346,7 +354,8 @@
       "grad_scheme": false,
       "link_status": "live",
       "visa_sponsorship": "agency_unknown",
-      "description": "12-month FTC, hybrid 2 days remote. May/June 2026 start. Syntax Consultancy NOT on sponsor register \u2014 verify sponsorship with actual employer."
+      "description": "12-month FTC, hybrid 2 days remote. May/June 2026 start. Syntax Consultancy NOT on sponsor register \u2014 verify sponsorship with actual employer.",
+      "sponsorship_scan": "fetch_error: HTTP Error 403: Forbidden"
     },
     {
       "title": "ServiceNow Solution Architect (SC Cleared)",
@@ -366,7 +375,8 @@
       "grad_scheme": false,
       "link_status": "live",
       "visa_sponsorship": "sc_blocked",
-      "description": "Design end-to-end ServiceNow solutions across ITSM, ITOM. Contract, remote. Requires existing SC Clearance \u2014 blocks international candidates."
+      "description": "Design end-to-end ServiceNow solutions across ITSM, ITOM. Contract, remote. Requires existing SC Clearance \u2014 blocks international candidates.",
+      "sponsorship_scan": "Security clearance required"
     },
     {
       "title": "ServiceNow Technical Consultant",
@@ -385,8 +395,9 @@
       "sc_clearance": false,
       "grad_scheme": false,
       "link_status": "live",
-      "visa_sponsorship": "agency_unknown",
-      "description": "Computacenter \u2014 Elite ServiceNow Partner. Computacenter UK is on the sponsor register (A-rated). Verify sponsorship for this specific role."
+      "visa_sponsorship": "sc_blocked",
+      "description": "Computacenter \u2014 Elite ServiceNow Partner. Computacenter UK is on the sponsor register (A-rated). Verify sponsorship for this specific role.",
+      "sponsorship_scan": "Security clearance required"
     },
     {
       "title": "ServiceNow SIR Engineer",
@@ -446,8 +457,9 @@
       "sc_clearance": false,
       "grad_scheme": false,
       "link_status": "live",
-      "visa_sponsorship": "verified",
-      "description": "Global leader in AV/UC solutions. Hybrid working, 1 day onsite. Excellent salary + bonus. Kinly holds A-rated sponsor licence."
+      "visa_sponsorship": "sponsor_verified",
+      "description": "Global leader in AV/UC solutions. Hybrid working, 1 day onsite. Excellent salary + bonus. Kinly holds A-rated sponsor licence.",
+      "sponsorship_scan": "Skilled Worker visa mentioned"
     },
     {
       "title": "ServiceNow Functional Analyst",
@@ -466,8 +478,9 @@
       "sc_clearance": false,
       "grad_scheme": false,
       "link_status": "live",
-      "visa_sponsorship": "agency_unknown",
-      "description": "6+ month contract. London 3 days/week. ITIL processes, ServiceNow data model. Business/functional analysis."
+      "visa_sponsorship": "sc_blocked",
+      "description": "6+ month contract. London 3 days/week. ITIL processes, ServiceNow data model. Business/functional analysis.",
+      "sponsorship_scan": "Security clearance required"
     },
     {
       "title": "ServiceNow Engineer",
@@ -485,8 +498,9 @@
       "sc_clearance": false,
       "grad_scheme": false,
       "link_status": "live",
-      "visa_sponsorship": "verified",
-      "description": "Global law firm. Mature business-critical ServiceNow platform. Collaborative, people-first environment."
+      "visa_sponsorship": "sponsor_verified",
+      "description": "Global law firm. Mature business-critical ServiceNow platform. Collaborative, people-first environment.",
+      "sponsorship_scan": "Skilled Worker visa mentioned"
     },
     {
       "title": "ServiceNow Technical Lead (Insurance/FSO)",
@@ -504,8 +518,9 @@
       "sc_clearance": false,
       "grad_scheme": false,
       "link_status": "live",
-      "visa_sponsorship": "verified",
-      "description": "Insurance digital transformation on ServiceNow FSO. Global IT services. DXC holds A-rated sponsor licence."
+      "visa_sponsorship": "sponsor_verified",
+      "description": "Insurance digital transformation on ServiceNow FSO. Global IT services. DXC holds A-rated sponsor licence.",
+      "sponsorship_scan": "Skilled Worker visa mentioned"
     },
     {
       "title": "ServiceNow Product Manager (Banking)",
@@ -524,8 +539,9 @@
       "sc_clearance": false,
       "grad_scheme": false,
       "link_status": "live",
-      "visa_sponsorship": "agency_unknown",
-      "description": "ServiceNow Centre of Excellence. 2 days/week Knutsford or Manchester. SThree agency \u2014 Barclays A-rated sponsor."
+      "visa_sponsorship": "sponsor_verified",
+      "description": "ServiceNow Centre of Excellence. 2 days/week Knutsford or Manchester. SThree agency \u2014 Barclays A-rated sponsor.",
+      "sponsorship_scan": "Skilled Worker visa mentioned"
     },
     {
       "title": "CMDB Specialist (ServiceNow)",
@@ -542,8 +558,9 @@
       "sc_clearance": false,
       "grad_scheme": false,
       "link_status": "live",
-      "visa_sponsorship": "agency_unknown",
-      "description": "15M+ CIs, 300K employees. Global manufacturer. Governance + hands-on CMDB. Harvey Nash agency."
+      "visa_sponsorship": "sponsor_verified",
+      "description": "15M+ CIs, 300K employees. Global manufacturer. Governance + hands-on CMDB. Harvey Nash agency.",
+      "sponsorship_scan": "Skilled Worker visa mentioned"
     },
     {
       "title": "ServiceNow Technical Consultant (DV Cleared)",
@@ -563,7 +580,8 @@
       "grad_scheme": false,
       "link_status": "live",
       "visa_sponsorship": "sc_blocked",
-      "description": "Must hold active DV clearance \u2014 blocks international candidates. 2-3 yrs ServiceNow. 10% bonus."
+      "description": "Must hold active DV clearance \u2014 blocks international candidates. 2-3 yrs ServiceNow. 10% bonus.",
+      "sponsorship_scan": "Security clearance required"
     },
     {
       "title": "ServiceNow Technical Architect",
@@ -600,8 +618,9 @@
       "sc_clearance": false,
       "grad_scheme": false,
       "link_status": "live",
-      "visa_sponsorship": "agency_unknown",
-      "description": "100% Remote, English speaking. Start June. 6 months + extensions. ITOM expertise required."
+      "visa_sponsorship": "sc_blocked",
+      "description": "100% Remote, English speaking. Start June. 6 months + extensions. ITOM expertise required.",
+      "sponsorship_scan": "Security clearance required"
     },
     {
       "title": "ServiceNow Business Development Lead (UK)",
@@ -620,8 +639,9 @@
       "sc_clearance": false,
       "grad_scheme": false,
       "link_status": "live",
-      "visa_sponsorship": "agency_unknown",
-      "description": "Sales/business development role. \u00a3180k OTE. Not a technical ServiceNow position \u2014 sales only."
+      "visa_sponsorship": "sc_blocked",
+      "description": "Sales/business development role. \u00a3180k OTE. Not a technical ServiceNow position \u2014 sales only.",
+      "sponsorship_scan": "Security clearance required"
     },
     {
       "title": "ServiceNow Technical Architect (DV Cleared)",
@@ -641,7 +661,8 @@
       "grad_scheme": false,
       "link_status": "live",
       "visa_sponsorship": "sc_blocked",
-      "description": "Must hold active DV clearance. \u00a380k-\u00a3100k + 10% bonus. Remote UK with travel."
+      "description": "Must hold active DV clearance. \u00a380k-\u00a3100k + 10% bonus. Remote UK with travel.",
+      "sponsorship_scan": "fetch_error: HTTP Error 410: Gone"
     },
     {
       "title": "ServiceNow Consultant (DWP)",
@@ -659,7 +680,8 @@
       "grad_scheme": false,
       "link_status": "live",
       "visa_sponsorship": "unknown",
-      "description": "DWP (Department for Work and Pensions). 6-month contract, Inside IR35. Hybrid \u2014 Manchester, Newcastle, or Leeds."
+      "description": "DWP (Department for Work and Pensions). 6-month contract, Inside IR35. Hybrid \u2014 Manchester, Newcastle, or Leeds.",
+      "sponsorship_scan": "fetch_error: HTTP Error 410: Gone"
     },
     {
       "title": "Solution Architect ServiceNow (Telecom/Satcom)",
@@ -695,7 +717,8 @@
       "grad_scheme": false,
       "link_status": "live",
       "visa_sponsorship": "sc_blocked",
-      "description": "SC clearance required \u2014 blocks international candidates."
+      "description": "SC clearance required \u2014 blocks international candidates.",
+      "sponsorship_scan": "Security clearance required"
     },
     {
       "title": "Senior Technical Consultant - ServiceNow",
@@ -712,8 +735,9 @@
       "sc_clearance": false,
       "grad_scheme": false,
       "link_status": "live",
-      "visa_sponsorship": "agency_unknown",
-      "description": "Senior ServiceNow consultant role. Agency listing \u2014 verify sponsorship with employer."
+      "visa_sponsorship": "sc_blocked",
+      "description": "Senior ServiceNow consultant role. Agency listing \u2014 verify sponsorship with employer.",
+      "sponsorship_scan": "Security clearance required"
     },
     {
       "title": "ServiceNow Solution Architect",
@@ -730,8 +754,9 @@
       "sc_clearance": false,
       "grad_scheme": false,
       "link_status": "live",
-      "visa_sponsorship": "agency_unknown",
-      "description": "Solution Architect for ServiceNow platform. Agency listing."
+      "visa_sponsorship": "sc_blocked",
+      "description": "Solution Architect for ServiceNow platform. Agency listing.",
+      "sponsorship_scan": "Security clearance required"
     },
     {
       "title": "Solution Architect - ServiceNow (Enterprise Integrations)",
@@ -964,26 +989,6 @@
       "source_type": "direct",
       "role_type": "developer",
       "remote": "on-site",
-      "employment": "permanent",
-      "sc_clearance": false,
-      "grad_scheme": false,
-      "link_status": "live",
-      "visa_sponsorship": "unknown",
-      "description": ""
-    },
-    {
-      "title": "ServiceNow Technical Consultant",
-      "company": "Konversational - The ServiceNow Customer Workflow Experts",
-      "location": "Greater London, England, United Kingdom (Hybrid)",
-      "salary_display": "Not listed",
-      "salary_min": 0,
-      "salary_max": 0,
-      "date_posted": "2026-05-06",
-      "url": "https://www.linkedin.com/jobs/view/4398113003",
-      "source": "LinkedIn",
-      "source_type": "direct",
-      "role_type": "consultant",
-      "remote": "hybrid",
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
