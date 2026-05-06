@@ -1,9 +1,0 @@
-# ServiceNow Jobs Digest Jekyll Config
-theme: jekyll-theme-minimal
-
-title: ServiceNow Jobs UK
-description: Daily curated ServiceNow jobs in the UK with visa sponsorship filtering
-baseurl: ""
-
-plugins:
-  - jekyll-feed

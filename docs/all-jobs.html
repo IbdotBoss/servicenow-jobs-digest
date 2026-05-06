@@ -1,176 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ServiceNow Jobs UK — Master Archive</title>
-    <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        body {
-            font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
-            color: #0a0a0a;
-            background: #ffffff;
-            line-height: 1.6;
-            font-size: 16px;
-        }
-        
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 60px 20px 100px;
-        }
-        
-        h1 { font-size: 2rem; font-weight: 700; letter-spacing: -0.03em; margin-bottom: 8px; }
-        .subtitle { color: rgba(0,0,0,0.5); font-size: 0.9rem; margin-bottom: 40px; }
-        
-        table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 0.9rem; }
-        
-        th {
-            text-align: left;
-            padding: 12px 16px;
-            border-bottom: 2px solid #e5e5e5;
-            font-weight: 700;
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: rgba(0,0,0,0.4);
-        }
-        
-        td {
-            padding: 12px 12px 12px 0;
-            border-bottom: 1px solid rgba(0,0,0,0.06);
-            vertical-align: top;
-        }
-        
-        td a {
-            color: #0a0a0a;
-            text-decoration: none;
-            font-weight: 500;
-        }
-        
-        td a:hover { text-decoration: underline; }
-        
-        .date { color: rgba(0,0,0,0.4); font-size: 0.85rem; white-space: nowrap; }
-        .company { color: rgba(0,0,0,0.6); font-size: 0.85rem; }
-        .symbol { font-size: 0.9rem; }
-        
-        .legend {
-            margin: 16px 0 24px;
-            font-size: 0.85rem;
-            color: rgba(0,0,0,0.5);
-            line-height: 1.8;
-        }
-        
-        .note {
-            margin-top: 24px;
-            padding: 16px;
-            background: rgba(0,0,0,0.02);
-            border-left: 3px solid rgba(0,0,0,0.1);
-            font-size: 0.85rem;
-            color: rgba(0,0,0,0.5);
-            line-height: 1.6;
-        }
-        
-        footer {
-            margin-top: 80px;
-            padding-top: 24px;
-            border-top: 1px solid rgba(0,0,0,0.06);
-            font-size: 0.85rem;
-            color: rgba(0,0,0,0.4);
-        }
-        
-        footer a { color: #0a0a0a; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All ServiceNow Jobs UK — Master Archive</title>
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap">
+<style>
+  :root {
+    --bg: #fafafa; --surface: #ffffff; --text: #111; --text-muted: #6b6b6b;
+    --border: #e5e5e5; --sponsor: #059669; --sponsor-bg: #ecfdf5;
+    --grad: #7c3aed; --grad-bg: #f5f3ff; --sc: #dc2626; --sc-bg: #fef2f2;
+    --radius: 12px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.5; font-size: 15px;
+  }
+  .container { max-width: 1100px; margin: 0 auto; padding: 40px 24px; }
+  .back { color: var(--text-muted); text-decoration: none; font-size: 0.85rem; }
+  .back:hover { color: var(--text); }
+  h1 { font-size: 1.6rem; font-weight: 700; margin: 12px 0 4px; letter-spacing: -0.02em; }
+  .subtitle { color: var(--text-muted); font-size: 0.85rem; margin-bottom: 32px; }
+  
+  table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+  th {
+    text-align: left; padding: 10px 12px;
+    border-bottom: 2px solid var(--border);
+    font-weight: 700; font-size: 0.72rem; text-transform: uppercase;
+    letter-spacing: 0.08em; color: var(--text-muted);
+  }
+  td { padding: 10px 12px; border-bottom: 1px solid rgba(0,0,0,0.04); vertical-align: top; }
+  td a { color: var(--text); text-decoration: none; font-weight: 500; }
+  td a:hover { text-decoration: underline; }
+  
+  .badge {
+    display: inline-block; font-size: 0.7rem; font-weight: 600;
+    padding: 1px 6px; border-radius: 3px; margin-right: 3px;
+  }
+  .badge-sponsor { background: var(--sponsor-bg); color: var(--sponsor); }
+  .badge-sc { background: var(--sc-bg); color: var(--sc); }
+  .badge-grad { background: var(--grad-bg); color: var(--grad); }
+  
+  .note {
+    margin-top: 32px; padding: 16px; background: rgba(0,0,0,0.02);
+    border-left: 3px solid rgba(0,0,0,0.08); font-size: 0.82rem;
+    color: var(--text-muted); line-height: 1.6;
+  }
+  footer {
+    margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border);
+    font-size: 0.78rem; color: var(--text-muted); text-align: center;
+  }
+  @media (max-width: 640px) {
+    table { font-size: 0.78rem; }
+    th, td { padding: 8px 6px; }
+    .hide-mobile { display: none; }
+  }
+</style>
 </head>
 <body>
-    <div class="container">
-        <a href="index.html" class="back-link">← Back to home</a>
-        
-        <h1>Master Job Archive</h1>
-        <p class="subtitle">All ServiceNow jobs ever found, sorted by date (newest → oldest).</p>
-        
-        <div class="legend">
-            <strong>✓</strong> = Visa sponsorship confirmed · 
-            <strong>✗</strong> = Security Clearance not mentioned<br>
-            <strong>Note:</strong> Links are DIRECT job URLs. They may expire in days — click immediately.
-        </div>
-        
-        <table>
-            <thead>
-                <tr>
-                    <th>Date</th>
-                    <th>Job Title & Link</th>
-                    <th>Company</th>
-                    <th>Location</th>
-                    <th>Sponsorship</th>
-                    <th>SC</th>
-                </tr>
-            </thead>
-            <tbody>
+<div class="container">
+  <a href="index.html" class="back">← Back to dashboard</a>
+  <h1>📦 Master Job Archive</h1>
+  <p class="subtitle">All ServiceNow UK jobs ever found. Updated daily.</p>
+  
+  <table id="job-table">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Job</th>
+        <th>Company</th>
+        <th class="hide-mobile">Location</th>
+        <th>Salary</th>
+        <th>Tags</th>
+      </tr>
+    </thead>
+    <tbody id="table-body"></tbody>
+  </table>
+  
+  <div class="note">
+    <strong>About the data</strong><br>
+    Jobs sourced from Reed.co.uk, Hunt UK Visa Sponsors, and LinkedIn. <br>
+    Sponsor verification cross-referenced against the official <a href="https://www.gov.uk/government/publications/register-of-licensed-sponsors-workers">UK Government sponsor register</a>.<br>
+    Links may expire — the dashboard is refreshed daily at 05:00 UK time.
+  </div>
+  
+  <footer>
+    <p>Built by <a href="https://github.com/IbdotBoss/servicenow-jobs-digest">Mr Faajii 🥷</a></p>
+  </footer>
+</div>
 
-                <tr>
-                    <td class="date">2026-05-05</td>
-                    <td>
-                        <a href="https://huntukvisasponsors.com/job/servicenow-developer-at-state-street-bank-and-trust-company-4b6mxtzqt4t">ServiceNow Developer, Assistant Vice President</a>
-                        <div class="job-desc"></div>
-                    </td>
-                    <td class="company">State Street Bank</td>
-                    <td>London</td>
-                    <td class="symbol">✓</td>
-                    <td class="symbol">✗</td>
-                </tr>
-    
-                <tr>
-                    <td class="date">2026-05-05</td>
-                    <td>
-                        <a href="https://huntukvisasponsors.com/job/servicenow-senior-developer-11-months-contract-at-gauberts-brothers-limited-ru0et0agp9ly">ServiceNow Senior Developer (11 months Contract)</a>
-                        <div class="job-desc"></div>
-                    </td>
-                    <td class="company">GAUBERT'S BROTHERS LIMITED (Clifford Chance)</td>
-                    <td>UK</td>
-                    <td class="symbol">✓</td>
-                    <td class="symbol">✗</td>
-                </tr>
-    
-                <tr>
-                    <td class="date">2026-05-05</td>
-                    <td>
-                        <a href="https://huntukvisasponsors.com/job/servicenow-developer-at-capgemini-uk-plc-dvetgmhjcls">ServiceNow Developer</a>
-                        <div class="job-desc"></div>
-                    </td>
-                    <td class="company">Capgemini UK PLC</td>
-                    <td>London</td>
-                    <td class="symbol">✓</td>
-                    <td class="symbol">✗</td>
-                </tr>
-    
-                <tr>
-                    <td class="date">2026-05-05</td>
-                    <td>
-                        <a href="https://huntukvisasponsors.com/job/senior-servicenow-developer-architect-at-ibm-uk-ltd-q6eu3tyaitdl">Senior ServiceNow Developer / Architect</a>
-                        <div class="job-desc"></div>
-                    </td>
-                    <td class="company">IBM UK Ltd</td>
-                    <td>UK</td>
-                    <td class="symbol">✓</td>
-                    <td class="symbol">✗</td>
-                </tr>
-        </tbody>
-        </table>
-        
-        <div class="note">
-            <strong>Why direct URLs?</strong><br>
-            You want to CLICK and APPLY immediately — not hunt through career pages.<br>
-            Yes, these links expire in days. That's fine — the daily cron (05:00 UK) fetches FRESH ones.<br><br>
-            <strong>I'm your scraper:</strong> Hunt UK is paywalled for you, but I can see and extract these links daily.
-        </div>
-        
-        <footer>
-            <p>Last updated: {datetime.now().strftime('%Y-%m-%d')} · {len(jobs)} direct job links</p>
-            <p><a href="https://github.com/IbdotBoss/servicenow-jobs-digest">View on GitHub</a></p>
-        </footer>
-    </div>
+<script>
+fetch('data/jobs.json')
+  .then(r => r.json())
+  .then(data => {
+    const body = document.getElementById('table-body');
+    body.innerHTML = data.jobs.sort((a,b) => b.date_posted.localeCompare(a.date_posted)).map(j => {
+      const badges = [];
+      if (j.visa_sponsorship === 'verified') badges.push('<span class="badge badge-sponsor">🏷️</span>');
+      if (j.sc_clearance) badges.push('<span class="badge badge-sc">🔒SC</span>');
+      if (j.grad_scheme) badges.push('<span class="badge badge-grad">🎓</span>');
+      return `<tr>
+        <td>${j.date_posted}</td>
+        <td>${j.url ? `<a href="${j.url}" target="_blank">${j.title}</a>` : j.title}</td>
+        <td>${j.company}</td>
+        <td class="hide-mobile">${j.location}</td>
+        <td>${j.salary_display}</td>
+        <td>${badges.join(' ')}</td>
+      </tr>`;
+    }).join('');
+  });
+</script>
 </body>
 </html>

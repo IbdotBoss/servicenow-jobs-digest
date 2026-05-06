@@ -1,186 +1,452 @@
-<!DOCTYPE html>
+<![CDATA[<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ServiceNow Jobs UK</title>
-    <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        body {
-            font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
-            color: #0a0a0a;
-            background: #ffffff;
-            line-height: 1.6;
-            font-size: 16px;
-        }
-        
-        .container {
-            max-width: 680px;
-            margin: 0 auto;
-            padding: 60px 20px 100px;
-        }
-        
-        h1 {
-            font-size: 2rem;
-            font-weight: 700;
-            letter-spacing: -0.03em;
-            margin-bottom: 8px;
-        }
-        
-        .subtitle {
-            color: rgba(0,0,0.5);
-            font-size: 0.9rem;
-            margin-bottom: 60px;
-        }
-        
-        h2 {
-            font-size: 1.1rem;
-            font-weight: 700;
-            letter-spacing: -0.02em;
-            margin: 48px 0 16px;
-        }
-        
-        .job-count {
-            color: rgba(0,0,0.4);
-            font-size: 0.85rem;
-            margin-bottom: 24px;
-        }
-        
-        table {
-            width: 100%;
-            border-collapse = collapse;
-            margin = 24px 0;
-            font-size = 0.9rem;
-        }
-        
-        th {
-            text-align = left;
-            padding = 12px 16px;
-            border-bottom = 2px solid #e5e5.5;
-            font-weight = 700;
-            font-size = 0.8rem;
-            text-transform = uppercase;
-            letter-spacing = 0.1em;
-            color = rgba(0,0,0.4);
-        }
-        
-        td {
-            padding = 16px;
-            border-bottom = 1px solid rgba(0,0,0.06);
-        }
-        
-        td:first-child {
-            color = rgba(0,0,0.4);
-            font-size = 0.85rem;
-            white-space = nowrap;
-        }
-        
-        a {
-            color = #0a0a0a;
-            text-decoration = none;
-            font-weight = 500;
-        }
-        
-        a:hover {
-            text-decoration = underline;
-        }
-        
-        .view-all {
-            display: inline-block;
-            margin-top = 32px;
-            padding = 12px 24px;
-            border = 1px solid #e5.5;
-            border-radius = 8px;
-            color = #0a0a0a;
-            text-decoration = none;
-            font-size = 0.9rem;
-            font-weight = 500;
-            transition = all 0.2s;
-        }
-        
-        .view-all:hover {
-            background = #fafafa;
-        }
-        
-        .legend {
-            margin-top = 48px;
-            padding = 24px;
-            background = #fafafa;
-            border-radius = 8px;
-            font-size = 0.85rem;
-            color = rgba(0,0,0.6);
-        }
-        
-        .legend strong {
-            font-weight = 700;
-            color = #0a0a0a;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ServiceNow Jobs UK — Aggregator</title>
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap">
+<style>
+  :root {
+    --bg: #fafafa;
+    --surface: #ffffff;
+    --text: #111111;
+    --text-muted: #6b6b6b;
+    --border: #e5e5e5;
+    --sponsor: #059669;
+    --sponsor-bg: #ecfdf5;
+    --grad: #7c3aed;
+    --grad-bg: #f5f3ff;
+    --sc: #dc2626;
+    --sc-bg: #fef2f2;
+    --accent: #0f172a;
+    --radius: 12px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+    font-size: 15px;
+    -webkit-font-smoothing: antialiased;
+  }
+  header {
+    background: var(--accent);
+    color: #fff;
+    padding: 32px 24px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .header-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .logo h1 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+  .logo p {
+    font-size: 0.8rem;
+    opacity: 0.5;
+    margin-top: 2px;
+  }
+  .stats {
+    display: flex;
+    gap: 20px;
+    font-size: 0.85rem;
+  }
+  .stat {
+    text-align: center;
+    background: rgba(255,255,255,0.06);
+    border-radius: 8px;
+    padding: 8px 14px;
+  }
+  .stat .num { font-size: 1.3rem; font-weight: 700; display: block; }
+  .stat .label { font-size: 0.7rem; opacity: 0.5; text-transform: uppercase; letter-spacing: 0.08em; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 24px; }
+  
+  /* Filters */
+  .filters {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+  }
+  .filter-btn {
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    font-family: inherit;
+    font-size: 0.82rem;
+    cursor: pointer;
+    transition: all 0.15s;
+    white-space: nowrap;
+    color: var(--text-muted);
+  }
+  .filter-btn:hover { border-color: #aaa; color: var(--text); }
+  .filter-btn.active {
+    background: var(--accent);
+    color: #fff;
+    border-color: var(--accent);
+  }
+  .filter-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .filter-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    font-weight: 700;
+    margin-right: 4px;
+    display: flex;
+    align-items: center;
+  }
+  .filter-divider {
+    width: 1px;
+    height: 20px;
+    background: var(--border);
+    margin: 0 6px;
+  }
+  
+  /* Sort */
+  .sort-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+    font-size: 0.82rem;
+    color: var(--text-muted);
+  }
+  .sort-btn {
+    padding: 4px 10px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    font-family: inherit;
+    font-size: 0.8rem;
+    cursor: pointer;
+    color: var(--text-muted);
+  }
+  .sort-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+  
+  /* Job cards */
+  .job-list { display: flex; flex-direction: column; gap: 8px; }
+  .job-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px 20px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 8px;
+    transition: border-color 0.15s;
+  }
+  .job-card:hover { border-color: #bbb; }
+  .job-card.sponsored { border-left: 3px solid var(--sponsor); }
+  .job-card.grad { border-left: 3px solid var(--grad); }
+  
+  .job-main { min-width: 0; }
+  .job-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  .job-title a {
+    color: var(--text);
+    text-decoration: none;
+  }
+  .job-title a:hover { text-decoration: underline; }
+  .job-meta {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 16px;
+  }
+  .job-meta span { white-space: nowrap; }
+  
+  .job-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 6px;
+  }
+  .tag {
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 4px;
+    letter-spacing: 0.02em;
+  }
+  .tag-sponsor { background: var(--sponsor-bg); color: var(--sponsor); }
+  .tag-sc { background: var(--sc-bg); color: var(--sc); }
+  .tag-grad { background: var(--grad-bg); color: var(--grad); }
+  .tag-role { background: #f1f5f9; color: #475569; }
+  .tag-remote { background: #f0f9ff; color: #0369a1; }
+  .tag-employment { background: #fefce8; color: #a16207; }
+  
+  .job-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: 4px;
+    min-width: 100px;
+    text-align: right;
+  }
+  .job-salary { font-weight: 700; font-size: 0.9rem; white-space: nowrap; }
+  .job-date { font-size: 0.75rem; color: var(--text-muted); }
+  .job-source { font-size: 0.7rem; color: var(--text-muted); opacity: 0.7; }
+  
+  .no-results {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--text-muted);
+  }
+  
+  footer {
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border);
+    margin-top: 40px;
+  }
+  footer a { color: var(--text); }
+  
+  @media (max-width: 640px) {
+    .job-card { grid-template-columns: 1fr; }
+    .job-right {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      text-align: left;
+      gap: 8px;
+    }
+    .stats { gap: 8px; }
+    .stat { padding: 6px 10px; }
+    .stat .num { font-size: 1rem; }
+    .filters { gap: 6px; }
+    .filter-divider { display: none; }
+  }
+</style>
 </head>
 <body>
-    <div class="container">
-        <h1>ServiceNow Jobs UK</h1>
-        <p class="subtitle">Verified visa sponsorship jobs, updated daily.</p>
-        
-        <h2>Latest Jobs</h2>
-        <p class="job-count">4 jobs found today</p>
-        
-        <table>
-            <thead>
-                <tr>
-                    <th>Date</th>
-                    <th>Job Title</th>
-                    <th>Company</th>
-                    <th>Location</th>
-                    <th>✓</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="date">2026-05-05</td>
-                    <td><a href="https://huntukvisasponsors.com/job/servicenow-developer-at-state-street-bank-and-trust-company-4b6mxtzqt4t">ServiceNow Developer, Assistant Vice President</a></td>
-                    <td class="company">State Street Bank</td>
-                    <td>London</td>
-                    <td class="symbol">✓</td>
-                    <td class="symbol">✗</td>
-                </tr>
-                <tr>
-                    <td class="date">2026-05-05</td>
-                    <td><a href="https://huntukvisasponsors.com/job/servicenow-senior-developer-11-months-contract-at-gauberts-brothers-limited-ru0et0agp9ly">ServiceNow Senior Developer (11 months Contract)</a></td>
-                    <td class="company">GAUBERT'S BROTHERS LIMITED (Clifford Chance)</td>
-                    <td>UK</td>
-                    <td class="symbol">✓</td>
-                    <td class="symbol">✗</td>
-                </tr>
-                <tr>
-                    <td class="date">2026-05-05</td>
-                    <td><a href="https://huntukvisasponsors.com/job/servicenow-developer-at-capgemini-uk-plc-dvetgmhjcls">ServiceNow Developer</a></td>
-                    <td class="company">Capgemini UK PLC</td>
-                    <td>London</td>
-                    <td class="symbol">✓</td>
-                    <td class="symbol">✗</td>
-                </tr>
-                <tr>
-                    <td class="date">2026-05-05</td>
-                    <td><a href="https://huntukvisasponsors.com/job/senior-servicenow-developer-architect-at-ibm-uk-ltd-q6eu3tyaitdl">Senior ServiceNow Developer / Architect</a></td>
-                    <td class="company">IBM UK Ltd</td>
-                    <td>UK</td>
-                    <td class="symbol">✓</td>
-                    <td class="symbol">✗</td>
-                </tr>
-            </tbody>
-        </table>
-        
-        <a href="all-jobs.html" class="view-all">View All Jobs →</a>
-        
-        <div class="legend">
-            <p><strong>Legend:</strong></p>
-            <p>✓ = Sponsorship available (verified by Hunt UK)</p>
-            <p>SC = Security Clearance needed</p>
-            <p><strong>Note:</strong> Job links expire after a few days — that's fine, the job poster just removed it.</p>
-        </div>
+
+<header>
+  <div class="header-inner">
+    <div class="logo">
+      <h1>🔎 ServiceNow Jobs UK</h1>
+      <p>Updated <span id="update-date">…</span> · Aggregated from Reed, Hunt UK, LinkedIn</p>
     </div>
+    <div class="stats">
+      <div class="stat"><span class="num" id="stat-total">0</span><span class="label">Total</span></div>
+      <div class="stat"><span class="num" id="stat-sponsored">0</span><span class="label">Sponsored</span></div>
+      <div class="stat"><span class="num" id="stat-grad">0</span><span class="label">Grad 🎓</span></div>
+      <div class="stat"><span class="num" id="stat-sc">0</span><span class="label">SC 🔒</span></div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <!-- Filters -->
+  <div class="filters" id="filters">
+    <span class="filter-label">Sponsorship</span>
+    <div class="filter-group" data-filter="sponsorship">
+      <button class="filter-btn active" data-value="all">All</button>
+      <button class="filter-btn" data-value="verified">🏷️ Verified</button>
+      <button class="filter-btn" data-value="unknown">❓ Unknown</button>
+    </div>
+    <span class="filter-divider"></span>
+    <span class="filter-label">Role</span>
+    <div class="filter-group" data-filter="role">
+      <button class="filter-btn active" data-value="all">All</button>
+      <button class="filter-btn" data-value="developer">💻 Dev</button>
+      <button class="filter-btn" data-value="architect">🏗️ Architect</button>
+      <button class="filter-btn" data-value="consultant">📋 Consultant</button>
+    </div>
+    <span class="filter-divider"></span>
+    <span class="filter-label">Remote</span>
+    <div class="filter-group" data-filter="remote">
+      <button class="filter-btn active" data-value="all">All</button>
+      <button class="filter-btn" data-value="hybrid">🏠 Hybrid</button>
+      <button class="filter-btn" data-value="onsite">🏢 Onsite</button>
+    </div>
+    <span class="filter-divider"></span>
+    <span class="filter-label">Special</span>
+    <div class="filter-group" data-filter="special">
+      <button class="filter-btn active" data-value="all">All</button>
+      <button class="filter-btn" data-value="grad">🎓 Grad Schemes</button>
+      <button class="filter-btn" data-value="sc">🔒 SC Required</button>
+    </div>
+  </div>
+  
+  <!-- Sort -->
+  <div class="sort-row">
+    Sort by:
+    <button class="sort-btn active" data-sort="date">Newest</button>
+    <button class="sort-btn" data-sort="salary">Salary ↓</button>
+    <button class="sort-btn" data-sort="company">Company</button>
+    <span style="margin-left: 12px; font-size: 0.78rem;" id="result-count">9 jobs</span>
+  </div>
+  
+  <!-- Job list -->
+  <div class="job-list" id="job-list"></div>
+  <div class="no-results" id="no-results" style="display:none">
+    <p style="font-size: 1.2rem;">No jobs match your filters</p>
+    <p style="margin-top: 8px;">Try adjusting the filters above</p>
+  </div>
+</div>
+
+<footer>
+  <p>Data refreshed daily at 05:00 UK · Built by <a href="https://github.com/IbdotBoss/servicenow-jobs-digest">Mr Faajii 🥷</a></p>
+  <p style="margin-top: 4px;">Sponsor data from <a href="https://www.gov.uk/government/publications/register-of-licensed-sponsors-workers">UK Government register</a> · Hunt UK cross-referenced</p>
+</footer>
+
+<script>
+// ─── DATA ───
+let allJobs = [];
+let filters = { sponsorship: 'all', role: 'all', remote: 'all', special: 'all' };
+let sortBy = 'date';
+
+async function init() {
+  try {
+    const resp = await fetch('data/jobs.json');
+    const data = await resp.json();
+    allJobs = data.jobs;
+    document.getElementById('update-date').textContent = data.updated;
+    updateStats();
+    render();
+  } catch(e) {
+    document.getElementById('job-list').innerHTML = '<div class="no-results"><p>Loading jobs…</p></div>';
+  }
+}
+
+function updateStats() {
+  const filtered = getFilteredJobs();
+  document.getElementById('stat-total').textContent = allJobs.length;
+  document.getElementById('stat-sponsored').textContent = allJobs.filter(j => j.visa_sponsorship === 'verified').length;
+  document.getElementById('stat-grad').textContent = allJobs.filter(j => j.grad_scheme).length;
+  document.getElementById('stat-sc').textContent = allJobs.filter(j => j.sc_clearance).length;
+}
+
+function getFilteredJobs() {
+  return allJobs.filter(j => {
+    if (filters.sponsorship !== 'all' && j.visa_sponsorship !== filters.sponsorship) return false;
+    if (filters.role !== 'all' && j.role_type !== filters.role) return false;
+    if (filters.remote !== 'all' && j.remote !== filters.remote) return false;
+    if (filters.special === 'grad' && !j.grad_scheme) return false;
+    if (filters.special === 'sc' && !j.sc_clearance) return false;
+    return true;
+  });
+}
+
+function sortJobs(jobs) {
+  return [...jobs].sort((a, b) => {
+    if (sortBy === 'date') return b.date_posted.localeCompare(a.date_posted);
+    if (sortBy === 'salary') {
+      const sa = a.salary_max || a.salary_min || 0;
+      const sb = b.salary_max || b.salary_min || 0;
+      return sb - sa;
+    }
+    if (sortBy === 'company') return a.company.localeCompare(b.company);
+    return 0;
+  });
+}
+
+function render() {
+  const filtered = getFilteredJobs();
+  const sorted = sortJobs(filtered);
+  const list = document.getElementById('job-list');
+  const noResults = document.getElementById('no-results');
+  document.getElementById('result-count').textContent = `${sorted.length} job${sorted.length !== 1 ? 's' : ''}`;
+  
+  if (sorted.length === 0) {
+    list.innerHTML = '';
+    noResults.style.display = 'block';
+    return;
+  }
+  noResults.style.display = 'none';
+  
+  list.innerHTML = sorted.map(j => {
+    const cardClass = [];
+    if (j.visa_sponsorship === 'verified') cardClass.push('sponsored');
+    if (j.grad_scheme) cardClass.push('grad');
+    
+    const tags = [];
+    if (j.visa_sponsorship === 'verified') tags.push('<span class="tag tag-sponsor">🏷️ Verified Sponsor</span>');
+    else if (j.visa_sponsorship === 'unknown') tags.push('<span class="tag tag-role">❓ Sponsorship Unknown</span>');
+    if (j.sc_clearance) tags.push('<span class="tag tag-sc">🔒 SC Required</span>');
+    if (j.grad_scheme) tags.push('<span class="tag tag-grad">🎓 Grad Scheme</span>');
+    tags.push(`<span class="tag tag-role">💼 ${j.role_type}</span>`);
+    tags.push(`<span class="tag tag-remote">${j.remote === 'hybrid' ? '🏠 Hybrid' : j.remote === 'remote' ? '🌐 Remote' : '🏢 Onsite'}</span>`);
+    if (j.employment === 'contract') tags.push('<span class="tag tag-employment">📋 Contract</span>');
+    if (j.employment === 'internship') tags.push('<span class="tag tag-employment">🎯 Internship</span>');
+    
+    return `
+      <div class="job-card ${cardClass.join(' ')}">
+        <div class="job-main">
+          <div class="job-title">
+            ${j.url ? `<a href="${j.url}" target="_blank" rel="noopener">${j.title}</a>` : j.title}
+          </div>
+          <div class="job-meta">
+            <span>${j.company}</span>
+            <span>📍 ${j.location}${j.county ? ', ' + j.county : ''}</span>
+          </div>
+          <div class="job-tags">${tags.join('')}</div>
+        </div>
+        <div class="job-right">
+          <div class="job-salary">${j.salary_display}</div>
+          <div class="job-date">${j.date_posted}</div>
+          <div class="job-source">via ${j.source}</div>
+        </div>
+      </div>`;
+  }).join('');
+}
+
+// ─── FILTER HANDLERS ───
+document.getElementById('filters').addEventListener('click', e => {
+  const btn = e.target.closest('.filter-btn');
+  if (!btn) return;
+  const group = btn.closest('.filter-group');
+  const filterType = group.dataset.filter;
+  
+  group.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  filters[filterType] = btn.dataset.value;
+  updateStats();
+  render();
+});
+
+// ─── SORT HANDLERS ───
+document.querySelector('.sort-row').addEventListener('click', e => {
+  const btn = e.target.closest('.sort-btn');
+  if (!btn) return;
+  document.querySelectorAll('.sort-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  sortBy = btn.dataset.sort;
+  render();
+});
+
+init();
+</script>
 </body>
-</html>
+</html>]]>
