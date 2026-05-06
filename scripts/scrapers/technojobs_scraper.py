@@ -1,13 +1,17 @@
 #!/usr/bin/env python3
 """Technojobs Scraper using Playwright"""
 
+import sys
+import os
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+
 import asyncio
 import sqlite3
 import json
 from datetime import datetime
 from typing import List, Dict, Any, Optional
 from bs4 import BeautifulSoup
-from scripts.job_model import Job
+from job_model import Job
 from playwright.async_api import async_playwright
 
 class TechnojobsScraper:
@@ -96,14 +100,15 @@ class TechnojobsScraper:
                     if not link.startswith('http'):
                         link = f"https://www.technojobs.co.uk{link}"
                     
+                    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
                     job = Job(
                         title=title,
                         company=company,
                         location=location,
                         link=link,
                         source="Technojobs",
-                        date=datetime.now().strftime("%Y-%m-%d"),
-                        sponsorship_confirmed=True,
+                        timestamp=timestamp,
+                        visa_sponsorship="Likely",
                         remote_work="Not specified"
                     )
                     self.jobs.append(job)
@@ -126,7 +131,7 @@ class TechnojobsScraper:
     async def run(self):
         try:
             jobs = await self.scrape_jobs()
-            await self.save_to_db(jobs)
+            self.save_to_db(jobs)
             return jobs
         except Exception as e:
             print(f"Error in TechnojobsScraper.run: {e}")
@@ -134,7 +139,7 @@ class TechnojobsScraper:
             traceback.print_exc()
             return []
 
-    async def save_to_db(self, jobs):
+    def save_to_db(self, jobs):
         conn = sqlite3.connect(self.db_path)
         cursor = conn.cursor()
         
@@ -146,8 +151,8 @@ class TechnojobsScraper:
                 location TEXT,
                 link TEXT UNIQUE,
                 source TEXT,
-                date TEXT,
-                sponsorship_confirmed BOOLEAN DEFAULT 0,
+                timestamp TEXT,
+                visa_sponsorship TEXT,
                 remote_work TEXT
             )
         ''')
@@ -156,14 +161,22 @@ class TechnojobsScraper:
             try:
                 cursor.execute('''
                     INSERT OR IGNORE INTO jobs 
-                    (title, company, location, link, source, date, sponsorship_confirmed, remote_work)
+                    (title, company, location, link, source, timestamp, visa_sponsorship, remote_work)
                     VALUES (?, ?, ?, ?, ?, ?, ?, ?)
                 ''', (
                     job.title, job.company, job.location, job.link, job.source,
-                    job.date, job.sponsorship_confirmed, job.remote_work
+                    job.timestamp, job.visa_sponsorship, job.remote_work
                 ))
             except sqlite3.Error as e:
                 print(f"Error inserting job {job.link}: {e}")
         
         conn.commit()
+        conn.close()
 
+if __name__ == "__main__":
+    import asyncio
+    scraper = TechnojobsScraper()
+    jobs = asyncio.run(scraper.run())
+    print(f"\n=== RESULT: {len(jobs)} Technojobs jobs ===")
+    for j in jobs:
+        print(f"  {j.title} | {j.company} | {j.location}")

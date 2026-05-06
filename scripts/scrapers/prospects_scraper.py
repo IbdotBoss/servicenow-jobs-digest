@@ -1,14 +1,20 @@
 #!/usr/bin/env python3
 """Prospects Scraper using Playwright"""
 
+import sys
+import os
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+
+
 import asyncio
 import sqlite3
 import json
 from datetime import datetime
 from typing import List, Dict, Any, Optional
 from bs4 import BeautifulSoup
-from scripts.job_model import Job
+from job_model import Job
 from playwright.async_api import async_playwright
+
 
 class ProspectsScraper:
     def __init__(self, db_path: str = "jobs.db"):
@@ -29,6 +35,22 @@ class ProspectsScraper:
             viewport={'width': 1920, 'height': 1080}
         )
         self.page = await self.context.new_page()
+        
+        # Set realistic fingerprints
+        await self.page.set_extra_http_headers({
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+            'Accept-Language': 'en-GB,en;q=0.9',
+            'Accept-Encoding': 'gzip, deflate',
+            'DNT': '1',
+            'Connection': 'keep-alive',
+            'Upgrade-Insecure-Requests': '1',
+            'Sec-Fetch-Dest': 'document',
+            'Sec-Fetch-Mode': 'navigate',
+            'Sec-Fetch-Site': 'none',
+            'Cache-Control': 'max-age=0',
+        })
+        await self.page.set_viewport_size({'width': 1920, 'height': 1080})
 
     async def close(self):
         if self.page:
@@ -102,8 +124,8 @@ class ProspectsScraper:
                         location=location,
                         link=link,
                         source="Prospects",
-                        date=datetime.now().strftime("%Y-%m-%d"),
-                        sponsorship_confirmed=True,
+                        timestamp=datetime.now().isoformat(),
+                        visa_sponsorship="Unknown",
                         remote_work="Not specified"
                     )
                     self.jobs.append(job)
@@ -134,8 +156,8 @@ class ProspectsScraper:
                 location TEXT,
                 link TEXT UNIQUE,
                 source TEXT,
-                date TEXT,
-                sponsorship_confirmed BOOLEAN DEFAULT 0,
+                timestamp TEXT,
+                visa_sponsorship TEXT,
                 remote_work TEXT
             )
         ''')
@@ -144,17 +166,17 @@ class ProspectsScraper:
             try:
                 cursor.execute('''
                     INSERT OR IGNORE INTO jobs 
-                    (title, company, location, link, source, date, sponsorship_confirmed, remote_work)
+                    (title, company, location, link, source, timestamp, visa_sponsorship, remote_work)
                     VALUES (?, ?, ?, ?, ?, ?, ?, ?)
                 ''', (
                     job.title, job.company, job.location, job.link, job.source,
-                    job.date, job.sponsorship_confirmed, job.remote_work
+                    job.timestamp, job.visa_sponsorship, job.remote_work
                 ))
             except sqlite3.Error as e:
                 print(f"Error inserting job {job.link}: {e}")
         
         conn.commit()
-
+        conn.close()
 
     async def run(self):
         try:
@@ -166,3 +188,14 @@ class ProspectsScraper:
             import traceback
             traceback.print_exc()
             return []
+if __name__ == "__main__":
+    import asyncio
+    scraper = ProspectsScraper()
+    result = scraper.run()
+    if hasattr(result, "__await__"):
+        jobs = asyncio.run(result)
+    else:
+        jobs = result
+    print(f"\n=== RESULT: {{len(jobs)}} jobs ===")
+    for j in jobs:
+        print(f"  {{j.title}} | {{j.company}} | {{j.location}}")
