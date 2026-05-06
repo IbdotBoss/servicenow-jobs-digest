@@ -1,14 +1,12 @@
-{
-  "jobs": [
-    {
-      "title": "ServiceNow Developer",
-      "company": "ABC Company",
-      "location": "London, UK",
-      "date": "2024-01-15",
-      "link": "https://example.com/job/1",
-      "source": "Sample",
-      "sponsorship_confirmed": true,
-      "remote_work": "Hybrid"
-    }
-  ]
-}
+[
+  {
+    "title": "Service Now Product Owner",
+    "company": "",
+    "location": "",
+    "link": "https://www.cwjobs.co.uk/jobs/servicenow/in-city-of-london",
+    "source": "CWJobs",
+    "timestamp": "2026-05-05T23:54:25.240259",
+    "visa_sponsorship": "Unknown",
+    "remote_work": "Not specified"
+  }
+]
