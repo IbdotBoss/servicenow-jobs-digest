@@ -1,7 +1,7 @@
 {
   "updated": "2026-05-06",
-  "total": 27,
-  "verified": 7,
+  "total": 28,
+  "verified": 8,
   "sc_blocked": 6,
   "unavailable": 1,
   "grad_schemes": 1,
@@ -18,7 +18,8 @@
     "Akkodis": 1,
     "ComputerJobs": 5,
     "CV-Library": 1,
-    "Hays": 2
+    "Hays": 2,
+    "JobServe": 1
   },
   "jobs": [
     {
@@ -563,6 +564,26 @@
       "link_status": "live",
       "visa_sponsorship": "sc_blocked",
       "description": "Must hold active DV clearance — blocks international candidates. 2-3 yrs ServiceNow. 10% bonus."
+    },
+    {
+      "title": "ServiceNow Technical Architect",
+      "company": "Computacenter UK",
+      "location": "London",
+      "salary_display": "Not listed",
+      "salary_min": 0,
+      "salary_max": 0,
+      "date_posted": "2026-04-30",
+      "url": "https://www.jobserve.com/gb/en/search-jobs-in-London,-London,-United-Kingdom/SERVICENOW-TECHNICAL-ARCHITECT-176AC9C65EE9C61444/",
+      "source": "JobServe",
+      "source_type": "direct",
+      "role_type": "architect",
+      "remote": "hybrid",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "verified",
+      "description": "First ServiceNow partner in Europe. 2022 EMEA Elite Partner. 2026 ServiceNow Partner of the Year — Risk & Compliance. Computacenter holds A-rated sponsor licence."
     }
   ],
   "sources_searched": 15
