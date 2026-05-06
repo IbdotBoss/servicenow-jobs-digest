@@ -165,6 +165,7 @@
       <span class="filter-link" data-value="verified">Verified</span>
       <span class="filter-link" data-value="sc_blocked">SC blocked</span>
       <span class="filter-link" data-value="agency_unknown">Agency</span>
+      <span class="filter-link" data-value="unavailable">Not available</span>
     </div>
     <span class="filter-label">Role</span>
     <div class="filter-group" data-filter="role">
@@ -252,6 +253,9 @@ function sortJobs(jobs) {
 function buildNote(j) {
   const sp = j.visa_sponsorship;
 
+  if (sp === 'unavailable') {
+    return `<div class="job-note sc-blocked">Job listing states visa sponsorship is NOT available for this role.</div>`;
+  }
   if (sp === 'sc_blocked') {
     return `<div class="job-note sc-blocked">SC clearance required → 5 years continuous UK residency needed. Sponsorship not possible for international candidates.</div>`;
   }
