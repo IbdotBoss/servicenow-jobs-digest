@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import asyncio
 """Multi-source ServiceNow Jobs Orchestrator"""
 
 import sys
@@ -9,7 +10,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import importlib.util
 from datetime import datetime
 from pathlib import Path
-from scripts.job_model import Job
+from job_model import Job
 
 SCRAPERS_DIR = Path(__file__).parent / "scrapers"
 OUTPUT_DIR = Path.home() / "hermes-workspace" / "servicenow-jobs-digest" / "docs" / "data"
@@ -33,27 +34,134 @@ def load_scraper(name: str):
 
 def run_scraper(module, name: str):
     """Run a scraper and return jobs"""
+
     try:
-        # Try to get the run method first
-        if hasattr(module, "run"):
-            scraper = module.run()
-            if hasattr(scraper, "__await__"):
-                import asyncio
-                return asyncio.run(scraper)
-            return scraper
-        elif hasattr(module, "scrape_jobs"):
-            if hasattr(module.scrape_jobs, "__await__"):
-                import asyncio
-                return asyncio.run(module.scrape_jobs())
-            return module.scrape_jobs()
-        elif hasattr(module, "scrape"):
-            if hasattr(module.scrape, "__await__"):
-                import asyncio
-                return asyncio.run(module.scrape())
-            return module.scrape()
+        print("DEBUG: asyncio imported\n")
+        from datetime import datetime
+        
+        # Write debug info to a log file
+        with open("/tmp/orchestrator_debug.log", "a") as log_file:
+            log_file.write(f"\n=== Starting scraper {name} ===\n")
+            attrs = [attr for attr in dir(module) if not attr.startswith('_') and attr != 'Job']
+            log_file.write(f"Module attributes: {attrs}\n")
+        
+        # Find the main scraper class in the module
+        scraper_class = None
+        
+        # Check for common class names
+        for class_name in ['Scraper', 'Crawler', 'Spider', 'Extractor']:
+            if hasattr(module, class_name):
+                attr = getattr(module, class_name)
+                if isinstance(attr, type):
+                    # Check that this class is defined in the current module, not imported
+                    if getattr(attr, '__module__', None) == module.__name__:
+                        scraper_class = attr
+                        with open("/tmp/orchestrator_debug.log", "a") as log_file:
+                            log_file.write(f"Found {class_name} class: {attr}\n")
+                        break
+        
+        # If not found, look for any class defined in the module (excluding exceptions)
+        if scraper_class is None:
+            for attr_name in dir(module):
+                attr = getattr(module, attr_name)
+                # Check if it's a class and defined in this module (not imported)
+                if isinstance(attr, type) and attr_name != "Job" and not attr_name.startswith('_'):
+                    # Get the module where the class was defined
+                    class_module = getattr(attr, '__module__', None)
+                    if class_module == module.__name__:
+                        scraper_class = attr
+                        with open("/tmp/orchestrator_debug.log", "a") as log_file:
+                            log_file.write(f"Found class {attr_name}: {attr}\n")
+                        break
+        
+        with open("/tmp/orchestrator_debug.log", "a") as log_file:
+            log_file.write(f"scraper_class = {scraper_class}\n")
+        
+        if scraper_class is None:
+            # Fallback: look for a run function directly
+            if hasattr(module, "run"):
+                result = module.run()
+                with open("/tmp/orchestrator_debug.log", "a") as log_file:
+                    log_file.write(f"module.run() returned: {result}\n")
+                if hasattr(result, "__await__"):
+                    return asyncio.run(result)
+                return result
+            elif hasattr(module, "scrape_jobs"):
+                result = module.scrape_jobs()
+                with open("/tmp/orchestrator_debug.log", "a") as log_file:
+                    log_file.write(f"module.scrape_jobs() returned: {result}\n")
+                if hasattr(result, "__await__"):
+                    return asyncio.run(result)
+                return result
+            elif hasattr(module, "scrape"):
+                result = module.scrape()
+                with open("/tmp/orchestrator_debug.log", "a") as log_file:
+                    log_file.write(f"module.scrape() returned: {result}\n")
+                if hasattr(result, "__await__"):
+                    return asyncio.run(result)
+                return result
+            else:
+                raise ValueError(f"No suitable scraper class or function found in {name} module")
+        
+        # Instantiate the scraper class
+        with open("/tmp/orchestrator_debug.log", "a") as log_file:
+            log_file.write(f"Instantiating {scraper_class} from {module.__name__}\n")
+        try:
+            scraper = scraper_class()
+        except Exception as e:
+            with open("/tmp/orchestrator_debug.log", "a") as log_file:
+                log_file.write(f"Error instantiating {scraper_class}: {e}\n")
+            import traceback
+            traceback.print_exc()
+            raise
+        
+        with open("/tmp/orchestrator_debug.log", "a") as log_file:
+            log_file.write(f"scraper instance: {scraper}\n")
+            log_file.write(f"scraper methods: {dir(scraper)}\n")
+        
+        if hasattr(scraper, "run"):
+            with open("/tmp/orchestrator_debug.log", "a") as log_file:
+                log_file.write(f"Calling scraper.run()...\n")
+            result = scraper.run()
+            with open("/tmp/orchestrator_debug.log", "a") as log_file:
+                log_file.write(f"scraper.run() returned: {result}\n")
+            if hasattr(result, "__await__"):
+                result = asyncio.run(result)
+            else:
+                with open("/tmp/orchestrator_debug.log", "a") as log_file:
+                    log_file.write(f"scraper.run() did not return a coroutine, returning as-is: {result}\n")
+        elif hasattr(scraper, "scrape_jobs"):
+            with open("/tmp/orchestrator_debug.log", "a") as log_file:
+                log_file.write(f"Calling scraper.scrape_jobs()...\n")
+            result = scraper.scrape_jobs()
+            with open("/tmp/orchestrator_debug.log", "a") as log_file:
+                log_file.write(f"scraper.scrape_jobs() returned: {result}\n")
+            if hasattr(result, "__await__"):
+                result = asyncio.run(result)
+            else:
+                with open("/tmp/orchestrator_debug.log", "a") as log_file:
+                    log_file.write(f"scraper.scrape_jobs() did not return a coroutine, returning as-is: {result}\n")
+        elif hasattr(scraper, "scrape"):
+            with open("/tmp/orchestrator_debug.log", "a") as log_file:
+                log_file.write(f"Calling scraper.scrape()...\n")
+            result = scraper.scrape()
+            with open("/tmp/orchestrator_debug.log", "a") as log_file:
+                log_file.write(f"scraper.scrape() returned: {result}\n")
+            if hasattr(result, "__await__"):
+                result = asyncio.run(result)
+            else:
+                with open("/tmp/orchestrator_debug.log", "a") as log_file:
+                    log_file.write(f"scraper.scrape() did not return a coroutine, returning as-is: {result}\n")
+        else:
+            raise ValueError(f"Scraper class {scraper_class.__name__} has no run/scrape_jobs/scrape method")
+        return result
     except Exception as e:
-        print(f"[Orchestrator] Error running {name}: {e}")
+        with open("/tmp/orchestrator_debug.log", "a") as log_file:
+            log_file.write(f"[Orchestrator] Error running {name}: {e}\n")
+        import traceback
+        traceback.print_exc()
     return []
+
 
 def run_all_scrapers():
     """Run all scrapers from the scrapers directory"""

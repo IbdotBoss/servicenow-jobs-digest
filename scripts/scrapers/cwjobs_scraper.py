@@ -3,12 +3,13 @@
 
 import sys
 import os
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-
 import asyncio
 import sqlite3
 from datetime import datetime
 from typing import List, Dict, Any, Optional
+
+# Add project root to path for imports
+sys.path.insert(0, "/home/ubuntu/hermes-workspace/servicenow-jobs-digest")
 
 from job_model import Job
 
@@ -48,9 +49,6 @@ class CWJobsScraper:
             'Sec-Fetch-Mode': 'navigate',
             'Sec-Fetch-Site': 'none',
             'Cache-Control': 'max-age=0',
-            'Sec-Ch-Ua': '"Chromium";v="120", "Google Chrome";v="120", "Chromium WebView";v="120"',
-            'Sec-Ch-Ua-Mobile': '?0',
-            'Sec-Ch-Ua-Platform': '"Windows NT 10.0"',
         })
         await self.page.set_viewport_size({'width': 1920, 'height': 1080})
 
@@ -135,8 +133,8 @@ class CWJobsScraper:
                         location=location,
                         link=link,
                         source="CWJobs",
-                        date=datetime.now().strftime("%Y-%m-%d"),
-                        sponsorship_confirmed=True,
+                        timestamp=datetime.now().isoformat(),
+                        visa_sponsorship="Unknown",
                         remote_work="Not specified"
                     )
                     self.jobs.append(job)
@@ -157,6 +155,7 @@ class CWJobsScraper:
         conn = sqlite3.connect(self.db_path)
         cursor = conn.cursor()
         
+        # Create table if it doesn't exist (standard schema)
         cursor.execute('''
             CREATE TABLE IF NOT EXISTS jobs (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -166,7 +165,7 @@ class CWJobsScraper:
                 link TEXT UNIQUE,
                 source TEXT,
                 timestamp TEXT,
-                sponsorship_confirmed BOOLEAN DEFAULT 0,
+                visa_sponsorship TEXT,
                 remote_work TEXT
             )
         ''')
@@ -179,7 +178,7 @@ class CWJobsScraper:
                     VALUES (?, ?, ?, ?, ?, ?, ?, ?)
                 ''', (
                     job.title, job.company, job.location, job.link, job.source,
-                    job.date, job.sponsorship_confirmed, job.remote_work
+                    job.timestamp, job.visa_sponsorship, job.remote_work
                 ))
             except sqlite3.Error as e:
                 print(f"Error inserting job {job.link}: {e}")
@@ -195,6 +194,8 @@ class CWJobsScraper:
             return jobs
         finally:
             await self.close()
+
+
 
 if __name__ == "__main__":
     from job_model import Job

@@ -49,8 +49,7 @@ class HuntUKScraper:
                     )
                     context = await browser.new_context(
                         viewport={'width': 1920, 'height': 1080},
-                        user_agent=ua,
-                        accept_language=['en-US', 'en']
+                        user_agent=ua
                     )
                     page = await context.new_page()
                     

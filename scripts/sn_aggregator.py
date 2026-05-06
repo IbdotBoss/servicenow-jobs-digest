@@ -1,23 +1,24 @@
 #!/usr/bin/env python3
-"""ServiceNow UK Job Aggregator — Reed + Hunt UK + Sponsor Cross-Reference"""
-import json, re, csv, sys, os
-from datetime import datetime
+"""ServiceNow UK Job Aggregator — Reed + Hunt UK + Sponsor CSV cross-reference"""
+import json, re, csv, os, sys
+from datetime import datetime, timedelta
 from urllib.request import urlopen, Request
 from urllib.error import URLError
 
+TODAY = datetime.now().strftime("%Y-%m-%d")
 OUTPUT = os.path.expanduser("~/hermes-workspace/servicenow-jobs-digest/docs/data/jobs.json")
 SPONSOR_CSV = os.path.expanduser("~/hermes-workspace/Faajaa-Share/2026-05-06_-_Worker_and_Temporary_Worker.csv")
-TODAY = datetime.now().strftime("%Y-%m-%d")
+HEADERS = {'User-Agent': 'Mozilla/5.0 (compatible; SN-Aggregator/1.0)'}
 
-SN_KEYWORDS = [
+SN_TITLE_KW = [
     'servicenow developer', 'servicenow architect', 'servicenow consultant',
     'servicenow engineer', 'servicenow admin', 'servicenow specialist',
-    'servicenow lead', 'servicenow manager', 'servicenow analyst',
-    'servicenow platform', 'servicenow technical', 'servicenow solution',
+    'servicenow lead', 'servicenow manager', 'servicenow platform',
+    'servicenow technical', 'servicenow solution', 'servicenow senior',
     'service-now developer', 'service now developer'
 ]
 
-# ─────────────────── Sponsor CSV Loader ───────────────────
+# ── Sponsor CSV ──
 def load_sponsors():
     sponsors = set()
     try:
@@ -29,103 +30,80 @@ def load_sponsors():
                 if org and 'skilled worker' in route and 'a rating' in rating:
                     sponsors.add(org)
     except FileNotFoundError:
-        print("[WARN] Sponsor CSV not found")
+        print("[WARN] Sponsor CSV not found at", SPONSOR_CSV)
     return sponsors
 
-def check_sponsorship(company_name, sponsors):
-    """Check if company is on the sponsor register"""
-    if not company_name:
-        return "unknown"
-    name = company_name.strip().lower()
-    # Direct match
-    if name in sponsors:
-        return "verified"
-    # Partial match (e.g. "Capgemini UK PLC" matches "capgemini")
+def check_sponsor(company, sponsors):
+    if not company: return "unknown"
+    name = company.strip().lower()
+    if name in sponsors: return "verified"
     for s in sponsors:
-        if name in s or s in name:
-            return "verified"
+        if name in s or s in name: return "verified"
     return "unknown"
 
-# ─────────────────── Reed Scraper ───────────────────
+# ── Reed ──
 def scrape_reed():
-    """Scrape all Reed pages for ServiceNow jobs"""
-    all_jobs = []
-    headers = {'User-Agent': 'Mozilla/5.0 (compatible; ServiceNowAggregator/1.0)'}
-    
+    jobs = []
     for page in range(1, 5):
         url = f"https://www.reed.co.uk/jobs/direct-servicenow-jobs?pageno={page}"
         try:
-            req = Request(url, headers=headers)
-            with urlopen(req, timeout=30) as resp:
-                html = resp.read().decode('utf-8')
-            
+            req = Request(url, headers=HEADERS)
+            with urlopen(req, timeout=30) as r:
+                html = r.read().decode('utf-8')
             match = re.search(r'<script id="__NEXT_DATA__"[^>]*>(.*?)</script>', html)
-            if not match:
-                break
-            
+            if not match: break
             data = json.loads(match.group(1))
             results = data['props']['pageProps']['searchResults']
             page_jobs = results.get('promotedJobs', []) + results.get('jobs', [])
+            if not page_jobs: break
             
-            if not page_jobs:
-                break
-                
-            for job in page_jobs:
-                d = job['jobDetail']
+            for j in page_jobs:
+                d = j['jobDetail']
                 title = d['jobTitle']
-                title_lower = title.lower()
-                
-                # Only include actual ServiceNow roles
-                is_sn = any(kw in title_lower for kw in SN_KEYWORDS)
-                if not is_sn:
-                    continue
+                if not any(kw in title.lower() for kw in SN_TITLE_KW): continue
                 
                 company = d.get('ouName', 'Unknown')
-                location = d.get('displayLocationName', 'UK')
-                county = d.get('countyLocation', '')
-                salary_from = d.get('salaryFrom', 0)
-                salary_to = d.get('salaryTo', 0)
-                remote = d.get('remoteWorkingOption', '')
-                fulltime = d.get('isFullTime', False)
+                salary_from = d.get('salaryFrom', 0) or 0
+                salary_to = d.get('salaryTo', 0) or 0
+                # Filter absurd ranges (Reed default: 0 to 999999 or huge spans)
+                if salary_to > 0 and salary_to / max(salary_from, 1) > 4:
+                    salary_display = "Not listed"
+                elif salary_from == 0 and salary_to == 0:
+                    salary_display = "Not listed"
+                else:
+                    salary_display = f"£{salary_from:,}-£{salary_to:,}" if salary_to > salary_from else f"£{salary_from:,}"
+                
+                desc = d.get('jobDescription', '')
                 date_posted = d.get('displayDate', '')[:10] if d.get('displayDate') else TODAY
-                url = f"https://www.reed.co.uk{d['url']}" if d.get('url') else ''
-                desc = d.get('jobDescription', '')[:500]
                 
-                # Role classification
-                role_type = classify_role(title_lower)
+                # Check if link is likely live (Reed links stay live)
+                is_agency = any(w in company.lower() for w in ['recruitment', 'consulting', 'resource', 'talent', 'career', 'wolfe', 'nash', 'frank'])
                 
-                # Remote tag
-                remote_tag = remote if remote and remote != 'NotSpecified' else ('hybrid' if 'hybrid' in desc.lower() else 'onsite')
-                
-                all_jobs.append({
+                jobs.append({
                     'title': title,
                     'company': company,
-                    'location': location,
-                    'county': county,
+                    'location': d.get('displayLocationName', 'UK'),
+                    'salary_display': salary_display,
                     'salary_min': salary_from,
                     'salary_max': salary_to,
-                    'salary_display': f"£{salary_from:,}-£{salary_to:,}" if salary_from else "Not listed",
                     'date_posted': date_posted,
-                    'url': url,
+                    'url': f"https://www.reed.co.uk{d['url']}" if d.get('url') else '',
                     'source': 'Reed',
-                    'source_type': 'direct' if 'recruitment' not in company.lower() and 'consulting' not in company.lower() else 'agency',
-                    'role_type': role_type,
-                    'remote': remote_tag,
-                    'employment': 'contract' if 'contract' in title_lower or 'contract' in desc.lower()[:200] else 'permanent',
-                    'description': desc[:300],
-                    'sc_clearance': 'sc clearance' in desc.lower() or 'security check' in desc.lower() or 'security clearance' in desc.lower(),
-                    'grad_scheme': 'graduate' in title_lower or 'trainee' in title_lower or 'intern' in title_lower or 'placement' in title_lower,
+                    'source_type': 'agency' if is_agency else 'direct',
+                    'role_type': _classify(title.lower()),
+                    'remote': _remote(d, desc),
+                    'employment': 'contract' if ('contract' in title.lower() or 'contract' in desc.lower()[:200]) else 'permanent',
+                    'sc_clearance': any(phrase in desc.lower() for phrase in ['sc clearance', 'security check', 'security clearance', 'dv clearance']),
+                    'grad_scheme': any(w in title.lower() for w in ['graduate', 'trainee', 'intern', 'placement']),
+                    'link_status': 'live',
+                    'description': desc[:250]
                 })
-            
-            print(f"[Reed] Page {page}: {len([j for j in page_jobs if any(kw in j['jobDetail']['jobTitle'].lower() for kw in SN_KEYWORDS)])} SN roles")
-            
         except Exception as e:
-            print(f"[Reed] Page {page} error: {e}")
+            print(f"[Reed] Page {page}: {e}")
             break
-    
-    return all_jobs
+    return jobs
 
-def classify_role(title_lower):
+def _classify(title_lower):
     if 'architect' in title_lower: return 'architect'
     if 'developer' in title_lower or 'engineer' in title_lower: return 'developer'
     if 'consultant' in title_lower or 'specialist' in title_lower: return 'consultant'
@@ -134,46 +112,65 @@ def classify_role(title_lower):
     if 'manager' in title_lower or 'lead' in title_lower: return 'manager'
     return 'other'
 
-# ─────────────────── Main ───────────────────
+def _remote(d, desc):
+    r = d.get('remoteWorkingOption', '')
+    if r and r != 'NotSpecified': return r
+    dl = desc.lower()
+    if 'remote' in dl and 'no remote' not in dl: return 'remote'
+    if 'hybrid' in dl: return 'hybrid'
+    return 'onsite'
+
+# ── Main ──
 def main():
-    print(f"=== ServiceNow UK Job Aggregator — {TODAY} ===\n")
+    print(f"=== ServiceNow UK Aggregator — {TODAY} ===\n")
     
-    # 1. Load sponsor register
     sponsors = load_sponsors()
-    print(f"[Sponsors] {len(sponsors)} A-rated Skilled Worker sponsors loaded\n")
+    print(f"[Sponsors] {len(sponsors)} A-rated sponsors loaded")
     
-    # 2. Scrape Reed
-    print("[Reed] Scraping...")
-    jobs = scrape_reed()
+    # Scrape Reed
+    reed_jobs = scrape_reed()
+    print(f"[Reed] {len(reed_jobs)} SN roles found")
     
-    # 3. Cross-reference sponsorship
-    for job in jobs:
-        job['visa_sponsorship'] = check_sponsorship(job['company'], sponsors)
+    # Cross-reference
+    for j in reed_jobs:
+        j['visa_sponsorship'] = check_sponsor(j['company'], sponsors)
+        # Agency: sponsorship depends on the actual employer, not the agency
+        if j['source_type'] == 'agency' and j['visa_sponsorship'] == 'unknown':
+            j['visa_sponsorship'] = 'agency_unknown'
     
-    # 4. Deduplicate by URL
+    # Dedup by URL
     seen = set()
     unique = []
-    for job in jobs:
-        key = job['url'] or job['title'].lower() + '|' + job['company'].lower()
+    for j in reed_jobs:
+        key = j['url'] or (j['title'].lower() + '|' + j['company'].lower())
         if key not in seen:
             seen.add(key)
-            unique.append(job)
+            unique.append(j)
     
-    # 5. Save
+    # Save
     os.makedirs(os.path.dirname(OUTPUT), exist_ok=True)
-    with open(OUTPUT, 'w') as f:
-        json.dump({
-            'updated': TODAY,
-            'total': len(unique),
-            'sponsored': sum(1 for j in unique if j['visa_sponsorship'] == 'verified'),
-            'sources': {'reed': sum(1 for j in unique if j['source'] == 'Reed')},
-            'jobs': unique
-        }, f, indent=2)
+    result = {
+        'updated': TODAY,
+        'total': len(unique),
+        'verified': sum(1 for j in unique if j['visa_sponsorship'] == 'verified'),
+        'sc_blocked': sum(1 for j in unique if j['sc_clearance']),
+        'grad_schemes': sum(1 for j in unique if j['grad_scheme']),
+        'sources': {'reed': len(unique)},
+        'jobs': unique
+    }
     
-    print(f"\n[DONE] {len(unique)} unique jobs saved to {OUTPUT}")
-    print(f"  Sponsored: {sum(1 for j in unique if j['visa_sponsorship'] == 'verified')}")
-    print(f"  SC Clearance: {sum(1 for j in unique if j['sc_clearance'])}")
-    print(f"  Grad schemes: {sum(1 for j in unique if j['grad_scheme'])}")
+    with open(OUTPUT, 'w') as f:
+        json.dump(result, f, indent=2, ensure_ascii=False)
+    
+    print(f"\n[DONE] {len(unique)} jobs → {OUTPUT}")
+    for j in unique:
+        badges = []
+        if j['visa_sponsorship'] == 'verified': badges.append('✅')
+        elif j['visa_sponsorship'] == 'agency_unknown': badges.append('🏢')
+        else: badges.append('❓')
+        if j['sc_clearance']: badges.append('🔒SC')
+        if j['grad_scheme']: badges.append('🎓')
+        print(f"  {' '.join(badges)} {j['title'][:55]} | {j['company']} | {j['salary_display']}")
 
 if __name__ == '__main__':
     main()

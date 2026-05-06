@@ -7,41 +7,41 @@
 <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap">
 <style>
   :root {
-    --text: #0a0a0a;
-    --muted: rgba(0,0,0,0.45);
-    --faint: rgba(0,0,0,0.25);
-    --border: rgba(0,0,0,0.07);
-    --sponsor: #0d9488;
-    --sponsor-bg: #f0fdfa;
+    --text: #0a0a0a; --muted: rgba(0,0,0,0.5); --faint: rgba(0,0,0,0.28);
+    --border: rgba(0,0,0,0.07); --sponsor: #0d9488; --sponsor-bg: #f0fdfa;
+    --warn: #d97706; --warn-bg: #fffbeb; --bad: #dc2626; --bad-bg: #fef2f2;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
     font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
-    color: var(--text); background: #ffffff; line-height: 1.6; font-size: 15px;
+    color: var(--text); background: #ffffff; line-height: 1.55; font-size: 15px;
     -webkit-font-smoothing: antialiased;
   }
-  .container { max-width: 720px; margin: 0 auto; padding: 72px 24px 120px; }
+  .container { max-width: 720px; margin: 0 auto; padding: 64px 24px 120px; }
 
   /* Hero */
-  .hero { margin-bottom: 48px; }
+  .hero { margin-bottom: 40px; }
   h1 { font-size: 2rem; font-weight: 700; letter-spacing: -0.03em; margin-bottom: 6px; }
-  .subtitle { font-size: 0.88rem; color: var(--muted); max-width: 480px; line-height: 1.6; }
+  .subtitle { font-size: 0.88rem; color: var(--muted); max-width: 500px; line-height: 1.6; }
 
   /* Stat bar */
   .stat-bar {
-    display: flex; gap: 24px; padding: 16px 0;
+    display: flex; gap: 24px; padding: 14px 0;
     border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
-    margin-bottom: 28px;
+    margin-bottom: 24px;
     font-size: 0.82rem; color: var(--muted);
   }
   .stat { text-align: center; }
-  .stat .num { font-size: 1.4rem; font-weight: 700; color: var(--text); display: block; line-height: 1.1; }
-  .stat .label { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--faint); }
+  .stat .num { font-size: 1.35rem; font-weight: 700; color: var(--text); display: block; line-height: 1.1; }
+  .stat .num.good { color: var(--sponsor); }
+  .stat .num.warn { color: var(--warn); }
+  .stat .num.bad { color: var(--bad); }
+  .stat .label { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--faint); }
 
   /* Filters */
   .filters {
-    display: flex; flex-wrap: wrap; gap: 6px 24px; margin-bottom: 24px;
+    display: flex; flex-wrap: wrap; gap: 6px 24px; margin-bottom: 20px;
     font-size: 0.82rem; color: var(--muted);
   }
   .filter-group { display: flex; gap: 10px; align-items: center; }
@@ -51,7 +51,8 @@
   }
   .filter-link {
     cursor: pointer; color: var(--muted); text-decoration: none;
-    padding: 3px 0; border-bottom: 2px solid transparent; transition: all 0.15s;
+    padding: 3px 0; border-bottom: 2px solid transparent; transition: all 0.12s;
+    font-size: 0.82rem;
   }
   .filter-link:hover { color: var(--text); }
   .filter-link.active { color: var(--text); border-bottom-color: var(--text); }
@@ -63,7 +64,7 @@
   }
   .sort-link {
     cursor: pointer; color: var(--muted); text-decoration: none;
-    padding: 2px 0; border-bottom: 2px solid transparent; transition: all 0.15s;
+    padding: 2px 0; border-bottom: 2px solid transparent; transition: all 0.12s;
   }
   .sort-link:hover { color: var(--text); }
   .sort-link.active { color: var(--text); border-bottom-color: var(--text); }
@@ -72,65 +73,79 @@
   /* Job cards */
   .job-list { display: flex; flex-direction: column; }
   .job-card {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 2px 24px;
-    padding: 20px 0 18px;
+    padding: 18px 0 16px;
     border-bottom: 1px solid var(--border);
-    transition: background 0.12s;
+    transition: background 0.1s;
+    position: relative;
   }
-  .job-card:hover { background: rgba(0,0,0,0.008); }
-  .job-card.sponsored { border-left: 3px solid var(--sponsor); padding-left: 16px; margin-left: -2px; }
+  .job-card:hover { background: rgba(0,0,0,0.006); }
+  .job-card.expired { opacity: 0.6; }
+  .job-card.expired:hover { opacity: 0.8; }
 
-  .job-main { min-width: 0; }
+  .job-header {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    gap: 16px; margin-bottom: 4px;
+  }
   .job-title {
-    font-size: 0.95rem; font-weight: 700; margin-bottom: 2px; line-height: 1.3;
+    font-size: 0.95rem; font-weight: 700; line-height: 1.3;
   }
   .job-title a { color: var(--text); text-decoration: none; }
   .job-title a:hover { text-decoration: underline; }
-
-  .job-company { font-weight: 500; color: var(--text); font-size: 0.85rem; }
-  .job-meta {
-    font-size: 0.78rem; color: var(--muted); display: flex; flex-wrap: wrap;
-    gap: 2px 10px; margin-top: 2px;
+  .job-title .expired-tag {
+    font-size: 0.65rem; font-weight: 500; color: var(--bad);
+    text-transform: uppercase; letter-spacing: 0.06em;
+    margin-left: 6px; vertical-align: middle;
   }
-  .job-meta span { white-space: nowrap; }
-
-  .job-badges {
-    display: flex; gap: 8px; margin-top: 6px; font-size: 0.75rem;
+  .job-title .stale-tag {
+    font-size: 0.65rem; font-weight: 500; color: var(--warn);
+    text-transform: uppercase; letter-spacing: 0.06em;
+    margin-left: 6px; vertical-align: middle;
   }
-  .badge {
-    padding: 2px 8px; border-radius: 4px; font-weight: 500;
-    letter-spacing: 0.01em;
-  }
-  .badge-sponsor { background: var(--sponsor-bg); color: var(--sponsor); }
-  .badge-sc { background: #fef2f2; color: #dc2626; }
-  .badge-grad { background: #f5f3ff; color: #7c3aed; }
 
   .job-right {
-    text-align: right; min-width: 95px; font-size: 0.85rem;
-    display: flex; flex-direction: column; align-items: flex-end; justify-content: flex-start;
+    text-align: right; min-width: 100px; flex-shrink: 0;
   }
-  .job-salary { font-weight: 700; white-space: nowrap; color: var(--text); }
-  .job-salary.muted { color: var(--muted); font-weight: 500; }
-  .job-date { font-size: 0.72rem; color: var(--faint); margin-top: 2px; }
-  .job-source { font-size: 0.67rem; color: rgba(0,0,0,0.15); margin-top: 1px; }
+  .job-salary { font-weight: 700; white-space: nowrap; color: var(--text); font-size: 0.9rem; }
+  .job-salary.na { color: var(--muted); font-weight: 500; }
+  .job-date { font-size: 0.72rem; color: var(--faint); margin-top: 1px; }
+  .job-source { font-size: 0.67rem; color: rgba(0,0,0,0.15); }
+
+  .job-meta {
+    font-size: 0.8rem; color: var(--muted); display: flex; flex-wrap: wrap;
+    gap: 2px 10px;
+  }
+  .job-meta .company-name { color: var(--text); font-weight: 500; }
+
+  .job-note {
+    font-size: 0.75rem; margin-top: 6px; line-height: 1.5;
+    padding: 6px 10px; border-radius: 4px;
+  }
+  .job-note.sponsor { color: var(--sponsor); background: var(--sponsor-bg); }
+  .job-note.agency { color: #64748b; background: #f1f5f9; }
+  .job-note.sc-blocked { color: var(--bad); background: var(--bad-bg); }
+  .job-note.warn { color: var(--warn); background: var(--warn-bg); }
+
+  .fallback-link {
+    font-size: 0.72rem; color: var(--faint); margin-top: 4px;
+  }
+  .fallback-link a { color: var(--faint); }
 
   .no-results { text-align: center; padding: 80px 20px; color: var(--muted); }
 
   footer {
     margin-top: 80px; padding-top: 24px; border-top: 1px solid var(--border);
-    font-size: 0.78rem; color: var(--faint);
+    font-size: 0.78rem; color: var(--faint); line-height: 1.6;
   }
   footer a { color: var(--text); }
 
   @media (max-width: 500px) {
-    .container { padding: 40px 16px 80px; }
+    .container { padding: 36px 16px 80px; }
     h1 { font-size: 1.5rem; }
-    .stat-bar { gap: 14px; }
-    .job-card { grid-template-columns: 1fr; }
-    .job-right { flex-direction: row; gap: 10px; align-items: baseline; text-align: left; }
-    .job-card.sponsored { padding-left: 12px; }
+    .stat-bar { gap: 14px; flex-wrap: wrap; }
+    .stat { min-width: 60px; }
+    .job-header { flex-direction: column; gap: 4px; }
+    .job-right { text-align: left; display: flex; gap: 10px; align-items: baseline; }
+    .filters { gap: 6px 14px; }
   }
 </style>
 </head>
@@ -138,17 +153,18 @@
 <div class="container">
   <div class="hero">
     <h1>ServiceNow Jobs UK</h1>
-    <p class="subtitle">Curated digest of ServiceNow roles in the United Kingdom. Cross-referenced against the UK Government sponsor register.</p>
+    <p class="subtitle">ServiceNow roles in the United Kingdom. Cross-referenced against the UK Government sponsor register. Refreshed daily.</p>
   </div>
 
   <div class="stat-bar" id="stat-bar"></div>
 
   <div class="filters" id="filters">
-    <span class="filter-label">Sponsor</span>
+    <span class="filter-label">Sponsorship</span>
     <div class="filter-group" data-filter="sponsorship">
       <span class="filter-link active" data-value="all">All</span>
       <span class="filter-link" data-value="verified">Verified</span>
-      <span class="filter-link" data-value="unknown">Unknown</span>
+      <span class="filter-link" data-value="sc_blocked">SC blocked</span>
+      <span class="filter-link" data-value="agency_unknown">Agency</span>
     </div>
     <span class="filter-label">Role</span>
     <div class="filter-group" data-filter="role">
@@ -157,11 +173,11 @@
       <span class="filter-link" data-value="architect">Architect</span>
       <span class="filter-link" data-value="consultant">Consultant</span>
     </div>
-    <span class="filter-label">Remote</span>
-    <div class="filter-group" data-filter="remote">
+    <span class="filter-label">Status</span>
+    <div class="filter-group" data-filter="status">
       <span class="filter-link active" data-value="all">All</span>
-      <span class="filter-link" data-value="hybrid">Hybrid</span>
-      <span class="filter-link" data-value="onsite">Onsite</span>
+      <span class="filter-link" data-value="live">Live</span>
+      <span class="filter-link" data-value="grad">Grad</span>
     </div>
   </div>
 
@@ -174,37 +190,43 @@
   </div>
 
   <div class="job-list" id="job-list"></div>
-  <div class="no-results" id="no-results" style="display:none"><p>No jobs match</p></div>
+  <div class="no-results" id="no-results" style="display:none"><p>No jobs match your filters</p></div>
 
   <footer>
-    <p>Refreshed daily at 05:00 UK · Data from Reed, Hunt UK, and LinkedIn · Built by <a href="https://github.com/IbdotBoss/servicenow-jobs-digest">Mr Faajii</a></p>
-    <p style="margin-top: 6px;">Sponsor verification via UK Government · <a href="all-jobs.html">Master archive</a></p>
+    <p>Updated <span id="update-date">daily</span> · Data from Reed, Hunt UK, LinkedIn, and company career pages.</p>
+    <p style="margin-top: 4px;">Sponsor verification via <a href="https://www.gov.uk/government/publications/register-of-licensed-sponsors-workers">UK Government register</a> · <a href="all-jobs.html">Master archive</a></p>
+    <p style="margin-top: 8px; font-size: 0.72rem; color: rgba(0,0,0,0.18);">
+      Built by <a href="https://github.com/IbdotBoss/servicenow-jobs-digest" style="color: inherit;">Mr Faajii</a>
+    </p>
   </footer>
 </div>
 
 <script>
 let allJobs = [];
-let filters = { sponsorship: 'all', role: 'all', remote: 'all' };
+let filters = { sponsorship: 'all', role: 'all', status: 'all' };
 let sortBy = 'date';
 
 async function init() {
   const resp = await fetch('data/jobs.json');
   const data = await resp.json();
   allJobs = data.jobs;
+  document.getElementById('update-date').textContent = data.updated;
   updateStats();
   render();
 }
 
 function updateStats() {
   const total = allJobs.length;
-  const sponsored = allJobs.filter(j => j.visa_sponsorship === 'verified').length;
+  const verified = allJobs.filter(j => j.visa_sponsorship === 'verified').length;
+  const sc_blocked = allJobs.filter(j => j.visa_sponsorship === 'sc_blocked').length;
   const grad = allJobs.filter(j => j.grad_scheme).length;
-  const sc = allJobs.filter(j => j.sc_clearance).length;
+  const live = allJobs.filter(j => j.link_status === 'live').length;
   document.getElementById('stat-bar').innerHTML = `
     <div class="stat"><span class="num">${total}</span><span class="label">Total</span></div>
-    <div class="stat"><span class="num">${sponsored}</span><span class="label">Sponsored</span></div>
-    <div class="stat"><span class="num">${grad}</span><span class="label">Grad Schemes</span></div>
-    <div class="stat"><span class="num">${sc}</span><span class="label">SC Required</span></div>
+    <div class="stat"><span class="num good">${verified}</span><span class="label">Sponsored</span></div>
+    <div class="stat"><span class="num bad">${sc_blocked}</span><span class="label">SC blocked</span></div>
+    <div class="stat"><span class="num">${grad}</span><span class="label">Grad</span></div>
+    <div class="stat"><span class="num warn">${live}</span><span class="label">Live links</span></div>
   `;
 }
 
@@ -212,7 +234,8 @@ function getFiltered() {
   return allJobs.filter(j => {
     if (filters.sponsorship !== 'all' && j.visa_sponsorship !== filters.sponsorship) return false;
     if (filters.role !== 'all' && j.role_type !== filters.role) return false;
-    if (filters.remote !== 'all' && j.remote !== filters.remote) return false;
+    if (filters.status === 'live' && j.link_status !== 'live') return false;
+    if (filters.status === 'grad' && !j.grad_scheme) return false;
     return true;
   });
 }
@@ -226,6 +249,37 @@ function sortJobs(jobs) {
   });
 }
 
+function buildNote(j) {
+  const sp = j.visa_sponsorship;
+
+  if (sp === 'sc_blocked') {
+    return `<div class="job-note sc-blocked">SC clearance required → 5 years continuous UK residency needed. Sponsorship not possible for international candidates.</div>`;
+  }
+  if (sp === 'verified' && j.link_status === 'expired') {
+    return `<div class="job-note sponsor">Sponsor verified ✓ — Company holds a valid UK sponsor licence. Original listing expired — check company career page.</div>`;
+  }
+  if (sp === 'verified' && j.link_status === 'stale') {
+    return `<div class="job-note sponsor">Sponsor verified ✓ — Posted ${j.date_posted}, may be filled. Check company career page for current openings.</div>`;
+  }
+  if (sp === 'verified') {
+    return `<div class="job-note sponsor">Sponsor verified ✓ — Company holds a valid UK sponsor licence.</div>`;
+  }
+  if (sp === 'agency_unknown') {
+    return `<div class="job-note agency">Posted by recruitment agency — sponsorship depends on the actual employer, not the agency. Verify directly.</div>`;
+  }
+  return '';
+}
+
+function buildFallback(j) {
+  if (j.link_status === 'expired' && j.fallback_url) {
+    return `<div class="fallback-link">Company career page: <a href="${j.fallback_url}" target="_blank" rel="noopener">${j.company} careers →</a></div>`;
+  }
+  if (j.link_status === 'stale' && j.fallback_url) {
+    return `<div class="fallback-link">Current openings: <a href="${j.fallback_url}" target="_blank" rel="noopener">${j.company} careers →</a></div>`;
+  }
+  return '';
+}
+
 function render() {
   const filtered = getFiltered();
   const sorted = sortJobs(filtered);
@@ -237,37 +291,42 @@ function render() {
   no.style.display = 'none';
 
   list.innerHTML = sorted.map(j => {
-    const isSponsored = j.visa_sponsorship === 'verified';
-    const badges = [];
-    if (isSponsored && !j.sc_clearance) badges.push('<span class="badge badge-sponsor">Sponsored</span>');
-    if (isSponsored && j.sc_clearance) badges.push('<span class="badge badge-sc">SC required</span>');
-    if (j.grad_scheme) badges.push('<span class="badge badge-grad">Grad scheme</span>');
-    if (!isSponsored) badges.push('<span class="badge" style="background:#f1f5f9;color:#64748b">Sponsorship unknown</span>');
+    const cardClass = j.link_status === 'expired' ? ' expired' : '';
+    const titleTags = [];
+    if (j.link_status === 'expired') titleTags.push('<span class="expired-tag">Expired</span>');
+    if (j.link_status === 'stale') titleTags.push('<span class="stale-tag">Stale</span>');
+    if (j.grad_scheme) titleTags.push('<span class="stale-tag">Grad</span>');
 
-    const meta = [j.company];
+    const meta = [`<span class="company-name">${j.company}</span>`];
     if (j.location) meta.push(j.location);
-    if (j.remote === 'hybrid') meta.push('Hybrid');
-    else if (j.remote === 'remote') meta.push('Remote');
-    else if (j.remote === 'onsite') meta.push('Onsite');
-    if (j.employment === 'contract') meta.push('Contract');
-    if (j.employment === 'internship') meta.push('Internship');
+    const tagParts = [];
+    if (j.remote === 'hybrid') tagParts.push('Hybrid');
+    else if (j.remote === 'remote') tagParts.push('Remote');
+    else if (j.remote === 'onsite') tagParts.push('Onsite');
+    if (j.employment === 'contract') tagParts.push('Contract');
+    if (j.employment === 'internship') tagParts.push('Internship');
+    if (j.source_type === 'agency') tagParts.push('via agency');
+    if (tagParts.length) meta.push(tagParts.join(' · '));
+
+    const note = buildNote(j);
+    const fallback = buildFallback(j);
 
     return `
-      <div class="job-card${isSponsored ? ' sponsored' : ''}">
-        <div class="job-main">
+      <div class="job-card${cardClass}">
+        <div class="job-header">
           <div class="job-title">
-            ${j.url ? `<a href="${j.url}" target="_blank" rel="noopener">${j.title}</a>` : j.title}
+            ${j.url && j.link_status !== 'expired' ? `<a href="${j.url}" target="_blank" rel="noopener">${j.title}</a>` : j.title}
+            ${titleTags.join('')}
           </div>
-          <div class="job-meta">
-            ${meta.map(m => `<span>${m}</span>`).join(' · ')}
+          <div class="job-right">
+            <div class="job-salary${j.salary_display === 'Not listed' ? ' na' : ''}">${j.salary_display}</div>
+            <div class="job-date">${j.date_posted}</div>
+            <div class="job-source">${j.source}</div>
           </div>
-          ${badges.length ? `<div class="job-badges">${badges.join('')}</div>` : ''}
         </div>
-        <div class="job-right">
-          <div class="job-salary${j.salary_display === 'Not listed' ? ' muted' : ''}">${j.salary_display}</div>
-          <div class="job-date">${j.date_posted}</div>
-          <div class="job-source">${j.source}</div>
-        </div>
+        <div class="job-meta">${meta.join(' · ')}</div>
+        ${note}
+        ${fallback}
       </div>`;
   }).join('');
 }
