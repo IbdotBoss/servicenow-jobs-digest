@@ -4,188 +4,144 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ServiceNow Jobs UK</title>
-<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,700&display=swap">
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap">
 <style>
+  :root {
+    --text: #0a0a0a;
+    --muted: rgba(0,0,0,0.45);
+    --faint: rgba(0,0,0,0.25);
+    --border: rgba(0,0,0,0.07);
+    --sponsor: #0d9488;
+    --sponsor-bg: #f0fdfa;
+  }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
     font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
-    color: #0a0a0a;
-    background: #ffffff;
-    line-height: 1.6;
-    font-size: 15px;
+    color: var(--text); background: #ffffff; line-height: 1.6; font-size: 15px;
     -webkit-font-smoothing: antialiased;
   }
-  .container { max-width: 720px; margin: 0 auto; padding: 80px 24px 120px; }
+  .container { max-width: 720px; margin: 0 auto; padding: 72px 24px 120px; }
 
-  h1 {
-    font-size: 1.8rem;
-    font-weight: 700;
-    letter-spacing: -0.03em;
-    margin-bottom: 4px;
-  }
-  .subtitle {
-    font-size: 0.85rem;
-    color: rgba(0,0,0,0.4);
-    margin-bottom: 40px;
-  }
-  .stats-line {
-    font-size: 0.85rem;
-    color: rgba(0,0,0,0.45);
-    margin-bottom: 32px;
-    padding-bottom: 24px;
-    border-bottom: 1px solid rgba(0,0,0,0.06);
-  }
-  .stats-line strong { color: #0a0a0a; font-weight: 700; }
-  .stats-line span { margin: 0 2px; }
+  /* Hero */
+  .hero { margin-bottom: 48px; }
+  h1 { font-size: 2rem; font-weight: 700; letter-spacing: -0.03em; margin-bottom: 6px; }
+  .subtitle { font-size: 0.88rem; color: var(--muted); max-width: 480px; line-height: 1.6; }
 
-  /* Filters — inline text links */
-  .filters {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px 20px;
+  /* Stat bar */
+  .stat-bar {
+    display: flex; gap: 24px; padding: 16px 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
     margin-bottom: 28px;
-    font-size: 0.82rem;
-    color: rgba(0,0,0,0.4);
+    font-size: 0.82rem; color: var(--muted);
   }
-  .filter-group { display: flex; gap: 12px; align-items: center; }
+  .stat { text-align: center; }
+  .stat .num { font-size: 1.4rem; font-weight: 700; color: var(--text); display: block; line-height: 1.1; }
+  .stat .label { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--faint); }
+
+  /* Filters */
+  .filters {
+    display: flex; flex-wrap: wrap; gap: 6px 24px; margin-bottom: 24px;
+    font-size: 0.82rem; color: var(--muted);
+  }
+  .filter-group { display: flex; gap: 10px; align-items: center; }
   .filter-label {
-    font-weight: 700;
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: rgba(0,0,0,0.3);
-    margin-right: 2px;
+    font-weight: 700; font-size: 0.67rem; text-transform: uppercase;
+    letter-spacing: 0.1em; color: var(--faint);
   }
   .filter-link {
-    cursor: pointer;
-    color: rgba(0,0,0,0.4);
-    text-decoration: none;
-    padding-bottom: 2px;
-    border-bottom: 1.5px solid transparent;
-    transition: all 0.15s;
+    cursor: pointer; color: var(--muted); text-decoration: none;
+    padding: 3px 0; border-bottom: 2px solid transparent; transition: all 0.15s;
   }
-  .filter-link:hover { color: #0a0a0a; }
-  .filter-link.active {
-    color: #0a0a0a;
-    border-bottom-color: #0a0a0a;
-  }
+  .filter-link:hover { color: var(--text); }
+  .filter-link.active { color: var(--text); border-bottom-color: var(--text); }
 
   /* Sort */
   .sort-row {
-    font-size: 0.82rem;
-    color: rgba(0,0,0,0.4);
-    margin-bottom: 20px;
-    display: flex;
-    gap: 12px;
-    align-items: center;
+    font-size: 0.78rem; color: var(--muted); margin-bottom: 24px;
+    display: flex; gap: 10px; align-items: center;
   }
   .sort-link {
-    cursor: pointer;
-    color: rgba(0,0,0,0.4);
-    text-decoration: none;
-    padding-bottom: 2px;
-    border-bottom: 1.5px solid transparent;
-    transition: all 0.15s;
+    cursor: pointer; color: var(--muted); text-decoration: none;
+    padding: 2px 0; border-bottom: 2px solid transparent; transition: all 0.15s;
   }
-  .sort-link:hover { color: #0a0a0a; }
-  .sort-link.active {
-    color: #0a0a0a;
-    border-bottom-color: #0a0a0a;
-  }
+  .sort-link:hover { color: var(--text); }
+  .sort-link.active { color: var(--text); border-bottom-color: var(--text); }
+  .sort-count { margin-left: auto; font-size: 0.75rem; color: var(--faint); }
 
   /* Job cards */
   .job-list { display: flex; flex-direction: column; }
   .job-card {
     display: grid;
     grid-template-columns: 1fr auto;
-    gap: 4px 16px;
-    padding: 18px 0;
-    border-bottom: 1px solid rgba(0,0,0,0.06);
-    transition: background 0.1s;
+    gap: 2px 24px;
+    padding: 20px 0 18px;
+    border-bottom: 1px solid var(--border);
+    transition: background 0.12s;
   }
-  .job-card:hover { background: rgba(0,0,0,0.01); }
+  .job-card:hover { background: rgba(0,0,0,0.008); }
+  .job-card.sponsored { border-left: 3px solid var(--sponsor); padding-left: 16px; margin-left: -2px; }
+
   .job-main { min-width: 0; }
   .job-title {
-    font-size: 0.95rem;
-    font-weight: 700;
-    margin-bottom: 3px;
+    font-size: 0.95rem; font-weight: 700; margin-bottom: 2px; line-height: 1.3;
   }
-  .job-title a {
-    color: #0a0a0a;
-    text-decoration: none;
-  }
+  .job-title a { color: var(--text); text-decoration: none; }
   .job-title a:hover { text-decoration: underline; }
+
+  .job-company { font-weight: 500; color: var(--text); font-size: 0.85rem; }
   .job-meta {
-    font-size: 0.8rem;
-    color: rgba(0,0,0,0.4);
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2px 12px;
+    font-size: 0.78rem; color: var(--muted); display: flex; flex-wrap: wrap;
+    gap: 2px 10px; margin-top: 2px;
   }
   .job-meta span { white-space: nowrap; }
-  .job-markers {
-    font-size: 0.78rem;
-    color: rgba(0,0,0,0.35);
-    margin-top: 4px;
-    display: flex;
-    gap: 10px;
+
+  .job-badges {
+    display: flex; gap: 8px; margin-top: 6px; font-size: 0.75rem;
   }
-  .marker-sponsor { color: #0a0a0a; }
-  .marker-sc { color: rgba(0,0,0,0.3); }
-  .marker-grad { color: rgba(0,0,0,0.5); }
+  .badge {
+    padding: 2px 8px; border-radius: 4px; font-weight: 500;
+    letter-spacing: 0.01em;
+  }
+  .badge-sponsor { background: var(--sponsor-bg); color: var(--sponsor); }
+  .badge-sc { background: #fef2f2; color: #dc2626; }
+  .badge-grad { background: #f5f3ff; color: #7c3aed; }
 
   .job-right {
-    text-align: right;
-    min-width: 90px;
-    font-size: 0.85rem;
+    text-align: right; min-width: 95px; font-size: 0.85rem;
+    display: flex; flex-direction: column; align-items: flex-end; justify-content: flex-start;
   }
-  .job-salary { font-weight: 700; white-space: nowrap; }
-  .job-date { font-size: 0.75rem; color: rgba(0,0,0,0.3); margin-top: 2px; }
-  .job-source { font-size: 0.7rem; color: rgba(0,0,0,0.2); }
+  .job-salary { font-weight: 700; white-space: nowrap; color: var(--text); }
+  .job-salary.muted { color: var(--muted); font-weight: 500; }
+  .job-date { font-size: 0.72rem; color: var(--faint); margin-top: 2px; }
+  .job-source { font-size: 0.67rem; color: rgba(0,0,0,0.15); margin-top: 1px; }
 
-  .no-results {
-    text-align: center;
-    padding: 80px 20px;
-    color: rgba(0,0,0,0.3);
-  }
-  .no-results p { font-size: 1.1rem; }
+  .no-results { text-align: center; padding: 80px 20px; color: var(--muted); }
 
   footer {
-    margin-top: 80px;
-    padding-top: 24px;
-    border-top: 1px solid rgba(0,0,0,0.06);
-    font-size: 0.78rem;
-    color: rgba(0,0,0,0.3);
+    margin-top: 80px; padding-top: 24px; border-top: 1px solid var(--border);
+    font-size: 0.78rem; color: var(--faint);
   }
-  footer a { color: #0a0a0a; }
+  footer a { color: var(--text); }
 
   @media (max-width: 500px) {
     .container { padding: 40px 16px 80px; }
-    h1 { font-size: 1.4rem; }
+    h1 { font-size: 1.5rem; }
+    .stat-bar { gap: 14px; }
     .job-card { grid-template-columns: 1fr; }
-    .job-right {
-      display: flex;
-      flex-direction: row;
-      gap: 12px;
-      align-items: baseline;
-      text-align: left;
-    }
-    .filters { gap: 8px 14px; }
-    .filter-group { gap: 8px; }
+    .job-right { flex-direction: row; gap: 10px; align-items: baseline; text-align: left; }
+    .job-card.sponsored { padding-left: 12px; }
   }
 </style>
 </head>
 <body>
 <div class="container">
-  <h1>ServiceNow Jobs UK</h1>
-  <p class="subtitle">
-    Curated digest of ServiceNow roles in the United Kingdom.
-    Cross-referenced against the UK Government sponsor register.
-  </p>
-
-  <div class="stats-line" id="stats-line">
-    <span id="stat-content">…</span>
+  <div class="hero">
+    <h1>ServiceNow Jobs UK</h1>
+    <p class="subtitle">Curated digest of ServiceNow roles in the United Kingdom. Cross-referenced against the UK Government sponsor register.</p>
   </div>
+
+  <div class="stat-bar" id="stat-bar"></div>
 
   <div class="filters" id="filters">
     <span class="filter-label">Sponsor</span>
@@ -214,16 +170,15 @@
     <span class="sort-link active" data-sort="date">Newest</span>
     <span class="sort-link" data-sort="salary">Salary</span>
     <span class="sort-link" data-sort="company">Company</span>
+    <span class="sort-count" id="sort-count"></span>
   </div>
 
   <div class="job-list" id="job-list"></div>
-  <div class="no-results" id="no-results" style="display:none">
-    <p>No jobs match</p>
-  </div>
+  <div class="no-results" id="no-results" style="display:none"><p>No jobs match</p></div>
 
   <footer>
     <p>Refreshed daily at 05:00 UK · Data from Reed, Hunt UK, and LinkedIn · Built by <a href="https://github.com/IbdotBoss/servicenow-jobs-digest">Mr Faajii</a></p>
-    <p style="margin-top: 6px;">Sponsor verification via <a href="https://www.gov.uk/government/publications/register-of-licensed-sponsors-workers">UK Government</a> · <a href="all-jobs.html">Master archive</a></p>
+    <p style="margin-top: 6px;">Sponsor verification via UK Government · <a href="all-jobs.html">Master archive</a></p>
   </footer>
 </div>
 
@@ -245,11 +200,12 @@ function updateStats() {
   const sponsored = allJobs.filter(j => j.visa_sponsorship === 'verified').length;
   const grad = allJobs.filter(j => j.grad_scheme).length;
   const sc = allJobs.filter(j => j.sc_clearance).length;
-  document.getElementById('stat-content').innerHTML =
-    `<strong>${total}</strong> jobs` +
-    (sponsored > 0 ? ` · <strong>${sponsored}</strong> with verified sponsorship` : '') +
-    (grad > 0 ? ` · <strong>${grad}</strong> grad schemes` : '') +
-    (sc > 0 ? ` · <strong>${sc}</strong> require SC clearance` : '');
+  document.getElementById('stat-bar').innerHTML = `
+    <div class="stat"><span class="num">${total}</span><span class="label">Total</span></div>
+    <div class="stat"><span class="num">${sponsored}</span><span class="label">Sponsored</span></div>
+    <div class="stat"><span class="num">${grad}</span><span class="label">Grad Schemes</span></div>
+    <div class="stat"><span class="num">${sc}</span><span class="label">SC Required</span></div>
+  `;
 }
 
 function getFiltered() {
@@ -273,48 +229,42 @@ function sortJobs(jobs) {
 function render() {
   const filtered = getFiltered();
   const sorted = sortJobs(filtered);
+  document.getElementById('sort-count').textContent = `${sorted.length} job${sorted.length !== 1 ? 's' : ''}`;
+
   const list = document.getElementById('job-list');
   const no = document.getElementById('no-results');
-
-  if (sorted.length === 0) {
-    list.innerHTML = '';
-    no.style.display = 'block';
-    return;
-  }
+  if (sorted.length === 0) { list.innerHTML = ''; no.style.display = 'block'; return; }
   no.style.display = 'none';
 
   list.innerHTML = sorted.map(j => {
-    const markers = [];
-    if (j.visa_sponsorship === 'verified') {
-      markers.push(j.sc_clearance
-        ? '<span class="marker-sc">Sponsor licensed · SC required (5yr UK residency)</span>'
-        : '<span class="marker-sponsor">Sponsor verified</span>');
-    } else {
-      markers.push('<span class="marker-sc">Sponsorship unknown</span>');
-    }
-    if (j.grad_scheme) markers.push('<span class="marker-grad">Graduate scheme</span>');
+    const isSponsored = j.visa_sponsorship === 'verified';
+    const badges = [];
+    if (isSponsored && !j.sc_clearance) badges.push('<span class="badge badge-sponsor">Sponsored</span>');
+    if (isSponsored && j.sc_clearance) badges.push('<span class="badge badge-sc">SC required</span>');
+    if (j.grad_scheme) badges.push('<span class="badge badge-grad">Grad scheme</span>');
+    if (!isSponsored) badges.push('<span class="badge" style="background:#f1f5f9;color:#64748b">Sponsorship unknown</span>');
 
-    const metaParts = [j.company];
-    if (j.location) metaParts.push(j.location);
-    if (j.remote === 'hybrid') metaParts.push('Hybrid');
-    else if (j.remote === 'remote') metaParts.push('Remote');
-    else if (j.remote === 'onsite') metaParts.push('Onsite');
-    if (j.employment === 'contract') metaParts.push('Contract');
-    if (j.employment === 'internship') metaParts.push('Internship');
+    const meta = [j.company];
+    if (j.location) meta.push(j.location);
+    if (j.remote === 'hybrid') meta.push('Hybrid');
+    else if (j.remote === 'remote') meta.push('Remote');
+    else if (j.remote === 'onsite') meta.push('Onsite');
+    if (j.employment === 'contract') meta.push('Contract');
+    if (j.employment === 'internship') meta.push('Internship');
 
     return `
-      <div class="job-card">
+      <div class="job-card${isSponsored ? ' sponsored' : ''}">
         <div class="job-main">
           <div class="job-title">
             ${j.url ? `<a href="${j.url}" target="_blank" rel="noopener">${j.title}</a>` : j.title}
           </div>
           <div class="job-meta">
-            ${metaParts.map(m => `<span>${m}</span>`).join(' · ')}
+            ${meta.map(m => `<span>${m}</span>`).join(' · ')}
           </div>
-          ${markers.length ? `<div class="job-markers">${markers.join(' · ')}</div>` : ''}
+          ${badges.length ? `<div class="job-badges">${badges.join('')}</div>` : ''}
         </div>
         <div class="job-right">
-          <div class="job-salary">${j.salary_display}</div>
+          <div class="job-salary${j.salary_display === 'Not listed' ? ' muted' : ''}">${j.salary_display}</div>
           <div class="job-date">${j.date_posted}</div>
           <div class="job-source">${j.source}</div>
         </div>
@@ -322,7 +272,6 @@ function render() {
   }).join('');
 }
 
-// Filter clicks
 document.getElementById('filters').addEventListener('click', e => {
   const link = e.target.closest('.filter-link');
   if (!link) return;
@@ -330,11 +279,9 @@ document.getElementById('filters').addEventListener('click', e => {
   group.querySelectorAll('.filter-link').forEach(l => l.classList.remove('active'));
   link.classList.add('active');
   filters[group.dataset.filter] = link.dataset.value;
-  updateStats();
   render();
 });
 
-// Sort clicks
 document.querySelector('.sort-row').addEventListener('click', e => {
   const link = e.target.closest('.sort-link');
   if (!link) return;
