@@ -1,25 +1,26 @@
 {
-  "updated": "2026-05-06",
+  "updated": "2026-05-07",
   "total": 94,
-  "verified": 32,
+  "total_active": 94,
+  "verified": 33,
   "sc_blocked": 16,
-  "unavailable": 1,
-  "grad_schemes": 1,
-  "live_links": 23,
-  "fresh_today": 58,
+  "daily_snapshots": [
+    "2026-05-06",
+    "2026-05-07"
+  ],
   "sources": {
-    "LinkedIn": 61,
-    "Experis": 1,
+    "LinkedIn": 60,
     "Hunt UK": 10,
+    "ComputerJobs": 9,
+    "JobServe": 6,
+    "Hays": 2,
+    "Experis": 1,
     "Capgemini Careers": 1,
     "Reed": 1,
     "Totaljobs": 1,
     "Deerfoot": 1,
     "Akkodis": 1,
-    "ComputerJobs": 9,
-    "CV-Library": 1,
-    "Hays": 2,
-    "JobServe": 6
+    "CV-Library": 1
   },
   "jobs": [
     {
@@ -696,10 +697,10 @@
     {
       "title": "CMDB Specialist (ServiceNow)",
       "company": "Harvey Nash (agency)",
-      "location": "UK \u2014 Remote",
+      "location": "United Kingdom (Remote)",
       "salary_display": "Not listed",
       "date_posted": "2026-05-01",
-      "url": "https://huntukvisasponsors.com/jobs?q=servicenow",
+      "url": "https://www.linkedin.com/jobs/view/4408774251",
       "source": "Hunt UK",
       "source_type": "agency",
       "role_type": "consultant",
@@ -715,7 +716,8 @@
       "last_seen": "2026-05-06",
       "status": "active",
       "sources": [
-        "Hunt UK"
+        "Hunt UK",
+        "LinkedIn"
       ]
     },
     {
@@ -1380,32 +1382,6 @@
       "grad_scheme": false,
       "link_status": "live",
       "visa_sponsorship": "unknown",
-      "description": "",
-      "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
-      "status": "active",
-      "sources": [
-        "LinkedIn"
-      ]
-    },
-    {
-      "title": "CMDB Specialist (ServiceNow)",
-      "company": "Harvey Nash",
-      "location": "United Kingdom (Remote)",
-      "salary_display": "Not listed",
-      "salary_min": 0,
-      "salary_max": 0,
-      "date_posted": "2026-05-06",
-      "url": "https://www.linkedin.com/jobs/view/4408774251",
-      "source": "LinkedIn",
-      "source_type": "agency",
-      "role_type": "sales",
-      "remote": "remote",
-      "employment": "permanent",
-      "sc_clearance": false,
-      "grad_scheme": false,
-      "link_status": "live",
-      "visa_sponsorship": "agency_unknown",
       "description": "",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-06",
@@ -2479,11 +2455,32 @@
       "sources": [
         "LinkedIn"
       ]
+    },
+    {
+      "title": "Business Development Manager - Security & Risk (Partner Channels)",
+      "company": "ServiceNow UK Ltd",
+      "location": "Staines-Upon-Thames, England",
+      "salary_display": "Not listed",
+      "salary_min": 0,
+      "salary_max": 0,
+      "date_posted": "2026-04-22",
+      "url": "https://huntukvisasponsors.com/job/business-development-manager-security-risk-partner-channels-at-servicenow-qssji2kspbfj",
+      "source": "Hunt UK",
+      "source_type": "direct",
+      "role_type": "sales",
+      "remote": "hybrid",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "sponsor_verified",
+      "description": "ServiceNow directly \u2014 BDM for Security & Risk partner channels in UKI. MSSP strategy, partner recruitment.",
+      "first_seen": "2026-05-07",
+      "last_seen": "2026-05-07",
+      "status": "active",
+      "sources": [
+        "Hunt UK"
+      ]
     }
-  ],
-  "sources_searched": 15,
-  "total_active": 94,
-  "daily_snapshots": [
-    "2026-05-06"
   ]
 }
