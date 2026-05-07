@@ -1,7 +1,7 @@
 {
   "updated": "2026-05-07",
   "total": 94,
-  "total_active": 94,
+  "total_active": 79,
   "verified": 33,
   "sc_blocked": 16,
   "daily_snapshots": [
@@ -409,7 +409,7 @@
       "salary_min": 0,
       "salary_max": 0,
       "date_posted": "2026-04-28",
-      "url": "https://uk.computerjobs.com/search-jobs-in-Glasgow-Lanarkshire-GBR/SERVICENOW-HR-DEVELOPER-384bfd9a7018af3f3f/",
+      "url": "",
       "source": "ComputerJobs",
       "source_type": "agency",
       "role_type": "developer",
@@ -417,12 +417,12 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "expired",
       "visa_sponsorship": "agency_unknown",
-      "description": "Leading bank, Glasgow (3+ days onsite). HRSD platform development. Morgan McKinley agency. Employer likely Barclays or Morgan Stanley \u2014 both hold A-rated sponsor licences. Verify sponsorship with employer.",
+      "description": "Leading bank, Glasgow (3+ days onsite). HRSD platform development. Morgan McKinley agency. Employer likely Barclays or Morgan Stanley \u2014 both hold A-rated sponsor licences. Verify sponsorship with employer. [Listing expired \u2014 was from a search page, no direct link available. May reappear in future scrapes.]",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-06",
-      "status": "active",
+      "status": "expired",
       "sources": [
         "ComputerJobs"
       ]
@@ -516,7 +516,7 @@
       "salary_min": 0,
       "salary_max": 0,
       "date_posted": "2026-05-05",
-      "url": "https://www.computerjobs.com/gb/en/search-jobs-in-Knutsford,-Cheshire,-United-Kingdom/SERVICENOW-SIR-ENGINEER-3B67B1DD324FA16BF3/",
+      "url": "",
       "source": "ComputerJobs",
       "source_type": "agency",
       "role_type": "developer",
@@ -524,12 +524,12 @@
       "employment": "contract",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "expired",
       "visa_sponsorship": "agency_unknown",
-      "description": "SIR (Security Incident Response) implementation. Knutsford = Barclays tech centre. Hybrid 60% office. Contract to 30/11/2026. eTeam agency \u2014 Barclays holds A-rated sponsor licence. Verify sponsorship.",
+      "description": "SIR (Security Incident Response) implementation. Knutsford = Barclays tech centre. Hybrid 60% office. Contract to 30/11/2026. eTeam agency \u2014 Barclays holds A-rated sponsor licence. Verify sponsorship. [Listing expired \u2014 was from a search page, no direct link available. May reappear in future scrapes.]",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-06",
-      "status": "active",
+      "status": "expired",
       "sources": [
         "ComputerJobs"
       ]
@@ -542,7 +542,7 @@
       "salary_min": 0,
       "salary_max": 0,
       "date_posted": "2026-04-29",
-      "url": "https://www.computerjobs.com/gb/en/search-jobs-in-Central-London,-London,-United-Kingdom/SERVICENOW-ARCHITECT-800E1577399731715F/",
+      "url": "",
       "source": "ComputerJobs",
       "source_type": "agency",
       "role_type": "architect",
@@ -550,12 +550,12 @@
       "employment": "contract",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "expired",
       "visa_sponsorship": "agency_unknown",
-      "description": "Telecoms Service Management (TSM). 6-month contract, \u00a3600/day Outside IR35. Hybrid 3 days London office. Start May/June 2026. Syntax agency \u2014 verify sponsorship with employer.",
+      "description": "Telecoms Service Management (TSM). 6-month contract, \u00a3600/day Outside IR35. Hybrid 3 days London office. Start May/June 2026. Syntax agency \u2014 verify sponsorship with employer. [Listing expired \u2014 was from a search page, no direct link available. May reappear in future scrapes.]",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-06",
-      "status": "active",
+      "status": "expired",
       "sources": [
         "ComputerJobs"
       ]
@@ -596,7 +596,7 @@
       "salary_min": 0,
       "salary_max": 0,
       "date_posted": "2026-05-01",
-      "url": "https://www.computerjobs.com/gb/en/JobListing.aspx?shid=E3BE4C44A9FC068922CC&ovrpp=jl",
+      "url": "",
       "source": "ComputerJobs",
       "source_type": "agency",
       "role_type": "analyst",
@@ -604,13 +604,13 @@
       "employment": "contract",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "expired",
       "visa_sponsorship": "sc_blocked",
-      "description": "6+ month contract. London 3 days/week. ITIL processes, ServiceNow data model. Business/functional analysis.",
+      "description": "6+ month contract. London 3 days/week. ITIL processes, ServiceNow data model. Business/functional analysis. [Original listing expired \u2014 agency posting, no current link available.]",
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-06",
-      "status": "active",
+      "status": "expired",
       "sources": [
         "ComputerJobs"
       ]
@@ -729,7 +729,7 @@
       "salary_min": 45000,
       "salary_max": 60000,
       "date_posted": "2026-05-01",
-      "url": "https://www.computerjobs.com/gb/en/JobListing.aspx?shid=E3BE4C44A9FC068922CC&ovrpp=jl",
+      "url": "",
       "source": "ComputerJobs",
       "source_type": "agency",
       "role_type": "consultant",
@@ -737,13 +737,13 @@
       "employment": "permanent",
       "sc_clearance": true,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "expired",
       "visa_sponsorship": "sc_blocked",
-      "description": "Must hold active DV clearance \u2014 blocks international candidates. 2-3 yrs ServiceNow. 10% bonus.",
+      "description": "Must hold active DV clearance \u2014 blocks international candidates. 2-3 yrs ServiceNow. 10% bonus. [Original listing expired \u2014 agency posting, no current link available.]",
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-06",
-      "status": "active",
+      "status": "expired",
       "sources": [
         "ComputerJobs"
       ]
@@ -756,7 +756,7 @@
       "salary_min": 0,
       "salary_max": 0,
       "date_posted": "2026-04-30",
-      "url": "https://www.jobserve.com/gb/en/search-jobs-in-London,-London,-United-Kingdom/SERVICENOW-TECHNICAL-ARCHITECT-176AC9C65EE9C61444/",
+      "url": "",
       "source": "JobServe",
       "source_type": "direct",
       "role_type": "architect",
@@ -764,12 +764,12 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "expired",
       "visa_sponsorship": "verified",
-      "description": "First ServiceNow partner in Europe. 2022 EMEA Elite Partner. 2026 ServiceNow Partner of the Year \u2014 Risk & Compliance. Computacenter holds A-rated sponsor licence.",
+      "description": "First ServiceNow partner in Europe. 2022 EMEA Elite Partner. 2026 ServiceNow Partner of the Year \u2014 Risk & Compliance. Computacenter holds A-rated sponsor licence. [Listing expired \u2014 was from a search page, no direct link available. May reappear in future scrapes.]",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-06",
-      "status": "active",
+      "status": "expired",
       "sources": [
         "JobServe"
       ]
@@ -780,7 +780,7 @@
       "location": "UK \u2014 Remote",
       "salary_display": "Not listed",
       "date_posted": "2026-05-06",
-      "url": "https://www.jobserve.com/gb/en/mob/JobSearch/Results?q=servicenow",
+      "url": "",
       "source": "JobServe",
       "source_type": "agency",
       "role_type": "consultant",
@@ -788,13 +788,13 @@
       "employment": "contract",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "expired",
       "visa_sponsorship": "sc_blocked",
-      "description": "100% Remote, English speaking. Start June. 6 months + extensions. ITOM expertise required.",
+      "description": "100% Remote, English speaking. Start June. 6 months + extensions. ITOM expertise required. [Original listing expired \u2014 agency posting, no current link available.]",
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-06",
-      "status": "active",
+      "status": "expired",
       "sources": [
         "JobServe"
       ]
@@ -807,7 +807,7 @@
       "salary_min": 0,
       "salary_max": 0,
       "date_posted": "2026-05-06",
-      "url": "https://www.jobserve.com/gb/en/mob/JobSearch/Results?q=servicenow",
+      "url": "",
       "source": "JobServe",
       "source_type": "agency",
       "role_type": "other",
@@ -815,13 +815,13 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "expired",
       "visa_sponsorship": "sc_blocked",
-      "description": "Sales/business development role. \u00a3180k OTE. Not a technical ServiceNow position \u2014 sales only.",
+      "description": "Sales/business development role. \u00a3180k OTE. Not a technical ServiceNow position \u2014 sales only. [Original listing expired \u2014 agency posting, no current link available.]",
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-06",
-      "status": "active",
+      "status": "expired",
       "sources": [
         "JobServe"
       ]
@@ -834,7 +834,7 @@
       "salary_min": 80000,
       "salary_max": 100000,
       "date_posted": "2026-04-27",
-      "url": "https://www.computerjobs.com/us/en/find-jobs-in-United-Kingdom/SERVICENOW-TECHNICAL-ARCHITECT-DV-CLEARED-058F0466B0FEEED600/",
+      "url": "",
       "source": "ComputerJobs",
       "source_type": "agency",
       "role_type": "architect",
@@ -842,13 +842,13 @@
       "employment": "permanent",
       "sc_clearance": true,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "expired",
       "visa_sponsorship": "sc_blocked",
-      "description": "Must hold active DV clearance. \u00a380k-\u00a3100k + 10% bonus. Remote UK with travel.",
+      "description": "Must hold active DV clearance. \u00a380k-\u00a3100k + 10% bonus. Remote UK with travel. [Listing expired \u2014 was from a search page, no direct link available. May reappear in future scrapes.]",
       "sponsorship_scan": "fetch_error: HTTP Error 410: Gone",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-06",
-      "status": "active",
+      "status": "expired",
       "sources": [
         "ComputerJobs"
       ]
@@ -859,7 +859,7 @@
       "location": "Manchester/Newcastle/Leeds",
       "salary_display": "Not listed",
       "date_posted": "2026-03-27",
-      "url": "https://www.computerjobs.com/find-jobs-in-United-Kingdom/SERVICENOW-CONSULTANT-X2-0B2601FE59EBF4B2D4/",
+      "url": "",
       "source": "ComputerJobs",
       "source_type": "direct",
       "role_type": "consultant",
@@ -867,13 +867,13 @@
       "employment": "contract",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "expired",
       "visa_sponsorship": "unknown",
-      "description": "DWP (Department for Work and Pensions). 6-month contract, Inside IR35. Hybrid \u2014 Manchester, Newcastle, or Leeds.",
+      "description": "DWP (Department for Work and Pensions). 6-month contract, Inside IR35. Hybrid \u2014 Manchester, Newcastle, or Leeds. [Listing expired \u2014 was from a search page, no direct link available. May reappear in future scrapes.]",
       "sponsorship_scan": "fetch_error: HTTP Error 410: Gone",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-06",
-      "status": "active",
+      "status": "expired",
       "sources": [
         "ComputerJobs"
       ]
@@ -884,7 +884,7 @@
       "location": "UK/EU \u2014 Fully Remote",
       "salary_display": "Not listed",
       "date_posted": "2026-04-29",
-      "url": "https://www.computerjobs.com/us/en/search-jobs-in-East-Riding-of-Yorkshire,-United-Kingdom/SOLUTION-ARCHITECT-SERVICENOW-ENTERPRISE-INTEGRATIONS-TELECOM-SATCOM-FULLY-REMOTE-UK-EU-99FD42DACC80AA9596/",
+      "url": "",
       "source": "ComputerJobs",
       "source_type": "agency",
       "role_type": "architect",
@@ -892,12 +892,12 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "expired",
       "visa_sponsorship": "agency_unknown",
-      "description": "14+ years IT, 5+ years ServiceNow architecture. OSS/BSS Telecom/Satcom domain. REST, SOAP, IntegrationHub. MuleSoft, Kafka. AWS/Azure.",
+      "description": "14+ years IT, 5+ years ServiceNow architecture. OSS/BSS Telecom/Satcom domain. REST, SOAP, IntegrationHub. MuleSoft, Kafka. AWS/Azure. [Listing expired \u2014 was from a search page, no direct link available. May reappear in future scrapes.]",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-06",
-      "status": "active",
+      "status": "expired",
       "sources": [
         "ComputerJobs"
       ]
@@ -908,7 +908,7 @@
       "location": "UK",
       "salary_display": "Not listed",
       "date_posted": "2026-05-06",
-      "url": "https://www.jobserve.com/gb/en/mob/JobSearch/Results?q=servicenow",
+      "url": "",
       "source": "JobServe",
       "source_type": "agency",
       "role_type": "developer",
@@ -916,13 +916,13 @@
       "employment": "permanent",
       "sc_clearance": true,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "expired",
       "visa_sponsorship": "sc_blocked",
-      "description": "SC clearance required \u2014 blocks international candidates.",
+      "description": "SC clearance required \u2014 blocks international candidates. [Original listing expired \u2014 agency posting, no current link available.]",
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-06",
-      "status": "active",
+      "status": "expired",
       "sources": [
         "JobServe"
       ]
@@ -933,7 +933,7 @@
       "location": "UK",
       "salary_display": "Not listed",
       "date_posted": "2026-05-06",
-      "url": "https://www.jobserve.com/gb/en/mob/JobSearch/Results?q=servicenow",
+      "url": "",
       "source": "JobServe",
       "source_type": "agency",
       "role_type": "consultant",
@@ -941,13 +941,13 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "expired",
       "visa_sponsorship": "sc_blocked",
-      "description": "Senior ServiceNow consultant role. Agency listing \u2014 verify sponsorship with employer.",
+      "description": "Senior ServiceNow consultant role. Agency listing \u2014 verify sponsorship with employer. [Original listing expired \u2014 agency posting, no current link available.]",
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-06",
-      "status": "active",
+      "status": "expired",
       "sources": [
         "JobServe"
       ]
@@ -958,7 +958,7 @@
       "location": "UK",
       "salary_display": "Not listed",
       "date_posted": "2026-05-06",
-      "url": "https://www.jobserve.com/gb/en/mob/JobSearch/Results?q=servicenow",
+      "url": "",
       "source": "JobServe",
       "source_type": "agency",
       "role_type": "architect",
@@ -966,13 +966,13 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "expired",
       "visa_sponsorship": "sc_blocked",
-      "description": "Solution Architect for ServiceNow platform. Agency listing.",
+      "description": "Solution Architect for ServiceNow platform. Agency listing. [Original listing expired \u2014 agency posting, no current link available.]",
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-06",
-      "status": "active",
+      "status": "expired",
       "sources": [
         "JobServe"
       ]
@@ -983,7 +983,7 @@
       "location": "UK/EU \u2014 Fully Remote",
       "salary_display": "Not listed",
       "date_posted": "2026-04-29",
-      "url": "https://www.computerjobs.com/us/en/search-jobs-in-East-Riding-of-Yorkshire,-United-Kingdom/SOLUTION-ARCHITECT-SERVICENOW-ENTERPRISE-INTEGRATIONS-TELECOM-SATCOM-FULLY-REMOTE-UK-EU-99FD42DACC80AA9596/",
+      "url": "",
       "source": "ComputerJobs",
       "source_type": "agency",
       "role_type": "architect",
@@ -991,12 +991,12 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "expired",
       "visa_sponsorship": "agency_unknown",
-      "description": "14+ yrs IT, 5+ yrs SN architecture. OSS/BSS Telecom/Satcom. REST/SOAP/IntegrationHub. MuleSoft, Kafka.",
+      "description": "14+ yrs IT, 5+ yrs SN architecture. OSS/BSS Telecom/Satcom. REST/SOAP/IntegrationHub. MuleSoft, Kafka. [Listing expired \u2014 was from a search page, no direct link available. May reappear in future scrapes.]",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-06",
-      "status": "active",
+      "status": "expired",
       "sources": [
         "ComputerJobs"
       ]
