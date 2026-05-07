@@ -3,83 +3,164 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ServiceNow Jobs UK — Archive</title>
-<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap">
+<title>ServiceNow Jobs UK — Master Archive</title>
 <style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --text: #121212; --muted: #6b7280; --faint: #9ca3af;
+    --border: #e5e7eb; --bg-alt: #f8f9fa;
+    --accent: #0066cc; --sponsor: #0d9488; --sc: #dc2626;
+    --stale: #d97706; --expired: #9ca3af;
+  }
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
   body {
-    font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
-    color: #0a0a0a; background: #ffffff; line-height: 1.55; font-size: 15px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    font-size: 14px; color: var(--text); background: #fff; line-height: 1.5;
   }
-  .container { max-width: 780px; margin: 0 auto; padding: 56px 24px 100px; }
-  .back { color: rgba(0,0,0,0.4); text-decoration: none; font-size: 0.85rem; }
-  .back:hover { color: #0a0a0a; }
-  h1 { font-size: 1.6rem; font-weight: 700; letter-spacing: -0.03em; margin: 12px 0 4px; }
-  .subtitle { color: rgba(0,0,0,0.45); font-size: 0.85rem; margin-bottom: 36px; }
-  table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 32px 24px 80px; }
+
+  .topbar { padding-bottom: 20px; border-bottom: 1px solid var(--border); margin-bottom: 24px; }
+  .topbar a { color: var(--accent); text-decoration: none; font-size: 13px; }
+  .topbar a:hover { text-decoration: underline; }
+  .topbar h1 { font-size: 20px; font-weight: 700; margin-top: 8px; }
+  .topbar p { font-size: 13px; color: var(--muted); margin-top: 2px; }
+  .topbar .stats { display: flex; gap: 20px; margin-top: 8px; font-size: 13px; color: var(--muted); }
+  .topbar .stats strong { color: var(--text); }
+
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  thead { position: sticky; top: 0; background: #fff; z-index: 2; }
   th {
-    text-align: left; padding: 8px 12px 8px 0;
-    border-bottom: 2px solid rgba(0,0,0,0.08);
-    font-size: 0.68rem; font-weight: 700; text-transform: uppercase;
-    letter-spacing: 0.1em; color: rgba(0,0,0,0.3);
+    text-align: left; padding: 10px 8px;
+    border-bottom: 2px solid var(--border);
+    font-size: 11px; font-weight: 600; text-transform: uppercase;
+    letter-spacing: 0.05em; color: var(--faint);
+    white-space: nowrap;
   }
-  td { padding: 10px 12px 10px 0; border-bottom: 1px solid rgba(0,0,0,0.04); vertical-align: top; }
-  td a { color: #0a0a0a; text-decoration: none; font-weight: 500; }
+  td { padding: 10px 8px; border-bottom: 1px solid var(--border); }
+  tr:nth-child(even) td { background: var(--bg-alt); }
+  tr:hover td { background: #f0f4ff; }
+  tr.expired td { opacity: 0.45; }
+  tr.stale td { opacity: 0.7; }
+
+  td a { color: var(--accent); text-decoration: none; }
+  td a:visited { color: #551a8b; }
   td a:hover { text-decoration: underline; }
-  td:last-child { text-align: right; }
-  .muted { font-size: 0.82rem; color: rgba(0,0,0,0.4); }
-  .sponsor { color: #0d9488; font-weight: 500; }
-  .sc-blocked { color: #dc2626; }
-  .expired { opacity: 0.5; }
-  .note {
-    margin-top: 40px; padding: 14px; background: rgba(0,0,0,0.012);
-    border-left: 2px solid rgba(0,0,0,0.06); font-size: 0.82rem;
-    color: rgba(0,0,0,0.4); line-height: 1.6;
+  .job-title { font-weight: 600; }
+  .company { color: var(--text); }
+  .location { color: var(--muted); font-size: 12px; }
+
+  .badge {
+    display: inline-block; font-size: 10px; font-weight: 600;
+    padding: 1px 6px; border-radius: 3px; vertical-align: middle;
   }
-  footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid rgba(0,0,0,0.06); font-size: 0.78rem; color: rgba(0,0,0,0.3); }
-  footer a { color: #0a0a0a; }
-  @media (max-width: 500px) { .container { padding: 30px 16px; } th, td { padding-right: 6px; } }
+  .badge-verified { color: var(--sponsor); background: #f0fdfa; }
+  .badge-sc { color: var(--sc); background: #fef2f2; }
+  .badge-agency { color: var(--muted); background: #f3f4f6; }
+  .badge-unavailable { color: var(--sc); background: #fef2f2; }
+  .badge-active { color: var(--sponsor); background: #f0fdfa; }
+  .badge-stale { color: var(--stale); background: #fffbeb; }
+  .badge-expired { color: var(--expired); background: #f3f4f6; }
+
+  .footer {
+    margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--border);
+    font-size: 12px; color: var(--faint);
+  }
+  .footer a { color: var(--accent); }
+
+  .note { font-size: 11px; color: var(--muted); max-width: 240px; line-height: 1.4; }
+
+  @media (max-width: 768px) {
+    th:nth-child(4), td:nth-child(4),
+    th:nth-child(5), td:nth-child(5),
+    th:nth-child(7), td:nth-child(7) { display: none; }
+  }
 </style>
 </head>
 <body>
 <div class="container">
-  <a href="index.html" class="back">← Back</a>
-  <h1>Master Archive</h1>
-  <p class="subtitle">All ServiceNow UK jobs — live, expired, and historical.</p>
-  <table>
-    <thead><tr><th>Date</th><th>Job</th><th>Company</th><th>Salary</th><th>Sponsorship</th></tr></thead>
-    <tbody id="tb"></tbody>
-  </table>
-  <div class="note">
-    Jobs sourced from Reed, Hunt UK, LinkedIn, and company career pages. Sponsor verification via <a href="https://www.gov.uk/government/publications/register-of-licensed-sponsors-workers">UK Government register</a>.
-    <strong>SC clearance</strong> requires 5 years continuous UK residency — blocks sponsorship for international candidates.
+  <div class="topbar">
+    <a href="index.html">← Back to jobs</a>
+    <h1>Master Archive</h1>
+    <p>Every ServiceNow UK role ever tracked. Updated daily.</p>
+    <div class="stats" id="stats"></div>
   </div>
-  <footer><p>Built by <a href="https://github.com/IbdotBoss/servicenow-jobs-digest">Mr Faajii</a></p></footer>
-</div>
-<script>
-fetch('data/jobs.json').then(r => r.json()).then(data => {
-  document.getElementById('tb').innerHTML = data.jobs
-    .sort((a,b) => b.date_posted.localeCompare(a.date_posted))
-    .map(j => {
-      let sp = '';
-      if (j.visa_sponsorship === 'verified') sp = '<span class="sponsor">Verified ✓</span>';
-      else if (j.visa_sponsorship === 'sc_blocked') sp = '<span class="sc-blocked">SC blocked ✗</span>';
-      else if (j.visa_sponsorship === 'agency_unknown') sp = '<span class="muted">Agency — verify</span>';
-      else sp = '<span class="muted">Unknown</span>';
 
-      const cls = j.link_status === 'expired' ? ' expired' : '';
-      return `<tr class="${cls}">
-        <td class="muted">${j.date_posted}</td>
-        <td>${j.url && j.link_status !== 'expired' ? `<a href="${j.url}" target="_blank">${j.title}</a>` : j.title}
-          ${j.link_status === 'expired' ? '<span class="muted"> · expired</span>' : ''}
-          ${j.grad_scheme ? '<span class="muted"> · grad</span>' : ''}
-        </td>
-        <td class="muted">${j.company} · ${j.location}</td>
-        <td>${j.salary_display}</td>
-        <td>${sp}</td>
-      </tr>`;
-    }).join('');
-});
+  <table>
+    <thead>
+      <tr>
+        <th>Title & Company</th>
+        <th>Location</th>
+        <th>Sponsorship</th>
+        <th>First Seen</th>
+        <th>Last Seen</th>
+        <th>Source</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody id="tbody"></tbody>
+  </table>
+
+  <div class="footer">
+    <p>Master archive updated <strong id="update-date">daily</strong> · <span id="job-count"></span> jobs tracked</p>
+    <p>Sponsor data via <a href="https://www.gov.uk/government/publications/register-of-licensed-sponsors-workers">UK Government register</a></p>
+  </div>
+</div>
+
+<script>
+async function init() {
+  const resp = await fetch('data/master.json');
+  const data = await resp.json();
+  const jobs = data.jobs || [];
+
+  document.getElementById('update-date').textContent = data.updated || 'today';
+  document.getElementById('job-count').textContent = jobs.length;
+  document.getElementById('stats').innerHTML = 
+    `<span><strong>${data.total_active || '-'}</strong> active</span>` +
+    `<span><strong>${data.verified || '-'}</strong> sponsors</span>` +
+    `<span><strong>${data.sc_blocked || '-'}</strong> SC-blocked</span>` +
+    `<span><strong>${(data.daily_snapshots || []).length}</strong> days tracked</span>`;
+
+  // Sort by first_seen desc, then company
+  jobs.sort((a, b) => {
+    const d = (b.first_seen || '').localeCompare(a.first_seen || '');
+    if (d !== 0) return d;
+    return (a.company || '').localeCompare(b.company || '');
+  });
+
+  const tbody = document.getElementById('tbody');
+  tbody.innerHTML = jobs.map(j => {
+    const sp = j.visa_sponsorship || '';
+    let spBadge = '';
+    if (sp === 'sponsor_verified' || sp === 'verified') spBadge = '<span class="badge badge-verified">Sponsored</span>';
+    else if (sp === 'sc_blocked') spBadge = '<span class="badge badge-sc">SC Blocked</span>';
+    else if (sp === 'agency_unknown') spBadge = '<span class="badge badge-agency">Agency</span>';
+    else if (sp === 'unavailable') spBadge = '<span class="badge badge-unavailable">No Sponsorship</span>';
+    else spBadge = '<span class="badge badge-agency">Unknown</span>';
+
+    const status = j.status || 'active';
+    let statusBadge = '';
+    if (status === 'active') statusBadge = '<span class="badge badge-active">Active</span>';
+    else if (status === 'stale') statusBadge = '<span class="badge badge-stale">Stale</span>';
+    else statusBadge = '<span class="badge badge-expired">Expired</span>';
+
+    const rowClass = status === 'expired' ? 'expired' : status === 'stale' ? 'stale' : '';
+    const titleHtml = j.url ? `<a href="${j.url}" target="_blank" rel="noopener">${j.title || ''}</a>` : (j.title || '');
+
+    return `<tr class="${rowClass}">
+      <td>
+        <div class="job-title">${titleHtml}</div>
+        <div class="company">${j.company || ''}</div>
+      </td>
+      <td class="location">${j.location || 'N/A'}</td>
+      <td>${spBadge}</td>
+      <td>${j.first_seen || '?'}</td>
+      <td>${j.last_seen || '?'}</td>
+      <td>${j.source || (j.sources || [])[0] || '?'}</td>
+      <td>${statusBadge}</td>
+    </tr>`;
+  }).join('');
+}
+
+init();
 </script>
 </body>
 </html>
