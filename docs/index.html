@@ -180,6 +180,13 @@
   <div class="page-header">
     <h1>ServiceNow Roles — United Kingdom</h1>
     <p>Cross-referenced against the UK Government sponsor register. Refreshed daily.</p>
+    <div class="date-selector" style="margin-top:12px;display:flex;align-items:center;gap:8px;">
+      <span style="font-size:12px;color:var(--text-light);">Viewing:</span>
+      <select id="date-select" style="font-size:13px;padding:4px 8px;border:1px solid var(--border);border-radius:4px;background:#fff;color:var(--text);cursor:pointer;">
+        <option value="latest">Latest (active jobs)</option>
+      </select>
+      <span id="date-count" style="font-size:12px;color:var(--text-light);"></span>
+    </div>
   </div>
 
   <div class="filter-bar" id="filters">
@@ -225,15 +232,54 @@
 let allJobs = [];
 let filters = { sponsorship: 'all', role: 'all' };
 let sortBy = 'date';
+let currentView = 'latest';
+let dailySnapshots = [];
 
 async function init() {
-  const resp = await fetch('data/jobs.json');
-  const data = await resp.json();
-  allJobs = data.jobs || [];
-  document.getElementById('update-date').textContent = data.updated || 'today';
+  // Load master first to get daily snapshot list
+  const masterResp = await fetch('data/master.json');
+  const masterData = await masterResp.json();
+  dailySnapshots = (masterData.daily_snapshots || []).sort().reverse();
+  
+  // Populate date selector
+  const select = document.getElementById('date-select');
+  dailySnapshots.forEach(date => {
+    const opt = document.createElement('option');
+    opt.value = date;
+    opt.textContent = date;
+    select.appendChild(opt);
+  });
+  
+  // Default: load latest (active jobs from master)
+  allJobs = masterData.jobs.filter(j => j.status === 'active');
   updateTopbar();
   render();
+  document.getElementById('date-count').textContent = allJobs.length + ' jobs';
 }
+
+async function loadDate(date) {
+  currentView = date;
+  if (date === 'latest') {
+    const resp = await fetch('data/jobs.json');
+    const data = await resp.json();
+    allJobs = data.jobs || [];
+  } else {
+    const resp = await fetch('data/daily/jobs_' + date + '.json');
+    const data = await resp.json();
+    allJobs = data.jobs || [];
+    // Add first_seen if missing
+    allJobs.forEach(j => { if (!j.first_seen) j.first_seen = date; });
+  }
+  updateTopbar();
+  render();
+  document.getElementById('date-count').textContent = allJobs.length + ' jobs on ' + date;
+  document.getElementById('update-date').textContent = date;
+}
+
+// Date selector handler
+document.getElementById('date-select').addEventListener('change', e => {
+  loadDate(e.target.value);
+});
 
 function updateTopbar() {
   const total = allJobs.length;
