@@ -237,7 +237,7 @@ let dailySnapshots = [];
 
 async function init() {
   // Load master first to get daily snapshot list
-  const masterResp = await fetch('data/master.json');
+  const masterResp = await fetch('data/master.json?t=' + Date.now());
   const masterData = await masterResp.json();
   dailySnapshots = (masterData.daily_snapshots || []).sort().reverse();
   
@@ -260,7 +260,7 @@ async function init() {
 async function loadDate(date) {
   currentView = date;
   if (date === 'latest') {
-    const resp = await fetch('data/jobs.json');
+    const resp = await fetch('data/jobs.json?t=' + Date.now());
     const data = await resp.json();
     allJobs = data.jobs || [];
   } else {
