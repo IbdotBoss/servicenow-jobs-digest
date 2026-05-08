@@ -1,27 +1,9 @@
 {
-  "updated": "2026-05-07",
-  "total": 94,
-  "total_active": 79,
-  "verified": 33,
-  "sc_blocked": 16,
-  "daily_snapshots": [
-    "2026-05-06",
-    "2026-05-07"
-  ],
-  "sources": {
-    "LinkedIn": 60,
-    "Hunt UK": 10,
-    "ComputerJobs": 9,
-    "JobServe": 6,
-    "Hays": 2,
-    "Experis": 1,
-    "Capgemini Careers": 1,
-    "Reed": 1,
-    "Totaljobs": 1,
-    "Deerfoot": 1,
-    "Akkodis": 1,
-    "CV-Library": 1
-  },
+  "updated": "2026-05-08",
+  "total": 116,
+  "total_active": 101,
+  "verified": 12,
+  "sc_blocked": 14,
   "jobs": [
     {
       "title": "ServiceNow Technical Consultant",
@@ -43,7 +25,7 @@
       "visa_sponsorship": "unavailable",
       "description": "Boutique ServiceNow consultancy. CSM certified. \u274c Job listing states \"No need for visa sponsorship\" \u2014 not available for international candidates.",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "active",
       "sources": [
         "LinkedIn"
@@ -51,15 +33,14 @@
     },
     {
       "title": "ServiceNow Developer",
-      "company": "Experis (ManpowerGroup)",
-      "location": "UK \u2014 Remote",
-      "salary_display": "\u00a345,000-\u00a348,000",
-      "salary_min": 45000,
-      "salary_max": 48000,
-      "date_posted": "2026-05-03",
+      "company": "Experis",
+      "location": "United Kingdom (Remote)",
+      "salary_display": "Not listed",
+      "salary_min": 0,
+      "salary_max": 0,
+      "date_posted": "2026-05-06",
       "url": "https://www.experis.co.uk/job/servicenow-developer-5892809",
-      "fallback_url": "https://uk.linkedin.com/jobs/view/servicenow-developer-at-experis-uk-4409552917",
-      "source": "Experis",
+      "source": "LinkedIn",
       "source_type": "agency",
       "role_type": "developer",
       "remote": "remote",
@@ -68,13 +49,12 @@
       "grad_scheme": false,
       "link_status": "live",
       "visa_sponsorship": "sc_blocked",
-      "description": "ServiceNow Developer. Remote (must be UK-based). \u00a345k-\u00a348k. 12-month fixed term contract initially. Analyse and understand ServiceNow environments.",
-      "sponsorship_scan": "Security clearance required",
+      "description": "",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "active",
       "sources": [
-        "Experis"
+        "LinkedIn"
       ]
     },
     {
@@ -97,7 +77,7 @@
       "visa_sponsorship": "agency_unknown",
       "description": "Full-time contract ending December 2026. HR Service Delivery module. hackajob is a recruitment platform \u2014 verify sponsorship with actual employer.",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "active",
       "sources": [
         "LinkedIn"
@@ -125,7 +105,7 @@
       "description": "Lead ServiceNow implementation projects. Effort estimation, planning, architectural analysis. API integration, cloud platforms. IBM Consulting \u2014 verified A-rated sponsor.",
       "sponsorship_scan": "Skilled Worker visa mentioned",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "active",
       "sources": [
         "Hunt UK"
@@ -153,7 +133,7 @@
       "description": "Maintenance, configuration and development of the Firm's ITSM tool. Check Clifford Chance careers page.",
       "sponsorship_scan": "fetch_error: HTTP Error 410: Gone",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "active",
       "sources": [
         "Hunt UK"
@@ -181,7 +161,7 @@
       "description": "SC clearance required \u2014 5yr UK residency. Not available for international candidates.",
       "sponsorship_scan": "fetch_error: HTTP Error 410: Gone",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "active",
       "sources": [
         "Hunt UK"
@@ -209,7 +189,7 @@
       "description": "SC clearance required \u2014 5yr UK residency. Not available for international candidates.",
       "sponsorship_scan": "fetch_error: HTTP Error 410: Gone",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "active",
       "sources": [
         "Hunt UK"
@@ -235,7 +215,7 @@
       "visa_sponsorship": "verified",
       "description": "Sep 2026 start. \u00a330,000 salary. Training & development. ServiceNow platform solutions.",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "active",
       "sources": [
         "Capgemini Careers"
@@ -261,7 +241,7 @@
       "visa_sponsorship": "agency_unknown",
       "description": "ITAM Product Manager - ServiceNow HAM/SAM. Posted by recruitment agency \u2014 verify sponsorship with actual employer.",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-08",
       "status": "active",
       "sources": [
         "Reed"
@@ -287,7 +267,7 @@
       "visa_sponsorship": "verified",
       "description": "Visa Sponsorship (Skilled Worker Visa) can be provided. Posted January \u2014 may be filled.",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-08",
       "status": "active",
       "sources": [
         "LinkedIn"
@@ -314,7 +294,7 @@
       "description": "12-month fixed-term contract. Newbury-based, hybrid (3 days WFH, 2 days onsite). Start ASAP March/April 2026. Agency listing \u2014 verify sponsorship with employer.",
       "sponsorship_scan": "fetch_error: The read operation timed out",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "active",
       "sources": [
         "Totaljobs"
@@ -342,7 +322,7 @@
       "description": "Develop and integrate ServiceNow solutions across CSM, ITSM, ITOM, HRSD. JavaScript, Flow Designer, Integration Hub. SC clearance required \u2014 5yr UK residency.",
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "active",
       "sources": [
         "Hunt UK"
@@ -368,7 +348,7 @@
       "visa_sponsorship": "agency_unknown",
       "description": "RPA, ServiceNow Virtual Agent, ITSM, ITOM, JavaScript. UK-wide offices, hybrid 2 days onsite. Deerfoot is a recruitment agency \u2014 verify sponsorship with actual employer.",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "active",
       "sources": [
         "Deerfoot"
@@ -395,7 +375,7 @@
       "description": "IRM (Risk, Policy & Compliance, Vendor Risk, Audit) and SecOps. Must be eligible for Security Clearance. Akkodis is an agency \u2014 SC requirement blocks sponsorship.",
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "active",
       "sources": [
         "Akkodis"
@@ -421,7 +401,7 @@
       "visa_sponsorship": "agency_unknown",
       "description": "Leading bank, Glasgow (3+ days onsite). HRSD platform development. Morgan McKinley agency. Employer likely Barclays or Morgan Stanley \u2014 both hold A-rated sponsor licences. Verify sponsorship with employer. [Listing expired \u2014 was from a search page, no direct link available. May reappear in future scrapes.]",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "expired",
       "sources": [
         "ComputerJobs"
@@ -448,7 +428,7 @@
       "description": "12-month FTC, hybrid 2 days remote. May/June 2026 start. Syntax Consultancy NOT on sponsor register \u2014 verify sponsorship with actual employer.",
       "sponsorship_scan": "fetch_error: HTTP Error 403: Forbidden",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "active",
       "sources": [
         "CV-Library"
@@ -475,7 +455,7 @@
       "description": "Design end-to-end ServiceNow solutions across ITSM, ITOM. Contract, remote. Requires existing SC Clearance \u2014 blocks international candidates.",
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "active",
       "sources": [
         "Hays"
@@ -502,7 +482,7 @@
       "description": "Computacenter \u2014 Elite ServiceNow Partner. Computacenter UK is on the sponsor register (A-rated). Verify sponsorship for this specific role.",
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "active",
       "sources": [
         "Hays"
@@ -516,7 +496,7 @@
       "salary_min": 0,
       "salary_max": 0,
       "date_posted": "2026-05-05",
-      "url": "",
+      "url": "https://www.jobserve.com/gb/en/job/3B67B1DD324FA16BF3/",
       "source": "ComputerJobs",
       "source_type": "agency",
       "role_type": "developer",
@@ -528,7 +508,7 @@
       "visa_sponsorship": "agency_unknown",
       "description": "SIR (Security Incident Response) implementation. Knutsford = Barclays tech centre. Hybrid 60% office. Contract to 30/11/2026. eTeam agency \u2014 Barclays holds A-rated sponsor licence. Verify sponsorship. [Listing expired \u2014 was from a search page, no direct link available. May reappear in future scrapes.]",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-08",
       "status": "expired",
       "sources": [
         "ComputerJobs"
@@ -554,7 +534,7 @@
       "visa_sponsorship": "agency_unknown",
       "description": "Telecoms Service Management (TSM). 6-month contract, \u00a3600/day Outside IR35. Hybrid 3 days London office. Start May/June 2026. Syntax agency \u2014 verify sponsorship with employer. [Listing expired \u2014 was from a search page, no direct link available. May reappear in future scrapes.]",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "expired",
       "sources": [
         "ComputerJobs"
@@ -582,7 +562,7 @@
       "description": "Kinly \u2014 AV/UC solutions provider. Sponsor verified via UK register. Original Hunt UK listing expired \u2014 check Kinly careers page.",
       "sponsorship_scan": "Skilled Worker visa mentioned",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "active",
       "sources": [
         "Hunt UK"
@@ -596,7 +576,7 @@
       "salary_min": 0,
       "salary_max": 0,
       "date_posted": "2026-05-01",
-      "url": "",
+      "url": "https://www.jobserve.com/gb/en/job/C0AB1F2259E557031A/",
       "source": "ComputerJobs",
       "source_type": "agency",
       "role_type": "analyst",
@@ -609,7 +589,7 @@
       "description": "6+ month contract. London 3 days/week. ITIL processes, ServiceNow data model. Business/functional analysis. [Original listing expired \u2014 agency posting, no current link available.]",
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-08",
       "status": "expired",
       "sources": [
         "ComputerJobs"
@@ -635,7 +615,7 @@
       "description": "Freshfields \u2014 global law firm. Sponsor verified via UK register. Original Hunt UK listing expired \u2014 check Freshfields careers page.",
       "sponsorship_scan": "Skilled Worker visa mentioned",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "active",
       "sources": [
         "Hunt UK"
@@ -661,7 +641,7 @@
       "description": "DXC Technology \u2014 global IT services. Sponsor verified. Original listing expired but similar role found. Check DXC careers.",
       "sponsorship_scan": "Skilled Worker visa mentioned",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "active",
       "sources": [
         "Hunt UK"
@@ -688,7 +668,7 @@
       "description": "Barclays via SThree recruitment. Sponsor verified via UK register. Original Hunt UK listing expired \u2014 check SThree/Barclays careers.",
       "sponsorship_scan": "Skilled Worker visa mentioned",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "active",
       "sources": [
         "Hunt UK"
@@ -714,7 +694,7 @@
       "description": "15M+ CIs, 300K employees. Global manufacturer. Governance + hands-on CMDB. Harvey Nash agency.",
       "sponsorship_scan": "Skilled Worker visa mentioned",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "active",
       "sources": [
         "Hunt UK",
@@ -742,7 +722,7 @@
       "description": "Must hold active DV clearance \u2014 blocks international candidates. 2-3 yrs ServiceNow. 10% bonus. [Original listing expired \u2014 agency posting, no current link available.]",
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "expired",
       "sources": [
         "ComputerJobs"
@@ -768,7 +748,7 @@
       "visa_sponsorship": "verified",
       "description": "First ServiceNow partner in Europe. 2022 EMEA Elite Partner. 2026 ServiceNow Partner of the Year \u2014 Risk & Compliance. Computacenter holds A-rated sponsor licence. [Listing expired \u2014 was from a search page, no direct link available. May reappear in future scrapes.]",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "expired",
       "sources": [
         "JobServe"
@@ -793,7 +773,7 @@
       "description": "100% Remote, English speaking. Start June. 6 months + extensions. ITOM expertise required. [Original listing expired \u2014 agency posting, no current link available.]",
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "expired",
       "sources": [
         "JobServe"
@@ -820,7 +800,7 @@
       "description": "Sales/business development role. \u00a3180k OTE. Not a technical ServiceNow position \u2014 sales only. [Original listing expired \u2014 agency posting, no current link available.]",
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "expired",
       "sources": [
         "JobServe"
@@ -847,7 +827,7 @@
       "description": "Must hold active DV clearance. \u00a380k-\u00a3100k + 10% bonus. Remote UK with travel. [Listing expired \u2014 was from a search page, no direct link available. May reappear in future scrapes.]",
       "sponsorship_scan": "fetch_error: HTTP Error 410: Gone",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "expired",
       "sources": [
         "ComputerJobs"
@@ -872,7 +852,7 @@
       "description": "DWP (Department for Work and Pensions). 6-month contract, Inside IR35. Hybrid \u2014 Manchester, Newcastle, or Leeds. [Listing expired \u2014 was from a search page, no direct link available. May reappear in future scrapes.]",
       "sponsorship_scan": "fetch_error: HTTP Error 410: Gone",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "expired",
       "sources": [
         "ComputerJobs"
@@ -896,7 +876,7 @@
       "visa_sponsorship": "agency_unknown",
       "description": "14+ years IT, 5+ years ServiceNow architecture. OSS/BSS Telecom/Satcom domain. REST, SOAP, IntegrationHub. MuleSoft, Kafka. AWS/Azure. [Listing expired \u2014 was from a search page, no direct link available. May reappear in future scrapes.]",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "expired",
       "sources": [
         "ComputerJobs"
@@ -921,7 +901,7 @@
       "description": "SC clearance required \u2014 blocks international candidates. [Original listing expired \u2014 agency posting, no current link available.]",
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "expired",
       "sources": [
         "JobServe"
@@ -946,7 +926,7 @@
       "description": "Senior ServiceNow consultant role. Agency listing \u2014 verify sponsorship with employer. [Original listing expired \u2014 agency posting, no current link available.]",
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "expired",
       "sources": [
         "JobServe"
@@ -958,7 +938,7 @@
       "location": "UK",
       "salary_display": "Not listed",
       "date_posted": "2026-05-06",
-      "url": "",
+      "url": "https://www.jobserve.com/gb/en/job/025E53B71BBC9AB2D4/",
       "source": "JobServe",
       "source_type": "agency",
       "role_type": "architect",
@@ -967,11 +947,11 @@
       "sc_clearance": false,
       "grad_scheme": false,
       "link_status": "expired",
-      "visa_sponsorship": "sc_blocked",
+      "visa_sponsorship": "verified",
       "description": "Solution Architect for ServiceNow platform. Agency listing. [Original listing expired \u2014 agency posting, no current link available.]",
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-08",
       "status": "expired",
       "sources": [
         "JobServe"
@@ -995,7 +975,7 @@
       "visa_sponsorship": "agency_unknown",
       "description": "14+ yrs IT, 5+ yrs SN architecture. OSS/BSS Telecom/Satcom. REST/SOAP/IntegrationHub. MuleSoft, Kafka. [Listing expired \u2014 was from a search page, no direct link available. May reappear in future scrapes.]",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "expired",
       "sources": [
         "ComputerJobs"
@@ -1021,7 +1001,7 @@
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "active",
       "sources": [
         "LinkedIn"
@@ -1047,7 +1027,7 @@
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "active",
       "sources": [
         "LinkedIn"
@@ -1073,7 +1053,7 @@
       "visa_sponsorship": "sponsor_verified",
       "description": "",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "active",
       "sources": [
         "LinkedIn"
@@ -1099,7 +1079,7 @@
       "visa_sponsorship": "sc_blocked",
       "description": "",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "active",
       "sources": [
         "LinkedIn"
@@ -1125,7 +1105,7 @@
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "active",
       "sources": [
         "LinkedIn"
@@ -1151,7 +1131,7 @@
       "visa_sponsorship": "sponsor_verified",
       "description": "",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "active",
       "sources": [
         "LinkedIn"
@@ -1177,7 +1157,7 @@
       "visa_sponsorship": "sponsor_verified",
       "description": "",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "active",
       "sources": [
         "LinkedIn"
@@ -1203,7 +1183,7 @@
       "visa_sponsorship": "sponsor_verified",
       "description": "",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "active",
       "sources": [
         "LinkedIn"
@@ -1217,7 +1197,7 @@
       "salary_min": 0,
       "salary_max": 0,
       "date_posted": "2026-05-06",
-      "url": "https://www.linkedin.com/jobs/view/4408493930",
+      "url": "https://www.jobserve.com/gb/en/job/085CC1BD29E6F9E3B9/",
       "source": "LinkedIn",
       "source_type": "agency",
       "role_type": "manager",
@@ -1229,7 +1209,7 @@
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-08",
       "status": "active",
       "sources": [
         "LinkedIn"
@@ -1255,7 +1235,7 @@
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "active",
       "sources": [
         "LinkedIn"
@@ -1281,7 +1261,7 @@
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "active",
       "sources": [
         "LinkedIn"
@@ -1307,7 +1287,7 @@
       "visa_sponsorship": "sponsor_verified",
       "description": "",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "active",
       "sources": [
         "LinkedIn"
@@ -1333,7 +1313,7 @@
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "active",
       "sources": [
         "LinkedIn"
@@ -1359,7 +1339,7 @@
       "visa_sponsorship": "sponsor_verified",
       "description": "",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "active",
       "sources": [
         "LinkedIn"
@@ -1385,7 +1365,7 @@
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "active",
       "sources": [
         "LinkedIn"
@@ -1411,7 +1391,7 @@
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "active",
       "sources": [
         "LinkedIn"
@@ -1437,7 +1417,7 @@
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "active",
       "sources": [
         "LinkedIn"
@@ -1463,7 +1443,7 @@
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "active",
       "sources": [
         "LinkedIn"
@@ -1489,7 +1469,7 @@
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "active",
       "sources": [
         "LinkedIn"
@@ -1515,7 +1495,7 @@
       "visa_sponsorship": "agency_unknown",
       "description": "",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "active",
       "sources": [
         "LinkedIn"
@@ -1541,7 +1521,7 @@
       "visa_sponsorship": "sponsor_verified",
       "description": "",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "active",
       "sources": [
         "LinkedIn"
@@ -1567,33 +1547,7 @@
       "visa_sponsorship": "sponsor_verified",
       "description": "",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
-      "status": "active",
-      "sources": [
-        "LinkedIn"
-      ]
-    },
-    {
-      "title": "ServiceNow Developer",
-      "company": "Experis",
-      "location": "United Kingdom (Remote)",
-      "salary_display": "Not listed",
-      "salary_min": 0,
-      "salary_max": 0,
-      "date_posted": "2026-05-06",
-      "url": "https://www.linkedin.com/jobs/view/4407615396",
-      "source": "LinkedIn",
-      "source_type": "agency",
-      "role_type": "developer",
-      "remote": "remote",
-      "employment": "permanent",
-      "sc_clearance": false,
-      "grad_scheme": false,
-      "link_status": "live",
-      "visa_sponsorship": "unknown",
-      "description": "",
-      "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "active",
       "sources": [
         "LinkedIn"
@@ -1619,7 +1573,7 @@
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "active",
       "sources": [
         "LinkedIn"
@@ -1645,7 +1599,7 @@
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "active",
       "sources": [
         "LinkedIn"
@@ -1671,7 +1625,7 @@
       "visa_sponsorship": "agency_unknown",
       "description": "",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "active",
       "sources": [
         "LinkedIn"
@@ -1697,7 +1651,7 @@
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "active",
       "sources": [
         "LinkedIn"
@@ -1723,7 +1677,7 @@
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "active",
       "sources": [
         "LinkedIn"
@@ -1749,7 +1703,7 @@
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "active",
       "sources": [
         "LinkedIn"
@@ -1775,7 +1729,7 @@
       "visa_sponsorship": "sponsor_verified",
       "description": "",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "active",
       "sources": [
         "LinkedIn"
@@ -1801,7 +1755,7 @@
       "visa_sponsorship": "sponsor_verified",
       "description": "",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "active",
       "sources": [
         "LinkedIn"
@@ -1827,7 +1781,7 @@
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "active",
       "sources": [
         "LinkedIn"
@@ -1853,7 +1807,7 @@
       "visa_sponsorship": "sponsor_verified",
       "description": "",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "active",
       "sources": [
         "LinkedIn"
@@ -1879,7 +1833,7 @@
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "active",
       "sources": [
         "LinkedIn"
@@ -1905,7 +1859,7 @@
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "active",
       "sources": [
         "LinkedIn"
@@ -1931,7 +1885,7 @@
       "visa_sponsorship": "sponsor_verified",
       "description": "",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "active",
       "sources": [
         "LinkedIn"
@@ -1945,7 +1899,7 @@
       "salary_min": 0,
       "salary_max": 0,
       "date_posted": "2026-05-06",
-      "url": "https://www.linkedin.com/jobs/view/4406798907",
+      "url": "https://www.jobserve.com/gb/en/job/C2FB806787F301B7D8/",
       "source": "LinkedIn",
       "source_type": "direct",
       "role_type": "architect",
@@ -1954,10 +1908,10 @@
       "sc_clearance": false,
       "grad_scheme": false,
       "link_status": "live",
-      "visa_sponsorship": "sponsor_verified",
+      "visa_sponsorship": "verified",
       "description": "",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-08",
       "status": "active",
       "sources": [
         "LinkedIn"
@@ -1983,7 +1937,7 @@
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "active",
       "sources": [
         "LinkedIn"
@@ -2009,7 +1963,7 @@
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "active",
       "sources": [
         "LinkedIn"
@@ -2035,7 +1989,7 @@
       "visa_sponsorship": "sponsor_verified",
       "description": "",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "active",
       "sources": [
         "LinkedIn"
@@ -2061,7 +2015,7 @@
       "visa_sponsorship": "sponsor_verified",
       "description": "",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "active",
       "sources": [
         "LinkedIn"
@@ -2087,7 +2041,7 @@
       "visa_sponsorship": "sponsor_verified",
       "description": "",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "active",
       "sources": [
         "LinkedIn"
@@ -2113,7 +2067,7 @@
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "active",
       "sources": [
         "LinkedIn"
@@ -2139,7 +2093,7 @@
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "active",
       "sources": [
         "LinkedIn"
@@ -2165,7 +2119,7 @@
       "visa_sponsorship": "agency_unknown",
       "description": "",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "active",
       "sources": [
         "LinkedIn"
@@ -2191,7 +2145,7 @@
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "active",
       "sources": [
         "LinkedIn"
@@ -2217,7 +2171,7 @@
       "visa_sponsorship": "sponsor_verified",
       "description": "",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "active",
       "sources": [
         "LinkedIn"
@@ -2243,7 +2197,7 @@
       "visa_sponsorship": "sponsor_verified",
       "description": "",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "active",
       "sources": [
         "LinkedIn"
@@ -2257,7 +2211,7 @@
       "salary_min": 0,
       "salary_max": 0,
       "date_posted": "2026-05-06",
-      "url": "https://www.linkedin.com/jobs/view/4409552917",
+      "url": "https://www.jobserve.com/gb/en/job/F07EF6D0D526FD99FD/",
       "source": "LinkedIn",
       "source_type": "agency",
       "role_type": "developer",
@@ -2269,7 +2223,7 @@
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-08",
       "status": "active",
       "sources": [
         "LinkedIn"
@@ -2283,7 +2237,7 @@
       "salary_min": 0,
       "salary_max": 0,
       "date_posted": "2026-05-06",
-      "url": "https://www.linkedin.com/jobs/view/4400101028",
+      "url": "https://www.jobserve.com/gb/en/job/B932596C98CE074D50/",
       "source": "LinkedIn",
       "source_type": "direct",
       "role_type": "architect",
@@ -2295,7 +2249,7 @@
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-08",
       "status": "active",
       "sources": [
         "LinkedIn"
@@ -2321,7 +2275,7 @@
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "active",
       "sources": [
         "LinkedIn"
@@ -2347,7 +2301,7 @@
       "visa_sponsorship": "sponsor_verified",
       "description": "",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "active",
       "sources": [
         "LinkedIn"
@@ -2373,7 +2327,7 @@
       "visa_sponsorship": "sponsor_verified",
       "description": "",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "active",
       "sources": [
         "LinkedIn"
@@ -2399,7 +2353,7 @@
       "visa_sponsorship": "sponsor_verified",
       "description": "",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "active",
       "sources": [
         "LinkedIn"
@@ -2425,7 +2379,7 @@
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "active",
       "sources": [
         "LinkedIn"
@@ -2451,7 +2405,7 @@
       "visa_sponsorship": "sponsor_verified",
       "description": "",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-06",
+      "last_seen": "2026-05-07",
       "status": "active",
       "sources": [
         "LinkedIn"
@@ -2482,6 +2436,466 @@
       "sources": [
         "Hunt UK"
       ]
+    },
+    {
+      "title": "Servicenow Developer- ITSM/Scripting- \u00a3610 pd Inside, Milton Keynes",
+      "company": "[JobServe \u2014 view listing]",
+      "location": "610",
+      "salary_display": "",
+      "date_posted": "2026-05-08",
+      "url": "https://www.jobserve.com/gb/en/job/457D7D65EC31ABD58D/",
+      "source": "JobServe",
+      "source_type": "aggregator",
+      "role_type": "developer",
+      "remote": "unknown",
+      "employment": "unknown",
+      "sc_clearance": true,
+      "grad_scheme": false,
+      "visa_sponsorship": "unknown",
+      "link_status": "live",
+      "first_seen": "2026-05-08",
+      "last_seen": "2026-05-08",
+      "status": "active"
+    },
+    {
+      "title": "ServiceNow Product Manager",
+      "company": "[JobServe \u2014 view listing]",
+      "location": "Manchester",
+      "salary_display": "\u00a370k - \u00a3120k per annum",
+      "date_posted": "2026-05-08",
+      "url": "https://www.jobserve.com/gb/en/job/17EE1FACAEFA4973FF/",
+      "source": "JobServe",
+      "source_type": "aggregator",
+      "role_type": "other",
+      "remote": "unknown",
+      "employment": "unknown",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "visa_sponsorship": "unknown",
+      "link_status": "live",
+      "first_seen": "2026-05-08",
+      "last_seen": "2026-05-08",
+      "status": "active"
+    },
+    {
+      "title": "ServiceNow Technical Architect - DV Cleared",
+      "company": "DV Cleared",
+      "location": "\u00a390k - \u00a3110k + 10% and Benefits",
+      "salary_display": "\u00a390k - \u00a3110k + 10% and Benefits",
+      "date_posted": "2026-05-08",
+      "url": "https://www.jobserve.com/gb/en/job/5BCEAF48F2DA24E1C1/",
+      "source": "JobServe",
+      "source_type": "aggregator",
+      "role_type": "architect",
+      "remote": "unknown",
+      "employment": "unknown",
+      "sc_clearance": true,
+      "grad_scheme": false,
+      "visa_sponsorship": "sc_blocked",
+      "link_status": "live",
+      "first_seen": "2026-05-08",
+      "last_seen": "2026-05-08",
+      "status": "active"
+    },
+    {
+      "title": "ServiceNow Technical Architect - DV Cleared - Contract",
+      "company": "[JobServe \u2014 view listing]",
+      "location": "England",
+      "salary_display": "\u00a3600-\u00a3700 per day INSIDE IR35",
+      "date_posted": "2026-05-08",
+      "url": "https://www.jobserve.com/gb/en/job/6723999D9EBB1CC5A9/",
+      "source": "JobServe",
+      "source_type": "aggregator",
+      "role_type": "architect",
+      "remote": "unknown",
+      "employment": "unknown",
+      "sc_clearance": true,
+      "grad_scheme": false,
+      "visa_sponsorship": "sc_blocked",
+      "link_status": "live",
+      "first_seen": "2026-05-08",
+      "last_seen": "2026-05-08",
+      "status": "active"
+    },
+    {
+      "title": "ServiceNow Technical Consultant - DV Cleared",
+      "company": "DV Cleared",
+      "location": "\u00a355k - \u00a365k Base + 10% and Benefits",
+      "salary_display": "\u00a355k - \u00a365k Base + 10% and Benefits",
+      "date_posted": "2026-05-08",
+      "url": "https://www.jobserve.com/gb/en/job/4D56C7823CDEFCDB1B/",
+      "source": "JobServe",
+      "source_type": "aggregator",
+      "role_type": "other",
+      "remote": "unknown",
+      "employment": "unknown",
+      "sc_clearance": true,
+      "grad_scheme": false,
+      "visa_sponsorship": "sc_blocked",
+      "link_status": "live",
+      "first_seen": "2026-05-08",
+      "last_seen": "2026-05-08",
+      "status": "active"
+    },
+    {
+      "title": "ServiceNow Senior Technical Consultant - DV Cleared - Contract",
+      "company": "[JobServe \u2014 view listing]",
+      "location": "England",
+      "salary_display": "\u00a3600 - \u00a3750 per day INSIDE IR35",
+      "date_posted": "2026-05-08",
+      "url": "https://www.jobserve.com/gb/en/job/D25ABD5DCBEC707D0F/",
+      "source": "JobServe",
+      "source_type": "aggregator",
+      "role_type": "other",
+      "remote": "unknown",
+      "employment": "unknown",
+      "sc_clearance": true,
+      "grad_scheme": false,
+      "visa_sponsorship": "sc_blocked",
+      "link_status": "live",
+      "first_seen": "2026-05-08",
+      "last_seen": "2026-05-08",
+      "status": "active"
+    },
+    {
+      "title": "ServiceNow Senior Technical Consultant - DV Cleared",
+      "company": "DV Cleared",
+      "location": "\u00a375k - \u00a385k Base + 10% and Benefits",
+      "salary_display": "\u00a375k - \u00a385k Base + 10% and Benefits",
+      "date_posted": "2026-05-08",
+      "url": "https://www.jobserve.com/gb/en/job/7FB0BEE3EAF2192EDB/",
+      "source": "JobServe",
+      "source_type": "aggregator",
+      "role_type": "other",
+      "remote": "unknown",
+      "employment": "unknown",
+      "sc_clearance": true,
+      "grad_scheme": false,
+      "visa_sponsorship": "sc_blocked",
+      "link_status": "live",
+      "first_seen": "2026-05-08",
+      "last_seen": "2026-05-08",
+      "status": "active"
+    },
+    {
+      "title": "ServiceNow Developer (SC Cleared)",
+      "company": "[JobServe \u2014 view listing]",
+      "location": "Milton Keynes",
+      "salary_display": "\u00a3590 per day",
+      "date_posted": "2026-05-08",
+      "url": "https://www.jobserve.com/gb/en/job/8B0551F392856F6B17/",
+      "source": "JobServe",
+      "source_type": "aggregator",
+      "role_type": "developer",
+      "remote": "unknown",
+      "employment": "unknown",
+      "sc_clearance": true,
+      "grad_scheme": false,
+      "visa_sponsorship": "sc_blocked",
+      "link_status": "live",
+      "first_seen": "2026-05-08",
+      "last_seen": "2026-05-08",
+      "status": "active"
+    },
+    {
+      "title": "ServiceNow CMDB Developer - Inside IR35",
+      "company": "Inside IR35",
+      "location": "United Kingdom",
+      "salary_display": "\u00a3500 - \u00a3525 Per Day",
+      "date_posted": "2026-05-08",
+      "url": "https://www.jobserve.com/gb/en/job/8A68A3356302CE9EF2/",
+      "source": "JobServe",
+      "source_type": "aggregator",
+      "role_type": "developer",
+      "remote": "unknown",
+      "employment": "unknown",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "visa_sponsorship": "unknown",
+      "link_status": "live",
+      "first_seen": "2026-05-08",
+      "last_seen": "2026-05-08",
+      "status": "active"
+    },
+    {
+      "title": "ServiceNow ITOM Expert - 100% Remote - English Speaking - Start June - 6 months +",
+      "company": "6 months +",
+      "location": "Remote",
+      "salary_display": "",
+      "date_posted": "2026-05-08",
+      "url": "https://www.jobserve.com/gb/en/job/EC5C7C605900E5BF59/",
+      "source": "JobServe",
+      "source_type": "aggregator",
+      "role_type": "other",
+      "remote": "unknown",
+      "employment": "unknown",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "visa_sponsorship": "unknown",
+      "link_status": "live",
+      "first_seen": "2026-05-08",
+      "last_seen": "2026-05-08",
+      "status": "active"
+    },
+    {
+      "title": "Solution Architect - ServiceNow",
+      "company": "ServiceNow",
+      "location": "Negotiable",
+      "salary_display": "",
+      "date_posted": "2026-05-08",
+      "url": "https://www.jobserve.com/gb/en/job/8CAAAD572D48CD6915/",
+      "source": "JobServe",
+      "source_type": "aggregator",
+      "role_type": "architect",
+      "remote": "unknown",
+      "employment": "unknown",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "visa_sponsorship": "verified",
+      "link_status": "live",
+      "first_seen": "2026-05-08",
+      "last_seen": "2026-05-08",
+      "status": "active"
+    },
+    {
+      "title": "Incident Manager Enhancement_ServiceNow_SIR",
+      "company": "[JobServe \u2014 view listing]",
+      "location": "Knutsford, Cheshire",
+      "salary_display": "\u00a3563 per day (PAYE through Umbrella)",
+      "date_posted": "2026-05-08",
+      "url": "https://www.jobserve.com/gb/en/job/4351D43ED627FFA526/",
+      "source": "JobServe",
+      "source_type": "aggregator",
+      "role_type": "other",
+      "remote": "unknown",
+      "employment": "unknown",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "visa_sponsorship": "unknown",
+      "link_status": "live",
+      "first_seen": "2026-05-08",
+      "last_seen": "2026-05-08",
+      "status": "active"
+    },
+    {
+      "title": "ServiceNow HR Developer",
+      "company": "[JobServe \u2014 view listing]",
+      "location": "GBP",
+      "salary_display": "",
+      "date_posted": "2026-05-08",
+      "url": "https://www.jobserve.com/gb/en/job/4097B9E8113DE05679/",
+      "source": "JobServe",
+      "source_type": "aggregator",
+      "role_type": "developer",
+      "remote": "unknown",
+      "employment": "unknown",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "visa_sponsorship": "unknown",
+      "link_status": "live",
+      "first_seen": "2026-05-08",
+      "last_seen": "2026-05-08",
+      "status": "active"
+    },
+    {
+      "title": "Senior Technical Consultant - ServiceNow",
+      "company": "ServiceNow",
+      "location": "not provided GBP",
+      "salary_display": "",
+      "date_posted": "2026-05-08",
+      "url": "https://www.jobserve.com/gb/en/job/CC272485294B77C3D9/",
+      "source": "JobServe",
+      "source_type": "aggregator",
+      "role_type": "other",
+      "remote": "unknown",
+      "employment": "unknown",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "visa_sponsorship": "verified",
+      "link_status": "live",
+      "first_seen": "2026-05-08",
+      "last_seen": "2026-05-08",
+      "status": "active"
+    },
+    {
+      "title": "Public Sector/Enterprise Sales Account Manager - ServiceNow Partner.",
+      "company": "ServiceNow Partner.",
+      "location": "100k Annual GBP",
+      "salary_display": "",
+      "date_posted": "2026-05-08",
+      "url": "https://www.jobserve.com/gb/en/job/B060D2D6E5903BE0E0/",
+      "source": "JobServe",
+      "source_type": "aggregator",
+      "role_type": "other",
+      "remote": "unknown",
+      "employment": "unknown",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "visa_sponsorship": "unknown",
+      "link_status": "live",
+      "first_seen": "2026-05-08",
+      "last_seen": "2026-05-08",
+      "status": "active"
+    },
+    {
+      "title": "Solution Architect ServiceNow",
+      "company": "AVMI Kinly Ltd",
+      "location": "Sunbury-upon-Thames/London/Livingston",
+      "salary_display": "",
+      "date_posted": "2026-05-08",
+      "url": "https://huntukvisasponsors.com/company/avmi-kinly-ltd-03ye2xhblxe",
+      "source": "Hunt UK",
+      "source_type": "sponsor",
+      "role_type": "architect",
+      "remote": "hybrid",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "visa_sponsorship": "verified",
+      "link_status": "live",
+      "first_seen": "2026-05-08",
+      "last_seen": "2026-05-08",
+      "status": "active"
+    },
+    {
+      "title": "ServiceNow PreSales Architect",
+      "company": "Solution17 Ltd",
+      "location": "United Kingdom",
+      "salary_display": "",
+      "date_posted": "2026-05-08",
+      "url": "https://huntukvisasponsors.com/company/solution17-ltd-pl-outaq3bya",
+      "source": "Hunt UK",
+      "source_type": "sponsor",
+      "role_type": "architect",
+      "remote": "hybrid",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "visa_sponsorship": "verified",
+      "link_status": "live",
+      "first_seen": "2026-05-08",
+      "last_seen": "2026-05-08",
+      "status": "active"
+    },
+    {
+      "title": "ServiceNow Product Manager (Banking)",
+      "company": "SThree",
+      "location": "Manchester/Knutsford",
+      "salary_display": "",
+      "date_posted": "2026-05-08",
+      "url": "https://huntukvisasponsors.com/company/sthree-oepjinrhosrr",
+      "source": "Hunt UK",
+      "source_type": "agency",
+      "role_type": "other",
+      "remote": "hybrid",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "visa_sponsorship": "agency_unknown",
+      "link_status": "live",
+      "first_seen": "2026-05-08",
+      "last_seen": "2026-05-08",
+      "status": "active"
+    },
+    {
+      "title": "ServiceNow Engineer",
+      "company": "Freshfields Service Company",
+      "location": "Manchester Area",
+      "salary_display": "",
+      "date_posted": "2026-05-08",
+      "url": "https://huntukvisasponsors.com/company/freshfields-service-company-kvw25tzkpov",
+      "source": "Hunt UK",
+      "source_type": "sponsor",
+      "role_type": "other",
+      "remote": "hybrid",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "visa_sponsorship": "verified",
+      "link_status": "live",
+      "first_seen": "2026-05-08",
+      "last_seen": "2026-05-08",
+      "status": "active"
+    },
+    {
+      "title": "ServiceNow Technical Lead (Insurance/FSO)",
+      "company": "CSC Computer Sciences Limited",
+      "location": "United Kingdom",
+      "salary_display": "",
+      "date_posted": "2026-05-08",
+      "url": "https://huntukvisasponsors.com/company/csc-computer-sciences-limited-m2exuhoekng1",
+      "source": "Hunt UK",
+      "source_type": "sponsor",
+      "role_type": "other",
+      "remote": "hybrid",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "visa_sponsorship": "verified",
+      "link_status": "live",
+      "first_seen": "2026-05-08",
+      "last_seen": "2026-05-08",
+      "status": "active"
+    },
+    {
+      "title": "CMDB Specialist (ServiceNow)",
+      "company": "Harvey Nash Limited",
+      "location": "United Kingdom",
+      "salary_display": "",
+      "date_posted": "2026-05-08",
+      "url": "https://huntukvisasponsors.com/company/harvey-nash-limited-ttsvdbm63ze9",
+      "source": "Hunt UK",
+      "source_type": "agency",
+      "role_type": "other",
+      "remote": "hybrid",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "visa_sponsorship": "agency_unknown",
+      "link_status": "live",
+      "first_seen": "2026-05-08",
+      "last_seen": "2026-05-08",
+      "status": "active"
+    },
+    {
+      "title": "Lead ServiceNow Architect",
+      "company": "Cognizant",
+      "location": "London Area",
+      "salary_display": "",
+      "date_posted": "2026-05-08",
+      "url": "https://huntukvisasponsors.com/job/lead-servicenow-architect-at-cognizant-ie-lprycfrsa",
+      "source": "Hunt UK",
+      "source_type": "sponsor",
+      "role_type": "architect",
+      "remote": "hybrid",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "visa_sponsorship": "verified",
+      "link_status": "live",
+      "first_seen": "2026-05-08",
+      "last_seen": "2026-05-08",
+      "status": "active"
+    },
+    {
+      "title": "ServiceNow Architect",
+      "company": "Capgemini",
+      "location": "Manchester",
+      "salary_display": "",
+      "date_posted": "2026-05-08",
+      "url": "https://huntukvisasponsors.com/job/servicenow-architect-at-capgemini-ou41zkerllc",
+      "source": "Hunt UK",
+      "source_type": "sponsor",
+      "role_type": "architect",
+      "remote": "hybrid",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "visa_sponsorship": "verified",
+      "link_status": "live",
+      "first_seen": "2026-05-08",
+      "last_seen": "2026-05-08",
+      "status": "active"
     }
   ]
 }
