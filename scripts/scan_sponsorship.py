@@ -97,9 +97,9 @@ def scan_job(job):
     
     # Skip jobs we can't scan (LinkedIn detail pages are JS-rendered)
     if 'linkedin.com/jobs/view' in url:
-        # LinkedIn: we can't scan detail pages (JS-rendered)
-        # But we keep the register-based tag
-        return None, f'linkedin_js_cannot_scan (register_tag={current_tag})'
+        # LinkedIn: can't scan directly (JS-rendered).
+        # Keep register-based tag but mark as unverified
+        return None, f'linkedin_register_only (tag={current_tag})'
     
     # Skip if no URL
     if not url:
