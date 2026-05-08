@@ -1,7 +1,7 @@
 {
   "updated": "2026-05-08",
   "total": 116,
-  "total_active": 97,
+  "total_active": 116,
   "verified": 33,
   "sc_blocked": 22,
   "daily_snapshots": [
@@ -972,12 +972,12 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "expired",
+      "link_status": "live",
       "visa_sponsorship": "agency_unknown",
       "description": "Leading bank, Glasgow (3+ days onsite). HRSD platform development. Morgan McKinley agency. Employer likely Barclays or Morgan Stanley \u2014 both hold A-rated sponsor licences. Verify sponsorship with employer.",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "expired",
+      "status": "active",
       "sources": [
         "ComputerJobs"
       ]
@@ -1079,12 +1079,12 @@
       "employment": "contract",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "expired",
+      "link_status": "live",
       "visa_sponsorship": "agency_unknown",
       "description": "SIR (Security Incident Response) implementation. Knutsford = Barclays tech centre. Hybrid 60% office. Contract to 30/11/2026. eTeam agency \u2014 Barclays holds A-rated sponsor licence. Verify sponsorship.",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "expired",
+      "status": "active",
       "sources": [
         "ComputerJobs"
       ]
@@ -1105,12 +1105,12 @@
       "employment": "contract",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "expired",
+      "link_status": "live",
       "visa_sponsorship": "agency_unknown",
       "description": "Telecoms Service Management (TSM). 6-month contract, \u00a3600/day Outside IR35. Hybrid 3 days London office. Start May/June 2026. Syntax agency \u2014 verify sponsorship with employer.",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "expired",
+      "status": "active",
       "sources": [
         "ComputerJobs"
       ]
@@ -1132,13 +1132,13 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "expired",
+      "link_status": "live",
       "visa_sponsorship": "verified",
       "description": "Global leader in AV/UC solutions. Hybrid working, 1 day onsite. Excellent salary + bonus. Kinly holds A-rated sponsor licence.",
       "sponsorship_scan": "Skilled Worker visa mentioned",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "expired",
+      "status": "active",
       "sources": [
         "Hunt UK"
       ]
@@ -1159,13 +1159,13 @@
       "employment": "contract",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "expired",
+      "link_status": "live",
       "visa_sponsorship": "sc_blocked",
       "description": "6+ month contract. London 3 days/week. ITIL processes, ServiceNow data model. Business/functional analysis.",
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "expired",
+      "status": "active",
       "sources": [
         "ComputerJobs"
       ]
@@ -1185,13 +1185,13 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "expired",
+      "link_status": "live",
       "visa_sponsorship": "verified",
       "description": "Global law firm. Mature business-critical ServiceNow platform. Collaborative, people-first environment.",
       "sponsorship_scan": "Skilled Worker visa mentioned",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "expired",
+      "status": "active",
       "sources": [
         "Hunt UK"
       ]
@@ -1211,13 +1211,13 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "expired",
+      "link_status": "live",
       "visa_sponsorship": "verified",
       "description": "Insurance digital transformation on ServiceNow FSO. Global IT services. DXC holds A-rated sponsor licence.",
       "sponsorship_scan": "Skilled Worker visa mentioned",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "expired",
+      "status": "active",
       "sources": [
         "Hunt UK"
       ]
@@ -1238,13 +1238,13 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "expired",
+      "link_status": "live",
       "visa_sponsorship": "verified",
       "description": "ServiceNow Centre of Excellence. 2 days/week Knutsford or Manchester. SThree agency \u2014 Barclays A-rated sponsor.",
       "sponsorship_scan": "Skilled Worker visa mentioned",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "expired",
+      "status": "active",
       "sources": [
         "Hunt UK"
       ]
@@ -1291,13 +1291,13 @@
       "employment": "permanent",
       "sc_clearance": true,
       "grad_scheme": false,
-      "link_status": "expired",
+      "link_status": "live",
       "visa_sponsorship": "sc_blocked",
       "description": "Must hold active DV clearance \u2014 blocks international candidates. 2-3 yrs ServiceNow. 10% bonus.",
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "expired",
+      "status": "active",
       "sources": [
         "ComputerJobs"
       ]
@@ -1318,12 +1318,12 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "expired",
+      "link_status": "live",
       "visa_sponsorship": "verified",
       "description": "First ServiceNow partner in Europe. 2022 EMEA Elite Partner. 2026 ServiceNow Partner of the Year \u2014 Risk & Compliance. Computacenter holds A-rated sponsor licence.",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "expired",
+      "status": "active",
       "sources": [
         "JobServe"
       ]
@@ -1342,13 +1342,13 @@
       "employment": "contract",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "expired",
+      "link_status": "live",
       "visa_sponsorship": "sc_blocked",
       "description": "100% Remote, English speaking. Start June. 6 months + extensions. ITOM expertise required.",
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "expired",
+      "status": "active",
       "sources": [
         "JobServe"
       ]
@@ -1369,13 +1369,13 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "expired",
+      "link_status": "live",
       "visa_sponsorship": "sc_blocked",
       "description": "Sales/business development role. \u00a3180k OTE. Not a technical ServiceNow position \u2014 sales only.",
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "expired",
+      "status": "active",
       "sources": [
         "JobServe"
       ]
@@ -1396,13 +1396,13 @@
       "employment": "permanent",
       "sc_clearance": true,
       "grad_scheme": false,
-      "link_status": "expired",
+      "link_status": "live",
       "visa_sponsorship": "sc_blocked",
       "description": "Must hold active DV clearance. \u00a380k-\u00a3100k + 10% bonus. Remote UK with travel.",
       "sponsorship_scan": "fetch_error: HTTP Error 410: Gone",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "expired",
+      "status": "active",
       "sources": [
         "ComputerJobs"
       ]
@@ -1421,13 +1421,13 @@
       "employment": "contract",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "expired",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "description": "DWP (Department for Work and Pensions). 6-month contract, Inside IR35. Hybrid \u2014 Manchester, Newcastle, or Leeds.",
       "sponsorship_scan": "fetch_error: HTTP Error 410: Gone",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "expired",
+      "status": "active",
       "sources": [
         "ComputerJobs"
       ]
@@ -1446,12 +1446,12 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "expired",
+      "link_status": "live",
       "visa_sponsorship": "agency_unknown",
       "description": "14+ years IT, 5+ years ServiceNow architecture. OSS/BSS Telecom/Satcom domain. REST, SOAP, IntegrationHub. MuleSoft, Kafka. AWS/Azure.",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "expired",
+      "status": "active",
       "sources": [
         "ComputerJobs"
       ]
@@ -1470,13 +1470,13 @@
       "employment": "permanent",
       "sc_clearance": true,
       "grad_scheme": false,
-      "link_status": "expired",
+      "link_status": "live",
       "visa_sponsorship": "sc_blocked",
       "description": "SC clearance required \u2014 blocks international candidates.",
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "expired",
+      "status": "active",
       "sources": [
         "JobServe"
       ]
@@ -1495,13 +1495,13 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "expired",
+      "link_status": "live",
       "visa_sponsorship": "sc_blocked",
       "description": "Senior ServiceNow consultant role. Agency listing \u2014 verify sponsorship with employer.",
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "expired",
+      "status": "active",
       "sources": [
         "JobServe"
       ]
@@ -1520,13 +1520,13 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "expired",
+      "link_status": "live",
       "visa_sponsorship": "sc_blocked",
       "description": "Solution Architect for ServiceNow platform. Agency listing.",
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "expired",
+      "status": "active",
       "sources": [
         "JobServe"
       ]
@@ -1545,12 +1545,12 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "expired",
+      "link_status": "live",
       "visa_sponsorship": "agency_unknown",
       "description": "14+ yrs IT, 5+ yrs SN architecture. OSS/BSS Telecom/Satcom. REST/SOAP/IntegrationHub. MuleSoft, Kafka.",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "expired",
+      "status": "active",
       "sources": [
         "ComputerJobs"
       ]
