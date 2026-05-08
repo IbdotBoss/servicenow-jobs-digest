@@ -78,6 +78,9 @@ def rebuild():
     
     # Convert to list and compute status
     jobs_list = list(all_jobs.values())
+    BAD_URL_PATTERNS = ['/mob/JobSearch/Results?q=', 'huntukvisasponsors.com/jobs?q=',
+                        'huntukvisasponsors.com/company/', 'computerjobs.com',
+                        'totaljobs.com', 'cv-library.co.uk', 'deerfoot.co.uk/jobs']
     for j in jobs_list:
         days_since = (datetime.now() - datetime.strptime(j['last_seen'], "%Y-%m-%d")).days
         if days_since > EXPIRED_DAYS:
@@ -86,6 +89,13 @@ def rebuild():
             j['status'] = 'stale'
         else:
             j['status'] = 'active'
+        # Also expire jobs with bad/unfixable URLs
+        url = j.get('url', '')
+        for p in BAD_URL_PATTERNS:
+            if p in url:
+                j['status'] = 'expired'
+                j['link_status'] = 'expired'
+                break
     
     # Sort: newest first_seen first
     jobs_list.sort(key=lambda j: j['first_seen'], reverse=True)
