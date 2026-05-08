@@ -49,6 +49,12 @@ def rebuild():
             data = json.load(f)
         
         for j in data.get('jobs', []):
+            # Normalize old tag format
+            tag = j.get('visa_sponsorship', 'unknown')
+            if tag == 'sponsor_verified':
+                j['visa_sponsorship'] = 'verified'
+                tag = 'verified'
+            
             key = job_key(j)
             if key not in all_jobs:
                 j['first_seen'] = date_str
@@ -67,8 +73,8 @@ def rebuild():
                     if j.get(field):
                         existing[field] = j[field]
                 # Better sponsorship tag wins
-                if j.get('visa_sponsorship') not in ('unknown', 'agency_unknown', None):
-                    existing['visa_sponsorship'] = j['visa_sponsorship']
+                if tag not in ('unknown', 'agency_unknown', None):
+                    existing['visa_sponsorship'] = tag
     
     # Convert to list and compute status
     jobs_list = list(all_jobs.values())
