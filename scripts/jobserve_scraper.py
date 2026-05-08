@@ -116,7 +116,7 @@ def parse_jobs(html_text):
             'location': location,
             'salary_display': salary if salary else 'Not listed',
             'date_posted': TODAY,
-            'url': f"https://www.jobserve.com/gb/en/job/{jid}/",
+            'url': f"https://www.jobserve.com/gb/en/mob/job/{jid}/",  # desktop /job/ returns 500, mobile works
             'source': 'JobServe',
             'source_type': 'aggregator',
             'role_type': _classify(title_lower),
