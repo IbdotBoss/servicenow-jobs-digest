@@ -6,7 +6,7 @@ A daily-updated job aggregator for ServiceNow roles in the UK, specifically filt
 
 ## 🚀 Features
 
-- **95+ active ServiceNow UK jobs** from 4+ sources
+- **112 active ServiceNow UK jobs** (132 archived) from 4+ sources
 - **Sponsorship tagging**: `verified` (sponsor-licensed employer), `sc_blocked` (clearance required), `agency_unknown` (recruitment agency), `unavailable` (explicitly no sponsorship)
 - **Daily cron** at 05:00 UK — auto-scrapes, merges, deploys
 - **Files-per-day architecture** — immutable daily snapshots, idempotent master rebuild
