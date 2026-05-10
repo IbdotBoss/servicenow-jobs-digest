@@ -1,19 +1,20 @@
 {
-  "updated": "2026-05-09",
-  "total": 117,
-  "total_active": 117,
-  "verified": 41,
-  "sc_blocked": 26,
+  "updated": "2026-05-10",
+  "total": 130,
+  "total_active": 130,
+  "verified": 39,
+  "sc_blocked": 21,
   "daily_snapshots": [
     "2026-05-06",
     "2026-05-07",
     "2026-05-08",
-    "2026-05-09"
+    "2026-05-09",
+    "2026-05-10"
   ],
   "sources": {
-    "LinkedIn": 65,
-    "JobServe": 30,
-    "Hunt UK": 25,
+    "LinkedIn": 73,
+    "JobServe": 32,
+    "Hunt UK": 28,
     "ComputerJobs": 9,
     "Reed": 2,
     "Hays": 2,
@@ -25,6 +26,327 @@
     "CV-Library": 1
   },
   "jobs": [
+    {
+      "title": "ServiceNow Solutions Advisory Lead",
+      "company": "[view listing]",
+      "location": "100k Annual GBP",
+      "salary_display": "Not listed",
+      "date_posted": "2026-05-10",
+      "url": "https://www.jobserve.com/gb/en/mob/job/E3ECFE93BE5E76853D/",
+      "source": "JobServe",
+      "source_type": "aggregator",
+      "role_type": "manager",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "unknown",
+      "description": "Posted 6 hours ago",
+      "first_seen": "2026-05-10",
+      "last_seen": "2026-05-10",
+      "sources": [
+        "JobServe"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "Senior Functional Consultant - ServiceNow",
+      "company": "[view listing]",
+      "location": "Hatfield, Hertfordshire",
+      "salary_display": "Not listed",
+      "date_posted": "2026-05-10",
+      "url": "https://www.jobserve.com/gb/en/mob/job/5B5EFA897E441A4724/",
+      "source": "JobServe",
+      "source_type": "aggregator",
+      "role_type": "consultant",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "unknown",
+      "description": "Posted 4 hours ago",
+      "first_seen": "2026-05-10",
+      "last_seen": "2026-05-10",
+      "sources": [
+        "JobServe"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "Product Owner & Manager - AI Service & Ops/ServiceNow",
+      "company": "Gamma",
+      "location": "Manchester, England, United Kingdom (Hybrid)",
+      "url": "https://www.linkedin.com/jobs/view/4363219171",
+      "source": "LinkedIn",
+      "visa_sponsorship": "verified",
+      "source_type": "direct",
+      "date_posted": "2026-05-10",
+      "salary_display": "Not listed",
+      "role_type": "unknown",
+      "remote": "unknown",
+      "employment": "unknown",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "description": "",
+      "first_seen": "2026-05-10",
+      "last_seen": "2026-05-10",
+      "sources": [
+        "LinkedIn"
+      ],
+      "status": "active",
+      "sponsorship_scan": "linkedin_register_only (tag=verified)"
+    },
+    {
+      "title": "ServiceNow Developer (SC Cleared, Outside IR35) (IT) / Contractor",
+      "company": "Free-Work UK",
+      "location": "City Of Westminster, England, United Kingdom (On-site)",
+      "url": "https://www.linkedin.com/jobs/view/4409824940",
+      "source": "LinkedIn",
+      "visa_sponsorship": "unknown",
+      "source_type": "direct",
+      "date_posted": "2026-05-10",
+      "salary_display": "Not listed",
+      "role_type": "unknown",
+      "remote": "unknown",
+      "employment": "unknown",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "description": "",
+      "first_seen": "2026-05-10",
+      "last_seen": "2026-05-10",
+      "sources": [
+        "LinkedIn"
+      ],
+      "status": "active",
+      "sponsorship_scan": "linkedin_register_only (tag=unknown)"
+    },
+    {
+      "title": "Senior Consultant - ServiceNow HRSD process and experience",
+      "company": "Capgemini Invent",
+      "location": "London, England, United Kingdom (Hybrid)",
+      "url": "https://www.linkedin.com/jobs/view/4390943901",
+      "source": "LinkedIn",
+      "visa_sponsorship": "unknown",
+      "source_type": "direct",
+      "date_posted": "2026-05-10",
+      "salary_display": "Not listed",
+      "role_type": "unknown",
+      "remote": "unknown",
+      "employment": "unknown",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "description": "",
+      "first_seen": "2026-05-10",
+      "last_seen": "2026-05-10",
+      "sources": [
+        "LinkedIn"
+      ],
+      "status": "active",
+      "sponsorship_scan": "linkedin_register_only (tag=unknown)"
+    },
+    {
+      "title": "ServiceNow Technical Architect / Developer - Security Cleared",
+      "company": "Accenture UK & Ireland",
+      "location": "London, England, United Kingdom (On-site)",
+      "url": "https://www.linkedin.com/jobs/view/4328118152",
+      "source": "LinkedIn",
+      "visa_sponsorship": "unknown",
+      "source_type": "direct",
+      "date_posted": "2026-05-10",
+      "salary_display": "Not listed",
+      "role_type": "unknown",
+      "remote": "unknown",
+      "employment": "unknown",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "description": "",
+      "first_seen": "2026-05-10",
+      "last_seen": "2026-05-10",
+      "sources": [
+        "LinkedIn"
+      ],
+      "status": "active",
+      "sponsorship_scan": "linkedin_register_only (tag=unknown)"
+    },
+    {
+      "title": "ServiceNow Technical Consultant (Outside IR35, SC cleared) (IT) / Contractor",
+      "company": "Free-Work UK",
+      "location": "City Of Westminster, England, United Kingdom (On-site)",
+      "url": "https://www.linkedin.com/jobs/view/4409824941",
+      "source": "LinkedIn",
+      "visa_sponsorship": "unknown",
+      "source_type": "direct",
+      "date_posted": "2026-05-10",
+      "salary_display": "Not listed",
+      "role_type": "unknown",
+      "remote": "unknown",
+      "employment": "unknown",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "description": "",
+      "first_seen": "2026-05-10",
+      "last_seen": "2026-05-10",
+      "sources": [
+        "LinkedIn"
+      ],
+      "status": "active",
+      "sponsorship_scan": "linkedin_register_only (tag=unknown)"
+    },
+    {
+      "title": "ServiceNow Solutions Architect (Outside IR35, SC cleared) (IT) / Contractor",
+      "company": "Free-Work UK",
+      "location": "City Of Westminster, England, United Kingdom (On-site)",
+      "url": "https://www.linkedin.com/jobs/view/4409827903",
+      "source": "LinkedIn",
+      "visa_sponsorship": "unknown",
+      "source_type": "direct",
+      "date_posted": "2026-05-10",
+      "salary_display": "Not listed",
+      "role_type": "unknown",
+      "remote": "unknown",
+      "employment": "unknown",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "description": "",
+      "first_seen": "2026-05-10",
+      "last_seen": "2026-05-10",
+      "sources": [
+        "LinkedIn"
+      ],
+      "status": "active",
+      "sponsorship_scan": "linkedin_register_only (tag=unknown)"
+    },
+    {
+      "title": "ServiceNow Technical Architect",
+      "company": "Accenture UK & Ireland",
+      "location": "London, England, United Kingdom (On-site)",
+      "url": "https://www.linkedin.com/jobs/view/4328019788",
+      "source": "LinkedIn",
+      "visa_sponsorship": "unknown",
+      "source_type": "direct",
+      "date_posted": "2026-05-10",
+      "salary_display": "Not listed",
+      "role_type": "unknown",
+      "remote": "unknown",
+      "employment": "unknown",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "description": "",
+      "first_seen": "2026-05-10",
+      "last_seen": "2026-05-10",
+      "sources": [
+        "LinkedIn"
+      ],
+      "status": "active",
+      "sponsorship_scan": "linkedin_register_only (tag=unknown)"
+    },
+    {
+      "title": "ServiceNow Technical Architect - Senior Manager",
+      "company": "Accenture UK & Ireland",
+      "location": "London, England, United Kingdom (On-site)",
+      "url": "https://www.linkedin.com/jobs/view/4327949964",
+      "source": "LinkedIn",
+      "visa_sponsorship": "unknown",
+      "source_type": "direct",
+      "date_posted": "2026-05-10",
+      "salary_display": "Not listed",
+      "role_type": "unknown",
+      "remote": "unknown",
+      "employment": "unknown",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "description": "",
+      "first_seen": "2026-05-10",
+      "last_seen": "2026-05-10",
+      "sources": [
+        "LinkedIn"
+      ],
+      "status": "active",
+      "sponsorship_scan": "linkedin_register_only (tag=unknown)"
+    },
+    {
+      "title": "ServiceNow Technical Lead \u2013 Insurance/FSO",
+      "company": "CSC Computer Sciences Limited (DXC Technology)",
+      "location": "United Kingdom (hybrid/flexible)",
+      "salary_display": "Not listed",
+      "date_posted": "2026-04-30",
+      "url": "https://careers.dxc.com/",
+      "source": "Hunt UK",
+      "source_type": "direct",
+      "role_type": "lead",
+      "remote": "hybrid",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "verified",
+      "description": "ServiceNow Technical Lead at DXC Technology. Lead insurance workflow solutions on ServiceNow FSO.",
+      "first_seen": "2026-05-10",
+      "last_seen": "2026-05-10",
+      "sources": [
+        "Hunt UK"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "ServiceNow Architect (TSM)",
+      "company": "X4 Group Ltd",
+      "location": "London (hybrid \u2013 3 days/week)",
+      "salary_display": "\u00a3650/day (Outside IR35)",
+      "date_posted": "2026-04-29",
+      "url": "https://www.x4group.com/",
+      "source": "Hunt UK",
+      "source_type": "agency",
+      "role_type": "architect",
+      "remote": "hybrid",
+      "employment": "contract",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "agency_unknown",
+      "description": "ServiceNow Architect (TSM) at X4 Group. 6 months extendable contract. \u00a3650/day Outside IR35.",
+      "first_seen": "2026-05-10",
+      "last_seen": "2026-05-10",
+      "sources": [
+        "Hunt UK"
+      ],
+      "status": "active",
+      "sponsorship_scan": "page_too_short (114 chars)"
+    },
+    {
+      "title": "ServiceNow Architect \u2013 TSM",
+      "company": "Ubique Systems UK Limited",
+      "location": "London (hybrid \u2013 3 days onsite)",
+      "salary_display": "Not listed",
+      "date_posted": "2026-04-29",
+      "url": "https://www.ubiquesystems.com/",
+      "source": "Hunt UK",
+      "source_type": "agency",
+      "role_type": "architect",
+      "remote": "hybrid",
+      "employment": "contract",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "agency_unknown",
+      "description": "ServiceNow Architect (TSM) at Ubique Systems UK. TSM, ITSM & ITOM expertise. Telecom domain.",
+      "first_seen": "2026-05-10",
+      "last_seen": "2026-05-10",
+      "sources": [
+        "Hunt UK"
+      ],
+      "status": "active"
+    },
     {
       "title": "ServiceNow Developer- SC Security Clearance",
       "company": "[view listing]",
@@ -40,14 +362,15 @@
       "sc_clearance": false,
       "grad_scheme": false,
       "link_status": "live",
-      "visa_sponsorship": "unknown",
+      "visa_sponsorship": "sc_blocked",
       "description": "Posted 5 hours ago",
       "first_seen": "2026-05-09",
-      "last_seen": "2026-05-09",
+      "last_seen": "2026-05-10",
       "sources": [
         "JobServe"
       ],
-      "status": "active"
+      "status": "active",
+      "sponsorship_scan": "Security clearance required"
     },
     {
       "title": "SC Cleared Service Now Engineer",
@@ -67,11 +390,12 @@
       "visa_sponsorship": "sc_blocked",
       "description": "Posted 11 hours ago",
       "first_seen": "2026-05-09",
-      "last_seen": "2026-05-09",
+      "last_seen": "2026-05-10",
       "sources": [
         "JobServe"
       ],
-      "status": "active"
+      "status": "active",
+      "sponsorship_scan": "Security clearance required"
     },
     {
       "title": "Recruitment Consultant - ServiceNow",
@@ -85,7 +409,8 @@
       "sources": [
         "LinkedIn"
       ],
-      "status": "active"
+      "status": "active",
+      "sponsorship_scan": "linkedin_register_only (tag=agency_unknown)"
     },
     {
       "title": "ServiceNow Developer",
@@ -99,7 +424,8 @@
       "sources": [
         "LinkedIn"
       ],
-      "status": "active"
+      "status": "active",
+      "sponsorship_scan": "linkedin_register_only (tag=verified)"
     },
     {
       "title": "Senior ServiceNow Sales Professional",
@@ -128,7 +454,8 @@
       "sources": [
         "LinkedIn"
       ],
-      "status": "active"
+      "status": "active",
+      "sponsorship_scan": "linkedin_register_only (tag=agency_unknown)"
     },
     {
       "title": "ServiceNow Architect - CTA and Security Clearance essential",
@@ -142,7 +469,8 @@
       "sources": [
         "LinkedIn"
       ],
-      "status": "active"
+      "status": "active",
+      "sponsorship_scan": "linkedin_register_only (tag=unknown)"
     },
     {
       "title": "Key Account Director - Enterprise / Public Sector. ServiceNow Solutions SI/MSP",
@@ -164,7 +492,7 @@
       "description": "Hot Market. Credible Delivery. Entrepreneurial Growth. AI Tailwinds. Strong Culture. Real Earning Potential\u2026 and an incredible founder-led leadership team\u2026 If you\u2019re a high-level sales achiever in the enterprise / public sector space , who enjoys bui",
       "visa_sponsorship": "agency_unknown",
       "first_seen": "2026-05-09",
-      "last_seen": "2026-05-09",
+      "last_seen": "2026-05-10",
       "sources": [
         "Reed"
       ],
@@ -185,11 +513,11 @@
       "sc_clearance": false,
       "grad_scheme": false,
       "link_status": "live",
-      "visa_sponsorship": "verified",
+      "visa_sponsorship": "sc_blocked",
       "description": "Solution Architect ServiceNow at Kinly (AVMI). Full-time permanent. Hybrid.",
-      "sponsorship_scan": "verified_by_register_no_sc",
+      "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-05-09",
-      "last_seen": "2026-05-09",
+      "last_seen": "2026-05-10",
       "sources": [
         "Hunt UK"
       ],
@@ -213,11 +541,12 @@
       "visa_sponsorship": "verified",
       "description": "Senior Presales Consultant for Enterprise Service Management (ESM). Client-facing presales.",
       "first_seen": "2026-05-09",
-      "last_seen": "2026-05-09",
+      "last_seen": "2026-05-10",
       "sources": [
         "Hunt UK"
       ],
-      "status": "active"
+      "status": "active",
+      "sponsorship_scan": "fetch_error: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occur"
     },
     {
       "title": "ServiceNow Product Manager (Banking)",
@@ -237,7 +566,7 @@
       "visa_sponsorship": "agency_unknown",
       "description": "ServiceNow Product Manager - Banking. Grow ServiceNow centre of excellence.",
       "first_seen": "2026-05-09",
-      "last_seen": "2026-05-09",
+      "last_seen": "2026-05-10",
       "sources": [
         "Hunt UK"
       ],
@@ -246,7 +575,7 @@
     {
       "title": "ServiceNow Engineer",
       "company": "Freshfields Service Company",
-      "location": "Manchester Area (hybrid)",
+      "location": "Manchester Area, UK",
       "salary_display": "Not listed",
       "date_posted": "2026-04-30",
       "url": "https://www.freshfields.com/en-gb/careers/",
@@ -261,7 +590,7 @@
       "visa_sponsorship": "verified",
       "description": "Shape, enhance and support a mature, business-critical ServiceNow platform.",
       "first_seen": "2026-05-09",
-      "last_seen": "2026-05-09",
+      "last_seen": "2026-05-10",
       "sources": [
         "Hunt UK"
       ],
@@ -270,10 +599,10 @@
     {
       "title": "CMDB Specialist (ServiceNow)",
       "company": "Harvey Nash Limited",
-      "location": "UK (Remote)",
+      "location": "United Kingdom (Remote)",
       "salary_display": "Not listed",
       "date_posted": "2026-04-30",
-      "url": "https://www.harveynash.com/uk/",
+      "url": "https://www.harveynash.com/",
       "source": "Hunt UK",
       "source_type": "agency",
       "role_type": "specialist",
@@ -285,7 +614,7 @@
       "visa_sponsorship": "agency_unknown",
       "description": "CMDB Specialist (ServiceNow). Over 15 million CIs, supporting 300,000 employees.",
       "first_seen": "2026-05-09",
-      "last_seen": "2026-05-09",
+      "last_seen": "2026-05-10",
       "sources": [
         "Hunt UK"
       ],
@@ -318,7 +647,7 @@
     {
       "title": "ServiceNow System Admin",
       "company": "BAE Systems Plc",
-      "location": "Leeds/Preston/Frimley (hybrid)",
+      "location": "Leeds/Preston/Frimley (hybrid/flexible)",
       "salary_display": "Up to \u00a345,000",
       "date_posted": "2026-04-30",
       "url": "https://www.baesystems.com/en/careers",
@@ -333,7 +662,7 @@
       "visa_sponsorship": "sc_blocked",
       "description": "ServiceNow System Admin. BAE Systems - defense contractor, SC clearance required.",
       "first_seen": "2026-05-09",
-      "last_seen": "2026-05-09",
+      "last_seen": "2026-05-10",
       "sources": [
         "Hunt UK"
       ],
@@ -361,7 +690,8 @@
       "sources": [
         "Hunt UK"
       ],
-      "status": "active"
+      "status": "active",
+      "sponsorship_scan": "page_too_short (114 chars)"
     },
     {
       "title": "ServiceNow Product Manager Banking",
@@ -377,7 +707,8 @@
       "last_seen": "2026-05-09",
       "sources": [
         "Hunt UK"
-      ]
+      ],
+      "sponsorship_scan": "fetch_error: HTTP Error 410: Gone"
     },
     {
       "title": "ServiceNow Technical Lead \u2013 Insurance / FSO",
@@ -399,19 +730,20 @@
     {
       "title": "ServiceNow Services Sales Specialist",
       "company": "Inetum Digital Services UK Limited",
-      "location": "London Area",
+      "location": "London Area, UK",
       "salary": "Competitive",
-      "url": "https://careers.inetum.com/",
+      "url": "https://www.inetum.com/en/careers",
       "date_posted": "2026-04-30",
       "source": "Hunt UK",
       "visa_sponsorship": "verified",
       "status": "active",
       "fallback_url": "https://careers.inetum.com/",
       "first_seen": "2026-05-09",
-      "last_seen": "2026-05-09",
+      "last_seen": "2026-05-10",
       "sources": [
         "Hunt UK"
-      ]
+      ],
+      "salary_display": "Not listed"
     },
     {
       "title": "ServiceNow Architect",
@@ -428,7 +760,8 @@
       "last_seen": "2026-05-09",
       "sources": [
         "Hunt UK"
-      ]
+      ],
+      "sponsorship_scan": "Security clearance required"
     },
     {
       "title": "Business Development Manager - Security & Risk (Partner Channels)",
@@ -462,14 +795,15 @@
       "sc_clearance": false,
       "grad_scheme": false,
       "link_status": "live",
-      "visa_sponsorship": "unknown",
+      "visa_sponsorship": "sc_blocked",
       "description": "Posted 14 hours ago",
       "first_seen": "2026-05-08",
-      "last_seen": "2026-05-09",
+      "last_seen": "2026-05-10",
       "sources": [
         "JobServe"
       ],
-      "status": "active"
+      "status": "active",
+      "sponsorship_scan": "Security clearance required"
     },
     {
       "title": "ServiceNow Product Manager",
@@ -489,7 +823,7 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 12 hours ago",
       "first_seen": "2026-05-08",
-      "last_seen": "2026-05-09",
+      "last_seen": "2026-05-10",
       "sources": [
         "JobServe"
       ],
@@ -513,7 +847,7 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 1 day ago",
       "first_seen": "2026-05-08",
-      "last_seen": "2026-05-09",
+      "last_seen": "2026-05-10",
       "sources": [
         "JobServe"
       ],
@@ -537,19 +871,20 @@
       "visa_sponsorship": "sc_blocked",
       "description": "Posted 2 days ago",
       "first_seen": "2026-05-08",
-      "last_seen": "2026-05-09",
+      "last_seen": "2026-05-10",
       "sources": [
         "JobServe"
       ],
-      "status": "active"
+      "status": "active",
+      "sponsorship_scan": "Security clearance required"
     },
     {
       "title": "ServiceNow Technical Architect - DV Cleared - Contract",
       "company": "[view listing]",
-      "location": "England",
-      "salary_display": "\u00a3600-\u00a3700 per day INSIDE IR35",
+      "location": "650.00 Daily - 750.00 Daily INSIDE IR35 GBP",
+      "salary_display": "Not listed",
       "date_posted": "2026-05-08",
-      "url": "https://www.jobserve.com/gb/en/mob/job/6723999D9EBB1CC5A9/",
+      "url": "https://www.jobserve.com/gb/en/mob/job/6917A1AB70335F4085/",
       "source": "JobServe",
       "source_type": "aggregator",
       "role_type": "architect",
@@ -561,11 +896,12 @@
       "visa_sponsorship": "sc_blocked",
       "description": "Posted 15 hours ago",
       "first_seen": "2026-05-08",
-      "last_seen": "2026-05-09",
+      "last_seen": "2026-05-10",
       "sources": [
         "JobServe"
       ],
-      "status": "active"
+      "status": "active",
+      "sponsorship_scan": "Security clearance required"
     },
     {
       "title": "ServiceNow Technical Consultant - DV Cleared",
@@ -585,19 +921,20 @@
       "visa_sponsorship": "sc_blocked",
       "description": "Posted 2 days ago",
       "first_seen": "2026-05-08",
-      "last_seen": "2026-05-09",
+      "last_seen": "2026-05-10",
       "sources": [
         "JobServe"
       ],
-      "status": "active"
+      "status": "active",
+      "sponsorship_scan": "Security clearance required"
     },
     {
       "title": "ServiceNow Senior Technical Consultant - DV Cleared - Contract",
       "company": "[view listing]",
-      "location": "England",
-      "salary_display": "\u00a3600 - \u00a3750 per day INSIDE IR35",
+      "location": "600.00 Daily - 750.00 Daily INSIDE IR35 GBP",
+      "salary_display": "Not listed",
       "date_posted": "2026-05-08",
-      "url": "https://www.jobserve.com/gb/en/mob/job/D25ABD5DCBEC707D0F/",
+      "url": "https://www.jobserve.com/gb/en/mob/job/1E42FAFA538EB2C0CE/",
       "source": "JobServe",
       "source_type": "aggregator",
       "role_type": "consultant",
@@ -609,11 +946,12 @@
       "visa_sponsorship": "sc_blocked",
       "description": "Posted 16 hours ago",
       "first_seen": "2026-05-08",
-      "last_seen": "2026-05-09",
+      "last_seen": "2026-05-10",
       "sources": [
         "JobServe"
       ],
-      "status": "active"
+      "status": "active",
+      "sponsorship_scan": "Security clearance required"
     },
     {
       "title": "ServiceNow Senior Technical Consultant - DV Cleared",
@@ -633,11 +971,12 @@
       "visa_sponsorship": "sc_blocked",
       "description": "Posted 2 days ago",
       "first_seen": "2026-05-08",
-      "last_seen": "2026-05-09",
+      "last_seen": "2026-05-10",
       "sources": [
         "JobServe"
       ],
-      "status": "active"
+      "status": "active",
+      "sponsorship_scan": "Security clearance required"
     },
     {
       "title": "Servicenow Architect",
@@ -657,7 +996,7 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 1 day ago",
       "first_seen": "2026-05-08",
-      "last_seen": "2026-05-09",
+      "last_seen": "2026-05-10",
       "sources": [
         "JobServe"
       ],
@@ -666,10 +1005,10 @@
     {
       "title": "ServiceNow Developer",
       "company": "[view listing]",
-      "location": "Inside IR - 35.",
+      "location": "500.00 Daily - 600.00 Daily GBP",
       "salary_display": "Not listed",
       "date_posted": "2026-05-08",
-      "url": "https://www.jobserve.com/gb/en/mob/job/B24BB0D7B7038D3358/",
+      "url": "https://www.jobserve.com/gb/en/mob/job/FE18189E43B030A4B5/",
       "source": "JobServe",
       "source_type": "aggregator",
       "role_type": "developer",
@@ -681,7 +1020,7 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 6 days ago",
       "first_seen": "2026-05-08",
-      "last_seen": "2026-05-09",
+      "last_seen": "2026-05-10",
       "sources": [
         "JobServe"
       ],
@@ -705,7 +1044,7 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 1 day ago",
       "first_seen": "2026-05-08",
-      "last_seen": "2026-05-09",
+      "last_seen": "2026-05-10",
       "sources": [
         "JobServe"
       ],
@@ -714,10 +1053,10 @@
     {
       "title": "ServiceNow Developer (SC Cleared)",
       "company": "[view listing]",
-      "location": "Milton Keynes",
-      "salary_display": "\u00a3590 per day",
+      "location": "590.00 Daily GBP",
+      "salary_display": "Not listed",
       "date_posted": "2026-05-08",
-      "url": "https://www.jobserve.com/gb/en/mob/job/8B0551F392856F6B17/",
+      "url": "https://www.jobserve.com/gb/en/mob/job/7D33E25CB0DDE0E952/",
       "source": "JobServe",
       "source_type": "aggregator",
       "role_type": "developer",
@@ -729,11 +1068,12 @@
       "visa_sponsorship": "sc_blocked",
       "description": "Posted 14 hours ago",
       "first_seen": "2026-05-08",
-      "last_seen": "2026-05-09",
+      "last_seen": "2026-05-10",
       "sources": [
         "JobServe"
       ],
-      "status": "active"
+      "status": "active",
+      "sponsorship_scan": "Security clearance required"
     },
     {
       "title": "ServiceNow CMDB Developer - Inside IR35",
@@ -753,7 +1093,7 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 20 hours ago",
       "first_seen": "2026-05-08",
-      "last_seen": "2026-05-09",
+      "last_seen": "2026-05-10",
       "sources": [
         "JobServe"
       ],
@@ -777,7 +1117,7 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 1 day ago",
       "first_seen": "2026-05-08",
-      "last_seen": "2026-05-09",
+      "last_seen": "2026-05-10",
       "sources": [
         "JobServe"
       ],
@@ -801,7 +1141,7 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 2 days ago",
       "first_seen": "2026-05-08",
-      "last_seen": "2026-05-09",
+      "last_seen": "2026-05-10",
       "sources": [
         "JobServe"
       ],
@@ -825,7 +1165,7 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 1 day ago",
       "first_seen": "2026-05-08",
-      "last_seen": "2026-05-09",
+      "last_seen": "2026-05-10",
       "sources": [
         "JobServe"
       ],
@@ -853,7 +1193,8 @@
       "sources": [
         "JobServe"
       ],
-      "status": "active"
+      "status": "active",
+      "sponsorship_scan": "fetch_error: HTTP Error 410: Gone"
     },
     {
       "title": "ServiceNow Solution Architect",
@@ -861,7 +1202,7 @@
       "location": "475.00 Daily - 500.00 Daily GBP",
       "salary_display": "Not listed",
       "date_posted": "2026-05-08",
-      "url": "https://www.jobserve.com/gb/en/mob/job/B2CBF21DCFFF688DE2/",
+      "url": "https://www.jobserve.com/gb/en/mob/job/025E53B71BBC9AB2D4/",
       "source": "JobServe",
       "source_type": "aggregator",
       "role_type": "architect",
@@ -873,7 +1214,7 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 4 days ago",
       "first_seen": "2026-05-08",
-      "last_seen": "2026-05-09",
+      "last_seen": "2026-05-10",
       "sources": [
         "JobServe"
       ],
@@ -897,7 +1238,7 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 5 days ago",
       "first_seen": "2026-05-08",
-      "last_seen": "2026-05-09",
+      "last_seen": "2026-05-10",
       "sources": [
         "JobServe"
       ],
@@ -921,7 +1262,7 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 7 hours ago",
       "first_seen": "2026-05-08",
-      "last_seen": "2026-05-09",
+      "last_seen": "2026-05-10",
       "sources": [
         "JobServe"
       ],
@@ -933,7 +1274,7 @@
       "location": "not provided GBP",
       "salary_display": "Not listed",
       "date_posted": "2026-05-08",
-      "url": "https://www.jobserve.com/gb/en/search-jobs-in-London,-London,-United-Kingdom/SENIOR-TECHNICAL-CONSULTANT-SERVICENOW-CC272485294B77C3D9/",
+      "url": "https://www.jobserve.com/gb/en/mob/job/D5587BD40408D43BBE/",
       "source": "JobServe",
       "source_type": "aggregator",
       "role_type": "consultant",
@@ -945,7 +1286,7 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 6 days ago",
       "first_seen": "2026-05-08",
-      "last_seen": "2026-05-08",
+      "last_seen": "2026-05-10",
       "sources": [
         "JobServe"
       ],
@@ -969,7 +1310,7 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 23 hours ago",
       "first_seen": "2026-05-08",
-      "last_seen": "2026-05-09",
+      "last_seen": "2026-05-10",
       "sources": [
         "JobServe"
       ],
@@ -999,7 +1340,8 @@
       "status": "active",
       "sources": [
         "Hunt UK"
-      ]
+      ],
+      "sponsorship_scan": "Skilled Worker visa mentioned"
     },
     {
       "title": "ServiceNow Technical Consultant",
@@ -1025,7 +1367,8 @@
       "status": "active",
       "sources": [
         "LinkedIn"
-      ]
+      ],
+      "sponsorship_scan": "linkedin_register_only (tag=unavailable)"
     },
     {
       "title": "ServiceNow Developer",
@@ -1079,7 +1422,8 @@
       "status": "active",
       "sources": [
         "LinkedIn"
-      ]
+      ],
+      "sponsorship_scan": "linkedin_register_only (tag=agency_unknown)"
     },
     {
       "title": "Senior ServiceNow Developer / Architect",
@@ -1101,7 +1445,7 @@
       "link_status": "live",
       "visa_sponsorship": "verified",
       "description": "Lead ServiceNow implementation projects. Effort estimation, planning, architectural analysis. API integration, cloud platforms. IBM Consulting \u2014 verified A-rated sponsor.",
-      "sponsorship_scan": "Skilled Worker visa mentioned",
+      "sponsorship_scan": "fetch_error: HTTP Error 410: Gone",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
       "status": "active",
@@ -1239,7 +1583,7 @@
       "visa_sponsorship": "agency_unknown",
       "description": "ITAM Product Manager - ServiceNow HAM/SAM. Posted by recruitment agency \u2014 verify sponsorship with actual employer.",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-09",
+      "last_seen": "2026-05-10",
       "status": "active",
       "sources": [
         "Reed"
@@ -1269,7 +1613,8 @@
       "status": "active",
       "sources": [
         "LinkedIn"
-      ]
+      ],
+      "sponsorship_scan": "linkedin_register_only (tag=verified)"
     },
     {
       "title": "ServiceNow Implementation Specialist",
@@ -1423,7 +1768,7 @@
       "link_status": "expired",
       "visa_sponsorship": "verified",
       "description": "15M+ CIs, 300K employees. Global manufacturer. Governance + hands-on CMDB. Harvey Nash agency.",
-      "sponsorship_scan": "Skilled Worker visa mentioned",
+      "sponsorship_scan": "linkedin_register_only (tag=verified)",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
       "status": "active",
@@ -1456,7 +1801,8 @@
       "status": "active",
       "sources": [
         "JobServe"
-      ]
+      ],
+      "sponsorship_scan": "fetch_error: HTTP Error 410: Gone"
     },
     {
       "title": "ServiceNow Developer",
@@ -1482,7 +1828,8 @@
       "status": "active",
       "sources": [
         "LinkedIn"
-      ]
+      ],
+      "sponsorship_scan": "linkedin_register_only (tag=unknown)"
     },
     {
       "title": "ServiceNow Developer",
@@ -1508,7 +1855,8 @@
       "status": "active",
       "sources": [
         "LinkedIn"
-      ]
+      ],
+      "sponsorship_scan": "linkedin_register_only (tag=unknown)"
     },
     {
       "title": "ServiceNow Developer",
@@ -1534,7 +1882,8 @@
       "status": "active",
       "sources": [
         "LinkedIn"
-      ]
+      ],
+      "sponsorship_scan": "linkedin_register_only (tag=verified)"
     },
     {
       "title": "ServiceNow System Admin",
@@ -1560,7 +1909,8 @@
       "status": "active",
       "sources": [
         "LinkedIn"
-      ]
+      ],
+      "sponsorship_scan": "linkedin_register_only (tag=sc_blocked)"
     },
     {
       "title": "ServiceNow Developer",
@@ -1586,7 +1936,8 @@
       "status": "active",
       "sources": [
         "LinkedIn"
-      ]
+      ],
+      "sponsorship_scan": "linkedin_register_only (tag=unknown)"
     },
     {
       "title": "ServiceNow Developer",
@@ -1612,7 +1963,8 @@
       "status": "active",
       "sources": [
         "LinkedIn"
-      ]
+      ],
+      "sponsorship_scan": "linkedin_register_only (tag=verified)"
     },
     {
       "title": "ServiceNow Business Analyst",
@@ -1638,7 +1990,8 @@
       "status": "active",
       "sources": [
         "LinkedIn"
-      ]
+      ],
+      "sponsorship_scan": "linkedin_register_only (tag=verified)"
     },
     {
       "title": "ServiceNow Administrator",
@@ -1664,7 +2017,8 @@
       "status": "active",
       "sources": [
         "LinkedIn"
-      ]
+      ],
+      "sponsorship_scan": "linkedin_register_only (tag=verified)"
     },
     {
       "title": "ServiceNow Business Development Lead (UK) | \u00a3180k OTE",
@@ -1690,7 +2044,8 @@
       "status": "active",
       "sources": [
         "LinkedIn"
-      ]
+      ],
+      "sponsorship_scan": "linkedin_register_only (tag=unknown)"
     },
     {
       "title": "Servicenow Consultant - Remote - \u00a350-75K + Bonus",
@@ -1716,7 +2071,8 @@
       "status": "active",
       "sources": [
         "LinkedIn"
-      ]
+      ],
+      "sponsorship_scan": "linkedin_register_only (tag=unknown)"
     },
     {
       "title": "ServiceNow Developer",
@@ -1742,7 +2098,8 @@
       "status": "active",
       "sources": [
         "LinkedIn"
-      ]
+      ],
+      "sponsorship_scan": "linkedin_register_only (tag=unknown)"
     },
     {
       "title": "ServiceNow Developer",
@@ -1768,7 +2125,8 @@
       "status": "active",
       "sources": [
         "LinkedIn"
-      ]
+      ],
+      "sponsorship_scan": "linkedin_register_only (tag=verified)"
     },
     {
       "title": "ServiceNow Engagement Manager",
@@ -1794,7 +2152,8 @@
       "status": "active",
       "sources": [
         "LinkedIn"
-      ]
+      ],
+      "sponsorship_scan": "linkedin_register_only (tag=unknown)"
     },
     {
       "title": "ServiceNow Sales Specialist",
@@ -1820,7 +2179,8 @@
       "status": "active",
       "sources": [
         "LinkedIn"
-      ]
+      ],
+      "sponsorship_scan": "linkedin_register_only (tag=verified)"
     },
     {
       "title": "ServiceNow Systems Administrator",
@@ -1846,7 +2206,8 @@
       "status": "active",
       "sources": [
         "LinkedIn"
-      ]
+      ],
+      "sponsorship_scan": "linkedin_register_only (tag=unknown)"
     },
     {
       "title": "ServiceNow Developer",
@@ -1872,7 +2233,8 @@
       "status": "active",
       "sources": [
         "LinkedIn"
-      ]
+      ],
+      "sponsorship_scan": "linkedin_register_only (tag=unknown)"
     },
     {
       "title": "ServiceNow Configuration Analyst",
@@ -1898,7 +2260,8 @@
       "status": "active",
       "sources": [
         "LinkedIn"
-      ]
+      ],
+      "sponsorship_scan": "linkedin_register_only (tag=unknown)"
     },
     {
       "title": "Senior ServiceNow Transformation & Advisory Consultant Role",
@@ -1924,7 +2287,8 @@
       "status": "active",
       "sources": [
         "LinkedIn"
-      ]
+      ],
+      "sponsorship_scan": "linkedin_register_only (tag=unknown)"
     },
     {
       "title": "ServiceNow Platform Engineer",
@@ -1950,7 +2314,8 @@
       "status": "active",
       "sources": [
         "LinkedIn"
-      ]
+      ],
+      "sponsorship_scan": "linkedin_register_only (tag=unknown)"
     },
     {
       "title": "ServiceNow Platform Architect",
@@ -1976,7 +2341,8 @@
       "status": "active",
       "sources": [
         "LinkedIn"
-      ]
+      ],
+      "sponsorship_scan": "linkedin_register_only (tag=agency_unknown)"
     },
     {
       "title": "ServiceNow Administrator",
@@ -2002,7 +2368,8 @@
       "status": "active",
       "sources": [
         "LinkedIn"
-      ]
+      ],
+      "sponsorship_scan": "linkedin_register_only (tag=verified)"
     },
     {
       "title": "Senior ServiceNow Developer",
@@ -2028,7 +2395,8 @@
       "status": "active",
       "sources": [
         "LinkedIn"
-      ]
+      ],
+      "sponsorship_scan": "linkedin_register_only (tag=verified)"
     },
     {
       "title": "ServiceNow Developer",
@@ -2054,7 +2422,8 @@
       "status": "active",
       "sources": [
         "LinkedIn"
-      ]
+      ],
+      "sponsorship_scan": "linkedin_register_only (tag=unknown)"
     },
     {
       "title": "ServiceNow Business Analyst",
@@ -2080,7 +2449,8 @@
       "status": "active",
       "sources": [
         "LinkedIn"
-      ]
+      ],
+      "sponsorship_scan": "linkedin_register_only (tag=unknown)"
     },
     {
       "title": "ServiceNow Test Analyst",
@@ -2106,7 +2476,8 @@
       "status": "active",
       "sources": [
         "LinkedIn"
-      ]
+      ],
+      "sponsorship_scan": "linkedin_register_only (tag=unknown)"
     },
     {
       "title": "ServiceNow Architect",
@@ -2132,7 +2503,8 @@
       "status": "active",
       "sources": [
         "LinkedIn"
-      ]
+      ],
+      "sponsorship_scan": "linkedin_register_only (tag=agency_unknown)"
     },
     {
       "title": "ServiceNow Developer - GRC",
@@ -2158,7 +2530,8 @@
       "status": "active",
       "sources": [
         "LinkedIn"
-      ]
+      ],
+      "sponsorship_scan": "linkedin_register_only (tag=unknown)"
     },
     {
       "title": "Lead ServiceNow Developer",
@@ -2184,7 +2557,8 @@
       "status": "active",
       "sources": [
         "LinkedIn"
-      ]
+      ],
+      "sponsorship_scan": "linkedin_register_only (tag=unknown)"
     },
     {
       "title": "Senior ServiceNow SPM Developer",
@@ -2210,7 +2584,8 @@
       "status": "active",
       "sources": [
         "LinkedIn"
-      ]
+      ],
+      "sponsorship_scan": "linkedin_register_only (tag=unknown)"
     },
     {
       "title": "ServiceNow Engineer",
@@ -2236,7 +2611,8 @@
       "status": "active",
       "sources": [
         "LinkedIn"
-      ]
+      ],
+      "sponsorship_scan": "linkedin_register_only (tag=verified)"
     },
     {
       "title": "ServiceNow Platform Support Analyst",
@@ -2262,7 +2638,8 @@
       "status": "active",
       "sources": [
         "LinkedIn"
-      ]
+      ],
+      "sponsorship_scan": "linkedin_register_only (tag=verified)"
     },
     {
       "title": "Senior ServiceNow Consultant",
@@ -2288,7 +2665,8 @@
       "status": "active",
       "sources": [
         "LinkedIn"
-      ]
+      ],
+      "sponsorship_scan": "linkedin_register_only (tag=unknown)"
     },
     {
       "title": "ITSM Process Owner - Incident & Problem Management",
@@ -2314,7 +2692,8 @@
       "status": "active",
       "sources": [
         "LinkedIn"
-      ]
+      ],
+      "sponsorship_scan": "linkedin_register_only (tag=verified)"
     },
     {
       "title": "ServiceNow Developer - Associate Manager",
@@ -2340,7 +2719,8 @@
       "status": "active",
       "sources": [
         "LinkedIn"
-      ]
+      ],
+      "sponsorship_scan": "linkedin_register_only (tag=unknown)"
     },
     {
       "title": "ServiceNow Solutions Advisory Lead",
@@ -2366,7 +2746,8 @@
       "status": "active",
       "sources": [
         "LinkedIn"
-      ]
+      ],
+      "sponsorship_scan": "linkedin_register_only (tag=unknown)"
     },
     {
       "title": "ServiceNow Implementation Specialist",
@@ -2393,7 +2774,8 @@
       "sources": [
         "LinkedIn",
         "Hunt UK"
-      ]
+      ],
+      "sponsorship_scan": "Security clearance required"
     },
     {
       "title": "ServiceNow Architect",
@@ -2419,7 +2801,8 @@
       "status": "active",
       "sources": [
         "LinkedIn"
-      ]
+      ],
+      "sponsorship_scan": "linkedin_register_only (tag=verified)"
     },
     {
       "title": "ServiceNow TNI Senior Developer",
@@ -2445,7 +2828,8 @@
       "status": "active",
       "sources": [
         "LinkedIn"
-      ]
+      ],
+      "sponsorship_scan": "linkedin_register_only (tag=unknown)"
     },
     {
       "title": "Senior ServiceNow Developer, UK",
@@ -2471,7 +2855,8 @@
       "status": "active",
       "sources": [
         "LinkedIn"
-      ]
+      ],
+      "sponsorship_scan": "linkedin_register_only (tag=unknown)"
     },
     {
       "title": "ServiceNow Business Process Consultant",
@@ -2497,7 +2882,8 @@
       "status": "active",
       "sources": [
         "LinkedIn"
-      ]
+      ],
+      "sponsorship_scan": "linkedin_register_only (tag=verified)"
     },
     {
       "title": "ServiceNow Advisory Consultant",
@@ -2523,7 +2909,8 @@
       "status": "active",
       "sources": [
         "LinkedIn"
-      ]
+      ],
+      "sponsorship_scan": "linkedin_register_only (tag=verified)"
     },
     {
       "title": "Mid Level / Journeyman ServiceNow Developer",
@@ -2549,7 +2936,8 @@
       "status": "active",
       "sources": [
         "LinkedIn"
-      ]
+      ],
+      "sponsorship_scan": "linkedin_register_only (tag=verified)"
     },
     {
       "title": "ServiceNow Technical Consultant | Up to \u00a365k",
@@ -2575,7 +2963,8 @@
       "status": "active",
       "sources": [
         "LinkedIn"
-      ]
+      ],
+      "sponsorship_scan": "linkedin_register_only (tag=unknown)"
     },
     {
       "title": "ServiceNow Green IT (ITSM) designer",
@@ -2601,7 +2990,8 @@
       "status": "active",
       "sources": [
         "LinkedIn"
-      ]
+      ],
+      "sponsorship_scan": "linkedin_register_only (tag=unknown)"
     },
     {
       "title": "ServiceNow Technical Architect",
@@ -2627,7 +3017,8 @@
       "status": "active",
       "sources": [
         "LinkedIn"
-      ]
+      ],
+      "sponsorship_scan": "linkedin_register_only (tag=agency_unknown)"
     },
     {
       "title": "ServiceNow GTM / Solutions Sales Lead",
@@ -2653,7 +3044,8 @@
       "status": "active",
       "sources": [
         "LinkedIn"
-      ]
+      ],
+      "sponsorship_scan": "linkedin_register_only (tag=unknown)"
     },
     {
       "title": "ServiceNow Technical Consultant",
@@ -2679,7 +3071,8 @@
       "status": "active",
       "sources": [
         "LinkedIn"
-      ]
+      ],
+      "sponsorship_scan": "linkedin_register_only (tag=verified)"
     },
     {
       "title": "Servicenow Program Director",
@@ -2705,7 +3098,8 @@
       "status": "active",
       "sources": [
         "LinkedIn"
-      ]
+      ],
+      "sponsorship_scan": "linkedin_register_only (tag=verified)"
     },
     {
       "title": "ServiceNow Developer",
@@ -2731,7 +3125,8 @@
       "status": "active",
       "sources": [
         "LinkedIn"
-      ]
+      ],
+      "sponsorship_scan": "linkedin_register_only (tag=unknown)"
     },
     {
       "title": "ServiceNow Technical Architect",
@@ -2757,7 +3152,8 @@
       "status": "active",
       "sources": [
         "LinkedIn"
-      ]
+      ],
+      "sponsorship_scan": "linkedin_register_only (tag=unknown)"
     },
     {
       "title": "ITSM Resilience SME / IT Service Management SME \u2013 Third Party Management",
@@ -2783,7 +3179,8 @@
       "status": "active",
       "sources": [
         "LinkedIn"
-      ]
+      ],
+      "sponsorship_scan": "linkedin_register_only (tag=unknown)"
     },
     {
       "title": "ServiceNow Security Incident Response Engineer",
@@ -2809,7 +3206,8 @@
       "status": "active",
       "sources": [
         "LinkedIn"
-      ]
+      ],
+      "sponsorship_scan": "linkedin_register_only (tag=verified)"
     },
     {
       "title": "ServiceNow Security Incident Response (SIR) Engineer",
@@ -2835,7 +3233,8 @@
       "status": "active",
       "sources": [
         "LinkedIn"
-      ]
+      ],
+      "sponsorship_scan": "linkedin_register_only (tag=verified)"
     },
     {
       "title": "ServiceNow Technical Lead",
@@ -2861,7 +3260,8 @@
       "status": "active",
       "sources": [
         "LinkedIn"
-      ]
+      ],
+      "sponsorship_scan": "linkedin_register_only (tag=verified)"
     },
     {
       "title": "ServiceNow (Customer Experience/Design) Lead",
@@ -2887,7 +3287,8 @@
       "status": "active",
       "sources": [
         "LinkedIn"
-      ]
+      ],
+      "sponsorship_scan": "linkedin_register_only (tag=unknown)"
     },
     {
       "title": "Senior IT Project Manager (ServiceNow)",
@@ -2913,7 +3314,8 @@
       "status": "active",
       "sources": [
         "LinkedIn"
-      ]
+      ],
+      "sponsorship_scan": "linkedin_register_only (tag=verified)"
     }
   ]
 }
