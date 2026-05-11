@@ -1,20 +1,21 @@
 {
-  "updated": "2026-05-10",
-  "total": 150,
-  "total_active": 130,
-  "verified": 42,
-  "sc_blocked": 29,
+  "updated": "2026-05-11",
+  "total": 156,
+  "total_active": 134,
+  "verified": 45,
+  "sc_blocked": 28,
   "daily_snapshots": [
     "2026-05-06",
     "2026-05-07",
     "2026-05-08",
     "2026-05-09",
-    "2026-05-10"
+    "2026-05-10",
+    "2026-05-11"
   ],
   "sources": {
-    "LinkedIn": 73,
+    "LinkedIn": 76,
     "JobServe": 32,
-    "Hunt UK": 28,
+    "Hunt UK": 31,
     "ComputerJobs": 9,
     "Reed": 2,
     "Hays": 2,
@@ -26,6 +27,150 @@
     "CV-Library": 1
   },
   "jobs": [
+    {
+      "title": "SNOW SIR Engineer CGEMJP00339994",
+      "company": "Experis UK",
+      "location": "Knutsford, England, United Kingdom (Hybrid)",
+      "url": "https://www.linkedin.com/jobs/view/4410944955",
+      "source": "LinkedIn",
+      "visa_sponsorship": "agency_unknown",
+      "source_type": "direct",
+      "date_posted": "2026-05-11",
+      "salary_display": "Not listed",
+      "role_type": "unknown",
+      "remote": "unknown",
+      "employment": "unknown",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "description": "",
+      "first_seen": "2026-05-11",
+      "last_seen": "2026-05-11",
+      "sources": [
+        "LinkedIn"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "ServiceNow Developer , Assistant Vice President",
+      "company": "State Street",
+      "location": "London, England, United Kingdom (On-site)",
+      "url": "https://www.linkedin.com/jobs/view/4401764788",
+      "source": "LinkedIn",
+      "visa_sponsorship": "verified",
+      "source_type": "direct",
+      "date_posted": "2026-05-11",
+      "salary_display": "Not listed",
+      "role_type": "unknown",
+      "remote": "unknown",
+      "employment": "unknown",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "description": "",
+      "first_seen": "2026-05-11",
+      "last_seen": "2026-05-11",
+      "sources": [
+        "LinkedIn"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "ServiceNow Administrator / Technical Consultant",
+      "company": "CYSIAM",
+      "location": "United Kingdom (Remote)",
+      "url": "https://www.linkedin.com/jobs/view/4411890716",
+      "source": "LinkedIn",
+      "visa_sponsorship": "unknown",
+      "source_type": "direct",
+      "date_posted": "2026-05-11",
+      "salary_display": "Not listed",
+      "role_type": "unknown",
+      "remote": "unknown",
+      "employment": "unknown",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "description": "",
+      "first_seen": "2026-05-11",
+      "last_seen": "2026-05-11",
+      "sources": [
+        "LinkedIn"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "ServiceNow Architect",
+      "company": "Tata Consultancy Services UK Limited",
+      "location": "London Area, UK (hybrid)",
+      "salary_display": "Not listed",
+      "date_posted": "2026-05-08",
+      "url": "https://uk.linkedin.com/jobs/view/servicenow-architect-at-tata-consultancy-services-4410462317",
+      "source": "Hunt UK",
+      "source_type": "direct",
+      "role_type": "architect",
+      "remote": "hybrid",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "verified",
+      "description": "ServiceNow Architect at Tata Consultancy Services (TCS). London hybrid. Lead SN implementation projects. TCS is A-rated sponsor.",
+      "first_seen": "2026-05-11",
+      "last_seen": "2026-05-11",
+      "sources": [
+        "Hunt UK"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "ServiceNow Business Analyst, Associate",
+      "company": "Aquiline Capital Partners Limited (BlackRock)",
+      "location": "Edinburgh, UK",
+      "salary_display": "Not listed",
+      "date_posted": "2026-05-08",
+      "url": "https://huntukvisasponsors.com/company/blackrock-investment-management-uk-limited-z0yiqsckzomk",
+      "source": "Hunt UK",
+      "source_type": "direct",
+      "role_type": "analyst",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "expired",
+      "visa_sponsorship": "verified",
+      "description": "ServiceNow Business Analyst, Associate at Aquiline Capital Partners (BlackRock affiliate). Edinburgh. CoEI team - help grow ServiceNow Centre of Excellence.",
+      "first_seen": "2026-05-11",
+      "last_seen": "2026-05-11",
+      "sources": [
+        "Hunt UK"
+      ],
+      "status": "expired"
+    },
+    {
+      "title": "ServiceNow Telecommunications Service Management (TSM) Architect",
+      "company": "Ubique Systems UK Limited",
+      "location": "London (hybrid \u2013 3 days onsite)",
+      "salary_display": "Not listed",
+      "date_posted": "2026-04-29",
+      "url": "https://www.ubiquesystems.com/",
+      "source": "Hunt UK",
+      "source_type": "agency",
+      "role_type": "architect",
+      "remote": "hybrid",
+      "employment": "contract",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "agency_unknown",
+      "description": "ServiceNow TSM Architect at Ubique Systems UK. TSM, ITSM & ITOM expertise. Still listed 2026-05-11.",
+      "first_seen": "2026-05-11",
+      "last_seen": "2026-05-11",
+      "sources": [
+        "Hunt UK"
+      ],
+      "status": "active"
+    },
     {
       "title": "ServiceNow Solutions Advisory Lead",
       "company": "[view listing]",
@@ -44,7 +189,7 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 6 hours ago",
       "first_seen": "2026-05-10",
-      "last_seen": "2026-05-10",
+      "last_seen": "2026-05-11",
       "sources": [
         "JobServe"
       ],
@@ -164,7 +309,7 @@
       "link_status": "live",
       "description": "",
       "first_seen": "2026-05-10",
-      "last_seen": "2026-05-10",
+      "last_seen": "2026-05-11",
       "sources": [
         "LinkedIn"
       ],
@@ -236,7 +381,7 @@
       "link_status": "live",
       "description": "",
       "first_seen": "2026-05-10",
-      "last_seen": "2026-05-10",
+      "last_seen": "2026-05-11",
       "sources": [
         "LinkedIn"
       ],
@@ -260,7 +405,7 @@
       "link_status": "live",
       "description": "",
       "first_seen": "2026-05-10",
-      "last_seen": "2026-05-10",
+      "last_seen": "2026-05-11",
       "sources": [
         "LinkedIn"
       ],
@@ -356,7 +501,7 @@
       "visa_sponsorship": "sc_blocked",
       "description": "Posted 5 hours ago",
       "first_seen": "2026-05-09",
-      "last_seen": "2026-05-10",
+      "last_seen": "2026-05-11",
       "sources": [
         "JobServe"
       ],
@@ -380,7 +525,7 @@
       "visa_sponsorship": "sc_blocked",
       "description": "Posted 11 hours ago",
       "first_seen": "2026-05-09",
-      "last_seen": "2026-05-10",
+      "last_seen": "2026-05-11",
       "sources": [
         "JobServe"
       ],
@@ -473,15 +618,15 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "expired",
       "description": "Hot Market. Credible Delivery. Entrepreneurial Growth. AI Tailwinds. Strong Culture. Real Earning Potential\u2026 and an incredible founder-led leadership team\u2026 If you\u2019re a high-level sales achiever in the enterprise / public sector space , who enjoys bui",
       "visa_sponsorship": "agency_unknown",
       "first_seen": "2026-05-09",
-      "last_seen": "2026-05-10",
+      "last_seen": "2026-05-11",
       "sources": [
         "Reed"
       ],
-      "status": "active"
+      "status": "expired"
     },
     {
       "title": "Solution Architect ServiceNow",
@@ -502,7 +647,7 @@
       "description": "Solution Architect ServiceNow at Kinly (AVMI). Full-time permanent. Hybrid.",
       "sponsorship_scan": "verified_by_register_no_sc",
       "first_seen": "2026-05-09",
-      "last_seen": "2026-05-10",
+      "last_seen": "2026-05-11",
       "sources": [
         "Hunt UK"
       ],
@@ -550,7 +695,7 @@
       "visa_sponsorship": "agency_unknown",
       "description": "ServiceNow Product Manager - Banking. Grow ServiceNow centre of excellence.",
       "first_seen": "2026-05-09",
-      "last_seen": "2026-05-10",
+      "last_seen": "2026-05-11",
       "sources": [
         "Hunt UK"
       ],
@@ -646,7 +791,7 @@
       "visa_sponsorship": "sc_blocked",
       "description": "ServiceNow System Admin. BAE Systems - defense contractor, SC clearance required.",
       "first_seen": "2026-05-09",
-      "last_seen": "2026-05-10",
+      "last_seen": "2026-05-11",
       "sources": [
         "Hunt UK"
       ],
@@ -779,7 +924,7 @@
       "visa_sponsorship": "sc_blocked",
       "description": "Posted 14 hours ago",
       "first_seen": "2026-05-08",
-      "last_seen": "2026-05-10",
+      "last_seen": "2026-05-11",
       "sources": [
         "JobServe"
       ],
@@ -803,7 +948,7 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 12 hours ago",
       "first_seen": "2026-05-08",
-      "last_seen": "2026-05-10",
+      "last_seen": "2026-05-11",
       "sources": [
         "JobServe"
       ],
@@ -827,7 +972,7 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 1 day ago",
       "first_seen": "2026-05-08",
-      "last_seen": "2026-05-10",
+      "last_seen": "2026-05-11",
       "sources": [
         "JobServe"
       ],
@@ -851,7 +996,7 @@
       "visa_sponsorship": "sc_blocked",
       "description": "Posted 2 days ago",
       "first_seen": "2026-05-08",
-      "last_seen": "2026-05-10",
+      "last_seen": "2026-05-11",
       "sources": [
         "JobServe"
       ],
@@ -875,7 +1020,7 @@
       "visa_sponsorship": "sc_blocked",
       "description": "Posted 15 hours ago",
       "first_seen": "2026-05-08",
-      "last_seen": "2026-05-10",
+      "last_seen": "2026-05-11",
       "sources": [
         "JobServe"
       ],
@@ -899,7 +1044,7 @@
       "visa_sponsorship": "sc_blocked",
       "description": "Posted 2 days ago",
       "first_seen": "2026-05-08",
-      "last_seen": "2026-05-10",
+      "last_seen": "2026-05-11",
       "sources": [
         "JobServe"
       ],
@@ -908,10 +1053,10 @@
     {
       "title": "ServiceNow Senior Technical Consultant - DV Cleared - Contract",
       "company": "[view listing]",
-      "location": "600.00 Daily - 750.00 Daily INSIDE IR35 GBP",
-      "salary_display": "Not listed",
+      "location": "England",
+      "salary_display": "\u00a3600 - \u00a3750 per day INSIDE IR35",
       "date_posted": "2026-05-08",
-      "url": "https://www.jobserve.com/gb/en/mob/job/1E42FAFA538EB2C0CE/",
+      "url": "https://www.jobserve.com/gb/en/mob/job/D25ABD5DCBEC707D0F/",
       "source": "JobServe",
       "source_type": "aggregator",
       "role_type": "consultant",
@@ -923,7 +1068,7 @@
       "visa_sponsorship": "sc_blocked",
       "description": "Posted 16 hours ago",
       "first_seen": "2026-05-08",
-      "last_seen": "2026-05-10",
+      "last_seen": "2026-05-11",
       "sources": [
         "JobServe"
       ],
@@ -947,7 +1092,7 @@
       "visa_sponsorship": "sc_blocked",
       "description": "Posted 2 days ago",
       "first_seen": "2026-05-08",
-      "last_seen": "2026-05-10",
+      "last_seen": "2026-05-11",
       "sources": [
         "JobServe"
       ],
@@ -971,7 +1116,7 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 1 day ago",
       "first_seen": "2026-05-08",
-      "last_seen": "2026-05-10",
+      "last_seen": "2026-05-11",
       "sources": [
         "JobServe"
       ],
@@ -995,7 +1140,7 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 6 days ago",
       "first_seen": "2026-05-08",
-      "last_seen": "2026-05-10",
+      "last_seen": "2026-05-11",
       "sources": [
         "JobServe"
       ],
@@ -1019,7 +1164,7 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 1 day ago",
       "first_seen": "2026-05-08",
-      "last_seen": "2026-05-10",
+      "last_seen": "2026-05-11",
       "sources": [
         "JobServe"
       ],
@@ -1043,7 +1188,7 @@
       "visa_sponsorship": "sc_blocked",
       "description": "Posted 14 hours ago",
       "first_seen": "2026-05-08",
-      "last_seen": "2026-05-10",
+      "last_seen": "2026-05-11",
       "sources": [
         "JobServe"
       ],
@@ -1067,7 +1212,7 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 20 hours ago",
       "first_seen": "2026-05-08",
-      "last_seen": "2026-05-10",
+      "last_seen": "2026-05-11",
       "sources": [
         "JobServe"
       ],
@@ -1091,7 +1236,7 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 1 day ago",
       "first_seen": "2026-05-08",
-      "last_seen": "2026-05-10",
+      "last_seen": "2026-05-11",
       "sources": [
         "JobServe"
       ],
@@ -1115,7 +1260,7 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 2 days ago",
       "first_seen": "2026-05-08",
-      "last_seen": "2026-05-10",
+      "last_seen": "2026-05-11",
       "sources": [
         "JobServe"
       ],
@@ -1139,7 +1284,7 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 1 day ago",
       "first_seen": "2026-05-08",
-      "last_seen": "2026-05-10",
+      "last_seen": "2026-05-11",
       "sources": [
         "JobServe"
       ],
@@ -1175,7 +1320,7 @@
       "location": "475.00 Daily - 500.00 Daily GBP",
       "salary_display": "Not listed",
       "date_posted": "2026-05-08",
-      "url": "https://www.jobserve.com/gb/en/mob/job/025E53B71BBC9AB2D4/",
+      "url": "https://www.jobserve.com/gb/en/mob/job/B2CBF21DCFFF688DE2/",
       "source": "JobServe",
       "source_type": "aggregator",
       "role_type": "architect",
@@ -1187,7 +1332,7 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 4 days ago",
       "first_seen": "2026-05-08",
-      "last_seen": "2026-05-10",
+      "last_seen": "2026-05-11",
       "sources": [
         "JobServe"
       ],
@@ -1235,7 +1380,7 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 7 hours ago",
       "first_seen": "2026-05-08",
-      "last_seen": "2026-05-10",
+      "last_seen": "2026-05-11",
       "sources": [
         "JobServe"
       ],
@@ -1247,7 +1392,7 @@
       "location": "not provided GBP",
       "salary_display": "Not listed",
       "date_posted": "2026-05-08",
-      "url": "https://www.jobserve.com/gb/en/mob/job/D5587BD40408D43BBE/",
+      "url": "https://www.jobserve.com/gb/en/mob/job/A0614ED11D3884D481/",
       "source": "JobServe",
       "source_type": "aggregator",
       "role_type": "consultant",
@@ -1259,7 +1404,7 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 6 days ago",
       "first_seen": "2026-05-08",
-      "last_seen": "2026-05-10",
+      "last_seen": "2026-05-11",
       "sources": [
         "JobServe"
       ],
@@ -1283,7 +1428,7 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 23 hours ago",
       "first_seen": "2026-05-08",
-      "last_seen": "2026-05-10",
+      "last_seen": "2026-05-11",
       "sources": [
         "JobServe"
       ],
@@ -1359,7 +1504,7 @@
       "sc_clearance": false,
       "grad_scheme": false,
       "link_status": "live",
-      "visa_sponsorship": "sc_blocked",
+      "visa_sponsorship": "unknown",
       "description": "ServiceNow Developer. Remote (must be UK-based). \u00a345k-\u00a348k. 12-month fixed term contract initially. Analyse and understand ServiceNow environments.",
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-05-06",
@@ -1553,7 +1698,7 @@
       "visa_sponsorship": "agency_unknown",
       "description": "ITAM Product Manager - ServiceNow HAM/SAM. Posted by recruitment agency \u2014 verify sponsorship with actual employer.",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-10",
+      "last_seen": "2026-05-11",
       "status": "active",
       "sources": [
         "Reed"

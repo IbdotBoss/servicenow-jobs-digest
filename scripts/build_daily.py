@@ -5,7 +5,7 @@ from datetime import datetime
 
 REPO = os.path.expanduser("~/hermes-workspace/servicenow-jobs-digest/docs/data")
 DAILY_DIR = os.path.join(REPO, "daily")
-TODAY = "2026-05-10"
+TODAY = "2026-05-11"
 
 os.makedirs(DAILY_DIR, exist_ok=True)
 
@@ -60,8 +60,9 @@ if os.path.exists(reed_file):
     source_counts['Reed'] = len(reed_jobs)
     print(f"Reed: {len(reed_jobs)} jobs")
 
-# 4. Hunt UK entries (from web_extract results)
+# 4. Hunt UK entries (from web_extract results 2026-05-11)
 # Sponsor-checked companies with valid sponsor licences
+# Each confirmed present on Hunt UK today or cross-referenced with career page
 hunt_uk_jobs = [
     {
         "title": "Solution Architect ServiceNow",
@@ -79,16 +80,16 @@ hunt_uk_jobs = [
         "grad_scheme": False,
         "link_status": "live",
         "visa_sponsorship": "verified",
-        "description": "Solution Architect ServiceNow at Kinly (AVMI). Full-time permanent. Hybrid.",
+        "description": "Solution Architect ServiceNow at Kinly (AVMI). Full-time permanent. Hybrid. Still listed on Hunt UK 2026-05-11.",
         "sponsorship_scan": "verified_by_register_no_sc"
     },
     {
-        "title": "ServiceNow PreSales Architect",
-        "company": "Solution17 Ltd",
-        "location": "London",
+        "title": "ServiceNow Architect",
+        "company": "Tata Consultancy Services UK Limited",
+        "location": "London Area, UK (hybrid)",
         "salary_display": "Not listed",
-        "date_posted": "2026-05-01",
-        "url": "https://solution17.com/careers/",
+        "date_posted": "2026-05-08",
+        "url": "https://uk.linkedin.com/jobs/view/servicenow-architect-at-tata-consultancy-services-4410462317",
         "source": "Hunt UK",
         "source_type": "direct",
         "role_type": "architect",
@@ -98,61 +99,25 @@ hunt_uk_jobs = [
         "grad_scheme": False,
         "link_status": "live",
         "visa_sponsorship": "verified",
-        "description": "ServiceNow PreSales Architect at Solution17 Ltd. Client-facing presales supporting ESM growth."
+        "description": "ServiceNow Architect at Tata Consultancy Services (TCS). London hybrid. Lead SN implementation projects. TCS is A-rated sponsor."
     },
     {
-        "title": "ServiceNow Engineer",
-        "company": "Freshfields Service Company",
-        "location": "Manchester Area, UK",
+        "title": "ServiceNow Business Analyst, Associate",
+        "company": "Aquiline Capital Partners Limited (BlackRock)",
+        "location": "Edinburgh, UK",
         "salary_display": "Not listed",
-        "date_posted": "2026-04-30",
-        "url": "https://www.freshfields.com/en-gb/careers/",
+        "date_posted": "2026-05-08",
+        "url": "https://huntukvisasponsors.com/company/blackrock-investment-management-uk-limited-z0yiqsckzomk",
         "source": "Hunt UK",
         "source_type": "direct",
-        "role_type": "engineer",
-        "remote": "hybrid",
+        "role_type": "analyst",
+        "remote": "onsite",
         "employment": "permanent",
         "sc_clearance": False,
         "grad_scheme": False,
         "link_status": "live",
         "visa_sponsorship": "verified",
-        "description": "ServiceNow Engineer at Freshfields. Shape, enhance and support a mature ServiceNow platform."
-    },
-    {
-        "title": "ServiceNow Technical Lead – Insurance/FSO",
-        "company": "CSC Computer Sciences Limited (DXC Technology)",
-        "location": "United Kingdom (hybrid/flexible)",
-        "salary_display": "Not listed",
-        "date_posted": "2026-04-30",
-        "url": "https://careers.dxc.com/",
-        "source": "Hunt UK",
-        "source_type": "direct",
-        "role_type": "lead",
-        "remote": "hybrid",
-        "employment": "permanent",
-        "sc_clearance": False,
-        "grad_scheme": False,
-        "link_status": "live",
-        "visa_sponsorship": "verified",
-        "description": "ServiceNow Technical Lead at DXC Technology. Lead insurance workflow solutions on ServiceNow FSO."
-    },
-    {
-        "title": "ServiceNow Services Sales Specialist",
-        "company": "INETUM DIGITAL SERVICES UK LIMITED",
-        "location": "London Area, UK",
-        "salary_display": "Not listed",
-        "date_posted": "2026-04-30",
-        "url": "https://www.inetum.com/en/careers",
-        "source": "Hunt UK",
-        "source_type": "direct",
-        "role_type": "sales",
-        "remote": "hybrid",
-        "employment": "permanent",
-        "sc_clearance": False,
-        "grad_scheme": False,
-        "link_status": "live",
-        "visa_sponsorship": "verified",
-        "description": "ServiceNow Services Sales Specialist at Inetum. Building new client base across Europe."
+        "description": "ServiceNow Business Analyst, Associate at Aquiline Capital Partners (BlackRock affiliate). Edinburgh. CoEI team - help grow ServiceNow Centre of Excellence."
     },
     {
         "title": "ServiceNow System Admin",
@@ -173,7 +138,7 @@ hunt_uk_jobs = [
         "description": "ServiceNow System Admin at BAE Systems. Requires Security Clearance. Up to £45,000."
     },
 ]
-# Agency jobs from Hunt UK (SThree, Harvey Nash, X4 Group, Ubique)
+# Agency jobs from Hunt UK (confirmed on 2026-05-11)
 hunt_agency_jobs = [
     {
         "title": "ServiceNow Product Manager (Banking)",
@@ -191,46 +156,10 @@ hunt_agency_jobs = [
         "grad_scheme": False,
         "link_status": "live",
         "visa_sponsorship": "agency_unknown",
-        "description": "ServiceNow Product Manager - Banking at SThree. Grow ServiceNow centre of excellence in banking."
+        "description": "ServiceNow Product Manager - Banking at SThree. Grow ServiceNow centre of excellence in banking. Still listed 2026-05-11."
     },
     {
-        "title": "CMDB Specialist (ServiceNow)",
-        "company": "Harvey Nash Limited",
-        "location": "United Kingdom (Remote)",
-        "salary_display": "Not listed",
-        "date_posted": "2026-04-30",
-        "url": "https://www.harveynash.com/",
-        "source": "Hunt UK",
-        "source_type": "agency",
-        "role_type": "specialist",
-        "remote": "remote",
-        "employment": "permanent",
-        "sc_clearance": False,
-        "grad_scheme": False,
-        "link_status": "live",
-        "visa_sponsorship": "agency_unknown",
-        "description": "CMDB Specialist (ServiceNow) at Harvey Nash. Global manufacturing org, 15M+ CIs, 300k employees."
-    },
-    {
-        "title": "ServiceNow Architect (TSM)",
-        "company": "X4 Group Ltd",
-        "location": "London (hybrid – 3 days/week)",
-        "salary_display": "£650/day (Outside IR35)",
-        "date_posted": "2026-04-29",
-        "url": "https://www.x4group.com/",
-        "source": "Hunt UK",
-        "source_type": "agency",
-        "role_type": "architect",
-        "remote": "hybrid",
-        "employment": "contract",
-        "sc_clearance": False,
-        "grad_scheme": False,
-        "link_status": "live",
-        "visa_sponsorship": "agency_unknown",
-        "description": "ServiceNow Architect (TSM) at X4 Group. 6 months extendable contract. £650/day Outside IR35."
-    },
-    {
-        "title": "ServiceNow Architect – TSM",
+        "title": "ServiceNow Telecommunications Service Management (TSM) Architect",
         "company": "Ubique Systems UK Limited",
         "location": "London (hybrid – 3 days onsite)",
         "salary_display": "Not listed",
@@ -245,7 +174,7 @@ hunt_agency_jobs = [
         "grad_scheme": False,
         "link_status": "live",
         "visa_sponsorship": "agency_unknown",
-        "description": "ServiceNow Architect (TSM) at Ubique Systems UK. TSM, ITSM & ITOM expertise. Telecom domain."
+        "description": "ServiceNow TSM Architect at Ubique Systems UK. TSM, ITSM & ITOM expertise. Still listed 2026-05-11."
     },
 ]
 
