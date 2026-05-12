@@ -13,6 +13,7 @@
     --sponsor: #0d9488; --sponsor-bg: #f0fdfa;
     --sc: #dc2626; --sc-bg: #fef2f2;
     --agency: #6b7280; --agency-bg: #f3f4f6;
+    --licence: #7c3aed; --licence-bg: #f5f3ff;
     --stale: #d97706;
   }
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -34,10 +35,13 @@
   .logo { font-weight: 700; font-size: 15px; color: var(--text); white-space: nowrap; }
   .logo span { color: var(--accent); }
   .topbar-stats {
-    display: flex; gap: 16px; margin-left: auto;
+    display: flex; gap: 14px; margin-left: auto;
     font-size: 12px; color: var(--text-light);
   }
   .topbar-stats strong { color: var(--text); }
+  .stat-verified { color: var(--sponsor); }
+  .stat-licenced { color: var(--licence); }
+  .stat-sc { color: var(--sc); }
 
   /* ── Main layout ── */
   .main { max-width: 960px; margin: 0 auto; padding: 0 24px 80px; }
@@ -50,6 +54,18 @@
   .page-header h1 { font-size: 22px; font-weight: 700; margin-bottom: 4px; }
   .page-header p { font-size: 13px; color: var(--text-light); }
 
+  /* ── Date selector ── */
+  .date-selector {
+    margin-top: 12px; display: flex; align-items: center; gap: 8px;
+  }
+  .date-selector label { font-size: 12px; color: var(--text-light); }
+  .date-selector select {
+    font-size: 13px; padding: 4px 8px;
+    border: 1px solid var(--border); border-radius: 4px;
+    background: #fff; color: var(--text); cursor: pointer;
+  }
+  .date-count { font-size: 12px; color: var(--text-light); }
+
   /* ── Filters ── */
   .filter-bar {
     display: flex; flex-wrap: wrap; gap: 6px 20px;
@@ -60,7 +76,7 @@
     font-weight: 600; font-size: 11px; text-transform: uppercase;
     letter-spacing: 0.06em; color: var(--text-light);
   }
-  .filter-group { display: flex; gap: 4px; }
+  .filter-group { display: flex; gap: 4px; flex-wrap: wrap; }
   .filter-btn {
     cursor: pointer; padding: 4px 10px; border-radius: 4px;
     border: 1px solid transparent; background: none;
@@ -108,6 +124,7 @@
   .job-title a:visited { color: #551a8b; }
   .job-title a:hover { text-decoration: underline; }
   .job-title span { color: var(--text); }
+
   .job-title .tag {
     display: inline-block; font-size: 10px; font-weight: 600; 
     text-transform: uppercase; letter-spacing: 0.05em;
@@ -119,6 +136,12 @@
   .tag-grad { color: var(--sponsor); background: var(--sponsor-bg); }
 
   .job-company { font-size: 13px; color: var(--text-mid); margin-bottom: 2px; }
+  .job-company .licence-badge {
+    display: inline-block; font-size: 10px; font-weight: 500;
+    color: var(--licence); background: var(--licence-bg);
+    padding: 0 5px; border-radius: 3px; margin-left: 4px;
+    vertical-align: middle; position: relative; top: -1px;
+  }
   .job-location { font-size: 12px; color: var(--text-light); }
   .job-meta {
     display: flex; flex-wrap: wrap; gap: 4px 8px;
@@ -143,9 +166,10 @@
     font-size: 12px; margin-top: 6px; padding: 6px 10px;
     border-radius: 4px; line-height: 1.45;
   }
-  .job-note.sponsor { color: var(--sponsor); background: var(--sponsor-bg); }
+  .job-note.verified { color: var(--sponsor); background: var(--sponsor-bg); }
   .job-note.sc-blocked { color: var(--sc); background: var(--sc-bg); }
   .job-note.agency { color: var(--agency); background: var(--agency-bg); }
+  .job-note.unavailable { color: var(--sc); background: var(--sc-bg); }
   .job-note.warn { color: var(--stale); background: #fffbeb; }
 
   .job-fallback { font-size: 12px; color: var(--text-light); margin-top: 4px; }
@@ -180,12 +204,12 @@
   <div class="page-header">
     <h1>ServiceNow Roles — United Kingdom</h1>
     <p>Cross-referenced against the UK Government sponsor register. Refreshed daily.</p>
-    <div class="date-selector" style="margin-top:12px;display:flex;align-items:center;gap:8px;">
-      <span style="font-size:12px;color:var(--text-light);">Viewing:</span>
-      <select id="date-select" style="font-size:13px;padding:4px 8px;border:1px solid var(--border);border-radius:4px;background:#fff;color:var(--text);cursor:pointer;">
+    <div class="date-selector">
+      <label for="date-select">Viewing:</label>
+      <select id="date-select">
         <option value="latest">Latest (active jobs)</option>
       </select>
-      <span id="date-count" style="font-size:12px;color:var(--text-light);"></span>
+      <span class="date-count" id="date-count"></span>
     </div>
   </div>
 
@@ -193,11 +217,17 @@
     <span class="filter-label">Sponsorship</span>
     <div class="filter-group" data-filter="sponsorship">
       <span class="filter-btn active" data-value="all">All</span>
-      <span class="filter-btn" data-value="sponsor_verified">Sponsored</span>
-      <span class="filter-btn" data-value="sc_blocked">SC Blocked</span>
-      <span class="filter-btn" data-value="agency_unknown">Agency</span>
-      <span class="filter-btn" data-value="unavailable">Not Available</span>
+      <span class="filter-btn" data-value="verified">Verified</span>
+      <span class="filter-btn" data-value="sc_blocked">SC/DV</span>
       <span class="filter-btn" data-value="unknown">Unknown</span>
+      <span class="filter-btn" data-value="agency_unknown">Agency</span>
+      <span class="filter-btn" data-value="unavailable">Unavailable</span>
+    </div>
+    <span class="filter-label">Licence</span>
+    <div class="filter-group" data-filter="licence">
+      <span class="filter-btn active" data-value="all">All</span>
+      <span class="filter-btn" data-value="licenced">Licenced Co.</span>
+      <span class="filter-btn" data-value="unlicenced">Unlicenced</span>
     </div>
     <span class="filter-label">Role</span>
     <div class="filter-group" data-filter="role">
@@ -223,25 +253,25 @@
 
   <footer>
     <p>Updated <strong id="update-date">daily</strong> · Data from LinkedIn, JobServe, Reed, Hunt UK, and company career pages.</p>
-    <p>Sponsor data via <a href="https://www.gov.uk/government/publications/register-of-licensed-sponsors-workers">UK Government register</a> · <a href="all-jobs.html">Full archive</a></p>
+    <p>Sponsor register via <a href="https://www.gov.uk/government/publications/register-of-licensed-sponsors-workers">UK Government</a> · <span class="stat-licenced">🟣 Licenced</span> = company holds A-rated sponsor licence · <span class="stat-verified">🟢 Verified</span> = role confirmed sponsorship <a href="all-jobs.html">Full archive →</a></p>
     <p style="margin-top: 8px; color: #c4c4c4;">Built by <a href="https://github.com/IbdotBoss/servicenow-jobs-digest" style="color: inherit;">Mr Faajii</a> & Stage</p>
   </footer>
 </div>
 
 <script>
 let allJobs = [];
-let filters = { sponsorship: 'all', role: 'all' };
+let filters = { sponsorship: 'all', licence: 'all', role: 'all' };
 let sortBy = 'date';
 let currentView = 'latest';
 let dailySnapshots = [];
+let lastUpdated = '';
 
 async function init() {
-  // Load master first to get daily snapshot list
   const masterResp = await fetch('data/master.json?t=' + Date.now());
   const masterData = await masterResp.json();
   dailySnapshots = (masterData.daily_snapshots || []).sort().reverse();
+  lastUpdated = masterData.updated || 'daily';
   
-  // Populate date selector
   const select = document.getElementById('date-select');
   dailySnapshots.forEach(date => {
     const opt = document.createElement('option');
@@ -250,11 +280,11 @@ async function init() {
     select.appendChild(opt);
   });
   
-  // Default: load latest (active jobs from master)
   allJobs = masterData.jobs.filter(j => j.status === 'active');
   updateTopbar();
   render();
-  document.getElementById('date-count').textContent = allJobs.length + ' jobs';
+  document.getElementById('date-count').textContent = allJobs.length + ' active jobs';
+  document.getElementById('update-date').textContent = lastUpdated;
 }
 
 async function loadDate(date) {
@@ -263,40 +293,48 @@ async function loadDate(date) {
     const resp = await fetch('data/jobs.json?t=' + Date.now());
     const data = await resp.json();
     allJobs = data.jobs || [];
+    lastUpdated = data.updated || 'daily';
   } else {
     const resp = await fetch('data/daily/jobs_' + date + '.json');
     const data = await resp.json();
     allJobs = data.jobs || [];
-    // Add first_seen if missing
     allJobs.forEach(j => { if (!j.first_seen) j.first_seen = date; });
+    lastUpdated = date;
   }
   updateTopbar();
   render();
   document.getElementById('date-count').textContent = allJobs.length + ' jobs on ' + date;
-  document.getElementById('update-date').textContent = date;
+  document.getElementById('update-date').textContent = lastUpdated;
 }
 
-// Date selector handler
 document.getElementById('date-select').addEventListener('change', e => {
   loadDate(e.target.value);
 });
 
 function updateTopbar() {
   const total = allJobs.length;
-  const verified = allJobs.filter(j => j.visa_sponsorship === 'sponsor_verified' || j.visa_sponsorship === 'verified').length;
+  const verified = allJobs.filter(j => j.visa_sponsorship === 'verified' || j.visa_sponsorship === 'sponsor_verified').length;
+  const licenced = allJobs.filter(j => j.sponsor_licence).length;
   const sc = allJobs.filter(j => j.visa_sponsorship === 'sc_blocked').length;
   document.getElementById('topbar-stats').innerHTML = 
-    `<span>${total} roles</span><span>${verified} sponsored</span><span>${sc} SC-blocked</span>`;
+    `<span><strong>${total}</strong> roles</span>` +
+    `<span class="stat-verified"><strong>${verified}</strong> verified</span>` +
+    `<span class="stat-licenced"><strong>${licenced}</strong> licenced</span>` +
+    `<span class="stat-sc"><strong>${sc}</strong> SC-blocked</span>`;
 }
 
 function getFiltered() {
   return allJobs.filter(j => {
+    // Sponsorship filter
     if (filters.sponsorship !== 'all') {
-      // Map old 'verified' to new 'sponsor_verified'
       const sp = j.visa_sponsorship;
-      if (filters.sponsorship === 'sponsor_verified' && sp !== 'sponsor_verified' && sp !== 'verified') return false;
-      if (filters.sponsorship !== 'sponsor_verified' && sp !== filters.sponsorship) return false;
+      if (filters.sponsorship === 'verified' && sp !== 'verified' && sp !== 'sponsor_verified') return false;
+      if (filters.sponsorship !== 'verified' && sp !== filters.sponsorship) return false;
     }
+    // Licence filter
+    if (filters.licence === 'licenced' && !j.sponsor_licence) return false;
+    if (filters.licence === 'unlicenced' && j.sponsor_licence) return false;
+    // Role filter
     if (filters.role !== 'all' && j.role_type !== filters.role) return false;
     return true;
   });
@@ -314,19 +352,19 @@ function sortJobs(jobs) {
 function noteHtml(j) {
   const sp = j.visa_sponsorship;
   if (sp === 'unavailable') {
-    return '<div class="job-note sc-blocked">Visa sponsorship NOT available for this role.</div>';
+    return '<div class="job-note unavailable">Visa sponsorship NOT available for this role.</div>';
   }
   if (sp === 'sc_blocked') {
-    return '<div class="job-note sc-blocked">SC/DV clearance required → 5yr UK residency. Sponsorship not possible.</div>';
+    return '<div class="job-note sc-blocked">SC/DV clearance required — 5yr UK residency. Sponsorship not possible.</div>';
   }
-  if ((sp === 'sponsor_verified' || sp === 'verified') && j.link_status === 'expired') {
-    return '<div class="job-note sponsor">✓ Sponsor verified — Company holds valid UK sponsor licence. Listing expired.</div>';
+  if ((sp === 'verified' || sp === 'sponsor_verified') && j.link_status === 'expired') {
+    return '<div class="job-note verified">✓ Sponsor verified — Company holds valid UK sponsor licence. Listing expired.</div>';
   }
-  if ((sp === 'sponsor_verified' || sp === 'verified') && j.link_status === 'stale') {
-    return '<div class="job-note sponsor">✓ Sponsor verified — Posted ' + j.date_posted + ', may be filled.</div>';
+  if ((sp === 'verified' || sp === 'sponsor_verified') && j.link_status === 'stale') {
+    return '<div class="job-note verified">✓ Sponsor verified — Posted ' + j.date_posted + ', may be filled.</div>';
   }
-  if (sp === 'sponsor_verified' || sp === 'verified') {
-    return '<div class="job-note sponsor">✓ Sponsor verified — Company holds valid UK sponsor licence.</div>';
+  if (sp === 'verified' || sp === 'sponsor_verified') {
+    return '<div class="job-note verified">✓ Sponsor verified — Role confirmed offers visa sponsorship.</div>';
   }
   if (sp === 'agency_unknown') {
     return '<div class="job-note agency">Agency listing — sponsorship depends on actual employer.</div>';
@@ -354,13 +392,11 @@ function render() {
   list.innerHTML = sorted.map(j => {
     const rowClass = (j.link_status === 'expired') ? ' expired' : '';
     
-    // Title with tags
     let titleTags = '';
     if (j.link_status === 'expired') titleTags += '<span class="tag tag-expired">Expired</span>';
     if (j.link_status === 'stale') titleTags += '<span class="tag tag-stale">Stale</span>';
     if (j.grad_scheme) titleTags += '<span class="tag tag-grad">Grad</span>';
 
-    // Meta line
     let metaItems = [];
     if (j.remote === 'remote') metaItems.push('Remote');
     else if (j.remote === 'hybrid') metaItems.push('Hybrid');
@@ -371,24 +407,29 @@ function render() {
     if (j.source) metaItems.push(j.source);
     let meta = metaItems.length ? '<div class="job-meta">' + metaItems.map(m => '<span>' + m + '</span>').join(' · ') + '</div>' : '';
 
-    let salaryClass = (j.salary_display === 'Not listed' || !j.salary_display) ? ' job-salary-na' : '';
+    let salaryClass = (!j.salary_display || j.salary_display === 'Not listed') ? ' job-salary-na' : '';
     let salary = j.salary_display || 'Not listed';
 
     let note = noteHtml(j);
     let fallback = fallbackHtml(j);
     
-    let titleHtml = (j.url && j.link_status !== 'expired')
+    let canApply = j.url && j.link_status !== 'expired';
+    let titleHtml = canApply
       ? '<a href="' + j.url + '" target="_blank" rel="noopener">' + j.title + '</a>'
       : '<span>' + j.title + '</span>';
 
-    let applyBtn = (j.url && j.link_status !== 'expired')
+    let applyBtn = canApply
       ? '<a class="job-apply" href="' + j.url + '" target="_blank" rel="noopener">Apply →</a>'
+      : '';
+
+    let licenceBadge = j.sponsor_licence
+      ? '<span class="licence-badge">Licenced</span>'
       : '';
 
     return '<div class="job-row' + rowClass + '">' +
       '<div class="job-main">' +
         '<div class="job-title">' + titleHtml + titleTags + '</div>' +
-        '<div class="job-company">' + j.company + '</div>' +
+        '<div class="job-company">' + j.company + licenceBadge + '</div>' +
         '<div class="job-location">' + (j.location || 'UK') + '</div>' +
         meta +
         note +

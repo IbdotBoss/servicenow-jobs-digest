@@ -17,8 +17,8 @@ MASTER_FILE = os.path.join(REPO, "master.json")
 JOBS_FILE = os.path.join(REPO, "jobs.json")  # active jobs copy for index page
 
 TODAY = datetime.now().strftime("%Y-%m-%d")
-STALE_DAYS = 7
-EXPIRED_DAYS = 30
+STALE_DAYS = 14
+EXPIRED_DAYS = 60
 
 def job_key(job):
     title = job.get('title', '').lower().strip()
@@ -60,6 +60,7 @@ def rebuild():
                 j['first_seen'] = date_str
                 j['last_seen'] = date_str
                 j.setdefault('sources', [j.get('source', 'unknown')])
+                j.setdefault('sponsor_licence', False)
                 all_jobs[key] = j
             else:
                 existing = all_jobs[key]
@@ -72,23 +73,44 @@ def rebuild():
                 for field in ['salary_display', 'salary_min', 'salary_max', 'url', 'location']:
                     if j.get(field):
                         existing[field] = j[field]
+                # Propagate sponsor_licence: once true, stays true
+                if j.get('sponsor_licence'):
+                    existing['sponsor_licence'] = True
                 # Better sponsorship tag wins
                 if tag not in ('unknown', 'agency_unknown', None):
                     existing['visa_sponsorship'] = tag
     
     # Convert to list and compute status
     jobs_list = list(all_jobs.values())
+    
+    # Dead sources — jobs from these are always expired
+    DEAD_SOURCES = ['ComputerJobs', 'Totaljobs', 'CV-Library', 'Deerfoot']
+    
     BAD_URL_PATTERNS = ['/mob/JobSearch/Results?q=', 'huntukvisasponsors.com/jobs?q=',
                         'huntukvisasponsors.com/company/', 'computerjobs.com',
                         'totaljobs.com', 'cv-library.co.uk', 'deerfoot.co.uk/jobs']
     for j in jobs_list:
+        # Propagate sponsor_licence from any daily snapshot
+        j.setdefault('sponsor_licence', False)
+        
         days_since = (datetime.now() - datetime.strptime(j['last_seen'], "%Y-%m-%d")).days
-        if days_since > EXPIRED_DAYS:
+        
+        # Dead source → expired
+        if j.get('source', '') in DEAD_SOURCES:
+            j['status'] = 'expired'
+            j['link_status'] = 'expired'
+        # Empty or missing URL → expired
+        elif not j.get('url') or len(j.get('url', '').strip()) < 5:
+            j['status'] = 'expired'
+            j['link_status'] = 'expired'
+        elif days_since > EXPIRED_DAYS:
             j['status'] = 'expired'
         elif days_since > STALE_DAYS:
             j['status'] = 'stale'
+            j['link_status'] = 'stale'
         else:
             j['status'] = 'active'
+        
         # Also expire jobs with bad/unfixable URLs
         url = j.get('url', '')
         for p in BAD_URL_PATTERNS:
@@ -113,6 +135,7 @@ def rebuild():
         "total_active": sum(1 for j in jobs_list if j['status'] == 'active'),
         "verified": tags.get('sponsor_verified', 0) + tags.get('verified', 0),
         "sc_blocked": tags.get('sc_blocked', 0),
+        "licenced_sponsors": sum(1 for j in jobs_list if j.get('sponsor_licence')),
         "daily_snapshots": daily_dates,
         "sources": dict(sources.most_common(20)),
         "jobs": jobs_list
@@ -125,6 +148,8 @@ def rebuild():
     # Active-only copy for index page
     active = [j for j in jobs_list if j['status'] == 'active']
     active_master = {**master, "total": len(active), "jobs": active}
+    # Count licenced sponsors in active jobs too
+    active_master['licenced_sponsors'] = sum(1 for j in active if j.get('sponsor_licence'))
     with open(JOBS_FILE, 'w') as f:
         json.dump(active_master, f, indent=2)
     

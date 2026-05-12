@@ -1,57 +1,116 @@
 #!/usr/bin/env python3
 """
-Sponsorship language scanner for job listings.
-Scans job detail pages for sponsorship/SC/residency language.
-Returns updated visa_sponsorship tag.
+Sponsorship scanner v2.0 — DATA, not judgment.
+Scans job listings for:
+  1. Sponsor licence cross-reference (company on register → sponsor_licence flag)
+  2. SC/DV clearance language → visa_sponsorship = sc_blocked
+  3. "No sponsorship" language → visa_sponsorship = unavailable
+
+Does NOT output sponsor_verified or verified — that decision is manual.
 
 Usage: python3 scripts/scan_sponsorship.py [--dry-run]
 """
 
-import json, re, sys, os, argparse
+import json, re, sys, os, csv, argparse
 import urllib.request
 from pathlib import Path
+from collections import Counter
 import html as htmlmod
 
-JOBS_FILE = os.path.expanduser("~/hermes-workspace/servicenow-jobs-digest/docs/data/jobs.json")
+REPO = os.path.expanduser("~/hermes-workspace/servicenow-jobs-digest")
+JOBS_FILE = os.path.join(REPO, "docs/data/jobs.json")
+MASTER_FILE = os.path.join(REPO, "docs/data/master.json")
+SPONSOR_CSV = os.path.expanduser("~/hermes-workspace/Faajaa-Share/2026-05-06_-_Worker_and_Temporary_Worker.csv")
 UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36"
 
 # Patterns that mean NO sponsorship
 NO_SPONSOR_PATTERNS = [
-    (r'no\s+(visa\s+)?sponsorship', 'NO_SPONSORSHIP', 'Job states no visa sponsorship'),
-    (r'cannot\s+(provide\s+)?sponsor', 'NO_SPONSORSHIP', 'Job cannot sponsor'),
-    (r'unable\s+to\s+sponsor', 'NO_SPONSORSHIP', 'Job unable to sponsor'),
-    (r'does\s+not\s+(offer|provide)\s+(visa\s+)?sponsorship', 'NO_SPONSORSHIP', 'No sponsorship offered'),
-    (r'no\s+need\s+for\s+visa\s+sponsorship', 'NO_SPONSORSHIP', 'No need for visa sponsorship'),
-    (r'will\s+not\s+sponsor', 'NO_SPONSORSHIP', 'Will not sponsor'),
-]
-
-# Patterns that mean RIGHT-TO-WORK required (effectively blocks sponsorship)
-RTW_PATTERNS = [
-    (r'must\s+have\s+(the\s+)?right\s+to\s+work', 'RTW_REQUIRED', 'Must have right to work'),
-    (r'must\s+already\s+have\s+(the\s+)?right\s+to\s+work', 'RTW_REQUIRED', 'Must already have right to work'),
-    (r'must\s+be\s+eligible\s+to\s+work\s+in\s+the\s+uk', 'RTW_REQUIRED', 'Must be eligible to work in UK'),
-    (r'right\s+to\s+work\s+in\s+the\s+uk', 'RTW_HINT', 'Right to work in UK mentioned'),
+    (r'no\s+(visa\s+)?sponsorship', 'Job states no visa sponsorship'),
+    (r'cannot\s+(provide\s+)?sponsor', 'Job cannot sponsor'),
+    (r'unable\s+to\s+sponsor', 'Job unable to sponsor'),
+    (r'does\s+not\s+(offer|provide)\s+(visa\s+)?sponsorship', 'No sponsorship offered'),
+    (r'no\s+need\s+for\s+visa\s+sponsorship', 'No need for visa sponsorship'),
+    (r'will\s+not\s+sponsor', 'Will not sponsor'),
+    (r'(?:cannot|do\s+not)\s+(?:offer\s+)?visa\s+(?:sponsorship|sponsor)', 'Cannot offer visa sponsorship'),
+    (r'this\s+(?:role|position|job)\s+(?:is\s+)?not\s+eligible\s+for\s+(?:visa\s+)?sponsorship', 'Role not eligible for sponsorship'),
 ]
 
 # Patterns for SC/DV clearance (blocks sponsorship)
 SC_PATTERNS = [
-    (r'(?:security\s+clearance|sc\s+clear|sc\s+cleared|dv\s+clear|dv\s+cleared|developed\s+vetting)', 'SC_REQUIRED', 'Security clearance required'),
-    (r'must\s+be\s+eligible\s+for\s+(?:sc|security)\s+clearance', 'SC_REQUIRED', 'SC clearance eligibility required'),
-    (r'5\s+years?\s+(?:continuous\s+)?uk\s+residency', 'SC_RESIDENCY', '5yr UK residency required'),
-    (r'sc\s+(?:clearance|cleared)\s+(?:is\s+)?(?:required|essential|mandatory|needed)', 'SC_REQUIRED', 'SC clearance mandatory'),
+    (r'(?:security\s+clearance|sc\s+clear|sc\s+cleared|dv\s+clear|dv\s+cleared|developed\s+vetting)', 'Security clearance required'),
+    (r'must\s+be\s+eligible\s+for\s+(?:sc|security)\s+clearance', 'SC clearance eligibility required'),
+    (r'5\s+years?\s+(?:continuous\s+)?uk\s+residency', '5yr UK residency required'),
+    (r'sc\s+(?:clearance|cleared)\s+(?:is\s+)?(?:required|essential|mandatory|needed)', 'SC clearance mandatory'),
+    (r'bpss\s+(?:clearance|check)', 'BPSS clearance required'),
 ]
 
-# Patterns that CONFIRM sponsorship
-YES_SPONSOR_PATTERNS = [
-    (r'visa\s+sponsorship\s+(?:is\s+)?available', 'SPONSOR_CONFIRMED', 'Visa sponsorship available'),
-    (r'sponsorship\s+(?:is\s+)?available', 'SPONSOR_CONFIRMED', 'Sponsorship available'),
-    (r'we\s+(?:can|will|offer|provide)\s+(?:visa\s+)?sponsor', 'SPONSOR_CONFIRMED', 'Sponsorship offered'),
-    (r'skilled\s+worker\s+visa', 'SPONSOR_CONFIRMED', 'Skilled Worker visa mentioned'),
-    (r'tier\s+2\s+(?:visa|sponsor)', 'SPONSOR_CONFIRMED', 'Tier 2 visa sponsorship'),
-    (r'(?:provide|offer)\s+visa\s+sponsorship', 'SPONSOR_CONFIRMED', 'Visa sponsorship provided'),
-]
+def load_sponsor_set():
+    """Load A-rated Skilled Worker sponsors from CSV → set of normalized company names."""
+    if not os.path.exists(SPONSOR_CSV):
+        print(f"[WARN] Sponsor CSV not found: {SPONSOR_CSV}")
+        return set()
+    
+    sponsors = set()
+    try:
+        with open(SPONSOR_CSV, 'r', encoding='utf-8-sig') as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                route = row.get('Route', '').lower()
+                rating = row.get('Type & Rating', '').lower()
+                name = row.get('Organisation Name', '').strip()
+                if name and 'skilled worker' in route and 'a rating' in rating:
+                    # Normalize: lowercase, strip common suffixes
+                    normalized = name.lower().strip()
+                    sponsors.add(normalized)
+        print(f"[INFO] Loaded {len(sponsors)} A-rated Skilled Worker sponsors")
+    except Exception as e:
+        print(f"[ERROR] Failed to load sponsor CSV: {e}")
+    
+    return sponsors
 
-def fetch_page(url, source=''):
+def normalize_company(name):
+    """Normalize company name for fuzzy matching against sponsor register."""
+    if not name:
+        return ''
+    n = name.lower().strip()
+    # Strip common legal suffixes
+    for suffix in [' ltd', ' limited', ' plc', ' uk limited', ' uk', ' (uk)', '(uk)',
+                   ' corporation', ' inc', ' incorporated', ' group', ' holdings',
+                   ' services', ' solutions', ' technologies', ' consulting']:
+        if n.endswith(suffix):
+            n = n[:-len(suffix)].strip()
+    # Strip parenthetical qualifiers
+    import re as re_mod
+    n = re_mod.sub(r'\s*\([^)]*\)\s*', ' ', n).strip()
+    # Strip trailing qualifiers after dash
+    if ' - ' in n:
+        n = n.split(' - ')[0].strip()
+    return n
+
+def company_has_licence(company_name, sponsor_set):
+    """Check if company appears in sponsor set (exact match + fuzzy fallback)."""
+    if not company_name or not sponsor_set:
+        return False
+    
+    raw = company_name.lower().strip()
+    # Exact match first
+    if raw in sponsor_set:
+        return True
+    
+    # Normalized match
+    norm = normalize_company(company_name)
+    if norm and norm in sponsor_set:
+        return True
+    
+    # Partial match: check if any sponsor contains the normalized name or vice-versa
+    if norm and len(norm) > 2:
+        for s in sponsor_set:
+            if norm in s or s in norm:
+                return True
+    
+    return False
+
+def fetch_page(url):
     """Fetch job listing page. Returns (html_text, error)."""
     try:
         req = urllib.request.Request(url, headers={'User-Agent': UA})
@@ -62,109 +121,168 @@ def fetch_page(url, source=''):
         return '', str(e)
 
 def scan_text(text):
-    """Scan HTML text for sponsorship language. Returns (tag, reason)."""
+    """Scan HTML text for sponsorship language. Returns (tag, reason) or (None, None)."""
     text_lower = text.lower()
     
-    # Check NO patterns first (strongest signal)
-    for pattern, tag, reason in NO_SPONSOR_PATTERNS:
-        if re.search(pattern, text_lower):
-            return 'unavailable', reason
-    
-    # Check SC/DV
-    for pattern, tag, reason in SC_PATTERNS:
+    # Check SC/DV first (strongest signal)
+    for pattern, reason in SC_PATTERNS:
         if re.search(pattern, text_lower):
             return 'sc_blocked', reason
     
-    # Check RTW
-    for pattern, tag, reason in RTW_PATTERNS:
+    # Check NO patterns
+    for pattern, reason in NO_SPONSOR_PATTERNS:
         if re.search(pattern, text_lower):
-            if tag == 'RTW_REQUIRED':
-                return 'unavailable', reason
-            return 'rtw_check_needed', reason
-    
-    # Check YES patterns
-    for pattern, tag, reason in YES_SPONSOR_PATTERNS:
-        if re.search(pattern, text_lower):
-            return 'sponsor_verified', reason
+            return 'unavailable', reason
     
     return None, None
 
-def scan_job(job):
-    """Scan a single job listing. Returns (new_tag, reason)."""
+def scan_job(job, sponsor_set):
+    """Scan a single job. Returns dict of { field: value } updates."""
+    updates = {}
     url = job.get('url', '')
     source = job.get('source', '').lower()
-    current_tag = job.get('visa_sponsorship', 'unknown')
+    company = job.get('company', '')
+    current_sp = job.get('visa_sponsorship', 'unknown')
+    description = job.get('description', '')
     
-    # Skip jobs we can't scan (LinkedIn detail pages are JS-rendered)
-    if 'linkedin.com/jobs/view' in url:
-        # LinkedIn: can't scan directly (JS-rendered).
-        # Keep register-based tag but mark as unverified
-        return None, f'linkedin_register_only (tag={current_tag})'
+    # ── Step 1: Sponsor licence check ──
+    if company and sponsor_set:
+        has_licence = company_has_licence(company, sponsor_set)
+        if has_licence:
+            updates['sponsor_licence'] = True
+        # Don't set false — absence of field means "not checked / not on register"
+    
+    # ── Step 2: Text scan ──
+    # LinkedIn job pages are JS-rendered — can't fetch full page
+    # But some have description text from Voyager API
+    if 'linkedin.com/jobs/view' in url or source == 'linkedin':
+        # Try scanning the description field (may have brief text)
+        if description and len(description) > 50:
+            tag, reason = scan_text(description)
+            if tag:
+                updates['visa_sponsorship'] = tag
+                updates['sponsorship_scan'] = reason
+            # Also check for "no sponsorship" in description from Voyager
+            for pattern, reason in NO_SPONSOR_PATTERNS:
+                if re.search(pattern, description.lower()):
+                    updates['visa_sponsorship'] = 'unavailable'
+                    updates['sponsorship_scan'] = reason
+                    break
+        else:
+            updates['sponsorship_scan'] = 'linkedin_js (cannot read full description)'
+        return updates
     
     # Skip if no URL
-    if not url:
-        return None, 'no_url'
+    if not url or url in ['', 'https://']:
+        return updates
     
-    # Fetch and scan
+    # Fetch and scan the actual page
     html_text, error = fetch_page(url)
     if error:
-        return None, f'fetch_error: {error[:60]}'
+        updates['sponsorship_scan'] = f'fetch_error: {error[:60]}'
+        return updates
     
     if len(html_text) < 500:
-        return None, f'page_too_short ({len(html_text)} chars)'
+        updates['sponsorship_scan'] = f'page_too_short ({len(html_text)} chars)'
+        return updates
     
     tag, reason = scan_text(html_text)
-    return tag, reason
+    if tag:
+        updates['visa_sponsorship'] = tag
+        updates['sponsorship_scan'] = reason
+    
+    return updates
 
-def main(dry_run=False):
-    with open(JOBS_FILE) as f:
+def scan_file(filepath, sponsor_set, dry_run=False, csv_only=False):
+    """Scan all jobs in a JSON file and apply updates.
+    csv_only=True: skip page fetching, only do sponsor CSV lookup."""
+    with open(filepath) as f:
         data = json.load(f)
     
-    jobs = data['jobs']
-    changes = []
-    skipped = 0
+    jobs = data.get('jobs', data if isinstance(data, list) else [])
+    was_list = isinstance(data, list)
+    
+    changes = {'sc_blocked': 0, 'unavailable': 0, 'licence_flagged': 0}
     
     for j in jobs:
-        current = j.get('visa_sponsorship', 'unknown')
-        url = j.get('url', '')
+        current_sp = j.get('visa_sponsorship', 'unknown')
+        current_licence = j.get('sponsor_licence', False)
         
-        tag, reason = scan_job(j)
+        if csv_only:
+            # Just the sponsor CSV lookup
+            updates = {}
+            company = j.get('company', '')
+            if company and sponsor_set:
+                has_licence = company_has_licence(company, sponsor_set)
+                if has_licence:
+                    updates['sponsor_licence'] = True
+        else:
+            updates = scan_job(j, sponsor_set)
         
-        if tag and tag != current:
-            old_tag = current
-            j['visa_sponsorship'] = tag
-            j['sponsorship_scan'] = reason
-            changes.append((j['title'][:60], j['company'], old_tag, tag, reason))
-        elif reason and reason.startswith('linkedin_js'):
-            skipped += 1
-        elif reason and reason not in ('no_url',):
-            # Just record the scan
-            j['sponsorship_scan'] = reason
+        # Apply updates
+        for key, value in updates.items():
+            j[key] = value
+        
+        # Track changes
+        if 'visa_sponsorship' in updates and updates['visa_sponsorship'] != current_sp:
+            changes[updates['visa_sponsorship']] = changes.get(updates['visa_sponsorship'], 0) + 1
+        if 'sponsor_licence' in updates and updates['sponsor_licence'] != current_licence:
+            changes['licence_flagged'] += 1
     
-    if not dry_run and changes:
-        # Recount
-        from collections import Counter
-        tags = Counter(j['visa_sponsorship'] for j in jobs)
-        data['verified'] = tags.get('sponsor_verified', 0) + tags.get('verified', 0)
+    # Recount totals
+    tags = Counter(j.get('visa_sponsorship', 'unknown') for j in jobs)
+    licence_count = sum(1 for j in jobs if j.get('sponsor_licence'))
+    
+    if not dry_run and any(changes.values()):
         data['sc_blocked'] = tags.get('sc_blocked', 0)
+        data['verified'] = tags.get('verified', 0) + tags.get('sponsor_verified', 0)
+        if 'daily_snapshots' in data:  # master.json has this key
+            data['licenced_sponsors'] = licence_count
         
-        with open(JOBS_FILE, 'w') as f:
+        with open(filepath, 'w') as f:
             json.dump(data, f, indent=2)
     
-    print(f"Total jobs: {len(jobs)}")
-    print(f"Changes made: {len(changes)}")
-    print(f"LinkedIn skipped (JS): {skipped}")
-    print()
+    return changes, tags, licence_count
+
+def main(dry_run=False, csv_only=False):
+    sponsor_set = load_sponsor_set()
+    if not sponsor_set:
+        print("[ERROR] No sponsor data loaded — aborting. Check CSV path.")
+        sys.exit(1)
     
-    if changes:
-        print("=== CHANGES ===")
-        for title, company, old, new, reason in changes:
-            print(f"  {old:20s} → {new:20s} | {title[:50]}")
-            print(f"    {company} | {reason}")
-            print()
+    mode = "CSV-only" if csv_only else "full (with page fetching)"
+    print(f"Scanning jobs.json ({mode})...")
+    changes, tags, licence_count = scan_file(JOBS_FILE, sponsor_set, dry_run, csv_only)
+    print(f"  Tags: {dict(tags.most_common())}")
+    print(f"  Companies with sponsor licence: {licence_count}")
+    print(f"  Changes: {changes}")
+    
+    print(f"\nScanning master.json ({mode})...")
+    changes2, tags2, licence_count2 = scan_file(MASTER_FILE, sponsor_set, dry_run, csv_only)
+    print(f"  Tags: {dict(tags2.most_common())}")
+    print(f"  Companies with sponsor licence: {licence_count2}")
+    print(f"  Changes: {changes2}")
+    
+    total_ver = tags.get('verified', 0) + tags.get('sponsor_verified', 0)
+    total_sc = tags.get('sc_blocked', 0)
+    total_unavail = tags.get('unavailable', 0)
+    total_agency = tags.get('agency_unknown', 0)
+    
+    print(f"\nSummary: {sum(tags.values())} total jobs")
+    print(f"  Verified (manual): {total_ver}")
+    print(f"  SC-blocked (auto): {total_sc}")
+    print(f"  Unavailable (auto): {total_unavail}")
+    print(f"  Agency (manual): {total_agency}")
+    print(f"  Unknown: {tags.get('unknown', 0)}")
+    print(f"  Companies with sponsor licence: {licence_count}")
+    
+    if dry_run:
+        print("\n[DRY RUN] No files written.")
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--dry-run', action='store_true')
+    parser.add_argument('--csv-only', action='store_true',
+                        help='Skip page fetching — only cross-reference sponsor CSV')
     args = parser.parse_args()
-    main(dry_run=args.dry_run)
+    main(dry_run=args.dry_run, csv_only=args.csv_only)

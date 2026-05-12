@@ -413,7 +413,8 @@
       "location": "London, England, United Kingdom (Hybrid)",
       "url": "https://www.linkedin.com/jobs/view/4411326781",
       "source": "LinkedIn",
-      "visa_sponsorship": "verified"
+      "visa_sponsorship": "verified",
+      "sponsor_licence": true
     },
     {
       "title": "ServiceNow Administrator",
@@ -421,7 +422,8 @@
       "location": "London, England, United Kingdom (Hybrid)",
       "url": "https://www.linkedin.com/jobs/view/4400433128",
       "source": "LinkedIn",
-      "visa_sponsorship": "verified"
+      "visa_sponsorship": "verified",
+      "sponsor_licence": true
     },
     {
       "title": "Recruitment Consultant - ServiceNow",
@@ -429,7 +431,8 @@
       "location": "London Area, United Kingdom (On-site)",
       "url": "https://www.linkedin.com/jobs/view/4411707544",
       "source": "LinkedIn",
-      "visa_sponsorship": "agency_unknown"
+      "visa_sponsorship": "agency_unknown",
+      "sponsor_licence": true
     },
     {
       "title": "ServiceNow Developer",
@@ -437,7 +440,8 @@
       "location": "London, England, United Kingdom (On-site)",
       "url": "https://www.linkedin.com/jobs/view/4412108348",
       "source": "LinkedIn",
-      "visa_sponsorship": "verified"
+      "visa_sponsorship": "verified",
+      "sponsor_licence": true
     },
     {
       "title": "ServiceNow Business Process Consultant",
@@ -445,7 +449,8 @@
       "location": "London, England, United Kingdom (Hybrid)",
       "url": "https://www.linkedin.com/jobs/view/4411329418",
       "source": "LinkedIn",
-      "visa_sponsorship": "verified"
+      "visa_sponsorship": "verified",
+      "sponsor_licence": true
     },
     {
       "title": "Senior ServiceNow Sales Professional",
@@ -462,7 +467,8 @@
       "location": "London Area, United Kingdom (Hybrid)",
       "url": "https://www.linkedin.com/jobs/view/4411866930",
       "source": "LinkedIn",
-      "visa_sponsorship": "agency_unknown"
+      "visa_sponsorship": "agency_unknown",
+      "sponsor_licence": true
     },
     {
       "title": "ServiceNow Architect - CTA and Security Clearance essential",
@@ -488,9 +494,10 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "expired",
       "description": "ITAM Product Manager - ServiceNow HAM/SAM Marshall Wolfe are hiring on behalf of our client, for an experienced ITAM Product Manager. This role suits an experienced IT Service Management professional with strong ServiceNow HAM/SAM expertise and a bac",
-      "visa_sponsorship": "agency_unknown"
+      "visa_sponsorship": "agency_unknown",
+      "status": "expired"
     },
     {
       "title": "Key Account Director - Enterprise / Public Sector. ServiceNow Solutions SI/MSP",
@@ -508,9 +515,10 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "expired",
       "description": "Hot Market. Credible Delivery. Entrepreneurial Growth. AI Tailwinds. Strong Culture. Real Earning Potential\u2026 and an incredible founder-led leadership team\u2026 If you\u2019re a high-level sales achiever in the enterprise / public sector space , who enjoys bui",
-      "visa_sponsorship": "agency_unknown"
+      "visa_sponsorship": "agency_unknown",
+      "status": "expired"
     },
     {
       "title": "Solution Architect ServiceNow",
@@ -529,7 +537,8 @@
       "link_status": "live",
       "visa_sponsorship": "verified",
       "description": "Solution Architect ServiceNow at Kinly (AVMI). Full-time permanent. Hybrid.",
-      "sponsorship_scan": "verified_by_register_no_sc"
+      "sponsorship_scan": "verified_by_register_no_sc",
+      "sponsor_licence": true
     },
     {
       "title": "ServiceNow PreSales Architect",
@@ -547,7 +556,8 @@
       "grad_scheme": false,
       "link_status": "live",
       "visa_sponsorship": "verified",
-      "description": "Senior Presales Consultant for Enterprise Service Management (ESM). Client-facing presales."
+      "description": "Senior Presales Consultant for Enterprise Service Management (ESM). Client-facing presales.",
+      "sponsor_licence": true
     },
     {
       "title": "ServiceNow Product Manager (Banking)",
@@ -565,7 +575,8 @@
       "grad_scheme": false,
       "link_status": "live",
       "visa_sponsorship": "agency_unknown",
-      "description": "ServiceNow Product Manager - Banking. Grow ServiceNow centre of excellence."
+      "description": "ServiceNow Product Manager - Banking. Grow ServiceNow centre of excellence.",
+      "sponsor_licence": true
     },
     {
       "title": "ServiceNow Engineer",
@@ -583,7 +594,8 @@
       "grad_scheme": false,
       "link_status": "live",
       "visa_sponsorship": "verified",
-      "description": "Shape, enhance and support a mature, business-critical ServiceNow platform."
+      "description": "Shape, enhance and support a mature, business-critical ServiceNow platform.",
+      "sponsor_licence": true
     },
     {
       "title": "ServiceNow Technical Lead (Insurance/FSO)",
@@ -619,7 +631,8 @@
       "grad_scheme": false,
       "link_status": "live",
       "visa_sponsorship": "agency_unknown",
-      "description": "CMDB Specialist (ServiceNow). Over 15 million CIs, supporting 300,000 employees."
+      "description": "CMDB Specialist (ServiceNow). Over 15 million CIs, supporting 300,000 employees.",
+      "sponsor_licence": true
     },
     {
       "title": "ServiceNow Services Sales Specialist",
@@ -637,7 +650,8 @@
       "grad_scheme": false,
       "link_status": "live",
       "visa_sponsorship": "verified",
-      "description": "Build new client base across Europe; accelerate ServiceNow growth."
+      "description": "Build new client base across Europe; accelerate ServiceNow growth.",
+      "sponsor_licence": true
     },
     {
       "title": "ServiceNow System Admin",
@@ -655,7 +669,8 @@
       "grad_scheme": false,
       "link_status": "live",
       "visa_sponsorship": "sc_blocked",
-      "description": "ServiceNow System Admin. BAE Systems - defense contractor, SC clearance required."
+      "description": "ServiceNow System Admin. BAE Systems - defense contractor, SC clearance required.",
+      "sponsor_licence": true
     },
     {
       "title": "ServiceNow Architect",
@@ -673,7 +688,8 @@
       "grad_scheme": false,
       "link_status": "live",
       "visa_sponsorship": "agency_unknown",
-      "description": "ServiceNow Architect - TSM. 6 month contract. \u00a3650/day OUTSIDE IR35."
+      "description": "ServiceNow Architect - TSM. 6 month contract. \u00a3650/day OUTSIDE IR35.",
+      "sponsor_licence": true
     },
     {
       "title": "ServiceNow Product Manager Banking",
@@ -684,7 +700,8 @@
       "date_posted": "2026-04-30",
       "source": "Hunt UK",
       "visa_sponsorship": "verified",
-      "status": "active"
+      "status": "active",
+      "sponsor_licence": true
     },
     {
       "title": "ServiceNow Technical Lead \u2013 Insurance / FSO",
@@ -708,7 +725,8 @@
       "source": "Hunt UK",
       "visa_sponsorship": "verified",
       "status": "active",
-      "fallback_url": "https://careers.inetum.com/"
+      "fallback_url": "https://careers.inetum.com/",
+      "sponsor_licence": true
     },
     {
       "title": "ServiceNow Implementation Specialist",
@@ -720,7 +738,8 @@
       "source": "Hunt UK",
       "visa_sponsorship": "sc_blocked",
       "status": "active",
-      "notes": "SC Security Clearance required \u2014 5yr continuous UK residency"
+      "notes": "SC Security Clearance required \u2014 5yr continuous UK residency",
+      "sponsor_licence": true
     },
     {
       "title": "ServiceNow Architect",
@@ -732,7 +751,8 @@
       "source": "Hunt UK",
       "visa_sponsorship": "sc_blocked",
       "status": "active",
-      "notes": "SC Security Clearance required \u2014 5yr continuous UK residency"
+      "notes": "SC Security Clearance required \u2014 5yr continuous UK residency",
+      "sponsor_licence": true
     },
     {
       "title": "Business Development Manager - Security & Risk (Partner Channels)",
@@ -744,7 +764,8 @@
       "source": "Hunt UK",
       "visa_sponsorship": "verified",
       "status": "active",
-      "fallback_url": "https://careers.servicenow.com/locations/emea/united-kingdom/"
+      "fallback_url": "https://careers.servicenow.com/locations/emea/united-kingdom/",
+      "sponsor_licence": true
     }
   ]
 }

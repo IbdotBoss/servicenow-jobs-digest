@@ -513,7 +513,8 @@
       "sc_clearance": false,
       "grad_scheme": false,
       "link_status": "live",
-      "description": ""
+      "description": "",
+      "sponsor_licence": true
     },
     {
       "title": "ServiceNow Technical Architect",
@@ -603,9 +604,10 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "expired",
       "description": "ITAM Product Manager - ServiceNow HAM/SAM Marshall Wolfe are hiring on behalf of our client, for an experienced ITAM Product Manager. This role suits an experienced IT Service Management professional with strong ServiceNow HAM/SAM expertise and a bac",
-      "visa_sponsorship": "agency_unknown"
+      "visa_sponsorship": "agency_unknown",
+      "status": "expired"
     },
     {
       "title": "Key Account Director - Enterprise / Public Sector. ServiceNow Solutions SI/MSP",
@@ -623,9 +625,10 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "expired",
       "description": "Hot Market. Credible Delivery. Entrepreneurial Growth. AI Tailwinds. Strong Culture. Real Earning Potential\u2026 and an incredible founder-led leadership team\u2026 If you\u2019re a high-level sales achiever in the enterprise / public sector space , who enjoys bui",
-      "visa_sponsorship": "agency_unknown"
+      "visa_sponsorship": "agency_unknown",
+      "status": "expired"
     },
     {
       "title": "Solution Architect ServiceNow",
@@ -644,7 +647,8 @@
       "link_status": "live",
       "visa_sponsorship": "verified",
       "description": "Solution Architect ServiceNow at Kinly (AVMI). Full-time permanent. Hybrid. Still listed on Hunt UK 2026-05-11.",
-      "sponsorship_scan": "verified_by_register_no_sc"
+      "sponsorship_scan": "verified_by_register_no_sc",
+      "sponsor_licence": true
     },
     {
       "title": "ServiceNow Architect",
@@ -662,7 +666,8 @@
       "grad_scheme": false,
       "link_status": "live",
       "visa_sponsorship": "verified",
-      "description": "ServiceNow Architect at Tata Consultancy Services (TCS). London hybrid. Lead SN implementation projects. TCS is A-rated sponsor."
+      "description": "ServiceNow Architect at Tata Consultancy Services (TCS). London hybrid. Lead SN implementation projects. TCS is A-rated sponsor.",
+      "sponsor_licence": true
     },
     {
       "title": "ServiceNow Business Analyst, Associate",
@@ -680,7 +685,8 @@
       "grad_scheme": false,
       "link_status": "live",
       "visa_sponsorship": "verified",
-      "description": "ServiceNow Business Analyst, Associate at Aquiline Capital Partners (BlackRock affiliate). Edinburgh. CoEI team - help grow ServiceNow Centre of Excellence."
+      "description": "ServiceNow Business Analyst, Associate at Aquiline Capital Partners (BlackRock affiliate). Edinburgh. CoEI team - help grow ServiceNow Centre of Excellence.",
+      "sponsor_licence": true
     },
     {
       "title": "ServiceNow System Admin",
@@ -698,7 +704,8 @@
       "grad_scheme": false,
       "link_status": "live",
       "visa_sponsorship": "sc_blocked",
-      "description": "ServiceNow System Admin at BAE Systems. Requires Security Clearance. Up to \u00a345,000."
+      "description": "ServiceNow System Admin at BAE Systems. Requires Security Clearance. Up to \u00a345,000.",
+      "sponsor_licence": true
     },
     {
       "title": "ServiceNow Product Manager (Banking)",
@@ -716,7 +723,8 @@
       "grad_scheme": false,
       "link_status": "live",
       "visa_sponsorship": "agency_unknown",
-      "description": "ServiceNow Product Manager - Banking at SThree. Grow ServiceNow centre of excellence in banking. Still listed 2026-05-11."
+      "description": "ServiceNow Product Manager - Banking at SThree. Grow ServiceNow centre of excellence in banking. Still listed 2026-05-11.",
+      "sponsor_licence": true
     },
     {
       "title": "ServiceNow Telecommunications Service Management (TSM) Architect",
@@ -734,7 +742,8 @@
       "grad_scheme": false,
       "link_status": "live",
       "visa_sponsorship": "agency_unknown",
-      "description": "ServiceNow TSM Architect at Ubique Systems UK. TSM, ITSM & ITOM expertise. Still listed 2026-05-11."
+      "description": "ServiceNow TSM Architect at Ubique Systems UK. TSM, ITSM & ITOM expertise. Still listed 2026-05-11.",
+      "sponsor_licence": true
     }
   ]
 }

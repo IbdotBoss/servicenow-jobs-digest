@@ -567,7 +567,8 @@
       "sc_clearance": false,
       "grad_scheme": false,
       "link_status": "live",
-      "description": ""
+      "description": "",
+      "sponsor_licence": true
     },
     {
       "title": "ServiceNow Developer (SC Cleared, Outside IR35) (IT) / Contractor",
@@ -711,9 +712,10 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "expired",
       "description": "ITAM Product Manager - ServiceNow HAM/SAM Marshall Wolfe are hiring on behalf of our client, for an experienced ITAM Product Manager. This role suits an experienced IT Service Management professional with strong ServiceNow HAM/SAM expertise and a bac",
-      "visa_sponsorship": "agency_unknown"
+      "visa_sponsorship": "agency_unknown",
+      "status": "expired"
     },
     {
       "title": "Key Account Director - Enterprise / Public Sector. ServiceNow Solutions SI/MSP",
@@ -731,9 +733,10 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "expired",
       "description": "Hot Market. Credible Delivery. Entrepreneurial Growth. AI Tailwinds. Strong Culture. Real Earning Potential\u2026 and an incredible founder-led leadership team\u2026 If you\u2019re a high-level sales achiever in the enterprise / public sector space , who enjoys bui",
-      "visa_sponsorship": "agency_unknown"
+      "visa_sponsorship": "agency_unknown",
+      "status": "expired"
     },
     {
       "title": "Solution Architect ServiceNow",
@@ -752,7 +755,8 @@
       "link_status": "live",
       "visa_sponsorship": "verified",
       "description": "Solution Architect ServiceNow at Kinly (AVMI). Full-time permanent. Hybrid.",
-      "sponsorship_scan": "verified_by_register_no_sc"
+      "sponsorship_scan": "verified_by_register_no_sc",
+      "sponsor_licence": true
     },
     {
       "title": "ServiceNow PreSales Architect",
@@ -770,7 +774,8 @@
       "grad_scheme": false,
       "link_status": "live",
       "visa_sponsorship": "verified",
-      "description": "ServiceNow PreSales Architect at Solution17 Ltd. Client-facing presales supporting ESM growth."
+      "description": "ServiceNow PreSales Architect at Solution17 Ltd. Client-facing presales supporting ESM growth.",
+      "sponsor_licence": true
     },
     {
       "title": "ServiceNow Engineer",
@@ -788,7 +793,8 @@
       "grad_scheme": false,
       "link_status": "live",
       "visa_sponsorship": "verified",
-      "description": "ServiceNow Engineer at Freshfields. Shape, enhance and support a mature ServiceNow platform."
+      "description": "ServiceNow Engineer at Freshfields. Shape, enhance and support a mature ServiceNow platform.",
+      "sponsor_licence": true
     },
     {
       "title": "ServiceNow Technical Lead \u2013 Insurance/FSO",
@@ -806,7 +812,8 @@
       "grad_scheme": false,
       "link_status": "live",
       "visa_sponsorship": "verified",
-      "description": "ServiceNow Technical Lead at DXC Technology. Lead insurance workflow solutions on ServiceNow FSO."
+      "description": "ServiceNow Technical Lead at DXC Technology. Lead insurance workflow solutions on ServiceNow FSO.",
+      "sponsor_licence": true
     },
     {
       "title": "ServiceNow Services Sales Specialist",
@@ -824,7 +831,8 @@
       "grad_scheme": false,
       "link_status": "live",
       "visa_sponsorship": "verified",
-      "description": "ServiceNow Services Sales Specialist at Inetum. Building new client base across Europe."
+      "description": "ServiceNow Services Sales Specialist at Inetum. Building new client base across Europe.",
+      "sponsor_licence": true
     },
     {
       "title": "ServiceNow System Admin",
@@ -842,7 +850,8 @@
       "grad_scheme": false,
       "link_status": "live",
       "visa_sponsorship": "sc_blocked",
-      "description": "ServiceNow System Admin at BAE Systems. Requires Security Clearance. Up to \u00a345,000."
+      "description": "ServiceNow System Admin at BAE Systems. Requires Security Clearance. Up to \u00a345,000.",
+      "sponsor_licence": true
     },
     {
       "title": "ServiceNow Product Manager (Banking)",
@@ -860,7 +869,8 @@
       "grad_scheme": false,
       "link_status": "live",
       "visa_sponsorship": "agency_unknown",
-      "description": "ServiceNow Product Manager - Banking at SThree. Grow ServiceNow centre of excellence in banking."
+      "description": "ServiceNow Product Manager - Banking at SThree. Grow ServiceNow centre of excellence in banking.",
+      "sponsor_licence": true
     },
     {
       "title": "CMDB Specialist (ServiceNow)",
@@ -878,7 +888,8 @@
       "grad_scheme": false,
       "link_status": "live",
       "visa_sponsorship": "agency_unknown",
-      "description": "CMDB Specialist (ServiceNow) at Harvey Nash. Global manufacturing org, 15M+ CIs, 300k employees."
+      "description": "CMDB Specialist (ServiceNow) at Harvey Nash. Global manufacturing org, 15M+ CIs, 300k employees.",
+      "sponsor_licence": true
     },
     {
       "title": "ServiceNow Architect (TSM)",
@@ -896,7 +907,8 @@
       "grad_scheme": false,
       "link_status": "live",
       "visa_sponsorship": "agency_unknown",
-      "description": "ServiceNow Architect (TSM) at X4 Group. 6 months extendable contract. \u00a3650/day Outside IR35."
+      "description": "ServiceNow Architect (TSM) at X4 Group. 6 months extendable contract. \u00a3650/day Outside IR35.",
+      "sponsor_licence": true
     },
     {
       "title": "ServiceNow Architect \u2013 TSM",
@@ -914,7 +926,8 @@
       "grad_scheme": false,
       "link_status": "live",
       "visa_sponsorship": "agency_unknown",
-      "description": "ServiceNow Architect (TSM) at Ubique Systems UK. TSM, ITSM & ITOM expertise. Telecom domain."
+      "description": "ServiceNow Architect (TSM) at Ubique Systems UK. TSM, ITSM & ITOM expertise. Telecom domain.",
+      "sponsor_licence": true
     }
   ]
 }

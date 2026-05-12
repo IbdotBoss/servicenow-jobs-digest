@@ -428,7 +428,8 @@
       "location": "Barwick In Elmet, England, United Kingdom (On-site)",
       "url": "https://www.linkedin.com/jobs/view/4413060076",
       "source": "LinkedIn",
-      "visa_sponsorship": "verified"
+      "visa_sponsorship": "verified",
+      "sponsor_licence": true
     },
     {
       "title": "ServiceNow Technical Consultant/Dev (IRM/SecOps) | Remote",
@@ -444,7 +445,8 @@
       "location": "London, England, United Kingdom (Hybrid)",
       "url": "https://www.linkedin.com/jobs/view/4399774555",
       "source": "LinkedIn",
-      "visa_sponsorship": "verified"
+      "visa_sponsorship": "verified",
+      "sponsor_licence": true
     },
     {
       "title": "ServiceNow Architect",
@@ -452,7 +454,8 @@
       "location": "London, England, United Kingdom (On-site)",
       "url": "https://www.linkedin.com/jobs/view/4380803528",
       "source": "LinkedIn",
-      "visa_sponsorship": "verified"
+      "visa_sponsorship": "verified",
+      "sponsor_licence": true
     },
     {
       "title": "ServiceNow Architect",
@@ -460,7 +463,8 @@
       "location": "London Area, United Kingdom (Hybrid)",
       "url": "https://www.linkedin.com/jobs/view/4412676675",
       "source": "LinkedIn",
-      "visa_sponsorship": "verified"
+      "visa_sponsorship": "verified",
+      "sponsor_licence": true
     },
     {
       "title": "ServiceNow Knowledge Manager",
@@ -500,7 +504,8 @@
       "location": "London, England, United Kingdom (Remote)",
       "url": "https://www.linkedin.com/jobs/view/4412682781",
       "source": "LinkedIn",
-      "visa_sponsorship": "verified"
+      "visa_sponsorship": "verified",
+      "sponsor_licence": true
     },
     {
       "title": "Public Sector / Enterprise Sales Account Manager - ServiceNow Partner.",
@@ -542,9 +547,10 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "expired",
       "description": "ITAM Product Manager - ServiceNow HAM/SAM Marshall Wolfe are hiring on behalf of our client, for an experienced ITAM Product Manager. This role suits an experienced IT Service Management professional with strong ServiceNow HAM/SAM expertise and a bac",
-      "visa_sponsorship": "agency_unknown"
+      "visa_sponsorship": "agency_unknown",
+      "status": "expired"
     },
     {
       "title": "Key Account Director - Enterprise / Public Sector. ServiceNow Solutions SI/MSP",
@@ -562,9 +568,10 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "expired",
       "description": "Hot Market. Credible Delivery. Entrepreneurial Growth. AI Tailwinds. Strong Culture. Real Earning Potential\u2026 and an incredible founder-led leadership team\u2026 If you\u2019re a high-level sales achiever in the enterprise / public sector space , who enjoys bui",
-      "visa_sponsorship": "agency_unknown"
+      "visa_sponsorship": "agency_unknown",
+      "status": "expired"
     },
     {
       "title": "ServiceNow Telecommunications Service Management (TSM) Architect",
@@ -578,7 +585,8 @@
       "remote": "hybrid",
       "employment": "contract",
       "visa_sponsorship": "agency_unknown",
-      "description": "ServiceNow TSM Architect at Ubique Systems UK. Outside IR35 contract. Agency posting."
+      "description": "ServiceNow TSM Architect at Ubique Systems UK. Outside IR35 contract. Agency posting.",
+      "sponsor_licence": true
     },
     {
       "title": "ServiceNow Architect",
@@ -592,7 +600,8 @@
       "remote": "hybrid",
       "employment": "permanent",
       "visa_sponsorship": "verified",
-      "description": "ServiceNow Architect at TCS. London hybrid. TCS is A-rated sponsor."
+      "description": "ServiceNow Architect at TCS. London hybrid. TCS is A-rated sponsor.",
+      "sponsor_licence": true
     },
     {
       "title": "Solution Architect ServiceNow",
@@ -606,7 +615,8 @@
       "remote": "hybrid",
       "employment": "permanent",
       "visa_sponsorship": "verified",
-      "description": "Solution Architect ServiceNow at Kinly. Full-time permanent. Hybrid working."
+      "description": "Solution Architect ServiceNow at Kinly. Full-time permanent. Hybrid working.",
+      "sponsor_licence": true
     },
     {
       "title": "Software Asset Management & CMDB Lead (ServiceNow)",
@@ -620,7 +630,8 @@
       "remote": "onsite",
       "employment": "permanent",
       "visa_sponsorship": "verified",
-      "description": "SAM & CMDB Lead at Methods. Central government digital transformation. A-rated sponsor."
+      "description": "SAM & CMDB Lead at Methods. Central government digital transformation. A-rated sponsor.",
+      "sponsor_licence": true
     },
     {
       "title": "ServiceNow Business Analyst, Associate",
@@ -634,7 +645,8 @@
       "remote": "onsite",
       "employment": "permanent",
       "visa_sponsorship": "verified",
-      "description": "ServiceNow Business Analyst at Aquiline Capital Partners (BlackRock affiliate). Edinburgh."
+      "description": "ServiceNow Business Analyst at Aquiline Capital Partners (BlackRock affiliate). Edinburgh.",
+      "sponsor_licence": true
     },
     {
       "title": "ServiceNow Engineer",
@@ -648,7 +660,8 @@
       "remote": "hybrid",
       "employment": "permanent",
       "visa_sponsorship": "verified",
-      "description": "ServiceNow Engineer at Barclays. Knutsford. A-rated sponsor."
+      "description": "ServiceNow Engineer at Barclays. Knutsford. A-rated sponsor.",
+      "sponsor_licence": true
     },
     {
       "title": "HR Transformation Consultant / Senior Consultant (ServiceNow HRSD)",
@@ -662,7 +675,8 @@
       "remote": "hybrid",
       "employment": "permanent",
       "visa_sponsorship": "verified",
-      "description": "HR Transformation Consultant at Capgemini (Gaubert's Brothers). ServiceNow HRSD. Glasgow."
+      "description": "HR Transformation Consultant at Capgemini (Gaubert's Brothers). ServiceNow HRSD. Glasgow.",
+      "sponsor_licence": true
     },
     {
       "title": "ServiceNow Product Manager (Banking)",
@@ -676,7 +690,8 @@
       "remote": "hybrid",
       "employment": "permanent",
       "visa_sponsorship": "agency_unknown",
-      "description": "ServiceNow Product Manager at SThree. Banking. \u00a370-100k."
+      "description": "ServiceNow Product Manager at SThree. Banking. \u00a370-100k.",
+      "sponsor_licence": true
     }
   ]
 }
