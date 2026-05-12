@@ -342,15 +342,30 @@ function getFiltered() {
 
 function sortJobs(jobs) {
   return [...jobs].sort((a, b) => {
-    if (sortBy === 'date') return (b.date_posted || '').localeCompare(a.date_posted || '');
-    if (sortBy === 'salary') return (b.salary_max || b.salary_min || 0) - (a.salary_max || a.salary_min || 0);
-    if (sortBy === 'company') return (a.company || '').localeCompare(b.company || '');
+    if (sortBy === 'date') {
+      const d = (b.date_posted || '').localeCompare(a.date_posted || '');
+      if (d !== 0) return d;
+      return (a.title || '').localeCompare(b.title || '');
+    }
+    if (sortBy === 'salary') {
+      const s = (b.salary_max || b.salary_min || 0) - (a.salary_max || a.salary_min || 0);
+      if (s !== 0) return s;
+      return (a.title || '').localeCompare(b.title || '');
+    }
+    if (sortBy === 'company') {
+      let ca = (a.company || '').replace('[view listing]', 'via JobServe');
+      let cb = (b.company || '').replace('[view listing]', 'via JobServe');
+      const c = ca.localeCompare(cb);
+      if (c !== 0) return c;
+      return (b.date_posted || '').localeCompare(a.date_posted || '');
+    }
     return 0;
   });
 }
 
 function noteHtml(j) {
   const sp = j.visa_sponsorship;
+  const isJobServe = j.company === '[view listing]' || j.source === 'JobServe';
   if (sp === 'unavailable') {
     return '<div class="job-note unavailable">Visa sponsorship NOT available for this role.</div>';
   }
@@ -369,12 +384,17 @@ function noteHtml(j) {
   if (sp === 'agency_unknown') {
     return '<div class="job-note agency">Agency listing — sponsorship depends on actual employer.</div>';
   }
+  if (isJobServe && !j.sponsor_licence) {
+    return '<div class="job-note warn">Posted via JobServe — company name not listed. Sponsorship unknown.</div>';
+  }
   return '';
 }
 
 function fallbackHtml(j) {
   if ((j.link_status === 'expired' || j.link_status === 'stale') && j.fallback_url) {
-    return '<div class="job-fallback">Company page: <a href="' + j.fallback_url + '" target="_blank" rel="noopener">' + j.company + ' careers →</a></div>';
+    let company = j.company || '';
+    if (company === '[view listing]') company = 'JobServe';
+    return '<div class="job-fallback">Company page: <a href="' + j.fallback_url + '" target="_blank" rel="noopener">' + company + ' careers →</a></div>';
   }
   return '';
 }
@@ -422,6 +442,8 @@ function render() {
       ? '<a class="job-apply" href="' + j.url + '" target="_blank" rel="noopener">Apply →</a>'
       : '';
 
+    let companyName = j.company || '';
+    if (companyName === '[view listing]') companyName = 'via JobServe';
     let licenceBadge = j.sponsor_licence
       ? '<span class="licence-badge">Licenced</span>'
       : '';
@@ -429,7 +451,7 @@ function render() {
     return '<div class="job-row' + rowClass + '">' +
       '<div class="job-main">' +
         '<div class="job-title">' + titleHtml + titleTags + '</div>' +
-        '<div class="job-company">' + j.company + licenceBadge + '</div>' +
+        '<div class="job-company">' + companyName + licenceBadge + '</div>' +
         '<div class="job-location">' + (j.location || 'UK') + '</div>' +
         meta +
         note +
