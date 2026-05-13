@@ -93,6 +93,10 @@ def rebuild():
         # Propagate sponsor_licence from any daily snapshot
         j.setdefault('sponsor_licence', False)
         
+        # Fix: if date_posted is missing, use first_seen
+        if not j.get('date_posted'):
+            j['date_posted'] = j.get('first_seen', TODAY)
+        
         days_since = (datetime.now() - datetime.strptime(j['last_seen'], "%Y-%m-%d")).days
         
         # Dead source → expired
