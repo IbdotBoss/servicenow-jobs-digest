@@ -5,230 +5,265 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ServiceNow Jobs UK — Sponsorship-Verified Roles</title>
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
-<style>
-  :root {
-    --bg: #ffffff; --bg-alt: #f8f9fa;
-    --text: #121212; --text-mid: #4a4a4a; --text-light: #6b7280;
-    --border: #e5e7eb;
-    --accent: #0066cc; --accent-light: #e8f0fe; --accent-visited: #004e99;
-    --sponsor: #0d9488; --sponsor-bg: #f0fdfa;
+<st  :root {
+    --bg: #ffffff; --bg-alt: #f1f5f9;
+    --text: #0f172a; --text-mid: #475569; --text-light: #94a3b8;
+    --border: #e2e8f0; --border-light: #f1f5f9;
+    --accent: #0d9488; --accent-dark: #0f766e; --accent-light: #f0fdfa;
+    --accent-visited: #0f766e;
+    --sponsor: #059669; --sponsor-bg: #ecfdf5;
     --sc: #dc2626; --sc-bg: #fef2f2;
     --agency: #6b7280; --agency-bg: #f3f4f6;
     --licence: #7c3aed; --licence-bg: #f5f3ff;
     --stale: #d97706;
+    --nav-bg: #0f172a; --nav-text: #f8fafc; --nav-muted: #94a3b8;
+    --radius: 6px; --radius-sm: 4px; --radius-pill: 20px;
+    --shadow-sm: 0 1px 2px rgba(15,23,42,0.05);
+    --shadow-md: 0 4px 6px -1px rgba(15,23,42,0.08);
+    --shadow-lg: 0 10px 15px -3px rgba(15,23,42,0.08);
+    --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   }
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
   body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-    font-size: 14px; line-height: 1.5; color: var(--text); background: var(--bg);
+    font-family: var(--font); font-size: 14px; line-height: 1.5;
+    color: var(--text); background: var(--bg-alt);
     -webkit-font-smoothing: antialiased;
   }
 
   /* ── Top bar ── */
   .topbar {
-    background: var(--bg); border-bottom: 1px solid var(--border);
-    padding: 0 24px; position: sticky; top: 0; z-index: 10;
+    background: var(--nav-bg); position: sticky; top: 0; z-index: 20;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.15);
   }
   .topbar-inner {
-    max-width: 960px; margin: 0 auto;
-    display: flex; align-items: center; gap: 16px; height: 48px;
+    max-width: 1040px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: center; gap: 16px; height: 52px;
   }
-  .logo { font-weight: 700; font-size: 15px; color: var(--text); white-space: nowrap; }
-  .logo span { color: var(--accent); }
+  .logo { font-weight: 700; font-size: 15px; color: var(--nav-text); white-space: nowrap; letter-spacing: -0.01em; }
+  .logo-sn { color: var(--accent); }
+  .logo-sub { font-weight: 400; color: var(--nav-muted); margin-left: 2px; }
   .topbar-stats {
-    display: flex; gap: 14px; margin-left: auto;
-    font-size: 12px; color: var(--text-light);
+    display: flex; gap: 10px; margin-left: auto;
   }
-  .topbar-stats strong { color: var(--text); }
-  .stat-verified { color: var(--sponsor); }
-  .stat-licenced { color: var(--licence); }
-  .stat-sc { color: var(--sc); }
+  .stat-badge {
+    display: inline-flex; align-items: center; gap: 4px;
+    font-size: 11px; font-weight: 500; color: var(--nav-muted);
+    padding: 3px 8px; border-radius: var(--radius-pill);
+    background: rgba(255,255,255,0.06);
+  }
+  .stat-badge strong { color: var(--nav-text); font-weight: 600; }
+  .stat-badge-sponsor { color: #34d399; }
+  .stat-badge-sponsor strong { color: #6ee7b7; }
+  .stat-badge-licenced { color: #a78bfa; }
+  .stat-badge-licenced strong { color: #c4b5fd; }
+  .stat-badge-sc { color: #fca5a5; }
+  .stat-badge-sc strong { color: #fca5a5; }
 
   /* ── Main layout ── */
-  .main { max-width: 960px; margin: 0 auto; padding: 0 24px 80px; }
+  .main { max-width: 1040px; margin: 0 auto; padding: 0 24px 64px; }
 
   /* ── Header ── */
-  .page-header {
-    padding: 32px 0 20px;
-    border-bottom: 1px solid var(--border); margin-bottom: 0;
-  }
-  .page-header h1 { font-size: 22px; font-weight: 700; margin-bottom: 4px; }
-  .page-header p { font-size: 13px; color: var(--text-light); }
-
-  /* ── Date selector ── */
-  .date-selector {
-    margin-top: 12px; display: flex; align-items: center; gap: 8px;
-  }
-  .date-selector label { font-size: 12px; color: var(--text-light); }
-  .date-selector select {
-    font-size: 13px; padding: 4px 8px;
-    border: 1px solid var(--border); border-radius: 4px;
-    background: #fff; color: var(--text); cursor: pointer;
-  }
-  .date-count { font-size: 12px; color: var(--text-light); }
+  .page-header { padding: 28px 0 16px; }
+  .page-header h1 { font-size: 20px; font-weight: 700; margin-bottom: 2px; color: var(--text); }
+  .page-header .subtitle { font-size: 13px; color: var(--text-light); }
   .pipeline-note { font-size: 11px; color: var(--text-light); margin-top: 2px; }
   .pipeline-note strong { color: var(--text-mid); font-weight: 600; }
 
+  /* ── Date selector ── */
+  .date-selector {
+    margin-top: 10px; display: flex; align-items: center; gap: 8px;
+  }
+  .date-selector label { font-size: 12px; color: var(--text-light); }
+  .date-selector select {
+    font-size: 12px; padding: 4px 8px;
+    border: 1px solid var(--border); border-radius: var(--radius-sm);
+    background: var(--bg); color: var(--text); cursor: pointer;
+  }
+  .date-count { font-size: 12px; color: var(--text-light); }
+
+  /* ── Control bar (filters + sort combined) ── */
+  .controls {
+    background: var(--bg); border-radius: var(--radius); padding: 16px;
+    box-shadow: var(--shadow-sm); border: 1px solid var(--border);
+    margin-bottom: 12px;
+  }
+
   /* ── Filters ── */
   .filter-bar {
-    display: flex; flex-wrap: wrap; gap: 6px 20px;
-    padding: 12px 0; border-bottom: 1px solid var(--border);
+    display: flex; flex-wrap: wrap; gap: 6px 16px;
     font-size: 13px; align-items: center;
   }
   .filter-label {
-    font-weight: 600; font-size: 11px; text-transform: uppercase;
-    letter-spacing: 0.06em; color: var(--text-light);
+    font-weight: 600; font-size: 10px; text-transform: uppercase;
+    letter-spacing: 0.08em; color: var(--text-light); min-width: fit-content;
   }
-  .filter-group { display: flex; gap: 4px; flex-wrap: wrap; }
+  .filter-group { display: flex; gap: 3px; flex-wrap: wrap; }
   .filter-btn {
-    cursor: pointer; padding: 4px 10px; border-radius: 4px;
-    border: 1px solid transparent; background: none;
-    color: var(--text-mid); font-size: 13px; transition: all 0.12s;
-    white-space: nowrap;
+    cursor: pointer; padding: 5px 12px; border-radius: var(--radius-pill);
+    border: 1px solid var(--border); background: var(--bg);
+    color: var(--text-mid); font-size: 12px; font-weight: 500;
+    transition: all 0.15s ease; white-space: nowrap;
   }
-  .filter-btn:hover { background: var(--bg-alt); }
-  .filter-btn.active { border-color: var(--border); background: var(--bg-alt); color: var(--text); font-weight: 500; }
+  .filter-btn:hover {
+    border-color: var(--accent); color: var(--accent); background: var(--accent-light);
+  }
+  .filter-btn.active {
+    background: var(--accent); color: white; border-color: var(--accent);
+  }
+  .filter-btn.active:hover {
+    background: var(--accent-dark); border-color: var(--accent-dark);
+  }
 
-  .filter-btn:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 2px;
-    border-color: var(--accent);
+  /* ── Sort ── */
+  .sort-bar {
+    display: flex; gap: 6px; align-items: center;
+    padding: 10px 0 0; margin-top: 10px; border-top: 1px solid var(--border-light);
+    font-size: 12px; color: var(--text-light);
   }
-  .sort-btn:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 2px;
-    color: var(--text);
+  .sort-label { font-weight: 500; font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-light); }
+  .sort-btn {
+    cursor: pointer; background: none; border: none;
+    color: var(--text-light); font-size: 12px; font-weight: 500;
+    padding: 3px 8px; border-radius: var(--radius-sm);
+    transition: all 0.12s;
   }
-  .job-title a:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 2px;
-    border-radius: 2px;
+  .sort-btn:hover { color: var(--text); background: var(--bg-alt); }
+  .sort-btn.active { color: var(--accent); background: var(--accent-light); font-weight: 600; }
+  .result-count { margin-left: auto; font-size: 12px; color: var(--text-light); font-weight: 500; }
+
+  /* ── Focus states ── */
+  .filter-btn:focus-visible, .sort-btn:focus-visible {
+    outline: 2px solid var(--accent); outline-offset: 2px;
   }
-  .job-apply:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 2px;
+  .job-title a:focus-visible, .job-apply:focus-visible {
+    outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px;
   }
 
   /* ── Loading state ── */
   .loading-state {
-    text-align: center; padding: 60px 20px; color: var(--text-light);
+    text-align: center; padding: 80px 20px; color: var(--text-light);
   }
   .loading-spinner {
-    width: 24px; height: 24px; margin: 0 auto 12px;
-    border: 2px solid var(--border); border-top-color: var(--accent);
+    width: 28px; height: 28px; margin: 0 auto 14px;
+    border: 3px solid var(--border); border-top-color: var(--accent);
     border-radius: 50%; animation: spin 0.8s linear infinite;
   }
   @keyframes spin { to { transform: rotate(360deg); } }
   .error-state {
-    text-align: center; padding: 60px 20px; color: var(--sc);
+    text-align: center; padding: 60px 20px;
   }
+  .error-state p { color: var(--sc); font-size: 14px; }
   .error-state button {
-    margin-top: 12px; padding: 6px 16px;
-    border: 1px solid var(--border); border-radius: 4px;
+    margin-top: 12px; padding: 8px 20px;
+    border: 1px solid var(--border); border-radius: var(--radius-sm);
     background: var(--bg); color: var(--text-mid); font-size: 13px; cursor: pointer;
   }
-
-  .sort-bar {
-    display: flex; gap: 8px; align-items: center;
-    padding: 10px 0; font-size: 13px; color: var(--text-light);
-  }
-  .sort-btn {
-    cursor: pointer; background: none; border: none; color: var(--text-light);
-    font-size: 13px; padding: 2px 0; border-bottom: 2px solid transparent;
-  }
-  .sort-btn:hover { color: var(--text); }
-  .sort-btn.active { color: var(--text); border-bottom-color: var(--text); font-weight: 500; }
-  .result-count { margin-left: auto; font-size: 12px; color: var(--text-light); }
+  .error-state button:hover { background: var(--bg-alt); }
 
   /* ── Job list ── */
-  .job-list { border-top: 1px solid var(--border); }
+  .job-list { display: flex; flex-direction: column; gap: 4px; }
   .job-row {
-    display: grid;
-    grid-template-columns: 1fr 140px;
-    gap: 12px;
-    padding: 14px 0;
-    border-bottom: 1px solid var(--border);
-    align-items: start;
-    transition: background 0.1s;
+    display: grid; grid-template-columns: 1fr 160px; gap: 16px;
+    padding: 16px 20px; align-items: start;
+    background: var(--bg); border: 1px solid var(--border);
+    border-radius: var(--radius); transition: all 0.15s ease;
   }
-  .job-row:nth-child(even) { background: var(--bg-alt); }
-  .job-row:hover { background: #f0f4ff; }
-  .job-row.expired { opacity: 0.55; }
-  .job-row.expired:hover { opacity: 0.75; }
+  .job-row:hover {
+    box-shadow: var(--shadow-md); border-color: var(--accent/0.3);
+  }
+  .job-row.expired { opacity: 0.5; }
+  .job-row.expired:hover { opacity: 0.7; }
 
   .job-main { min-width: 0; }
   .job-title {
-    font-size: 14px; font-weight: 600; line-height: 1.35;
-    margin-bottom: 1px;
+    font-size: 14px; font-weight: 600; line-height: 1.35; margin-bottom: 1px;
   }
-  .job-title a { color: var(--accent); text-decoration: none; }
+  .job-title a { color: var(--text); text-decoration: none; }
   .job-title a:visited { color: var(--accent-visited); }
-  .job-title a:hover { text-decoration: underline; }
-  .job-title span { color: var(--text); }
+  .job-title a:hover { color: var(--accent); }
+  .job-title a:visited:hover { color: var(--accent); }
 
   .job-title .tag {
-    display: inline-block; font-size: 10px; font-weight: 600; 
-    text-transform: uppercase; letter-spacing: 0.05em;
-    padding: 1px 5px; border-radius: 3px; margin-left: 6px;
+    display: inline-block; font-size: 10px; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.04em;
+    padding: 1px 5px; border-radius: 3px; margin-left: 5px;
     vertical-align: middle; position: relative; top: -1px;
   }
   .tag-expired { color: var(--sc); background: var(--sc-bg); }
   .tag-stale { color: var(--stale); background: #fffbeb; }
   .tag-grad { color: var(--sponsor); background: var(--sponsor-bg); }
 
-  .job-company { font-size: 13px; color: var(--text-mid); margin-bottom: 2px; }
+  .job-company {
+    font-size: 13px; color: var(--text-mid); margin-bottom: 1px;
+  }
   .job-company .licence-badge {
     display: inline-block; font-size: 10px; font-weight: 500;
     color: var(--licence); background: var(--licence-bg);
-    padding: 0 5px; border-radius: 3px; margin-left: 4px;
-    vertical-align: middle; position: relative; top: -1px;
+    padding: 1px 6px; border-radius: 3px; margin-left: 4px;
+    vertical-align: middle;
   }
   .job-location { font-size: 12px; color: var(--text-light); }
   .job-meta {
-    display: flex; flex-wrap: wrap; gap: 4px 8px;
-    font-size: 12px; color: var(--text-light); margin-top: 2px;
+    display: flex; flex-wrap: wrap; gap: 4px 10px;
+    font-size: 12px; color: var(--text-light); margin-top: 3px;
   }
   .job-meta span { white-space: nowrap; }
 
   .job-right { text-align: right; }
-  .job-salary { font-weight: 600; font-size: 14px; white-space: nowrap; }
+  .job-salary { font-weight: 600; font-size: 14px; white-space: nowrap; color: var(--text); }
   .job-salary-na { color: var(--text-light); font-weight: 400; }
-  .job-date { font-size: 11px; color: var(--text-light); margin-top: 2px; }
-  .job-source { font-size: 10px; color: #c4c4c4; margin-top: 1px; }
+  .job-date { font-size: 11px; color: var(--text-light); margin-top: 1px; }
+  .job-source { font-size: 10px; color: var(--text-light); margin-top: 1px; }
   .job-apply {
-    display: inline-block; margin-top: 6px; padding: 3px 10px;
-    background: var(--accent); color: #fff; border-radius: 3px;
-    font-size: 12px; font-weight: 500; text-decoration: none;
+    display: inline-block; margin-top: 8px; padding: 5px 14px;
+    background: var(--accent); color: #fff; border-radius: var(--radius-sm);
+    font-size: 12px; font-weight: 600; text-decoration: none; line-height: 1;
+    transition: background 0.12s;
   }
-  .job-apply:hover { background: #0052a3; }
+  .job-apply:hover { background: var(--accent-dark); }
 
   /* ── Note badge ── */
   .job-note {
     font-size: 12px; margin-top: 6px; padding: 6px 10px;
-    border-radius: 4px; line-height: 1.45;
+    border-radius: var(--radius-sm); line-height: 1.45;
+    border-left: 3px solid transparent;
   }
-  .job-note.verified { color: var(--sponsor); background: var(--sponsor-bg); }
-  .job-note.sc-blocked { color: var(--sc); background: var(--sc-bg); }
-  .job-note.agency { color: var(--agency); background: var(--agency-bg); }
-  .job-note.unavailable { color: var(--sc); background: var(--sc-bg); }
-  .job-note.warn { color: var(--stale); background: #fffbeb; }
+  .job-note.verified { color: #065f46; background: var(--sponsor-bg); border-left-color: var(--sponsor); }
+  .job-note.sc-blocked { color: #991b1b; background: var(--sc-bg); border-left-color: var(--sc); }
+  .job-note.agency { color: #374151; background: var(--agency-bg); border-left-color: var(--agency); }
+  .job-note.unavailable { color: #991b1b; background: var(--sc-bg); border-left-color: var(--sc); }
+  .job-note.warn { color: #92400e; background: #fffbeb; border-left-color: var(--stale); }
 
   .job-fallback { font-size: 12px; color: var(--text-light); margin-top: 4px; }
   .job-fallback a { color: var(--text-light); }
 
-  .no-results { text-align: center; padding: 60px 20px; color: var(--text-light); }
+  .no-results {
+    text-align: center; padding: 80px 20px; color: var(--text-light);
+    background: var(--bg); border-radius: var(--radius);
+    border: 1px solid var(--border);
+  }
+  .no-results p { font-size: 14px; margin-bottom: 4px; }
+  .no-results button { margin-top: 12px; padding: 8px 20px;
+    border: 1px solid var(--border); border-radius: var(--radius-sm);
+    background: var(--bg); color: var(--text-mid); font-size: 13px; cursor: pointer;
+  }
 
   footer {
-    margin-top: 48px; padding: 20px 0; border-top: 1px solid var(--border);
-    font-size: 12px; color: var(--text-light); line-height: 1.6;
+    margin-top: 40px; padding: 20px 0; border-top: 1px solid var(--border);
+    font-size: 12px; color: var(--text-light); line-height: 1.7;
   }
   footer a { color: var(--accent); }
+  footer a:hover { color: var(--accent-dark); }
 
   @media (max-width: 640px) {
-    .job-row { grid-template-columns: 1fr; }
-    .job-right { text-align: left; display: flex; gap: 12px; align-items: baseline; flex-wrap: wrap; }
-    .topbar-inner { gap: 8px; }
-    .topbar-stats { gap: 8px; font-size: 11px; }
+    .job-row { grid-template-columns: 1fr; padding: 14px; }
+    .job-right { text-align: left; display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; }
+    .topbar-inner { padding: 0 16px; gap: 8px; }
+    .topbar-stats { gap: 6px; }
+    .stat-badge { font-size: 10px; padding: 2px 6px; }
+    .main { padding: 0 16px 48px; }
+    .controls { padding: 12px; }
+    .filter-btn { padding: 4px 10px; font-size: 11px; }
   }
 </style>
 </head>
@@ -236,7 +271,7 @@
 
 <div class="topbar">
   <div class="topbar-inner">
-    <div class="logo">ServiceNow <span>Jobs UK</span></div>
+    <div class="logo"><span class="logo-sn">SN</span><span class="logo-sub"> Jobs UK</span></div>
     <div class="topbar-stats" id="topbar-stats"></div>
   </div>
 </div>
@@ -244,7 +279,7 @@
 <div class="main">
   <div class="page-header">
     <h1>ServiceNow Roles — United Kingdom</h1>
-    <p>Cross-referenced against the UK Government sponsor register. Refreshed daily.</p>
+    <p class="subtitle">Cross-referenced against the UK Government sponsor register. Refreshed daily.</p>
     <p class="pipeline-note" id="pipeline-note">
       Updated <strong id="update-date">daily</strong> ·
       <strong>4</strong> sources ·
@@ -260,33 +295,35 @@
     </div>
   </div>
 
-  <div class="filter-bar" id="filters">
-    <span class="filter-label">Sponsorship</span>
-    <div class="filter-group" data-filter="sponsorship">
-      <span class="filter-btn active" data-value="all">All</span>
-      <span class="filter-btn" data-value="licenced">Licenced Co.</span>
-      <span class="filter-btn" data-value="sc_blocked">SC/DV</span>
-      <span class="filter-btn" data-value="unknown">Unknown</span>
-      <span class="filter-btn" data-value="agency_unknown">Agency</span>
-      <span class="filter-btn" data-value="unavailable">Unavailable</span>
+  <div class="controls">
+    <div class="filter-bar" id="filters">
+      <span class="filter-label">Sponsorship</span>
+      <div class="filter-group" data-filter="sponsorship">
+        <span class="filter-btn active" data-value="all">All</span>
+        <span class="filter-btn" data-value="licenced">Licenced Co.</span>
+        <span class="filter-btn" data-value="sc_blocked">SC/DV</span>
+        <span class="filter-btn" data-value="unknown">Unknown</span>
+        <span class="filter-btn" data-value="agency_unknown">Agency</span>
+        <span class="filter-btn" data-value="unavailable">Unavailable</span>
+      </div>
+      <span class="filter-label">Role</span>
+      <div class="filter-group" data-filter="role">
+        <span class="filter-btn active" data-value="all">All</span>
+        <span class="filter-btn" data-value="developer">Developer</span>
+        <span class="filter-btn" data-value="architect">Architect</span>
+        <span class="filter-btn" data-value="consultant">Consultant</span>
+        <span class="filter-btn" data-value="admin">Admin</span>
+        <span class="filter-btn" data-value="manager">Manager</span>
+      </div>
     </div>
-    <span class="filter-label">Role</span>
-    <div class="filter-group" data-filter="role">
-      <span class="filter-btn active" data-value="all">All</span>
-      <span class="filter-btn" data-value="developer">Developer</span>
-      <span class="filter-btn" data-value="architect">Architect</span>
-      <span class="filter-btn" data-value="consultant">Consultant</span>
-      <span class="filter-btn" data-value="admin">Admin</span>
-      <span class="filter-btn" data-value="manager">Manager</span>
+    <div class="sort-bar">
+      <span class="sort-label">Sort</span>
+      <span class="sort-btn active" data-sort="date">Newest</span>
+      <span class="sort-btn" data-sort="salary">Salary</span>
+      <span class="sort-btn" data-sort="company">Company</span>
+      <span class="result-count" id="result-count"></span>
     </div>
   </div>
-
-  <div class="sort-bar">
-    Sort
-    <span class="sort-btn active" data-sort="date">Newest</span>
-    <span class="sort-btn" data-sort="salary">Salary</span>
-    <span class="sort-btn" data-sort="company">Company</span>
-    <span class="result-count" id="result-count"></span>
   </div>
 
   <div class="job-list" id="job-list"></div>
@@ -305,7 +342,7 @@
 
   <footer>
     <p>Updated <strong id="update-date">daily</strong> · Data from LinkedIn, JobServe, Reed, Hunt UK, and company career pages.</p>
-    <p>Sponsor register via <a href="https://www.gov.uk/government/publications/register-of-licensed-sponsors-workers">UK Government</a> · <span class="stat-licenced">🟣 Licenced</span> = company holds A-rated sponsor licence</p>
+    <p>Sponsor register via <a href="https://www.gov.uk/government/publications/register-of-licensed-sponsors-workers">UK Government</a> · <span style="color:var(--licence);">🟣 Licenced</span> = company holds A-rated sponsor licence</p>
     <p style="margin-top: 8px; color: #c4c4c4;">Built by <a href="https://github.com/IbdotBoss/servicenow-jobs-digest" style="color: inherit;">Mr Faajii</a> & Stage</p>
   </footer>
 </div>
@@ -397,10 +434,10 @@ function updateTopbar() {
   const sc = allJobs.filter(j => j.visa_sponsorship === 'sc_blocked').length;
   const mentioned = allJobs.filter(j => j.sponsorship_mentioned).length;
   document.getElementById('topbar-stats').innerHTML = 
-    `<span><strong>${total}</strong> roles</span>` +
-    `<span class="stat-licenced"><strong>${licenced}</strong> licenced</span>` +
-    `<span class="stat-sc"><strong>${sc}</strong> SC-blocked</span>` +
-    (mentioned ? `<span><strong>${mentioned}</strong> explicit</span>` : '');
+    `<span class="stat-badge"><strong>${total}</strong> roles</span>` +
+    `<span class="stat-badge stat-badge-licenced"><strong>${licenced}</strong> licenced</span>` +
+    `<span class="stat-badge stat-badge-sc"><strong>${sc}</strong> SC-blocked</span>` +
+    (mentioned ? `<span class="stat-badge stat-badge-sponsor"><strong>${mentioned}</strong> explicit</span>` : '');
 }
 
 function getFiltered() {
