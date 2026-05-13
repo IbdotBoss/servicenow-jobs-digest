@@ -4,12 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ServiceNow Jobs UK — Sponsorship-Verified Roles</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <style>
   :root {
     --bg: #ffffff; --bg-alt: #f8f9fa;
     --text: #121212; --text-mid: #4a4a4a; --text-light: #6b7280;
     --border: #e5e7eb;
-    --accent: #0066cc; --accent-light: #e8f0fe;
+    --accent: #0066cc; --accent-light: #e8f0fe; --accent-visited: #004e99;
     --sponsor: #0d9488; --sponsor-bg: #f0fdfa;
     --sc: #dc2626; --sc-bg: #fef2f2;
     --agency: #6b7280; --agency-bg: #f3f4f6;
@@ -65,6 +66,8 @@
     background: #fff; color: var(--text); cursor: pointer;
   }
   .date-count { font-size: 12px; color: var(--text-light); }
+  .pipeline-note { font-size: 11px; color: var(--text-light); margin-top: 2px; }
+  .pipeline-note strong { color: var(--text-mid); font-weight: 600; }
 
   /* ── Filters ── */
   .filter-bar {
@@ -86,7 +89,45 @@
   .filter-btn:hover { background: var(--bg-alt); }
   .filter-btn.active { border-color: var(--border); background: var(--bg-alt); color: var(--text); font-weight: 500; }
 
-  /* ── Sort ── */
+  .filter-btn:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    border-color: var(--accent);
+  }
+  .sort-btn:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    color: var(--text);
+  }
+  .job-title a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+  .job-apply:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  /* ── Loading state ── */
+  .loading-state {
+    text-align: center; padding: 60px 20px; color: var(--text-light);
+  }
+  .loading-spinner {
+    width: 24px; height: 24px; margin: 0 auto 12px;
+    border: 2px solid var(--border); border-top-color: var(--accent);
+    border-radius: 50%; animation: spin 0.8s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .error-state {
+    text-align: center; padding: 60px 20px; color: var(--sc);
+  }
+  .error-state button {
+    margin-top: 12px; padding: 6px 16px;
+    border: 1px solid var(--border); border-radius: 4px;
+    background: var(--bg); color: var(--text-mid); font-size: 13px; cursor: pointer;
+  }
+
   .sort-bar {
     display: flex; gap: 8px; align-items: center;
     padding: 10px 0; font-size: 13px; color: var(--text-light);
@@ -121,7 +162,7 @@
     margin-bottom: 1px;
   }
   .job-title a { color: var(--accent); text-decoration: none; }
-  .job-title a:visited { color: #551a8b; }
+  .job-title a:visited { color: var(--accent-visited); }
   .job-title a:hover { text-decoration: underline; }
   .job-title span { color: var(--text); }
 
@@ -204,6 +245,11 @@
   <div class="page-header">
     <h1>ServiceNow Roles — United Kingdom</h1>
     <p>Cross-referenced against the UK Government sponsor register. Refreshed daily.</p>
+    <p class="pipeline-note" id="pipeline-note">
+      Updated <strong id="update-date">daily</strong> ·
+      <strong>4</strong> sources ·
+      Sponsor register cross-ref every run
+    </p>
     <div class="date-selector">
       <label for="date-select">Viewing:</label>
       <select id="date-select">
@@ -244,14 +290,22 @@
   </div>
 
   <div class="job-list" id="job-list"></div>
+  <div class="loading-state" id="loading-state" style="display:none">
+    <div class="loading-spinner"></div>
+    <p>Loading jobs...</p>
+  </div>
+  <div class="error-state" id="error-state" style="display:none">
+    <p>Failed to load job data. The data file may be rebuilding.</p>
+    <button onclick="location.reload()">Try again</button>
+  </div>
   <div class="no-results" id="no-results" style="display:none">
     <p>No jobs match your filters</p>
-    <button onclick="filters={sponsorship:'all',role:'all'};document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));document.querySelectorAll('.filter-group .filter-btn[data-value=\"all\"]').forEach(b=>b.classList.add('active'));render();" style="margin-top:12px;padding:6px 16px;border:1px solid var(--border);border-radius:4px;background:var(--bg);color:var(--text-mid);font-size:13px;cursor:pointer;">Clear all filters</button>
+    <button id="clear-filters-btn" style="margin-top:12px;padding:6px 16px;border:1px solid var(--border);border-radius:4px;background:var(--bg);color:var(--text-mid);font-size:13px;cursor:pointer;">Clear all filters</button>
   </div>
 
   <footer>
     <p>Updated <strong id="update-date">daily</strong> · Data from LinkedIn, JobServe, Reed, Hunt UK, and company career pages.</p>
-    <p>Sponsor register via <a href="https://www.gov.uk/government/publications/register-of-licensed-sponsors-workers">UK Government</a> · <span class="stat-licenced">🟣 Licenced</span> = company holds A-rated sponsor licence · <a href="all-jobs.html">Full archive →</a></p>
+    <p>Sponsor register via <a href="https://www.gov.uk/government/publications/register-of-licensed-sponsors-workers">UK Government</a> · <span class="stat-licenced">🟣 Licenced</span> = company holds A-rated sponsor licence</p>
     <p style="margin-top: 8px; color: #c4c4c4;">Built by <a href="https://github.com/IbdotBoss/servicenow-jobs-digest" style="color: inherit;">Mr Faajii</a> & Stage</p>
   </footer>
 </div>
@@ -265,51 +319,72 @@ let dailySnapshots = [];
 let lastUpdated = '';
 
 async function init() {
-  const masterResp = await fetch('data/master.json?t=' + Date.now());
-  const masterData = await masterResp.json();
-  dailySnapshots = (masterData.daily_snapshots || []).sort().reverse();
-  lastUpdated = masterData.updated || 'daily';
+  document.getElementById('loading-state').style.display = 'block';
+  try {
+    const masterResp = await fetch('data/master.json?t=' + Date.now());
+    if (!masterResp.ok) throw new Error('HTTP ' + masterResp.status);
+    const masterData = await masterResp.json();
+    dailySnapshots = (masterData.daily_snapshots || []).sort().reverse();
+    lastUpdated = masterData.updated || 'daily';
   
-  const select = document.getElementById('date-select');
-  dailySnapshots.forEach(date => {
-    const opt = document.createElement('option');
-    opt.value = date;
-    opt.textContent = date;
-    select.appendChild(opt);
-  });
-  
-  allJobs = masterData.jobs.filter(j => j.status === 'active');
-  updateTopbar();
-  render();
-  document.getElementById('date-count').textContent = allJobs.length + ' active jobs';
-  document.getElementById('update-date').textContent = lastUpdated;
+    const select = document.getElementById('date-select');
+    dailySnapshots.forEach(date => {
+      const opt = document.createElement('option');
+      opt.value = date;
+      opt.textContent = date;
+      select.appendChild(opt);
+    });
+    
+    allJobs = masterData.jobs.filter(j => j.status === 'active');
+    updateTopbar();
+    render();
+    document.getElementById('date-count').textContent = allJobs.length + ' active jobs';
+    document.getElementById('update-date').textContent = lastUpdated;
+    document.getElementById('loading-state').style.display = 'none';
+  } catch (err) {
+    console.error('Failed to load:', err);
+    document.getElementById('loading-state').style.display = 'none';
+    document.getElementById('error-state').style.display = 'block';
+  }
 }
 
 async function loadDate(date) {
   currentView = date;
-  if (date === 'latest') {
-    const resp = await fetch('data/jobs.json?t=' + Date.now());
-    const data = await resp.json();
-    allJobs = data.jobs || [];
-    lastUpdated = data.updated || 'daily';
-  } else if (date === 'today' && dailySnapshots.length > 0) {
-    const latestSnap = dailySnapshots[0]; // Most recent (already reverse-sorted)
-    const resp = await fetch('data/daily/jobs_' + latestSnap + '.json');
-    const data = await resp.json();
-    allJobs = data.jobs || [];
-    allJobs.forEach(j => { if (!j.first_seen) j.first_seen = latestSnap; });
-    lastUpdated = latestSnap;
-  } else {
-    const resp = await fetch('data/daily/jobs_' + date + '.json');
-    const data = await resp.json();
-    allJobs = data.jobs || [];
-    allJobs.forEach(j => { if (!j.first_seen) j.first_seen = date; });
-    lastUpdated = date;
+  document.getElementById('loading-state').style.display = 'block';
+  document.getElementById('error-state').style.display = 'none';
+  try {
+    if (date === 'latest') {
+      const resp = await fetch('data/jobs.json?t=' + Date.now());
+      if (!resp.ok) throw new Error('HTTP ' + resp.status);
+      const data = await resp.json();
+      allJobs = data.jobs || [];
+      lastUpdated = data.updated || 'daily';
+    } else if (date === 'today' && dailySnapshots.length > 0) {
+      const latestSnap = dailySnapshots[0];
+      const resp = await fetch('data/daily/jobs_' + latestSnap + '.json');
+      if (!resp.ok) throw new Error('HTTP ' + resp.status);
+      const data = await resp.json();
+      allJobs = data.jobs || [];
+      allJobs.forEach(j => { if (!j.first_seen) j.first_seen = latestSnap; });
+      lastUpdated = latestSnap;
+    } else {
+      const resp = await fetch('data/daily/jobs_' + date + '.json');
+      if (!resp.ok) throw new Error('HTTP ' + resp.status);
+      const data = await resp.json();
+      allJobs = data.jobs || [];
+      allJobs.forEach(j => { if (!j.first_seen) j.first_seen = date; });
+      lastUpdated = date;
+    }
+    updateTopbar();
+    render();
+    document.getElementById('date-count').textContent = allJobs.length + ' jobs on ' + currentView;
+    document.getElementById('update-date').textContent = lastUpdated;
+    document.getElementById('loading-state').style.display = 'none';
+  } catch (err) {
+    console.error('Failed to load date:', err);
+    document.getElementById('loading-state').style.display = 'none';
+    document.getElementById('error-state').style.display = 'block';
   }
-  updateTopbar();
-  render();
-  document.getElementById('date-count').textContent = allJobs.length + ' jobs on ' + currentView;
-  document.getElementById('update-date').textContent = lastUpdated;
 }
 
 document.getElementById('date-select').addEventListener('change', e => {
@@ -482,6 +557,13 @@ document.querySelector('.sort-bar').addEventListener('click', e => {
   document.querySelectorAll('.sort-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
   sortBy = btn.dataset.sort;
+  render();
+});
+
+document.getElementById('clear-filters-btn')?.addEventListener('click', () => {
+  filters = { sponsorship: 'all', role: 'all' };
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.filter-group .filter-btn[data-value="all"]').forEach(b => b.classList.add('active'));
   render();
 });
 
