@@ -1,7 +1,7 @@
 {
   "updated": "2026-05-13",
-  "total": 158,
-  "total_active": 158,
+  "total": 164,
+  "total_active": 164,
   "verified": 55,
   "sc_blocked": 26,
   "licenced_sponsors": 77,
@@ -16,7 +16,7 @@
     "2026-05-13"
   ],
   "sources": {
-    "LinkedIn": 86,
+    "LinkedIn": 93,
     "JobServe": 39,
     "Hunt UK": 39,
     "ComputerJobs": 9,
@@ -183,6 +183,144 @@
         "Hunt UK"
       ],
       "status": "active"
+    },
+    {
+      "title": "ServiceNow - Senior Technical Lead",
+      "company": "Department for Work and Pensions (DWP)",
+      "location": "Barwick In Elmet, England, United Kingdom (Hybrid)",
+      "id": "4413585274",
+      "url": "https://uk.linkedin.com/jobs/view/4413585274",
+      "source": "LinkedIn",
+      "source_type": "direct",
+      "visa_sponsorship": "unknown",
+      "salary_display": "Not listed",
+      "role_type": "unknown",
+      "remote": "unknown",
+      "employment": "unknown",
+      "link_status": "live",
+      "date_posted": "2026-05-13",
+      "first_seen": "2026-05-13",
+      "last_seen": "2026-05-13",
+      "status": "active",
+      "sources": [
+        "LinkedIn"
+      ],
+      "sponsor_licence": false
+    },
+    {
+      "title": "ServiceNow Managed Service Consultant",
+      "company": "UP3",
+      "location": "Greater London, England, United Kingdom (Hybrid)",
+      "id": "4413593588",
+      "url": "https://uk.linkedin.com/jobs/view/4413593588",
+      "source": "LinkedIn",
+      "source_type": "direct",
+      "visa_sponsorship": "unknown",
+      "salary_display": "Not listed",
+      "role_type": "unknown",
+      "remote": "unknown",
+      "employment": "unknown",
+      "link_status": "live",
+      "date_posted": "2026-05-13",
+      "first_seen": "2026-05-13",
+      "last_seen": "2026-05-13",
+      "status": "active",
+      "sources": [
+        "LinkedIn"
+      ],
+      "sponsor_licence": false
+    },
+    {
+      "title": "ServiceNOW Business Consultant",
+      "company": "DXC Technology",
+      "location": "Farnborough, England, United Kingdom (Hybrid)",
+      "id": "4372582268",
+      "url": "https://uk.linkedin.com/jobs/view/4372582268",
+      "source": "LinkedIn",
+      "source_type": "direct",
+      "visa_sponsorship": "unknown",
+      "salary_display": "Not listed",
+      "role_type": "unknown",
+      "remote": "unknown",
+      "employment": "unknown",
+      "link_status": "live",
+      "date_posted": "2026-05-13",
+      "first_seen": "2026-05-13",
+      "last_seen": "2026-05-13",
+      "status": "active",
+      "sources": [
+        "LinkedIn"
+      ],
+      "sponsor_licence": false
+    },
+    {
+      "title": "ServiceNow Application Manager",
+      "company": "Kinly",
+      "location": "London Area, United Kingdom (Hybrid)",
+      "id": "4409259832",
+      "url": "https://uk.linkedin.com/jobs/view/4409259832",
+      "source": "LinkedIn",
+      "source_type": "direct",
+      "visa_sponsorship": "unknown",
+      "salary_display": "Not listed",
+      "role_type": "unknown",
+      "remote": "unknown",
+      "employment": "unknown",
+      "link_status": "live",
+      "date_posted": "2026-05-13",
+      "first_seen": "2026-05-13",
+      "last_seen": "2026-05-13",
+      "status": "active",
+      "sources": [
+        "LinkedIn"
+      ],
+      "sponsor_licence": false
+    },
+    {
+      "title": "ServiceNow/Halo ITSM Developer",
+      "company": "AgileSource Ltd",
+      "location": "London Area, United Kingdom (Hybrid)",
+      "id": "4413424318",
+      "url": "https://uk.linkedin.com/jobs/view/4413424318",
+      "source": "LinkedIn",
+      "source_type": "direct",
+      "visa_sponsorship": "unknown",
+      "salary_display": "Not listed",
+      "role_type": "unknown",
+      "remote": "unknown",
+      "employment": "unknown",
+      "link_status": "live",
+      "date_posted": "2026-05-13",
+      "first_seen": "2026-05-13",
+      "last_seen": "2026-05-13",
+      "status": "active",
+      "sources": [
+        "LinkedIn"
+      ],
+      "sponsor_licence": false
+    },
+    {
+      "title": "ServiceNow Senior Technical Consultant",
+      "company": "hackajob",
+      "location": "Farnborough, England, United Kingdom (Hybrid)",
+      "id": "4390911291",
+      "url": "https://uk.linkedin.com/jobs/view/4390911291",
+      "source": "LinkedIn",
+      "source_type": "direct",
+      "visa_sponsorship": "unknown",
+      "salary_display": "Not listed",
+      "role_type": "unknown",
+      "remote": "unknown",
+      "employment": "unknown",
+      "link_status": "live",
+      "date_posted": "2026-05-13",
+      "first_seen": "2026-05-13",
+      "last_seen": "2026-05-13",
+      "status": "active",
+      "sources": [
+        "LinkedIn"
+      ],
+      "sponsor_licence": false
     },
     {
       "title": "ServiceNow Technical Consultant/Dev (IRM/SecOps) | Remote",
@@ -1356,9 +1494,9 @@
     {
       "title": "ServiceNow Architect",
       "company": "Capgemini",
-      "location": "Manchester, England",
+      "location": "England, United Kingdom (Hybrid)",
       "salary": "\u00a347,600 (sponsorship threshold)",
-      "url": "https://huntukvisasponsors.com/job/servicenow-architect-at-capgemini-ou41zkerllc",
+      "url": "https://uk.linkedin.com/jobs/view/4404976819",
       "date_posted": "2026-04-27",
       "source": "Hunt UK",
       "visa_sponsorship": "sc_blocked",
@@ -1366,10 +1504,12 @@
       "notes": "SC Security Clearance required \u2014 5yr continuous UK residency",
       "sponsor_licence": true,
       "first_seen": "2026-05-09",
-      "last_seen": "2026-05-09",
+      "last_seen": "2026-05-13",
       "sources": [
-        "Hunt UK"
-      ]
+        "Hunt UK",
+        "LinkedIn"
+      ],
+      "salary_display": "Not listed"
     },
     {
       "title": "Business Development Manager - Security & Risk (Partner Channels)",
@@ -3745,7 +3885,7 @@
       "salary_min": 0,
       "salary_max": 0,
       "date_posted": "2026-05-06",
-      "url": "https://www.linkedin.com/jobs/view/4409552917",
+      "url": "https://uk.linkedin.com/jobs/view/4413498016",
       "source": "LinkedIn",
       "source_type": "agency",
       "role_type": "developer",
@@ -3757,7 +3897,7 @@
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-07",
+      "last_seen": "2026-05-13",
       "status": "active",
       "sources": [
         "LinkedIn"

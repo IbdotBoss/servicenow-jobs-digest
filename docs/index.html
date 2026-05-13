@@ -207,7 +207,8 @@
     <div class="date-selector">
       <label for="date-select">Viewing:</label>
       <select id="date-select">
-        <option value="latest">Latest (active jobs)</option>
+        <option value="latest">Latest (all active)</option>
+        <option value="today">Today (last 24h)</option>
       </select>
       <span class="date-count" id="date-count"></span>
     </div>
@@ -294,6 +295,13 @@ async function loadDate(date) {
     const data = await resp.json();
     allJobs = data.jobs || [];
     lastUpdated = data.updated || 'daily';
+  } else if (date === 'today' && dailySnapshots.length > 0) {
+    const latestSnap = dailySnapshots[0]; // Most recent (already reverse-sorted)
+    const resp = await fetch('data/daily/jobs_' + latestSnap + '.json');
+    const data = await resp.json();
+    allJobs = data.jobs || [];
+    allJobs.forEach(j => { if (!j.first_seen) j.first_seen = latestSnap; });
+    lastUpdated = latestSnap;
   } else {
     const resp = await fetch('data/daily/jobs_' + date + '.json');
     const data = await resp.json();
@@ -303,7 +311,7 @@ async function loadDate(date) {
   }
   updateTopbar();
   render();
-  document.getElementById('date-count').textContent = allJobs.length + ' jobs on ' + date;
+  document.getElementById('date-count').textContent = allJobs.length + ' jobs on ' + currentView;
   document.getElementById('update-date').textContent = lastUpdated;
 }
 

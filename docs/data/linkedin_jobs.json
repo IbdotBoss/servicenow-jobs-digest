@@ -1,128 +1,122 @@
-{
-  "date": "2026-05-12",
-  "source": "LinkedIn",
-  "total": 15,
-  "jobs": [
-    {
-      "title": "Senior ServiceNow Developer",
-      "company": "DWP Digital",
-      "location": "Manchester, England, United Kingdom (Hybrid)",
-      "url": "https://www.linkedin.com/jobs/view/4412748505",
-      "source": "LinkedIn",
-      "visa_sponsorship": "unknown"
-    },
-    {
-      "title": "Senior ServiceNow Developer",
-      "company": "Manchester Digital",
-      "location": "Manchester, England, United Kingdom (Hybrid)",
-      "url": "https://www.linkedin.com/jobs/view/4413003996",
-      "source": "LinkedIn",
-      "visa_sponsorship": "unknown"
-    },
-    {
-      "title": "Senior ServiceNow Developer",
-      "company": "Department for Work and Pensions (DWP)",
-      "location": "Barwick In Elmet, England, United Kingdom (On-site)",
-      "url": "https://www.linkedin.com/jobs/view/4413060076",
-      "source": "LinkedIn",
-      "visa_sponsorship": "verified"
-    },
-    {
-      "title": "ServiceNow Technical Consultant/Dev (IRM/SecOps) | Remote",
-      "company": "Akkodis",
-      "location": "England, United Kingdom (Remote)",
-      "url": "https://www.linkedin.com/jobs/view/4412749279",
-      "source": "LinkedIn",
-      "visa_sponsorship": "agency_unknown"
-    },
-    {
-      "title": "Senior IT Project Manager (ServiceNow)",
-      "company": "WPP",
-      "location": "London, England, United Kingdom (Hybrid)",
-      "url": "https://www.linkedin.com/jobs/view/4399774555",
-      "source": "LinkedIn",
-      "visa_sponsorship": "verified"
-    },
-    {
-      "title": "ServiceNow Architect",
-      "company": "Atos",
-      "location": "London, England, United Kingdom (On-site)",
-      "url": "https://www.linkedin.com/jobs/view/4380803528",
-      "source": "LinkedIn",
-      "visa_sponsorship": "verified"
-    },
-    {
-      "title": "ServiceNow Architect",
-      "company": "Coyle Personnel",
-      "location": "London Area, United Kingdom (Hybrid)",
-      "url": "https://www.linkedin.com/jobs/view/4412676675",
-      "source": "LinkedIn",
-      "visa_sponsorship": "verified"
-    },
-    {
-      "title": "ServiceNow Knowledge Manager",
-      "company": "DGH Recruitment",
-      "location": "London Area, United Kingdom (Hybrid)",
-      "url": "https://www.linkedin.com/jobs/view/4412670609",
-      "source": "LinkedIn",
-      "visa_sponsorship": "unknown"
-    },
-    {
-      "title": "ITSM Portfolio Analyst",
-      "company": "AgileSource Ltd",
-      "location": "Nottingham, England, United Kingdom (Hybrid)",
-      "url": "https://www.linkedin.com/jobs/view/4412933066",
-      "source": "LinkedIn",
-      "visa_sponsorship": "unknown"
-    },
-    {
-      "title": "Senior ServiceNow Developer",
-      "company": "DWP Digital",
-      "location": "West Midlands, England, United Kingdom (Hybrid)",
-      "url": "https://www.linkedin.com/jobs/view/4412749470",
-      "source": "LinkedIn",
-      "visa_sponsorship": "unknown"
-    },
-    {
-      "title": "ServiceNow Technical Architect / Developer - Security Cleared",
-      "company": "Accenture UK & Ireland",
-      "location": "London, England, United Kingdom (On-site)",
-      "url": "https://www.linkedin.com/jobs/view/4328118152",
-      "source": "LinkedIn",
-      "visa_sponsorship": "unknown"
-    },
-    {
-      "title": "ServiceNow Lead  Architect",
-      "company": "Capita",
-      "location": "London, England, United Kingdom (Remote)",
-      "url": "https://www.linkedin.com/jobs/view/4412682781",
-      "source": "LinkedIn",
-      "visa_sponsorship": "verified"
-    },
-    {
-      "title": "Public Sector / Enterprise Sales Account Manager - ServiceNow Partner.",
-      "company": "RR",
-      "location": "Manchester, England, United Kingdom (Hybrid)",
-      "url": "https://www.linkedin.com/jobs/view/4412904519",
-      "source": "LinkedIn",
-      "visa_sponsorship": "verified"
-    },
-    {
-      "title": "ServiceNow Technical Architect",
-      "company": "Accenture UK & Ireland",
-      "location": "London, England, United Kingdom (On-site)",
-      "url": "https://www.linkedin.com/jobs/view/4328019788",
-      "source": "LinkedIn",
-      "visa_sponsorship": "unknown"
-    },
-    {
-      "title": "Senior ServiceNow Developer",
-      "company": "DWP Digital",
-      "location": "Leeds, England, United Kingdom (Hybrid)",
-      "url": "https://www.linkedin.com/jobs/view/4412742710",
-      "source": "LinkedIn",
-      "visa_sponsorship": "unknown"
-    }
-  ],
-  "time_filter": "last_24h"
-}
+[
+  {
+    "title": "ServiceNow Developer",
+    "company": "Experis UK",
+    "location": "Greater Lincoln Area, United Kingdom (Remote)",
+    "id": "4413498016",
+    "url": "https://uk.linkedin.com/jobs/view/4413498016",
+    "source": "LinkedIn",
+    "source_type": "direct",
+    "visa_sponsorship": "unknown",
+    "salary_display": "Not listed",
+    "role_type": "unknown",
+    "remote": "unknown",
+    "employment": "unknown",
+    "link_status": "live"
+  },
+  {
+    "title": "ServiceNow - Senior Technical Lead",
+    "company": "Department for Work and Pensions (DWP)",
+    "location": "Barwick In Elmet, England, United Kingdom (Hybrid)",
+    "id": "4413585274",
+    "url": "https://uk.linkedin.com/jobs/view/4413585274",
+    "source": "LinkedIn",
+    "source_type": "direct",
+    "visa_sponsorship": "unknown",
+    "salary_display": "Not listed",
+    "role_type": "unknown",
+    "remote": "unknown",
+    "employment": "unknown",
+    "link_status": "live"
+  },
+  {
+    "title": "ServiceNow Managed Service Consultant",
+    "company": "UP3",
+    "location": "Greater London, England, United Kingdom (Hybrid)",
+    "id": "4413593588",
+    "url": "https://uk.linkedin.com/jobs/view/4413593588",
+    "source": "LinkedIn",
+    "source_type": "direct",
+    "visa_sponsorship": "unknown",
+    "salary_display": "Not listed",
+    "role_type": "unknown",
+    "remote": "unknown",
+    "employment": "unknown",
+    "link_status": "live"
+  },
+  {
+    "title": "ServiceNOW Business Consultant",
+    "company": "DXC Technology",
+    "location": "Farnborough, England, United Kingdom (Hybrid)",
+    "id": "4372582268",
+    "url": "https://uk.linkedin.com/jobs/view/4372582268",
+    "source": "LinkedIn",
+    "source_type": "direct",
+    "visa_sponsorship": "unknown",
+    "salary_display": "Not listed",
+    "role_type": "unknown",
+    "remote": "unknown",
+    "employment": "unknown",
+    "link_status": "live"
+  },
+  {
+    "title": "ServiceNow Application Manager",
+    "company": "Kinly",
+    "location": "London Area, United Kingdom (Hybrid)",
+    "id": "4409259832",
+    "url": "https://uk.linkedin.com/jobs/view/4409259832",
+    "source": "LinkedIn",
+    "source_type": "direct",
+    "visa_sponsorship": "unknown",
+    "salary_display": "Not listed",
+    "role_type": "unknown",
+    "remote": "unknown",
+    "employment": "unknown",
+    "link_status": "live"
+  },
+  {
+    "title": "ServiceNow/Halo ITSM Developer",
+    "company": "AgileSource Ltd",
+    "location": "London Area, United Kingdom (Hybrid)",
+    "id": "4413424318",
+    "url": "https://uk.linkedin.com/jobs/view/4413424318",
+    "source": "LinkedIn",
+    "source_type": "direct",
+    "visa_sponsorship": "unknown",
+    "salary_display": "Not listed",
+    "role_type": "unknown",
+    "remote": "unknown",
+    "employment": "unknown",
+    "link_status": "live"
+  },
+  {
+    "title": "ServiceNow Senior Technical Consultant",
+    "company": "hackajob",
+    "location": "Farnborough, England, United Kingdom (Hybrid)",
+    "id": "4390911291",
+    "url": "https://uk.linkedin.com/jobs/view/4390911291",
+    "source": "LinkedIn",
+    "source_type": "direct",
+    "visa_sponsorship": "unknown",
+    "salary_display": "Not listed",
+    "role_type": "unknown",
+    "remote": "unknown",
+    "employment": "unknown",
+    "link_status": "live"
+  },
+  {
+    "title": "ServiceNow Architect",
+    "company": "Capgemini",
+    "location": "England, United Kingdom (Hybrid)",
+    "id": "4404976819",
+    "url": "https://uk.linkedin.com/jobs/view/4404976819",
+    "source": "LinkedIn",
+    "source_type": "direct",
+    "visa_sponsorship": "unknown",
+    "salary_display": "Not listed",
+    "role_type": "unknown",
+    "remote": "unknown",
+    "employment": "unknown",
+    "link_status": "live"
+  }
+]
