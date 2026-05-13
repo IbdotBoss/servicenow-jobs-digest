@@ -163,27 +163,35 @@
 
   /* ── Sponsorship dot ── */
   .sponsor-dot {
-    display: inline-block; width: 7px; height: 7px;
-    border-radius: 50%; margin-right: 6px;
-    vertical-align: middle; flex-shrink: 0;
+    display: inline-block; width: 6px; height: 6px;
+    border-radius: 50%; flex-shrink: 0;
   }
-  .sponsor-dot.licenced { background: var(--licence); }
-  .sponsor-dot.sc_blocked { background: var(--sc); }
-  .sponsor-dot.unavailable { background: var(--agency); }
-  .sponsor-dot.agency_unknown { background: var(--agency); }
-  .sponsor-dot.verified { background: var(--sponsor); }
-  .sponsor-dot.unknown { background: var(--border); }
+
+  .sponsor-badge {
+    display: inline-flex; align-items: center; gap: 4px;
+    font-size: 10px; font-weight: 600;
+    padding: 1px 7px 1px 5px; border-radius: 3px;
+    margin-right: 4px; vertical-align: middle;
+    text-transform: uppercase; letter-spacing: 0.04em;
+  }
+  .sponsor-badge.licenced { color: var(--licence); background: var(--licence-bg); }
+  .sponsor-badge.licenced .sponsor-dot { background: var(--licence); }
+  .sponsor-badge.sc { color: #991b1b; background: var(--sc-bg); }
+  .sponsor-badge.sc .sponsor-dot { background: var(--sc); }
+  .sponsor-badge.agency { color: #374151; background: var(--agency-bg); }
+  .sponsor-badge.agency .sponsor-dot { background: var(--agency); }
+  .sponsor-badge.na { color: #991b1b; background: var(--sc-bg); }
+  .sponsor-badge.na .sponsor-dot { background: var(--agency); }
 
   .job-row {
     display: grid; grid-template-columns: 1fr auto;
-    gap: 16px; padding: 16px 0;
+    gap: 16px; padding: 16px 4px;
     border-bottom: 1px solid var(--border-light);
     transition: all 0.15s;
     align-items: start;
   }
   .job-row:last-child { border-bottom: none; }
-  .job-row:hover { padding-left: 8px; padding-right: 8px; margin: 0 -8px; border-radius: var(--radius); background: var(--bg-alt); border-bottom-color: transparent; }
-  .job-row:focus-within { padding-left: 8px; padding-right: 8px; margin: 0 -8px; border-radius: var(--radius); background: var(--bg-alt); border-bottom-color: transparent; }
+  .job-row:hover, .job-row:focus-within { background: var(--bg-alt); border-radius: var(--radius); }
   .job-row.expired { opacity: 0.4; }
   .job-row.expired:hover { opacity: 0.6; }
 
@@ -211,11 +219,6 @@
   .job-company {
     font-size: 13px; color: var(--text-mid); margin-bottom: 1px;
     display: flex; align-items: center; gap: 4px;
-  }
-  .job-company .licence-badge {
-    display: inline-block; font-size: 9px; font-weight: 600;
-    color: var(--licence); background: var(--licence-bg);
-    padding: 1px 5px; border-radius: 2px; text-transform: uppercase; letter-spacing: 0.04em;
   }
   .job-location { font-size: 12px; color: var(--text-light); margin-bottom: 2px; }
   .job-meta {
@@ -275,8 +278,8 @@
   footer a:hover { color: var(--accent-dark); }
 
   @media (max-width: 640px) {
-    .job-row { grid-template-columns: 1fr; padding: 14px 0; }
-    .job-row:hover { padding: 14px 12px; margin: 0 -12px; }
+    .job-row { grid-template-columns: 1fr; padding: 14px 4px; }
+    .job-row:hover, .job-row:focus-within { padding: 14px 12px; margin: 0 -12px; }
     .job-right { flex-direction: row; flex-wrap: wrap; align-items: center; gap: 8px; min-width: 0; }
     .topbar-inner { padding: 0 16px; gap: 6px; }
     .topbar-stats { gap: 4px; }
@@ -577,21 +580,26 @@ function render() {
 
     let companyName = j.company || '';
     if (companyName === '[view listing]') companyName = 'via JobServe';
-    let licenceBadge = j.sponsor_licence
-      ? '<span class="licence-badge">Licenced</span>'
-      : '';
     
-    // Sponsorship dot
+    // Sponsorship badge (dot + label)
     let sp = j.visa_sponsorship || 'unknown';
     if (sp === 'verified') sp = 'licenced';
     if (!j.visa_sponsorship && j.sponsor_licence) sp = 'licenced';
-    let dotClass = (sp === 'licenced' || sp === 'sc_blocked' || sp === 'unavailable' || sp === 'agency_unknown') ? sp : 'unknown';
-    let sponsorDot = '<span class="sponsor-dot ' + dotClass + '" title="' + sp + '"></span>';
+    let badgeHtml = '';
+    if (sp === 'licenced') {
+      badgeHtml = '<span class="sponsor-badge licenced"><span class="sponsor-dot"></span>Licenced</span>';
+    } else if (sp === 'sc_blocked') {
+      badgeHtml = '<span class="sponsor-badge sc"><span class="sponsor-dot"></span>SC/DV</span>';
+    } else if (sp === 'agency_unknown') {
+      badgeHtml = '<span class="sponsor-badge agency"><span class="sponsor-dot"></span>Agency</span>';
+    } else if (sp === 'unavailable') {
+      badgeHtml = '<span class="sponsor-badge na"><span class="sponsor-dot"></span>No</span>';
+    }
 
     return '<div class="job-row' + rowClass + '">' +
       '<div class="job-main">' +
         '<div class="job-title">' + titleHtml + titleTags + '</div>' +
-        '<div class="job-company">' + sponsorDot + companyName + licenceBadge + '</div>' +
+        '<div class="job-company">' + badgeHtml + companyName + '</div>' +
         '<div class="job-location">' + (j.location || 'UK') + '</div>' +
         meta +
         note +
