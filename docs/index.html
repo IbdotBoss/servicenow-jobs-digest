@@ -220,6 +220,12 @@
     font-size: 13px; color: var(--text-mid); margin-bottom: 1px;
     display: flex; align-items: center; gap: 4px;
   }
+  .licence-badge {
+    display: inline-block; font-size: 9px; font-weight: 600;
+    color: var(--licence); background: var(--licence-bg);
+    padding: 1px 5px; border-radius: 2px; text-transform: uppercase; letter-spacing: 0.04em;
+    margin-right: 2px;
+  }
   .job-location { font-size: 12px; color: var(--text-light); margin-bottom: 2px; }
   .job-meta {
     display: flex; flex-wrap: wrap; gap: 3px 10px;
@@ -580,6 +586,9 @@ function render() {
 
     let companyName = j.company || '';
     if (companyName === '[view listing]') companyName = 'via JobServe';
+    let licenceBadge = j.sponsor_licence
+      ? '<span class="licence-badge">Licenced</span>'
+      : '';
     
     // Sponsorship badge (dot + label)
     let sp = j.visa_sponsorship || 'unknown';
@@ -599,7 +608,7 @@ function render() {
     return '<div class="job-row' + rowClass + '">' +
       '<div class="job-main">' +
         '<div class="job-title">' + titleHtml + titleTags + '</div>' +
-        '<div class="job-company">' + badgeHtml + companyName + '</div>' +
+        '<div class="job-company">' + badgeHtml + licenceBadge + companyName + '</div>' +
         '<div class="job-location">' + (j.location || 'UK') + '</div>' +
         meta +
         note +
