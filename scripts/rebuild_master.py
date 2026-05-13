@@ -76,6 +76,9 @@ def rebuild():
                 # Propagate sponsor_licence: once true, stays true
                 if j.get('sponsor_licence'):
                     existing['sponsor_licence'] = True
+                # Propagate sponsorship_mentioned: once true, stays true
+                if j.get('sponsorship_mentioned'):
+                    existing['sponsorship_mentioned'] = True
                 # Better sponsorship tag wins
                 if tag not in ('unknown', 'agency_unknown', None):
                     existing['visa_sponsorship'] = tag

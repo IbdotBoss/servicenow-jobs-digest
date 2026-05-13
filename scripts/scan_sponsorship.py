@@ -120,6 +120,14 @@ def fetch_page(url):
     except Exception as e:
         return '', str(e)
 
+# Patterns that explicitly CONFIRM sponsorship (mentioned in description)
+SPONSOR_MENTIONED_PATTERNS = [
+    (r'visa\s+sponsorship\s+(?:can\s+be\s+)?(?:provided|available|offered)', 'Visa sponsorship mentioned in description'),
+    (r'sponsorship\s+(?:is\s+)?(?:available|provided|offered)', 'Sponsorship mentioned'),
+    (r'skilled\s+worker\s+visa', 'Skilled Worker visa mentioned'),
+    (r'(?:we\s+(?:can|will|offer|provide)\s+(?:visa\s+)?sponsorship)', 'We can sponsor'),
+]
+
 def scan_text(text):
     """Scan HTML text for sponsorship language. Returns (tag, reason) or (None, None)."""
     text_lower = text.lower()
@@ -190,6 +198,13 @@ def scan_job(job, sponsor_set):
     if tag:
         updates['visa_sponsorship'] = tag
         updates['sponsorship_scan'] = reason
+    
+    # Also check for explicit sponsorship mention (data point, not a tag)
+    if company and sponsor_set and company_has_licence(company, sponsor_set):
+        for pattern, _ in SPONSOR_MENTIONED_PATTERNS:
+            if re.search(pattern, html_text.lower()):
+                updates['sponsorship_mentioned'] = True
+                break
     
     return updates
 

@@ -1,102 +1,98 @@
-# ServiceNow Jobs UK — Sponsorship-Verified Roles
+# ServiceNow Jobs UK — Sponsorship-Focused Job Aggregator
 
-A daily-updated job aggregator for ServiceNow roles in the UK, specifically filtering for visa sponsorship eligibility. Built with zero Playwright dependencies — lightweight, terminal-friendly scrapers.
+A daily-updated job aggregator for ServiceNow roles in the UK, cross-referenced against the UK Government sponsor register. 164 active jobs across 4 sources.
 
-**Live site:** https://ibdotboss.github.io/servicenow-jobs-digest/
+**Live site:** [ibdotboss.github.io/servicenow-jobs-digest](https://ibdotboss.github.io/servicenow-jobs-digest/)
 
-## 🚀 Features
+## How It Works
 
-- **112 active ServiceNow UK jobs** (132 archived) from 4+ sources
-- **Sponsorship tagging**: `verified` (sponsor-licensed employer), `sc_blocked` (clearance required), `agency_unknown` (recruitment agency), `unavailable` (explicitly no sponsorship)
-- **Daily cron** at 05:00 UK — auto-scrapes, merges, deploys
-- **Files-per-day architecture** — immutable daily snapshots, idempotent master rebuild
-- **Canonical Apply links** — working direct-to-job URLs (no generic search pages)
-- **Filter by**: sponsorship status, role type, source, SC clearance
-- **Date selector** — browse any historical snapshot
+Every morning at 05:00 UK time, the pipeline:
+1. Scrapes **JobServe** (mobile HTML, session-based pagination)
+2. Scrapes **LinkedIn** (Playwright-based, 5 pages/day with stealth delays)
+3. Scrapes **Reed.co.uk** (embedded `__NEXT_DATA__` JSON)
+4. Extracts **Hunt UK** (web_extract — sponsor-verified companies)
+5. Cross-references all companies against the **120K sponsor register**
+6. Scans job descriptions for **SC/DV clearance** and **"no sponsorship"** language
+7. Saves an **immutable daily snapshot** → idempotent master rebuild
 
-## 📋 Architecture
+## Sponsorship Signals
 
-```
-Daily scrape (05:00 UK via Hermes cron):
-  JobServe mobile  → jobserve_scraper.py (session-based SHD pagination)
-  LinkedIn         → linkedin_job_scraper.py (Playwright, stealth, 5 pages/day)
-  Reed.co.uk       → sn_aggregator.py (__NEXT_DATA__ JSON)
-  Hunt UK          → web_extract
-       ↓
-  Save IMMUTABLE snapshot → docs/data/daily/jobs_YYYY-MM-DD.json
-       ↓
-  rebuild_master.py (idempotent — reads ALL daily files, dedupes, computes status)
-       ↓
-  master.json ← full archive (first_seen, last_seen, status)
-  jobs.json   ← active-only copy for index page
-       ↓
-  GitHub Pages → index.html (date selector + active jobs)
-```
+| Signal | Method | Meaning |
+|--------|--------|---------|
+| 🟣 **Licenced** | Sponsor register CSV | Company holds A-rated Skilled Worker licence |
+| 🔴 **SC-blocked** | Description text scan | Role requires SC/DV clearance (5yr UK residency) |
+| 🟢 **Explicit** | Description text scan | Job explicitly mentions "visa sponsorship available" |
+| ⚪ **Unknown** | — | Can't determine — treat with caution |
+| 🔶 **Agency** | Source detection | Posted by recruitment agency |
 
-## 🔧 Scrapers
+**Licenced** is the primary signal. It means the company CAN sponsor — check the specific role.
+**Explicit** is a data point when the text is clear, but it's rare (~5% of jobs).
+No algorithm claims "verified" — that judgment is yours.
 
-| Source | Method | Yield | Notes |
-|--------|--------|-------|-------|
-| **JobServe** | `curl` → mobile HTML → session-based SHD | ~27 SN roles | ⚠️ No company names in mobile listings. Canonical permalink extracted from detail pages. |
-| **LinkedIn** | `linkedin-job-scraper` (Playwright + real browser) | ~59 SN roles | Uses saved session file. 5 pages/day with 3-5s delays. |
-| **Reed.co.uk** | `__NEXT_DATA__` JSON extraction | ~2-5 SN roles | Salary data available. |
-| **Hunt UK** | `web_extract` search + role pages | ~8 verified sponsors | Links expire fast (410 Gone). Use as trust signals. |
-
-### Dead sources (confirmed)
-- **ComputerJobs** — 100% JobServe overlap (same backend engine)
-- **Indeed** — Cloudflare walled (403)
-- **Totaljobs/CV-Library** — JS-walled
-- **Deerfoot** — Generic landing page, no specific job links
-
-## 🏷️ Sponsorship Tags (FIVE states)
-
-| Tag | Meaning |
-|-----|---------|
-| `verified` | Company is A-rated on sponsor register AND job description doesn't say "no sponsorship" |
-| `sc_blocked` | Company has licence but requires Security Check/DV (5yr UK residency needed) |
-| `agency_unknown` | Posted by recruitment agency — verify sponsorship with actual employer |
-| `unavailable` | Listing explicitly states no visa sponsorship available |
-| `unknown` | Cannot determine — treat with caution |
-
-## 🔑 Key Files
+## Architecture
 
 ```
-servicenow-jobs-digest/
-├── scripts/
-│   ├── jobserve_scraper.py      # JobServe mobile scraper (session-based SHD)
-│   ├── linkedin_job_scraper.py   # Playwright-based LinkedIn scraper (stealth)
-│   ├── sn_aggregator.py          # Reed + Hunt UK + sponsor CSV cross-ref
-│   ├── scan_sponsorship.py       # Listing-level sponsorship verification
-│   └── rebuild_master.py         # Idempotent master rebuild from daily files
-├── docs/
-│   ├── index.html                # Dynamic dashboard (inline CSS + JS)
-│   ├── data/
-│   │   ├── master.json           # Full archive (all jobs, all dates)
-│   │   ├── jobs.json             # Active-only copy
-│   │   └── daily/                # Immutable daily snapshots
-│   └── daily/
-│       └── jobs_YYYY-MM-DD.json  # Self-contained daily view
-└── README.md
+Daily pipeline (05:00 UK):
+  JobServe    → jobserve_scraper.py (curl + mobile HTML)
+  LinkedIn    → linkedin_job_scraper.py (Playwright + stealth)
+  Reed        → sn_aggregator.py (__NEXT_DATA__ JSON)
+  Hunt UK     → web_extract (sponsor search results)
+       ↓
+  scan_sponsorship.py (CSV cross-ref + text scan)
+       ↓
+  docs/data/daily/jobs_YYYY-MM-DD.json (IMMUTABLE)
+       ↓
+  rebuild_master.py → docs/data/master.json + jobs.json
+       ↓
+  GitHub Pages → index.html
 ```
 
-## 🚦 Cron
+## Scripts
 
-`0e5c2cd3fe1d` — Daily at 05:00 UK via Hermes Agent. Pipeline steps:
-1. JobServe scrape → session-based SHD pagination
-2. LinkedIn scrape → Playwright, stealthy, 5 pages
-3. Reed + Hunt UK → __NEXT_DATA__ + web_extract
-4. Sponsorship scanner → listing-level check
-5. Save daily snapshot (immutable)
-6. Rebuild master.json (idempotent)
-7. Push to GitHub Pages
+| Script | Purpose |
+|--------|---------|
+| `jobserve_scraper.py` | JobServe mobile via session-based SHD pagination |
+| `linkedin_job_scraper.py` | LinkedIn via Playwright, 5 pages/day, stealth timing |
+| `sn_aggregator.py` | Reed.co.uk JSON extraction |
+| `scan_sponsorship.py` | Sponsor CSV cross-ref, SC/DV and "no sponsorship" detection |
+| `rebuild_master.py` | Idempotent master rebuild from immutable daily snapshots |
+| `build_daily.py` | Manual daily snapshot assembly (for curation) |
 
-## 🐞 Known Issues
+## Sources
 
-- **JobServe mobile listings lack company names** — extracted from detail pages in post-processing
-- **LinkedIn requires manual session creation** — run `python3 scripts/linkedin_job_scraper.py --create-session`
-- **Hunt UK links expire (410 Gone)** — use as trust signals, not Apply links
-- **SC/DV clearance = sponsorship killer** — 5 years continuous UK residency required
+| Source | Method | Daily Yield | Notes |
+|--------|--------|-------------|-------|
+| JobServe | curl + mobile HTML | ~27 SN roles | No company names in mobile — shown as "via JobServe" |
+| LinkedIn | Playwright + cookies | ~15 SN roles | Cookies expire ~24h, auto-harvested from Brave |
+| Reed | __NEXT_DATA__ JSON | ~2 SN roles | Salary data available |
+| Hunt UK | web_extract | ~8 sponsor roles | Links → LinkedIn apply pages |
 
-## 📄 License
+**Dead sources (confirmed):** ComputerJobs (100% JobServe overlap), Indeed (Cloudflare), Totaljobs/CV-Library (JS-walled)
+
+## Quick Start
+
+```bash
+# LinkedIn (requires manual login once)
+python3 scripts/linkedin_job_scraper.py --create-session
+python3 scripts/linkedin_job_scraper.py           # Daily (5 pages)
+python3 scripts/linkedin_job_scraper.py --full     # Catch-up (15 pages)
+
+# JobServe
+python3 scripts/jobserve_scraper.py
+
+# Reed + Hunt UK + Scan + Rebuild
+python3 scripts/sn_aggregator.py
+python3 scripts/scan_sponsorship.py --csv-only
+python3 scripts/rebuild_master.py
+
+# Deploy
+git add docs/ && git commit -m "Daily update $(date +%Y-%m-%d)" && git push
+```
+
+## Cron
+
+`0e5c2cd3fe1d` — Daily at 05:00 UK via Hermes Agent. 4 scrapers → sponsor scan → rebuild → push → Discord summary.
+
+## License
 
 MIT License. Copyright © 2026 Stage & Mr Faajii.

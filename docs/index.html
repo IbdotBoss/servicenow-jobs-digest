@@ -218,17 +218,11 @@
     <span class="filter-label">Sponsorship</span>
     <div class="filter-group" data-filter="sponsorship">
       <span class="filter-btn active" data-value="all">All</span>
-      <span class="filter-btn" data-value="verified">Verified</span>
+      <span class="filter-btn" data-value="licenced">Licenced Co.</span>
       <span class="filter-btn" data-value="sc_blocked">SC/DV</span>
       <span class="filter-btn" data-value="unknown">Unknown</span>
       <span class="filter-btn" data-value="agency_unknown">Agency</span>
       <span class="filter-btn" data-value="unavailable">Unavailable</span>
-    </div>
-    <span class="filter-label">Licence</span>
-    <div class="filter-group" data-filter="licence">
-      <span class="filter-btn active" data-value="all">All</span>
-      <span class="filter-btn" data-value="licenced">Licenced Co.</span>
-      <span class="filter-btn" data-value="unlicenced">Unlicenced</span>
     </div>
     <span class="filter-label">Role</span>
     <div class="filter-group" data-filter="role">
@@ -250,18 +244,21 @@
   </div>
 
   <div class="job-list" id="job-list"></div>
-  <div class="no-results" id="no-results" style="display:none">No jobs match your filters</div>
+  <div class="no-results" id="no-results" style="display:none">
+    <p>No jobs match your filters</p>
+    <button onclick="filters={sponsorship:'all',role:'all'};document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));document.querySelectorAll('.filter-group .filter-btn[data-value=\"all\"]').forEach(b=>b.classList.add('active'));render();" style="margin-top:12px;padding:6px 16px;border:1px solid var(--border);border-radius:4px;background:var(--bg);color:var(--text-mid);font-size:13px;cursor:pointer;">Clear all filters</button>
+  </div>
 
   <footer>
     <p>Updated <strong id="update-date">daily</strong> · Data from LinkedIn, JobServe, Reed, Hunt UK, and company career pages.</p>
-    <p>Sponsor register via <a href="https://www.gov.uk/government/publications/register-of-licensed-sponsors-workers">UK Government</a> · <span class="stat-licenced">🟣 Licenced</span> = company holds A-rated sponsor licence · <span class="stat-verified">🟢 Verified</span> = role confirmed sponsorship <a href="all-jobs.html">Full archive →</a></p>
+    <p>Sponsor register via <a href="https://www.gov.uk/government/publications/register-of-licensed-sponsors-workers">UK Government</a> · <span class="stat-licenced">🟣 Licenced</span> = company holds A-rated sponsor licence · <a href="all-jobs.html">Full archive →</a></p>
     <p style="margin-top: 8px; color: #c4c4c4;">Built by <a href="https://github.com/IbdotBoss/servicenow-jobs-digest" style="color: inherit;">Mr Faajii</a> & Stage</p>
   </footer>
 </div>
 
 <script>
 let allJobs = [];
-let filters = { sponsorship: 'all', licence: 'all', role: 'all' };
+let filters = { sponsorship: 'all', role: 'all' };
 let sortBy = 'date';
 let currentView = 'latest';
 let dailySnapshots = [];
@@ -321,14 +318,14 @@ document.getElementById('date-select').addEventListener('change', e => {
 
 function updateTopbar() {
   const total = allJobs.length;
-  const verified = allJobs.filter(j => j.visa_sponsorship === 'verified' || j.visa_sponsorship === 'sponsor_verified').length;
   const licenced = allJobs.filter(j => j.sponsor_licence).length;
   const sc = allJobs.filter(j => j.visa_sponsorship === 'sc_blocked').length;
+  const mentioned = allJobs.filter(j => j.sponsorship_mentioned).length;
   document.getElementById('topbar-stats').innerHTML = 
     `<span><strong>${total}</strong> roles</span>` +
-    `<span class="stat-verified"><strong>${verified}</strong> verified</span>` +
     `<span class="stat-licenced"><strong>${licenced}</strong> licenced</span>` +
-    `<span class="stat-sc"><strong>${sc}</strong> SC-blocked</span>`;
+    `<span class="stat-sc"><strong>${sc}</strong> SC-blocked</span>` +
+    (mentioned ? `<span><strong>${mentioned}</strong> explicit</span>` : '');
 }
 
 function getFiltered() {
@@ -336,12 +333,11 @@ function getFiltered() {
     // Sponsorship filter
     if (filters.sponsorship !== 'all') {
       const sp = j.visa_sponsorship;
-      if (filters.sponsorship === 'verified' && sp !== 'verified' && sp !== 'sponsor_verified') return false;
-      if (filters.sponsorship !== 'verified' && sp !== filters.sponsorship) return false;
+      const fv = filters.sponsorship;
+      if (fv === 'licenced') {
+        if (!j.sponsor_licence) return false;
+      } else if (sp !== fv) return false;
     }
-    // Licence filter
-    if (filters.licence === 'licenced' && !j.sponsor_licence) return false;
-    if (filters.licence === 'unlicenced' && j.sponsor_licence) return false;
     // Role filter
     if (filters.role !== 'all' && j.role_type !== filters.role) return false;
     return true;
@@ -380,17 +376,11 @@ function noteHtml(j) {
   if (sp === 'sc_blocked') {
     return '<div class="job-note sc-blocked">SC/DV clearance required — 5yr UK residency. Sponsorship not possible.</div>';
   }
-  if ((sp === 'verified' || sp === 'sponsor_verified') && j.link_status === 'expired') {
-    return '<div class="job-note verified">✓ Sponsor verified — Company holds valid UK sponsor licence. Listing expired.</div>';
-  }
-  if ((sp === 'verified' || sp === 'sponsor_verified') && j.link_status === 'stale') {
-    return '<div class="job-note verified">✓ Sponsor verified — Posted ' + j.date_posted + ', may be filled.</div>';
-  }
-  if (sp === 'verified' || sp === 'sponsor_verified') {
-    return '<div class="job-note verified">✓ Sponsor verified — Role confirmed offers visa sponsorship.</div>';
-  }
   if (sp === 'agency_unknown') {
     return '<div class="job-note agency">Agency listing — sponsorship depends on actual employer.</div>';
+  }
+  if (j.sponsorship_mentioned) {
+    return '<div class="job-note verified">✓ Sponsorship mentioned in listing — confirm with employer.</div>';
   }
   if (isJobServe && !j.sponsor_licence) {
     return '<div class="job-note warn">Posted via JobServe — company name not listed. Sponsorship unknown.</div>';
