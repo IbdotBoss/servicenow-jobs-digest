@@ -5,56 +5,64 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ServiceNow Jobs UK — Sponsorship-Verified Roles</title>
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #ffffff; --bg-alt: #f1f5f9;
+    --bg: #ffffff; --bg-alt: #f4f5f7;
     --text: #0f172a; --text-mid: #475569; --text-light: #94a3b8;
-    --border: #e2e8f0; --border-light: #f1f5f9;
+    --border: #e4e7eb; --border-light: #f1f2f4;
     --accent: #0d9488; --accent-dark: #0f766e; --accent-light: #f0fdfa;
     --accent-visited: #0f766e;
     --sponsor: #059669; --sponsor-bg: #ecfdf5;
     --sc: #dc2626; --sc-bg: #fef2f2;
     --agency: #6b7280; --agency-bg: #f3f4f6;
     --licence: #7c3aed; --licence-bg: #f5f3ff;
-    --stale: #d97706;
-    --nav-bg: #0f172a; --nav-text: #f8fafc; --nav-muted: #94a3b8;
-    --radius: 6px; --radius-sm: 4px; --radius-pill: 20px;
-    --shadow-sm: 0 1px 2px rgba(15,23,42,0.05);
-    --shadow-md: 0 4px 6px -1px rgba(15,23,42,0.08);
-    --shadow-lg: 0 10px 15px -3px rgba(15,23,42,0.08);
-    --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --stale: #d97706; --stale-bg: #fffbeb;
+    --nav-bg: #0f172a; --nav-text: #f1f5f9; --nav-muted: #64748b;
+    --radius: 8px; --radius-sm: 4px;
+    --shadow-sm: 0 1px 2px rgba(15,23,42,0.04);
+    --shadow-hover: 0 4px 12px rgba(15,23,42,0.07);
+    --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   }
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
   body {
     font-family: var(--font); font-size: 14px; line-height: 1.5;
-    color: var(--text); background: var(--bg-alt);
+    color: var(--text); background: var(--bg);
     -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── Film grain texture — 5 lines, huge impact ── */
+  body::after {
+    content: ''; position: fixed; inset: 0; z-index: 9999;
+    pointer-events: none; opacity: 0.025;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-repeat: repeat; background-size: 256px 256px;
   }
 
   /* ── Top bar ── */
   .topbar {
     background: var(--nav-bg); position: sticky; top: 0; z-index: 20;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+    box-shadow: inset 0 -1px 0 rgba(255,255,255,0.06);
   }
   .topbar-inner {
     max-width: 1040px; margin: 0 auto; padding: 0 24px;
     display: flex; align-items: center; gap: 16px; height: 52px;
   }
-  .logo { font-weight: 700; font-size: 15px; color: var(--nav-text); white-space: nowrap; letter-spacing: -0.01em; }
+  .logo { font-weight: 700; font-size: 15px; color: var(--nav-text); white-space: nowrap; letter-spacing: -0.02em; }
   .logo-sn { color: var(--accent); }
-  .logo-sub { font-weight: 400; color: var(--nav-muted); margin-left: 2px; }
-  .topbar-stats {
-    display: flex; gap: 10px; margin-left: auto;
-  }
+  .logo-sub { font-weight: 400; color: var(--nav-muted); margin-left: 2px; font-size: 13px; }
+  .topbar-stats { display: flex; gap: 8px; margin-left: auto; }
   .stat-badge {
-    display: inline-flex; align-items: center; gap: 4px;
+    display: inline-flex; align-items: center; gap: 3px;
     font-size: 11px; font-weight: 500; color: var(--nav-muted);
-    padding: 3px 8px; border-radius: var(--radius-pill);
-    background: rgba(255,255,255,0.06);
+    padding: 2px 8px; border-radius: 4px;
+    background: rgba(255,255,255,0.05);
   }
   .stat-badge strong { color: var(--nav-text); font-weight: 600; }
-  .stat-badge-sponsor { color: #34d399; }
-  .stat-badge-sponsor strong { color: #6ee7b7; }
+  .stat-badge-sponsor { color: #6ee7b7; }
+  .stat-badge-sponsor strong { color: #a7f3d0; }
   .stat-badge-licenced { color: #a78bfa; }
   .stat-badge-licenced strong { color: #c4b5fd; }
   .stat-badge-sc { color: #fca5a5; }
@@ -64,17 +72,23 @@
   .main { max-width: 1040px; margin: 0 auto; padding: 0 24px 64px; }
 
   /* ── Header ── */
-  .page-header { padding: 28px 0 16px; }
-  .page-header h1 { font-size: 20px; font-weight: 700; margin-bottom: 2px; color: var(--text); }
+  .page-header {
+    padding: 32px 0 12px;
+    border-bottom: 1px solid var(--border-light);
+    margin-bottom: 20px;
+  }
+  .page-header h1 { font-size: 22px; font-weight: 700; margin-bottom: 2px; }
   .page-header .subtitle { font-size: 13px; color: var(--text-light); }
-  .pipeline-note { font-size: 11px; color: var(--text-light); margin-top: 2px; }
+  .pipeline-note {
+    font-size: 11px; color: var(--text-light); margin-top: 2px;
+  }
   .pipeline-note strong { color: var(--text-mid); font-weight: 600; }
 
   /* ── Date selector ── */
   .date-selector {
     margin-top: 10px; display: flex; align-items: center; gap: 8px;
   }
-  .date-selector label { font-size: 12px; color: var(--text-light); }
+  .date-selector label { font-size: 11px; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 500; }
   .date-selector select {
     font-size: 12px; padding: 4px 8px;
     border: 1px solid var(--border); border-radius: var(--radius-sm);
@@ -82,191 +96,199 @@
   }
   .date-count { font-size: 12px; color: var(--text-light); }
 
-  /* ── Control bar (filters + sort combined) ── */
-  .controls {
-    background: var(--bg); border-radius: var(--radius); padding: 16px;
-    box-shadow: var(--shadow-sm); border: 1px solid var(--border);
-    margin-bottom: 12px;
-  }
-
-  /* ── Filters ── */
+  /* ── Filter bar ── */
   .filter-bar {
-    display: flex; flex-wrap: wrap; gap: 6px 16px;
-    font-size: 13px; align-items: center;
+    display: flex; flex-wrap: wrap; gap: 8px 16px;
+    align-items: center; margin-bottom: 16px;
   }
   .filter-label {
     font-weight: 600; font-size: 10px; text-transform: uppercase;
     letter-spacing: 0.08em; color: var(--text-light); min-width: fit-content;
   }
-  .filter-group { display: flex; gap: 3px; flex-wrap: wrap; }
+  .filter-group { display: flex; gap: 0; }
   .filter-btn {
-    cursor: pointer; padding: 5px 12px; border-radius: var(--radius-pill);
-    border: 1px solid var(--border); background: var(--bg);
-    color: var(--text-mid); font-size: 12px; font-weight: 500;
-    transition: all 0.15s ease; white-space: nowrap;
+    cursor: pointer; padding: 6px 14px; border: none;
+    background: none; color: var(--text-mid);
+    font-size: 12px; font-weight: 500; font-family: var(--font);
+    position: relative; transition: color 0.15s;
+    white-space: nowrap;
   }
-  .filter-btn:hover {
-    border-color: var(--accent); color: var(--accent); background: var(--accent-light);
+  .filter-btn::after {
+    content: ''; position: absolute; bottom: 0; left: 50%;
+    width: 0; height: 2px; background: var(--accent);
+    transition: all 0.2s; transform: translateX(-50%);
+    border-radius: 1px;
   }
-  .filter-btn.active {
-    background: var(--accent); color: white; border-color: var(--accent);
-  }
-  .filter-btn.active:hover {
-    background: var(--accent-dark); border-color: var(--accent-dark);
-  }
+  .filter-btn:hover { color: var(--text); }
+  .filter-btn.active { color: var(--accent); font-weight: 600; }
+  .filter-btn.active::after { width: 60%; }
+  .filter-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
 
-  /* ── Sort ── */
+  /* ── Sort bar ── */
   .sort-bar {
-    display: flex; gap: 6px; align-items: center;
-    padding: 10px 0 0; margin-top: 10px; border-top: 1px solid var(--border-light);
-    font-size: 12px; color: var(--text-light);
+    display: flex; gap: 2px; align-items: center;
+    margin-bottom: 2px; font-size: 12px; color: var(--text-light);
   }
-  .sort-label { font-weight: 500; font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-light); }
+  .sort-label { font-weight: 500; font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-light); margin-right: 4px; }
   .sort-btn {
     cursor: pointer; background: none; border: none;
     color: var(--text-light); font-size: 12px; font-weight: 500;
-    padding: 3px 8px; border-radius: var(--radius-sm);
+    padding: 3px 10px; border-radius: var(--radius-sm); font-family: var(--font);
     transition: all 0.12s;
   }
   .sort-btn:hover { color: var(--text); background: var(--bg-alt); }
   .sort-btn.active { color: var(--accent); background: var(--accent-light); font-weight: 600; }
+  .sort-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
   .result-count { margin-left: auto; font-size: 12px; color: var(--text-light); font-weight: 500; }
 
-  /* ── Focus states ── */
-  .filter-btn:focus-visible, .sort-btn:focus-visible {
-    outline: 2px solid var(--accent); outline-offset: 2px;
-  }
-  .job-title a:focus-visible, .job-apply:focus-visible {
-    outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px;
-  }
-
   /* ── Loading state ── */
-  .loading-state {
-    text-align: center; padding: 80px 20px; color: var(--text-light);
-  }
+  .loading-state { text-align: center; padding: 100px 20px; color: var(--text-light); }
   .loading-spinner {
-    width: 28px; height: 28px; margin: 0 auto 14px;
-    border: 3px solid var(--border); border-top-color: var(--accent);
+    width: 24px; height: 24px; margin: 0 auto 14px;
+    border: 2.5px solid var(--border); border-top-color: var(--accent);
     border-radius: 50%; animation: spin 0.8s linear infinite;
   }
   @keyframes spin { to { transform: rotate(360deg); } }
-  .error-state {
-    text-align: center; padding: 60px 20px;
-  }
+  .error-state { text-align: center; padding: 60px 20px; }
   .error-state p { color: var(--sc); font-size: 14px; }
   .error-state button {
     margin-top: 12px; padding: 8px 20px;
     border: 1px solid var(--border); border-radius: var(--radius-sm);
-    background: var(--bg); color: var(--text-mid); font-size: 13px; cursor: pointer;
+    background: var(--bg); color: var(--text-mid); font-size: 13px; cursor: pointer; font-family: var(--font);
   }
   .error-state button:hover { background: var(--bg-alt); }
 
   /* ── Job list ── */
-  .job-list { display: flex; flex-direction: column; gap: 4px; }
+  .job-list { display: flex; flex-direction: column; gap: 0; }
+
+  /* ── Sponsorship dot ── */
+  .sponsor-dot {
+    display: inline-block; width: 7px; height: 7px;
+    border-radius: 50%; margin-right: 6px;
+    vertical-align: middle; flex-shrink: 0;
+  }
+  .sponsor-dot.licenced { background: var(--licence); }
+  .sponsor-dot.sc_blocked { background: var(--sc); }
+  .sponsor-dot.unavailable { background: var(--agency); }
+  .sponsor-dot.agency_unknown { background: var(--agency); }
+  .sponsor-dot.verified { background: var(--sponsor); }
+  .sponsor-dot.unknown { background: var(--border); }
+
   .job-row {
-    display: grid; grid-template-columns: 1fr 160px; gap: 16px;
-    padding: 16px 20px; align-items: start;
-    background: var(--bg); border: 1px solid var(--border);
-    border-radius: var(--radius); transition: all 0.15s ease;
+    display: grid; grid-template-columns: 1fr auto;
+    gap: 16px; padding: 16px 0;
+    border-bottom: 1px solid var(--border-light);
+    transition: all 0.15s;
+    align-items: start;
   }
-  .job-row:hover {
-    box-shadow: var(--shadow-md); border-color: var(--accent/0.3);
-  }
-  .job-row.expired { opacity: 0.5; }
-  .job-row.expired:hover { opacity: 0.7; }
+  .job-row:last-child { border-bottom: none; }
+  .job-row:hover { padding-left: 8px; padding-right: 8px; margin: 0 -8px; border-radius: var(--radius); background: var(--bg-alt); border-bottom-color: transparent; }
+  .job-row:focus-within { padding-left: 8px; padding-right: 8px; margin: 0 -8px; border-radius: var(--radius); background: var(--bg-alt); border-bottom-color: transparent; }
+  .job-row.expired { opacity: 0.4; }
+  .job-row.expired:hover { opacity: 0.6; }
 
   .job-main { min-width: 0; }
   .job-title {
-    font-size: 14px; font-weight: 600; line-height: 1.35; margin-bottom: 1px;
+    font-size: 15px; font-weight: 600; line-height: 1.35; margin-bottom: 2px;
+    letter-spacing: -0.01em;
   }
   .job-title a { color: var(--text); text-decoration: none; }
   .job-title a:visited { color: var(--accent-visited); }
   .job-title a:hover { color: var(--accent); }
   .job-title a:visited:hover { color: var(--accent); }
+  .job-title a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
 
   .job-title .tag {
-    display: inline-block; font-size: 10px; font-weight: 600;
-    text-transform: uppercase; letter-spacing: 0.04em;
-    padding: 1px 5px; border-radius: 3px; margin-left: 5px;
+    display: inline-block; font-size: 9px; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.06em;
+    padding: 1px 5px; border-radius: 2px; margin-left: 5px;
     vertical-align: middle; position: relative; top: -1px;
   }
   .tag-expired { color: var(--sc); background: var(--sc-bg); }
-  .tag-stale { color: var(--stale); background: #fffbeb; }
+  .tag-stale { color: var(--stale); background: var(--stale-bg); }
   .tag-grad { color: var(--sponsor); background: var(--sponsor-bg); }
 
   .job-company {
     font-size: 13px; color: var(--text-mid); margin-bottom: 1px;
+    display: flex; align-items: center; gap: 4px;
   }
   .job-company .licence-badge {
-    display: inline-block; font-size: 10px; font-weight: 500;
+    display: inline-block; font-size: 9px; font-weight: 600;
     color: var(--licence); background: var(--licence-bg);
-    padding: 1px 6px; border-radius: 3px; margin-left: 4px;
-    vertical-align: middle;
+    padding: 1px 5px; border-radius: 2px; text-transform: uppercase; letter-spacing: 0.04em;
   }
-  .job-location { font-size: 12px; color: var(--text-light); }
+  .job-location { font-size: 12px; color: var(--text-light); margin-bottom: 2px; }
   .job-meta {
-    display: flex; flex-wrap: wrap; gap: 4px 10px;
-    font-size: 12px; color: var(--text-light); margin-top: 3px;
+    display: flex; flex-wrap: wrap; gap: 3px 10px;
+    font-size: 11px; color: var(--text-light);
   }
   .job-meta span { white-space: nowrap; }
 
-  .job-right { text-align: right; }
-  .job-salary { font-weight: 600; font-size: 14px; white-space: nowrap; color: var(--text); }
-  .job-salary-na { color: var(--text-light); font-weight: 400; }
-  .job-date { font-size: 11px; color: var(--text-light); margin-top: 1px; }
-  .job-source { font-size: 10px; color: var(--text-light); margin-top: 1px; }
-  .job-apply {
-    display: inline-block; margin-top: 8px; padding: 5px 14px;
-    background: var(--accent); color: #fff; border-radius: var(--radius-sm);
-    font-size: 12px; font-weight: 600; text-decoration: none; line-height: 1;
-    transition: background 0.12s;
+  .job-right {
+    display: flex; flex-direction: column; align-items: flex-end;
+    justify-content: center; gap: 2px; min-width: 120px;
   }
+  .job-salary { font-weight: 600; font-size: 13px; white-space: nowrap; }
+  .job-salary-na { color: var(--text-light); font-weight: 400; }
+  .job-date { font-size: 11px; color: var(--text-light); }
+  .job-source { font-size: 10px; color: var(--text-light); }
+  .job-apply {
+    margin-top: 4px; padding: 4px 12px;
+    background: var(--accent); color: #fff; border-radius: var(--radius-sm);
+    font-size: 11px; font-weight: 600; text-decoration: none;
+    transition: all 0.12s; line-height: 1; font-family: var(--font);
+    opacity: 0; pointer-events: none;
+  }
+  .job-row:hover .job-apply,
+  .job-row:focus-within .job-apply { opacity: 1; pointer-events: auto; }
+  .job-apply:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; opacity: 1; }
   .job-apply:hover { background: var(--accent-dark); }
 
   /* ── Note badge ── */
   .job-note {
-    font-size: 12px; margin-top: 6px; padding: 6px 10px;
-    border-radius: var(--radius-sm); line-height: 1.45;
-    border-left: 3px solid transparent;
+    font-size: 11px; margin-top: 6px; padding: 5px 10px;
+    border-radius: 3px; line-height: 1.4;
   }
-  .job-note.verified { color: #065f46; background: var(--sponsor-bg); border-left-color: var(--sponsor); }
-  .job-note.sc-blocked { color: #991b1b; background: var(--sc-bg); border-left-color: var(--sc); }
-  .job-note.agency { color: #374151; background: var(--agency-bg); border-left-color: var(--agency); }
-  .job-note.unavailable { color: #991b1b; background: var(--sc-bg); border-left-color: var(--sc); }
-  .job-note.warn { color: #92400e; background: #fffbeb; border-left-color: var(--stale); }
+  .job-note.verified { color: #065f46; background: var(--sponsor-bg); }
+  .job-note.sc-blocked { color: #991b1b; background: var(--sc-bg); }
+  .job-note.agency { color: #374151; background: var(--agency-bg); }
+  .job-note.unavailable { color: #991b1b; background: var(--sc-bg); }
+  .job-note.warn { color: #92400e; background: var(--stale-bg); }
 
   .job-fallback { font-size: 12px; color: var(--text-light); margin-top: 4px; }
   .job-fallback a { color: var(--text-light); }
 
-  .no-results {
-    text-align: center; padding: 80px 20px; color: var(--text-light);
-    background: var(--bg); border-radius: var(--radius);
-    border: 1px solid var(--border);
-  }
-  .no-results p { font-size: 14px; margin-bottom: 4px; }
-  .no-results button { margin-top: 12px; padding: 8px 20px;
+  .no-results { text-align: center; padding: 80px 20px; color: var(--text-light); }
+  .no-results p { font-size: 14px; margin-bottom: 2px; }
+  .no-results button {
+    margin-top: 14px; padding: 8px 20px;
     border: 1px solid var(--border); border-radius: var(--radius-sm);
-    background: var(--bg); color: var(--text-mid); font-size: 13px; cursor: pointer;
+    background: var(--bg); color: var(--text-mid); font-size: 13px; cursor: pointer; font-family: var(--font);
   }
 
   footer {
-    margin-top: 40px; padding: 20px 0; border-top: 1px solid var(--border);
+    margin-top: 48px; padding: 24px 0;
+    border-top: 1px solid var(--border-light);
     font-size: 12px; color: var(--text-light); line-height: 1.7;
   }
   footer a { color: var(--accent); }
   footer a:hover { color: var(--accent-dark); }
 
   @media (max-width: 640px) {
-    .job-row { grid-template-columns: 1fr; padding: 14px; }
-    .job-right { text-align: left; display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; }
-    .topbar-inner { padding: 0 16px; gap: 8px; }
-    .topbar-stats { gap: 6px; }
-    .stat-badge { font-size: 10px; padding: 2px 6px; }
-    .main { padding: 0 16px 48px; }
-    .controls { padding: 12px; }
-    .filter-btn { padding: 4px 10px; font-size: 11px; }
+    .job-row { grid-template-columns: 1fr; padding: 14px 0; }
+    .job-row:hover { padding: 14px 12px; margin: 0 -12px; }
+    .job-right { flex-direction: row; flex-wrap: wrap; align-items: center; gap: 8px; min-width: 0; }
+    .topbar-inner { padding: 0 16px; gap: 6px; }
+    .topbar-stats { gap: 4px; }
+    .stat-badge { font-size: 10px; padding: 2px 5px; }
+    .main { padding: 0 16px 40px; }
+    .page-header { padding: 24px 0 10px; }
+    .filter-btn { padding: 5px 10px; font-size: 11px; }
+    .job-apply { opacity: 1; pointer-events: auto; }
   }
 </style>
+</head>
+<body>
 </head>
 <body>
 
@@ -558,11 +580,18 @@ function render() {
     let licenceBadge = j.sponsor_licence
       ? '<span class="licence-badge">Licenced</span>'
       : '';
+    
+    // Sponsorship dot
+    let sp = j.visa_sponsorship || 'unknown';
+    if (sp === 'verified') sp = 'licenced';
+    if (!j.visa_sponsorship && j.sponsor_licence) sp = 'licenced';
+    let dotClass = (sp === 'licenced' || sp === 'sc_blocked' || sp === 'unavailable' || sp === 'agency_unknown') ? sp : 'unknown';
+    let sponsorDot = '<span class="sponsor-dot ' + dotClass + '" title="' + sp + '"></span>';
 
     return '<div class="job-row' + rowClass + '">' +
       '<div class="job-main">' +
         '<div class="job-title">' + titleHtml + titleTags + '</div>' +
-        '<div class="job-company">' + companyName + licenceBadge + '</div>' +
+        '<div class="job-company">' + sponsorDot + companyName + licenceBadge + '</div>' +
         '<div class="job-location">' + (j.location || 'UK') + '</div>' +
         meta +
         note +
@@ -571,7 +600,7 @@ function render() {
       '<div class="job-right">' +
         '<div class="job-salary' + salaryClass + '">' + salary + '</div>' +
         '<div class="job-date">' + (j.date_posted || '') + '</div>' +
-        '<div class="job-source" style="color:#c4c4c4;font-size:10px;">' + (j.source || '') + '</div>' +
+        '<div class="job-source">' + (j.source || '') + '</div>' +
         applyBtn +
       '</div>' +
     '</div>';
