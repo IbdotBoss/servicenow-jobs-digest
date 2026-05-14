@@ -1,6 +1,6 @@
 # ServiceNow Jobs UK — Sponsorship-Focused Job Aggregator
 
-A daily-updated job aggregator for ServiceNow roles in the UK, cross-referenced against the UK Government sponsor register. 164 active jobs across 4 sources.
+A daily-updated job aggregator for ServiceNow roles in the UK, cross-referenced against the UK Government sponsor register. Card-based grid UI with toggle filters, deployed to GitHub Pages. 173+ active jobs across 4 sources.
 
 **Live site:** [ibdotboss.github.io/servicenow-jobs-digest](https://ibdotboss.github.io/servicenow-jobs-digest/)
 
@@ -17,17 +17,16 @@ Every morning at 05:00 UK time, the pipeline:
 
 ## Sponsorship Signals
 
+Only two clean signals, automatically set:
+
 | Signal | Method | Meaning |
 |--------|--------|---------|
-| 🟣 **Licenced** | Sponsor register CSV | Company holds A-rated Skilled Worker licence |
+| 🟣 **Licenced** | Sponsor register CSV cross-ref | Company holds A-rated Skilled Worker licence |
 | 🔴 **SC-blocked** | Description text scan | Role requires SC/DV clearance (5yr UK residency) |
-| 🟢 **Explicit** | Description text scan | Job explicitly mentions "visa sponsorship available" |
-| ⚪ **Unknown** | — | Can't determine — treat with caution |
-| 🔶 **Agency** | Source detection | Posted by recruitment agency |
 
-**Licenced** is the primary signal. It means the company CAN sponsor — check the specific role.
-**Explicit** is a data point when the text is clear, but it's rare (~5% of jobs).
-No algorithm claims "verified" — that judgment is yours.
+Additional manual tags: **Agency** (recruitment listing), **Unavailable** (text says no sponsorship).
+
+No algorithm claims "verified" — that judgment is yours. The system provides licence data, not sponsorship guarantees.
 
 ## Architecture
 
