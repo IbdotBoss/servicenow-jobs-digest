@@ -3,365 +3,400 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ServiceNow Jobs UK — Sponsorship-Verified Roles</title>
+<title>ServiceNow Jobs UK | Visa Sponsorship Verified</title>
+<meta name="description" content="ServiceNow jobs in the UK with verified visa sponsorship status. Cross-referenced with the UK Government sponsor register.">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #ffffff; --bg-alt: #f4f5f7;
-    --text: #0f172a; --text-mid: #475569; --text-light: #94a3b8;
-    --border: #e4e7eb; --border-light: #f1f2f4;
-    --accent: #0d9488; --accent-dark: #0f766e; --accent-light: #f0fdfa;
-    --accent-visited: #0f766e;
-    --sponsor: #059669; --sponsor-bg: #ecfdf5;
-    --sc: #dc2626; --sc-bg: #fef2f2;
-    --agency: #6b7280; --agency-bg: #f3f4f6;
-    --licence: #7c3aed; --licence-bg: #f5f3ff;
-    --stale: #d97706; --stale-bg: #fffbeb;
-    --nav-bg: #0f172a; --nav-text: #f1f5f9; --nav-muted: #64748b;
-    --radius: 8px; --radius-sm: 4px;
-    --shadow-sm: 0 1px 2px rgba(15,23,42,0.04);
-    --shadow-hover: 0 4px 12px rgba(15,23,42,0.07);
+    --background: #fafafa;
+    --foreground: #0a0a0a;
+    --card: #ffffff;
+    --card-foreground: #0a0a0a;
+    --primary: #2563eb;
+    --primary-foreground: #fafafa;
+    --primary-light: #eff6ff;
+    --primary-border: #bfdbfe;
+    --secondary: #f4f4f5;
+    --secondary-foreground: #18181b;
+    --muted: #f4f4f5;
+    --muted-foreground: #737373;
+    --accent: #f4f4f5;
+    --accent-foreground: #18181b;
+    --destructive: #ef4444;
+    --destructive-light: #fef2f2;
+    --destructive-border: #fecaca;
+    --warning: #d97706;
+    --warning-light: #fffbeb;
+    --warning-border: #fde68a;
+    --info: #2563eb;
+    --info-light: #eff6ff;
+    --info-border: #bfdbfe;
+    --success: #059669;
+    --success-light: #ecfdf5;
+    --border: #e4e4e7;
+    --ring: #2563eb;
+    --radius: 0.5rem;
+    --radius-sm: 0.375rem;
+    --radius-full: 9999px;
     --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   }
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
   body {
     font-family: var(--font); font-size: 14px; line-height: 1.5;
-    color: var(--text); background: var(--bg);
+    color: var(--foreground); background: var(--background);
     -webkit-font-smoothing: antialiased;
   }
 
-  /* ── Film grain texture — 5 lines, huge impact ── */
-  body::after {
-    content: ''; position: fixed; inset: 0; z-index: 9999;
-    pointer-events: none; opacity: 0.025;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-    background-repeat: repeat; background-size: 256px 256px;
-  }
-
-  /* ── Top bar ── */
-  .topbar {
-    background: var(--nav-bg); position: sticky; top: 0; z-index: 20;
-    box-shadow: inset 0 -1px 0 rgba(255,255,255,0.06);
-  }
-  .topbar-inner {
-    max-width: 1040px; margin: 0 auto; padding: 0 24px;
-    display: flex; align-items: center; gap: 16px; height: 52px;
-  }
-  .logo { font-weight: 700; font-size: 15px; color: var(--nav-text); white-space: nowrap; letter-spacing: -0.02em; }
-  .logo-sn { color: var(--accent); }
-  .logo-sub { font-weight: 400; color: var(--nav-muted); margin-left: 2px; font-size: 13px; }
-  .topbar-stats { display: flex; gap: 8px; margin-left: auto; }
-  .stat-badge {
-    display: inline-flex; align-items: center; gap: 3px;
-    font-size: 11px; font-weight: 500; color: var(--nav-muted);
-    padding: 2px 8px; border-radius: 4px;
-    background: rgba(255,255,255,0.05);
-  }
-  .stat-badge strong { color: var(--nav-text); font-weight: 600; }
-  .stat-badge-sponsor { color: #6ee7b7; }
-  .stat-badge-sponsor strong { color: #a7f3d0; }
-  .stat-badge-licenced { color: #a78bfa; }
-  .stat-badge-licenced strong { color: #c4b5fd; }
-  .stat-badge-sc { color: #fca5a5; }
-  .stat-badge-sc strong { color: #fca5a5; }
-
-  /* ── Main layout ── */
-  .main { max-width: 1040px; margin: 0 auto; padding: 0 24px 64px; }
-
   /* ── Header ── */
-  .page-header {
-    padding: 32px 0 12px;
-    border-bottom: 1px solid var(--border-light);
-    margin-bottom: 20px;
+  .site-header {
+    position: sticky; top: 0; z-index: 50;
+    background: var(--background);
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
   }
-  .page-header h1 { font-size: 22px; font-weight: 700; margin-bottom: 2px; }
-  .page-header .subtitle { font-size: 13px; color: var(--text-light); }
-  .pipeline-note {
-    font-size: 11px; color: var(--text-light); margin-top: 2px;
+  .header-inner { max-width: 1152px; margin: 0 auto; padding: 16px 24px; }
+  .header-top {
+    display: flex; flex-direction: column; gap: 12px;
   }
-  .pipeline-note strong { color: var(--text-mid); font-weight: 600; }
+  @media (min-width: 768px) {
+    .header-top { flex-direction: row; align-items: center; justify-content: space-between; }
+  }
+  .header-brand { display: flex; align-items: center; gap: 12px; }
+  .brand-icon {
+    display: flex; align-items: center; justify-content: center;
+    width: 40px; height: 40px; border-radius: var(--radius);
+    background: var(--primary); color: var(--primary-foreground);
+    font-weight: 700; font-size: 18px; flex-shrink: 0;
+  }
+  .brand-text h1 { font-size: 20px; font-weight: 600; letter-spacing: -0.02em; }
+  .brand-text p { font-size: 13px; color: var(--muted-foreground); }
+  .header-stats { display: flex; align-items: center; gap: 12px; font-size: 13px; flex-shrink: 0; }
+  .header-stat { display: flex; align-items: center; gap: 4px; color: var(--muted-foreground); }
+  .header-stat strong { color: var(--foreground); font-weight: 600; }
+  .header-stat.licenced strong { color: var(--primary); }
+  .header-stat.sc strong { color: var(--destructive); }
+  .header-divider { width: 1px; height: 16px; background: var(--border); }
+  .header-sources {
+    margin-top: 8px; font-size: 12px; color: var(--muted-foreground);
+    padding-top: 8px; border-top: 1px solid var(--border);
+  }
+  .header-sources a { color: var(--primary); text-decoration: none; }
+  .header-sources a:hover { text-decoration: underline; }
+
+  /* ── Filter / Controls bar ── */
+  .controls-bar {
+    border-bottom: 1px solid var(--border);
+    background: var(--secondary);
+  }
+  .controls-inner {
+    max-width: 1152px; margin: 0 auto; padding: 12px 24px;
+    display: flex; flex-direction: column; gap: 12px;
+  }
+  @media (min-width: 1024px) {
+    .controls-inner { flex-direction: row; align-items: center; justify-content: space-between; }
+  }
+  .role-pills { display: flex; flex-wrap: wrap; gap: 4px; }
+  .pill {
+    display: inline-flex; align-items: center; gap: 4px;
+    padding: 5px 14px; border-radius: var(--radius-full);
+    font-size: 13px; font-weight: 500; font-family: var(--font);
+    cursor: pointer; border: 1px solid transparent;
+    background: var(--secondary); color: var(--secondary-foreground);
+    transition: all 0.15s; white-space: nowrap;
+  }
+  .pill:hover { background: var(--muted); }
+  .pill.active { background: var(--primary); color: var(--primary-foreground); border-color: var(--primary); }
+  .pill:focus-visible { outline: 2px solid var(--ring); outline-offset: 2px; }
+
+  .controls-right { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; }
+  .toggle-group { display: flex; align-items: center; gap: 6px; font-size: 13px; }
+  .toggle {
+    position: relative; width: 32px; height: 18px;
+    background: var(--border); border-radius: var(--radius-full);
+    cursor: pointer; transition: background 0.2s; flex-shrink: 0;
+    border: none; padding: 0;
+  }
+  .toggle.on { background: var(--primary); }
+  .toggle::after {
+    content: ''; position: absolute; top: 2px; left: 2px;
+    width: 14px; height: 14px; background: white;
+    border-radius: 50%; transition: transform 0.2s;
+  }
+  .toggle.on::after { transform: translateX(14px); }
+  .toggle-label { color: var(--foreground); font-weight: 500; cursor: pointer; user-select: none; }
+  .sort-select {
+    font-size: 13px; padding: 5px 28px 5px 10px;
+    border: 1px solid var(--border); border-radius: var(--radius-sm);
+    background: var(--card); color: var(--foreground);
+    cursor: pointer; font-family: var(--font);
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23737373' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat; background-position: right 8px center;
+  }
 
   /* ── Date selector ── */
-  .date-selector {
-    margin-top: 10px; display: flex; align-items: center; gap: 8px;
+  .date-bar { max-width: 1152px; margin: 0 auto; padding: 16px 24px 0; display: flex; align-items: center; gap: 10px; font-size: 13px; color: var(--muted-foreground); }
+  .date-bar select {
+    font-size: 12px; padding: 4px 24px 4px 8px; border: 1px solid var(--border); border-radius: var(--radius-sm);
+    background: var(--card); color: var(--foreground); cursor: pointer; font-family: var(--font);
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='%23737373' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat; background-position: right 6px center;
   }
-  .date-selector label { font-size: 11px; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 500; }
-  .date-selector select {
-    font-size: 12px; padding: 4px 8px;
-    border: 1px solid var(--border); border-radius: var(--radius-sm);
-    background: var(--bg); color: var(--text); cursor: pointer;
-  }
-  .date-count { font-size: 12px; color: var(--text-light); }
 
-  /* ── Filter bar ── */
-  .filter-bar {
-    display: flex; flex-wrap: wrap; gap: 8px 16px;
-    align-items: center; margin-bottom: 16px;
-  }
-  .filter-label {
-    font-weight: 600; font-size: 10px; text-transform: uppercase;
-    letter-spacing: 0.08em; color: var(--text-light); min-width: fit-content;
-  }
-  .filter-group { display: flex; gap: 0; }
-  .filter-btn {
-    cursor: pointer; padding: 6px 14px; border: none;
-    background: none; color: var(--text-mid);
-    font-size: 12px; font-weight: 500; font-family: var(--font);
-    position: relative; transition: color 0.15s;
-    white-space: nowrap;
-  }
-  .filter-btn::after {
-    content: ''; position: absolute; bottom: 0; left: 50%;
-    width: 0; height: 2px; background: var(--accent);
-    transition: all 0.2s; transform: translateX(-50%);
-    border-radius: 1px;
-  }
-  .filter-btn:hover { color: var(--text); }
-  .filter-btn.active { color: var(--accent); font-weight: 600; }
-  .filter-btn.active::after { width: 60%; }
-  .filter-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+  /* ── Main content ── */
+  .main-content { max-width: 1152px; margin: 0 auto; padding: 16px 24px 64px; }
+  .result-summary { margin-bottom: 16px; font-size: 13px; color: var(--muted-foreground); }
+  .result-summary strong { color: var(--foreground); font-weight: 600; }
 
-  /* ── Sort bar ── */
-  .sort-bar {
-    display: flex; gap: 2px; align-items: center;
-    margin-bottom: 2px; font-size: 12px; color: var(--text-light);
-  }
-  .sort-label { font-weight: 500; font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-light); margin-right: 4px; }
-  .sort-btn {
-    cursor: pointer; background: none; border: none;
-    color: var(--text-light); font-size: 12px; font-weight: 500;
-    padding: 3px 10px; border-radius: var(--radius-sm); font-family: var(--font);
-    transition: all 0.12s;
-  }
-  .sort-btn:hover { color: var(--text); background: var(--bg-alt); }
-  .sort-btn.active { color: var(--accent); background: var(--accent-light); font-weight: 600; }
-  .sort-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-  .result-count { margin-left: auto; font-size: 12px; color: var(--text-light); font-weight: 500; }
+  /* ── Job card grid ── */
+  .job-grid { display: flex; flex-direction: column; gap: 16px; }
 
-  /* ── Loading state ── */
-  .loading-state { text-align: center; padding: 100px 20px; color: var(--text-light); }
+  .job-card {
+    position: relative; background: var(--card); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 20px;
+    transition: all 0.2s;
+  }
+  .job-card:hover { border-color: var(--primary-border); box-shadow: 0 4px 12px rgba(37,99,235,0.06); }
+  .job-card.expired { opacity: 0.6; }
+  .job-card.expired:hover { opacity: 0.75; }
+  .job-card:focus-within { border-color: var(--primary-border); box-shadow: 0 0 0 3px rgba(37,99,235,0.1); }
+
+  /* Card top-right badges */
+  .card-badges { position: absolute; right: 20px; top: 20px; display: flex; align-items: center; gap: 6px; }
+  .card-tag {
+    display: inline-flex; align-items: center; gap: 3px;
+    font-size: 11px; font-weight: 600; padding: 2px 8px;
+    border-radius: var(--radius-sm); border: 1px solid;
+    text-transform: uppercase; letter-spacing: 0.03em;
+  }
+  .card-tag.grad { color: var(--info); background: var(--info-light); border-color: var(--info-border); }
+  .card-tag.stale { color: var(--warning); background: var(--warning-light); border-color: var(--warning-border); }
+  .card-tag.expired-tag { color: var(--destructive); background: var(--destructive-light); border-color: var(--destructive-border); }
+
+  /* Card content */
+  .card-title {
+    font-size: 17px; font-weight: 600; line-height: 1.35; margin-bottom: 4px;
+    padding-right: 100px; letter-spacing: -0.01em;
+  }
+  .card-title a { color: var(--foreground); text-decoration: none; transition: color 0.15s; }
+  .card-title a:hover { color: var(--primary); }
+  .card-title a:visited { color: var(--muted-foreground); }
+  .card-title a:visited:hover { color: var(--primary); }
+  .card-title a:focus-visible { outline: 2px solid var(--ring); outline-offset: 2px; border-radius: 2px; }
+  .card-title span { color: var(--muted-foreground); }
+
+  .card-company {
+    display: flex; align-items: center; gap: 6px; font-size: 13px;
+    color: var(--muted-foreground); margin-bottom: 12px;
+  }
+  .card-company .company-name { font-weight: 500; color: var(--foreground); }
+
+  .card-meta {
+    display: flex; flex-wrap: wrap; align-items: center; gap: 12px;
+    font-size: 13px; color: var(--muted-foreground); margin-bottom: 12px;
+  }
+  .card-meta-item { display: inline-flex; align-items: center; gap: 4px; }
+  .card-meta-item svg { flex-shrink: 0; }
+  .meta-badge {
+    display: inline-flex; font-size: 11px; font-weight: 500;
+    padding: 1px 6px; border-radius: var(--radius-sm);
+    background: var(--secondary); color: var(--secondary-foreground);
+    margin-left: 2px;
+  }
+
+  /* Sponsorship badges */
+  .card-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 0; }
+  .sponsor-tag {
+    display: inline-flex; align-items: center; gap: 4px;
+    font-size: 12px; font-weight: 600; padding: 3px 10px;
+    border-radius: var(--radius-sm); border: 1px solid;
+  }
+  .sponsor-tag.licenced { color: var(--primary); background: var(--primary-light); border-color: var(--primary-border); }
+  .sponsor-tag.sc-blocked { color: var(--destructive); background: var(--destructive-light); border-color: var(--destructive-border); }
+  .sponsor-tag.unknown { color: var(--muted-foreground); background: var(--muted); border-color: var(--border); }
+  .sponsor-tag.agency { color: var(--muted-foreground); background: var(--secondary); border-color: var(--border); }
+  .sponsor-tag.unavailable { color: var(--destructive); background: var(--destructive-light); border-color: var(--destructive-border); }
+  .sponsor-tag svg { flex-shrink: 0; }
+
+  /* Card bottom row */
+  .card-footer {
+    display: flex; align-items: center; justify-content: space-between;
+    padding-top: 16px; margin-top: 16px; border-top: 1px solid var(--border);
+  }
+  .card-source { font-size: 12px; color: var(--muted-foreground); display: flex; align-items: center; gap: 4px; }
+  .card-apply {
+    display: inline-flex; align-items: center; gap: 4px;
+    padding: 6px 14px; border-radius: var(--radius-sm);
+    background: var(--primary); color: var(--primary-foreground);
+    font-size: 13px; font-weight: 500; text-decoration: none;
+    transition: background 0.15s; font-family: var(--font);
+  }
+  .card-apply:hover { background: #1d4ed8; }
+  .card-apply:focus-visible { outline: 2px solid var(--ring); outline-offset: 2px; }
+  .card-apply.disabled { opacity: 0.5; pointer-events: none; cursor: default; }
+
+  /* Card note */
+  .card-note {
+    font-size: 12px; margin-top: 10px; padding: 6px 10px;
+    border-radius: var(--radius-sm); line-height: 1.4;
+  }
+  .card-note.sc { color: #991b1b; background: var(--destructive-light); }
+  .card-note.agency { color: #374151; background: var(--secondary); }
+  .card-note.unavailable { color: #991b1b; background: var(--destructive-light); }
+  .card-note.mentioned { color: #065f46; background: var(--success-light); }
+  .card-note.js-warn { color: var(--warning); background: var(--warning-light); }
+
+  /* Fallback link */
+  .card-fallback { font-size: 12px; color: var(--muted-foreground); margin-top: 4px; }
+  .card-fallback a { color: var(--primary); }
+
+  /* ── States ── */
+  .loading-state, .error-state, .no-results {
+    text-align: center; padding: 80px 20px; color: var(--muted-foreground);
+  }
   .loading-spinner {
     width: 24px; height: 24px; margin: 0 auto 14px;
-    border: 2.5px solid var(--border); border-top-color: var(--accent);
+    border: 2.5px solid var(--border); border-top-color: var(--primary);
     border-radius: 50%; animation: spin 0.8s linear infinite;
   }
   @keyframes spin { to { transform: rotate(360deg); } }
-  .error-state { text-align: center; padding: 60px 20px; }
-  .error-state p { color: var(--sc); font-size: 14px; }
-  .error-state button {
-    margin-top: 12px; padding: 8px 20px;
-    border: 1px solid var(--border); border-radius: var(--radius-sm);
-    background: var(--bg); color: var(--text-mid); font-size: 13px; cursor: pointer; font-family: var(--font);
+  .error-state p { color: var(--destructive); font-size: 14px; margin-bottom: 12px; }
+  .no-results button, .error-state button {
+    margin-top: 12px; padding: 8px 20px; border: 1px solid var(--border);
+    border-radius: var(--radius-sm); background: var(--card);
+    color: var(--foreground); font-size: 13px; cursor: pointer; font-family: var(--font);
   }
-  .error-state button:hover { background: var(--bg-alt); }
+  .no-results button:hover, .error-state button:hover { background: var(--secondary); }
 
-  /* ── Job list ── */
-  .job-list { display: flex; flex-direction: column; gap: 0; }
+  /* ── Footer ── */
+  .site-footer { border-top: 1px solid var(--border); background: var(--secondary); }
+  .footer-inner { max-width: 1152px; margin: 0 auto; padding: 32px 24px; }
 
-  /* ── Sponsorship dot ── */
-  .sponsor-dot {
-    display: inline-block; width: 6px; height: 6px;
-    border-radius: 50%; flex-shrink: 0;
+  .footer-info {
+    background: var(--primary-light); border: 1px solid var(--primary-border);
+    border-radius: var(--radius); padding: 16px 20px; margin-bottom: 32px;
+    display: flex; align-items: flex-start; gap: 12px;
   }
+  .footer-info svg { flex-shrink: 0; margin-top: 2px; }
+  .footer-info h3 { font-size: 15px; font-weight: 600; margin-bottom: 4px; color: var(--foreground); }
+  .footer-info p { font-size: 13px; color: var(--muted-foreground); line-height: 1.6; }
+  .footer-info a { color: var(--primary); text-decoration: none; }
+  .footer-info a:hover { text-decoration: underline; }
 
-  .sponsor-badge {
-    display: inline-flex; align-items: center; gap: 4px;
-    font-size: 10px; font-weight: 600;
-    padding: 1px 7px 1px 5px; border-radius: 3px;
-    margin-right: 4px; vertical-align: middle;
-    text-transform: uppercase; letter-spacing: 0.04em;
-  }
-  .sponsor-badge.licenced { color: var(--licence); background: var(--licence-bg); }
-  .sponsor-badge.licenced .sponsor-dot { background: var(--licence); }
-  .sponsor-badge.sc { color: #991b1b; background: var(--sc-bg); }
-  .sponsor-badge.sc .sponsor-dot { background: var(--sc); }
-  .sponsor-badge.agency { color: #374151; background: var(--agency-bg); }
-  .sponsor-badge.agency .sponsor-dot { background: var(--agency); }
-  .sponsor-badge.na { color: #991b1b; background: var(--sc-bg); }
-  .sponsor-badge.na .sponsor-dot { background: var(--agency); }
+  .footer-glossary { margin-bottom: 32px; }
+  .footer-glossary h3 { font-size: 15px; font-weight: 600; margin-bottom: 16px; }
+  .glossary-grid { display: grid; gap: 16px; }
+  @media (min-width: 640px) { .glossary-grid { grid-template-columns: 1fr 1fr; } }
+  @media (min-width: 1024px) { .glossary-grid { grid-template-columns: 1fr 1fr 1fr; } }
+  .glossary-item dt { font-weight: 500; font-size: 13px; color: var(--foreground); }
+  .glossary-item dd { font-size: 13px; color: var(--muted-foreground); margin-top: 2px; }
 
-  .job-row {
-    display: grid; grid-template-columns: 1fr auto;
-    gap: 16px; padding: 16px 4px;
-    border-bottom: 1px solid var(--border-light);
-    transition: all 0.15s;
-    align-items: start;
+  .footer-credits {
+    display: flex; flex-direction: column; align-items: center; gap: 16px;
+    padding-top: 20px; border-top: 1px solid var(--border);
+    font-size: 13px; color: var(--muted-foreground);
   }
-  .job-row:last-child { border-bottom: none; }
-  .job-row:hover, .job-row:focus-within { background: var(--bg-alt); border-radius: var(--radius); }
-  .job-row.expired { opacity: 0.4; }
-  .job-row.expired:hover { opacity: 0.6; }
+  @media (min-width: 640px) { .footer-credits { flex-direction: row; justify-content: space-between; } }
+  .footer-credits a { color: var(--foreground); text-decoration: none; }
+  .footer-credits a:hover { color: var(--primary); }
 
-  .job-main { min-width: 0; }
-  .job-title {
-    font-size: 15px; font-weight: 600; line-height: 1.35; margin-bottom: 2px;
-    letter-spacing: -0.01em;
-  }
-  .job-title a { color: var(--text); text-decoration: none; }
-  .job-title a:visited { color: var(--accent-visited); }
-  .job-title a:hover { color: var(--accent); }
-  .job-title a:visited:hover { color: var(--accent); }
-  .job-title a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
-
-  .job-title .tag {
-    display: inline-block; font-size: 9px; font-weight: 600;
-    text-transform: uppercase; letter-spacing: 0.06em;
-    padding: 1px 5px; border-radius: 2px; margin-left: 5px;
-    vertical-align: middle; position: relative; top: -1px;
-  }
-  .tag-expired { color: var(--sc); background: var(--sc-bg); }
-  .tag-stale { color: var(--stale); background: var(--stale-bg); }
-  .tag-grad { color: var(--sponsor); background: var(--sponsor-bg); }
-
-  .job-company {
-    font-size: 13px; color: var(--text-mid); margin-bottom: 1px;
-    display: flex; align-items: center; gap: 4px;
-  }
-  .licence-badge {
-    display: inline-block; font-size: 9px; font-weight: 600;
-    color: var(--licence); background: var(--licence-bg);
-    padding: 1px 5px; border-radius: 2px; text-transform: uppercase; letter-spacing: 0.04em;
-    margin-right: 2px;
-  }
-  .job-location { font-size: 12px; color: var(--text-light); margin-bottom: 2px; }
-  .job-meta {
-    display: flex; flex-wrap: wrap; gap: 3px 10px;
-    font-size: 11px; color: var(--text-light);
-  }
-  .job-meta span { white-space: nowrap; }
-
-  .job-right {
-    display: flex; flex-direction: column; align-items: flex-end;
-    justify-content: center; gap: 2px; min-width: 120px;
-  }
-  .job-salary { font-weight: 600; font-size: 13px; white-space: nowrap; }
-  .job-salary-na { color: var(--text-light); font-weight: 400; }
-  .job-date { font-size: 11px; color: var(--text-light); }
-  .job-source { font-size: 10px; color: var(--text-light); }
-  .job-apply {
-    margin-top: 4px; padding: 4px 12px;
-    background: var(--accent); color: #fff; border-radius: var(--radius-sm);
-    font-size: 11px; font-weight: 600; text-decoration: none;
-    transition: all 0.12s; line-height: 1; font-family: var(--font);
-    opacity: 0; pointer-events: none;
-  }
-  .job-row:hover .job-apply,
-  .job-row:focus-within .job-apply { opacity: 1; pointer-events: auto; }
-  .job-apply:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; opacity: 1; }
-  .job-apply:hover { background: var(--accent-dark); }
-
-  /* ── Note badge ── */
-  .job-note {
-    font-size: 11px; margin-top: 6px; padding: 5px 10px;
-    border-radius: 3px; line-height: 1.4;
-  }
-  .job-note.verified { color: #065f46; background: var(--sponsor-bg); }
-  .job-note.sc-blocked { color: #991b1b; background: var(--sc-bg); }
-  .job-note.agency { color: #374151; background: var(--agency-bg); }
-  .job-note.unavailable { color: #991b1b; background: var(--sc-bg); }
-  .job-note.warn { color: #92400e; background: var(--stale-bg); }
-
-  .job-fallback { font-size: 12px; color: var(--text-light); margin-top: 4px; }
-  .job-fallback a { color: var(--text-light); }
-
-  .no-results { text-align: center; padding: 80px 20px; color: var(--text-light); }
-  .no-results p { font-size: 14px; margin-bottom: 2px; }
-  .no-results button {
-    margin-top: 14px; padding: 8px 20px;
-    border: 1px solid var(--border); border-radius: var(--radius-sm);
-    background: var(--bg); color: var(--text-mid); font-size: 13px; cursor: pointer; font-family: var(--font);
-  }
-
-  footer {
-    margin-top: 48px; padding: 24px 0;
-    border-top: 1px solid var(--border-light);
-    font-size: 12px; color: var(--text-light); line-height: 1.7;
-  }
-  footer a { color: var(--accent); }
-  footer a:hover { color: var(--accent-dark); }
-
+  /* ── Mobile ── */
   @media (max-width: 640px) {
-    .job-row { grid-template-columns: 1fr; padding: 14px 4px; }
-    .job-row:hover, .job-row:focus-within { padding: 14px 12px; margin: 0 -12px; }
-    .job-right { flex-direction: row; flex-wrap: wrap; align-items: center; gap: 8px; min-width: 0; }
-    .topbar-inner { padding: 0 16px; gap: 6px; }
-    .topbar-stats { gap: 4px; }
-    .stat-badge { font-size: 10px; padding: 2px 5px; }
-    .main { padding: 0 16px 40px; }
-    .page-header { padding: 24px 0 10px; }
-    .filter-btn { padding: 5px 10px; font-size: 11px; }
-    .job-apply { opacity: 1; pointer-events: auto; }
+    .header-inner, .controls-inner, .main-content, .footer-inner { padding-left: 16px; padding-right: 16px; }
+    .card-title { font-size: 15px; padding-right: 0; }
+    .card-badges { position: static; margin-bottom: 8px; }
+    .card-meta { gap: 8px; }
+    .card-footer { flex-direction: column; align-items: stretch; gap: 10px; }
+    .card-apply { text-align: center; justify-content: center; }
+    .header-stats { flex-wrap: wrap; gap: 8px; }
+    .header-divider { display: none; }
+    .controls-right { gap: 10px; }
+    .date-bar { padding: 12px 16px 0; }
   }
 </style>
 </head>
 <body>
-</head>
-<body>
 
-<div class="topbar">
-  <div class="topbar-inner">
-    <div class="logo"><span class="logo-sn">SN</span><span class="logo-sub"> Jobs UK</span></div>
-    <div class="topbar-stats" id="topbar-stats"></div>
+<!-- ====== HEADER ====== -->
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-top">
+      <div class="header-brand">
+        <div class="brand-icon">SN</div>
+        <div class="brand-text">
+          <h1>ServiceNow Jobs UK</h1>
+          <p>Visa sponsorship verified</p>
+        </div>
+      </div>
+      <div class="header-stats" id="header-stats">
+        <span class="header-stat"><strong id="stat-total">—</strong> roles</span>
+        <span class="header-divider"></span>
+        <span class="header-stat licenced"><strong id="stat-licenced">—</strong> licenced</span>
+        <span class="header-divider"></span>
+        <span class="header-stat sc"><strong id="stat-sc">—</strong> SC-blocked</span>
+      </div>
+    </div>
+    <p class="header-sources" id="header-sources">
+      Updated <strong id="update-date">daily</strong>. Data from LinkedIn, JobServe, Reed, Hunt UK. Cross-referenced with <a href="https://www.gov.uk/government/publications/register-of-licensed-sponsors-workers" target="_blank" rel="noopener">UK Government sponsor register</a>.
+    </p>
+  </div>
+</header>
+
+<!-- ====== FILTERS ====== -->
+<div class="controls-bar">
+  <div class="controls-inner">
+    <div class="role-pills" id="role-filters">
+      <button class="pill active" data-value="all">All</button>
+      <button class="pill" data-value="developer">Developer</button>
+      <button class="pill" data-value="architect">Architect</button>
+      <button class="pill" data-value="consultant">Consultant</button>
+      <button class="pill" data-value="admin">Admin</button>
+      <button class="pill" data-value="manager">Manager</button>
+      <button class="pill" data-value="analyst">Analyst</button>
+    </div>
+    <div class="controls-right">
+      <div class="toggle-group">
+        <button class="toggle" id="toggle-licenced" aria-label="Show licenced only" onclick="toggleFilter('licenced')"></button>
+        <span class="toggle-label" onclick="document.getElementById('toggle-licenced').click()">Licenced only</span>
+      </div>
+      <div class="toggle-group">
+        <button class="toggle on" id="toggle-expired" aria-label="Hide expired" onclick="toggleFilter('expired')"></button>
+        <span class="toggle-label" onclick="document.getElementById('toggle-expired').click()">Hide expired</span>
+      </div>
+      <select class="sort-select" id="sort-select">
+        <option value="date">Sort: Newest</option>
+        <option value="salary">Sort: Salary</option>
+        <option value="company">Sort: Company</option>
+      </select>
+    </div>
   </div>
 </div>
 
-<div class="main">
-  <div class="page-header">
-    <h1>ServiceNow Roles — United Kingdom</h1>
-    <p class="subtitle">Cross-referenced against the UK Government sponsor register. Refreshed daily.</p>
-    <p class="pipeline-note" id="pipeline-note">
-      Updated <strong id="update-date">daily</strong> ·
-      <strong>4</strong> sources ·
-      Sponsor register cross-ref every run
-    </p>
-    <div class="date-selector">
-      <label for="date-select">Viewing:</label>
-      <select id="date-select">
-        <option value="latest">Latest (all active)</option>
-        <option value="today">Today (last 24h)</option>
-      </select>
-      <span class="date-count" id="date-count"></span>
-    </div>
+<div class="date-bar">
+  <label for="date-select">Viewing:</label>
+  <select id="date-select">
+    <option value="latest">Latest (all active)</option>
+    <option value="today">Today (last 24h)</option>
+  </select>
+  <span id="date-count"></span>
+</div>
+
+<!-- ====== JOB LIST ====== -->
+<main class="main-content">
+  <div class="result-summary" id="result-summary" style="display:none">
+    Showing <strong id="showing-count">0</strong> of <strong id="total-count">0</strong> jobs
   </div>
 
-  <div class="controls">
-    <div class="filter-bar" id="filters">
-      <span class="filter-label">Sponsorship</span>
-      <div class="filter-group" data-filter="sponsorship">
-        <span class="filter-btn active" data-value="all">All</span>
-        <span class="filter-btn" data-value="licenced">Licenced Co.</span>
-        <span class="filter-btn" data-value="sc_blocked">SC/DV</span>
-        <span class="filter-btn" data-value="unknown">Unknown</span>
-        <span class="filter-btn" data-value="agency_unknown">Agency</span>
-        <span class="filter-btn" data-value="unavailable">Unavailable</span>
-      </div>
-      <span class="filter-label">Role</span>
-      <div class="filter-group" data-filter="role">
-        <span class="filter-btn active" data-value="all">All</span>
-        <span class="filter-btn" data-value="developer">Developer</span>
-        <span class="filter-btn" data-value="architect">Architect</span>
-        <span class="filter-btn" data-value="consultant">Consultant</span>
-        <span class="filter-btn" data-value="admin">Admin</span>
-        <span class="filter-btn" data-value="manager">Manager</span>
-      </div>
-    </div>
-    <div class="sort-bar">
-      <span class="sort-label">Sort</span>
-      <span class="sort-btn active" data-sort="date">Newest</span>
-      <span class="sort-btn" data-sort="salary">Salary</span>
-      <span class="sort-btn" data-sort="company">Company</span>
-      <span class="result-count" id="result-count"></span>
-    </div>
-  </div>
-  </div>
+  <div class="job-grid" id="job-grid"></div>
 
-  <div class="job-list" id="job-list"></div>
-  <div class="loading-state" id="loading-state" style="display:none">
+  <div class="loading-state" id="loading-state">
     <div class="loading-spinner"></div>
-    <p>Loading jobs...</p>
+    <p>Loading jobs…</p>
   </div>
   <div class="error-state" id="error-state" style="display:none">
     <p>Failed to load job data. The data file may be rebuilding.</p>
@@ -369,24 +404,61 @@
   </div>
   <div class="no-results" id="no-results" style="display:none">
     <p>No jobs match your filters</p>
-    <button id="clear-filters-btn" style="margin-top:12px;padding:6px 16px;border:1px solid var(--border);border-radius:4px;background:var(--bg);color:var(--text-mid);font-size:13px;cursor:pointer;">Clear all filters</button>
+    <button id="clear-filters-btn">Clear all filters</button>
   </div>
+</main>
 
-  <footer>
-    <p>Updated <strong id="update-date">daily</strong> · Data from LinkedIn, JobServe, Reed, Hunt UK, and company career pages.</p>
-    <p>Sponsor register via <a href="https://www.gov.uk/government/publications/register-of-licensed-sponsors-workers">UK Government</a> · <span style="color:var(--licence);">🟣 Licenced</span> = company holds A-rated sponsor licence</p>
-    <p style="margin-top: 8px; color: #c4c4c4;">Built by <a href="https://github.com/IbdotBoss/servicenow-jobs-digest" style="color: inherit;">Mr Faajii</a> & Stage</p>
-  </footer>
-</div>
+<!-- ====== FOOTER ====== -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-info">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--primary)"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg>
+      <div>
+        <h3>What does "Licenced Sponsor" mean?</h3>
+        <p>Companies with a UK visa sponsor licence can legally sponsor skilled workers for a work visa. We cross-reference job listings with the official <a href="https://www.gov.uk/government/publications/register-of-licensed-sponsors-workers" target="_blank" rel="noopener">UK Government register</a> to verify sponsorship capability. Note: having a licence does not guarantee they will sponsor your specific role.</p>
+      </div>
+    </div>
+
+    <div class="footer-glossary">
+      <h3>Glossary</h3>
+      <dl class="glossary-grid">
+        <div class="glossary-item"><dt>SC Clearance</dt><dd>Security Check — basic UK security clearance for sensitive roles. Takes 6–8 weeks.</dd></div>
+        <div class="glossary-item"><dt>DV Clearance</dt><dd>Developed Vetting — highest level of UK security clearance. Takes 6–9 months.</dd></div>
+        <div class="glossary-item"><dt>5yr UK Residency</dt><dd>Requirement to have lived continuously in the UK for 5 years (often for security clearance).</dd></div>
+        <div class="glossary-item"><dt>Stale Listing</dt><dd>Job posted more than 14 days ago that may no longer be available.</dd></div>
+        <div class="glossary-item"><dt>Licenced Company</dt><dd>Company holds an A-rated Skilled Worker sponsor licence. Does not guarantee sponsorship for this role.</dd></div>
+        <div class="glossary-item"><dt>Sponsorship Mentioned</dt><dd>The job listing explicitly states visa sponsorship is available. Always confirm with employer.</dd></div>
+      </dl>
+    </div>
+
+    <div class="footer-credits">
+      <p>Built for the ServiceNow community. Not affiliated with ServiceNow, Inc.</p>
+      <p><a href="https://github.com/IbdotBoss/servicenow-jobs-digest">GitHub</a> · Built by Mr Faajii &amp; Stage</p>
+    </div>
+  </div>
+</footer>
 
 <script>
+/* ── SVG icons (inline for zero network requests) ── */
+const ICONS = {
+  building: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 12h4"/><path d="M10 8h4"/><path d="M14 21v-3a2 2 0 0 0-4 0v3"/><path d="M6 10H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2"/><path d="M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16"/></svg>',
+  mapPin: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>',
+  banknote: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="12" x="2" y="6" rx="2"/><circle cx="12" cy="12" r="2"/><path d="M6 12h.01M18 12h.01"/></svg>',
+  calendar: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg>',
+  shield: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg>',
+  alertTriangle: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>',
+  grad: '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>',
+  externalLink: '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>'
+};
+
 let allJobs = [];
-let filters = { sponsorship: 'all', role: 'all' };
+let filters = { role: 'all', licenced: false, hideExpired: true };
 let sortBy = 'date';
 let currentView = 'latest';
 let dailySnapshots = [];
 let lastUpdated = '';
 
+/* ── Init ── */
 async function init() {
   document.getElementById('loading-state').style.display = 'block';
   try {
@@ -395,17 +467,16 @@ async function init() {
     const masterData = await masterResp.json();
     dailySnapshots = (masterData.daily_snapshots || []).sort().reverse();
     lastUpdated = masterData.updated || 'daily';
-  
+
     const select = document.getElementById('date-select');
     dailySnapshots.forEach(date => {
       const opt = document.createElement('option');
-      opt.value = date;
-      opt.textContent = date;
+      opt.value = date; opt.textContent = date;
       select.appendChild(opt);
     });
-    
+
     allJobs = masterData.jobs.filter(j => j.status === 'active');
-    updateTopbar();
+    updateHeaderStats();
     render();
     document.getElementById('date-count').textContent = allJobs.length + ' active jobs';
     document.getElementById('update-date').textContent = lastUpdated;
@@ -417,10 +488,13 @@ async function init() {
   }
 }
 
+/* ── Date loading ── */
 async function loadDate(date) {
   currentView = date;
   document.getElementById('loading-state').style.display = 'block';
   document.getElementById('error-state').style.display = 'none';
+  document.getElementById('no-results').style.display = 'none';
+  document.getElementById('job-grid').innerHTML = '';
   try {
     if (date === 'latest') {
       const resp = await fetch('data/jobs.json?t=' + Date.now());
@@ -444,7 +518,7 @@ async function loadDate(date) {
       allJobs.forEach(j => { if (!j.first_seen) j.first_seen = date; });
       lastUpdated = date;
     }
-    updateTopbar();
+    updateHeaderStats();
     render();
     document.getElementById('date-count').textContent = allJobs.length + ' jobs on ' + currentView;
     document.getElementById('update-date').textContent = lastUpdated;
@@ -456,38 +530,29 @@ async function loadDate(date) {
   }
 }
 
-document.getElementById('date-select').addEventListener('change', e => {
-  loadDate(e.target.value);
-});
+document.getElementById('date-select').addEventListener('change', e => loadDate(e.target.value));
 
-function updateTopbar() {
+/* ── Header stats ── */
+function updateHeaderStats() {
   const total = allJobs.length;
   const licenced = allJobs.filter(j => j.sponsor_licence).length;
   const sc = allJobs.filter(j => j.visa_sponsorship === 'sc_blocked').length;
-  const mentioned = allJobs.filter(j => j.sponsorship_mentioned).length;
-  document.getElementById('topbar-stats').innerHTML = 
-    `<span class="stat-badge"><strong>${total}</strong> roles</span>` +
-    `<span class="stat-badge stat-badge-licenced"><strong>${licenced}</strong> licenced</span>` +
-    `<span class="stat-badge stat-badge-sc"><strong>${sc}</strong> SC-blocked</span>` +
-    (mentioned ? `<span class="stat-badge stat-badge-sponsor"><strong>${mentioned}</strong> explicit</span>` : '');
+  document.getElementById('stat-total').textContent = total;
+  document.getElementById('stat-licenced').textContent = licenced;
+  document.getElementById('stat-sc').textContent = sc;
 }
 
+/* ── Filtering ── */
 function getFiltered() {
   return allJobs.filter(j => {
-    // Sponsorship filter
-    if (filters.sponsorship !== 'all') {
-      const sp = j.visa_sponsorship;
-      const fv = filters.sponsorship;
-      if (fv === 'licenced') {
-        if (!j.sponsor_licence) return false;
-      } else if (sp !== fv) return false;
-    }
-    // Role filter
     if (filters.role !== 'all' && j.role_type !== filters.role) return false;
+    if (filters.licenced && !j.sponsor_licence) return false;
+    if (filters.hideExpired && j.link_status === 'expired') return false;
     return true;
   });
 }
 
+/* ── Sorting ── */
 function sortJobs(jobs) {
   return [...jobs].sort((a, b) => {
     if (sortBy === 'date') {
@@ -511,147 +576,197 @@ function sortJobs(jobs) {
   });
 }
 
+/* ── Sponsor tag HTML ── */
+function sponsorTagHtml(j) {
+  let sp = j.visa_sponsorship || 'unknown';
+  const isLicenced = j.sponsor_licence;
+  if (sp === 'verified') sp = 'licenced';
+
+  // Build tags array
+  let tags = [];
+  if (isLicenced) {
+    tags.push('<span class="sponsor-tag licenced">' + ICONS.shield + 'Licenced Sponsor</span>');
+  } else if (sp === 'unknown' && j.company && j.company !== '[view listing]') {
+    tags.push('<span class="sponsor-tag unknown">' + ICONS.alertTriangle + 'Sponsorship Unknown</span>');
+  }
+
+  if (sp === 'sc_blocked') {
+    tags.push('<span class="sponsor-tag sc-blocked">' + ICONS.alertTriangle + 'SC/DV Required</span>');
+  }
+  if (sp === 'agency_unknown') {
+    tags.push('<span class="sponsor-tag agency">Agency</span>');
+  }
+  if (sp === 'unavailable') {
+    tags.push('<span class="sponsor-tag unavailable">No Sponsorship</span>');
+  }
+  return tags.join('');
+}
+
+/* ── Note HTML ── */
 function noteHtml(j) {
   const sp = j.visa_sponsorship;
   const isJobServe = j.company === '[view listing]' || j.source === 'JobServe';
   if (sp === 'unavailable') {
-    return '<div class="job-note unavailable">Visa sponsorship NOT available for this role.</div>';
+    return '<div class="card-note unavailable">Visa sponsorship NOT available for this role.</div>';
   }
   if (sp === 'sc_blocked') {
-    return '<div class="job-note sc-blocked">SC/DV clearance required — 5yr UK residency. Sponsorship not possible.</div>';
+    return '<div class="card-note sc">SC/DV clearance required — 5yr UK residency. Sponsorship not possible.</div>';
   }
   if (sp === 'agency_unknown') {
-    return '<div class="job-note agency">Agency listing — sponsorship depends on actual employer.</div>';
+    return '<div class="card-note agency">Agency listing — sponsorship depends on actual employer.</div>';
   }
   if (j.sponsorship_mentioned) {
-    return '<div class="job-note verified">✓ Sponsorship mentioned in listing — confirm with employer.</div>';
+    return '<div class="card-note mentioned">✓ Sponsorship mentioned in listing — confirm with employer.</div>';
   }
   if (isJobServe && !j.sponsor_licence) {
-    return '<div class="job-note warn">Posted via JobServe — company name not listed. Sponsorship unknown.</div>';
+    return '<div class="card-note js-warn">Posted via JobServe — company name not listed. Sponsorship unknown.</div>';
   }
   return '';
 }
 
+/* ── Fallback link ── */
 function fallbackHtml(j) {
   if ((j.link_status === 'expired' || j.link_status === 'stale') && j.fallback_url) {
     let company = j.company || '';
     if (company === '[view listing]') company = 'JobServe';
-    return '<div class="job-fallback">Company page: <a href="' + j.fallback_url + '" target="_blank" rel="noopener">' + company + ' careers →</a></div>';
+    return '<div class="card-fallback">Company page: <a href="' + j.fallback_url + '" target="_blank" rel="noopener">' + company + ' careers →</a></div>';
   }
   return '';
 }
 
+/* ── Render ── */
 function render() {
   const filtered = getFiltered();
   const sorted = sortJobs(filtered);
-  document.getElementById('result-count').textContent = sorted.length + ' job' + (sorted.length !== 1 ? 's' : '');
 
-  const list = document.getElementById('job-list');
+  document.getElementById('showing-count').textContent = sorted.length;
+  document.getElementById('total-count').textContent = allJobs.length;
+  document.getElementById('result-summary').style.display = sorted.length > 0 ? 'block' : 'none';
+
+  const grid = document.getElementById('job-grid');
   const no = document.getElementById('no-results');
-  if (sorted.length === 0) { list.innerHTML = ''; no.style.display = 'block'; return; }
+
+  if (sorted.length === 0) {
+    grid.innerHTML = '';
+    no.style.display = 'block';
+    return;
+  }
   no.style.display = 'none';
 
-  list.innerHTML = sorted.map(j => {
-    const rowClass = (j.link_status === 'expired') ? ' expired' : '';
-    
-    let titleTags = '';
-    if (j.link_status === 'expired') titleTags += '<span class="tag tag-expired">Expired</span>';
-    if (j.link_status === 'stale') titleTags += '<span class="tag tag-stale">Stale</span>';
-    if (j.grad_scheme) titleTags += '<span class="tag tag-grad">Grad</span>';
+  grid.innerHTML = sorted.map(j => {
+    const isExpired = j.link_status === 'expired';
+    const isStale = j.link_status === 'stale';
+    const rowClass = isExpired ? ' expired' : '';
 
-    let metaItems = [];
-    if (j.remote === 'remote') metaItems.push('Remote');
-    else if (j.remote === 'hybrid') metaItems.push('Hybrid');
-    else if (j.remote === 'on-site' || j.remote === 'onsite') metaItems.push('On-site');
-    if (j.employment === 'contract') metaItems.push('Contract');
-    if (j.employment === 'internship') metaItems.push('Internship');
-    if (j.source_type === 'agency') metaItems.push('via agency');
-    if (j.source) metaItems.push(j.source);
-    let meta = metaItems.length ? '<div class="job-meta">' + metaItems.map(m => '<span>' + m + '</span>').join(' · ') + '</div>' : '';
+    // Badges (top right)
+    let badges = '';
+    if (j.grad_scheme) badges += '<span class="card-tag grad">' + ICONS.grad + 'Graduate</span>';
+    if (isStale) badges += '<span class="card-tag stale">Stale</span>';
+    if (isExpired) badges += '<span class="card-tag expired-tag">Expired</span>';
+    const badgesHtml = badges ? '<div class="card-badges">' + badges + '</div>' : '';
 
-    let salaryClass = (!j.salary_display || j.salary_display === 'Not listed') ? ' job-salary-na' : '';
-    let salary = j.salary_display || 'Not listed';
-
-    let note = noteHtml(j);
-    let fallback = fallbackHtml(j);
-    
-    let canApply = j.url && j.link_status !== 'expired';
+    // Title
+    let canApply = j.url && !isExpired;
     let titleHtml = canApply
       ? '<a href="' + j.url + '" target="_blank" rel="noopener">' + j.title + '</a>'
       : '<span>' + j.title + '</span>';
 
-    let applyBtn = canApply
-      ? '<a class="job-apply" href="' + j.url + '" target="_blank" rel="noopener">Apply →</a>'
-      : '';
-
+    // Company
     let companyName = j.company || '';
     if (companyName === '[view listing]') companyName = 'via JobServe';
-    let licenceBadge = j.sponsor_licence
-      ? '<span class="licence-badge">Licenced</span>'
-      : '';
-    
-    // Sponsorship badge (dot + label)
-    let sp = j.visa_sponsorship || 'unknown';
-    if (sp === 'verified') sp = 'licenced';
-    if (!j.visa_sponsorship && j.sponsor_licence) sp = 'licenced';
-    let badgeHtml = '';
-    if (sp === 'licenced') {
-      badgeHtml = '<span class="sponsor-badge licenced"><span class="sponsor-dot"></span>Licenced</span>';
-    } else if (sp === 'sc_blocked') {
-      badgeHtml = '<span class="sponsor-badge sc"><span class="sponsor-dot"></span>SC/DV</span>';
-    } else if (sp === 'agency_unknown') {
-      badgeHtml = '<span class="sponsor-badge agency"><span class="sponsor-dot"></span>Agency</span>';
-    } else if (sp === 'unavailable') {
-      badgeHtml = '<span class="sponsor-badge na"><span class="sponsor-dot"></span>No</span>';
-    }
 
-    return '<div class="job-row' + rowClass + '">' +
-      '<div class="job-main">' +
-        '<div class="job-title">' + titleHtml + titleTags + '</div>' +
-        '<div class="job-company">' + badgeHtml + licenceBadge + companyName + '</div>' +
-        '<div class="job-location">' + (j.location || 'UK') + '</div>' +
-        meta +
-        note +
-        fallback +
-      '</div>' +
-      '<div class="job-right">' +
-        '<div class="job-salary' + salaryClass + '">' + salary + '</div>' +
-        '<div class="job-date">' + (j.date_posted || '') + '</div>' +
-        '<div class="job-source">' + (j.source || '') + '</div>' +
+    // Meta items
+    let metaItems = [];
+    if (j.location) {
+      let locationHtml = ICONS.mapPin + '<span>' + j.location + '</span>';
+      if (j.remote === 'remote') locationHtml += '<span class="meta-badge">Remote</span>';
+      else if (j.remote === 'hybrid') locationHtml += '<span class="meta-badge">Hybrid</span>';
+      else if (j.remote === 'on-site' || j.remote === 'onsite') locationHtml += '<span class="meta-badge">On-site</span>';
+      metaItems.push('<span class="card-meta-item">' + locationHtml + '</span>');
+    }
+    let salary = j.salary_display || '';
+    if (salary && salary !== 'Not listed') {
+      metaItems.push('<span class="card-meta-item">' + ICONS.banknote + '<span>' + salary + '</span></span>');
+    }
+    if (j.date_posted) {
+      metaItems.push('<span class="card-meta-item">' + ICONS.calendar + '<span>' + j.date_posted + '</span></span>');
+    }
+    let metaHtml = metaItems.length ? '<div class="card-meta">' + metaItems.join('') + '</div>' : '';
+
+    // Sponsorship tags
+    let sponsorTags = sponsorTagHtml(j);
+    let tagsHtml = sponsorTags ? '<div class="card-tags">' + sponsorTags + '</div>' : '';
+
+    // Note
+    let note = noteHtml(j);
+
+    // Fallback
+    let fallback = fallbackHtml(j);
+
+    // Footer
+    let sourceLine = j.source ? 'via ' + j.source : '';
+    if (j.source_type === 'agency') sourceLine += ' · agency';
+    let applyBtn = canApply
+      ? '<a class="card-apply" href="' + j.url + '" target="_blank" rel="noopener">Apply ' + ICONS.externalLink + '</a>'
+      : '<span class="card-apply disabled">Expired</span>';
+
+    return '<article class="job-card' + rowClass + '">' +
+      badgesHtml +
+      '<div class="card-title">' + titleHtml + '</div>' +
+      '<div class="card-company">' + ICONS.building + '<span class="company-name">' + companyName + '</span></div>' +
+      metaHtml +
+      tagsHtml +
+      note +
+      fallback +
+      '<div class="card-footer">' +
+        '<span class="card-source">' + sourceLine + '</span>' +
         applyBtn +
       '</div>' +
-    '</div>';
+    '</article>';
   }).join('');
 }
 
-// Event listeners
-document.getElementById('filters').addEventListener('click', e => {
-  const btn = e.target.closest('.filter-btn');
-  if (!btn) return;
-  const group = btn.closest('.filter-group');
-  group.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  filters[group.dataset.filter] = btn.dataset.value;
+/* ── Toggle filters ── */
+function toggleFilter(type) {
+  if (type === 'licenced') {
+    filters.licenced = !filters.licenced;
+    document.getElementById('toggle-licenced').classList.toggle('on', filters.licenced);
+  } else if (type === 'expired') {
+    filters.hideExpired = !filters.hideExpired;
+    document.getElementById('toggle-expired').classList.toggle('on', filters.hideExpired);
+  }
+  render();
+}
+
+/* ── Event listeners ── */
+document.getElementById('role-filters').addEventListener('click', e => {
+  const pill = e.target.closest('.pill');
+  if (!pill) return;
+  document.querySelectorAll('#role-filters .pill').forEach(p => p.classList.remove('active'));
+  pill.classList.add('active');
+  filters.role = pill.dataset.value;
   render();
 });
 
-document.querySelector('.sort-bar').addEventListener('click', e => {
-  const btn = e.target.closest('.sort-btn');
-  if (!btn) return;
-  document.querySelectorAll('.sort-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  sortBy = btn.dataset.sort;
+document.getElementById('sort-select').addEventListener('change', e => {
+  sortBy = e.target.value;
   render();
 });
 
 document.getElementById('clear-filters-btn')?.addEventListener('click', () => {
-  filters = { sponsorship: 'all', role: 'all' };
-  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-  document.querySelectorAll('.filter-group .filter-btn[data-value="all"]').forEach(b => b.classList.add('active'));
+  filters = { role: 'all', licenced: false, hideExpired: true };
+  document.getElementById('toggle-licenced').classList.remove('on');
+  document.getElementById('toggle-expired').classList.add('on');
+  document.querySelectorAll('#role-filters .pill').forEach(p => p.classList.remove('active'));
+  document.querySelector('#role-filters .pill[data-value="all"]').classList.add('active');
+  document.getElementById('sort-select').value = 'date';
+  sortBy = 'date';
   render();
 });
 
+/* ── Boot ── */
 init();
 </script>
+
 </body>
 </html>
