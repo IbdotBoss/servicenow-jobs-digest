@@ -29,7 +29,7 @@ file_handler = RotatingFileHandler(
 file_handler.setFormatter(logging.Formatter('%(asctime)s - %(levelname)s - %(message)s'))
 logger.addHandler(file_handler)
 
-def run_command(cmd: List[str], cwd: str = None) -> bool:
+def run_command(cmd: list[str], cwd: str = None) -> bool:
     """Run a shell command and return success status"""
     try:
         result = subprocess.run(cmd, cwd=cwd, capture_output=True, text=True, check=False)

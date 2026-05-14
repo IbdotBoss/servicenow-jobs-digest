@@ -1,10 +1,10 @@
 {
-  "updated": "2026-05-13",
-  "total": 164,
-  "total_active": 164,
-  "verified": 0,
-  "sc_blocked": 26,
-  "licenced_sponsors": 77,
+  "updated": "2026-05-14",
+  "total": 173,
+  "total_active": 173,
+  "verified": 5,
+  "sc_blocked": 18,
+  "licenced_sponsors": 85,
   "daily_snapshots": [
     "2026-05-06",
     "2026-05-07",
@@ -13,12 +13,13 @@
     "2026-05-10",
     "2026-05-11",
     "2026-05-12",
-    "2026-05-13"
+    "2026-05-13",
+    "2026-05-14"
   ],
   "sources": {
-    "LinkedIn": 93,
-    "JobServe": 39,
-    "Hunt UK": 39,
+    "LinkedIn": 98,
+    "JobServe": 43,
+    "Hunt UK": 40,
     "ComputerJobs": 9,
     "Reed": 2,
     "Hays": 2,
@@ -30,6 +31,231 @@
     "CV-Library": 1
   },
   "jobs": [
+    {
+      "title": "ServiceNow Functional Consultant (Outside IR35)",
+      "company": "[view listing]",
+      "location": "London",
+      "salary_display": "Not listed",
+      "date_posted": "2026-05-14",
+      "url": "https://www.jobserve.com/gb/en/mob/job/7ECC09D757C372DA5E/",
+      "source": "JobServe",
+      "source_type": "aggregator",
+      "role_type": "consultant",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "unknown",
+      "description": "Posted 12 hours ago",
+      "first_seen": "2026-05-14",
+      "last_seen": "2026-05-14",
+      "sources": [
+        "JobServe"
+      ],
+      "sponsor_licence": false,
+      "status": "active"
+    },
+    {
+      "title": "ServiceNow Developer (SC Cleared & Outside IR35)",
+      "company": "[view listing]",
+      "location": "London",
+      "salary_display": "Not listed",
+      "date_posted": "2026-05-14",
+      "url": "https://www.jobserve.com/gb/en/mob/job/DB85592BE2A47A254F/",
+      "source": "JobServe",
+      "source_type": "aggregator",
+      "role_type": "developer",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": true,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "sc_blocked",
+      "description": "Posted 15 hours ago",
+      "first_seen": "2026-05-14",
+      "last_seen": "2026-05-14",
+      "sources": [
+        "JobServe"
+      ],
+      "sponsor_licence": false,
+      "status": "active"
+    },
+    {
+      "title": "ServiceNow Solutions Architect (Outside IR35)",
+      "company": "[view listing]",
+      "location": "London",
+      "salary_display": "Not listed",
+      "date_posted": "2026-05-14",
+      "url": "https://www.jobserve.com/gb/en/mob/job/A2DB6BF81B50A841B2/",
+      "source": "JobServe",
+      "source_type": "aggregator",
+      "role_type": "architect",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "unknown",
+      "description": "Posted 12 hours ago",
+      "first_seen": "2026-05-14",
+      "last_seen": "2026-05-14",
+      "sources": [
+        "JobServe"
+      ],
+      "sponsor_licence": false,
+      "status": "active"
+    },
+    {
+      "title": "ServiceNow SecOps Engineer",
+      "company": "[view listing]",
+      "location": "London",
+      "salary_display": "Not listed",
+      "date_posted": "2026-05-14",
+      "url": "https://www.jobserve.com/gb/en/mob/job/072E9E99929DB12492/",
+      "source": "JobServe",
+      "source_type": "aggregator",
+      "role_type": "developer",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "unknown",
+      "description": "Posted 12 hours ago",
+      "first_seen": "2026-05-14",
+      "last_seen": "2026-05-14",
+      "sources": [
+        "JobServe"
+      ],
+      "sponsor_licence": false,
+      "status": "active"
+    },
+    {
+      "title": "Senior ServiceNow Developer",
+      "company": "Women in Tech",
+      "location": "Sheffield, England, United Kingdom (Hybrid)",
+      "url": "https://www.linkedin.com/jobs/view/4413108687",
+      "source": "LinkedIn",
+      "visa_sponsorship": "verified",
+      "source_type": "direct",
+      "date_posted": "2026-05-14",
+      "salary_display": "Not listed",
+      "role_type": "unknown",
+      "remote": "unknown",
+      "employment": "unknown",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "description": "",
+      "first_seen": "2026-05-14",
+      "last_seen": "2026-05-14",
+      "sources": [
+        "LinkedIn"
+      ],
+      "sponsor_licence": true,
+      "status": "active"
+    },
+    {
+      "title": "ServiceNow Administrator ( UK & Ireland  )",
+      "company": "Uniphar Group",
+      "location": "Hayes, England, United Kingdom (Hybrid)",
+      "url": "https://www.linkedin.com/jobs/view/4414150324",
+      "source": "LinkedIn",
+      "visa_sponsorship": "unknown",
+      "source_type": "direct",
+      "date_posted": "2026-05-14",
+      "salary_display": "Not listed",
+      "role_type": "unknown",
+      "remote": "unknown",
+      "employment": "unknown",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "description": "",
+      "first_seen": "2026-05-14",
+      "last_seen": "2026-05-14",
+      "sources": [
+        "LinkedIn"
+      ],
+      "sponsor_licence": true,
+      "status": "active"
+    },
+    {
+      "title": "ServiceNow ITOM Manager",
+      "company": "Elanco",
+      "location": "Hook, England, United Kingdom (Hybrid)",
+      "url": "https://www.linkedin.com/jobs/view/4401949902",
+      "source": "LinkedIn",
+      "visa_sponsorship": "verified",
+      "source_type": "direct",
+      "date_posted": "2026-05-14",
+      "salary_display": "Not listed",
+      "role_type": "unknown",
+      "remote": "unknown",
+      "employment": "unknown",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "description": "",
+      "first_seen": "2026-05-14",
+      "last_seen": "2026-05-14",
+      "sources": [
+        "LinkedIn"
+      ],
+      "sponsor_licence": true,
+      "status": "active"
+    },
+    {
+      "title": "Configuration Manager - ServiceNow - Fixed-term assignment",
+      "company": "Givaudan",
+      "location": "Ashford, England, United Kingdom (Hybrid)",
+      "url": "https://www.linkedin.com/jobs/view/4413959570",
+      "source": "LinkedIn",
+      "visa_sponsorship": "verified",
+      "source_type": "direct",
+      "date_posted": "2026-05-14",
+      "salary_display": "Not listed",
+      "role_type": "unknown",
+      "remote": "unknown",
+      "employment": "unknown",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "description": "",
+      "first_seen": "2026-05-14",
+      "last_seen": "2026-05-14",
+      "sources": [
+        "LinkedIn"
+      ],
+      "sponsor_licence": true,
+      "status": "active"
+    },
+    {
+      "title": "HR Transformation Consultant / Senior Consultant (ServiceNow HRSD)",
+      "company": "Capgemini Invent (Gaubert's Brothers Limited)",
+      "location": "Glasgow, Scotland",
+      "salary_display": "Not listed",
+      "date_posted": "2026-05-07",
+      "url": "https://jm.linkedin.com/jobs/view/hr-transformation-consultant-senior-consultant-servicenow-hrsd-at-capgemini-4372182142",
+      "source": "Hunt UK",
+      "source_type": "direct",
+      "role_type": "consultant",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "unknown",
+      "description": "HR Transformation Consultant/Senior Consultant (ServiceNow HRSD) at Capgemini Invent. Glasgow. Permanent.",
+      "first_seen": "2026-05-14",
+      "last_seen": "2026-05-14",
+      "sources": [
+        "Hunt UK"
+      ],
+      "sponsor_licence": false,
+      "status": "active"
+    },
     {
       "title": "ServiceNow HR Transformation Consultant | To \u00a375k + bonus",
       "company": "[view listing]",
@@ -48,7 +274,7 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 20 hours ago",
       "first_seen": "2026-05-13",
-      "last_seen": "2026-05-13",
+      "last_seen": "2026-05-14",
       "sources": [
         "JobServe"
       ],
@@ -58,10 +284,10 @@
     {
       "title": "Senior Project Manager (ServiceNow)",
       "company": "[view listing]",
-      "location": "Reading, Berkshire",
-      "salary_display": "\u00a3600 - \u00a3625 per day",
+      "location": "United Kingdom Wide",
+      "salary_display": "up to \u00a3625 per day (Umbrella rate)",
       "date_posted": "2026-05-13",
-      "url": "https://www.jobserve.com/gb/en/mob/job/A113A5DB683E0893CC/",
+      "url": "https://www.jobserve.com/gb/en/mob/job/DA0B8EA977163ADDED/",
       "source": "JobServe",
       "source_type": "aggregator",
       "role_type": "manager",
@@ -73,7 +299,7 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 20 hours ago",
       "first_seen": "2026-05-13",
-      "last_seen": "2026-05-13",
+      "last_seen": "2026-05-14",
       "sources": [
         "JobServe"
       ],
@@ -83,7 +309,7 @@
     {
       "title": "ServiceNow Architect (TSM)",
       "company": "UBIQUE SYSTEMS UK LIMITED",
-      "location": "London Area (hybrid, 3 days/week)",
+      "location": "London, UK (Hybrid \u2013 3 days onsite)",
       "salary_display": "Not listed",
       "date_posted": "2026-05-08",
       "url": "https://uk.linkedin.com/jobs/view/servicenow-architect-tsm-at-ubique-systems-4406073929",
@@ -100,7 +326,7 @@
       "visa_sponsorship": "unknown",
       "sponsor_licence": true,
       "first_seen": "2026-05-13",
-      "last_seen": "2026-05-13",
+      "last_seen": "2026-05-14",
       "sources": [
         "Hunt UK"
       ],
@@ -178,7 +404,7 @@
       "visa_sponsorship": "unknown",
       "sponsor_licence": true,
       "first_seen": "2026-05-13",
-      "last_seen": "2026-05-13",
+      "last_seen": "2026-05-14",
       "sources": [
         "Hunt UK"
       ],
@@ -205,7 +431,7 @@
       "sources": [
         "LinkedIn"
       ],
-      "sponsor_licence": false
+      "sponsor_licence": true
     },
     {
       "title": "ServiceNow Managed Service Consultant",
@@ -228,7 +454,7 @@
       "sources": [
         "LinkedIn"
       ],
-      "sponsor_licence": false
+      "sponsor_licence": true
     },
     {
       "title": "ServiceNOW Business Consultant",
@@ -274,7 +500,7 @@
       "sources": [
         "LinkedIn"
       ],
-      "sponsor_licence": false
+      "sponsor_licence": true
     },
     {
       "title": "ServiceNow/Halo ITSM Developer",
@@ -320,7 +546,7 @@
       "sources": [
         "LinkedIn"
       ],
-      "sponsor_licence": false
+      "sponsor_licence": true
     },
     {
       "title": "ServiceNow Technical Consultant/Dev (IRM/SecOps) | Remote",
@@ -340,7 +566,7 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 19 hours ago",
       "first_seen": "2026-05-12",
-      "last_seen": "2026-05-13",
+      "last_seen": "2026-05-14",
       "sources": [
         "JobServe"
       ],
@@ -365,7 +591,7 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 19 hours ago",
       "first_seen": "2026-05-12",
-      "last_seen": "2026-05-13",
+      "last_seen": "2026-05-14",
       "sources": [
         "JobServe"
       ],
@@ -390,7 +616,7 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 18 hours ago",
       "first_seen": "2026-05-12",
-      "last_seen": "2026-05-13",
+      "last_seen": "2026-05-14",
       "sources": [
         "JobServe"
       ],
@@ -415,7 +641,7 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 20 hours ago",
       "first_seen": "2026-05-12",
-      "last_seen": "2026-05-13",
+      "last_seen": "2026-05-14",
       "sources": [
         "JobServe"
       ],
@@ -440,7 +666,7 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 18 hours ago",
       "first_seen": "2026-05-12",
-      "last_seen": "2026-05-13",
+      "last_seen": "2026-05-14",
       "sources": [
         "JobServe"
       ],
@@ -608,27 +834,6 @@
       "status": "active"
     },
     {
-      "title": "Software Asset Management & CMDB Lead (ServiceNow)",
-      "company": "METHODS BUSINESS AND DIGITAL TECHNOLOGY LIMITED",
-      "location": "London, England",
-      "salary_display": "Not listed",
-      "date_posted": "2026-05-07",
-      "url": "https://uk.linkedin.com/jobs/view/software-asset-management-cmdb-lead-servicenow-at-methods-4409279637",
-      "source": "Hunt UK",
-      "role_type": "lead",
-      "remote": "onsite",
-      "employment": "permanent",
-      "visa_sponsorship": "unknown",
-      "description": "SAM & CMDB Lead at Methods. Central government digital transformation. A-rated sponsor.",
-      "sponsor_licence": true,
-      "first_seen": "2026-05-12",
-      "last_seen": "2026-05-13",
-      "sources": [
-        "Hunt UK"
-      ],
-      "status": "active"
-    },
-    {
       "title": "ServiceNow Engineer",
       "company": "Barclays Execution Services Limited",
       "location": "Knutsford, England",
@@ -643,7 +848,7 @@
       "description": "ServiceNow Engineer at Barclays. Knutsford. A-rated sponsor.",
       "sponsor_licence": true,
       "first_seen": "2026-05-12",
-      "last_seen": "2026-05-13",
+      "last_seen": "2026-05-14",
       "sources": [
         "Hunt UK"
       ],
@@ -748,7 +953,7 @@
     {
       "title": "ServiceNow Architect",
       "company": "Tata Consultancy Services UK Limited",
-      "location": "London (Hybrid)",
+      "location": "London, UK (Hybrid)",
       "salary_display": "Not listed",
       "date_posted": "2026-05-08",
       "url": "https://uk.linkedin.com/jobs/view/servicenow-architect-at-tata-consultancy-services-4410462317",
@@ -764,7 +969,7 @@
       "description": "ServiceNow Architect at Tata Consultancy Services (TCS). London hybrid. Lead SN implementation projects. TCS is A-rated sponsor.",
       "sponsor_licence": true,
       "first_seen": "2026-05-11",
-      "last_seen": "2026-05-13",
+      "last_seen": "2026-05-14",
       "sources": [
         "Hunt UK"
       ],
@@ -773,10 +978,10 @@
     {
       "title": "ServiceNow Telecommunications Service Management (TSM) Architect",
       "company": "Ubique Systems UK Limited",
-      "location": "London Area (hybrid)",
+      "location": "London Area, United Kingdom",
       "salary_display": "Not listed",
       "date_posted": "2026-04-29",
-      "url": "https://uk.linkedin.com/jobs/view/servicenow-telecommunications-service-management-tsm-architect-at-ubique-systems-4411863814",
+      "url": "https://uk.linkedin.com/jobs/view/servicenow-architect-at-ubique-systems-4411866930",
       "source": "Hunt UK",
       "source_type": "agency",
       "role_type": "architect",
@@ -789,7 +994,7 @@
       "description": "ServiceNow TSM Architect at Ubique Systems UK. TSM, ITSM & ITOM expertise. Still listed 2026-05-11.",
       "sponsor_licence": true,
       "first_seen": "2026-05-11",
-      "last_seen": "2026-05-13",
+      "last_seen": "2026-05-14",
       "sources": [
         "Hunt UK"
       ],
@@ -1138,7 +1343,7 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 5 hours ago",
       "first_seen": "2026-05-09",
-      "last_seen": "2026-05-13",
+      "last_seen": "2026-05-14",
       "sources": [
         "JobServe"
       ],
@@ -1163,7 +1368,7 @@
       "visa_sponsorship": "sc_blocked",
       "description": "Posted 11 hours ago",
       "first_seen": "2026-05-09",
-      "last_seen": "2026-05-13",
+      "last_seen": "2026-05-14",
       "sources": [
         "JobServe"
       ],
@@ -1254,10 +1459,10 @@
     {
       "title": "Solution Architect ServiceNow",
       "company": "AVMI Kinly Ltd",
-      "location": "Sunbury-upon-Thames/London/Livingston (hybrid, 1 day/week onsite)",
-      "salary_display": "Excellent salary + bonus + benefits",
+      "location": "Sunbury-upon-Thames, London, or Livingston (hybrid)",
+      "salary_display": "Not listed",
       "date_posted": "2026-05-02",
-      "url": "https://uk.linkedin.com/jobs/view/solution-architect-servicenow-at-kinly-4413299904",
+      "url": "https://careers.kinly.com/l/pl/o/solution-architect-servicenow",
       "source": "Hunt UK",
       "source_type": "direct",
       "role_type": "architect",
@@ -1270,7 +1475,7 @@
       "description": "Solution Architect ServiceNow at Kinly (AVMI). Full-time permanent. Hybrid.",
       "sponsor_licence": true,
       "first_seen": "2026-05-09",
-      "last_seen": "2026-05-13",
+      "last_seen": "2026-05-14",
       "sources": [
         "Hunt UK"
       ],
@@ -1304,10 +1509,10 @@
     {
       "title": "ServiceNow Product Manager (Banking)",
       "company": "SThree",
-      "location": "Knutsford/Manchester (hybrid)",
+      "location": "Knutsford or Manchester (2 days/week office)",
       "salary_display": "\u00a370,000-\u00a3100,000",
       "date_posted": "2026-04-30",
-      "url": "https://www.sthree.com/",
+      "url": "https://uk.linkedin.com/jobs/view/servicenow-product-manager-bank-at-huxley-4407395761",
       "source": "Hunt UK",
       "source_type": "agency",
       "role_type": "manager",
@@ -1320,7 +1525,7 @@
       "description": "ServiceNow Product Manager - Banking. Grow ServiceNow centre of excellence.",
       "sponsor_licence": true,
       "first_seen": "2026-05-09",
-      "last_seen": "2026-05-12",
+      "last_seen": "2026-05-14",
       "sources": [
         "Hunt UK"
       ],
@@ -1510,15 +1715,15 @@
       "company": "Capgemini",
       "location": "England, United Kingdom (Hybrid)",
       "salary": "\u00a347,600 (sponsorship threshold)",
-      "url": "https://uk.linkedin.com/jobs/view/4404976819",
+      "url": "https://www.linkedin.com/jobs/view/4404976819",
       "date_posted": "2026-04-27",
       "source": "Hunt UK",
-      "visa_sponsorship": "sc_blocked",
+      "visa_sponsorship": "verified",
       "status": "active",
       "notes": "SC Security Clearance required \u2014 5yr continuous UK residency",
       "sponsor_licence": true,
       "first_seen": "2026-05-09",
-      "last_seen": "2026-05-13",
+      "last_seen": "2026-05-14",
       "sources": [
         "Hunt UK",
         "LinkedIn"
@@ -1561,7 +1766,7 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 14 hours ago",
       "first_seen": "2026-05-08",
-      "last_seen": "2026-05-13",
+      "last_seen": "2026-05-14",
       "sources": [
         "JobServe"
       ],
@@ -1586,7 +1791,7 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 12 hours ago",
       "first_seen": "2026-05-08",
-      "last_seen": "2026-05-13",
+      "last_seen": "2026-05-14",
       "sources": [
         "JobServe"
       ],
@@ -1661,7 +1866,7 @@
       "visa_sponsorship": "sc_blocked",
       "description": "Posted 15 hours ago",
       "first_seen": "2026-05-08",
-      "last_seen": "2026-05-13",
+      "last_seen": "2026-05-14",
       "sources": [
         "JobServe"
       ],
@@ -1686,7 +1891,7 @@
       "visa_sponsorship": "sc_blocked",
       "description": "Posted 2 days ago",
       "first_seen": "2026-05-08",
-      "last_seen": "2026-05-13",
+      "last_seen": "2026-05-14",
       "sources": [
         "JobServe"
       ],
@@ -1711,7 +1916,7 @@
       "visa_sponsorship": "sc_blocked",
       "description": "Posted 16 hours ago",
       "first_seen": "2026-05-08",
-      "last_seen": "2026-05-13",
+      "last_seen": "2026-05-14",
       "sources": [
         "JobServe"
       ],
@@ -1761,7 +1966,7 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 1 day ago",
       "first_seen": "2026-05-08",
-      "last_seen": "2026-05-13",
+      "last_seen": "2026-05-14",
       "sources": [
         "JobServe"
       ],
@@ -1786,7 +1991,7 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 6 days ago",
       "first_seen": "2026-05-08",
-      "last_seen": "2026-05-13",
+      "last_seen": "2026-05-14",
       "sources": [
         "JobServe"
       ],
@@ -1836,7 +2041,7 @@
       "visa_sponsorship": "sc_blocked",
       "description": "Posted 14 hours ago",
       "first_seen": "2026-05-08",
-      "last_seen": "2026-05-13",
+      "last_seen": "2026-05-14",
       "sources": [
         "JobServe"
       ],
@@ -1861,7 +2066,7 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 20 hours ago",
       "first_seen": "2026-05-08",
-      "last_seen": "2026-05-13",
+      "last_seen": "2026-05-14",
       "sources": [
         "JobServe"
       ],
@@ -2366,7 +2571,7 @@
       "visa_sponsorship": "agency_unknown",
       "description": "ITAM Product Manager - ServiceNow HAM/SAM. Posted by recruitment agency \u2014 verify sponsorship with actual employer.",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-13",
+      "last_seen": "2026-05-14",
       "status": "active",
       "sources": [
         "Reed"
@@ -2512,6 +2717,36 @@
         "Hays"
       ],
       "sponsor_licence": false
+    },
+    {
+      "title": "Solution Architect ServiceNow",
+      "company": "Kinly",
+      "location": "United Kingdom (Remote)",
+      "salary_display": "Not listed",
+      "salary_min": 0,
+      "salary_max": 0,
+      "date_posted": "2026-05-01",
+      "url": "https://www.linkedin.com/jobs/view/4413975261",
+      "fallback_url": "https://www.kinly.com/careers",
+      "source": "Hunt UK",
+      "source_type": "direct",
+      "role_type": "architect",
+      "remote": "hybrid",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "expired",
+      "visa_sponsorship": "verified",
+      "description": "Global leader in AV/UC solutions. Hybrid working, 1 day onsite. Excellent salary + bonus. Kinly holds A-rated sponsor licence.",
+      "sponsorship_scan": "Skilled Worker visa mentioned",
+      "first_seen": "2026-05-06",
+      "last_seen": "2026-05-14",
+      "status": "active",
+      "sources": [
+        "Hunt UK",
+        "LinkedIn"
+      ],
+      "sponsor_licence": true
     },
     {
       "title": "ServiceNow Technical Lead (Insurance/FSO)",
@@ -3034,7 +3269,7 @@
       "salary_min": 0,
       "salary_max": 0,
       "date_posted": "2026-05-06",
-      "url": "https://www.linkedin.com/jobs/view/4399646774",
+      "url": "https://www.linkedin.com/jobs/view/4414236722",
       "source": "LinkedIn",
       "source_type": "direct",
       "role_type": "admin",
@@ -3046,7 +3281,7 @@
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-07",
+      "last_seen": "2026-05-14",
       "status": "active",
       "sources": [
         "LinkedIn"
