@@ -49,11 +49,11 @@ def rebuild():
             data = json.load(f)
         
         for j in data.get('jobs', []):
-            # Normalize old tag format
+            # Normalize old tag format — map legacy tags to unknown
             tag = j.get('visa_sponsorship', 'unknown')
             if tag == 'sponsor_verified':
-                j['visa_sponsorship'] = 'verified'
-                tag = 'verified'
+                j['visa_sponsorship'] = 'unknown'
+                tag = 'unknown'
             
             key = job_key(j)
             if key not in all_jobs:
