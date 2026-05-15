@@ -359,6 +359,13 @@
       <button class="pill" data-value="manager">Manager</button>
       <button class="pill" data-value="analyst">Analyst</button>
     </div>
+    <div class="role-pills" id="source-filters" style="margin-top:0">
+      <button class="pill active" data-value="all">All Sources</button>
+      <button class="pill" data-value="LinkedIn">LinkedIn</button>
+      <button class="pill" data-value="JobServe">JobServe</button>
+      <button class="pill" data-value="Hunt UK">Hunt UK</button>
+      <button class="pill" data-value="Reed">Reed</button>
+    </div>
     <div class="controls-right">
       <div class="toggle-group">
         <button class="toggle" id="toggle-licenced" aria-label="Show licenced only" onclick="toggleFilter('licenced')"></button>
@@ -452,7 +459,7 @@ const ICONS = {
 };
 
 let allJobs = [];
-let filters = { role: 'all', licenced: false, hideExpired: true };
+let filters = { role: 'all', source: 'all', licenced: false, hideExpired: true };
 let sortBy = 'date';
 let currentView = 'latest';
 let dailySnapshots = [];
@@ -546,6 +553,7 @@ function updateHeaderStats() {
 function getFiltered() {
   return allJobs.filter(j => {
     if (filters.role !== 'all' && j.role_type !== filters.role) return false;
+    if (filters.source !== 'all' && j.source !== filters.source) return false;
     if (filters.licenced && !j.sponsor_licence) return false;
     if (filters.hideExpired && j.link_status === 'expired') return false;
     return true;
@@ -748,17 +756,28 @@ document.getElementById('role-filters').addEventListener('click', e => {
   render();
 });
 
+document.getElementById('source-filters').addEventListener('click', e => {
+  const pill = e.target.closest('.pill');
+  if (!pill) return;
+  document.querySelectorAll('#source-filters .pill').forEach(p => p.classList.remove('active'));
+  pill.classList.add('active');
+  filters.source = pill.dataset.value;
+  render();
+});
+
 document.getElementById('sort-select').addEventListener('change', e => {
   sortBy = e.target.value;
   render();
 });
 
 document.getElementById('clear-filters-btn')?.addEventListener('click', () => {
-  filters = { role: 'all', licenced: false, hideExpired: true };
+  filters = { role: 'all', source: 'all', licenced: false, hideExpired: true };
   document.getElementById('toggle-licenced').classList.remove('on');
   document.getElementById('toggle-expired').classList.add('on');
   document.querySelectorAll('#role-filters .pill').forEach(p => p.classList.remove('active'));
   document.querySelector('#role-filters .pill[data-value="all"]').classList.add('active');
+  document.querySelectorAll('#source-filters .pill').forEach(p => p.classList.remove('active'));
+  document.querySelector('#source-filters .pill[data-value="all"]').classList.add('active');
   document.getElementById('sort-select').value = 'date';
   sortBy = 'date';
   render();
