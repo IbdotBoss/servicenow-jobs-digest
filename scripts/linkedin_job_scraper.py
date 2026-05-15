@@ -72,16 +72,22 @@ def load_sponsors():
     return sponsors
 
 def check_sponsor(company, sponsors):
-    if not company: return 'unknown'
+    """v4.1: Returns (visa_sponsorship_tag, sponsor_licence_boolean).
+    NEVER returns 'verified' — that is manual-only.
+    sponsor_licence=True means company is on the A-rated Skilled Worker register."""
+    if not company:
+        return 'unknown', False
     name = company.lower().strip().split(' - ')[0].split(' (')[0]
     for a in AGENCY_COMPANIES:
-        if a in name: return 'agency_unknown'
+        if a in name:
+            return 'agency_unknown', False
     for s in sponsors:
         if name in s or s in name:
             for sc in SC_COMPANIES:
-                if sc in name or sc in s: return 'sc_blocked'
-            return 'verified'
-    return 'unknown'
+                if sc in name or sc in s:
+                    return 'sc_blocked', True
+            return 'unknown', True  # licence=True, but visa_sponsorship stays unknown
+    return 'unknown', False
 
 def extract_jobs(html_text):
     blocks = re.findall(r'<code[^>]*>(.*?)</code>', html_text, re.DOTALL)
@@ -160,19 +166,22 @@ def scrape(full=False):
         key = (j['title'].lower().strip(), j['company'].split(' - ')[0].strip().lower())
         if key not in seen:
             seen.add(key)
-            j['visa_sponsorship'] = check_sponsor(j['company'], sponsors)
+            tag, licenced = check_sponsor(j['company'], sponsors)
+            j['visa_sponsorship'] = tag
+            j['sponsor_licence'] = licenced
             unique.append(j)
 
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     with open(OUTPUT_FILE, 'w') as f:
         json.dump(unique, f, indent=2)
 
-    verified = sum(1 for r in unique if r.get('visa_sponsorship') == 'verified')
-    print(f"\n✅ {len(unique)} SN LinkedIn jobs ({filter_label}, {verified} sponsors)")
+    licenced = sum(1 for r in unique if r.get('sponsor_licence'))
+    print(f"\n✅ {len(unique)} SN LinkedIn jobs ({filter_label}, {licenced} licenced companies)")
     print(f"   Saved to {OUTPUT_FILE}")
     for r in unique[:5]:
-        t = {'verified': '🟢', 'sc_blocked': '🔒', 'agency_unknown': '🏢', 'unknown': '❓'}
-        print(f"   {t.get(r.get('visa_sponsorship','?'), '?')} {r['title'][:55]} | {r['company']}")
+        t = {'sc_blocked': '🔒', 'agency_unknown': '🏢', 'unknown': '❓'}
+        badge = '🟢' if r.get('sponsor_licence') else t.get(r.get('visa_sponsorship','?'), '?')
+        print(f"   {badge} {r['title'][:55]} | {r['company']}")
     return unique
 
 if __name__ == '__main__':
