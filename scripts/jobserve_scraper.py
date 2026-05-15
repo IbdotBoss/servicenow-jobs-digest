@@ -15,6 +15,16 @@ COOKIE_FILE = '/tmp/js_cookies.txt'
 
 SN_TITLE_KW = ['servicenow', 'service-now', 'service now']
 
+# Genuinely IT-adjacent roles worth surfacing (ITSM, service desk, Remedy, etc.)
+ADJACENT_KW = [
+    'itsm', 'itil', 'remedy', 'service desk', 'helpdesk', 'sacm', 'itam',
+    'change manager', 'incident manager', 'problem manager',
+    'service delivery', 'helix', 'service asset', 'configuration management',
+    'asset manager', 'major incident', 'service lead', 'it service',
+    'it support', 'it operations', 'service transition', 'release manager',
+    'cmdb', 'csm', 'itom', 'itbm',
+]
+
 # ── Sponsor loading ──
 def load_sponsors():
     sponsors = set()
@@ -89,8 +99,11 @@ def parse_jobs(html_text):
         if not pos_match: continue
         title = html_mod.unescape(pos_match.group(1).strip())
         
-        # Only ServiceNow-specific roles
-        if not any(kw in title.lower() for kw in SN_TITLE_KW): continue
+        # Classify: ServiceNow-specific, adjacent, or irrelevant
+        title_lower = title.lower()
+        is_sn = any(kw in title_lower for kw in SN_TITLE_KW)
+        is_adjacent = any(kw in title_lower for kw in ADJACENT_KW)
+        if not is_sn and not is_adjacent: continue  # skip irrelevant noise
         
         # ── 24h etime filter ──
         time_match = re.search(r'class="etime">(.*?)</span>', block)
@@ -116,7 +129,6 @@ def parse_jobs(html_text):
                 salary = s; break
         
         # DV/SC check
-        title_lower = title.lower()
         dv_sc = 'dv cleared' in title_lower or 'dv-cleared' in title_lower
         sc = 'sc cleared' in title_lower or 'sc-cleared' in title_lower or 'security cleared' in title_lower
         
@@ -128,14 +140,15 @@ def parse_jobs(html_text):
         
         jobs.append({
             'title': title,
-            'company': '[view listing]',  # JobServe mobile doesn't expose company
+            'company': '[view listing]',
             'location': location,
             'salary_display': salary if salary else 'Not listed',
             'date_posted': date_posted,
             'url': f"https://www.jobserve.com/gb/en/mob/job/{jid}/",
             'source': 'JobServe',
             'source_type': 'aggregator',
-            'role_type': _classify(title_lower),
+            'sn_role': is_sn,
+            'role_type': _classify(title_lower) if is_sn else 'sn-adjacent',
             'remote': 'remote' if 'remote' in title_lower else ('hybrid' if 'hybrid' in title_lower else 'onsite'),
             'employment': emp,
             'sc_clearance': sc or dv_sc,
@@ -177,7 +190,12 @@ def main():
         
         if jobs:
             empty_pages = 0
-            print(f"  Page {page}: {len(jobs)} SN jobs")
+            sn = sum(1 for j in jobs if j.get('sn_role'))
+            adj = sum(1 for j in jobs if not j.get('sn_role'))
+            parts = []
+            if sn: parts.append(f'{sn} SN')
+            if adj: parts.append(f'{adj} adjacent')
+            print(f"  Page {page}: {' + '.join(parts)} jobs")
         else:
             empty_pages += 1
             print(f"  Page {page}: 0 SN jobs (empty streak: {empty_pages})")
@@ -196,7 +214,9 @@ def main():
             j['sponsor_licence'] = check_sponsor_licence(j.get('company', ''), sponsors)
             unique.append(j)
     
-    print(f"\nTotal: {len(unique)} unique SN jobs from JobServe")
+    sn_count = sum(1 for j in unique if j.get('sn_role'))
+    adj_count = sum(1 for j in unique if not j.get('sn_role'))
+    print(f"\nTotal: {len(unique)} unique jobs ({sn_count} SN + {adj_count} adjacent)")
     
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     with open(OUT, 'w') as f:

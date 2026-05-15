@@ -318,6 +318,46 @@
     .controls-right { gap: 10px; }
     .date-bar { padding: 12px 16px 0; }
   }
+
+  /* ── Adjacent roles section ── */
+  .adjacent-section { margin-top: 32px; }
+  .adjacent-section[open] { margin-top: 32px; }
+  .adjacent-header {
+    display: flex; align-items: center; gap: 10px;
+    padding: 14px 0; cursor: pointer; user-select: none;
+    border-top: 2px solid var(--border);
+    font-size: 14px; font-weight: 600; color: var(--muted-foreground);
+    list-style: none; transition: color 0.15s;
+  }
+  .adjacent-header:hover { color: var(--foreground); }
+  .adjacent-header::-webkit-details-marker { display: none; }
+  .adjacent-header::marker { display: none; content: ''; }
+  .adjacent-header::before {
+    content: '▶'; display: inline-block; font-size: 10px;
+    transition: transform 0.2s; width: 14px; flex-shrink: 0;
+    color: var(--muted-foreground);
+  }
+  .adjacent-section[open] .adjacent-header::before { transform: rotate(90deg); }
+  .adjacent-count {
+    font-size: 12px; font-weight: 500; color: var(--muted-foreground);
+    padding: 1px 8px; border-radius: var(--radius-full);
+    background: var(--secondary);
+  }
+  .adjacent-section .job-card {
+    border-color: var(--border);
+    background: var(--background);
+  }
+  .adjacent-section .job-card:hover {
+    border-color: var(--border);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  }
+  .adjacent-label {
+    display: inline-flex; align-items: center; gap: 3px;
+    font-size: 10px; font-weight: 600; text-transform: uppercase;
+    letter-spacing: 0.04em; padding: 1px 6px; border-radius: 3px;
+    color: var(--muted-foreground); background: var(--secondary);
+    margin-right: 4px;
+  }
 </style>
 </head>
 <body>
@@ -406,6 +446,13 @@
   </div>
 
   <div class="job-grid" id="job-grid"></div>
+
+  <details class="adjacent-section" id="adjacent-section" style="display:none">
+    <summary class="adjacent-header">
+      IT-Adjacent Roles <span class="adjacent-count" id="adjacent-count">0</span>
+    </summary>
+    <div class="job-grid" id="adjacent-grid"></div>
+  </details>
 
   <div class="loading-state" id="loading-state">
     <div class="loading-spinner"></div>
@@ -648,96 +695,119 @@ function fallbackHtml(j) {
   return '';
 }
 
+/* ── Render card HTML (shared by SN and adjacent) ── */
+function cardHtml(j, isAdjacent) {
+  const isExpired = j.link_status === 'expired';
+  const isStale = j.link_status === 'stale';
+  const rowClass = isExpired ? ' expired' : '';
+
+  // Badges (top right)
+  let badges = '';
+  if (j.grad_scheme) badges += '<span class="card-tag grad">' + ICONS.grad + 'Graduate</span>';
+  if (isStale) badges += '<span class="card-tag stale">Stale</span>';
+  if (isExpired) badges += '<span class="card-tag expired-tag">Expired</span>';
+  const badgesHtml = badges ? '<div class="card-badges">' + badges + '</div>' : '';
+
+  // Title
+  let canApply = j.url && !isExpired;
+  let titleHtml = (canApply
+    ? '<a href="' + j.url + '" target="_blank" rel="noopener">' + j.title + '</a>'
+    : '<span>' + j.title + '</span>');
+
+  // Company
+  let companyName = j.company || '';
+  if (companyName === '[view listing]') companyName = 'via JobServe';
+  let adjacentLabel = isAdjacent ? '<span class="adjacent-label">IT-Adjacent</span>' : '';
+
+  // Meta items
+  let metaItems = [];
+  if (j.location) {
+    let locationHtml = ICONS.mapPin + '<span>' + j.location + '</span>';
+    if (j.remote === 'remote') locationHtml += '<span class="meta-badge">Remote</span>';
+    else if (j.remote === 'hybrid') locationHtml += '<span class="meta-badge">Hybrid</span>';
+    else if (j.remote === 'on-site' || j.remote === 'onsite') locationHtml += '<span class="meta-badge">On-site</span>';
+    metaItems.push('<span class="card-meta-item">' + locationHtml + '</span>');
+  }
+  let salary = j.salary_display || '';
+  if (salary && salary !== 'Not listed') {
+    metaItems.push('<span class="card-meta-item">' + ICONS.banknote + '<span>' + salary + '</span></span>');
+  }
+  if (j.date_posted) {
+    metaItems.push('<span class="card-meta-item">' + ICONS.calendar + '<span>' + j.date_posted + '</span></span>');
+  }
+  let metaHtml = metaItems.length ? '<div class="card-meta">' + metaItems.join('') + '</div>' : '';
+
+  // Sponsorship tags
+  let sponsorTags = sponsorTagHtml(j);
+  let tagsHtml = sponsorTags ? '<div class="card-tags">' + sponsorTags + '</div>' : '';
+
+  // Note
+  let note = noteHtml(j);
+
+  // Fallback
+  let fallback = fallbackHtml(j);
+
+  // Footer
+  let sourceLine = j.source ? 'via ' + j.source : '';
+  if (j.source_type === 'agency') sourceLine += ' · agency';
+  let applyBtn = canApply
+    ? '<a class="card-apply" href="' + j.url + '" target="_blank" rel="noopener">Apply ' + ICONS.externalLink + '</a>'
+    : '<span class="card-apply disabled">Expired</span>';
+
+  return '<article class="job-card' + rowClass + '">' +
+    badgesHtml +
+    '<div class="card-title">' + titleHtml + '</div>' +
+    '<div class="card-company">' + adjacentLabel + ICONS.building + '<span class="company-name">' + companyName + '</span></div>' +
+    metaHtml +
+    tagsHtml +
+    note +
+    fallback +
+    '<div class="card-footer">' +
+      '<span class="card-source">' + sourceLine + '</span>' +
+      applyBtn +
+    '</div>' +
+  '</article>';
+}
+
 /* ── Render ── */
 function render() {
   const filtered = getFiltered();
   const sorted = sortJobs(filtered);
 
-  document.getElementById('showing-count').textContent = sorted.length;
-  document.getElementById('total-count').textContent = allJobs.length;
-  document.getElementById('result-summary').style.display = sorted.length > 0 ? 'block' : 'none';
+  // Split into SN and adjacent (adjacent only shown when no role filter active)
+  const snJobs = sorted.filter(j => j.role_type !== 'sn-adjacent');
+  const adjJobs = sorted.filter(j => j.role_type === 'sn-adjacent');
+
+  const showingSN = filters.role === 'all' ? snJobs.length : sorted.length; // role filter excludes adjacent
+  document.getElementById('showing-count').textContent = showingSN;
+  document.getElementById('total-count').textContent = allJobs.filter(j => j.role_type !== 'sn-adjacent').length;
+  document.getElementById('result-summary').style.display = snJobs.length > 0 ? 'block' : 'none';
 
   const grid = document.getElementById('job-grid');
   const no = document.getElementById('no-results');
+  const adjSection = document.getElementById('adjacent-section');
+  const adjGrid = document.getElementById('adjacent-grid');
+  const adjCount = document.getElementById('adjacent-count');
 
-  if (sorted.length === 0) {
+  if (snJobs.length === 0 && adjJobs.length === 0) {
     grid.innerHTML = '';
+    adjSection.style.display = 'none';
     no.style.display = 'block';
     return;
   }
   no.style.display = 'none';
 
-  grid.innerHTML = sorted.map(j => {
-    const isExpired = j.link_status === 'expired';
-    const isStale = j.link_status === 'stale';
-    const rowClass = isExpired ? ' expired' : '';
+  // SN jobs
+  grid.innerHTML = snJobs.map(j => cardHtml(j, false)).join('');
 
-    // Badges (top right)
-    let badges = '';
-    if (j.grad_scheme) badges += '<span class="card-tag grad">' + ICONS.grad + 'Graduate</span>';
-    if (isStale) badges += '<span class="card-tag stale">Stale</span>';
-    if (isExpired) badges += '<span class="card-tag expired-tag">Expired</span>';
-    const badgesHtml = badges ? '<div class="card-badges">' + badges + '</div>' : '';
-
-    // Title
-    let canApply = j.url && !isExpired;
-    let titleHtml = canApply
-      ? '<a href="' + j.url + '" target="_blank" rel="noopener">' + j.title + '</a>'
-      : '<span>' + j.title + '</span>';
-
-    // Company
-    let companyName = j.company || '';
-    if (companyName === '[view listing]') companyName = 'via JobServe';
-
-    // Meta items
-    let metaItems = [];
-    if (j.location) {
-      let locationHtml = ICONS.mapPin + '<span>' + j.location + '</span>';
-      if (j.remote === 'remote') locationHtml += '<span class="meta-badge">Remote</span>';
-      else if (j.remote === 'hybrid') locationHtml += '<span class="meta-badge">Hybrid</span>';
-      else if (j.remote === 'on-site' || j.remote === 'onsite') locationHtml += '<span class="meta-badge">On-site</span>';
-      metaItems.push('<span class="card-meta-item">' + locationHtml + '</span>');
-    }
-    let salary = j.salary_display || '';
-    if (salary && salary !== 'Not listed') {
-      metaItems.push('<span class="card-meta-item">' + ICONS.banknote + '<span>' + salary + '</span></span>');
-    }
-    if (j.date_posted) {
-      metaItems.push('<span class="card-meta-item">' + ICONS.calendar + '<span>' + j.date_posted + '</span></span>');
-    }
-    let metaHtml = metaItems.length ? '<div class="card-meta">' + metaItems.join('') + '</div>' : '';
-
-    // Sponsorship tags
-    let sponsorTags = sponsorTagHtml(j);
-    let tagsHtml = sponsorTags ? '<div class="card-tags">' + sponsorTags + '</div>' : '';
-
-    // Note
-    let note = noteHtml(j);
-
-    // Fallback
-    let fallback = fallbackHtml(j);
-
-    // Footer
-    let sourceLine = j.source ? 'via ' + j.source : '';
-    if (j.source_type === 'agency') sourceLine += ' · agency';
-    let applyBtn = canApply
-      ? '<a class="card-apply" href="' + j.url + '" target="_blank" rel="noopener">Apply ' + ICONS.externalLink + '</a>'
-      : '<span class="card-apply disabled">Expired</span>';
-
-    return '<article class="job-card' + rowClass + '">' +
-      badgesHtml +
-      '<div class="card-title">' + titleHtml + '</div>' +
-      '<div class="card-company">' + ICONS.building + '<span class="company-name">' + companyName + '</span></div>' +
-      metaHtml +
-      tagsHtml +
-      note +
-      fallback +
-      '<div class="card-footer">' +
-        '<span class="card-source">' + sourceLine + '</span>' +
-        applyBtn +
-      '</div>' +
-    '</article>';
-  }).join('');
+  // Adjacent section
+  if (adjJobs.length > 0 && filters.role === 'all' && !filters.licenced) {
+    adjSection.style.display = '';
+    adjCount.textContent = adjJobs.length + ' today';
+    adjGrid.innerHTML = adjJobs.map(j => cardHtml(j, true)).join('');
+  } else {
+    adjSection.style.display = 'none';
+  }
 }
 
 /* ── Toggle filters ── */
