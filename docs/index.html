@@ -679,7 +679,7 @@ function noteHtml(j) {
   if (j.sponsorship_mentioned) {
     return '<div class="card-note mentioned">✓ Sponsorship mentioned in listing — confirm with employer.</div>';
   }
-  if (isJobServe && !j.sponsor_licence) {
+  if (isJobServe && !j.sponsor_licence && j.company === '[view listing]') {
     return '<div class="card-note js-warn">Posted via JobServe — company name not listed. Sponsorship unknown.</div>';
   }
   return '';

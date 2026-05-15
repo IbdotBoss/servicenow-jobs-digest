@@ -168,6 +168,21 @@ def _classify(title_lower):
     if 'manager' in title_lower or 'lead' in title_lower: return 'manager'
     return 'other'
 
+def fetch_company(jid, cookie_file):
+    """Fetch company name from JobServe detail page JSON-LD."""
+    try:
+        url = f'https://www.jobserve.com/gb/en/mob/job/{jid}/'
+        result = subprocess.run(['curl', '-s', '-L', '-b', cookie_file, '-A', UA, url],
+                              capture_output=True, text=True, timeout=10)
+        # JSON-LD hiringOrganization.name
+        m = re.search(r'"hiringOrganization"\s*:\s*\{[^}]*"name"\s*:\s*"([^"]+)"', result.stdout)
+        if m: return m.group(1)
+        # Fallback: "Posted by" text
+        m = re.search(r'class="postedby">\s*Posted by\s*([^<]+)', result.stdout)
+        if m: return m.group(1).strip()
+    except: pass
+    return None
+
 def main():
     print("Creating JobServe session...")
     shd = create_session()
@@ -210,13 +225,23 @@ def main():
         k = (j['title'].lower().strip(), j['location'].lower().strip())
         if k not in seen:
             seen.add(k)
-            # Set sponsor_licence boolean (never 'verified')
-            j['sponsor_licence'] = check_sponsor_licence(j.get('company', ''), sponsors)
             unique.append(j)
+    
+    # Fetch company names from detail pages
+    print(f"\nFetching company names for {sum(1 for j in unique if j['company'] == '[view listing]')} JobServe jobs...")
+    for j in unique:
+        if j['company'] == '[view listing]':
+            jid_match = re.search(r'/job/([A-F0-9]+)/', j['url'])
+            if jid_match:
+                company = fetch_company(jid_match.group(1), COOKIE_FILE)
+                if company:
+                    j['company'] = company
+                    j['sponsor_licence'] = check_sponsor_licence(company, sponsors)
     
     sn_count = sum(1 for j in unique if j.get('sn_role'))
     adj_count = sum(1 for j in unique if not j.get('sn_role'))
-    print(f"\nTotal: {len(unique)} unique jobs ({sn_count} SN + {adj_count} adjacent)")
+    named = sum(1 for j in unique if j.get('company') != '[view listing]')
+    print(f"\nTotal: {len(unique)} unique jobs ({sn_count} SN + {adj_count} adjacent) — {named} with company names")
     
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     with open(OUT, 'w') as f:

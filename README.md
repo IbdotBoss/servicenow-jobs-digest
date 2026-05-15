@@ -1,19 +1,20 @@
 # ServiceNow Jobs UK — Sponsorship-Focused Job Aggregator
 
-A daily-updated job aggregator for ServiceNow roles in the UK, cross-referenced against the UK Government sponsor register. Card-based grid UI with toggle filters, deployed to GitHub Pages. 173+ active jobs across 4 sources.
+A daily-updated job aggregator for ServiceNow roles in the UK, cross-referenced against the UK Government sponsor register. Card-based grid UI with source/role filters, collapsible IT-Adjacent section. 205+ active jobs across 4 sources.
 
 **Live site:** [ibdotboss.github.io/servicenow-jobs-digest](https://ibdotboss.github.io/servicenow-jobs-digest/)
 
 ## How It Works
 
 Every morning at 05:00 UK time, the pipeline:
-1. Scrapes **JobServe** (mobile HTML, session-based pagination)
-2. Scrapes **LinkedIn** (Playwright-based, 5 pages/day with stealth delays)
-3. Scrapes **Reed.co.uk** (embedded `__NEXT_DATA__` JSON)
-4. Extracts **Hunt UK** (web_extract — sponsor-verified companies)
-5. Cross-references all companies against the **120K sponsor register**
-6. Scans job descriptions for **SC/DV clearance** and **"no sponsorship"** language
-7. Saves an **immutable daily snapshot** → idempotent master rebuild
+1. Scrapes **JobServe** — mobile HTML for listings → detail page JSON-LD for company names. 24h etime filter + adjacency keyword filter
+2. Scrapes **LinkedIn** — Playwright-based, 5 pages/day with stealth delays
+3. Scrapes **Reed.co.uk** — embedded `__NEXT_DATA__` JSON
+4. Extracts **Hunt UK** — web_extract (sponsor-verified companies)
+5. Cross-references all companies against the **120K sponsor register** (now works for JobServe jobs too)
+6. Scans titles + descriptions for **SC/DV clearance**, **"no sponsorship"**, and **explicit sponsorship mentions**
+7. Tags **IT-Adjacent** roles (ITSM, Remedy, Service Desk) in collapsible section
+8. Saves an **immutable daily snapshot** → idempotent master rebuild
 
 ## Sponsorship Signals
 
