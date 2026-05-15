@@ -181,20 +181,37 @@ def _classify(title_lower):
     if 'manager' in title_lower or 'lead' in title_lower: return 'manager'
     return 'other'
 
-def fetch_company(jid, cookie_file):
-    """Fetch company name from JobServe detail page JSON-LD."""
+def fetch_details(jid, cookie_file):
+    """Fetch company name AND posted timestamp from JobServe detail page JSON-LD.
+    Returns (company_name, posted_datetime_str) or (None, None)."""
     try:
         url = f'https://www.jobserve.com/gb/en/mob/job/{jid}/'
         result = subprocess.run(['curl', '-s', '-L', '-b', cookie_file, '-A', UA, url],
                               capture_output=True, text=True, timeout=10)
+        html = result.stdout
+        
+        company = None
+        posted_dt = None
+        
         # JSON-LD hiringOrganization.name
-        m = re.search(r'"hiringOrganization"\s*:\s*\{[^}]*"name"\s*:\s*"([^"]+)"', result.stdout)
-        if m: return m.group(1)
+        m = re.search(r'"hiringOrganization"\s*:\s*\{[^}]*"name"\s*:\s*"([^"]+)"', html)
+        if m: company = m.group(1)
         # Fallback: "Posted by" text
-        m = re.search(r'class="postedby">\s*Posted by\s*([^<]+)', result.stdout)
-        if m: return m.group(1).strip()
-    except: pass
-    return None
+        if not company:
+            m = re.search(r'class="postedby">\s*Posted by\s*([^<]+)', html)
+            if m: company = m.group(1).strip()
+        
+        # Posted timestamp: 13/05/2026 23:33:55
+        m = re.search(r'(\d{2}/\d{2}/\d{4}\s+\d{2}:\d{2}:\d{2})', html)
+        if m:
+            try:
+                dt = datetime.strptime(m.group(1), '%d/%m/%Y %H:%M:%S')
+                posted_dt = dt.strftime('%Y-%m-%d %H:%M:%S')
+            except: pass
+        
+        return company, posted_dt
+    except:
+        return None, None
 
 def main():
     print("Creating JobServe session...")
@@ -240,16 +257,21 @@ def main():
             seen.add(k)
             unique.append(j)
     
-    # Fetch company names from detail pages
-    print(f"\nFetching company names for {sum(1 for j in unique if j['company'] == '[view listing]')} JobServe jobs...")
+    # Fetch company names + timestamps from detail pages
+    scraped_at = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    missing = sum(1 for j in unique if j['company'] == '[view listing]')
+    print(f"\nFetching details for {missing} JobServe jobs...")
     for j in unique:
+        j['scraped_at'] = scraped_at
         if j['company'] == '[view listing]':
             jid_match = re.search(r'/job/([A-F0-9]+)/', j['url'])
             if jid_match:
-                company = fetch_company(jid_match.group(1), COOKIE_FILE)
+                company, posted_dt = fetch_details(jid_match.group(1), COOKIE_FILE)
                 if company:
                     j['company'] = company
                     j['sponsor_licence'] = check_sponsor_licence(company, sponsors)
+                if posted_dt:
+                    j['date_posted'] = posted_dt  # Override with exact timestamp
     
     sn_count = sum(1 for j in unique if j.get('sn_role'))
     adj_count = sum(1 for j in unique if not j.get('sn_role'))

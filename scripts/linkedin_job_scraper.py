@@ -112,7 +112,8 @@ def extract_jobs(html_text):
                 jobs.append({
                     'title': title, 'company': company, 'location': location,
                     'url': f'https://www.linkedin.com/jobs/view/{jid}' if jid != 'N/A' else '',
-                    'source': 'LinkedIn'
+                    'source': 'LinkedIn',
+                    'scraped_at': datetime.now().strftime('%Y-%m-%d %H:%M:%S')
                 })
         except: continue
     return jobs

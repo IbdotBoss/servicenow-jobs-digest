@@ -602,20 +602,23 @@ function getFiltered() {
 function sortJobs(jobs) {
   return [...jobs].sort((a, b) => {
     if (sortBy === 'date') {
-      // Newest first by date_posted. Jobs without a date go to the bottom.
+      // Newest first. Handles both 'YYYY-MM-DD' and 'YYYY-MM-DD HH:MM:SS'
       const da = a.date_posted || '';
       const db = b.date_posted || '';
       // Push empty dates to bottom
       if (!da && !db) return (a.title || '').localeCompare(b.title || '');
       if (!da) return 1;
       if (!db) return -1;
-      // Descending: newest first
+      // Descending: newest first (string sort works for both date and datetime)
       const d = db.localeCompare(da);
       if (d !== 0) return d;
-      // Secondary: first_seen (newer first) then title
-      const fs = (b.first_seen || '').localeCompare(a.first_seen || '');
-      if (fs !== 0) return fs;
-      return (a.title || '').localeCompare(b.title || '');
+      // Secondary: scraped_at or first_seen (newer first)
+      const ta = a.scraped_at || a.first_seen || '';
+      const tb = b.scraped_at || b.first_seen || '';
+      if (!ta && !tb) return (a.title || '').localeCompare(b.title || '');
+      if (!ta) return 1;
+      if (!tb) return -1;
+      return tb.localeCompare(ta);
     }
     if (sortBy === 'salary') {
       const sa = a.salary_max || a.salary_min || 0;
