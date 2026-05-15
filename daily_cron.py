@@ -48,8 +48,8 @@ def main():
     logger.info(f"Time: {datetime.datetime.now()}")
     logger.info("Starting scraping process...")
     
-    # Step 1: Run the scraper
-    success = run_command(['python3', 'scripts/scrape_all.py'], cwd='/home/ubuntu/hermes-workspace/servicenow-jobs-digest')
+    # Step 1: Run the ServiceNow aggregator (Reed + sponsor cross-reference)
+    success = run_command(['python3', 'scripts/sn_aggregator.py'], cwd='/home/ubuntu/hermes-workspace/servicenow-jobs-digest')
     if not success:
         logger.error("Scraping failed! Exiting.")
         sys.exit(1)
