@@ -87,28 +87,94 @@ def normalize_company(name):
         n = n.split(' - ')[0].strip()
     return n
 
-def company_has_licence(company_name, sponsor_set):
-    """Check if company appears in sponsor set (exact match + fuzzy fallback)."""
-    if not company_name or not sponsor_set:
+# Company names that should NEVER match the sponsor register,
+# even if a substring happens to appear in the CSV.
+# Pitfall #51: literal "Agency" matches CSV entries like "Agency X Ltd"
+# Pitfall #53: recruitment agencies post on behalf of clients — the
+#   agency's licence doesn't apply to the end employer.
+COMPANY_NAME_BLACKLIST = {
+    'agency', '[view listing]', 'confidential', 'unknown', '', 'none',
+}
+
+AGENCY_KEYWORDS = [
+    'recruitment', 'recruiting', 'staffing', 'personnel',
+    'talent solutions', 'resource solutions',
+]
+
+# Well-known recruitment agencies whose sponsor licence
+# doesn't transfer to the actual employer they're posting for.
+KNOWN_AGENCIES = {
+    'hays', 'harvey nash', 'sthree', 'randstad', 'randstad technologies', 'adecco',
+    'michael page', 'robert walters', 'morgan mckinley',
+    'huxley', 'teksystems', 'la fose', 'la fosse',
+    'sanderson', 'harvey nash limited', 'hays recruitment',
+    'e-team', 'eteam', 'gios technology', 'morson talent', 'morson',
+    'coyle personnel', 'explain recruitment',
+}
+
+def is_agency(company_name):
+    """Check if company name indicates a recruitment agency."""
+    if not company_name:
         return False
+    name_lower = company_name.lower().strip()
+    # Explicit agency marker
+    if '(agency)' in name_lower:
+        return True
+    # Via pattern: "Barclays via SThree" → SThree is the agency
+    if ' via ' in name_lower:
+        return True
+    # Keyword match
+    for kw in AGENCY_KEYWORDS:
+        if kw in name_lower:
+            return True
+    # Known agency normalized match
+    norm = name_lower
+    # Strip parenthetical qualifiers: "SThree (banking client)" → "SThree"
+    norm = re.sub(r'\s*\([^)]*\)\s*', ' ', norm).strip()
+    for suffix in [' (agency)', ' ltd', ' limited', ' plc', ' uk limited', ' uk',
+                   ' technologies', ' consulting', ' solutions', ' services',
+                   ' personnel', ' talent', ' recruitment']:
+        if norm.endswith(suffix):
+            norm = norm[:-len(suffix)].strip()
+    if norm in KNOWN_AGENCIES:
+        return True
+    return False
+
+def company_has_licence(company_name, sponsor_set):
+    """Check if company appears in sponsor set (exact match + fuzzy fallback).
+    
+    Returns (bool, str) — (has_licence, reason).
+    Blacklisted names and agencies are blocked even if they match the CSV.
+    """
+    if not company_name or not sponsor_set:
+        return False, ''
     
     raw = company_name.lower().strip()
+    
+    # ── Negative filter: blacklisted company names ──
+    if raw in COMPANY_NAME_BLACKLIST:
+        return False, f'blacklisted_name:{raw}'
+    
+    # ── Negative filter: likely recruitment agency ──
+    if is_agency(company_name):
+        return False, f'agency_name:{raw}'
+    
     # Exact match first
     if raw in sponsor_set:
-        return True
+        return True, 'exact'
     
     # Normalized match
     norm = normalize_company(company_name)
     if norm and norm in sponsor_set:
-        return True
+        return True, 'normalized'
     
     # Partial match: check if any sponsor contains the normalized name or vice-versa
     if norm and len(norm) > 2:
         for s in sponsor_set:
             if norm in s or s in norm:
-                return True
+                return True, 'partial'
     
-    return False
+    return False, ''
 
 def fetch_page(url):
     """Fetch job listing page. Returns (html_text, error)."""
@@ -155,10 +221,12 @@ def scan_job(job, sponsor_set):
     
     # ── Step 1: Sponsor licence check ──
     if company and sponsor_set:
-        has_licence = company_has_licence(company, sponsor_set)
+        has_licence, _reason = company_has_licence(company, sponsor_set)
         if has_licence:
             updates['sponsor_licence'] = True
-        # Don't set false — absence of field means "not checked / not on register"
+        elif job.get('sponsor_licence'):
+            # Previously tagged but now blocked (agency/blacklist) → strip it
+            updates['sponsor_licence'] = False
     
     # ── Step 2: Text scan ──
     # LinkedIn job pages are JS-rendered — can't fetch full page
@@ -200,11 +268,13 @@ def scan_job(job, sponsor_set):
         updates['sponsorship_scan'] = reason
     
     # Also check for explicit sponsorship mention (data point, not a tag)
-    if company and sponsor_set and company_has_licence(company, sponsor_set):
-        for pattern, _ in SPONSOR_MENTIONED_PATTERNS:
-            if re.search(pattern, html_text.lower()):
-                updates['sponsorship_mentioned'] = True
-                break
+    if company and sponsor_set:
+        has_licence, _ = company_has_licence(company, sponsor_set)
+        if has_licence:
+            for pattern, _ in SPONSOR_MENTIONED_PATTERNS:
+                if re.search(pattern, html_text.lower()):
+                    updates['sponsorship_mentioned'] = True
+                    break
     
     return updates
 
@@ -228,9 +298,11 @@ def scan_file(filepath, sponsor_set, dry_run=False, csv_only=False):
             updates = {}
             company = j.get('company', '')
             if company and sponsor_set:
-                has_licence = company_has_licence(company, sponsor_set)
+                has_licence, _reason = company_has_licence(company, sponsor_set)
                 if has_licence:
                     updates['sponsor_licence'] = True
+                elif j.get('sponsor_licence'):
+                    updates['sponsor_licence'] = False
         else:
             updates = scan_job(j, sponsor_set)
         

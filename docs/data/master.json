@@ -2,7 +2,7 @@
   "updated": "2026-05-15",
   "total": 228,
   "total_active": 205,
-  "licenced_sponsors": 95,
+  "licenced_sponsors": 90,
   "daily_snapshots": [
     "2026-05-06",
     "2026-05-07",
@@ -180,7 +180,7 @@
       "sources": [
         "LinkedIn"
       ],
-      "sponsor_licence": false,
+      "sponsor_licence": true,
       "status": "active"
     },
     {
@@ -255,7 +255,7 @@
       "sources": [
         "LinkedIn"
       ],
-      "sponsor_licence": false,
+      "sponsor_licence": true,
       "status": "active"
     },
     {
@@ -305,7 +305,7 @@
       "sources": [
         "LinkedIn"
       ],
-      "sponsor_licence": false,
+      "sponsor_licence": true,
       "status": "active"
     },
     {
@@ -330,7 +330,7 @@
       "sources": [
         "LinkedIn"
       ],
-      "sponsor_licence": false,
+      "sponsor_licence": true,
       "status": "active"
     },
     {
@@ -458,7 +458,7 @@
       "link_status": "live",
       "visa_sponsorship": "unknown",
       "description": "Hunt UK listing for DXC Technology",
-      "sponsor_licence": true,
+      "sponsor_licence": false,
       "hunt_slug": "servicenow-senior-technical-consultant-derby-at-dxc-technology-naf5way-qbkw",
       "linkedin_url": "https://uk.linkedin.com/jobs/view/servicenow-senior-technical-consultant-derby-at-dxc-technology-4390276345",
       "first_seen": "2026-05-15",
@@ -773,7 +773,7 @@
       "link_status": "live",
       "visa_sponsorship": "unknown",
       "description": "Posted 1 day ago",
-      "sponsor_licence": true,
+      "sponsor_licence": false,
       "first_seen": "2026-05-15",
       "last_seen": "2026-05-15",
       "status": "active",
@@ -799,7 +799,7 @@
       "link_status": "live",
       "visa_sponsorship": "unknown",
       "description": "Posted 1 day ago",
-      "sponsor_licence": true,
+      "sponsor_licence": false,
       "first_seen": "2026-05-15",
       "last_seen": "2026-05-15",
       "status": "active",
@@ -981,7 +981,7 @@
       "sources": [
         "LinkedIn"
       ],
-      "sponsor_licence": false,
+      "sponsor_licence": true,
       "status": "active"
     },
     {
@@ -1006,7 +1006,7 @@
       "sources": [
         "LinkedIn"
       ],
-      "sponsor_licence": false,
+      "sponsor_licence": true,
       "status": "active"
     },
     {
@@ -1031,7 +1031,7 @@
       "sources": [
         "LinkedIn"
       ],
-      "sponsor_licence": false,
+      "sponsor_licence": true,
       "status": "active"
     },
     {
@@ -1056,7 +1056,7 @@
       "sources": [
         "LinkedIn"
       ],
-      "sponsor_licence": false,
+      "sponsor_licence": true,
       "status": "active"
     },
     {
@@ -1204,7 +1204,7 @@
       "link_status": "live",
       "description": "Product Manager - ServiceNow at a banking client via SThree (Huxley). \u00a370k-\u00a3100k. Hybrid Knutsford/Manchester.",
       "visa_sponsorship": "unknown",
-      "sponsor_licence": true,
+      "sponsor_licence": false,
       "first_seen": "2026-05-13",
       "last_seen": "2026-05-13",
       "sources": [
@@ -1259,7 +1259,7 @@
       "sources": [
         "LinkedIn"
       ],
-      "sponsor_licence": false
+      "sponsor_licence": true
     },
     {
       "title": "ServiceNow Managed Service Consultant",
@@ -1282,7 +1282,7 @@
       "sources": [
         "LinkedIn"
       ],
-      "sponsor_licence": false
+      "sponsor_licence": true
     },
     {
       "title": "ServiceNOW Business Consultant",
@@ -1328,7 +1328,7 @@
       "sources": [
         "LinkedIn"
       ],
-      "sponsor_licence": false
+      "sponsor_licence": true
     },
     {
       "title": "ServiceNow/Halo ITSM Developer",
@@ -1374,7 +1374,7 @@
       "sources": [
         "LinkedIn"
       ],
-      "sponsor_licence": false
+      "sponsor_licence": true
     },
     {
       "title": "ServiceNow Technical Consultant/Dev (IRM/SecOps) | Remote",
@@ -1588,7 +1588,7 @@
       "url": "https://www.linkedin.com/jobs/view/4412676675",
       "source": "LinkedIn",
       "visa_sponsorship": "unknown",
-      "sponsor_licence": true,
+      "sponsor_licence": false,
       "first_seen": "2026-05-12",
       "last_seen": "2026-05-12",
       "sources": [
@@ -2279,7 +2279,7 @@
       "url": "https://www.linkedin.com/jobs/view/4411707544",
       "source": "LinkedIn",
       "visa_sponsorship": "agency_unknown",
-      "sponsor_licence": true,
+      "sponsor_licence": false,
       "first_seen": "2026-05-09",
       "last_seen": "2026-05-09",
       "sources": [
@@ -2447,7 +2447,7 @@
       "link_status": "live",
       "visa_sponsorship": "agency_unknown",
       "description": "ServiceNow Product Manager - Banking. Grow ServiceNow centre of excellence.",
-      "sponsor_licence": true,
+      "sponsor_licence": false,
       "first_seen": "2026-05-09",
       "last_seen": "2026-05-14",
       "sources": [
@@ -2497,7 +2497,7 @@
       "link_status": "live",
       "visa_sponsorship": "agency_unknown",
       "description": "CMDB Specialist (ServiceNow). Over 15 million CIs, supporting 300,000 employees.",
-      "sponsor_licence": true,
+      "sponsor_licence": false,
       "first_seen": "2026-05-09",
       "last_seen": "2026-05-10",
       "sources": [
@@ -2590,7 +2590,7 @@
       "source": "Hunt UK",
       "visa_sponsorship": "unknown",
       "status": "active",
-      "sponsor_licence": true,
+      "sponsor_licence": false,
       "first_seen": "2026-05-09",
       "last_seen": "2026-05-09",
       "sources": [
@@ -2769,7 +2769,7 @@
       "sources": [
         "JobServe"
       ],
-      "sponsor_licence": false,
+      "sponsor_licence": true,
       "status": "active"
     },
     {
@@ -2819,7 +2819,7 @@
       "sources": [
         "JobServe"
       ],
-      "sponsor_licence": false,
+      "sponsor_licence": true,
       "status": "active"
     },
     {
@@ -2869,7 +2869,7 @@
       "sources": [
         "JobServe"
       ],
-      "sponsor_licence": false,
+      "sponsor_licence": true,
       "status": "active"
     },
     {
@@ -3666,7 +3666,7 @@
       "sources": [
         "ComputerJobs"
       ],
-      "sponsor_licence": true
+      "sponsor_licence": false
     },
     {
       "title": "ServiceNow Architect",
@@ -3722,7 +3722,7 @@
       "sources": [
         "Hays"
       ],
-      "sponsor_licence": true
+      "sponsor_licence": false
     },
     {
       "title": "ServiceNow Technical Consultant",
@@ -3944,7 +3944,7 @@
       "sources": [
         "Hunt UK"
       ],
-      "sponsor_licence": true
+      "sponsor_licence": false
     },
     {
       "title": "CMDB Specialist (ServiceNow)",
@@ -3971,7 +3971,7 @@
         "Hunt UK",
         "LinkedIn"
       ],
-      "sponsor_licence": true
+      "sponsor_licence": false
     },
     {
       "title": "ServiceNow Technical Consultant (DV Cleared)",
@@ -4211,7 +4211,7 @@
       "sources": [
         "JobServe"
       ],
-      "sponsor_licence": true
+      "sponsor_licence": false
     },
     {
       "title": "ServiceNow Solution Architect",
@@ -4237,7 +4237,7 @@
       "sources": [
         "JobServe"
       ],
-      "sponsor_licence": true
+      "sponsor_licence": false
     },
     {
       "title": "Solution Architect - ServiceNow (Enterprise Integrations)",
@@ -4802,7 +4802,7 @@
       "sources": [
         "LinkedIn"
       ],
-      "sponsor_licence": true
+      "sponsor_licence": false
     },
     {
       "title": "ServiceNow Administrator",
@@ -4964,7 +4964,7 @@
       "sources": [
         "LinkedIn"
       ],
-      "sponsor_licence": true
+      "sponsor_licence": false
     },
     {
       "title": "ServiceNow Developer - GRC",
@@ -5478,7 +5478,7 @@
       "sources": [
         "LinkedIn"
       ],
-      "sponsor_licence": true
+      "sponsor_licence": false
     },
     {
       "title": "ServiceNow GTM / Solutions Sales Lead",
@@ -5667,7 +5667,7 @@
       "sources": [
         "LinkedIn"
       ],
-      "sponsor_licence": true
+      "sponsor_licence": false
     },
     {
       "title": "ServiceNow Security Incident Response (SIR) Engineer",
@@ -5694,7 +5694,7 @@
       "sources": [
         "LinkedIn"
       ],
-      "sponsor_licence": true
+      "sponsor_licence": false
     },
     {
       "title": "ServiceNow Technical Lead",
@@ -5777,5 +5777,7 @@
       ],
       "sponsor_licence": true
     }
-  ]
+  ],
+  "sc_blocked": 25,
+  "verified": 0
 }
