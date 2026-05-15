@@ -444,9 +444,10 @@
       "sc_clearance": false,
       "grad_scheme": false,
       "link_status": "live",
-      "visa_sponsorship": "unknown",
+      "visa_sponsorship": "sc_blocked",
       "description": "Posted 1 day ago",
-      "sponsor_licence": false
+      "sponsor_licence": false,
+      "sponsorship_scan": "Security clearance required"
     },
     {
       "title": "ServiceNow Solutions Advisory Lead",

@@ -433,8 +433,8 @@
 <div class="date-bar">
   <label for="date-select">Viewing:</label>
   <select id="date-select">
-    <option value="latest">Latest (all active)</option>
-    <option value="today">Today (last 24h)</option>
+    <option value="latest">All Active (215+ jobs)</option>
+    <option value="today">Fresh Today (last scrape)</option>
   </select>
   <span id="date-count"></span>
 </div>
@@ -557,10 +557,11 @@ async function loadDate(date) {
   document.getElementById('job-grid').innerHTML = '';
   try {
     if (date === 'latest') {
-      const resp = await fetch('data/jobs.json?t=' + Date.now());
+      const resp = await fetch('data/master.json?t=' + Date.now());
       if (!resp.ok) throw new Error('HTTP ' + resp.status);
       const data = await resp.json();
-      allJobs = data.jobs || [];
+      allJobs = (data.jobs || []).filter(j => j.status === 'active');
+      dailySnapshots = (data.daily_snapshots || []).sort().reverse();
       lastUpdated = data.updated || 'daily';
     } else if (date === 'today' && dailySnapshots.length > 0) {
       const latestSnap = dailySnapshots[0];
@@ -580,7 +581,10 @@ async function loadDate(date) {
     }
     updateHeaderStats();
     render();
-    document.getElementById('date-count').textContent = allJobs.length + ' jobs on ' + currentView;
+    const label = currentView === 'latest' ? allJobs.length + ' active jobs' 
+                : currentView === 'today' ? allJobs.length + ' fresh jobs' 
+                : allJobs.length + ' jobs on ' + currentView;
+    document.getElementById('date-count').textContent = label;
     document.getElementById('update-date').textContent = lastUpdated;
     document.getElementById('loading-state').style.display = 'none';
   } catch (err) {

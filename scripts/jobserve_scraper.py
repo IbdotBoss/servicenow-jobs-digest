@@ -128,9 +128,22 @@ def parse_jobs(html_text):
             if '£' in s or 'salary' in s.lower() or 'per annum' in s.lower() or 'per day' in s.lower():
                 salary = s; break
         
-        # DV/SC check
-        dv_sc = 'dv cleared' in title_lower or 'dv-cleared' in title_lower
-        sc = 'sc cleared' in title_lower or 'sc-cleared' in title_lower or 'security cleared' in title_lower
+        # DV/SC check — comprehensive title patterns
+        sc = any(p in title_lower for p in [
+            'sc cleared', 'sc-cleared', 'security cleared',
+            'sc security clearance', 'sc clearance',
+            'security clearance', 'dv cleared', 'dv-cleared',
+            'developed vetting', 'must be eligible for sc',
+            'must hold sc', 'must have sc', 'active sc',
+            'bpss', 'sole british', 'sole uk national',
+        ])
+        dv_sc = any(p in title_lower for p in [
+            'dv cleared', 'dv-cleared', 'developed vetting',
+            'dv clearance', 'dv security',
+        ])
+        # If DV, it's also SC
+        if dv_sc:
+            sc = True
         
         # Employment type from spans
         emp = 'permanent'

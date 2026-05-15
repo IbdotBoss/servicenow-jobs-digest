@@ -37,7 +37,7 @@ NO_SPONSOR_PATTERNS = [
 
 # Patterns for SC/DV clearance (blocks sponsorship)
 SC_PATTERNS = [
-    (r'(?:security\s+clearance|sc\s+clear|sc\s+cleared|dv\s+clear|dv\s+cleared|developed\s+vetting)', 'Security clearance required'),
+    (r'(?:security\s+(?:clearance|cleared)|sc\s+clear|sc\s+cleared|dv\s+clear|dv\s+cleared|developed\s+vetting)', 'Security clearance required'),
     (r'must\s+be\s+eligible\s+for\s+(?:sc|security)\s+clearance', 'SC clearance eligibility required'),
     (r'5\s+years?\s+(?:continuous\s+)?uk\s+residency', '5yr UK residency required'),
     (r'sc\s+(?:clearance|cleared)\s+(?:is\s+)?(?:required|essential|mandatory|needed)', 'SC clearance mandatory'),
@@ -198,10 +198,19 @@ def scan_text(text):
     """Scan HTML text for sponsorship language. Returns (tag, reason) or (None, None)."""
     text_lower = text.lower()
     
-    # Check SC/DV first (strongest signal)
+    # Check SC/DV first (strongest signal) — also match title-level patterns
     for pattern, reason in SC_PATTERNS:
         if re.search(pattern, text_lower):
             return 'sc_blocked', reason
+    # Extra title-level checks that the page-text patterns might miss
+    extra_sc = [
+        'sc security clearance', 'security clearance required',
+        'must be security cleared', 'active security clearance',
+        'security cleared', 'security cleared ',
+    ]
+    for pat in extra_sc:
+        if pat in text_lower:
+            return 'sc_blocked', f'Title mentions: {pat}'
     
     # Check NO patterns
     for pattern, reason in NO_SPONSOR_PATTERNS:
@@ -227,6 +236,14 @@ def scan_job(job, sponsor_set):
         elif job.get('sponsor_licence'):
             # Previously tagged but now blocked (agency/blacklist) → strip it
             updates['sponsor_licence'] = False
+    
+    # ── Step 1.5: Title-level SC/DV check (always, even for LinkedIn) ──
+    title = job.get('title', '')
+    if title:
+        tag, reason = scan_text(title)
+        if tag:
+            updates['visa_sponsorship'] = tag
+            updates['sponsorship_scan'] = reason
     
     # ── Step 2: Text scan ──
     # LinkedIn job pages are JS-rendered — can't fetch full page
