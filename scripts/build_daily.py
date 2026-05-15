@@ -79,9 +79,10 @@ hunt_uk_jobs = [
         "sc_clearance": False,
         "grad_scheme": False,
         "link_status": "live",
-        "visa_sponsorship": "verified",
+        "visa_sponsorship": "unknown",
+        "sponsor_licence": True,
         "description": "Solution Architect ServiceNow at Kinly (AVMI). Full-time permanent. Hybrid. Still listed on Hunt UK 2026-05-11.",
-        "sponsorship_scan": "verified_by_register_no_sc"
+        "sponsorship_scan": "sponsor_licence_true"
     },
     {
         "title": "ServiceNow Architect",
@@ -98,7 +99,8 @@ hunt_uk_jobs = [
         "sc_clearance": False,
         "grad_scheme": False,
         "link_status": "live",
-        "visa_sponsorship": "verified",
+        "visa_sponsorship": "unknown",
+        "sponsor_licence": True,
         "description": "ServiceNow Architect at Tata Consultancy Services (TCS). London hybrid. Lead SN implementation projects. TCS is A-rated sponsor."
     },
     {
@@ -116,7 +118,8 @@ hunt_uk_jobs = [
         "sc_clearance": False,
         "grad_scheme": False,
         "link_status": "live",
-        "visa_sponsorship": "verified",
+        "visa_sponsorship": "unknown",
+        "sponsor_licence": True,
         "description": "ServiceNow Business Analyst, Associate at Aquiline Capital Partners (BlackRock affiliate). Edinburgh. CoEI team - help grow ServiceNow Centre of Excellence."
     },
     {

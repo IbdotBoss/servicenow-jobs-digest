@@ -129,6 +129,13 @@ def rebuild():
     # Sort: newest first_seen first
     jobs_list.sort(key=lambda j: j['first_seen'], reverse=True)
     
+    # SAFETY NET: Normalize legacy tags — strip any 'verified'/'sponsor_verified'
+    #   No algorithm claims sponsorship. Only sponsor_licence (CSV cross-ref) is auto-set.
+    for j in jobs_list:
+        sp = j.get('visa_sponsorship', 'unknown')
+        if sp in ('verified', 'sponsor_verified'):
+            j['visa_sponsorship'] = 'unknown'
+    
     # Build master
     tags = Counter(j.get('visa_sponsorship', 'unknown') for j in jobs_list)
     sources = Counter()
@@ -140,8 +147,6 @@ def rebuild():
         "updated": TODAY,
         "total": len(jobs_list),
         "total_active": sum(1 for j in jobs_list if j['status'] == 'active'),
-        "verified": tags.get('sponsor_verified', 0) + tags.get('verified', 0),
-        "sc_blocked": tags.get('sc_blocked', 0),
         "licenced_sponsors": sum(1 for j in jobs_list if j.get('sponsor_licence')),
         "daily_snapshots": daily_dates,
         "sources": dict(sources.most_common(20)),
@@ -161,7 +166,7 @@ def rebuild():
         json.dump(active_master, f, indent=2)
     
     print(f"  Master: {master['total']} total jobs ({master['total_active']} active)")
-    print(f"  Sponsors: {master['verified']} | SC-blocked: {master['sc_blocked']}")
+    print(f"  Licenced: {master['licenced_sponsors']} | SC-blocked: {tags.get('sc_blocked', 0)}")
     print(f"  Sources: {dict(sources.most_common(5))}")
     print(f"  Snapshots: {daily_dates[0]} → {daily_dates[-1]}")
     

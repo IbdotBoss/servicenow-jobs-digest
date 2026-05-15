@@ -34,12 +34,13 @@ def load_sponsors():
     return sponsors
 
 def check_sponsor(company, sponsors):
-    if not company: return "unknown"
+    """Return True if company is on sponsor register, False otherwise."""
+    if not company: return False
     name = company.strip().lower()
-    if name in sponsors: return "verified"
+    if name in sponsors: return True
     for s in sponsors:
-        if name in s or s in name: return "verified"
-    return "unknown"
+        if name in s or s in name: return True
+    return False
 
 # ── Reed ──
 def scrape_reed():
@@ -131,9 +132,10 @@ def main():
     reed_jobs = scrape_reed()
     print(f"[Reed] {len(reed_jobs)} SN roles found")
     
-    # Cross-reference
+    # Cross-reference — set sponsor_licence boolean, never "verified"
     for j in reed_jobs:
-        j['visa_sponsorship'] = check_sponsor(j['company'], sponsors)
+        j['sponsor_licence'] = check_sponsor(j['company'], sponsors)
+        j.setdefault('visa_sponsorship', 'unknown')
         # Agency: sponsorship depends on the actual employer, not the agency
         if j['source_type'] == 'agency' and j['visa_sponsorship'] == 'unknown':
             j['visa_sponsorship'] = 'agency_unknown'

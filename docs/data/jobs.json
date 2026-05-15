@@ -1,10 +1,8 @@
 {
-  "updated": "2026-05-14",
+  "updated": "2026-05-15",
   "total": 173,
   "total_active": 173,
-  "verified": 5,
-  "sc_blocked": 18,
-  "licenced_sponsors": 85,
+  "licenced_sponsors": 77,
   "daily_snapshots": [
     "2026-05-06",
     "2026-05-07",
@@ -137,7 +135,7 @@
       "location": "Sheffield, England, United Kingdom (Hybrid)",
       "url": "https://www.linkedin.com/jobs/view/4413108687",
       "source": "LinkedIn",
-      "visa_sponsorship": "verified",
+      "visa_sponsorship": "unknown",
       "source_type": "direct",
       "date_posted": "2026-05-14",
       "salary_display": "Not listed",
@@ -153,7 +151,7 @@
       "sources": [
         "LinkedIn"
       ],
-      "sponsor_licence": true,
+      "sponsor_licence": false,
       "status": "active"
     },
     {
@@ -178,7 +176,7 @@
       "sources": [
         "LinkedIn"
       ],
-      "sponsor_licence": true,
+      "sponsor_licence": false,
       "status": "active"
     },
     {
@@ -187,7 +185,7 @@
       "location": "Hook, England, United Kingdom (Hybrid)",
       "url": "https://www.linkedin.com/jobs/view/4401949902",
       "source": "LinkedIn",
-      "visa_sponsorship": "verified",
+      "visa_sponsorship": "unknown",
       "source_type": "direct",
       "date_posted": "2026-05-14",
       "salary_display": "Not listed",
@@ -203,7 +201,7 @@
       "sources": [
         "LinkedIn"
       ],
-      "sponsor_licence": true,
+      "sponsor_licence": false,
       "status": "active"
     },
     {
@@ -212,7 +210,7 @@
       "location": "Ashford, England, United Kingdom (Hybrid)",
       "url": "https://www.linkedin.com/jobs/view/4413959570",
       "source": "LinkedIn",
-      "visa_sponsorship": "verified",
+      "visa_sponsorship": "unknown",
       "source_type": "direct",
       "date_posted": "2026-05-14",
       "salary_display": "Not listed",
@@ -228,7 +226,7 @@
       "sources": [
         "LinkedIn"
       ],
-      "sponsor_licence": true,
+      "sponsor_licence": false,
       "status": "active"
     },
     {
@@ -431,7 +429,7 @@
       "sources": [
         "LinkedIn"
       ],
-      "sponsor_licence": true
+      "sponsor_licence": false
     },
     {
       "title": "ServiceNow Managed Service Consultant",
@@ -454,7 +452,7 @@
       "sources": [
         "LinkedIn"
       ],
-      "sponsor_licence": true
+      "sponsor_licence": false
     },
     {
       "title": "ServiceNOW Business Consultant",
@@ -500,7 +498,7 @@
       "sources": [
         "LinkedIn"
       ],
-      "sponsor_licence": true
+      "sponsor_licence": false
     },
     {
       "title": "ServiceNow/Halo ITSM Developer",
@@ -546,7 +544,7 @@
       "sources": [
         "LinkedIn"
       ],
-      "sponsor_licence": true
+      "sponsor_licence": false
     },
     {
       "title": "ServiceNow Technical Consultant/Dev (IRM/SecOps) | Remote",
@@ -1718,7 +1716,7 @@
       "url": "https://www.linkedin.com/jobs/view/4404976819",
       "date_posted": "2026-04-27",
       "source": "Hunt UK",
-      "visa_sponsorship": "verified",
+      "visa_sponsorship": "unknown",
       "status": "active",
       "notes": "SC Security Clearance required \u2014 5yr continuous UK residency",
       "sponsor_licence": true,
@@ -2736,7 +2734,7 @@
       "sc_clearance": false,
       "grad_scheme": false,
       "link_status": "expired",
-      "visa_sponsorship": "verified",
+      "visa_sponsorship": "unknown",
       "description": "Global leader in AV/UC solutions. Hybrid working, 1 day onsite. Excellent salary + bonus. Kinly holds A-rated sponsor licence.",
       "sponsorship_scan": "Skilled Worker visa mentioned",
       "first_seen": "2026-05-06",
