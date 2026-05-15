@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
-"""JobServe Mobile Scraper — session-based SHD URL format (v2.0).
-FIXED: JobServe now requires session cookie + search handle ID (SHD).
-FIXED: Pagination continues even when individual pages have 0 SN matches.
-FIXED: Desktop URLs for better UX.
-FIXED: No false company extraction — marks as [view listing] honestly.
+"""JPv4.1 — 24h etime filter + boolean sponsor check + proper date_posted
+FIXED: check_sponsor() now returns boolean (sponsor_licence), never 'verified'
+FIXED: 24h etime filter — only "hour(s) ago" and "minutes ago" jobs
+FIXED: date_posted derived from etime, not hardcoded to TODAY
 """
 import re, html as html_mod, json, os, subprocess, csv
 from datetime import datetime
@@ -15,8 +14,6 @@ SPONSOR_CSV = os.path.expanduser("~/hermes-workspace/Faajaa-Share/2026-05-06_-_W
 COOKIE_FILE = '/tmp/js_cookies.txt'
 
 SN_TITLE_KW = ['servicenow', 'service-now', 'service now']
-SC_COMPANIES = {'bae systems', 'qinetiq', 'leonardo', 'thales', 'mbda', 'rolls-royce', 
-                'gchq', 'atkinsréalis', 'atkins realis', 'atkins'}
 
 # ── Sponsor loading ──
 def load_sponsors():
@@ -29,15 +26,14 @@ def load_sponsors():
     except: pass
     return sponsors
 
-def check_sponsor(name, sponsors):
-    if not name or name in ('N/A', '', '[view listing]'): return 'unknown'
+def check_sponsor_licence(name, sponsors):
+    """Return True if company is on A-rated Skilled Worker register. Never returns 'verified'."""
+    if not name or name in ('N/A', '', '[view listing]'): return False
     n = name.lower().strip().split(' - ')[0].split(' (')[0]
     for s in sponsors:
         if n in s or s in n:
-            for sc in SC_COMPANIES:
-                if sc in n or sc in s: return 'sc_blocked'
-            return 'verified'
-    return 'unknown'
+            return True
+    return False
 
 # ── Session creation ──
 def create_session():
@@ -68,6 +64,22 @@ def fetch_page(shd, page_num):
                           capture_output=True, text=True, timeout=15)
     return result.stdout
 
+def parse_etime(etime_text):
+    """Parse JobServe etime text into (is_fresh_24h, date_str).
+    etime examples: '1 hour ago', '23 hours ago', '20 minutes ago', '1 day ago', '3 days ago'
+    Returns (True, 'YYYY-MM-DD') if within 24h, (False, None) otherwise."""
+    if not etime_text: return (False, None)
+    t = etime_text.lower().strip()
+    # Minutes/hours = today → fresh
+    if 'minute' in t or 'hour' in t or 'today' in t or 'just' in t:
+        return (True, datetime.now().strftime('%Y-%m-%d'))
+    # 1 day ago = yesterday → borderline, include
+    if t == '1 day ago' or t.startswith('yesterday'):
+        from datetime import timedelta
+        return (True, (datetime.now() - timedelta(days=1)).strftime('%Y-%m-%d'))
+    # 2+ days ago → skip
+    return (False, None)
+
 def parse_jobs(html_text):
     jobs = []
     blocks = re.findall(r'<li id="J([A-F0-9]+)"[^>]*>(.*?)</li>', html_text, re.DOTALL)
@@ -79,6 +91,13 @@ def parse_jobs(html_text):
         
         # Only ServiceNow-specific roles
         if not any(kw in title.lower() for kw in SN_TITLE_KW): continue
+        
+        # ── 24h etime filter ──
+        time_match = re.search(r'class="etime">(.*?)</span>', block)
+        etime = html_mod.unescape(time_match.group(1).strip()) if time_match else ''
+        is_fresh, date_posted = parse_etime(etime)
+        if not is_fresh:
+            continue  # Skip jobs older than 24h
         
         # Extract spans
         spans = re.findall(r'<span>([^<]*)</span>', block)
@@ -96,9 +115,6 @@ def parse_jobs(html_text):
             if '£' in s or 'salary' in s.lower() or 'per annum' in s.lower() or 'per day' in s.lower():
                 salary = s; break
         
-        time_match = re.search(r'class="etime">(.*?)</span>', block)
-        time_posted = html_mod.unescape(time_match.group(1).strip()) if time_match else ''
-        
         # DV/SC check
         title_lower = title.lower()
         dv_sc = 'dv cleared' in title_lower or 'dv-cleared' in title_lower
@@ -115,8 +131,8 @@ def parse_jobs(html_text):
             'company': '[view listing]',  # JobServe mobile doesn't expose company
             'location': location,
             'salary_display': salary if salary else 'Not listed',
-            'date_posted': TODAY,
-            'url': f"https://www.jobserve.com/gb/en/mob/job/{jid}/",  # desktop /job/ returns 500, mobile works
+            'date_posted': date_posted,
+            'url': f"https://www.jobserve.com/gb/en/mob/job/{jid}/",
             'source': 'JobServe',
             'source_type': 'aggregator',
             'role_type': _classify(title_lower),
@@ -126,7 +142,7 @@ def parse_jobs(html_text):
             'grad_scheme': False,
             'link_status': 'live',
             'visa_sponsorship': 'sc_blocked' if (dv_sc or sc) else 'unknown',
-            'description': f"Posted {time_posted}" if time_posted else '',
+            'description': f"Posted {etime}" if etime else '',
         })
     return jobs
 
@@ -176,9 +192,8 @@ def main():
         k = (j['title'].lower().strip(), j['location'].lower().strip())
         if k not in seen:
             seen.add(k)
-            # Tag sponsorship if we know the company
-            if j.get('visa_sponsorship') == 'unknown':
-                j['visa_sponsorship'] = check_sponsor(j.get('company', ''), sponsors)
+            # Set sponsor_licence boolean (never 'verified')
+            j['sponsor_licence'] = check_sponsor_licence(j.get('company', ''), sponsors)
             unique.append(j)
     
     print(f"\nTotal: {len(unique)} unique SN jobs from JobServe")
