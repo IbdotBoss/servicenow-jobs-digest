@@ -87,7 +87,7 @@ def rebuild():
     jobs_list = list(all_jobs.values())
     
     # Dead sources — jobs from these are always expired
-    DEAD_SOURCES = ['ComputerJobs', 'Totaljobs', 'CV-Library', 'Deerfoot']
+    DEAD_SOURCES = ['ComputerJobs', 'Totaljobs', 'CV-Library', 'Deerfoot', 'Reed']
     
     BAD_URL_PATTERNS = ['/mob/JobSearch/Results?q=', 'huntukvisasponsors.com/jobs?q=',
                         'huntukvisasponsors.com/company/', 'computerjobs.com',

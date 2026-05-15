@@ -1,8 +1,8 @@
 {
   "updated": "2026-05-15",
-  "total": 238,
-  "total_active": 215,
-  "licenced_sponsors": 97,
+  "total": 246,
+  "total_active": 222,
+  "licenced_sponsors": 98,
   "daily_snapshots": [
     "2026-05-06",
     "2026-05-07",
@@ -20,6 +20,7 @@
     "JobServe": 72,
     "Hunt UK": 46,
     "ComputerJobs": 9,
+    "ServiceNow Careers": 8,
     "Reed": 2,
     "Hays": 2,
     "Experis": 1,
@@ -30,6 +31,222 @@
     "CV-Library": 1
   },
   "jobs": [
+    {
+      "title": "CRM Architect",
+      "company": "ServiceNow",
+      "location": "Staines, United Kingdom",
+      "salary_display": "Not listed",
+      "date_posted": "2026-05-13 15:29:07",
+      "url": "https://careers.servicenow.com/jobs/744000126346697/crm-architect/",
+      "source": "ServiceNow Careers",
+      "source_type": "employer",
+      "sn_role": true,
+      "role_type": "architect",
+      "remote": "hybrid",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "unknown",
+      "sponsor_licence": true,
+      "description": "Company Description It all started in sunny San Diego, California in 2004 when a visionary engineer, Fred Luddy, saw the potential to transform how we work. Fast forward to today \u2014 ServiceNow stands as a global market leader, bringing innovative AI-enhanced technology to over 8,100 customers, includ",
+      "scraped_at": "2026-05-15 14:57:49",
+      "first_seen": "2026-05-15",
+      "last_seen": "2026-05-15",
+      "sources": [
+        "ServiceNow Careers"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "Principal Platform Architect",
+      "company": "ServiceNow",
+      "location": "Staines, United Kingdom",
+      "salary_display": "Not listed",
+      "date_posted": "2026-04-27 13:45:54",
+      "url": "https://careers.servicenow.com/jobs/744000123212675/principal-platform-architect/",
+      "source": "ServiceNow Careers",
+      "source_type": "employer",
+      "sn_role": true,
+      "role_type": "architect",
+      "remote": "hybrid",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "unknown",
+      "sponsor_licence": true,
+      "description": "Company Description It all started in sunny San Diego, California in 2004 when a visionary engineer, Fred Luddy, saw the potential to transform how we work. Fast forward to today \u2014 ServiceNow stands as a global market leader, bringing innovative AI-enhanced technology to over 8,100 customers, includ",
+      "scraped_at": "2026-05-15 14:57:49",
+      "first_seen": "2026-05-15",
+      "last_seen": "2026-05-15",
+      "sources": [
+        "ServiceNow Careers"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "Senior Advisory Solution Consultant - Moveworks",
+      "company": "ServiceNow",
+      "location": "London, United Kingdom",
+      "salary_display": "Not listed",
+      "date_posted": "2026-04-21 14:55:31",
+      "url": "https://careers.servicenow.com/jobs/744000122054207/senior-advisory-solution-consultant-moveworks/",
+      "source": "ServiceNow Careers",
+      "source_type": "employer",
+      "sn_role": true,
+      "role_type": "consultant",
+      "remote": "hybrid",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "unknown",
+      "sponsor_licence": true,
+      "description": "Company Description It all started in sunny San Diego, California in 2004 when a visionary engineer, Fred Luddy, saw the potential to transform how we work. Fast forward to today \u2014 ServiceNow stands as a global market leader, bringing innovative AI-enhanced technology to over 8,100 customers, includ",
+      "scraped_at": "2026-05-15 14:57:49",
+      "first_seen": "2026-05-15",
+      "last_seen": "2026-05-15",
+      "sources": [
+        "ServiceNow Careers"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "Senior AI Agent Engineer \u2013 Moveworks | Customer Deployment",
+      "company": "ServiceNow",
+      "location": "London, United Kingdom",
+      "salary_display": "Not listed",
+      "date_posted": "2026-04-21 09:18:33",
+      "url": "https://careers.servicenow.com/jobs/744000121979977/senior-ai-agent-engineer-moveworks-customer-deployment/",
+      "source": "ServiceNow Careers",
+      "source_type": "employer",
+      "sn_role": true,
+      "role_type": "developer",
+      "remote": "hybrid",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "unknown",
+      "sponsor_licence": true,
+      "description": "Company Description It all started in sunny San Diego, California in 2004 when a visionary engineer, Fred Luddy, saw the potential to transform how we work. Fast forward to today \u2014 ServiceNow stands as a global market leader, bringing innovative AI-enhanced technology to over 8,100 customers, includ",
+      "scraped_at": "2026-05-15 14:57:49",
+      "first_seen": "2026-05-15",
+      "last_seen": "2026-05-15",
+      "sources": [
+        "ServiceNow Careers"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "Staff AI Agent Engineer \u2013 Moveworks | Customer Deployment",
+      "company": "ServiceNow",
+      "location": "London, United Kingdom",
+      "salary_display": "Not listed",
+      "date_posted": "2026-04-21 09:17:06",
+      "url": "https://careers.servicenow.com/jobs/744000121979747/staff-ai-agent-engineer-moveworks-customer-deployment/",
+      "source": "ServiceNow Careers",
+      "source_type": "employer",
+      "sn_role": true,
+      "role_type": "developer",
+      "remote": "hybrid",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "unknown",
+      "sponsor_licence": true,
+      "description": "Company Description It all started in sunny San Diego, California in 2004 when a visionary engineer, Fred Luddy, saw the potential to transform how we work. Fast forward to today \u2014 ServiceNow stands as a global market leader, bringing innovative AI-enhanced technology to over 8,100 customers, includ",
+      "scraped_at": "2026-05-15 14:57:49",
+      "first_seen": "2026-05-15",
+      "last_seen": "2026-05-15",
+      "sources": [
+        "ServiceNow Careers"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "AI Principle Technical Consultant",
+      "company": "ServiceNow",
+      "location": "Staines, United Kingdom",
+      "salary_display": "Not listed",
+      "date_posted": "2026-04-08 11:09:48",
+      "url": "https://careers.servicenow.com/jobs/744000119337452/ai-principle-technical-consultant/",
+      "source": "ServiceNow Careers",
+      "source_type": "employer",
+      "sn_role": true,
+      "role_type": "consultant",
+      "remote": "hybrid",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "unknown",
+      "sponsor_licence": true,
+      "description": "Company Description It all started in sunny San Diego, California in 2004 when a visionary engineer, Fred Luddy, saw the potential to transform how we work. Fast forward to today \u2014 ServiceNow stands as a global market leader, bringing innovative AI-enhanced technology to over 8,100 customers, includ",
+      "scraped_at": "2026-05-15 14:57:49",
+      "first_seen": "2026-05-15",
+      "last_seen": "2026-05-15",
+      "sources": [
+        "ServiceNow Careers"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "Developer Advocate \u2014 Agentic Platform - MoveWorks",
+      "company": "ServiceNow",
+      "location": "London, United Kingdom",
+      "salary_display": "Not listed",
+      "date_posted": "2026-03-23 18:21:26",
+      "url": "https://careers.servicenow.com/jobs/744000116262257/developer-advocate-agentic-platform-moveworks/",
+      "source": "ServiceNow Careers",
+      "source_type": "employer",
+      "sn_role": true,
+      "role_type": "developer",
+      "remote": "hybrid",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "unknown",
+      "sponsor_licence": true,
+      "description": "Company Description It all started in sunny San Diego, California in 2004 when a visionary engineer, Fred Luddy, saw the potential to transform how we work. Fast forward to today \u2014 ServiceNow stands as a global market leader, bringing innovative AI-enhanced technology to over 8,100 customers, includ",
+      "scraped_at": "2026-05-15 14:57:49",
+      "first_seen": "2026-05-15",
+      "last_seen": "2026-05-15",
+      "sources": [
+        "ServiceNow Careers"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "Partner Manager",
+      "company": "ServiceNow",
+      "location": "Staines, United Kingdom",
+      "salary_display": "Not listed",
+      "date_posted": "2026-01-05 14:37:27",
+      "url": "https://careers.servicenow.com/jobs/744000101635435/partner-manager/",
+      "source": "ServiceNow Careers",
+      "source_type": "employer",
+      "sn_role": true,
+      "role_type": "manager",
+      "remote": "hybrid",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "unknown",
+      "sponsor_licence": true,
+      "description": "Company Description It all started in sunny San Diego, California in 2004 when a visionary engineer, Fred Luddy, saw the potential to transform how we work. Fast forward to today \u2014 ServiceNow stands as a global market leader, bringing innovative AI-enhanced technology to over 8,100 customers, includ",
+      "scraped_at": "2026-05-15 14:57:49",
+      "first_seen": "2026-05-15",
+      "last_seen": "2026-05-15",
+      "sources": [
+        "ServiceNow Careers"
+      ],
+      "status": "active"
+    },
     {
       "title": "ServiceNow Developer (SC Cleared & Outside IR35)",
       "company": "LA International Computer Consultants Ltd",
@@ -184,7 +401,7 @@
       "visa_sponsorship": "sc_blocked",
       "description": "Posted 1 day ago",
       "scraped_at": "2026-05-15 13:09:44",
-      "sponsor_licence": false,
+      "sponsor_licence": true,
       "first_seen": "2026-05-15",
       "last_seen": "2026-05-15",
       "sources": [
@@ -211,7 +428,7 @@
       "visa_sponsorship": "sc_blocked",
       "description": "Posted 1 day ago",
       "scraped_at": "2026-05-15 13:09:44",
-      "sponsor_licence": false,
+      "sponsor_licence": true,
       "first_seen": "2026-05-15",
       "last_seen": "2026-05-15",
       "sources": [
@@ -292,7 +509,7 @@
       "visa_sponsorship": "sc_blocked",
       "description": "Posted 1 day ago",
       "scraped_at": "2026-05-15 13:09:44",
-      "sponsor_licence": false,
+      "sponsor_licence": true,
       "first_seen": "2026-05-15",
       "last_seen": "2026-05-15",
       "sources": [
@@ -670,7 +887,7 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 1 day ago",
       "scraped_at": "2026-05-15 13:09:44",
-      "sponsor_licence": true,
+      "sponsor_licence": false,
       "first_seen": "2026-05-15",
       "last_seen": "2026-05-15",
       "sources": [
@@ -697,7 +914,7 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 1 day ago",
       "scraped_at": "2026-05-15 13:09:44",
-      "sponsor_licence": true,
+      "sponsor_licence": false,
       "first_seen": "2026-05-15",
       "last_seen": "2026-05-15",
       "sources": [
@@ -820,7 +1037,7 @@
       "url": "https://www.linkedin.com/jobs/view/4333478391",
       "source": "LinkedIn",
       "visa_sponsorship": "unknown",
-      "sponsor_licence": false,
+      "sponsor_licence": true,
       "scraped_at": "2026-05-15 13:10:32",
       "first_seen": "2026-05-15",
       "last_seen": "2026-05-15",
@@ -871,7 +1088,7 @@
       "url": "https://www.linkedin.com/jobs/view/4414609702",
       "source": "LinkedIn",
       "visa_sponsorship": "unknown",
-      "sponsor_licence": false,
+      "sponsor_licence": true,
       "scraped_at": "2026-05-15 13:10:32",
       "first_seen": "2026-05-15",
       "last_seen": "2026-05-15",
@@ -1061,7 +1278,7 @@
       "link_status": "live",
       "visa_sponsorship": "unknown",
       "description": "Hunt UK listing for DXC Technology",
-      "sponsor_licence": true,
+      "sponsor_licence": false,
       "hunt_slug": "servicenow-senior-technical-consultant-derby-at-dxc-technology-naf5way-qbkw",
       "linkedin_url": "https://uk.linkedin.com/jobs/view/servicenow-senior-technical-consultant-derby-at-dxc-technology-4390276345",
       "scraped_at": "2026-05-15 13:10:32",
@@ -1222,7 +1439,7 @@
       "sources": [
         "LinkedIn"
       ],
-      "sponsor_licence": false,
+      "sponsor_licence": true,
       "status": "active"
     },
     {
@@ -1247,7 +1464,7 @@
       "sources": [
         "LinkedIn"
       ],
-      "sponsor_licence": false,
+      "sponsor_licence": true,
       "status": "active"
     },
     {
@@ -1272,7 +1489,7 @@
       "sources": [
         "LinkedIn"
       ],
-      "sponsor_licence": false,
+      "sponsor_licence": true,
       "status": "active"
     },
     {
@@ -1297,7 +1514,7 @@
       "sources": [
         "LinkedIn"
       ],
-      "sponsor_licence": false,
+      "sponsor_licence": true,
       "status": "active"
     },
     {
@@ -1445,7 +1662,7 @@
       "link_status": "live",
       "description": "Product Manager - ServiceNow at a banking client via SThree (Huxley). \u00a370k-\u00a3100k. Hybrid Knutsford/Manchester.",
       "visa_sponsorship": "unknown",
-      "sponsor_licence": true,
+      "sponsor_licence": false,
       "first_seen": "2026-05-13",
       "last_seen": "2026-05-13",
       "sources": [
@@ -1500,7 +1717,7 @@
       "sources": [
         "LinkedIn"
       ],
-      "sponsor_licence": false
+      "sponsor_licence": true
     },
     {
       "title": "ServiceNow Managed Service Consultant",
@@ -1523,7 +1740,7 @@
       "sources": [
         "LinkedIn"
       ],
-      "sponsor_licence": false
+      "sponsor_licence": true
     },
     {
       "title": "ServiceNOW Business Consultant",
@@ -1569,7 +1786,7 @@
       "sources": [
         "LinkedIn"
       ],
-      "sponsor_licence": false
+      "sponsor_licence": true
     },
     {
       "title": "ServiceNow/Halo ITSM Developer",
@@ -1615,7 +1832,7 @@
       "sources": [
         "LinkedIn"
       ],
-      "sponsor_licence": false
+      "sponsor_licence": true
     },
     {
       "title": "ServiceNow Technical Consultant/Dev (IRM/SecOps) | Remote",
@@ -1829,7 +2046,7 @@
       "url": "https://www.linkedin.com/jobs/view/4412676675",
       "source": "LinkedIn",
       "visa_sponsorship": "unknown",
-      "sponsor_licence": true,
+      "sponsor_licence": false,
       "first_seen": "2026-05-12",
       "last_seen": "2026-05-12",
       "sources": [
@@ -2520,7 +2737,7 @@
       "url": "https://www.linkedin.com/jobs/view/4411707544",
       "source": "LinkedIn",
       "visa_sponsorship": "agency_unknown",
-      "sponsor_licence": true,
+      "sponsor_licence": false,
       "first_seen": "2026-05-09",
       "last_seen": "2026-05-09",
       "sources": [
@@ -2615,7 +2832,7 @@
       "visa_sponsorship": "agency_unknown",
       "status": "expired",
       "first_seen": "2026-05-09",
-      "last_seen": "2026-05-15",
+      "last_seen": "2026-05-14",
       "sources": [
         "Reed"
       ],
@@ -2688,7 +2905,7 @@
       "link_status": "live",
       "visa_sponsorship": "agency_unknown",
       "description": "ServiceNow Product Manager - Banking. Grow ServiceNow centre of excellence.",
-      "sponsor_licence": true,
+      "sponsor_licence": false,
       "first_seen": "2026-05-09",
       "last_seen": "2026-05-14",
       "sources": [
@@ -2738,7 +2955,7 @@
       "link_status": "live",
       "visa_sponsorship": "agency_unknown",
       "description": "CMDB Specialist (ServiceNow). Over 15 million CIs, supporting 300,000 employees.",
-      "sponsor_licence": true,
+      "sponsor_licence": false,
       "first_seen": "2026-05-09",
       "last_seen": "2026-05-10",
       "sources": [
@@ -2831,7 +3048,7 @@
       "source": "Hunt UK",
       "visa_sponsorship": "unknown",
       "status": "active",
-      "sponsor_licence": true,
+      "sponsor_licence": false,
       "first_seen": "2026-05-09",
       "last_seen": "2026-05-09",
       "sources": [
@@ -3737,7 +3954,7 @@
       "description": "ITAM Product Manager - ServiceNow HAM/SAM. Posted by recruitment agency \u2014 verify sponsorship with actual employer.",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-14",
-      "status": "active",
+      "status": "expired",
       "sources": [
         "Reed"
       ],
@@ -3907,7 +4124,7 @@
       "sources": [
         "ComputerJobs"
       ],
-      "sponsor_licence": true
+      "sponsor_licence": false
     },
     {
       "title": "ServiceNow Architect",
@@ -3963,7 +4180,7 @@
       "sources": [
         "Hays"
       ],
-      "sponsor_licence": true
+      "sponsor_licence": false
     },
     {
       "title": "ServiceNow Technical Consultant",
@@ -4185,7 +4402,7 @@
       "sources": [
         "Hunt UK"
       ],
-      "sponsor_licence": true
+      "sponsor_licence": false
     },
     {
       "title": "CMDB Specialist (ServiceNow)",
@@ -4212,7 +4429,7 @@
         "Hunt UK",
         "LinkedIn"
       ],
-      "sponsor_licence": true
+      "sponsor_licence": false
     },
     {
       "title": "ServiceNow Technical Consultant (DV Cleared)",
@@ -4452,7 +4669,7 @@
       "sources": [
         "JobServe"
       ],
-      "sponsor_licence": true
+      "sponsor_licence": false
     },
     {
       "title": "ServiceNow Solution Architect",
@@ -4478,7 +4695,7 @@
       "sources": [
         "JobServe"
       ],
-      "sponsor_licence": true
+      "sponsor_licence": false
     },
     {
       "title": "Solution Architect - ServiceNow (Enterprise Integrations)",
@@ -5043,7 +5260,7 @@
       "sources": [
         "LinkedIn"
       ],
-      "sponsor_licence": true
+      "sponsor_licence": false
     },
     {
       "title": "ServiceNow Administrator",
@@ -5205,7 +5422,7 @@
       "sources": [
         "LinkedIn"
       ],
-      "sponsor_licence": true
+      "sponsor_licence": false
     },
     {
       "title": "ServiceNow Developer - GRC",
@@ -5719,7 +5936,7 @@
       "sources": [
         "LinkedIn"
       ],
-      "sponsor_licence": true
+      "sponsor_licence": false
     },
     {
       "title": "ServiceNow GTM / Solutions Sales Lead",
@@ -5908,7 +6125,7 @@
       "sources": [
         "LinkedIn"
       ],
-      "sponsor_licence": true
+      "sponsor_licence": false
     },
     {
       "title": "ServiceNow Security Incident Response (SIR) Engineer",
@@ -5935,7 +6152,7 @@
       "sources": [
         "LinkedIn"
       ],
-      "sponsor_licence": true
+      "sponsor_licence": false
     },
     {
       "title": "ServiceNow Technical Lead",
@@ -6018,5 +6235,7 @@
       ],
       "sponsor_licence": true
     }
-  ]
+  ],
+  "sc_blocked": 31,
+  "verified": 0
 }
