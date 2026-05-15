@@ -70,8 +70,8 @@ def parse_etime(etime_text):
     Returns (True, 'YYYY-MM-DD') if within 24h, (False, None) otherwise."""
     if not etime_text: return (False, None)
     t = etime_text.lower().strip()
-    # Minutes/hours = today → fresh
-    if 'minute' in t or 'hour' in t or 'today' in t or 'just' in t:
+    # Minutes/hours = today → fresh ('min' catches both 'mins' and 'minutes')
+    if 'min' in t or 'hour' in t or 'today' in t or 'just' in t:
         return (True, datetime.now().strftime('%Y-%m-%d'))
     # 1 day ago = yesterday → borderline, include
     if t == '1 day ago' or t.startswith('yesterday'):
