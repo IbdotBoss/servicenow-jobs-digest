@@ -433,8 +433,8 @@
 <div class="date-bar">
   <label for="date-select">Viewing:</label>
   <select id="date-select">
-    <option value="latest">All Active (215+ jobs)</option>
-    <option value="today">Fresh Today (last scrape)</option>
+    <option value="all">All Active (215+ jobs)</option>
+    <option value="today">Today</option>
   </select>
   <span id="date-count"></span>
 </div>
@@ -514,7 +514,8 @@ const ICONS = {
 let allJobs = [];
 let filters = { role: 'all', source: 'all', licenced: false, hideExpired: true };
 let sortBy = 'date';
-let currentView = 'latest';
+let currentView = 'all';
+let masterJobs = [];
 let dailySnapshots = [];
 let lastUpdated = '';
 
@@ -525,6 +526,7 @@ async function init() {
     const masterResp = await fetch('data/master.json?t=' + Date.now());
     if (!masterResp.ok) throw new Error('HTTP ' + masterResp.status);
     const masterData = await masterResp.json();
+    masterJobs = (masterData.jobs || []).filter(j => j.status === 'active');
     dailySnapshots = (masterData.daily_snapshots || []).sort().reverse();
     lastUpdated = masterData.updated || 'daily';
 
@@ -535,11 +537,7 @@ async function init() {
       select.appendChild(opt);
     });
 
-    allJobs = masterData.jobs.filter(j => j.status === 'active');
-    updateHeaderStats();
-    render();
-    document.getElementById('date-count').textContent = allJobs.length + ' active jobs';
-    document.getElementById('update-date').textContent = lastUpdated;
+    applyDateFilter('all');
     document.getElementById('loading-state').style.display = 'none';
   } catch (err) {
     console.error('Failed to load:', err);
@@ -548,53 +546,36 @@ async function init() {
   }
 }
 
-/* ── Date loading ── */
-async function loadDate(date) {
-  currentView = date;
-  document.getElementById('loading-state').style.display = 'block';
-  document.getElementById('error-state').style.display = 'none';
-  document.getElementById('no-results').style.display = 'none';
-  document.getElementById('job-grid').innerHTML = '';
-  try {
-    if (date === 'latest') {
-      const resp = await fetch('data/master.json?t=' + Date.now());
-      if (!resp.ok) throw new Error('HTTP ' + resp.status);
-      const data = await resp.json();
-      allJobs = (data.jobs || []).filter(j => j.status === 'active');
-      dailySnapshots = (data.daily_snapshots || []).sort().reverse();
-      lastUpdated = data.updated || 'daily';
-    } else if (date === 'today' && dailySnapshots.length > 0) {
-      const latestSnap = dailySnapshots[0];
-      const resp = await fetch('data/daily/jobs_' + latestSnap + '.json');
-      if (!resp.ok) throw new Error('HTTP ' + resp.status);
-      const data = await resp.json();
-      allJobs = data.jobs || [];
-      allJobs.forEach(j => { if (!j.first_seen) j.first_seen = latestSnap; });
-      lastUpdated = latestSnap;
-    } else {
-      const resp = await fetch('data/daily/jobs_' + date + '.json');
-      if (!resp.ok) throw new Error('HTTP ' + resp.status);
-      const data = await resp.json();
-      allJobs = data.jobs || [];
-      allJobs.forEach(j => { if (!j.first_seen) j.first_seen = date; });
-      lastUpdated = date;
-    }
-    updateHeaderStats();
-    render();
-    const label = currentView === 'latest' ? allJobs.length + ' active jobs' 
-                : currentView === 'today' ? allJobs.length + ' fresh jobs' 
-                : allJobs.length + ' jobs on ' + currentView;
-    document.getElementById('date-count').textContent = label;
-    document.getElementById('update-date').textContent = lastUpdated;
-    document.getElementById('loading-state').style.display = 'none';
-  } catch (err) {
-    console.error('Failed to load date:', err);
-    document.getElementById('loading-state').style.display = 'none';
-    document.getElementById('error-state').style.display = 'block';
+/* ── Date filtering (single source: masterJobs) ── */
+function applyDateFilter(view) {
+  currentView = view;
+  const today = new Date().toISOString().slice(0, 10);
+  
+  if (view === 'all') {
+    allJobs = [...masterJobs];
+    document.getElementById('date-count').textContent = allJobs.length + ' active jobs';
+  } else if (view === 'today') {
+    allJobs = masterJobs.filter(j => {
+      const dp = j.date_posted || '';
+      const fs = j.first_seen || '';
+      return dp === today || fs === today;
+    });
+    document.getElementById('date-count').textContent = allJobs.length + ' jobs posted today';
+  } else {
+    allJobs = masterJobs.filter(j => {
+      const dp = j.date_posted || '';
+      const fs = j.first_seen || '';
+      return dp === view || fs === view;
+    });
+    document.getElementById('date-count').textContent = allJobs.length + ' jobs on ' + view;
   }
+  
+  updateHeaderStats();
+  render();
+  document.getElementById('update-date').textContent = lastUpdated;
 }
 
-document.getElementById('date-select').addEventListener('change', e => loadDate(e.target.value));
+document.getElementById('date-select').addEventListener('change', e => applyDateFilter(e.target.value));
 
 /* ── Header stats ── */
 function updateHeaderStats() {
@@ -621,12 +602,25 @@ function getFiltered() {
 function sortJobs(jobs) {
   return [...jobs].sort((a, b) => {
     if (sortBy === 'date') {
-      const d = (b.date_posted || '').localeCompare(a.date_posted || '');
+      // Newest first by date_posted. Jobs without a date go to the bottom.
+      const da = a.date_posted || '';
+      const db = b.date_posted || '';
+      // Push empty dates to bottom
+      if (!da && !db) return (a.title || '').localeCompare(b.title || '');
+      if (!da) return 1;
+      if (!db) return -1;
+      // Descending: newest first
+      const d = db.localeCompare(da);
       if (d !== 0) return d;
+      // Secondary: first_seen (newer first) then title
+      const fs = (b.first_seen || '').localeCompare(a.first_seen || '');
+      if (fs !== 0) return fs;
       return (a.title || '').localeCompare(b.title || '');
     }
     if (sortBy === 'salary') {
-      const s = (b.salary_max || b.salary_min || 0) - (a.salary_max || a.salary_min || 0);
+      const sa = a.salary_max || a.salary_min || 0;
+      const sb = b.salary_max || b.salary_min || 0;
+      const s = sb - sa;
       if (s !== 0) return s;
       return (a.title || '').localeCompare(b.title || '');
     }
@@ -635,7 +629,13 @@ function sortJobs(jobs) {
       let cb = (b.company || '').replace('[view listing]', 'via JobServe');
       const c = ca.localeCompare(cb);
       if (c !== 0) return c;
-      return (b.date_posted || '').localeCompare(a.date_posted || '');
+      // Secondary: date (newest first)
+      const da = a.date_posted || '';
+      const db = b.date_posted || '';
+      if (!da && !db) return 0;
+      if (!da) return 1;
+      if (!db) return -1;
+      return db.localeCompare(da);
     }
     return 0;
   });
