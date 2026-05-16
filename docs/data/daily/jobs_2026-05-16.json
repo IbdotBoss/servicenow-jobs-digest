@@ -3,7 +3,7 @@
   "total": 46,
   "sn_count": 26,
   "adjacent_count": 20,
-  "scraped_at": "2026-05-16 05:13:17",
+  "scraped_at": "2026-05-16 05:17:29",
   "jobs": [
     {
       "title": "ServiceNow Training Consultant",
@@ -66,7 +66,8 @@
       "visa_sponsorship": "sc_blocked",
       "description": "Posted 1 day ago",
       "scraped_at": "2026-05-16 05:01:23",
-      "sponsor_licence": false
+      "sponsor_licence": true,
+      "sponsorship_scan": "Security clearance required"
     },
     {
       "title": "ServiceNow Technical Architect - DV Cleared",
@@ -87,7 +88,8 @@
       "visa_sponsorship": "sc_blocked",
       "description": "Posted 1 day ago",
       "scraped_at": "2026-05-16 05:01:23",
-      "sponsor_licence": false
+      "sponsor_licence": true,
+      "sponsorship_scan": "Security clearance required"
     },
     {
       "title": "ServiceNow Developer (GRC)",
@@ -129,7 +131,8 @@
       "visa_sponsorship": "sc_blocked",
       "description": "Posted 1 day ago",
       "scraped_at": "2026-05-16 05:01:23",
-      "sponsor_licence": false
+      "sponsor_licence": true,
+      "sponsorship_scan": "Security clearance required"
     },
     {
       "title": "ServiceNow Architect - Outside IR35",
@@ -168,10 +171,11 @@
       "sc_clearance": false,
       "grad_scheme": false,
       "link_status": "live",
-      "visa_sponsorship": "unknown",
+      "visa_sponsorship": "sc_blocked",
       "description": "Posted 1 day ago",
       "scraped_at": "2026-05-16 05:01:23",
-      "sponsor_licence": false
+      "sponsor_licence": false,
+      "sponsorship_scan": "Security clearance required"
     },
     {
       "title": "Service Asset and Configuration Management (SACM) Lead - Gov - Outside IR35",
@@ -189,10 +193,11 @@
       "sc_clearance": false,
       "grad_scheme": false,
       "link_status": "live",
-      "visa_sponsorship": "unknown",
+      "visa_sponsorship": "sc_blocked",
       "description": "Posted 1 day ago",
       "scraped_at": "2026-05-16 05:01:23",
-      "sponsor_licence": true
+      "sponsor_licence": true,
+      "sponsorship_scan": "Security clearance required"
     },
     {
       "title": "IT Support Manager - ITSM, ITIL 4, DORA",
@@ -360,7 +365,8 @@
       "visa_sponsorship": "sc_blocked",
       "description": "Posted 7 hours ago",
       "scraped_at": "2026-05-16 05:01:23",
-      "sponsor_licence": false
+      "sponsor_licence": false,
+      "sponsorship_scan": "Security clearance required"
     },
     {
       "title": "IT Support",
@@ -399,10 +405,11 @@
       "sc_clearance": false,
       "grad_scheme": false,
       "link_status": "live",
-      "visa_sponsorship": "unknown",
+      "visa_sponsorship": "sc_blocked",
       "description": "Posted 1 day ago",
       "scraped_at": "2026-05-16 05:01:23",
-      "sponsor_licence": false
+      "sponsor_licence": false,
+      "sponsorship_scan": "Security clearance required"
     },
     {
       "title": "Remedy SME",
@@ -420,10 +427,11 @@
       "sc_clearance": false,
       "grad_scheme": false,
       "link_status": "live",
-      "visa_sponsorship": "unknown",
+      "visa_sponsorship": "sc_blocked",
       "description": "Posted 1 day ago",
       "scraped_at": "2026-05-16 05:01:23",
-      "sponsor_licence": true
+      "sponsor_licence": false,
+      "sponsorship_scan": "Security clearance required"
     },
     {
       "title": "1st Line Service Desk Analyst",
@@ -476,7 +484,8 @@
       "scraped_at": "2026-05-16 05:01:47",
       "visa_sponsorship": "agency_unknown",
       "sponsor_licence": false,
-      "date_posted": "2026-05-16"
+      "date_posted": "2026-05-16",
+      "sponsorship_scan": "linkedin_js (cannot read full description)"
     },
     {
       "title": "ServiceNow Implementation Specialist",
@@ -487,7 +496,8 @@
       "scraped_at": "2026-05-16 05:01:47",
       "visa_sponsorship": "unknown",
       "sponsor_licence": true,
-      "date_posted": "2026-05-16"
+      "date_posted": "2026-05-16",
+      "sponsorship_scan": "linkedin_js (cannot read full description)"
     },
     {
       "title": "ServiceNow Implementation Specialist",
@@ -498,7 +508,8 @@
       "scraped_at": "2026-05-16 05:01:47",
       "visa_sponsorship": "unknown",
       "sponsor_licence": false,
-      "date_posted": "2026-05-16"
+      "date_posted": "2026-05-16",
+      "sponsorship_scan": "linkedin_js (cannot read full description)"
     },
     {
       "title": "Servicenow Administrator",
@@ -509,7 +520,8 @@
       "scraped_at": "2026-05-16 05:01:47",
       "visa_sponsorship": "unknown",
       "sponsor_licence": true,
-      "date_posted": "2026-05-16"
+      "date_posted": "2026-05-16",
+      "sponsorship_scan": "linkedin_js (cannot read full description)"
     },
     {
       "title": "Alliance Manager ServiceNow - Eviden",
@@ -520,7 +532,8 @@
       "scraped_at": "2026-05-16 05:01:53",
       "visa_sponsorship": "unknown",
       "sponsor_licence": true,
-      "date_posted": "2026-05-16"
+      "date_posted": "2026-05-16",
+      "sponsorship_scan": "linkedin_js (cannot read full description)"
     },
     {
       "title": "Technical Manager - ServiceNow - (Financial Services)",
@@ -531,7 +544,8 @@
       "scraped_at": "2026-05-16 05:01:59",
       "visa_sponsorship": "unknown",
       "sponsor_licence": true,
-      "date_posted": "2026-05-16"
+      "date_posted": "2026-05-16",
+      "sponsorship_scan": "linkedin_js (cannot read full description)"
     },
     {
       "title": "ServiceNow Architect",
@@ -542,7 +556,8 @@
       "scraped_at": "2026-05-16 05:02:04",
       "visa_sponsorship": "unknown",
       "sponsor_licence": false,
-      "date_posted": "2026-05-16"
+      "date_posted": "2026-05-16",
+      "sponsorship_scan": "linkedin_js (cannot read full description)"
     },
     {
       "title": "ServiceNow Implementation Specialist",
@@ -553,7 +568,8 @@
       "scraped_at": "2026-05-16 05:02:04",
       "visa_sponsorship": "unknown",
       "sponsor_licence": false,
-      "date_posted": "2026-05-16"
+      "date_posted": "2026-05-16",
+      "sponsorship_scan": "linkedin_js (cannot read full description)"
     },
     {
       "title": "CRM Architect",
@@ -741,10 +757,11 @@
       "sc_clearance": true,
       "grad_scheme": false,
       "link_status": "live",
-      "visa_sponsorship": "agency_unknown",
+      "visa_sponsorship": "sc_blocked",
       "sponsor_licence": false,
       "description": "Must be eligible for UK Security Clearance. Lead architecture and delivery of complex ServiceNow solutions across major digital transformation programmes. HRSD, ITSM, CSM, ITOM modules. REST/SOAP integrations.",
-      "scraped_at": "2026-05-16 05:00:00"
+      "scraped_at": "2026-05-16 05:00:00",
+      "sponsorship_scan": "Security clearance required"
     },
     {
       "title": "ServiceNow Developer (HRSD)",
@@ -767,7 +784,8 @@
       "visa_sponsorship": "agency_unknown",
       "sponsor_licence": false,
       "description": "Must be eligible for UK Security Clearance. HRSD focus. Design, develop, and implement scalable ServiceNow solutions. Large-scale digital transformation programmes.",
-      "scraped_at": "2026-05-16 05:00:00"
+      "scraped_at": "2026-05-16 05:00:00",
+      "sponsorship_scan": "fetch_error: HTTP Error 404: Not Found"
     },
     {
       "title": "ServiceNow Architect - 277199",
@@ -787,10 +805,11 @@
       "sc_clearance": false,
       "grad_scheme": false,
       "link_status": "live",
-      "visa_sponsorship": "agency_unknown",
+      "visa_sponsorship": "sc_blocked",
       "sponsor_licence": false,
       "description": "Remote working model across UK. Pension, childcare, medical, dental. ITSM frameworks. Complex workflows and integrations.",
-      "scraped_at": "2026-05-16 05:00:00"
+      "scraped_at": "2026-05-16 05:00:00",
+      "sponsorship_scan": "Security clearance required"
     },
     {
       "title": "ServiceNow - Senior Technical Lead (Developer)",
@@ -798,7 +817,7 @@
       "location": "Birmingham/Blackpool/Leeds/Manchester/Newcastle/Sheffield",
       "salary_display": "Not listed",
       "date_posted": "2026-05-16",
-      "url": "https://huntukvisasponsors.com/jobs?q=servicenow",
+      "url": "https://uk.linkedin.com/jobs/view/servicenow-senior-technical-lead-at-department-for-work-and-pensions-dwp-4413585274",
       "source": "Hunt UK",
       "source_type": "direct",
       "sn_role": true,
@@ -819,7 +838,7 @@
       "location": "Birmingham/Blackpool/Leeds/Manchester/Newcastle/Sheffield",
       "salary_display": "Not listed",
       "date_posted": "2026-05-16",
-      "url": "https://huntukvisasponsors.com/jobs?q=servicenow",
+      "url": "https://uk.linkedin.com/jobs/view/senior-servicenow-developer-at-dwp-digital-4412748505",
       "source": "Hunt UK",
       "source_type": "direct",
       "sn_role": true,
@@ -831,7 +850,7 @@
       "link_status": "live",
       "visa_sponsorship": "unknown",
       "sponsor_licence": false,
-      "description": "Security Check clearance required. DWP locations: Birmingham, Blackpool, Leeds, Manchester, Newcastle or Sheffield.",
+      "description": "Security Check clearance required. DWP Digital. Pay up to £73,205, plus 28.97% employer pension contributions.",
       "scraped_at": "2026-05-16 05:00:00"
     },
     {
@@ -840,7 +859,7 @@
       "location": "London, England",
       "salary_display": "Not listed",
       "date_posted": "2026-05-16",
-      "url": "https://huntukvisasponsors.com/jobs?q=servicenow",
+      "url": "https://uk.linkedin.com/jobs/view/servicenow-lead-architect-at-capita-4412682781",
       "source": "Hunt UK",
       "source_type": "direct",
       "sn_role": true,
@@ -861,7 +880,7 @@
       "location": "London Area, United Kingdom",
       "salary_display": "Not listed",
       "date_posted": "2026-05-16",
-      "url": "https://huntukvisasponsors.com/jobs?q=servicenow",
+      "url": "https://uk.linkedin.com/jobs/view/servicenow-architect-at-coyle-personnel-4412676675",
       "source": "Hunt UK",
       "source_type": "direct",
       "sn_role": true,
@@ -879,22 +898,22 @@
     {
       "title": "ServiceNow Telecommunications Service Management (TSM) Architect",
       "company": "UBIQUE SYSTEMS UK LIMITED",
-      "location": "United Kingdom",
+      "location": "London, UK (Hybrid, 3 days onsite)",
       "salary_display": "Not listed",
       "date_posted": "2026-05-16",
-      "url": "https://huntukvisasponsors.com/jobs?q=servicenow",
+      "url": "https://uk.linkedin.com/jobs/view/servicenow-architect-tsm-at-ubique-systems-4406073929",
       "source": "Hunt UK",
       "source_type": "direct",
       "sn_role": true,
       "role_type": "architect",
-      "remote": "onsite",
-      "employment": "permanent",
+      "remote": "hybrid",
+      "employment": "contract",
       "sc_clearance": false,
       "grad_scheme": false,
       "link_status": "live",
       "visa_sponsorship": "unknown",
       "sponsor_licence": false,
-      "description": "Designs and governs end-to-end solutions within ServiceNow TSM module, aligning with ITOM, ITIL, and CMDB/CSDM standards.",
+      "description": "6 month contract. Design and govern end-to-end solutions within ServiceNow TSM module, aligning with ITOM, ITIL, and CMDB/CSDM standards. Telecom domain expertise. London hybrid 3 days onsite.",
       "scraped_at": "2026-05-16 05:00:00"
     }
   ]

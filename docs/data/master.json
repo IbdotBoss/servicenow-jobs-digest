@@ -1,8 +1,8 @@
 {
-  "updated": "2026-05-15",
-  "total": 242,
-  "total_active": 213,
-  "licenced_sponsors": 103,
+  "updated": "2026-05-16",
+  "total": 247,
+  "total_active": 223,
+  "licenced_sponsors": 105,
   "daily_snapshots": [
     "2026-05-06",
     "2026-05-07",
@@ -13,11 +13,12 @@
     "2026-05-12",
     "2026-05-13",
     "2026-05-14",
-    "2026-05-15"
+    "2026-05-15",
+    "2026-05-16"
   ],
   "sources": {
-    "LinkedIn": 102,
-    "JobServe": 70,
+    "LinkedIn": 105,
+    "JobServe": 72,
     "Hunt UK": 44,
     "ComputerJobs": 9,
     "ServiceNow Careers": 8,
@@ -32,6 +33,115 @@
     "CV-Library": 1
   },
   "jobs": [
+    {
+      "title": "IT Support Manager - ITSM, ITIL 4, DORA",
+      "company": "TXP",
+      "location": "Hybrid Working",
+      "salary_display": "Not listed",
+      "date_posted": "2026-05-15 17:49:31",
+      "url": "https://www.jobserve.com/gb/en/mob/job/684C50402D413D6FAD/",
+      "source": "JobServe",
+      "source_type": "aggregator",
+      "sn_role": false,
+      "role_type": "sn-adjacent",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "unknown",
+      "description": "Posted 12 hours ago",
+      "scraped_at": "2026-05-16 05:01:23",
+      "sponsor_licence": true,
+      "first_seen": "2026-05-16",
+      "last_seen": "2026-05-16",
+      "sources": [
+        "JobServe"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "SC Cleared Service Now Engineer",
+      "company": "Experis",
+      "location": "600.00 Daily - 650.00 Daily GBP",
+      "salary_display": "Not listed",
+      "date_posted": "2026-05-15 22:10:08",
+      "url": "https://www.jobserve.com/gb/en/mob/job/DEAEB57DCF796CE84B/",
+      "source": "JobServe",
+      "source_type": "aggregator",
+      "sn_role": true,
+      "role_type": "developer",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": true,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "sc_blocked",
+      "description": "Posted 7 hours ago",
+      "scraped_at": "2026-05-16 05:01:23",
+      "sponsor_licence": false,
+      "sponsorship_scan": "Security clearance required",
+      "first_seen": "2026-05-16",
+      "last_seen": "2026-05-16",
+      "sources": [
+        "JobServe"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "Technical Manager - ServiceNow - (Financial Services)",
+      "company": "hackajob",
+      "location": "London, England, United Kingdom (On-site)",
+      "url": "https://www.linkedin.com/jobs/view/4415095190",
+      "source": "LinkedIn",
+      "scraped_at": "2026-05-16 05:01:59",
+      "visa_sponsorship": "unknown",
+      "sponsor_licence": true,
+      "date_posted": "2026-05-16",
+      "sponsorship_scan": "linkedin_js (cannot read full description)",
+      "first_seen": "2026-05-16",
+      "last_seen": "2026-05-16",
+      "sources": [
+        "LinkedIn"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "ServiceNow Architect",
+      "company": "Tenth Revolution Group",
+      "location": "United Kingdom (Remote)",
+      "url": "https://www.linkedin.com/jobs/view/4412016491",
+      "source": "LinkedIn",
+      "scraped_at": "2026-05-16 05:02:04",
+      "visa_sponsorship": "unknown",
+      "sponsor_licence": false,
+      "date_posted": "2026-05-16",
+      "sponsorship_scan": "linkedin_js (cannot read full description)",
+      "first_seen": "2026-05-16",
+      "last_seen": "2026-05-16",
+      "sources": [
+        "LinkedIn"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "ServiceNow Implementation Specialist",
+      "company": "myGwork - LGBTQ+ Business Community",
+      "location": "Woking, England, United Kingdom (Hybrid)",
+      "url": "https://www.linkedin.com/jobs/view/4411595643",
+      "source": "LinkedIn",
+      "scraped_at": "2026-05-16 05:02:04",
+      "visa_sponsorship": "unknown",
+      "sponsor_licence": false,
+      "date_posted": "2026-05-16",
+      "sponsorship_scan": "linkedin_js (cannot read full description)",
+      "first_seen": "2026-05-16",
+      "last_seen": "2026-05-16",
+      "sources": [
+        "LinkedIn"
+      ],
+      "status": "active"
+    },
     {
       "title": "ServiceNow Functional Consultant (Outside IR35)",
       "company": "LA International Computer Consultants Ltd",
@@ -84,7 +194,7 @@
         "JobServe"
       ],
       "first_seen": "2026-05-15",
-      "last_seen": "2026-05-15",
+      "last_seen": "2026-05-16",
       "status": "active"
     },
     {
@@ -139,7 +249,7 @@
         "JobServe"
       ],
       "first_seen": "2026-05-15",
-      "last_seen": "2026-05-15",
+      "last_seen": "2026-05-16",
       "status": "active"
     },
     {
@@ -167,7 +277,7 @@
       ],
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-05-15",
-      "last_seen": "2026-05-15",
+      "last_seen": "2026-05-16",
       "status": "active"
     },
     {
@@ -195,7 +305,7 @@
       ],
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-05-15",
-      "last_seen": "2026-05-15",
+      "last_seen": "2026-05-16",
       "status": "active"
     },
     {
@@ -250,7 +360,7 @@
         "JobServe"
       ],
       "first_seen": "2026-05-15",
-      "last_seen": "2026-05-15",
+      "last_seen": "2026-05-16",
       "status": "active"
     },
     {
@@ -278,7 +388,7 @@
       ],
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-05-15",
-      "last_seen": "2026-05-15",
+      "last_seen": "2026-05-16",
       "status": "active"
     },
     {
@@ -305,7 +415,7 @@
         "JobServe"
       ],
       "first_seen": "2026-05-15",
-      "last_seen": "2026-05-15",
+      "last_seen": "2026-05-16",
       "status": "active"
     },
     {
@@ -333,7 +443,7 @@
       ],
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-05-15",
-      "last_seen": "2026-05-15",
+      "last_seen": "2026-05-16",
       "status": "active"
     },
     {
@@ -415,7 +525,7 @@
       ],
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-05-15",
-      "last_seen": "2026-05-15",
+      "last_seen": "2026-05-16",
       "status": "active"
     },
     {
@@ -442,7 +552,7 @@
         "JobServe"
       ],
       "first_seen": "2026-05-15",
-      "last_seen": "2026-05-15",
+      "last_seen": "2026-05-16",
       "status": "active"
     },
     {
@@ -469,7 +579,7 @@
         "JobServe"
       ],
       "first_seen": "2026-05-15",
-      "last_seen": "2026-05-15",
+      "last_seen": "2026-05-16",
       "status": "active"
     },
     {
@@ -496,7 +606,7 @@
         "JobServe"
       ],
       "first_seen": "2026-05-15",
-      "last_seen": "2026-05-15",
+      "last_seen": "2026-05-16",
       "status": "active"
     },
     {
@@ -523,7 +633,7 @@
         "JobServe"
       ],
       "first_seen": "2026-05-15",
-      "last_seen": "2026-05-15",
+      "last_seen": "2026-05-16",
       "status": "active"
     },
     {
@@ -578,7 +688,7 @@
         "JobServe"
       ],
       "first_seen": "2026-05-15",
-      "last_seen": "2026-05-15",
+      "last_seen": "2026-05-16",
       "status": "active"
     },
     {
@@ -615,7 +725,7 @@
       "location": "700.00 Daily - 747.00 Daily GBP",
       "salary_display": "Not listed",
       "date_posted": "2026-05-14 09:39:55",
-      "url": "https://www.jobserve.com/gb/en/mob/job/5CFFA45D994AC3F019/",
+      "url": "https://www.jobserve.com/gb/en/mob/job/2AACE9DB0BB3C3A8CB/",
       "source": "JobServe",
       "source_type": "aggregator",
       "sn_role": false,
@@ -634,7 +744,7 @@
       ],
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-05-15",
-      "last_seen": "2026-05-15",
+      "last_seen": "2026-05-16",
       "status": "active"
     },
     {
@@ -662,7 +772,7 @@
       ],
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-05-15",
-      "last_seen": "2026-05-15",
+      "last_seen": "2026-05-16",
       "status": "active"
     },
     {
@@ -689,7 +799,7 @@
         "JobServe"
       ],
       "first_seen": "2026-05-15",
-      "last_seen": "2026-05-15",
+      "last_seen": "2026-05-16",
       "status": "active"
     },
     {
@@ -716,7 +826,7 @@
         "JobServe"
       ],
       "first_seen": "2026-05-15",
-      "last_seen": "2026-05-15",
+      "last_seen": "2026-05-16",
       "status": "active"
     },
     {
@@ -743,7 +853,7 @@
         "JobServe"
       ],
       "first_seen": "2026-05-15",
-      "last_seen": "2026-05-15",
+      "last_seen": "2026-05-16",
       "status": "active"
     },
     {
@@ -770,16 +880,16 @@
         "JobServe"
       ],
       "first_seen": "2026-05-15",
-      "last_seen": "2026-05-15",
+      "last_seen": "2026-05-16",
       "status": "active"
     },
     {
       "title": "ServiceNow - Senior Technical Lead (Developer)",
       "company": "Department for Work and Pensions",
-      "location": "[Barwick In Elmet, England, United Kingdom](/jobs?q=servicenow&location=Barwick+In+Elmet%2C+England%2C+United+Kingdom)\u00b7Part-time",
+      "location": "Birmingham/Blackpool/Leeds/Manchester/Newcastle/Sheffield",
       "salary_display": "Not listed",
       "date_posted": "2026-05-15",
-      "url": "https://huntukvisasponsors.com/jobs?q=servicenow-senior-technical-lead-developer-department-for-work-and-pensions-company-department-for-work-and-pensions-uhurcxtxuf-r",
+      "url": "https://uk.linkedin.com/jobs/view/servicenow-senior-technical-lead-at-department-for-work-and-pensions-dwp-4413585274",
       "source": "Hunt UK",
       "source_type": "direct",
       "sn_role": true,
@@ -788,7 +898,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "expired",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "sponsor_licence": true,
       "description": "",
@@ -798,16 +908,16 @@
       ],
       "sponsorship_mentioned": true,
       "first_seen": "2026-05-15",
-      "last_seen": "2026-05-15",
-      "status": "expired"
+      "last_seen": "2026-05-16",
+      "status": "active"
     },
     {
       "title": "Senior ServiceNow Developer",
       "company": "Department for Work and Pensions",
-      "location": "[Barwick In Elmet, England, United Kingdom](/jobs?q=servicenow&location=Barwick+In+Elmet%2C+England%2C+United+Kingdom)\u00b7Part-time",
+      "location": "Birmingham/Blackpool/Leeds/Manchester/Newcastle/Sheffield",
       "salary_display": "Not listed",
       "date_posted": "2026-05-15",
-      "url": "https://huntukvisasponsors.com/jobs?q=senior-servicenow-developer-department-for-work-and-pensions-company-department-for-work-and-pensions-uhurcxtxuf-r",
+      "url": "https://uk.linkedin.com/jobs/view/senior-servicenow-developer-at-dwp-digital-4412748505",
       "source": "Hunt UK",
       "source_type": "direct",
       "sn_role": true,
@@ -816,7 +926,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "expired",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "sponsor_licence": true,
       "description": "",
@@ -826,16 +936,16 @@
       ],
       "sponsorship_mentioned": true,
       "first_seen": "2026-05-15",
-      "last_seen": "2026-05-15",
-      "status": "expired"
+      "last_seen": "2026-05-16",
+      "status": "active"
     },
     {
       "title": "ServiceNow Lead Architect",
       "company": "Capita Plc",
-      "location": "[London, England, United Kingdom](/jobs?q=servicenow&location=London%2C+England%2C+United+Kingdom)",
+      "location": "London, England",
       "salary_display": "Not listed",
       "date_posted": "2026-05-15",
-      "url": "https://huntukvisasponsors.com/jobs?q=servicenow-lead-architect-capita-plc-company-capita-plc-aeqzaehk86qf",
+      "url": "https://uk.linkedin.com/jobs/view/servicenow-lead-architect-at-capita-4412682781",
       "source": "Hunt UK",
       "source_type": "direct",
       "sn_role": true,
@@ -844,7 +954,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "expired",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "sponsor_licence": true,
       "description": "",
@@ -854,16 +964,16 @@
       ],
       "sponsorship_mentioned": true,
       "first_seen": "2026-05-15",
-      "last_seen": "2026-05-15",
-      "status": "expired"
+      "last_seen": "2026-05-16",
+      "status": "active"
     },
     {
       "title": "ServiceNow Architect",
       "company": "COYLE PERSONNEL LIMITED",
-      "location": "[London Area, United Kingdom](/jobs?q=servicenow&location=London+Area%2C+United+Kingdom)",
+      "location": "London Area, United Kingdom",
       "salary_display": "Not listed",
       "date_posted": "2026-05-15",
-      "url": "https://huntukvisasponsors.com/jobs?q=servicenow-architect-coyle-personnel-limited-company-coyle-personnel-ltd-nk86smn7um3a",
+      "url": "https://uk.linkedin.com/jobs/view/servicenow-architect-at-coyle-personnel-4412676675",
       "source": "Hunt UK",
       "source_type": "direct",
       "sn_role": true,
@@ -872,7 +982,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "expired",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "sponsor_licence": false,
       "description": "ServiceNow Architect - IT Consultancy & ServiceNow Partner About the organisation: A long\u2011established UK technology provider is seeking a ServiceNow Architect to play a key role in strengthening and expanding its ServiceNow capabilities. Their clientele predominantly sits in the UK & Defence sector. Role overview: This role is positioned at the centre of the company\u2019s ServiceNow strategy. As a ServiceNow Architect, you will shape end\u2011to\u2011end solutions across the platform, influencing desi",
@@ -881,8 +991,8 @@
         "Hunt UK"
       ],
       "first_seen": "2026-05-15",
-      "last_seen": "2026-05-15",
-      "status": "expired"
+      "last_seen": "2026-05-16",
+      "status": "active"
     },
     {
       "title": "CRM Architect",
@@ -908,7 +1018,7 @@
         "ServiceNow Careers"
       ],
       "first_seen": "2026-05-15",
-      "last_seen": "2026-05-15",
+      "last_seen": "2026-05-16",
       "status": "active"
     },
     {
@@ -935,7 +1045,7 @@
         "ServiceNow Careers"
       ],
       "first_seen": "2026-05-15",
-      "last_seen": "2026-05-15",
+      "last_seen": "2026-05-16",
       "status": "active"
     },
     {
@@ -962,7 +1072,7 @@
         "ServiceNow Careers"
       ],
       "first_seen": "2026-05-15",
-      "last_seen": "2026-05-15",
+      "last_seen": "2026-05-16",
       "status": "active"
     },
     {
@@ -989,7 +1099,7 @@
         "ServiceNow Careers"
       ],
       "first_seen": "2026-05-15",
-      "last_seen": "2026-05-15",
+      "last_seen": "2026-05-16",
       "status": "active"
     },
     {
@@ -1016,7 +1126,7 @@
         "ServiceNow Careers"
       ],
       "first_seen": "2026-05-15",
-      "last_seen": "2026-05-15",
+      "last_seen": "2026-05-16",
       "status": "active"
     },
     {
@@ -1043,7 +1153,7 @@
         "ServiceNow Careers"
       ],
       "first_seen": "2026-05-15",
-      "last_seen": "2026-05-15",
+      "last_seen": "2026-05-16",
       "status": "active"
     },
     {
@@ -1070,7 +1180,7 @@
         "ServiceNow Careers"
       ],
       "first_seen": "2026-05-15",
-      "last_seen": "2026-05-15",
+      "last_seen": "2026-05-16",
       "status": "active"
     },
     {
@@ -1097,7 +1207,7 @@
         "ServiceNow Careers"
       ],
       "first_seen": "2026-05-15",
-      "last_seen": "2026-05-15",
+      "last_seen": "2026-05-16",
       "status": "active"
     },
     {
@@ -1127,7 +1237,7 @@
       ],
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-05-15",
-      "last_seen": "2026-05-15",
+      "last_seen": "2026-05-16",
       "status": "active"
     },
     {
@@ -1157,7 +1267,7 @@
       ],
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-05-15",
-      "last_seen": "2026-05-15",
+      "last_seen": "2026-05-16",
       "status": "active"
     },
     {
@@ -1187,7 +1297,7 @@
       ],
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-05-15",
-      "last_seen": "2026-05-15",
+      "last_seen": "2026-05-16",
       "status": "active"
     },
     {
@@ -1210,7 +1320,7 @@
       "source_type": "direct",
       "sponsorship_scan": "linkedin_js (cannot read full description)",
       "first_seen": "2026-05-15",
-      "last_seen": "2026-05-15",
+      "last_seen": "2026-05-16",
       "sources": [
         "LinkedIn"
       ],
@@ -1237,7 +1347,7 @@
       "source_type": "direct",
       "sponsorship_scan": "linkedin_js (cannot read full description)",
       "first_seen": "2026-05-15",
-      "last_seen": "2026-05-15",
+      "last_seen": "2026-05-16",
       "sources": [
         "LinkedIn"
       ],
@@ -1264,7 +1374,7 @@
       "source_type": "direct",
       "sponsorship_scan": "linkedin_js (cannot read full description)",
       "first_seen": "2026-05-15",
-      "last_seen": "2026-05-15",
+      "last_seen": "2026-05-16",
       "sources": [
         "LinkedIn"
       ],
@@ -1274,8 +1384,8 @@
     {
       "title": "Alliance Manager ServiceNow - Eviden",
       "company": "Eviden",
-      "location": "London, England, United Kingdom (On-site)",
-      "url": "https://www.linkedin.com/jobs/view/4415352538",
+      "location": "Edinburgh, Scotland, United Kingdom (Hybrid)",
+      "url": "https://www.linkedin.com/jobs/view/4415349966",
       "source": "LinkedIn",
       "scraped_at": "2026-05-15 18:38:42",
       "visa_sponsorship": "unknown",
@@ -1291,7 +1401,7 @@
       "source_type": "direct",
       "sponsorship_scan": "linkedin_js (cannot read full description)",
       "first_seen": "2026-05-15",
-      "last_seen": "2026-05-15",
+      "last_seen": "2026-05-16",
       "sources": [
         "LinkedIn"
       ],
@@ -2314,10 +2424,10 @@
     {
       "title": "ServiceNow Telecommunications Service Management (TSM) Architect",
       "company": "Ubique Systems UK Limited",
-      "location": "United Kingdom",
+      "location": "London, UK (Hybrid, 3 days onsite)",
       "salary_display": "Not listed",
       "date_posted": "2026-04-29",
-      "url": "https://huntukvisasponsors.com/jobs?q=servicenow-telecommunications-service-management-tsm-architect-ubique-systems-uk-limited-company-ubique-systems-uk-limited-fviwhp7scc6g",
+      "url": "https://uk.linkedin.com/jobs/view/servicenow-architect-tsm-at-ubique-systems-4406073929",
       "source": "Hunt UK",
       "source_type": "agency",
       "role_type": "architect",
@@ -2325,17 +2435,17 @@
       "employment": "contract",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "expired",
+      "link_status": "live",
       "visa_sponsorship": "agency_unknown",
       "description": "ServiceNow TSM Architect at Ubique Systems UK. TSM, ITSM & ITOM expertise. Still listed 2026-05-11.",
       "sponsor_licence": true,
       "first_seen": "2026-05-11",
-      "last_seen": "2026-05-15",
+      "last_seen": "2026-05-16",
       "sources": [
         "Hunt UK"
       ],
       "sponsorship_mentioned": true,
-      "status": "expired"
+      "status": "active"
     },
     {
       "title": "ServiceNow Solutions Advisory Lead",
@@ -5669,7 +5779,7 @@
       "visa_sponsorship": "sc_blocked",
       "description": "",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-15",
+      "last_seen": "2026-05-16",
       "status": "active",
       "sources": [
         "LinkedIn",
