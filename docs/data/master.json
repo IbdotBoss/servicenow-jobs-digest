@@ -1,7 +1,7 @@
 {
-  "updated": "2026-05-16",
-  "total": 247,
-  "total_active": 223,
+  "updated": "2026-05-17",
+  "total": 249,
+  "total_active": 225,
   "licenced_sponsors": 105,
   "daily_snapshots": [
     "2026-05-06",
@@ -14,15 +14,16 @@
     "2026-05-13",
     "2026-05-14",
     "2026-05-15",
-    "2026-05-16"
+    "2026-05-16",
+    "2026-05-17"
   ],
   "sources": {
     "LinkedIn": 105,
-    "JobServe": 72,
+    "JobServe": 73,
     "Hunt UK": 44,
     "ComputerJobs": 9,
     "ServiceNow Careers": 8,
-    "Nelson Frank": 3,
+    "Nelson Frank": 4,
     "Reed": 2,
     "Hays": 2,
     "Experis": 1,
@@ -33,6 +34,60 @@
     "CV-Library": 1
   },
   "jobs": [
+    {
+      "title": "IT Support Engineer",
+      "company": "Red King Resourcing",
+      "location": "150.00 Daily - 150.00 Daily GBP",
+      "salary_display": "Not listed",
+      "date_posted": "2026-05-16 19:20:27",
+      "url": "https://www.jobserve.com/gb/en/mob/job/8533D4D29030043578/",
+      "source": "JobServe",
+      "source_type": "aggregator",
+      "sn_role": false,
+      "role_type": "sn-adjacent",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "unknown",
+      "description": "Posted 10 hours ago",
+      "scraped_at": "2026-05-17 05:01:35",
+      "sponsor_licence": false,
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "sources": [
+        "JobServe"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "ServiceNow Developer",
+      "company": "Nelson Frank (agency)",
+      "location": "London",
+      "salary_display": "\u00a350,000 to \u00a370,000 GBP",
+      "date_posted": "2026-05-17",
+      "url": "https://www.nelsonfrank.com/servicenow-jobs-in-united-kingdom#servicenow-developer",
+      "source": "Nelson Frank",
+      "source_type": "agency",
+      "sn_role": true,
+      "role_type": "developer",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": true,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "agency_unknown",
+      "sponsor_licence": false,
+      "description": "",
+      "scraped_at": "2026-05-17 05:08:15",
+      "first_seen": "2026-05-17",
+      "last_seen": "2026-05-17",
+      "sources": [
+        "Nelson Frank"
+      ],
+      "status": "active"
+    },
     {
       "title": "IT Support Manager - ITSM, ITIL 4, DORA",
       "company": "TXP",
@@ -54,7 +109,7 @@
       "scraped_at": "2026-05-16 05:01:23",
       "sponsor_licence": true,
       "first_seen": "2026-05-16",
-      "last_seen": "2026-05-16",
+      "last_seen": "2026-05-17",
       "sources": [
         "JobServe"
       ],
@@ -82,7 +137,7 @@
       "sponsor_licence": false,
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-05-16",
-      "last_seen": "2026-05-16",
+      "last_seen": "2026-05-17",
       "sources": [
         "JobServe"
       ],
@@ -249,7 +304,7 @@
         "JobServe"
       ],
       "first_seen": "2026-05-15",
-      "last_seen": "2026-05-16",
+      "last_seen": "2026-05-17",
       "status": "active"
     },
     {
@@ -579,7 +634,7 @@
         "JobServe"
       ],
       "first_seen": "2026-05-15",
-      "last_seen": "2026-05-16",
+      "last_seen": "2026-05-17",
       "status": "active"
     },
     {
@@ -606,7 +661,7 @@
         "JobServe"
       ],
       "first_seen": "2026-05-15",
-      "last_seen": "2026-05-16",
+      "last_seen": "2026-05-17",
       "status": "active"
     },
     {
@@ -826,7 +881,7 @@
         "JobServe"
       ],
       "first_seen": "2026-05-15",
-      "last_seen": "2026-05-16",
+      "last_seen": "2026-05-17",
       "status": "active"
     },
     {
@@ -853,7 +908,7 @@
         "JobServe"
       ],
       "first_seen": "2026-05-15",
-      "last_seen": "2026-05-16",
+      "last_seen": "2026-05-17",
       "status": "active"
     },
     {
@@ -880,13 +935,13 @@
         "JobServe"
       ],
       "first_seen": "2026-05-15",
-      "last_seen": "2026-05-16",
+      "last_seen": "2026-05-17",
       "status": "active"
     },
     {
       "title": "ServiceNow - Senior Technical Lead (Developer)",
       "company": "Department for Work and Pensions",
-      "location": "Birmingham/Blackpool/Leeds/Manchester/Newcastle/Sheffield",
+      "location": "Barwick In Elmet, England, United Kingdom",
       "salary_display": "Not listed",
       "date_posted": "2026-05-15",
       "url": "https://uk.linkedin.com/jobs/view/servicenow-senior-technical-lead-at-department-for-work-and-pensions-dwp-4413585274",
@@ -899,7 +954,7 @@
       "sc_clearance": false,
       "grad_scheme": false,
       "link_status": "live",
-      "visa_sponsorship": "unknown",
+      "visa_sponsorship": "sc_blocked",
       "sponsor_licence": true,
       "description": "",
       "scraped_at": "2026-05-15 16:13:10",
@@ -908,16 +963,16 @@
       ],
       "sponsorship_mentioned": true,
       "first_seen": "2026-05-15",
-      "last_seen": "2026-05-16",
+      "last_seen": "2026-05-17",
       "status": "active"
     },
     {
       "title": "Senior ServiceNow Developer",
       "company": "Department for Work and Pensions",
-      "location": "Birmingham/Blackpool/Leeds/Manchester/Newcastle/Sheffield",
+      "location": "Barwick In Elmet, England, United Kingdom",
       "salary_display": "Not listed",
       "date_posted": "2026-05-15",
-      "url": "https://uk.linkedin.com/jobs/view/senior-servicenow-developer-at-dwp-digital-4412748505",
+      "url": "https://uk.linkedin.com/jobs/view/senior-servicenow-developer-at-department-for-work-and-pensions-dwp-4413060076",
       "source": "Hunt UK",
       "source_type": "direct",
       "sn_role": true,
@@ -927,7 +982,7 @@
       "sc_clearance": false,
       "grad_scheme": false,
       "link_status": "live",
-      "visa_sponsorship": "unknown",
+      "visa_sponsorship": "sc_blocked",
       "sponsor_licence": true,
       "description": "",
       "scraped_at": "2026-05-15 16:13:10",
@@ -936,13 +991,13 @@
       ],
       "sponsorship_mentioned": true,
       "first_seen": "2026-05-15",
-      "last_seen": "2026-05-16",
+      "last_seen": "2026-05-17",
       "status": "active"
     },
     {
       "title": "ServiceNow Lead Architect",
       "company": "Capita Plc",
-      "location": "London, England",
+      "location": "London, England, United Kingdom",
       "salary_display": "Not listed",
       "date_posted": "2026-05-15",
       "url": "https://uk.linkedin.com/jobs/view/servicenow-lead-architect-at-capita-4412682781",
@@ -964,7 +1019,7 @@
       ],
       "sponsorship_mentioned": true,
       "first_seen": "2026-05-15",
-      "last_seen": "2026-05-16",
+      "last_seen": "2026-05-17",
       "status": "active"
     },
     {
@@ -991,7 +1046,7 @@
         "Hunt UK"
       ],
       "first_seen": "2026-05-15",
-      "last_seen": "2026-05-16",
+      "last_seen": "2026-05-17",
       "status": "active"
     },
     {
@@ -1018,7 +1073,7 @@
         "ServiceNow Careers"
       ],
       "first_seen": "2026-05-15",
-      "last_seen": "2026-05-16",
+      "last_seen": "2026-05-17",
       "status": "active"
     },
     {
@@ -1045,7 +1100,7 @@
         "ServiceNow Careers"
       ],
       "first_seen": "2026-05-15",
-      "last_seen": "2026-05-16",
+      "last_seen": "2026-05-17",
       "status": "active"
     },
     {
@@ -1072,7 +1127,7 @@
         "ServiceNow Careers"
       ],
       "first_seen": "2026-05-15",
-      "last_seen": "2026-05-16",
+      "last_seen": "2026-05-17",
       "status": "active"
     },
     {
@@ -1099,7 +1154,7 @@
         "ServiceNow Careers"
       ],
       "first_seen": "2026-05-15",
-      "last_seen": "2026-05-16",
+      "last_seen": "2026-05-17",
       "status": "active"
     },
     {
@@ -1126,7 +1181,7 @@
         "ServiceNow Careers"
       ],
       "first_seen": "2026-05-15",
-      "last_seen": "2026-05-16",
+      "last_seen": "2026-05-17",
       "status": "active"
     },
     {
@@ -1153,7 +1208,7 @@
         "ServiceNow Careers"
       ],
       "first_seen": "2026-05-15",
-      "last_seen": "2026-05-16",
+      "last_seen": "2026-05-17",
       "status": "active"
     },
     {
@@ -1180,7 +1235,7 @@
         "ServiceNow Careers"
       ],
       "first_seen": "2026-05-15",
-      "last_seen": "2026-05-16",
+      "last_seen": "2026-05-17",
       "status": "active"
     },
     {
@@ -1207,7 +1262,7 @@
         "ServiceNow Careers"
       ],
       "first_seen": "2026-05-15",
-      "last_seen": "2026-05-16",
+      "last_seen": "2026-05-17",
       "status": "active"
     },
     {
@@ -1273,12 +1328,12 @@
     {
       "title": "ServiceNow Architect - 277199",
       "company": "Nelson Frank (agency)",
-      "location": "London, City of London",
+      "location": "London",
       "salary_display": "\u00a3100,000 to \u00a3101,000 GBP",
       "salary_min": 100000,
       "salary_max": 101000,
       "date_posted": "2026-05-15",
-      "url": "https://www.nelsonfrank.com/job/a0MP9000009X6vt.6_1776085371/servicenow-architect-277199",
+      "url": "https://www.nelsonfrank.com/servicenow-jobs-in-united-kingdom#servicenow-architect-277199",
       "source": "Nelson Frank",
       "source_type": "agency",
       "sn_role": true,
@@ -1297,7 +1352,7 @@
       ],
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-05-15",
-      "last_seen": "2026-05-16",
+      "last_seen": "2026-05-17",
       "status": "active"
     },
     {
@@ -2424,10 +2479,10 @@
     {
       "title": "ServiceNow Telecommunications Service Management (TSM) Architect",
       "company": "Ubique Systems UK Limited",
-      "location": "London, UK (Hybrid, 3 days onsite)",
+      "location": "United Kingdom",
       "salary_display": "Not listed",
       "date_posted": "2026-04-29",
-      "url": "https://uk.linkedin.com/jobs/view/servicenow-architect-tsm-at-ubique-systems-4406073929",
+      "url": "https://uk.linkedin.com/jobs/view/servicenow-architect-at-ubique-systems-4411866930",
       "source": "Hunt UK",
       "source_type": "agency",
       "role_type": "architect",
@@ -2440,7 +2495,7 @@
       "description": "ServiceNow TSM Architect at Ubique Systems UK. TSM, ITSM & ITOM expertise. Still listed 2026-05-11.",
       "sponsor_licence": true,
       "first_seen": "2026-05-11",
-      "last_seen": "2026-05-16",
+      "last_seen": "2026-05-17",
       "sources": [
         "Hunt UK"
       ],
@@ -2924,7 +2979,7 @@
       "visa_sponsorship": "agency_unknown",
       "status": "expired",
       "first_seen": "2026-05-09",
-      "last_seen": "2026-05-14",
+      "last_seen": "2026-05-17",
       "sources": [
         "Reed"
       ],
