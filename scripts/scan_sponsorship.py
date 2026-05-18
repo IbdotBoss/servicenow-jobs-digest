@@ -301,7 +301,12 @@ def scan_file(filepath, sponsor_set, dry_run=False, csv_only=False):
     with open(filepath) as f:
         data = json.load(f)
     
-    jobs = data.get('jobs', data if isinstance(data, list) else [])
+    if isinstance(data, list):
+        jobs = data
+    elif isinstance(data, dict) and 'jobs' in data:
+        jobs = data['jobs']
+    else:
+        jobs = []
     was_list = isinstance(data, list)
     
     changes = {'sc_blocked': 0, 'unavailable': 0, 'licence_flagged': 0}
