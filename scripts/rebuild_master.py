@@ -47,8 +47,16 @@ def rebuild():
         
         with open(fpath) as f:
             data = json.load(f)
-        
-        for j in data.get('jobs', []):
+
+        if isinstance(data, list):
+            jobs_iter = data
+        elif isinstance(data, dict):
+            jobs_iter = data.get('jobs', [])
+        else:
+            print(f"  [WARN] Unexpected data type in {fname}, skipping")
+            continue
+
+        for j in jobs_iter:
             # Normalize old tag format — map legacy tags to unknown
             tag = j.get('visa_sponsorship', 'unknown')
             if tag == 'sponsor_verified':
