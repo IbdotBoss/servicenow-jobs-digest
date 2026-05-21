@@ -1,121 +1,218 @@
 #!/usr/bin/env python3
 """
-Nelson Frank scraper v1.1
-Uses web_extract (markdown) since the page is JS-rendered.
-Tags all jobs as agency-posted.
+Nelson Frank scraper v2.2 — standalone, Playwright-based.
+Fetches category sub-pages (JS-rendered, Playwright required).
 
-Usage: python3 scripts/nelson_frank_scraper.py
-Output: docs/data/nelson_frank_jobs.json
+Job layouts observed:
+  Digit-prefixed:    "1\\nTITLE\\nLOCATION\\nSALARY\\n..."  (architect page style)
+  Direct title:      "TITLE\\nLOCATION\\nSALARY\\n..."       (consultant/other page style)
+  Separator:         "Save\\nApply" (between jobs) or "Save\\nApply\\n\\nnew"
+
+Categories (per references/nelson-frank-scraping.md):
+  /servicenow-consultant-jobs
+  /servicenow-other-jobs
+  /servicenow-architect-jobs
 """
 
-import sys, os, json, re
+import json, os, re, sys
 from datetime import datetime
-from hermes_tools import web_extract
 
-URL = 'https://www.nelsonfrank.com/servicenow-jobs-in-united-kingdom'
-OUT = os.path.expanduser('~/hermes-workspace/servicenow-jobs-digest/docs/data/nelson_frank_jobs.json')
+try:
+    from playwright.sync_api import sync_playwright
+except ImportError:
+    print("ERROR: playwright not installed. pip3 install playwright && playwright install chromium")
+    sys.exit(1)
+
+CATEGORY_URLS = [
+    ('https://www.nelsonfrank.com/servicenow-consultant-jobs', 'consultant'),
+    ('https://www.nelsonfrank.com/servicenow-other-jobs',       'other'),
+    ('https://www.nelsonfrank.com/servicenow-architect-jobs',   'architect'),
+]
+
+OUT = os.path.expanduser(
+    '~/hermes-workspace/servicenow-jobs-digest/docs/data/nelson_frank_jobs.json'
+)
 TODAY = datetime.now().strftime('%Y-%m-%d')
 SCRAPED_AT = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
-def main():
-    print(f'Fetching Nelson Frank via web_extract...')
-    result = web_extract([URL])
-    
-    if not result or 'results' not in result:
-        print('ERROR: web_extract failed')
-        return []
-    
-    content = result['results'][0].get('content', '')
-    if not content:
-        print('ERROR: no content returned')
-        return []
-    
-    # Parse markdown job listings
-    # Pattern: ### JOB TITLE\n\nlocation · salary · type
+UK_RE   = re.compile(r'\b(UK|United Kingdom|England|Scotland|Wales|London|Manchester'
+                     r'|Birmingham|Edinburgh|Glasgow|Bristol|Leeds|Reading)\b', re.IGNORECASE)
+SN_RE   = re.compile(
+    r'\b(servicenow|snow platform|it service management|itsm|itom|hrsd|csm|csam|secops)\b',
+    re.IGNORECASE)
+NOISE_RE = re.compile(r'\b(sales|recruiter|account manager|business development|bdm)\b')
+SC_RE   = re.compile(r'(?:security\s+(?:clearance|cleared)|sc\s+clearance?|dv\s+clearance?|developed\s+vetting|bpss|eligib(?:le|ility)\s+for\s+sc)', re.IGNORECASE)
+
+ROLE_KEYWORDS = {
+    'architect': 'architect',
+    'developer': 'developer',
+    'engineer':  'developer',
+    'consultant':'consultant',
+    'manager':   'manager',
+    'lead':      'manager',
+    'analyst':   'analyst',
+    'admin':     'admin',
+    'specialist':'other',
+    'technician':'other',
+}
+
+def classify(title):
+    tl = title.lower()
+    for kw, cls in ROLE_KEYWORDS.items():
+        if kw in tl:
+            return cls
+    return 'other'
+
+def classify_remote(title):
+    tl = title.lower()
+    if 'remote' in tl:   return 'remote'
+    if 'hybrid' in tl:   return 'hybrid'
+    return 'onsite'
+
+def classify_emp(title):
+    tl = title.lower()
+    return 'contract' if 'contract' in tl else 'permanent'
+
+def parse_jobs_from_page(page_text):
+    """Parse job listings from fully rendered page text."""
     jobs = []
-    
-    # Split by ### headers (job titles)
-    sections = re.split(r'\n###\s+', content)
-    
-    for section in sections[1:]:  # skip first (preamble)
-        lines = section.strip().split('\n')
-        if not lines: continue
-        
-        title = lines[0].strip()
-        
-        # Skip non-ServiceNow roles
-        title_lower = title.lower()
-        if not any(kw in title_lower for kw in ['servicenow', 'itsm', 'csdm', 'itom', 'hrsd', 'secops']):
+
+    # Split into blocks: "Save\nApply" or "Save\nApply\n\nnew" are the delimiters
+    sep_re = re.compile(r'\nSave\s*\nApply(?:\s*\nnew)?')
+    blocks = sep_re.split(page_text)
+
+    for block in blocks:
+        block = block.strip()
+        if not block:
             continue
-        
-        # Skip sales/mgmt
-        if any(kw in title_lower for kw in ['sales', 'account manager', 'recruiter', 'business development']):
+
+        lines = [l.strip() for l in block.split('\n') if l.strip()]
+        if len(lines) < 4:
             continue
-        
-        # Build URL from title slug
-        slug = re.sub(r'[^a-z0-9]+', '-', title_lower).strip('-')
-        
-        # Extract metadata from subsequent lines
-        location = 'United Kingdom'
-        salary = 'Not listed'
-        emp = 'permanent'
-        
-        full_text = ' '.join(lines[1:])
-        
-        # Location
-        loc_match = re.search(r'(London|Manchester|Birmingham|Edinburgh|Glasgow|Bristol|Leeds|Reading|England|UK|United Kingdom|Remote|Hybrid)', full_text)
-        if loc_match:
-            location = loc_match.group(1)
-        
-        # Salary: £XX,XXX
-        sal_match = re.search(r'£[\d,]+(?:\s*(?:to|-|–)\s*£[\d,]+)?(?:\s*(?:GBP|per\s+(?:annum|day|year)))?', full_text)
-        if sal_match:
-            salary = sal_match.group(0)
-        
-        if 'contract' in title_lower:
-            emp = 'contract'
-        
-        # Role type
-        role_type = 'other'
-        if 'architect' in title_lower: role_type = 'architect'
-        elif 'developer' in title_lower or 'engineer' in title_lower: role_type = 'developer'
-        elif 'consultant' in title_lower: role_type = 'consultant'
-        elif 'analyst' in title_lower: role_type = 'analyst'
-        elif 'manager' in title_lower or 'lead' in title_lower: role_type = 'manager'
-        
-        url = f'https://www.nelsonfrank.com/servicenow-jobs-in-united-kingdom#{slug}'
-        
+
+        # ── Locate title ──
+        # Title is either:
+        #  a) lines[i+1] where lines[i] is a pure digit (job number), OR
+        #  b) lines[0] if lines[0] is a substantive title line (noise check below)
+        start_idx = None
+        for i, line in enumerate(lines):
+            if re.match(r'^\d+$', line):
+                # Lines before the number? Unlikely, but skip them
+                title_idx = i + 1
+                if title_idx < len(lines):
+                    start_idx = title_idx
+                break
+
+        if start_idx is None:
+            # No digit prefix — title is the first non-trivial line
+            start_idx = 0
+
+        title = lines[start_idx]
+
+        # Noise filters
+        # Drop page headings like "ServiceNow Consultant Jobs", "ServiceNow Architect Jobs"
+        if ' Jobs' in title or ' Jobs ' in title:
+            continue
+        if not SN_RE.search(title):
+            continue
+        if NOISE_RE.search(title):
+            continue
+
+        # ── Location ──
+        # Line after title is usually the location (but title itself might be
+        # a "add new" marker — check for "new" or "Browse the extensive range")
+        loc_idx = start_idx + 1
+        if lines[loc_idx].lower() in ('new', 'recently added', 'browse the extensive range'):
+            loc_idx += 1
+        location_line = lines[loc_idx] if loc_idx < len(lines) else ''
+
+        # Check UK across title + location_line + first 3 lines of desc
+        desc_lines = lines[loc_idx + 2: loc_idx + 10]  # skip LOCATION and SALARY
+        context = ' '.join(lines[start_idx: start_idx + 4] + desc_lines)
+        if not UK_RE.search(context) and not UK_RE.search(location_line):
+            continue
+
+        # ── Salary ──
+        salary_cand_idx = loc_idx + 1
+        salary = lines[salary_cand_idx] if salary_cand_idx < len(lines) else 'Not listed'
+        if not re.search(r'[\$\£]|GBP|USD|per\s+annum', salary, re.IGNORECASE):
+            salary = 'Not listed'
+
+        # ── Description ──
+        desc_idx = next((i for i, l in enumerate(lines) if 'job description' in l.lower()), -1)
+        desc = ' '.join(lines[desc_idx + 1: desc_idx + 8])[:500] if desc_idx >= 0 else ''
+
+        # ── SC check ──
+        sc_text = context + ' ' + desc
+        sc = bool(SC_RE.search(sc_text))
+
         jobs.append({
             'title': title,
             'company': 'Nelson Frank (agency)',
-            'location': location,
+            'location': location_line if UK_RE.search(location_line) else 'United Kingdom',
             'salary_display': salary,
             'date_posted': TODAY,
-            'url': url,
+            'url': 'https://www.nelsonfrank.com/servicenow-jobs-in-united-kingdom',
             'source': 'Nelson Frank',
             'source_type': 'agency',
             'sn_role': True,
-            'role_type': role_type,
-            'remote': 'remote' if 'remote' in title_lower else ('hybrid' if 'hybrid' in title_lower else 'onsite'),
-            'employment': emp,
-            'sc_clearance': False,
+            'role_type': classify(title),
+            'remote': classify_remote(title),
+            'employment': classify_emp(title),
+            'sc_clearance': sc,
             'grad_scheme': False,
             'link_status': 'live',
             'visa_sponsorship': 'agency_unknown',
             'sponsor_licence': False,
-            'description': '',
+            'description': desc,
             'scraped_at': SCRAPED_AT,
         })
-    
-    os.makedirs(os.path.dirname(OUT), exist_ok=True)
-    with open(OUT, 'w') as f:
-        json.dump(jobs, f, indent=2, ensure_ascii=False)
-    
-    print(f'  {len(jobs)} ServiceNow jobs saved (agency-posted)')
-    for j in jobs:
-        print(f'  🏢 {j["title"][:70]}')
-    
+
     return jobs
 
+
+def scrape():
+    print(f'Fetching Nelson Frank via Playwright ({len(CATEGORY_URLS)} pages)...')
+    all_jobs = []
+    seen = set()
+
+    with sync_playwright() as p:
+        browser = p.chromium.launch(headless=True, args=['--no-sandbox','--disable-setuid-sandbox'])
+
+        for url, category in CATEGORY_URLS:
+            page = browser.new_page(viewport={'width': 1280, 'height': 900})
+            try:
+                print(f'\n→ {category}: {url}')
+                page.goto(url, wait_until='domcontentloaded', timeout=35000)
+                page.wait_for_timeout(5000)
+
+                raw = page.inner_text('body')
+                jobs = parse_jobs_from_page(raw)
+
+                for j in jobs:
+                    key = (j['title'].lower(), j.get('location','').lower())
+                    if key not in seen:
+                        seen.add(key)
+                        all_jobs.append(j)
+
+                print(f'  {len(jobs)} new UK SN jobs (total unique: {len(all_jobs)})')
+            except Exception as e:
+                print(f'  ERROR: {e}')
+            finally:
+                page.close()
+
+        browser.close()
+
+    os.makedirs(os.path.dirname(OUT), exist_ok=True)
+    with open(OUT, 'w') as f:
+        json.dump(all_jobs, f, indent=2, ensure_ascii=False)
+
+    print(f'\n✅ {len(all_jobs)} UK SN Nelson Frank jobs → {OUT}')
+    for j in all_jobs:
+        sc_b = '🔒' if j.get('sc_clearance') else '  '
+        print(f'  {sc_b} {j["title"][:72]} | {j["location"]} | {"SC" if j.get("sc_clearance") else ""}')
+    return all_jobs
+
+
 if __name__ == '__main__':
-    main()
+    scrape()

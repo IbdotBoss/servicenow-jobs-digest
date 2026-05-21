@@ -3,7 +3,7 @@
 import json, os
 from datetime import datetime
 
-TODAY = "2026-05-18"
+TODAY = datetime.now().strftime("%Y-%m-%d")
 REPO = os.path.expanduser("~/hermes-workspace/servicenow-jobs-digest/docs/data")
 DAILY_DIR = os.path.join(REPO, "daily")
 
