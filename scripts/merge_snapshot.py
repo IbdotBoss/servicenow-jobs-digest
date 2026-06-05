@@ -1,1 +1,104 @@
-[{'JobServe': 'os.path.join(DATA_DIR', 'jobserve_jobs.json': 'LinkedIn', 'linkedin_jobs.json': 'Reed', 'jobs.json': 'Hunt UK', 'hunt_uk_jobs.json': 'ServiceNow Careers', 'sn_careers_jobs.json': 'Nelson Frank', 'nelson_frank_jobs.json': ''}, ['WARN] Could not read {fp}: {e}', "return None\n\nall_jobs = []\nsources_counter = {}\n\nfor src_name, fp in source_files.items():\n    data = read_json(fp)\n    if not data:\n        continue\n    # Accept both list and dict with 'jobs'\n    if isinstance(data, list):\n        jobs = data\n    elif isinstance(data, dict):\n        jobs = data.get('jobs', [])\n    else:\n        print(f", ['WARN] Unexpected data type in {src_name}, skipping', 'continue\n\n    before = len(all_jobs)\n    for j in jobs:\n        j = j.copy()\n        # Ensure required fields\n        j.setdefault(\'source\', src_name)\n        j.setdefault(\'sn_role\', j.get(\'sn_role\', False))\n        j.setdefault(\'role_type\', j.get(\'role_type\', \'other\'))\n        j.setdefault(\'remote\', j.get(\'remote\', \'onsite\'))\n        j.setdefault(\'employment\', j.get(\'employment\', \'permanent\'))\n        j.setdefault(\'sc_clearance\', j.get(\'sc_clearance\', False))\n        j.setdefault(\'grad_scheme\', j.get(\'grad_scheme\', False))\n        j.setdefault(\'link_status\', j.get(\'link_status\', \'live\'))\n        j.setdefault(\'visa_sponsorship\', j.get(\'visa_sponsorship\', \'unknown\'))\n        j.setdefault(\'sponsor_licence\', j.get(\'sponsor_licence\', False))\n        j.setdefault(\'description\', j.get(\'description\', \'\'))\n        if not j.get(\'date_posted\'):\n            j[\'date_posted\'] = TODAY\n        all_jobs.append(j)\n    added = len(all_jobs) - before\n    sources_counter[src_name] = added\n    print(f"{src_name}: {added} jobs', 'Dedup by (title lower, company lower)\nseen = set()\nunique_jobs = []\nfor j in all_jobs:\n    key = (j.get(\'title\', \'\').lower().strip(), j.get(\'company\', \'\').lower().strip())\n    if key in seen:\n        continue\n    seen.add(key)\n    unique_jobs.append(j)\n\ntotal_unique = len(unique_jobs)\nprint(f"Total unique after dedup: {total_unique}', 'Write daily snapshot (dict with jobs list)\ndaily_snapshot = {\n    \'date\': TODAY,\n    \'total\': total_unique,\n    \'sources\': dict(sources_counter),\n    \'jobs\': unique_jobs\n}\ndaily_path = os.path.join(DAILY_DIR, f"jobs_{TODAY}.json', 'with open(daily_path, \'w\') as f:\n    json.dump(daily_snapshot, f, indent=2)\nprint(f"Daily snapshot written: {daily_path}', 'Also write a jobs.json (active-only copy for index / build) but for now all are included\njobs_json_path = os.path.join(DATA_DIR, "jobs.json', 'with open(jobs_json_path, \'w\') as f:\n    json.dump({\'jobs\': unique_jobs, \'total\': total_unique}, f, indent=2)\nprint(f" jobs.json updated: {jobs_json_path}']]]
+#!/usr/bin/env python3
+import json, os
+from datetime import datetime
+
+REPO = os.path.expanduser("~/hermes-workspace/servicenow-jobs-digest/docs/data")
+DAILY_DIR = os.path.join(REPO, "daily")
+TODAY = datetime.now().strftime("%Y-%m-%d")
+
+SOURCE_FILES = {
+    "JobServe": os.path.join(REPO, "jobserve_jobs.json"),
+    "LinkedIn": os.path.join(REPO, "linkedin_jobs.json"),
+    "Hunt UK": os.path.join(REPO, "hunt_uk_jobs.json"),
+    "ServiceNow Careers": os.path.join(REPO, "sn_careers_jobs.json"),
+    "Nelson Frank": os.path.join(REPO, "nelson_frank_jobs.json"),
+}
+
+
+def read_json(path):
+    if not os.path.exists(path):
+        print(f"[WARN] Missing file: {path}")
+        return None
+    try:
+        with open(path) as f:
+            return json.load(f)
+    except Exception as e:
+        print(f"[WARN] Could not read {path}: {e}")
+        return None
+
+
+def normalize(job, default_source):
+    job.setdefault("source", default_source)
+    job.setdefault("sn_role", job.get("sn_role", False))
+    job.setdefault("role_type", job.get("role_type", "other"))
+    job.setdefault("remote", job.get("remote", "onsite"))
+    job.setdefault("employment", job.get("employment", "permanent"))
+    job.setdefault("sc_clearance", job.get("sc_clearance", False))
+    job.setdefault("grad_scheme", job.get("grad_scheme", False))
+    job.setdefault("link_status", job.get("link_status", "live"))
+    job.setdefault("visa_sponsorship", job.get("visa_sponsorship", "unknown"))
+    job.setdefault("sponsor_licence", job.get("sponsor_licence", False))
+    job.setdefault("sponsorship_mentioned", job.get("sponsorship_mentioned", False))
+    job.setdefault("description", job.get("description", ""))
+    if not job.get("date_posted"):
+        job["date_posted"] = TODAY
+    if not job.get("scraped_at"):
+        job["scraped_at"] = TODAY
+    return job
+
+
+def main():
+    os.makedirs(DAILY_DIR, exist_ok=True)
+
+    all_jobs = []
+    sources_counter = {}
+    for src_name, path in SOURCE_FILES.items():
+        data = read_json(path)
+        if not data:
+            continue
+        if isinstance(data, dict):
+            jobs = data.get("jobs", [])
+        elif isinstance(data, list):
+            jobs = data
+        else:
+            print(f"[WARN] Unexpected format in {src_name}, skipping")
+            continue
+
+        before = len(all_jobs)
+        for j in jobs:
+            all_jobs.append(normalize(j, src_name))
+        added = len(all_jobs) - before
+        sources_counter[src_name] = added
+        print(f"{src_name}: {added} jobs")
+
+    seen = set()
+    unique_jobs = []
+    for j in all_jobs:
+        key = (j.get("title", "").lower().strip(), j.get("company", "").lower().strip())
+        if key in seen:
+            continue
+        seen.add(key)
+        unique_jobs.append(j)
+    print(f"Total unique after dedup: {len(unique_jobs)}")
+
+    snapshot = {
+        "updated": TODAY,
+        "date": TODAY,
+        "total": len(unique_jobs),
+        "sources": sources_counter,
+        "jobs": unique_jobs,
+    }
+
+    daily_path = os.path.join(DAILY_DIR, f"jobs_{TODAY}.json")
+    with open(daily_path, "w") as f:
+        json.dump(snapshot, f, indent=2)
+    print(f"Daily snapshot written: {daily_path}")
+
+    jobs_json_path = os.path.join(REPO, "jobs.json")
+    with open(jobs_json_path, "w") as f:
+        json.dump({"jobs": unique_jobs, "total": len(unique_jobs)}, f, indent=2)
+    print(f"jobs.json updated: {jobs_json_path}")
+
+
+if __name__ == "__main__":
+    main()
