@@ -36,7 +36,7 @@ for label, filename in [
     ("ServiceNow Careers", "servicenow_careers_jobs.json"),
     ("Nelson Frank", "nelson_frank_jobs.json"),
     ("Hunt UK", "hunt_uk_jobs.json"),
-    ("Reed", "jobs.json"),
+    # Reed is decommissioned: no longer loaded into daily snapshots
 ]:
     path = os.path.join(REPO, filename)
     jobs = load_json(path)
