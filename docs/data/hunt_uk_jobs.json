@@ -1,26 +1,65 @@
-{
-  "updated": "2026-06-13 05:09:32",
-  "results": [
-    {
-      "title": "ServiceNow Technical Consultant - SC Clearance Required",
-      "company": "IBM UK Ltd",
-      "location": "London, England, United Kingdom",
-      "url": "https://huntukvisasponsors.com/job/service-now-technical-consultant-ibm",
-      "description": "ServiceNow Technical Consultant - SC Clearance Required. Extensive ServiceNow development, configuration, customization. Certified ServiceNow architect/professional. Strong technical expertise in ITOM, ITSM, IRM, HRSD."
-    },
-    {
-      "title": "ServiceNow - Account Executive - Mid Market",
-      "company": "NTT CLOUD COMMUNICATIONS UK LTD.",
-      "location": "England, United Kingdom",
-      "url": "https://huntukvisasponsors.com/job/servicenow-account-executive-mid-market",
-      "description": "ServiceNow Account Executive Mid Market. NTT DATA Business Solutions. National UK role."
-    },
-    {
-      "title": "Lead ServiceNow Business Process Consultant / Business Analyst",
-      "company": "Cognizant Worldwide Limited",
-      "location": "London Area, United Kingdom",
-      "url": "https://huntukvisasponsors.com/job/lead-servicenow-business-process-consultant",
-      "description": "Lead ServiceNow Business Process Consultant / Business Analyst. ITSM, CMDB, CSDM, Discovery. Mandatory requirement: SC Cleared or SC Eligible."
-    }
-  ]
-}
+[
+  {
+    "title": "ServiceNow Senior Solution Architect",
+    "company": "KPMG LLP (Local Hires)",
+    "location": "United Kingdom",
+    "salary_display": "Not listed",
+    "date_posted": "2026-06-15",
+    "url": "https://huntukvisasponsors.com/jobs?q=servicenow",
+    "source": "Hunt UK",
+    "source_type": "aggregator",
+    "sn_role": true,
+    "role_type": "architect",
+    "remote": "onsite",
+    "employment": "permanent",
+    "sc_clearance": false,
+    "grad_scheme": false,
+    "link_status": "live",
+    "visa_sponsorship": "unknown",
+    "sponsor_licence": false,
+    "description": "ServiceNow Senior Solution Architect KPMG LLP (Local Hires) 100",
+    "scraped_at": "2026-06-15 05:01:35"
+  },
+  {
+    "title": "ServiceNow Platform Owner",
+    "company": "GCI Network Solutions Limited",
+    "location": "United Kingdom",
+    "salary_display": "Not listed",
+    "date_posted": "2026-06-15",
+    "url": "https://huntukvisasponsors.com/jobs?q=servicenow",
+    "source": "Hunt UK",
+    "source_type": "aggregator",
+    "sn_role": true,
+    "role_type": "other",
+    "remote": "onsite",
+    "employment": "permanent",
+    "sc_clearance": false,
+    "grad_scheme": false,
+    "link_status": "live",
+    "visa_sponsorship": "unknown",
+    "sponsor_licence": false,
+    "description": "ServiceNow Platform Owner GCI Network Solutions Limited",
+    "scraped_at": "2026-06-15 05:01:35"
+  },
+  {
+    "title": "ServiceNow Developers(SC Cleared)",
+    "company": "Intuition IT Solutions Limited",
+    "location": "United Kingdom",
+    "salary_display": "Not listed",
+    "date_posted": "2026-06-15",
+    "url": "https://huntukvisasponsors.com/jobs?q=servicenow",
+    "source": "Hunt UK",
+    "source_type": "aggregator",
+    "sn_role": true,
+    "role_type": "developer",
+    "remote": "onsite",
+    "employment": "permanent",
+    "sc_clearance": false,
+    "grad_scheme": false,
+    "link_status": "live",
+    "visa_sponsorship": "unknown",
+    "sponsor_licence": false,
+    "description": "ServiceNow Developers(SC Cleared) Intuition IT Solutions Limited",
+    "scraped_at": "2026-06-15 05:01:35"
+  }
+]
