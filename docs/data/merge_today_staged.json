@@ -1,0 +1,21 @@
+{
+  "note": "Staging merge plan for 2026-06-20 pipeline",
+  "required_after_nelson_frank": [
+    "docs/data/jobserve_jobs.json",
+    "docs/data/linkedin_jobs.json",
+    "docs/data/servicenow_careers_jobs.json",
+    "docs/data/nelson_frank_jobs.json",
+    "docs/data/hunt_uk_jobs.json"
+  ],
+  "steps": [
+    "build_daily_snapshot.py -> jobs_2026-06-20.json",
+    "scan_sponsorship.py --csv-only",
+    "scan_sponsorship.py full scan",
+    "rebuild_master.py",
+    "git add docs/ && git commit && git push",
+    "gh api repos/IbdotBoss/servicenow-jobs-digest/pages/builds --method POST",
+    "verify via master.json"
+  ],
+  "linkedin_result": "skipped (no li_at cookies)",
+  "servicenow_careers_result": "8 jobs"
+}
