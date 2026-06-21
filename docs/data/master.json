@@ -1,7 +1,7 @@
 {
   "updated": "2026-06-21",
-  "total": 495,
-  "total_active": 107,
+  "total": 504,
+  "total_active": 116,
   "licenced_sponsors": 188,
   "daily_snapshots": [
     "2026-05-06",
@@ -42,7 +42,7 @@
   "sources": {
     "JobServe": 261,
     "LinkedIn": 105,
-    "Hunt UK": 87,
+    "Hunt UK": 96,
     "ServiceNow Careers": 18,
     "Nelson Frank": 11,
     "ComputerJobs": 9,
@@ -81,6 +81,260 @@
       "last_seen": "2026-06-21",
       "sources": [
         "JobServe"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "FSO Architect (CTA) - Manager - Tech Cons - Open Location",
+      "company": "EY",
+      "location": "London, England, United Kingdom",
+      "url": "https://huntukvisasponsors.com/job/servicenow-servicenow-fso-architect-cta-manager-tech-cons-open-location-at-ey-ixdzk8ng86vi",
+      "date_posted": "2026-06-16",
+      "scraped_at": "2026-06-21 05:09:17",
+      "source": "Hunt UK",
+      "visa_sponsorship": "unknown",
+      "sponsor_licence": false,
+      "sponsorship_mentioned": false,
+      "sc_clearance": false,
+      "description": "",
+      "role_type": "unknown",
+      "remote": "onsite",
+      "employment": "unknown",
+      "sn_role": true,
+      "link_status": "live",
+      "salary_display": "Not listed",
+      "source_type": "aggregator",
+      "grad_scheme": false,
+      "first_seen": "2026-06-21",
+      "last_seen": "2026-06-21",
+      "sources": [
+        "Hunt UK"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "Technical Architect",
+      "company": "Accenture (UK) Limited",
+      "location": "London, England, United Kingdom",
+      "url": "https://huntukvisasponsors.com/job/servicenow-technical-architect-at-accenture-uk-ireland-bfcklspgaisl",
+      "date_posted": "2026-06-17",
+      "scraped_at": "2026-06-21 05:09:17",
+      "source": "Hunt UK",
+      "visa_sponsorship": "sc_blocked",
+      "sponsor_licence": true,
+      "sponsorship_mentioned": true,
+      "sc_clearance": false,
+      "description": "",
+      "role_type": "unknown",
+      "remote": "onsite",
+      "employment": "unknown",
+      "sn_role": true,
+      "link_status": "live",
+      "salary_display": "Not listed",
+      "source_type": "aggregator",
+      "grad_scheme": false,
+      "sponsorship_scan": "Security clearance required",
+      "first_seen": "2026-06-21",
+      "last_seen": "2026-06-21",
+      "sources": [
+        "Hunt UK"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "Manager, HRSD, HR Transformation",
+      "company": "DELOITTE LLP",
+      "location": "Greater Manchester, England, United Kingdom",
+      "url": "https://huntukvisasponsors.com/job/manager-servicenow-hrsd-hr-transformation-at-deloitte-p4fduvuuwfs",
+      "date_posted": "2026-06-16",
+      "scraped_at": "2026-06-21 05:09:17",
+      "source": "Hunt UK",
+      "visa_sponsorship": "unknown",
+      "sponsor_licence": true,
+      "sponsorship_mentioned": true,
+      "sc_clearance": false,
+      "description": "",
+      "role_type": "unknown",
+      "remote": "onsite",
+      "employment": "unknown",
+      "sn_role": true,
+      "link_status": "live",
+      "salary_display": "Not listed",
+      "source_type": "aggregator",
+      "grad_scheme": false,
+      "first_seen": "2026-06-21",
+      "last_seen": "2026-06-21",
+      "sources": [
+        "Hunt UK"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "Lead Developer",
+      "company": "LA FOSSE ASSOCIATES LIMITED",
+      "location": "London Area, United Kingdom",
+      "url": "https://huntukvisasponsors.com/job/lead-servicenow-developer-at-la-fosse-s8yzdswqd7zs",
+      "date_posted": "2026-06-16",
+      "scraped_at": "2026-06-21 05:09:17",
+      "source": "Hunt UK",
+      "visa_sponsorship": "unknown",
+      "sponsor_licence": true,
+      "sponsorship_mentioned": true,
+      "sc_clearance": false,
+      "description": "",
+      "role_type": "unknown",
+      "remote": "onsite",
+      "employment": "unknown",
+      "sn_role": true,
+      "link_status": "live",
+      "salary_display": "Not listed",
+      "source_type": "aggregator",
+      "grad_scheme": false,
+      "first_seen": "2026-06-21",
+      "last_seen": "2026-06-21",
+      "sources": [
+        "Hunt UK"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "Program Manager",
+      "company": "LA FOSSE ASSOCIATES LIMITED",
+      "location": "London Area, United Kingdom",
+      "url": "https://huntukvisasponsors.com/job/servicenow-program-manager-at-la-fosse-fjz9axg0tdk",
+      "date_posted": "2026-06-16",
+      "scraped_at": "2026-06-21 05:09:17",
+      "source": "Hunt UK",
+      "visa_sponsorship": "unknown",
+      "sponsor_licence": true,
+      "sponsorship_mentioned": true,
+      "sc_clearance": false,
+      "description": "",
+      "role_type": "unknown",
+      "remote": "onsite",
+      "employment": "unknown",
+      "sn_role": true,
+      "link_status": "live",
+      "salary_display": "Not listed",
+      "source_type": "aggregator",
+      "grad_scheme": false,
+      "first_seen": "2026-06-21",
+      "last_seen": "2026-06-21",
+      "sources": [
+        "Hunt UK"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "Senior Consultant - HRSD",
+      "company": "DAMIA GROUP LTD",
+      "location": "England, United Kingdom",
+      "url": "https://huntukvisasponsors.com/job/senior-consultant-servicenow-hrsd-at-damia-group-7okou2gvktdm",
+      "date_posted": "2026-06-15",
+      "scraped_at": "2026-06-21 05:09:17",
+      "source": "Hunt UK",
+      "visa_sponsorship": "sc_blocked",
+      "sponsor_licence": true,
+      "sponsorship_mentioned": true,
+      "sc_clearance": false,
+      "description": "",
+      "role_type": "unknown",
+      "remote": "onsite",
+      "employment": "unknown",
+      "sn_role": true,
+      "link_status": "live",
+      "salary_display": "Not listed",
+      "source_type": "aggregator",
+      "grad_scheme": false,
+      "sponsorship_scan": "Security clearance required",
+      "first_seen": "2026-06-21",
+      "last_seen": "2026-06-21",
+      "sources": [
+        "Hunt UK"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "Senior Developer",
+      "company": "National Grid Electricity Distribution (South West) plc",
+      "location": "Warwick, England, United Kingdom",
+      "url": "https://huntukvisasponsors.com/job/senior-servicenow-developer-at-national-grid-e6dnwvj9s4oc",
+      "date_posted": "2026-06-15",
+      "scraped_at": "2026-06-21 05:09:17",
+      "source": "Hunt UK",
+      "visa_sponsorship": "unknown",
+      "sponsor_licence": true,
+      "sponsorship_mentioned": true,
+      "sc_clearance": false,
+      "description": "",
+      "role_type": "unknown",
+      "remote": "onsite",
+      "employment": "unknown",
+      "sn_role": true,
+      "link_status": "live",
+      "salary_display": "Not listed",
+      "source_type": "aggregator",
+      "grad_scheme": false,
+      "first_seen": "2026-06-21",
+      "last_seen": "2026-06-21",
+      "sources": [
+        "Hunt UK"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "Technical Manager - ServiceNow",
+      "company": "EY",
+      "location": "London, England, United Kingdom",
+      "url": "https://huntukvisasponsors.com/job/technical-manager-servicenow-at-ey-5qvlqv6wkq6e",
+      "date_posted": "2026-06-13",
+      "scraped_at": "2026-06-21 05:09:17",
+      "source": "Hunt UK",
+      "visa_sponsorship": "unknown",
+      "sponsor_licence": false,
+      "sponsorship_mentioned": false,
+      "sc_clearance": false,
+      "description": "",
+      "role_type": "unknown",
+      "remote": "onsite",
+      "employment": "unknown",
+      "sn_role": true,
+      "link_status": "live",
+      "salary_display": "Not listed",
+      "source_type": "aggregator",
+      "grad_scheme": false,
+      "first_seen": "2026-06-21",
+      "last_seen": "2026-06-21",
+      "sources": [
+        "Hunt UK"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "Vice President, Risk Specialist Senior Engineer",
+      "company": "MUFG Securities EMEA plc",
+      "location": "London, England, United Kingdom",
+      "url": "https://huntukvisasponsors.com/job/vice-president-risk-specialist-senior-servicenow-engineer-at-mufg-ta6poeufemfs",
+      "date_posted": "2026-06-12",
+      "scraped_at": "2026-06-21 05:09:17",
+      "source": "Hunt UK",
+      "visa_sponsorship": "unknown",
+      "sponsor_licence": true,
+      "sponsorship_mentioned": true,
+      "sc_clearance": false,
+      "description": "",
+      "role_type": "unknown",
+      "remote": "onsite",
+      "employment": "unknown",
+      "sn_role": true,
+      "link_status": "live",
+      "salary_display": "Not listed",
+      "source_type": "aggregator",
+      "grad_scheme": false,
+      "first_seen": "2026-06-21",
+      "last_seen": "2026-06-21",
+      "sources": [
+        "Hunt UK"
       ],
       "status": "active"
     },
@@ -2074,11 +2328,11 @@
       "description": "",
       "scraped_at": "2026-06-07 05:06:03",
       "first_seen": "2026-06-07",
-      "last_seen": "2026-06-21",
+      "last_seen": "2026-06-08",
       "sources": [
         "Hunt UK"
       ],
-      "sponsor_licence": true,
+      "sponsor_licence": false,
       "status": "active"
     },
     {
@@ -2101,12 +2355,11 @@
       "description": "",
       "scraped_at": "2026-06-07 05:06:03",
       "first_seen": "2026-06-07",
-      "last_seen": "2026-06-21",
+      "last_seen": "2026-06-08",
       "sources": [
         "Hunt UK"
       ],
-      "sponsor_licence": true,
-      "sponsorship_mentioned": true,
+      "sponsor_licence": false,
       "status": "active"
     },
     {
@@ -2129,11 +2382,11 @@
       "description": "",
       "scraped_at": "2026-06-07 05:06:03",
       "first_seen": "2026-06-07",
-      "last_seen": "2026-06-21",
+      "last_seen": "2026-06-08",
       "sources": [
         "Hunt UK"
       ],
-      "sponsor_licence": true,
+      "sponsor_licence": false,
       "status": "active"
     },
     {
@@ -2156,11 +2409,11 @@
       "description": "",
       "scraped_at": "2026-06-07 05:06:03",
       "first_seen": "2026-06-07",
-      "last_seen": "2026-06-21",
+      "last_seen": "2026-06-08",
       "sources": [
         "Hunt UK"
       ],
-      "sponsor_licence": true,
+      "sponsor_licence": false,
       "status": "active"
     },
     {
@@ -2183,11 +2436,11 @@
       "description": "",
       "scraped_at": "2026-06-07 05:06:03",
       "first_seen": "2026-06-07",
-      "last_seen": "2026-06-21",
+      "last_seen": "2026-06-08",
       "sources": [
         "Hunt UK"
       ],
-      "sponsor_licence": true,
+      "sponsor_licence": false,
       "status": "active"
     },
     {
@@ -2210,12 +2463,11 @@
       "description": "",
       "scraped_at": "2026-06-07 05:06:03",
       "first_seen": "2026-06-07",
-      "last_seen": "2026-06-21",
+      "last_seen": "2026-06-08",
       "sources": [
         "Hunt UK"
       ],
-      "sponsor_licence": true,
-      "sponsorship_mentioned": true,
+      "sponsor_licence": false,
       "status": "active"
     },
     {
@@ -2238,11 +2490,11 @@
       "description": "",
       "scraped_at": "2026-06-07 05:06:03",
       "first_seen": "2026-06-07",
-      "last_seen": "2026-06-21",
+      "last_seen": "2026-06-08",
       "sources": [
         "Hunt UK"
       ],
-      "sponsor_licence": true,
+      "sponsor_licence": false,
       "status": "active"
     },
     {
