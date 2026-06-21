@@ -1,8 +1,8 @@
 {
-  "updated": "2026-06-20",
-  "total": 494,
-  "total_active": 106,
-  "licenced_sponsors": 180,
+  "updated": "2026-06-21",
+  "total": 495,
+  "total_active": 107,
+  "licenced_sponsors": 188,
   "daily_snapshots": [
     "2026-05-06",
     "2026-05-07",
@@ -36,10 +36,11 @@
     "2026-06-11",
     "2026-06-13",
     "2026-06-16",
-    "2026-06-20"
+    "2026-06-20",
+    "2026-06-21"
   ],
   "sources": {
-    "JobServe": 260,
+    "JobServe": 261,
     "LinkedIn": 105,
     "Hunt UK": 87,
     "ServiceNow Careers": 18,
@@ -55,6 +56,34 @@
     "CV-Library": 1
   },
   "jobs": [
+    {
+      "title": "ServiceNow Developer (SC-Cleared)",
+      "company": "Pigment Consulting",
+      "location": "500.00 Daily - 850.00 Daily GBP",
+      "salary_display": "Not listed",
+      "date_posted": "2026-06-21 02:11:08",
+      "url": "https://www.jobserve.com/gb/en/mob/job/188CAE76AD40E2B05D/",
+      "source": "JobServe",
+      "source_type": "aggregator",
+      "sn_role": true,
+      "role_type": "developer",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": true,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "sc_blocked",
+      "description": "Posted 3 hours ago",
+      "scraped_at": "2026-06-21 05:02:36",
+      "sponsor_licence": true,
+      "sponsorship_scan": "Security clearance required",
+      "first_seen": "2026-06-21",
+      "last_seen": "2026-06-21",
+      "sources": [
+        "JobServe"
+      ],
+      "status": "active"
+    },
     {
       "title": "ServiceNow Developer",
       "company": "Project Recruit",
@@ -76,7 +105,7 @@
       "scraped_at": "2026-06-20 05:00:39",
       "sponsor_licence": false,
       "first_seen": "2026-06-20",
-      "last_seen": "2026-06-20",
+      "last_seen": "2026-06-21",
       "sources": [
         "JobServe"
       ],
@@ -211,7 +240,7 @@
       "scraped_at": "2026-06-20 05:00:39",
       "sponsor_licence": true,
       "first_seen": "2026-06-20",
-      "last_seen": "2026-06-20",
+      "last_seen": "2026-06-21",
       "sources": [
         "JobServe"
       ],
@@ -238,7 +267,7 @@
       "scraped_at": "2026-06-20 05:00:39",
       "sponsor_licence": false,
       "first_seen": "2026-06-20",
-      "last_seen": "2026-06-20",
+      "last_seen": "2026-06-21",
       "sources": [
         "JobServe"
       ],
@@ -265,7 +294,7 @@
       "scraped_at": "2026-06-20 05:00:39",
       "sponsor_licence": false,
       "first_seen": "2026-06-20",
-      "last_seen": "2026-06-20",
+      "last_seen": "2026-06-21",
       "sources": [
         "JobServe"
       ],
@@ -292,7 +321,7 @@
       "scraped_at": "2026-06-20 05:00:39",
       "sponsor_licence": true,
       "first_seen": "2026-06-20",
-      "last_seen": "2026-06-20",
+      "last_seen": "2026-06-21",
       "sources": [
         "JobServe"
       ],
@@ -319,7 +348,7 @@
       "scraped_at": "2026-06-20 05:00:39",
       "sponsor_licence": false,
       "first_seen": "2026-06-20",
-      "last_seen": "2026-06-20",
+      "last_seen": "2026-06-21",
       "sources": [
         "JobServe"
       ],
@@ -347,7 +376,7 @@
       "sponsor_licence": false,
       "sponsorship_scan": "SC:security clearance:sc clear",
       "first_seen": "2026-06-20",
-      "last_seen": "2026-06-20",
+      "last_seen": "2026-06-21",
       "sources": [
         "JobServe"
       ],
@@ -456,7 +485,7 @@
       "scraped_at": "2026-06-20 05:00:39",
       "sponsor_licence": false,
       "first_seen": "2026-06-20",
-      "last_seen": "2026-06-20",
+      "last_seen": "2026-06-21",
       "sources": [
         "JobServe"
       ],
@@ -564,7 +593,7 @@
       "description": "Company Description It all started in sunny San Diego, California in 2004 when a visionary engineer, Fred Luddy, saw the potential to transform how we work. Fast forward to today \u2014 ServiceNow stands as a global market leader, bringing innovative AI-enhanced technology to over 8,100 customers, includ",
       "scraped_at": "2026-06-16 05:00:45",
       "first_seen": "2026-06-16",
-      "last_seen": "2026-06-20",
+      "last_seen": "2026-06-21",
       "sources": [
         "ServiceNow Careers"
       ],
@@ -1131,7 +1160,7 @@
       "description": "Company Description It all started in sunny San Diego, California in 2004 when a visionary engineer, Fred Luddy, saw the potential to transform how we work. Fast forward to today \u2014 ServiceNow stands as a global market leader, bringing innovative AI-enhanced technology to over 8,100 customers, includ",
       "scraped_at": "2026-06-13 05:01:48",
       "first_seen": "2026-06-13",
-      "last_seen": "2026-06-20",
+      "last_seen": "2026-06-21",
       "sources": [
         "ServiceNow Careers"
       ],
@@ -1506,7 +1535,7 @@
       "scraped_at": "2026-06-11 05:09:04",
       "sponsor_licence": true,
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-20",
+      "last_seen": "2026-06-21",
       "sources": [
         "JobServe"
       ],
@@ -1587,7 +1616,7 @@
       "description": "Company Description It all started when engineer Fred Luddy wrote code that automated a tedious task for his coworker, Phyllis. She cried tears of joy. That moment inspired Fred to build a company that could do that for everyone\u2014freeing people from busywork so they could focus on meaningful work. To",
       "scraped_at": "2026-06-11 05:01:29",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-20",
+      "last_seen": "2026-06-21",
       "sources": [
         "ServiceNow Careers"
       ],
@@ -1614,7 +1643,7 @@
       "description": "Company Description It all started when engineer Fred Luddy wrote code that automated a tedious task for his coworker, Phyllis. She cried tears of joy. That moment inspired Fred to build a company that could do that for everyone\u2014freeing people from busywork so they could focus on meaningful work. To",
       "scraped_at": "2026-06-11 05:01:29",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-20",
+      "last_seen": "2026-06-21",
       "sources": [
         "ServiceNow Careers"
       ],
@@ -2045,11 +2074,11 @@
       "description": "",
       "scraped_at": "2026-06-07 05:06:03",
       "first_seen": "2026-06-07",
-      "last_seen": "2026-06-08",
+      "last_seen": "2026-06-21",
       "sources": [
         "Hunt UK"
       ],
-      "sponsor_licence": false,
+      "sponsor_licence": true,
       "status": "active"
     },
     {
@@ -2072,11 +2101,12 @@
       "description": "",
       "scraped_at": "2026-06-07 05:06:03",
       "first_seen": "2026-06-07",
-      "last_seen": "2026-06-08",
+      "last_seen": "2026-06-21",
       "sources": [
         "Hunt UK"
       ],
-      "sponsor_licence": false,
+      "sponsor_licence": true,
+      "sponsorship_mentioned": true,
       "status": "active"
     },
     {
@@ -2099,11 +2129,11 @@
       "description": "",
       "scraped_at": "2026-06-07 05:06:03",
       "first_seen": "2026-06-07",
-      "last_seen": "2026-06-08",
+      "last_seen": "2026-06-21",
       "sources": [
         "Hunt UK"
       ],
-      "sponsor_licence": false,
+      "sponsor_licence": true,
       "status": "active"
     },
     {
@@ -2126,11 +2156,11 @@
       "description": "",
       "scraped_at": "2026-06-07 05:06:03",
       "first_seen": "2026-06-07",
-      "last_seen": "2026-06-08",
+      "last_seen": "2026-06-21",
       "sources": [
         "Hunt UK"
       ],
-      "sponsor_licence": false,
+      "sponsor_licence": true,
       "status": "active"
     },
     {
@@ -2153,11 +2183,11 @@
       "description": "",
       "scraped_at": "2026-06-07 05:06:03",
       "first_seen": "2026-06-07",
-      "last_seen": "2026-06-08",
+      "last_seen": "2026-06-21",
       "sources": [
         "Hunt UK"
       ],
-      "sponsor_licence": false,
+      "sponsor_licence": true,
       "status": "active"
     },
     {
@@ -2180,11 +2210,12 @@
       "description": "",
       "scraped_at": "2026-06-07 05:06:03",
       "first_seen": "2026-06-07",
-      "last_seen": "2026-06-08",
+      "last_seen": "2026-06-21",
       "sources": [
         "Hunt UK"
       ],
-      "sponsor_licence": false,
+      "sponsor_licence": true,
+      "sponsorship_mentioned": true,
       "status": "active"
     },
     {
@@ -2207,11 +2238,11 @@
       "description": "",
       "scraped_at": "2026-06-07 05:06:03",
       "first_seen": "2026-06-07",
-      "last_seen": "2026-06-08",
+      "last_seen": "2026-06-21",
       "sources": [
         "Hunt UK"
       ],
-      "sponsor_licence": false,
+      "sponsor_licence": true,
       "status": "active"
     },
     {
@@ -2951,7 +2982,7 @@
       "sponsor_licence": true,
       "sponsorship_mentioned": false,
       "first_seen": "2026-06-04",
-      "last_seen": "2026-06-20",
+      "last_seen": "2026-06-21",
       "sources": [
         "JobServe"
       ],
@@ -3707,7 +3738,7 @@
       "description": "Company Description It all started when engineer Fred Luddy wrote code that automated a tedious task for his coworker, Phyllis. She cried tears of joy. That moment inspired Fred to build a company that could do that for everyone\u2014freeing people from busywork so they could focus on meaningful work. To",
       "scraped_at": "2026-05-31 05:01:37",
       "first_seen": "2026-05-31",
-      "last_seen": "2026-06-20",
+      "last_seen": "2026-06-21",
       "sources": [
         "ServiceNow Careers"
       ],
@@ -5516,7 +5547,7 @@
       "description": "Company Description It all started in sunny San Diego, California in 2004 when a visionary engineer, Fred Luddy, saw the potential to transform how we work. Fast forward to today \u2014 ServiceNow stands as a global market leader, bringing innovative AI-enhanced technology to over 8,100 customers, includ",
       "scraped_at": "2026-05-21 05:03:21",
       "first_seen": "2026-05-21",
-      "last_seen": "2026-06-20",
+      "last_seen": "2026-06-21",
       "sources": [
         "ServiceNow Careers"
       ],
@@ -5862,13 +5893,13 @@
       "url": "https://www.nelsonfrank.com/servicenow-jobs-in-united-kingdom",
       "description": "UK - ServiceNow Consultants - up to \u00a395,000 + Bonus and Benfits <br /><br />I'm supporting a leading consultancy that is expanding its ServiceNow capability in the UK. We're seeking ServiceNow Implementation Consultants to join a high-performing and growing practice. HRSD experience is highly advantageous but not essential.<br /><br />Role Overview<br /><br /> * Contribute to or lead full lifecycle ServiceNow implementations across modules such as ITSM, ITOM, HRSD, SecOps, and CSM<br /> * Work directly with business and technical stakeholders to shape high-quality solutions<br /> * Support the development of best-practice frameworks and platform standards<br /> * Mentor junior colleagues (for senior-level applicants)<br /> * Occasional travel to client sites across the UK, with full flexibility<br /><br />Requirements<br /><br /> * Hands-on experience with the ServiceNow platform in consulting or delivery roles<br /> * Strong understanding of platform configuration, integrations, and delivery methodologies<br /> * Excellent communication and stakeholder engagement skills<br /> * Relevant ServiceNow certifications (CSA, CIS, CTA, etc.) are a strong plus<br /><br />What's Offered<br /><br /> * Highly competitive remuneration, dependent on experience and level<br /> * Clear career progression pathways within a growing ServiceNow practice<br /> * Flexible working arrangements<br /> * Opportunity to deliver impactful, enterprise-scale digital transformation projects<br /><br />If you're exploring your next move within the UK's ServiceNow market, I'd be happy to arrange a confidential discussion.<img src=\"https://counter.adcourier.com/bC5jb3guMTgzNzkuMTA3NjRAbmlnZWxmcmFuay5hcGxpdHJhay5jb20.gif\" />",
       "source": "Nelson Frank",
-      "visa_sponsorship": "unknown",
+      "visa_sponsorship": "sc_blocked",
       "date_posted": "2026-05-20",
       "scraped_at": "2026-05-20 05:00:00",
       "first_seen": "2026-05-20",
       "sponsor_licence": false,
       "agency_unknown": true,
-      "last_seen": "2026-06-20",
+      "last_seen": "2026-06-21",
       "sources": [
         "Nelson Frank"
       ],
@@ -5891,13 +5922,13 @@
       "url": "https://www.nelsonfrank.com/servicenow-jobs-in-united-kingdom",
       "description": "Are you a ServiceNow pro who loves shaping great employee experiences. We're looking for someone who can think big picture, dive into the technical detail when needed, and guide both clients and teams toward successful outcomes.<br /><br />What You'll Be Doing<br /><br /> * <br /><br />Lead the architecture and design of HRSD solutions across modules like Case & Knowledge Management, Employee Center, Lifecycle Events, and more.<br /> * <br /><br />Work closely with clients to understand their needs and turn them into scalable, practical ServiceNow solutions.<br /> * <br /><br />Be the technical go-to person for the team - helping guide consultants and developers during delivery.<br /> * <br /><br />Stay on top of the latest ServiceNow HRSD updates and features to keep our clients ahead of the curve.<br /> * <br /><br />Make sure our designs follow best practices and deliver value - not just functionality.<br /><br />What You Bring<br /><br /> * <br /><br />Hands-on experience with ServiceNow HRSD - ideally across multiple modules.<br /> * <br /><br />Solid understanding of ServiceNow architecture, integrations, and platform capabilities.<br /> * <br /><br />Experience leading end-to-end implementations or solution design for enterprise clients.<br /> * <br /><br />Great communication skills - you can talk tech with developers and strategy with business leaders.<br /> * <br /><br />Certifications like CSA, HRSD Implementation Specialist, or CAD are a big plus.<br /> * Eligible for security clearance / ILR<img src=\"https://counter.adcourier.com/Zy53aWxzb24uODIxMDAuMTA3NjRAbmlnZWxmcmFuay5hcGxpdHJhay5jb20.gif\" />",
       "source": "Nelson Frank",
-      "visa_sponsorship": "unknown",
+      "visa_sponsorship": "sc_blocked",
       "date_posted": "2026-05-20",
       "scraped_at": "2026-05-20 05:00:00",
       "first_seen": "2026-05-20",
       "sponsor_licence": false,
       "agency_unknown": true,
-      "last_seen": "2026-06-20",
+      "last_seen": "2026-06-21",
       "sources": [
         "Nelson Frank"
       ],
@@ -6994,7 +7025,7 @@
       "location": "75k - 85k Annual GBP",
       "salary_display": "Not listed",
       "date_posted": "2026-05-14 10:32:57",
-      "url": "https://www.jobserve.com/gb/en/mob/job/8F8BB0B8CAE29B7CC4/",
+      "url": "https://www.jobserve.com/gb/en/mob/job/F5921B4AB436EB1683/",
       "source": "JobServe",
       "source_type": "aggregator",
       "sn_role": true,
@@ -7013,7 +7044,7 @@
       ],
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-05-15",
-      "last_seen": "2026-06-07",
+      "last_seen": "2026-06-21",
       "status": "active"
     },
     {
@@ -7781,7 +7812,7 @@
         "ServiceNow Careers"
       ],
       "first_seen": "2026-05-15",
-      "last_seen": "2026-06-20",
+      "last_seen": "2026-06-21",
       "status": "active"
     },
     {
@@ -7808,7 +7839,7 @@
         "ServiceNow Careers"
       ],
       "first_seen": "2026-05-15",
-      "last_seen": "2026-06-20",
+      "last_seen": "2026-06-21",
       "status": "active"
     },
     {
@@ -7973,7 +8004,7 @@
       ],
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-05-15",
-      "last_seen": "2026-06-20",
+      "last_seen": "2026-06-21",
       "status": "active"
     },
     {
@@ -8033,7 +8064,7 @@
       ],
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-05-15",
-      "last_seen": "2026-06-20",
+      "last_seen": "2026-06-21",
       "status": "active"
     },
     {
