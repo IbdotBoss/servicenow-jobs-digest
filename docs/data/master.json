@@ -1,7 +1,7 @@
 {
-  "updated": "2026-06-21",
-  "total": 504,
-  "total_active": 116,
+  "updated": "2026-06-22",
+  "total": 510,
+  "total_active": 102,
   "licenced_sponsors": 188,
   "daily_snapshots": [
     "2026-05-06",
@@ -37,12 +37,13 @@
     "2026-06-13",
     "2026-06-16",
     "2026-06-20",
-    "2026-06-21"
+    "2026-06-21",
+    "2026-06-22"
   ],
   "sources": {
     "JobServe": 261,
     "LinkedIn": 105,
-    "Hunt UK": 96,
+    "Hunt UK": 102,
     "ServiceNow Careers": 18,
     "Nelson Frank": 11,
     "ComputerJobs": 9,
@@ -56,6 +57,168 @@
     "CV-Library": 1
   },
   "jobs": [
+    {
+      "title": "ServiceNow - ServiceNow FSO Architect (CTA) - Manager - Tech Cons - Open Location",
+      "company": "EY",
+      "location": "United Kingdom",
+      "salary_display": "Not listed",
+      "date_posted": "2026-06-22",
+      "url": "https://huntukvisasponsors.com/jobs?q=servicenow",
+      "source": "Hunt UK",
+      "source_type": "aggregator",
+      "sn_role": true,
+      "role_type": "architect",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "expired",
+      "visa_sponsorship": "unknown",
+      "sponsor_licence": false,
+      "description": "ServiceNow - ServiceNow FSO Architect (CTA) - Manager - Tech Cons - Open Location EY Location: Anywhere in Country At EY, we\u2019re all in to shape your future with confidence. We\u2019ll help you succeed in a globally connected powerhouse of diverse teams and take your career wherever you want it to go. Join EY and help to build a better working world. In the digital economy, it takes more than good ideas and strong leadership to thrive. Upgrading outdated processes, systems and information is vital \u2013 b",
+      "scraped_at": "2026-06-22 05:03:05",
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "sources": [
+        "Hunt UK"
+      ],
+      "status": "expired"
+    },
+    {
+      "title": "Manager, ServiceNow HRSD, HR Transformation",
+      "company": "DELOITTE LLP",
+      "location": "United Kingdom",
+      "salary_display": "Not listed",
+      "date_posted": "2026-06-22",
+      "url": "https://huntukvisasponsors.com/jobs?q=servicenow",
+      "source": "Hunt UK",
+      "source_type": "aggregator",
+      "sn_role": true,
+      "role_type": "manager",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "expired",
+      "visa_sponsorship": "unknown",
+      "sponsor_licence": false,
+      "description": "Manager, ServiceNow HRSD, HR Transformation DELOITTE LLP",
+      "scraped_at": "2026-06-22 05:03:05",
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "sources": [
+        "Hunt UK"
+      ],
+      "status": "expired"
+    },
+    {
+      "title": "Lead ServiceNow Developer",
+      "company": "LA FOSSE ASSOCIATES LIMITED",
+      "location": "United Kingdom",
+      "salary_display": "Not listed",
+      "date_posted": "2026-06-22",
+      "url": "https://huntukvisasponsors.com/jobs?q=servicenow",
+      "source": "Hunt UK",
+      "source_type": "aggregator",
+      "sn_role": true,
+      "role_type": "developer",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "expired",
+      "visa_sponsorship": "unknown",
+      "sponsor_licence": false,
+      "description": "Lead ServiceNow Developer LA FOSSE ASSOCIATES LIMITED",
+      "scraped_at": "2026-06-22 05:03:05",
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "sources": [
+        "Hunt UK"
+      ],
+      "status": "expired"
+    },
+    {
+      "title": "ServiceNow Program Manager",
+      "company": "LA FOSSE ASSOCIATES LIMITED",
+      "location": "United Kingdom",
+      "salary_display": "Not listed",
+      "date_posted": "2026-06-22",
+      "url": "https://huntukvisasponsors.com/jobs?q=servicenow",
+      "source": "Hunt UK",
+      "source_type": "aggregator",
+      "sn_role": true,
+      "role_type": "manager",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "expired",
+      "visa_sponsorship": "unknown",
+      "sponsor_licence": false,
+      "description": "ServiceNow Program Manager LA FOSSE ASSOCIATES LIMITED",
+      "scraped_at": "2026-06-22 05:03:05",
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "sources": [
+        "Hunt UK"
+      ],
+      "status": "expired"
+    },
+    {
+      "title": "Senior Consultant - ServiceNow HRSD",
+      "company": "DAMIA GROUP LTD",
+      "location": "United Kingdom",
+      "salary_display": "Not listed",
+      "date_posted": "2026-06-22",
+      "url": "https://huntukvisasponsors.com/jobs?q=servicenow",
+      "source": "Hunt UK",
+      "source_type": "aggregator",
+      "sn_role": true,
+      "role_type": "consultant",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "expired",
+      "visa_sponsorship": "unknown",
+      "sponsor_licence": false,
+      "description": "Senior Consultant - ServiceNow HRSD DAMIA GROUP LTD",
+      "scraped_at": "2026-06-22 05:03:05",
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "sources": [
+        "Hunt UK"
+      ],
+      "status": "expired"
+    },
+    {
+      "title": "Senior ServiceNow Developer",
+      "company": "National Grid Electricity Distribution (South West) plc",
+      "location": "United Kingdom",
+      "salary_display": "Not listed",
+      "date_posted": "2026-06-22",
+      "url": "https://huntukvisasponsors.com/jobs?q=servicenow",
+      "source": "Hunt UK",
+      "source_type": "aggregator",
+      "sn_role": true,
+      "role_type": "developer",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "expired",
+      "visa_sponsorship": "unknown",
+      "sponsor_licence": false,
+      "description": "Senior ServiceNow Developer National Grid Electricity Distribution (South West) plc",
+      "scraped_at": "2026-06-22 05:03:05",
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "sources": [
+        "Hunt UK"
+      ],
+      "status": "expired"
+    },
     {
       "title": "ServiceNow Developer (SC-Cleared)",
       "company": "Pigment Consulting",
@@ -285,8 +448,8 @@
     {
       "title": "Technical Manager - ServiceNow",
       "company": "EY",
-      "location": "London, England, United Kingdom",
-      "url": "https://huntukvisasponsors.com/job/technical-manager-servicenow-at-ey-5qvlqv6wkq6e",
+      "location": "United Kingdom",
+      "url": "https://huntukvisasponsors.com/jobs?q=servicenow",
       "date_posted": "2026-06-13",
       "scraped_at": "2026-06-21 05:09:17",
       "source": "Hunt UK",
@@ -299,16 +462,16 @@
       "remote": "onsite",
       "employment": "unknown",
       "sn_role": true,
-      "link_status": "live",
+      "link_status": "expired",
       "salary_display": "Not listed",
       "source_type": "aggregator",
       "grad_scheme": false,
       "first_seen": "2026-06-21",
-      "last_seen": "2026-06-21",
+      "last_seen": "2026-06-22",
       "sources": [
         "Hunt UK"
       ],
-      "status": "active"
+      "status": "expired"
     },
     {
       "title": "Vice President, Risk Specialist Senior Engineer",
@@ -847,7 +1010,7 @@
       "description": "Company Description It all started in sunny San Diego, California in 2004 when a visionary engineer, Fred Luddy, saw the potential to transform how we work. Fast forward to today \u2014 ServiceNow stands as a global market leader, bringing innovative AI-enhanced technology to over 8,100 customers, includ",
       "scraped_at": "2026-06-16 05:00:45",
       "first_seen": "2026-06-16",
-      "last_seen": "2026-06-21",
+      "last_seen": "2026-06-22",
       "sources": [
         "ServiceNow Careers"
       ],
@@ -856,7 +1019,7 @@
     {
       "title": "Vice President, Risk Specialist Senior ServiceNow Engineer",
       "company": "MUFG Securities EMEA plc",
-      "location": "London, England, United Kingdom",
+      "location": "United Kingdom",
       "salary_display": "Not listed",
       "date_posted": "2026-06-12",
       "url": "https://huntukvisasponsors.com/jobs?q=servicenow",
@@ -874,7 +1037,7 @@
       "description": "Vice President, Risk Specialist Senior ServiceNow Engineer MUFG Securities EMEA plc London, England, United Kingdom Posted 6/12/2026",
       "scraped_at": "2026-06-16 05:30:00",
       "first_seen": "2026-06-16",
-      "last_seen": "2026-06-20",
+      "last_seen": "2026-06-22",
       "sources": [
         "Hunt UK"
       ],
@@ -1414,7 +1577,7 @@
       "description": "Company Description It all started in sunny San Diego, California in 2004 when a visionary engineer, Fred Luddy, saw the potential to transform how we work. Fast forward to today \u2014 ServiceNow stands as a global market leader, bringing innovative AI-enhanced technology to over 8,100 customers, includ",
       "scraped_at": "2026-06-13 05:01:48",
       "first_seen": "2026-06-13",
-      "last_seen": "2026-06-21",
+      "last_seen": "2026-06-22",
       "sources": [
         "ServiceNow Careers"
       ],
@@ -1870,7 +2033,7 @@
       "description": "Company Description It all started when engineer Fred Luddy wrote code that automated a tedious task for his coworker, Phyllis. She cried tears of joy. That moment inspired Fred to build a company that could do that for everyone\u2014freeing people from busywork so they could focus on meaningful work. To",
       "scraped_at": "2026-06-11 05:01:29",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-21",
+      "last_seen": "2026-06-22",
       "sources": [
         "ServiceNow Careers"
       ],
@@ -1897,7 +2060,7 @@
       "description": "Company Description It all started when engineer Fred Luddy wrote code that automated a tedious task for his coworker, Phyllis. She cried tears of joy. That moment inspired Fred to build a company that could do that for everyone\u2014freeing people from busywork so they could focus on meaningful work. To",
       "scraped_at": "2026-06-11 05:01:29",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-21",
+      "last_seen": "2026-06-22",
       "sources": [
         "ServiceNow Careers"
       ],
@@ -2080,7 +2243,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "stale",
       "visa_sponsorship": "unknown",
       "description": "Posted 1 day ago",
       "scraped_at": "2026-06-07 05:01:16",
@@ -2090,7 +2253,7 @@
       "sources": [
         "JobServe"
       ],
-      "status": "active"
+      "status": "stale"
     },
     {
       "title": "ServiceNow Programme Manager",
@@ -2107,7 +2270,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "stale",
       "visa_sponsorship": "unknown",
       "description": "Posted 1 day ago",
       "scraped_at": "2026-06-07 05:01:16",
@@ -2117,7 +2280,7 @@
       "sources": [
         "JobServe"
       ],
-      "status": "active"
+      "status": "stale"
     },
     {
       "title": "ServiceNow Consultant",
@@ -2134,7 +2297,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "stale",
       "visa_sponsorship": "unknown",
       "description": "Posted 1 day ago",
       "scraped_at": "2026-06-07 05:01:16",
@@ -2144,7 +2307,7 @@
       "sources": [
         "JobServe"
       ],
-      "status": "active"
+      "status": "stale"
     },
     {
       "title": "Technical Incident Manager-Control Centre-DV Cleared-\u00a3650",
@@ -2161,7 +2324,7 @@
       "employment": "permanent",
       "sc_clearance": true,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "stale",
       "visa_sponsorship": "sc_blocked",
       "description": "Posted 1 day ago",
       "scraped_at": "2026-06-07 05:01:16",
@@ -2171,7 +2334,7 @@
       "sources": [
         "JobServe"
       ],
-      "status": "active"
+      "status": "stale"
     },
     {
       "title": "IT Service Management Analyst",
@@ -2188,7 +2351,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "stale",
       "visa_sponsorship": "unknown",
       "description": "Posted 1 day ago",
       "scraped_at": "2026-06-07 05:01:16",
@@ -2198,7 +2361,7 @@
       "sources": [
         "JobServe"
       ],
-      "status": "active"
+      "status": "stale"
     },
     {
       "title": "IT Helpdesk Support",
@@ -2215,7 +2378,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "stale",
       "visa_sponsorship": "unknown",
       "description": "Posted 8 hours ago",
       "scraped_at": "2026-06-07 05:01:16",
@@ -2225,7 +2388,7 @@
       "sources": [
         "JobServe"
       ],
-      "status": "active"
+      "status": "stale"
     },
     {
       "title": "Senior ServiceNow Developer - ITAM, ITOM, HAM, Fully Remote (UK)",
@@ -2269,7 +2432,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "stale",
       "visa_sponsorship": "unknown",
       "description": "Posted 1 day ago",
       "scraped_at": "2026-06-07 05:01:16",
@@ -2279,7 +2442,7 @@
       "sources": [
         "JobServe"
       ],
-      "status": "active"
+      "status": "stale"
     },
     {
       "title": "Data Migration Lead - ServiceNow",
@@ -2296,7 +2459,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "stale",
       "visa_sponsorship": "unknown",
       "description": "Posted 1 day ago",
       "scraped_at": "2026-06-07 05:01:16",
@@ -2306,7 +2469,7 @@
       "sources": [
         "JobServe"
       ],
-      "status": "active"
+      "status": "stale"
     },
     {
       "title": "Senior Consultant - ServiceNow HRSD",
@@ -3741,7 +3904,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "stale",
       "visa_sponsorship": "unknown",
       "description": "Posted 1 day ago",
       "scraped_at": "2026-06-03 05:00:59",
@@ -3751,7 +3914,7 @@
       "sources": [
         "JobServe"
       ],
-      "status": "active"
+      "status": "stale"
     },
     {
       "title": "ServiceNow Senior Technical Consultant",
@@ -3990,7 +4153,7 @@
       "description": "Company Description It all started when engineer Fred Luddy wrote code that automated a tedious task for his coworker, Phyllis. She cried tears of joy. That moment inspired Fred to build a company that could do that for everyone\u2014freeing people from busywork so they could focus on meaningful work. To",
       "scraped_at": "2026-05-31 05:01:37",
       "first_seen": "2026-05-31",
-      "last_seen": "2026-06-21",
+      "last_seen": "2026-06-22",
       "sources": [
         "ServiceNow Careers"
       ],
@@ -5307,7 +5470,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "stale",
       "visa_sponsorship": "unknown",
       "description": "Posted 13 hours ago",
       "scraped_at": "2026-05-22 05:02:02",
@@ -5317,7 +5480,7 @@
       "sources": [
         "JobServe"
       ],
-      "status": "active"
+      "status": "stale"
     },
     {
       "title": "New Business ITSM Sales Executive/ITSM Solutions Sales",
@@ -5334,7 +5497,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "stale",
       "visa_sponsorship": "unknown",
       "description": "Posted 13 hours ago",
       "scraped_at": "2026-05-22 05:02:02",
@@ -5344,7 +5507,7 @@
       "sources": [
         "JobServe"
       ],
-      "status": "active"
+      "status": "stale"
     },
     {
       "title": "IT Operations Analyst",
@@ -5799,7 +5962,7 @@
       "description": "Company Description It all started in sunny San Diego, California in 2004 when a visionary engineer, Fred Luddy, saw the potential to transform how we work. Fast forward to today \u2014 ServiceNow stands as a global market leader, bringing innovative AI-enhanced technology to over 8,100 customers, includ",
       "scraped_at": "2026-05-21 05:03:21",
       "first_seen": "2026-05-21",
-      "last_seen": "2026-06-21",
+      "last_seen": "2026-06-22",
       "sources": [
         "ServiceNow Careers"
       ],
@@ -6151,7 +6314,7 @@
       "first_seen": "2026-05-20",
       "sponsor_licence": false,
       "agency_unknown": true,
-      "last_seen": "2026-06-21",
+      "last_seen": "2026-06-22",
       "sources": [
         "Nelson Frank"
       ],
@@ -6180,7 +6343,7 @@
       "first_seen": "2026-05-20",
       "sponsor_licence": false,
       "agency_unknown": true,
-      "last_seen": "2026-06-21",
+      "last_seen": "2026-06-22",
       "sources": [
         "Nelson Frank"
       ],
@@ -7670,7 +7833,7 @@
       "employment": "permanent",
       "sc_clearance": true,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "stale",
       "visa_sponsorship": "sc_blocked",
       "description": "Posted 1 day ago",
       "scraped_at": "2026-05-15 16:18:21",
@@ -7681,7 +7844,7 @@
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-05-15",
       "last_seen": "2026-06-07",
-      "status": "active"
+      "status": "stale"
     },
     {
       "title": "ServiceNow Solutions Advisory Lead",
@@ -7836,7 +7999,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "stale",
       "visa_sponsorship": "unknown",
       "description": "Posted 8 hours ago",
       "scraped_at": "2026-05-15 16:18:21",
@@ -7846,7 +8009,7 @@
       ],
       "first_seen": "2026-05-15",
       "last_seen": "2026-06-07",
-      "status": "active"
+      "status": "stale"
     },
     {
       "title": "IT Support",
@@ -8064,7 +8227,7 @@
         "ServiceNow Careers"
       ],
       "first_seen": "2026-05-15",
-      "last_seen": "2026-06-21",
+      "last_seen": "2026-06-22",
       "status": "active"
     },
     {
@@ -8091,7 +8254,7 @@
         "ServiceNow Careers"
       ],
       "first_seen": "2026-05-15",
-      "last_seen": "2026-06-21",
+      "last_seen": "2026-06-22",
       "status": "active"
     },
     {
@@ -8256,7 +8419,7 @@
       ],
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-05-15",
-      "last_seen": "2026-06-21",
+      "last_seen": "2026-06-22",
       "status": "active"
     },
     {
@@ -8316,7 +8479,7 @@
       ],
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-05-15",
-      "last_seen": "2026-06-21",
+      "last_seen": "2026-06-22",
       "status": "active"
     },
     {
