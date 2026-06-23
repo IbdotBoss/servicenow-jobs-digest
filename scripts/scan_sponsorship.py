@@ -353,37 +353,46 @@ def scan_file(filepath, sponsor_set, dry_run=False, csv_only=False):
     
     return changes, tags, licence_count
 
-def main(dry_run=False, csv_only=False):
+def main(dry_run=False, csv_only=False, file_path=None, skip_defaults=False):
     sponsor_set = load_sponsor_set()
     if not sponsor_set:
         print("[ERROR] No sponsor data loaded — aborting. Check CSV path.")
         sys.exit(1)
     
     mode = "CSV-only" if csv_only else "full (with page fetching)"
-    print(f"Scanning jobs.json ({mode})...")
-    changes, tags, licence_count = scan_file(JOBS_FILE, sponsor_set, dry_run, csv_only)
-    print(f"  Tags: {dict(tags.most_common())}")
-    print(f"  Companies with sponsor licence: {licence_count}")
-    print(f"  Changes: {changes}")
+    files_to_scan = []
+    if file_path:
+        files_to_scan.append(file_path)
+    if not skip_defaults:
+        files_to_scan.extend([JOBS_FILE, MASTER_FILE])
     
-    print(f"\nScanning master.json ({mode})...")
-    changes2, tags2, licence_count2 = scan_file(MASTER_FILE, sponsor_set, dry_run, csv_only)
-    print(f"  Tags: {dict(tags2.most_common())}")
-    print(f"  Companies with sponsor licence: {licence_count2}")
-    print(f"  Changes: {changes2}")
+    total_changes = {'sc_blocked': 0, 'unavailable': 0, 'licence_flagged': 0}
+    total_tags = Counter()
+    total_licence = 0
     
-    total_ver = tags.get('verified', 0) + tags.get('sponsor_verified', 0)
-    total_sc = tags.get('sc_blocked', 0)
-    total_unavail = tags.get('unavailable', 0)
-    total_agency = tags.get('agency_unknown', 0)
+    for fp in files_to_scan:
+        print(f"Scanning {fp} ({mode})...")
+        changes, tags, licence_count = scan_file(fp, sponsor_set, dry_run, csv_only)
+        print(f"  Tags: {dict(tags.most_common())}")
+        print(f"  Companies with sponsor licence: {licence_count}")
+        print(f"  Changes: {changes}")
+        for k in total_changes:
+            total_changes[k] += changes.get(k, 0)
+        total_tags.update(tags)
+        total_licence += licence_count
     
-    print(f"\nSummary: {sum(tags.values())} total jobs")
+    total_ver = total_tags.get('verified', 0) + total_tags.get('sponsor_verified', 0)
+    total_sc = total_tags.get('sc_blocked', 0)
+    total_unavail = total_tags.get('unavailable', 0)
+    total_agency = total_tags.get('agency_unknown', 0)
+    
+    print(f"\nSummary: {sum(total_tags.values())} total jobs")
     print(f"  Verified (manual): {total_ver}")
     print(f"  SC-blocked (auto): {total_sc}")
     print(f"  Unavailable (auto): {total_unavail}")
     print(f"  Agency (manual): {total_agency}")
-    print(f"  Unknown: {tags.get('unknown', 0)}")
-    print(f"  Companies with sponsor licence: {licence_count}")
+    print(f"  Unknown: {total_tags.get('unknown', 0)}")
+    print(f"  Companies with sponsor licence: {total_licence}")
     
     if dry_run:
         print("\n[DRY RUN] No files written.")
@@ -393,5 +402,8 @@ if __name__ == '__main__':
     parser.add_argument('--dry-run', action='store_true')
     parser.add_argument('--csv-only', action='store_true',
                         help='Skip page fetching — only cross-reference sponsor CSV')
+    parser.add_argument('--file', help='Scan a specific JSON file (in addition to defaults)')
+    parser.add_argument('--skip-defaults', action='store_true',
+                        help='Skip scanning jobs.json and master.json')
     args = parser.parse_args()
-    main(dry_run=args.dry_run, csv_only=args.csv_only)
+    main(dry_run=args.dry_run, csv_only=args.csv_only, file_path=args.file, skip_defaults=args.skip_defaults)
