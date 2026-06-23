@@ -238,12 +238,16 @@ def scan_job(job, sponsor_set):
             updates['sponsor_licence'] = False
     
     # ── Step 1.5: Title-level SC/DV check (always, even for LinkedIn) ──
+    # Only auto-set visa_sponsorship when the job has no manual/curated tag.
     title = job.get('title', '')
-    if title:
+    if title and current_sp == 'unknown':
         tag, reason = scan_text(title)
         if tag:
             updates['visa_sponsorship'] = tag
             updates['sponsorship_scan'] = reason
+    elif title and current_sp != 'unknown':
+        # Ensure manual tags are not silently overwritten by shared-page scans
+        pass
     
     # ── Step 2: Text scan ──
     # LinkedIn job pages are JS-rendered — can't fetch full page
@@ -252,15 +256,18 @@ def scan_job(job, sponsor_set):
         # Try scanning the description field (may have brief text)
         if description and len(description) > 50:
             tag, reason = scan_text(description)
-            if tag:
+            if tag and current_sp == 'unknown':
                 updates['visa_sponsorship'] = tag
                 updates['sponsorship_scan'] = reason
+            elif tag:
+                updates['sponsorship_scan'] = f'blocked_by_manual_tag: {current_sp}'
             # Also check for "no sponsorship" in description from Voyager
-            for pattern, reason in NO_SPONSOR_PATTERNS:
-                if re.search(pattern, description.lower()):
-                    updates['visa_sponsorship'] = 'unavailable'
-                    updates['sponsorship_scan'] = reason
-                    break
+            if current_sp == 'unknown':
+                for pattern, reason in NO_SPONSOR_PATTERNS:
+                    if re.search(pattern, description.lower()):
+                        updates['visa_sponsorship'] = 'unavailable'
+                        updates['sponsorship_scan'] = reason
+                        break
         else:
             updates['sponsorship_scan'] = 'linkedin_js (cannot read full description)'
         return updates
@@ -280,9 +287,11 @@ def scan_job(job, sponsor_set):
         return updates
     
     tag, reason = scan_text(html_text)
-    if tag:
+    if tag and current_sp == 'unknown':
         updates['visa_sponsorship'] = tag
         updates['sponsorship_scan'] = reason
+    elif tag:
+        updates['sponsorship_scan'] = f'blocked_by_manual_tag: {current_sp}'
     
     # Also check for explicit sponsorship mention (data point, not a tag)
     if company and sponsor_set:
