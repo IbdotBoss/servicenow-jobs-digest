@@ -10,7 +10,7 @@ SOURCE_FILES = {
     "JobServe": os.path.join(REPO, "jobserve_jobs.json"),
     "LinkedIn": os.path.join(REPO, "linkedin_jobs.json"),
     "Hunt UK": os.path.join(REPO, "hunt_uk_jobs.json"),
-    "ServiceNow Careers": os.path.join(REPO, "sn_careers_jobs.json"),
+    "ServiceNow Careers": os.path.join(REPO, "servicenow_careers_jobs.json"),
     "Nelson Frank": os.path.join(REPO, "nelson_frank_jobs.json"),
 }
 
