@@ -1,8 +1,8 @@
 {
-  "updated": "2026-07-01",
-  "total": 622,
-  "total_active": 146,
-  "licenced_sponsors": 245,
+  "updated": "2026-07-02",
+  "total": 626,
+  "total_active": 151,
+  "licenced_sponsors": 248,
   "daily_snapshots": [
     "2026-05-06",
     "2026-05-07",
@@ -46,10 +46,11 @@
     "2026-06-27",
     "2026-06-28",
     "2026-06-30",
-    "2026-07-01"
+    "2026-07-01",
+    "2026-07-02"
   ],
   "sources": {
-    "JobServe": 339,
+    "JobServe": 343,
     "Hunt UK": 126,
     "LinkedIn": 105,
     "hunt_uk": 18,
@@ -66,6 +67,115 @@
     "CV-Library": 1
   },
   "jobs": [
+    {
+      "title": "ServiceNow Developer | Inside IR35 | 3 month | Must Hold SC",
+      "company": "RecOps",
+      "location": "United Kingdom",
+      "salary_display": "\u00a3500 per day",
+      "date_posted": "2026-07-01 11:14:55",
+      "url": "https://www.jobserve.com/gb/en/mob/job/1EF1AE1353806BFFD7/",
+      "source": "JobServe",
+      "source_type": "aggregator",
+      "sn_role": true,
+      "role_type": "developer",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": true,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "sc_blocked",
+      "description": "Posted 18 hours ago",
+      "scraped_at": "2026-07-02 05:01:14",
+      "sponsor_licence": false,
+      "sponsorship_scan": "blocked_by_manual_tag: sc_blocked",
+      "first_seen": "2026-07-02",
+      "last_seen": "2026-07-02",
+      "sources": [
+        "JobServe"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "xMatters/ServiceNow SME - Fully Remote",
+      "company": "Intuition IT Solutions Ltd",
+      "location": "United Kingdom",
+      "salary_display": "Not listed",
+      "date_posted": "2026-07-01 14:20:47",
+      "url": "https://www.jobserve.com/gb/en/mob/job/8AC3B390B36CE253E4/",
+      "source": "JobServe",
+      "source_type": "aggregator",
+      "sn_role": true,
+      "role_type": "other",
+      "remote": "remote",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "unknown",
+      "description": "Posted 15 hours ago",
+      "scraped_at": "2026-07-02 05:01:14",
+      "sponsor_licence": true,
+      "first_seen": "2026-07-02",
+      "last_seen": "2026-07-02",
+      "sources": [
+        "JobServe"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "IT Support Analyst - 1st Line Support - Insurance - City, London",
+      "company": "Auriol Resource",
+      "location": "London",
+      "salary_display": "\u00a327K-\u00a340K depending on experience",
+      "date_posted": "2026-07-01 14:44:42",
+      "url": "https://www.jobserve.com/gb/en/mob/job/55D9EF6BC424C6C10B/",
+      "source": "JobServe",
+      "source_type": "aggregator",
+      "sn_role": false,
+      "role_type": "sn-adjacent",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "unknown",
+      "description": "Posted 15 hours ago",
+      "scraped_at": "2026-07-02 05:01:14",
+      "sponsor_licence": false,
+      "first_seen": "2026-07-02",
+      "last_seen": "2026-07-02",
+      "sources": [
+        "JobServe"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "Service Desk - Italian + Spanish + English",
+      "company": "Intuition IT Solutions Ltd",
+      "location": "Chester, Cheshire",
+      "salary_display": "Not listed",
+      "date_posted": "2026-07-01 09:06:13",
+      "url": "https://www.jobserve.com/gb/en/mob/job/B3BCDEF34EE3033E54/",
+      "source": "JobServe",
+      "source_type": "aggregator",
+      "sn_role": false,
+      "role_type": "sn-adjacent",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "unknown",
+      "description": "Posted 20 hours ago",
+      "scraped_at": "2026-07-02 05:01:14",
+      "sponsor_licence": true,
+      "first_seen": "2026-07-02",
+      "last_seen": "2026-07-02",
+      "sources": [
+        "JobServe"
+      ],
+      "status": "active"
+    },
     {
       "title": "ServiceNow Tech Lead - Contract - Wokingham - \u00a3425/day - Inside IR35",
       "company": "Hamilton Barnes",
@@ -88,7 +198,7 @@
       "sponsor_licence": false,
       "sponsorship_mentioned": false,
       "first_seen": "2026-07-01",
-      "last_seen": "2026-07-01",
+      "last_seen": "2026-07-02",
       "sources": [
         "JobServe"
       ],
@@ -116,7 +226,7 @@
       "sponsor_licence": false,
       "sponsorship_mentioned": false,
       "first_seen": "2026-07-01",
-      "last_seen": "2026-07-01",
+      "last_seen": "2026-07-02",
       "sources": [
         "JobServe"
       ],
@@ -144,7 +254,7 @@
       "sponsor_licence": false,
       "sponsorship_mentioned": false,
       "first_seen": "2026-07-01",
-      "last_seen": "2026-07-01",
+      "last_seen": "2026-07-02",
       "sources": [
         "JobServe"
       ],
@@ -173,7 +283,7 @@
       "sponsorship_mentioned": false,
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-07-01",
-      "last_seen": "2026-07-01",
+      "last_seen": "2026-07-02",
       "sources": [
         "JobServe"
       ],
@@ -202,7 +312,7 @@
       "sponsorship_mentioned": false,
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-07-01",
-      "last_seen": "2026-07-01",
+      "last_seen": "2026-07-02",
       "sources": [
         "JobServe"
       ],
@@ -231,7 +341,7 @@
       "sponsorship_mentioned": false,
       "sponsorship_scan": "blocked_by_manual_tag: sc_blocked",
       "first_seen": "2026-07-01",
-      "last_seen": "2026-07-01",
+      "last_seen": "2026-07-02",
       "sources": [
         "JobServe"
       ],
@@ -259,7 +369,7 @@
       "sponsor_licence": true,
       "sponsorship_mentioned": false,
       "first_seen": "2026-07-01",
-      "last_seen": "2026-07-01",
+      "last_seen": "2026-07-02",
       "sources": [
         "JobServe"
       ],
@@ -268,8 +378,8 @@
     {
       "title": "Change Manager (SC Cleared)",
       "company": "Morson Edge",
-      "location": "Reading, Berkshire, England",
-      "salary_display": "\u00a30 - 87 per hour + inside IR35",
+      "location": "Reading, Berkshire",
+      "salary_display": "\u00a387 per hour + inside IR35",
       "date_posted": "2026-06-30 16:16:35",
       "url": "https://www.jobserve.com/gb/en/mob/job/9B0B78FCD6A8AE93EF/",
       "source": "JobServe",
@@ -288,7 +398,7 @@
       "sponsorship_mentioned": false,
       "sponsorship_scan": "blocked_by_manual_tag: sc_blocked",
       "first_seen": "2026-07-01",
-      "last_seen": "2026-07-01",
+      "last_seen": "2026-07-02",
       "sources": [
         "JobServe"
       ],
@@ -317,7 +427,7 @@
       "sponsorship_mentioned": false,
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-07-01",
-      "last_seen": "2026-07-01",
+      "last_seen": "2026-07-02",
       "sources": [
         "JobServe"
       ],
@@ -346,7 +456,7 @@
       "sponsorship_mentioned": false,
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-07-01",
-      "last_seen": "2026-07-01",
+      "last_seen": "2026-07-02",
       "sources": [
         "JobServe"
       ],
@@ -355,8 +465,8 @@
     {
       "title": "Change Manager",
       "company": "ARM (Advanced Resource Managers)",
-      "location": "Reading",
-      "salary_display": "Not listed",
+      "location": "up to \u00a388p/h (Inside IR35)",
+      "salary_display": "up to \u00a388p/h (Inside IR35)",
       "date_posted": "2026-06-30 15:30:01",
       "url": "https://www.jobserve.com/gb/en/mob/job/D9391266BC32648174/",
       "source": "JobServe",
@@ -375,7 +485,7 @@
       "sponsorship_mentioned": false,
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-07-01",
-      "last_seen": "2026-07-01",
+      "last_seen": "2026-07-02",
       "sources": [
         "JobServe"
       ],
@@ -784,7 +894,7 @@
       "sponsorship_scan": "Security clearance required",
       "sponsorship_mentioned": true,
       "first_seen": "2026-06-30",
-      "last_seen": "2026-07-01",
+      "last_seen": "2026-07-02",
       "sources": [
         "Hunt UK"
       ],
@@ -793,7 +903,7 @@
     {
       "title": "ServiceNow Platform Lead",
       "company": "CITYFIBRE HOLDINGS LIMITED",
-      "location": "Reading at least two days a week",
+      "location": "London at least two days a week",
       "salary_display": "Not listed",
       "date_posted": "2026-06-30",
       "url": "https://huntukvisasponsors.com/jobs?q=servicenow",
@@ -813,7 +923,7 @@
       "sponsorship_scan": "Security clearance required",
       "sponsorship_mentioned": true,
       "first_seen": "2026-06-30",
-      "last_seen": "2026-07-01",
+      "last_seen": "2026-07-02",
       "sources": [
         "Hunt UK"
       ],
@@ -841,7 +951,7 @@
       "scraped_at": "2026-06-30 05:03:49",
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-06-30",
-      "last_seen": "2026-07-01",
+      "last_seen": "2026-07-02",
       "sources": [
         "Hunt UK"
       ],
@@ -897,7 +1007,7 @@
       "description": "",
       "date_posted": "2026-06-28",
       "first_seen": "2026-06-28",
-      "last_seen": "2026-07-01",
+      "last_seen": "2026-07-02",
       "sources": [
         "hunt_uk",
         "Hunt UK"
@@ -1430,7 +1540,7 @@
       "sponsorship_scan": "Security clearance required",
       "sponsorship_mentioned": true,
       "first_seen": "2026-06-27",
-      "last_seen": "2026-07-01",
+      "last_seen": "2026-07-02",
       "sources": [
         "Hunt UK"
       ],
@@ -1861,7 +1971,7 @@
       "sponsorship_mentioned": false,
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-06-25",
-      "last_seen": "2026-07-01",
+      "last_seen": "2026-07-02",
       "sources": [
         "JobServe",
         "Hunt UK",
@@ -1892,7 +2002,7 @@
       "sponsorship_mentioned": false,
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-06-25",
-      "last_seen": "2026-07-01",
+      "last_seen": "2026-07-02",
       "sources": [
         "JobServe",
         "Hunt UK",
@@ -2021,7 +2131,7 @@
       "location": "Godalming, Surrey, England",
       "salary_display": "\u00a330k per year",
       "date_posted": "2026-06-24 08:46:52",
-      "url": "https://www.jobserve.com/gb/en/mob/job/821A18CC6F2769176E/",
+      "url": "https://www.jobserve.com/gb/en/mob/job/3432B9C36D1D883638/",
       "source": "JobServe",
       "source_type": "aggregator",
       "sn_role": false,
@@ -2038,7 +2148,7 @@
       "sponsorship_mentioned": false,
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-06-25",
-      "last_seen": "2026-06-28",
+      "last_seen": "2026-07-02",
       "sources": [
         "JobServe"
       ],
@@ -2123,7 +2233,7 @@
       "sponsorship_mentioned": false,
       "sponsorship_scan": "blocked_by_manual_tag: sc_blocked",
       "first_seen": "2026-06-25",
-      "last_seen": "2026-07-01",
+      "last_seen": "2026-07-02",
       "sources": [
         "JobServe"
       ],
@@ -2151,7 +2261,7 @@
       "sponsor_licence": false,
       "sponsorship_mentioned": false,
       "first_seen": "2026-06-25",
-      "last_seen": "2026-07-01",
+      "last_seen": "2026-07-02",
       "sources": [
         "JobServe"
       ],
@@ -2351,7 +2461,7 @@
       "sponsor_licence": false,
       "sponsorship_scan": "blocked_by_manual_tag: sc_blocked",
       "first_seen": "2026-06-24",
-      "last_seen": "2026-07-01",
+      "last_seen": "2026-07-02",
       "sources": [
         "JobServe"
       ],
@@ -2434,7 +2544,7 @@
       "sponsor_licence": false,
       "sponsorship_scan": "blocked_by_manual_tag: sc_blocked",
       "first_seen": "2026-06-24",
-      "last_seen": "2026-07-01",
+      "last_seen": "2026-07-02",
       "sources": [
         "JobServe"
       ],
@@ -2637,7 +2747,7 @@
       "location": "650.00 Daily GBP",
       "salary_display": "Not listed",
       "date_posted": "2026-06-24 03:53:53",
-      "url": "https://www.jobserve.com/gb/en/mob/job/D20DE01547D85019F6/",
+      "url": "https://www.jobserve.com/gb/en/mob/job/79C43B14C8A26ACB49/",
       "source": "JobServe",
       "source_type": "aggregator",
       "sn_role": true,
@@ -2652,7 +2762,7 @@
       "scraped_at": "2026-06-24 05:02:25",
       "sponsor_licence": true,
       "first_seen": "2026-06-24",
-      "last_seen": "2026-06-25",
+      "last_seen": "2026-07-02",
       "sources": [
         "JobServe"
       ],
@@ -3045,7 +3155,7 @@
       "location": "London",
       "salary_display": "Not listed",
       "date_posted": "2026-06-22 09:28:07",
-      "url": "https://www.jobserve.com/gb/en/mob/job/50B13F74E96ABD40B3/",
+      "url": "https://www.jobserve.com/gb/en/mob/job/B1825B06A09762B6D0/",
       "source": "JobServe",
       "source_type": "aggregator",
       "sn_role": true,
@@ -3061,7 +3171,7 @@
       "sponsor_licence": false,
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-06-23",
-      "last_seen": "2026-06-24",
+      "last_seen": "2026-07-02",
       "sources": [
         "JobServe"
       ],
@@ -3100,7 +3210,7 @@
       "location": "Hampshire",
       "salary_display": "Not listed",
       "date_posted": "2026-06-22 17:34:55",
-      "url": "https://www.jobserve.com/gb/en/mob/job/4B6588E626BE1F3B0F/",
+      "url": "https://www.jobserve.com/gb/en/mob/job/68C9D95AB9FED887DC/",
       "source": "JobServe",
       "source_type": "aggregator",
       "sn_role": true,
@@ -3115,7 +3225,7 @@
       "scraped_at": "2026-06-23 05:01:08",
       "sponsor_licence": true,
       "first_seen": "2026-06-23",
-      "last_seen": "2026-06-30",
+      "last_seen": "2026-07-02",
       "sources": [
         "JobServe"
       ],
@@ -3155,7 +3265,7 @@
       "location": "590.00 Daily - 600.00 Daily GBP",
       "salary_display": "Not listed",
       "date_posted": "2026-06-23 00:39:27",
-      "url": "https://www.jobserve.com/gb/en/mob/job/B0BA55EB49A5D5BB3B/",
+      "url": "https://www.jobserve.com/gb/en/mob/job/165987F6BFD5D6641F/",
       "source": "JobServe",
       "source_type": "aggregator",
       "sn_role": false,
@@ -3171,7 +3281,7 @@
       "sponsor_licence": true,
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-06-23",
-      "last_seen": "2026-06-28",
+      "last_seen": "2026-07-02",
       "sources": [
         "JobServe"
       ],
@@ -3198,7 +3308,7 @@
       "scraped_at": "2026-06-23 05:01:08",
       "sponsor_licence": false,
       "first_seen": "2026-06-23",
-      "last_seen": "2026-07-01",
+      "last_seen": "2026-07-02",
       "sources": [
         "JobServe"
       ],
@@ -4162,7 +4272,7 @@
       "description": "Company Description It all started in sunny San Diego, California in 2004 when a visionary engineer, Fred Luddy, saw the potential to transform how we work. Fast forward to today \u2014 ServiceNow stands as a global market leader, bringing innovative AI-enhanced technology to over 8,100 customers, includ",
       "scraped_at": "2026-06-16 05:00:45",
       "first_seen": "2026-06-16",
-      "last_seen": "2026-07-01",
+      "last_seen": "2026-07-02",
       "sources": [
         "ServiceNow Careers"
       ],
@@ -4730,7 +4840,7 @@
       "description": "Company Description It all started in sunny San Diego, California in 2004 when a visionary engineer, Fred Luddy, saw the potential to transform how we work. Fast forward to today \u2014 ServiceNow stands as a global market leader, bringing innovative AI-enhanced technology to over 8,100 customers, includ",
       "scraped_at": "2026-06-13 05:01:48",
       "first_seen": "2026-06-13",
-      "last_seen": "2026-07-01",
+      "last_seen": "2026-07-02",
       "sources": [
         "ServiceNow Careers"
       ],
@@ -5186,7 +5296,7 @@
       "description": "Company Description It all started when engineer Fred Luddy wrote code that automated a tedious task for his coworker, Phyllis. She cried tears of joy. That moment inspired Fred to build a company that could do that for everyone\u2014freeing people from busywork so they could focus on meaningful work. To",
       "scraped_at": "2026-06-11 05:01:29",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-07-01",
+      "last_seen": "2026-07-02",
       "sources": [
         "ServiceNow Careers"
       ],
@@ -5213,7 +5323,7 @@
       "description": "Company Description It all started when engineer Fred Luddy wrote code that automated a tedious task for his coworker, Phyllis. She cried tears of joy. That moment inspired Fred to build a company that could do that for everyone\u2014freeing people from busywork so they could focus on meaningful work. To",
       "scraped_at": "2026-06-11 05:01:29",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-07-01",
+      "last_seen": "2026-07-02",
       "sources": [
         "ServiceNow Careers"
       ],
@@ -6967,7 +7077,7 @@
       "location": "London",
       "salary_display": "Not listed",
       "date_posted": "2026-06-01 07:13:53",
-      "url": "https://www.jobserve.com/gb/en/mob/job/38AEF973B951D39AEC/",
+      "url": "https://www.jobserve.com/gb/en/mob/job/4A7FE4C74F1281084E/",
       "source": "JobServe",
       "source_type": "aggregator",
       "sn_role": true,
@@ -6982,7 +7092,7 @@
       "scraped_at": "2026-06-03 05:00:59",
       "sponsor_licence": true,
       "first_seen": "2026-06-03",
-      "last_seen": "2026-06-30",
+      "last_seen": "2026-07-02",
       "sources": [
         "JobServe"
       ],
@@ -7063,7 +7173,7 @@
       "scraped_at": "2026-06-03 05:00:59",
       "sponsor_licence": true,
       "first_seen": "2026-06-03",
-      "last_seen": "2026-07-01",
+      "last_seen": "2026-07-02",
       "sources": [
         "JobServe"
       ],
@@ -7306,7 +7416,7 @@
       "description": "Company Description It all started when engineer Fred Luddy wrote code that automated a tedious task for his coworker, Phyllis. She cried tears of joy. That moment inspired Fred to build a company that could do that for everyone\u2014freeing people from busywork so they could focus on meaningful work. To",
       "scraped_at": "2026-05-31 05:01:37",
       "first_seen": "2026-05-31",
-      "last_seen": "2026-07-01",
+      "last_seen": "2026-07-02",
       "sources": [
         "ServiceNow Careers"
       ],
@@ -7739,7 +7849,7 @@
       "scraped_at": "2026-05-28 05:06:58",
       "sponsor_licence": true,
       "first_seen": "2026-05-28",
-      "last_seen": "2026-07-01",
+      "last_seen": "2026-07-02",
       "sources": [
         "JobServe"
       ],
@@ -8615,7 +8725,7 @@
       "location": "Watford, Hertfordshire, England",
       "salary_display": "\u00a360k - \u00a380k base OTE \u00a3150k",
       "date_posted": "2026-05-21 16:45:36",
-      "url": "https://www.jobserve.com/gb/en/mob/job/05EF0D6B2C46C14A5F/",
+      "url": "https://www.jobserve.com/gb/en/mob/job/6AB399E2B3A018B1A6/",
       "source": "JobServe",
       "source_type": "aggregator",
       "sn_role": false,
@@ -8630,7 +8740,7 @@
       "scraped_at": "2026-05-22 05:02:02",
       "sponsor_licence": true,
       "first_seen": "2026-05-22",
-      "last_seen": "2026-06-25",
+      "last_seen": "2026-07-02",
       "sources": [
         "JobServe"
       ],
@@ -8639,10 +8749,10 @@
     {
       "title": "New Business ITSM Sales Executive/ITSM Solutions Sales",
       "company": "Global Technology Solutions Ltd",
-      "location": "Hertfordshire, England",
+      "location": "Watford, Hertfordshire",
       "salary_display": "\u00a360k - \u00a380k OTE \u00a3130k - \u00a3150k",
       "date_posted": "2026-05-21 16:48:37",
-      "url": "https://www.jobserve.com/gb/en/mob/job/79C721EBE01CDE8348/",
+      "url": "https://www.jobserve.com/gb/en/mob/job/610CC81BECC3F51C24/",
       "source": "JobServe",
       "source_type": "aggregator",
       "sn_role": false,
@@ -8651,17 +8761,17 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "description": "Posted 13 hours ago",
       "scraped_at": "2026-05-22 05:02:02",
-      "sponsor_licence": false,
+      "sponsor_licence": true,
       "first_seen": "2026-05-22",
-      "last_seen": "2026-06-07",
+      "last_seen": "2026-07-02",
       "sources": [
         "JobServe"
       ],
-      "status": "stale"
+      "status": "active"
     },
     {
       "title": "IT Operations Analyst",
@@ -8966,7 +9076,7 @@
       "location": "Up to \u00a380k + bonus + good package",
       "salary_display": "Up to \u00a380k + bonus + good package",
       "date_posted": "2026-05-20 15:18:07",
-      "url": "https://www.jobserve.com/gb/en/mob/job/EA1D5170C316F5722D/",
+      "url": "https://www.jobserve.com/gb/en/mob/job/801076E2357DE3AB4E/",
       "source": "JobServe",
       "source_type": "aggregator",
       "sn_role": false,
@@ -8981,7 +9091,7 @@
       "scraped_at": "2026-05-21 05:03:00",
       "sponsor_licence": true,
       "first_seen": "2026-05-21",
-      "last_seen": "2026-06-25",
+      "last_seen": "2026-07-02",
       "sources": [
         "JobServe"
       ],
@@ -9116,7 +9226,7 @@
       "description": "Company Description It all started in sunny San Diego, California in 2004 when a visionary engineer, Fred Luddy, saw the potential to transform how we work. Fast forward to today \u2014 ServiceNow stands as a global market leader, bringing innovative AI-enhanced technology to over 8,100 customers, includ",
       "scraped_at": "2026-05-21 05:03:21",
       "first_seen": "2026-05-21",
-      "last_seen": "2026-07-01",
+      "last_seen": "2026-07-02",
       "sources": [
         "ServiceNow Careers"
       ],
@@ -9263,7 +9373,7 @@
       "location": "Up to \u00a380k + bonus + good package",
       "salary_display": "Up to \u00a380k + bonus + good package",
       "date_posted": "2026-05-19 09:49:36",
-      "url": "https://www.jobserve.com/gb/en/mob/job/338D39CB0AA8652D8A/",
+      "url": "https://www.jobserve.com/gb/en/mob/job/6F50CE433AEF4B56DB/",
       "source": "JobServe",
       "source_type": "aggregator",
       "sn_role": false,
@@ -9278,7 +9388,7 @@
       "scraped_at": "2026-05-20 05:00:42",
       "sponsor_licence": true,
       "first_seen": "2026-05-20",
-      "last_seen": "2026-06-25",
+      "last_seen": "2026-07-02",
       "sources": [
         "JobServe"
       ],
@@ -9468,7 +9578,7 @@
       "first_seen": "2026-05-20",
       "sponsor_licence": false,
       "agency_unknown": true,
-      "last_seen": "2026-07-01",
+      "last_seen": "2026-07-02",
       "sources": [
         "Nelson Frank"
       ],
@@ -9497,7 +9607,7 @@
       "first_seen": "2026-05-20",
       "sponsor_licence": false,
       "agency_unknown": true,
-      "last_seen": "2026-07-01",
+      "last_seen": "2026-07-02",
       "sources": [
         "Nelson Frank"
       ],
@@ -11381,7 +11491,7 @@
         "ServiceNow Careers"
       ],
       "first_seen": "2026-05-15",
-      "last_seen": "2026-07-01",
+      "last_seen": "2026-07-02",
       "status": "active"
     },
     {
@@ -11408,7 +11518,7 @@
         "ServiceNow Careers"
       ],
       "first_seen": "2026-05-15",
-      "last_seen": "2026-07-01",
+      "last_seen": "2026-07-02",
       "status": "active"
     },
     {
@@ -11573,7 +11683,7 @@
       ],
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-05-15",
-      "last_seen": "2026-07-01",
+      "last_seen": "2026-07-02",
       "status": "active"
     },
     {
@@ -11633,7 +11743,7 @@
       ],
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-05-15",
-      "last_seen": "2026-07-01",
+      "last_seen": "2026-07-02",
       "status": "active"
     },
     {
