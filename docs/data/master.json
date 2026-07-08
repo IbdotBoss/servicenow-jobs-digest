@@ -1,8 +1,8 @@
 {
-  "updated": "2026-07-04",
-  "total": 639,
-  "total_active": 161,
-  "licenced_sponsors": 253,
+  "updated": "2026-07-08",
+  "total": 649,
+  "total_active": 144,
+  "licenced_sponsors": 256,
   "daily_snapshots": [
     "2026-05-06",
     "2026-05-07",
@@ -48,11 +48,12 @@
     "2026-06-30",
     "2026-07-01",
     "2026-07-02",
-    "2026-07-04"
+    "2026-07-04",
+    "2026-07-08"
   ],
   "sources": {
-    "JobServe": 352,
-    "Hunt UK": 130,
+    "JobServe": 361,
+    "Hunt UK": 131,
     "LinkedIn": 105,
     "hunt_uk": 18,
     "ServiceNow Careers": 18,
@@ -68,6 +69,290 @@
     "CV-Library": 1
   },
   "jobs": [
+    {
+      "title": "ServiceNow Developer Role- INSIDE IR35",
+      "company": "Intuition IT Solutions Ltd",
+      "location": "400",
+      "salary_display": "Not listed",
+      "date_posted": "2026-07-07 10:45:20",
+      "url": "https://www.jobserve.com/gb/en/mob/job/F9C4E8CB84B88A2177/",
+      "source": "JobServe",
+      "source_type": "aggregator",
+      "sn_role": true,
+      "role_type": "developer",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "unknown",
+      "description": "Posted 19 hours ago",
+      "scraped_at": "2026-07-08 05:01:19",
+      "sponsor_licence": true,
+      "sponsorship_mentioned": false,
+      "first_seen": "2026-07-08",
+      "last_seen": "2026-07-08",
+      "sources": [
+        "JobServe"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "ServiceNow Architect Contractor - Telecoms Domain - London (Hybrid) - Outside IR35 - 3 months",
+      "company": "Evolve IT Recruitment Ltd",
+      "location": "London",
+      "salary_display": "Not listed",
+      "date_posted": "2026-07-07 14:48:37",
+      "url": "https://www.jobserve.com/gb/en/mob/job/6C2A4913C59672C48D/",
+      "source": "JobServe",
+      "source_type": "aggregator",
+      "sn_role": true,
+      "role_type": "architect",
+      "remote": "hybrid",
+      "employment": "contract",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "unknown",
+      "description": "Posted 15 hours ago",
+      "scraped_at": "2026-07-08 05:01:19",
+      "sponsor_licence": false,
+      "sponsorship_mentioned": false,
+      "first_seen": "2026-07-08",
+      "last_seen": "2026-07-08",
+      "sources": [
+        "JobServe"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "ServiceNow HRSD Solution Architect | SC Eligible | Up to \u00a3105k",
+      "company": "Akkodis",
+      "location": "England",
+      "salary_display": "\u00a375k - \u00a3105k per annum",
+      "date_posted": "2026-07-06 11:47:04",
+      "url": "https://www.jobserve.com/gb/en/mob/job/1CF15CFF79437DA671/",
+      "source": "JobServe",
+      "source_type": "aggregator",
+      "sn_role": true,
+      "role_type": "architect",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "sc_blocked",
+      "description": "Posted 1 day ago",
+      "scraped_at": "2026-07-08 05:01:19",
+      "sponsor_licence": false,
+      "sponsorship_mentioned": false,
+      "sponsorship_scan": "Security clearance required",
+      "first_seen": "2026-07-08",
+      "last_seen": "2026-07-08",
+      "sources": [
+        "JobServe"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "Principal ServiceNow Solution Architect contractor - Telecoms Domain - Reading/London (Hybrid)",
+      "company": "Evolve IT Recruitment Ltd",
+      "location": "Outside IR35",
+      "salary_display": "Not listed",
+      "date_posted": "2026-07-07 14:25:43",
+      "url": "https://www.jobserve.com/gb/en/mob/job/6FF2FDF256344B77BC/",
+      "source": "JobServe",
+      "source_type": "aggregator",
+      "sn_role": true,
+      "role_type": "architect",
+      "remote": "hybrid",
+      "employment": "contract",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "unknown",
+      "description": "Posted 15 hours ago",
+      "scraped_at": "2026-07-08 05:01:19",
+      "sponsor_licence": false,
+      "sponsorship_mentioned": false,
+      "first_seen": "2026-07-08",
+      "last_seen": "2026-07-08",
+      "sources": [
+        "JobServe"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "Interim IT Support Analyst",
+      "company": "Harvey Nash IT Recruitment UK",
+      "location": "London",
+      "salary_display": "\u00a3300 - \u00a3301 per day",
+      "date_posted": "2026-07-07 11:59:21",
+      "url": "https://www.jobserve.com/gb/en/mob/job/0060302C45FA7A725D/",
+      "source": "JobServe",
+      "source_type": "aggregator",
+      "sn_role": false,
+      "role_type": "sn-adjacent",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "unknown",
+      "description": "Posted 18 hours ago",
+      "scraped_at": "2026-07-08 05:01:19",
+      "sponsor_licence": false,
+      "sponsorship_mentioned": false,
+      "first_seen": "2026-07-08",
+      "last_seen": "2026-07-08",
+      "sources": [
+        "JobServe"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "Incident and Problem Manager - Manchester - \u00a347k",
+      "company": "Exalto Consulting",
+      "location": "Manchester",
+      "salary_display": "\u00a347k + Benefits",
+      "date_posted": "2026-07-07 17:30:41",
+      "url": "https://www.jobserve.com/gb/en/mob/job/14F4CF372D04B40322/",
+      "source": "JobServe",
+      "source_type": "aggregator",
+      "sn_role": false,
+      "role_type": "sn-adjacent",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "unknown",
+      "description": "Posted 12 hours ago",
+      "scraped_at": "2026-07-08 05:01:19",
+      "sponsor_licence": false,
+      "sponsorship_mentioned": false,
+      "first_seen": "2026-07-08",
+      "last_seen": "2026-07-08",
+      "sources": [
+        "JobServe"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "Service Desk Enablement & Digital Support",
+      "company": "First Recruitment Group",
+      "location": "Kenyon, Warrington",
+      "salary_display": "Not listed",
+      "date_posted": "2026-07-08 00:04:48",
+      "url": "https://www.jobserve.com/gb/en/mob/job/A41E93D565564077BC/",
+      "source": "JobServe",
+      "source_type": "aggregator",
+      "sn_role": false,
+      "role_type": "sn-adjacent",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "sc_blocked",
+      "description": "Posted 5 hours ago",
+      "scraped_at": "2026-07-08 05:01:19",
+      "sponsor_licence": false,
+      "sponsorship_mentioned": false,
+      "sponsorship_scan": "Security clearance required",
+      "first_seen": "2026-07-08",
+      "last_seen": "2026-07-08",
+      "sources": [
+        "JobServe"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "Change Manager",
+      "company": "Arm",
+      "location": "up to 88p/h (Inside IR35) GBP",
+      "salary_display": "Not listed",
+      "date_posted": "2026-07-07 05:23:30",
+      "url": "https://www.jobserve.com/gb/en/mob/job/DADB50DFDF659A6F22/",
+      "source": "JobServe",
+      "source_type": "aggregator",
+      "sn_role": false,
+      "role_type": "sn-adjacent",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "sc_blocked",
+      "description": "Posted 1 day ago",
+      "scraped_at": "2026-07-08 05:01:19",
+      "sponsor_licence": true,
+      "sponsorship_mentioned": false,
+      "sponsorship_scan": "Security clearance required",
+      "first_seen": "2026-07-08",
+      "last_seen": "2026-07-08",
+      "sources": [
+        "JobServe"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "Change Manager",
+      "company": "Matchtech",
+      "location": "Reading",
+      "salary_display": "Not listed",
+      "date_posted": "2026-07-07 05:23:30",
+      "url": "https://www.jobserve.com/gb/en/mob/job/CB71DFE11A3359F957/",
+      "source": "JobServe",
+      "source_type": "aggregator",
+      "sn_role": false,
+      "role_type": "sn-adjacent",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "sc_blocked",
+      "description": "Posted 1 day ago",
+      "scraped_at": "2026-07-08 05:01:19",
+      "sponsor_licence": false,
+      "sponsorship_mentioned": false,
+      "sponsorship_scan": "Security clearance required",
+      "first_seen": "2026-07-08",
+      "last_seen": "2026-07-08",
+      "sources": [
+        "JobServe"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "ServiceNow Architect",
+      "company": "Acumen Bay Consultancy Limited",
+      "location": "United Kingdom",
+      "salary_display": "Not listed",
+      "date_posted": "2026-07-08",
+      "url": "https://huntukvisasponsors.com/jobs?q=servicenow",
+      "source": "Hunt UK",
+      "source_type": "aggregator",
+      "sn_role": true,
+      "role_type": "architect",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "expired",
+      "visa_sponsorship": "unknown",
+      "sponsor_licence": true,
+      "description": "ServiceNow Architect Acumen Bay Consultancy Limited",
+      "scraped_at": "2026-07-08 05:03:08",
+      "sponsorship_mentioned": true,
+      "first_seen": "2026-07-08",
+      "last_seen": "2026-07-08",
+      "sources": [
+        "Hunt UK"
+      ],
+      "status": "expired"
+    },
     {
       "title": "ServiceNow Designer contractor - Telecoms Domain - London (hybrid) - Outside IR35 - 6 months",
       "company": "Evolve IT Recruitment Ltd",
@@ -715,7 +1000,7 @@
       "location": "ANYWHERE IN EU or United Kingdom",
       "salary_display": "Not listed",
       "date_posted": "2026-06-30 14:09:21",
-      "url": "https://www.jobserve.com/gb/en/mob/job/DD779D1B641EE7E975/",
+      "url": "https://www.jobserve.com/gb/en/mob/job/07143DC0EEAA938FD7/",
       "source": "JobServe",
       "source_type": "aggregator",
       "sn_role": true,
@@ -731,7 +1016,7 @@
       "sponsor_licence": true,
       "sponsorship_mentioned": false,
       "first_seen": "2026-07-01",
-      "last_seen": "2026-07-02",
+      "last_seen": "2026-07-08",
       "sources": [
         "JobServe"
       ],
@@ -1077,7 +1362,7 @@
       "location": "Manchester",
       "salary_display": "\u00a3250/day",
       "date_posted": "2026-06-29 16:00:45",
-      "url": "https://www.jobserve.com/gb/en/mob/job/1DD61E6788A5086217/",
+      "url": "https://www.jobserve.com/gb/en/mob/job/9DDB0492D867FEAF3C/",
       "source": "JobServe",
       "source_type": "aggregator",
       "sn_role": false,
@@ -1092,7 +1377,7 @@
       "scraped_at": "2026-06-30 05:01:45",
       "sponsor_licence": true,
       "first_seen": "2026-06-30",
-      "last_seen": "2026-07-01",
+      "last_seen": "2026-07-08",
       "sources": [
         "JobServe"
       ],
@@ -1185,7 +1470,7 @@
       "location": "25k - 30k Annual GBP",
       "salary_display": "Not listed",
       "date_posted": "2026-06-30 02:19:56",
-      "url": "https://www.jobserve.com/gb/en/mob/job/189FCD0CC1A087549B/",
+      "url": "https://www.jobserve.com/gb/en/mob/job/F4F8F9DD5D4CEAFF3F/",
       "source": "JobServe",
       "source_type": "aggregator",
       "sn_role": false,
@@ -1200,7 +1485,7 @@
       "scraped_at": "2026-06-30 05:01:45",
       "sponsor_licence": false,
       "first_seen": "2026-06-30",
-      "last_seen": "2026-07-01",
+      "last_seen": "2026-07-08",
       "sources": [
         "JobServe"
       ],
@@ -1858,7 +2143,7 @@
       "location": "London - central",
       "salary_display": "\u00a3210 - \u00a3240 Per day DOE",
       "date_posted": "2026-06-26 14:34:21",
-      "url": "https://www.jobserve.com/gb/en/mob/job/236B602C8EC851D898/",
+      "url": "https://www.jobserve.com/gb/en/mob/job/F83E9963F942C277F7/",
       "source": "JobServe",
       "source_type": "aggregator",
       "sn_role": false,
@@ -1873,7 +2158,7 @@
       "scraped_at": "2026-06-27 05:04:17",
       "sponsor_licence": false,
       "first_seen": "2026-06-27",
-      "last_seen": "2026-06-28",
+      "last_seen": "2026-07-08",
       "sources": [
         "JobServe"
       ],
@@ -2089,7 +2374,7 @@
       "location": "50k - 80k Annual GBP",
       "salary_display": "Not listed",
       "date_posted": "2026-06-25 14:15:50",
-      "url": "https://www.jobserve.com/gb/en/mob/job/DE728579DF61431368/",
+      "url": "https://www.jobserve.com/gb/en/mob/job/C0164341390EC53E13/",
       "source": "JobServe",
       "source_type": "aggregator",
       "sn_role": true,
@@ -2104,7 +2389,7 @@
       "scraped_at": "2026-06-26 05:00:43",
       "sponsor_licence": true,
       "first_seen": "2026-06-26",
-      "last_seen": "2026-06-27",
+      "last_seen": "2026-07-08",
       "sources": [
         "JobServe"
       ],
@@ -2493,7 +2778,7 @@
       "location": "Godalming, Surrey, England",
       "salary_display": "\u00a330k per year",
       "date_posted": "2026-06-24 08:46:52",
-      "url": "https://www.jobserve.com/gb/en/mob/job/3432B9C36D1D883638/",
+      "url": "https://www.jobserve.com/gb/en/mob/job/A2D0FE7C0F022473DA/",
       "source": "JobServe",
       "source_type": "aggregator",
       "sn_role": false,
@@ -2510,7 +2795,7 @@
       "sponsorship_mentioned": false,
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-06-25",
-      "last_seen": "2026-07-02",
+      "last_seen": "2026-07-08",
       "sources": [
         "JobServe"
       ],
@@ -3490,7 +3775,7 @@
       "location": "100k Annual GBP",
       "salary_display": "Not listed",
       "date_posted": "2026-06-22 17:34:57",
-      "url": "https://www.jobserve.com/gb/en/mob/job/6BD09D88A225075F4B/",
+      "url": "https://www.jobserve.com/gb/en/mob/job/676CA1146E72B73BBF/",
       "source": "JobServe",
       "source_type": "aggregator",
       "sn_role": true,
@@ -3505,7 +3790,7 @@
       "scraped_at": "2026-06-23 05:01:08",
       "sponsor_licence": false,
       "first_seen": "2026-06-23",
-      "last_seen": "2026-07-01",
+      "last_seen": "2026-07-08",
       "sources": [
         "JobServe"
       ],
@@ -3599,7 +3884,7 @@
       "location": "500.00 Daily - 850.00 Daily GBP",
       "salary_display": "Not listed",
       "date_posted": "2026-06-21 16:19:41",
-      "url": "https://www.jobserve.com/gb/en/mob/job/F9A98FCF1804A4F761/",
+      "url": "https://www.jobserve.com/gb/en/mob/job/72E8A39D4B4CE58D3C/",
       "source": "JobServe",
       "source_type": "aggregator",
       "sn_role": true,
@@ -3615,7 +3900,7 @@
       "sponsor_licence": true,
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-06-23",
-      "last_seen": "2026-06-30",
+      "last_seen": "2026-07-08",
       "sources": [
         "JobServe"
       ],
@@ -3888,7 +4173,7 @@
       "remote": "onsite",
       "employment": "unknown",
       "sn_role": true,
-      "link_status": "live",
+      "link_status": "stale",
       "salary_display": "Not listed",
       "source_type": "aggregator",
       "grad_scheme": false,
@@ -3897,7 +4182,7 @@
       "sources": [
         "Hunt UK"
       ],
-      "status": "active"
+      "status": "stale"
     },
     {
       "title": "Technical Architect",
@@ -3916,7 +4201,7 @@
       "remote": "onsite",
       "employment": "unknown",
       "sn_role": true,
-      "link_status": "live",
+      "link_status": "stale",
       "salary_display": "Not listed",
       "source_type": "aggregator",
       "grad_scheme": false,
@@ -3926,7 +4211,7 @@
       "sources": [
         "Hunt UK"
       ],
-      "status": "active"
+      "status": "stale"
     },
     {
       "title": "Manager, HRSD, HR Transformation",
@@ -3945,7 +4230,7 @@
       "remote": "onsite",
       "employment": "unknown",
       "sn_role": true,
-      "link_status": "live",
+      "link_status": "stale",
       "salary_display": "Not listed",
       "source_type": "aggregator",
       "grad_scheme": false,
@@ -3954,7 +4239,7 @@
       "sources": [
         "Hunt UK"
       ],
-      "status": "active"
+      "status": "stale"
     },
     {
       "title": "Lead Developer",
@@ -3973,7 +4258,7 @@
       "remote": "onsite",
       "employment": "unknown",
       "sn_role": true,
-      "link_status": "live",
+      "link_status": "stale",
       "salary_display": "Not listed",
       "source_type": "aggregator",
       "grad_scheme": false,
@@ -3982,7 +4267,7 @@
       "sources": [
         "Hunt UK"
       ],
-      "status": "active"
+      "status": "stale"
     },
     {
       "title": "Program Manager",
@@ -4001,7 +4286,7 @@
       "remote": "onsite",
       "employment": "unknown",
       "sn_role": true,
-      "link_status": "live",
+      "link_status": "stale",
       "salary_display": "Not listed",
       "source_type": "aggregator",
       "grad_scheme": false,
@@ -4010,7 +4295,7 @@
       "sources": [
         "Hunt UK"
       ],
-      "status": "active"
+      "status": "stale"
     },
     {
       "title": "Senior Consultant - HRSD",
@@ -4029,7 +4314,7 @@
       "remote": "onsite",
       "employment": "unknown",
       "sn_role": true,
-      "link_status": "live",
+      "link_status": "stale",
       "salary_display": "Not listed",
       "source_type": "aggregator",
       "grad_scheme": false,
@@ -4039,7 +4324,7 @@
       "sources": [
         "Hunt UK"
       ],
-      "status": "active"
+      "status": "stale"
     },
     {
       "title": "Senior Developer",
@@ -4058,7 +4343,7 @@
       "remote": "onsite",
       "employment": "unknown",
       "sn_role": true,
-      "link_status": "live",
+      "link_status": "stale",
       "salary_display": "Not listed",
       "source_type": "aggregator",
       "grad_scheme": false,
@@ -4067,7 +4352,7 @@
       "sources": [
         "Hunt UK"
       ],
-      "status": "active"
+      "status": "stale"
     },
     {
       "title": "Technical Manager - ServiceNow",
@@ -4114,7 +4399,7 @@
       "remote": "onsite",
       "employment": "unknown",
       "sn_role": true,
-      "link_status": "live",
+      "link_status": "stale",
       "salary_display": "Not listed",
       "source_type": "aggregator",
       "grad_scheme": false,
@@ -4123,7 +4408,7 @@
       "sources": [
         "Hunt UK"
       ],
-      "status": "active"
+      "status": "stale"
     },
     {
       "title": "ServiceNow Developer",
@@ -4140,7 +4425,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "stale",
       "visa_sponsorship": "unknown",
       "description": "Posted 21 hours ago",
       "scraped_at": "2026-06-20 05:00:39",
@@ -4150,7 +4435,7 @@
       "sources": [
         "JobServe"
       ],
-      "status": "active"
+      "status": "stale"
     },
     {
       "title": "ServiceNow VR Developer",
@@ -4167,7 +4452,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "stale",
       "visa_sponsorship": "unknown",
       "description": "Posted 1 day ago",
       "scraped_at": "2026-06-20 05:00:39",
@@ -4177,7 +4462,7 @@
       "sources": [
         "JobServe"
       ],
-      "status": "active"
+      "status": "stale"
     },
     {
       "title": "ServiceNow Product Owner",
@@ -4194,7 +4479,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "stale",
       "visa_sponsorship": "unknown",
       "description": "Posted 1 day ago",
       "scraped_at": "2026-06-20 05:00:39",
@@ -4204,7 +4489,7 @@
       "sources": [
         "JobServe"
       ],
-      "status": "active"
+      "status": "stale"
     },
     {
       "title": "ServiceNow ITSM Business Analyst - Bracknell, Berkshire",
@@ -4248,7 +4533,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "stale",
       "visa_sponsorship": "unknown",
       "description": "Posted 1 day ago",
       "scraped_at": "2026-06-20 05:00:39",
@@ -4258,7 +4543,7 @@
       "sources": [
         "JobServe"
       ],
-      "status": "active"
+      "status": "stale"
     },
     {
       "title": "ServiceNow Architect and ServiceNow Developer || Edinburgh",
@@ -4275,7 +4560,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "stale",
       "visa_sponsorship": "unknown",
       "description": "Posted 19 hours ago",
       "scraped_at": "2026-06-20 05:00:39",
@@ -4285,7 +4570,7 @@
       "sources": [
         "JobServe"
       ],
-      "status": "active"
+      "status": "stale"
     },
     {
       "title": "ServiceNow Architect - Edinburgh - Hybrid - Inside IR35",
@@ -4302,7 +4587,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "stale",
       "visa_sponsorship": "unknown",
       "description": "Posted 20 hours ago",
       "scraped_at": "2026-06-20 05:00:39",
@@ -4312,7 +4597,7 @@
       "sources": [
         "JobServe"
       ],
-      "status": "active"
+      "status": "stale"
     },
     {
       "title": "ServiceNow Senior Developer - Hybrid - Inside IR35",
@@ -4329,7 +4614,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "stale",
       "visa_sponsorship": "unknown",
       "description": "Posted 20 hours ago",
       "scraped_at": "2026-06-20 05:00:39",
@@ -4339,7 +4624,7 @@
       "sources": [
         "JobServe"
       ],
-      "status": "active"
+      "status": "stale"
     },
     {
       "title": "ServiceNow Developer (SC-Cleared)",
@@ -4356,7 +4641,7 @@
       "employment": "permanent",
       "sc_clearance": true,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "stale",
       "visa_sponsorship": "sc_blocked",
       "description": "Posted 20 hours ago",
       "scraped_at": "2026-06-20 05:00:39",
@@ -4366,7 +4651,7 @@
       "sources": [
         "JobServe"
       ],
-      "status": "active"
+      "status": "stale"
     },
     {
       "title": "Senior ServiceNow Engineer",
@@ -4383,7 +4668,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "stale",
       "visa_sponsorship": "unknown",
       "description": "Posted 19 hours ago",
       "scraped_at": "2026-06-20 05:00:39",
@@ -4393,7 +4678,7 @@
       "sources": [
         "JobServe"
       ],
-      "status": "active"
+      "status": "stale"
     },
     {
       "title": "Product Manager - ServiceNow - ITIL - SC Cleared - Government",
@@ -4410,7 +4695,7 @@
       "employment": "permanent",
       "sc_clearance": true,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "stale",
       "visa_sponsorship": "sc_blocked",
       "description": "Posted 19 hours ago",
       "scraped_at": "2026-06-20 05:00:39",
@@ -4421,7 +4706,7 @@
       "sources": [
         "JobServe"
       ],
-      "status": "active"
+      "status": "stale"
     },
     {
       "title": "Change & Release Manager - SC cleared",
@@ -4438,7 +4723,7 @@
       "employment": "permanent",
       "sc_clearance": true,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "stale",
       "visa_sponsorship": "sc_blocked",
       "description": "Posted 1 day ago",
       "scraped_at": "2026-06-20 05:00:39",
@@ -4449,7 +4734,7 @@
       "sources": [
         "JobServe"
       ],
-      "status": "active"
+      "status": "stale"
     },
     {
       "title": "Service Transition Analyst",
@@ -4466,7 +4751,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "stale",
       "visa_sponsorship": "unknown",
       "description": "Posted 1 day ago",
       "scraped_at": "2026-06-20 05:00:39",
@@ -4476,7 +4761,7 @@
       "sources": [
         "JobServe"
       ],
-      "status": "active"
+      "status": "stale"
     },
     {
       "title": "Change Manager (OCM)",
@@ -4493,7 +4778,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "stale",
       "visa_sponsorship": "unknown",
       "description": "Posted 1 day ago",
       "scraped_at": "2026-06-20 05:00:39",
@@ -4503,7 +4788,7 @@
       "sources": [
         "JobServe"
       ],
-      "status": "active"
+      "status": "stale"
     },
     {
       "title": "ServiceNow developer",
@@ -4511,7 +4796,7 @@
       "location": "70k Annual GBP",
       "salary_display": "Not listed",
       "date_posted": "2026-06-19 11:48:14",
-      "url": "https://www.jobserve.com/gb/en/mob/job/2C10E46C59F9E3A9A2/",
+      "url": "https://www.jobserve.com/gb/en/mob/job/F9671658A4C7745811/",
       "source": "JobServe",
       "source_type": "aggregator",
       "sn_role": true,
@@ -4526,7 +4811,7 @@
       "scraped_at": "2026-06-20 05:00:39",
       "sponsor_licence": false,
       "first_seen": "2026-06-20",
-      "last_seen": "2026-07-01",
+      "last_seen": "2026-07-08",
       "sources": [
         "JobServe"
       ],
@@ -4634,7 +4919,7 @@
       "description": "Company Description It all started in sunny San Diego, California in 2004 when a visionary engineer, Fred Luddy, saw the potential to transform how we work. Fast forward to today \u2014 ServiceNow stands as a global market leader, bringing innovative AI-enhanced technology to over 8,100 customers, includ",
       "scraped_at": "2026-06-16 05:00:45",
       "first_seen": "2026-06-16",
-      "last_seen": "2026-07-04",
+      "last_seen": "2026-07-08",
       "sources": [
         "ServiceNow Careers"
       ],
@@ -4833,10 +5118,10 @@
     {
       "title": "ServiceNow Business Analyst - Modern Workplace",
       "company": "Pontoon",
-      "location": "Leeds",
-      "salary_display": "\u00a3550 - \u00a3600 per day",
+      "location": "550.00 Daily - 600.00 Daily GBP",
+      "salary_display": "Not listed",
       "date_posted": "2026-06-11 15:43:53",
-      "url": "https://www.jobserve.com/gb/en/mob/job/38531B462941ABC853/",
+      "url": "https://www.jobserve.com/gb/en/mob/job/3E5136CBE34B418AFE/",
       "source": "JobServe",
       "source_type": "aggregator",
       "sn_role": true,
@@ -4845,17 +5130,17 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "description": "Posted 1 day ago",
       "scraped_at": "2026-06-13 05:01:23",
       "sponsor_licence": false,
       "first_seen": "2026-06-13",
-      "last_seen": "2026-06-13",
+      "last_seen": "2026-07-08",
       "sources": [
         "JobServe"
       ],
-      "status": "stale"
+      "status": "active"
     },
     {
       "title": "ServiceNow HAM Pro Implementation Lead",
@@ -5025,7 +5310,7 @@
       "location": "55k Annual GBP",
       "salary_display": "Not listed",
       "date_posted": "2026-06-11 20:46:16",
-      "url": "https://www.jobserve.com/gb/en/mob/job/13417C36B66B68AB06/",
+      "url": "https://www.jobserve.com/gb/en/mob/job/A5E4A9F28426A2758A/",
       "source": "JobServe",
       "source_type": "aggregator",
       "sn_role": true,
@@ -5034,17 +5319,17 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "description": "Posted 1 day ago",
       "scraped_at": "2026-06-13 05:01:23",
       "sponsor_licence": false,
       "first_seen": "2026-06-13",
-      "last_seen": "2026-06-13",
+      "last_seen": "2026-07-08",
       "sources": [
         "JobServe"
       ],
-      "status": "stale"
+      "status": "active"
     },
     {
       "title": "ServiceNow HRSD Business Consultant \u00a375k + bonus",
@@ -5202,7 +5487,7 @@
       "description": "Company Description It all started in sunny San Diego, California in 2004 when a visionary engineer, Fred Luddy, saw the potential to transform how we work. Fast forward to today \u2014 ServiceNow stands as a global market leader, bringing innovative AI-enhanced technology to over 8,100 customers, includ",
       "scraped_at": "2026-06-13 05:01:48",
       "first_seen": "2026-06-13",
-      "last_seen": "2026-07-04",
+      "last_seen": "2026-07-08",
       "sources": [
         "ServiceNow Careers"
       ],
@@ -5685,7 +5970,7 @@
       "description": "Company Description It all started when engineer Fred Luddy wrote code that automated a tedious task for his coworker, Phyllis. She cried tears of joy. That moment inspired Fred to build a company that could do that for everyone\u2014freeing people from busywork so they could focus on meaningful work. To",
       "scraped_at": "2026-06-11 05:01:29",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-07-04",
+      "last_seen": "2026-07-08",
       "sources": [
         "ServiceNow Careers"
       ],
@@ -7015,7 +7300,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "stale",
       "visa_sponsorship": "unknown",
       "description": "Posted 2 hours ago",
       "scraped_at": "2026-06-04 05:01:05",
@@ -7026,7 +7311,7 @@
       "sources": [
         "JobServe"
       ],
-      "status": "active"
+      "status": "stale"
     },
     {
       "title": "ServiceNow HR Business Analyst | Hybrid | To \u00a375k + bonus",
@@ -7556,7 +7841,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "stale",
       "visa_sponsorship": "unknown",
       "description": "Posted 1 day ago",
       "scraped_at": "2026-06-03 05:00:59",
@@ -7566,7 +7851,7 @@
       "sources": [
         "JobServe"
       ],
-      "status": "active"
+      "status": "stale"
     },
     {
       "title": "ServiceNow developer",
@@ -7881,7 +8166,7 @@
       "employment": "contract",
       "sc_clearance": true,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "stale",
       "visa_sponsorship": "sc_blocked",
       "description": "Posted 19 hours ago",
       "scraped_at": "2026-05-29 05:10:28",
@@ -7891,7 +8176,7 @@
       "sources": [
         "JobServe"
       ],
-      "status": "active"
+      "status": "stale"
     },
     {
       "title": "Technical Architect - ServiceNow - SC Cleared",
@@ -7935,7 +8220,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "stale",
       "visa_sponsorship": "unknown",
       "description": "Posted 18 hours ago",
       "scraped_at": "2026-05-29 05:10:28",
@@ -7945,7 +8230,7 @@
       "sources": [
         "JobServe"
       ],
-      "status": "active"
+      "status": "stale"
     },
     {
       "title": "Project Manager - Service Transition",
@@ -7989,7 +8274,7 @@
       "employment": "contract",
       "sc_clearance": true,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "stale",
       "visa_sponsorship": "sc_blocked",
       "description": "Posted 3 hours ago",
       "scraped_at": "2026-05-29 05:10:28",
@@ -7999,7 +8284,7 @@
       "sources": [
         "JobServe"
       ],
-      "status": "active"
+      "status": "stale"
     },
     {
       "title": "ServiceNow Senior Technical Consultant - DV Cleared - Contract",
@@ -9588,7 +9873,7 @@
       "description": "Company Description It all started in sunny San Diego, California in 2004 when a visionary engineer, Fred Luddy, saw the potential to transform how we work. Fast forward to today \u2014 ServiceNow stands as a global market leader, bringing innovative AI-enhanced technology to over 8,100 customers, includ",
       "scraped_at": "2026-05-21 05:03:21",
       "first_seen": "2026-05-21",
-      "last_seen": "2026-07-04",
+      "last_seen": "2026-07-08",
       "sources": [
         "ServiceNow Careers"
       ],
@@ -9798,7 +10083,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "stale",
       "visa_sponsorship": "unknown",
       "description": "Posted 3 hours ago",
       "scraped_at": "2026-05-20 05:00:42",
@@ -9808,7 +10093,7 @@
       "sources": [
         "JobServe"
       ],
-      "status": "active"
+      "status": "stale"
     },
     {
       "title": "IT Support Engineer - Imaging/Asset Management/Distrubution - 12 Month",
@@ -9940,7 +10225,7 @@
       "first_seen": "2026-05-20",
       "sponsor_licence": false,
       "agency_unknown": true,
-      "last_seen": "2026-07-04",
+      "last_seen": "2026-07-08",
       "sources": [
         "Nelson Frank"
       ],
@@ -9969,7 +10254,7 @@
       "first_seen": "2026-05-20",
       "sponsor_licence": false,
       "agency_unknown": true,
-      "last_seen": "2026-07-04",
+      "last_seen": "2026-07-08",
       "sources": [
         "Nelson Frank"
       ],
@@ -10166,7 +10451,7 @@
       "location": "GBP",
       "salary_display": "Not listed",
       "date_posted": "2026-05-19 00:11:46",
-      "url": "https://www.jobserve.com/gb/en/mob/job/DEF61151F7758BA9EB/",
+      "url": "https://www.jobserve.com/gb/en/mob/job/F8B3DEA7F515346318/",
       "source": "JobServe",
       "source_type": "aggregator",
       "sn_role": false,
@@ -10181,7 +10466,7 @@
       "scraped_at": "2026-05-19 05:01:56",
       "sponsor_licence": false,
       "first_seen": "2026-05-19",
-      "last_seen": "2026-07-01",
+      "last_seen": "2026-07-08",
       "sources": [
         "JobServe"
       ],
@@ -11075,7 +11360,7 @@
       "employment": "permanent",
       "sc_clearance": true,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "stale",
       "visa_sponsorship": "sc_blocked",
       "description": "Posted 1 day ago",
       "scraped_at": "2026-05-15 16:18:21",
@@ -11086,7 +11371,7 @@
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-05-15",
       "last_seen": "2026-06-21",
-      "status": "active"
+      "status": "stale"
     },
     {
       "title": "ServiceNow Technical Consultant - DV Cleared",
@@ -11853,7 +12138,7 @@
         "ServiceNow Careers"
       ],
       "first_seen": "2026-05-15",
-      "last_seen": "2026-07-04",
+      "last_seen": "2026-07-08",
       "status": "active"
     },
     {
@@ -11880,7 +12165,7 @@
         "ServiceNow Careers"
       ],
       "first_seen": "2026-05-15",
-      "last_seen": "2026-07-04",
+      "last_seen": "2026-07-08",
       "status": "active"
     },
     {
@@ -12045,7 +12330,7 @@
       ],
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-05-15",
-      "last_seen": "2026-07-04",
+      "last_seen": "2026-07-08",
       "status": "active"
     },
     {
@@ -12105,7 +12390,7 @@
       ],
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-05-15",
-      "last_seen": "2026-07-04",
+      "last_seen": "2026-07-08",
       "status": "active"
     },
     {
@@ -14472,7 +14757,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "description": "Posted 6 days ago",
       "first_seen": "2026-05-08",
@@ -14481,7 +14766,7 @@
         "JobServe"
       ],
       "sponsor_licence": false,
-      "status": "stale"
+      "status": "expired"
     },
     {
       "title": "ServiceNow Solution Architect",
@@ -14624,12 +14909,12 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "description": "ServiceNow directly \u2014 BDM for Security & Risk partner channels in UKI. MSSP strategy, partner recruitment.",
       "first_seen": "2026-05-07",
       "last_seen": "2026-05-07",
-      "status": "stale",
+      "status": "expired",
       "sources": [
         "Hunt UK"
       ],
@@ -14651,12 +14936,12 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "unavailable",
       "description": "Boutique ServiceNow consultancy. CSM certified. \u274c Job listing states \"No need for visa sponsorship\" \u2014 not available for international candidates.",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "stale",
+      "status": "expired",
       "sources": [
         "LinkedIn"
       ],
@@ -14679,13 +14964,13 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "sc_blocked",
       "description": "ServiceNow Developer. Remote (must be UK-based). \u00a345k-\u00a348k. 12-month fixed term contract initially. Analyse and understand ServiceNow environments.",
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "stale",
+      "status": "expired",
       "sources": [
         "Experis"
       ],
@@ -14707,12 +14992,12 @@
       "employment": "contract",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "agency_unknown",
       "description": "Full-time contract ending December 2026. HR Service Delivery module. hackajob is a recruitment platform \u2014 verify sponsorship with actual employer.",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "stale",
+      "status": "expired",
       "sources": [
         "LinkedIn"
       ],
@@ -14735,13 +15020,13 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "description": "Lead ServiceNow implementation projects. Effort estimation, planning, architectural analysis. API integration, cloud platforms. IBM Consulting \u2014 verified A-rated sponsor.",
       "sponsorship_scan": "Skilled Worker visa mentioned",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "stale",
+      "status": "expired",
       "sources": [
         "Hunt UK"
       ],
@@ -14764,13 +15049,13 @@
       "employment": "contract",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "expired",
       "visa_sponsorship": "unknown",
       "description": "Maintenance, configuration and development of the Firm's ITSM tool. Check Clifford Chance careers page.",
       "sponsorship_scan": "fetch_error: HTTP Error 410: Gone",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "stale",
+      "status": "expired",
       "sources": [
         "Hunt UK"
       ],
@@ -14793,13 +15078,13 @@
       "employment": "permanent",
       "sc_clearance": true,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "expired",
       "visa_sponsorship": "sc_blocked",
       "description": "SC clearance required \u2014 5yr UK residency. Not available for international candidates.",
       "sponsorship_scan": "fetch_error: HTTP Error 410: Gone",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "stale",
+      "status": "expired",
       "sources": [
         "Hunt UK"
       ],
@@ -14822,13 +15107,13 @@
       "employment": "permanent",
       "sc_clearance": true,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "expired",
       "visa_sponsorship": "sc_blocked",
       "description": "SC clearance required \u2014 5yr UK residency. Not available for international candidates.",
       "sponsorship_scan": "fetch_error: HTTP Error 410: Gone",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "stale",
+      "status": "expired",
       "sources": [
         "Hunt UK"
       ],
@@ -14850,12 +15135,12 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": true,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "description": "Sep 2026 start. \u00a330,000 salary. Training & development. ServiceNow platform solutions.",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "stale",
+      "status": "expired",
       "sources": [
         "Capgemini Careers"
       ],
@@ -14909,7 +15194,7 @@
       "description": "Visa Sponsorship (Skilled Worker Visa) can be provided. Posted January \u2014 may be filled.",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "stale",
+      "status": "expired",
       "sources": [
         "LinkedIn"
       ],
@@ -14960,13 +15245,13 @@
       "employment": "permanent",
       "sc_clearance": true,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "sc_blocked",
       "description": "Develop and integrate ServiceNow solutions across CSM, ITSM, ITOM, HRSD. JavaScript, Flow Designer, Integration Hub. SC clearance required \u2014 5yr UK residency.",
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "stale",
+      "status": "expired",
       "sources": [
         "Hunt UK"
       ],
@@ -15015,13 +15300,13 @@
       "employment": "permanent",
       "sc_clearance": true,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "sc_blocked",
       "description": "IRM (Risk, Policy & Compliance, Vendor Risk, Audit) and SecOps. Must be eligible for Security Clearance. Akkodis is an agency \u2014 SC requirement blocks sponsorship.",
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "stale",
+      "status": "expired",
       "sources": [
         "Akkodis"
       ],
@@ -15062,7 +15347,7 @@
       "salary_min": 90000,
       "salary_max": 100000,
       "date_posted": "2026-04-25",
-      "url": "https://www.jobserve.com/gb/en/mob/job/D5978E3420740E76F7/",
+      "url": "https://www.jobserve.com/gb/en/mob/job/5456C2900178803F4E/",
       "source": "CV-Library",
       "source_type": "agency",
       "role_type": "architect",
@@ -15075,7 +15360,7 @@
       "description": "12-month FTC, hybrid 2 days remote. May/June 2026 start. Syntax Consultancy NOT on sponsor register \u2014 verify sponsorship with actual employer.",
       "sponsorship_scan": "fetch_error: HTTP Error 403: Forbidden",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-06-25",
+      "last_seen": "2026-07-08",
       "status": "expired",
       "sources": [
         "CV-Library",
@@ -15099,13 +15384,13 @@
       "employment": "contract",
       "sc_clearance": true,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "sc_blocked",
       "description": "Design end-to-end ServiceNow solutions across ITSM, ITOM. Contract, remote. Requires existing SC Clearance \u2014 blocks international candidates.",
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "stale",
+      "status": "expired",
       "sources": [
         "Hays"
       ],
@@ -15127,13 +15412,13 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "sc_blocked",
       "description": "Computacenter \u2014 Elite ServiceNow Partner. Computacenter UK is on the sponsor register (A-rated). Verify sponsorship for this specific role.",
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "stale",
+      "status": "expired",
       "sources": [
         "Hays"
       ],
@@ -15347,13 +15632,13 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "expired",
       "visa_sponsorship": "unknown",
       "description": "15M+ CIs, 300K employees. Global manufacturer. Governance + hands-on CMDB. Harvey Nash agency.",
       "sponsorship_scan": "Skilled Worker visa mentioned",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "stale",
+      "status": "expired",
       "sources": [
         "Hunt UK",
         "LinkedIn"
@@ -15404,12 +15689,12 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "description": "First ServiceNow partner in Europe. 2022 EMEA Elite Partner. 2026 ServiceNow Partner of the Year \u2014 Risk & Compliance. Computacenter holds A-rated sponsor licence.",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "stale",
+      "status": "expired",
       "sources": [
         "JobServe"
       ],
@@ -15667,12 +15952,12 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "stale",
+      "status": "expired",
       "sources": [
         "LinkedIn"
       ],
@@ -15694,12 +15979,12 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "stale",
+      "status": "expired",
       "sources": [
         "LinkedIn"
       ],
@@ -15721,12 +16006,12 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "stale",
+      "status": "expired",
       "sources": [
         "LinkedIn"
       ],
@@ -15748,12 +16033,12 @@
       "employment": "permanent",
       "sc_clearance": true,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "sc_blocked",
       "description": "",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "stale",
+      "status": "expired",
       "sources": [
         "LinkedIn"
       ],
@@ -15775,12 +16060,12 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "stale",
+      "status": "expired",
       "sources": [
         "LinkedIn"
       ],
@@ -15802,12 +16087,12 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "stale",
+      "status": "expired",
       "sources": [
         "LinkedIn"
       ],
@@ -15829,12 +16114,12 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "stale",
+      "status": "expired",
       "sources": [
         "LinkedIn"
       ],
@@ -15883,12 +16168,12 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "stale",
+      "status": "expired",
       "sources": [
         "LinkedIn"
       ],
@@ -15910,12 +16195,12 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "stale",
+      "status": "expired",
       "sources": [
         "LinkedIn"
       ],
@@ -15937,12 +16222,12 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "stale",
+      "status": "expired",
       "sources": [
         "LinkedIn"
       ],
@@ -15964,12 +16249,12 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "stale",
+      "status": "expired",
       "sources": [
         "LinkedIn"
       ],
@@ -15991,12 +16276,12 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "stale",
+      "status": "expired",
       "sources": [
         "LinkedIn"
       ],
@@ -16018,12 +16303,12 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "stale",
+      "status": "expired",
       "sources": [
         "LinkedIn"
       ],
@@ -16045,12 +16330,12 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "stale",
+      "status": "expired",
       "sources": [
         "LinkedIn"
       ],
@@ -16072,12 +16357,12 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "stale",
+      "status": "expired",
       "sources": [
         "LinkedIn"
       ],
@@ -16126,12 +16411,12 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "stale",
+      "status": "expired",
       "sources": [
         "LinkedIn"
       ],
@@ -16153,12 +16438,12 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "stale",
+      "status": "expired",
       "sources": [
         "LinkedIn"
       ],
@@ -16180,12 +16465,12 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "agency_unknown",
       "description": "",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "stale",
+      "status": "expired",
       "sources": [
         "LinkedIn"
       ],
@@ -16207,12 +16492,12 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "stale",
+      "status": "expired",
       "sources": [
         "LinkedIn"
       ],
@@ -16234,12 +16519,12 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "stale",
+      "status": "expired",
       "sources": [
         "LinkedIn"
       ],
@@ -16261,12 +16546,12 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "stale",
+      "status": "expired",
       "sources": [
         "LinkedIn"
       ],
@@ -16288,12 +16573,12 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "stale",
+      "status": "expired",
       "sources": [
         "LinkedIn"
       ],
@@ -16315,12 +16600,12 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "stale",
+      "status": "expired",
       "sources": [
         "LinkedIn"
       ],
@@ -16342,12 +16627,12 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "agency_unknown",
       "description": "",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "stale",
+      "status": "expired",
       "sources": [
         "LinkedIn"
       ],
@@ -16369,12 +16654,12 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "stale",
+      "status": "expired",
       "sources": [
         "LinkedIn"
       ],
@@ -16396,12 +16681,12 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "stale",
+      "status": "expired",
       "sources": [
         "LinkedIn"
       ],
@@ -16423,12 +16708,12 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "stale",
+      "status": "expired",
       "sources": [
         "LinkedIn"
       ],
@@ -16450,12 +16735,12 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "stale",
+      "status": "expired",
       "sources": [
         "LinkedIn"
       ],
@@ -16477,12 +16762,12 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "stale",
+      "status": "expired",
       "sources": [
         "LinkedIn"
       ],
@@ -16504,12 +16789,12 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "stale",
+      "status": "expired",
       "sources": [
         "LinkedIn"
       ],
@@ -16531,12 +16816,12 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "stale",
+      "status": "expired",
       "sources": [
         "LinkedIn"
       ],
@@ -16558,12 +16843,12 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "stale",
+      "status": "expired",
       "sources": [
         "LinkedIn"
       ],
@@ -16585,12 +16870,12 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "stale",
+      "status": "expired",
       "sources": [
         "LinkedIn"
       ],
@@ -16640,12 +16925,12 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "stale",
+      "status": "expired",
       "sources": [
         "LinkedIn"
       ],
@@ -16667,12 +16952,12 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "stale",
+      "status": "expired",
       "sources": [
         "LinkedIn"
       ],
@@ -16694,12 +16979,12 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "stale",
+      "status": "expired",
       "sources": [
         "LinkedIn"
       ],
@@ -16748,12 +17033,12 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "stale",
+      "status": "expired",
       "sources": [
         "LinkedIn"
       ],
@@ -16775,12 +17060,12 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "stale",
+      "status": "expired",
       "sources": [
         "LinkedIn"
       ],
@@ -16802,12 +17087,12 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "stale",
+      "status": "expired",
       "sources": [
         "LinkedIn"
       ],
@@ -16829,12 +17114,12 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "stale",
+      "status": "expired",
       "sources": [
         "LinkedIn"
       ],
@@ -16856,12 +17141,12 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "agency_unknown",
       "description": "",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "stale",
+      "status": "expired",
       "sources": [
         "LinkedIn"
       ],
@@ -16883,12 +17168,12 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "stale",
+      "status": "expired",
       "sources": [
         "LinkedIn"
       ],
@@ -16937,12 +17222,12 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "stale",
+      "status": "expired",
       "sources": [
         "LinkedIn"
       ],
@@ -16991,12 +17276,12 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "stale",
+      "status": "expired",
       "sources": [
         "LinkedIn"
       ],
@@ -17018,12 +17303,12 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "stale",
+      "status": "expired",
       "sources": [
         "LinkedIn"
       ],
@@ -17045,12 +17330,12 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "stale",
+      "status": "expired",
       "sources": [
         "LinkedIn"
       ],
@@ -17072,12 +17357,12 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "stale",
+      "status": "expired",
       "sources": [
         "LinkedIn"
       ],
@@ -17099,12 +17384,12 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "stale",
+      "status": "expired",
       "sources": [
         "LinkedIn"
       ],
@@ -17126,12 +17411,12 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
       "last_seen": "2026-05-07",
-      "status": "stale",
+      "status": "expired",
       "sources": [
         "LinkedIn"
       ],
