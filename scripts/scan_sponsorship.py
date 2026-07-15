@@ -352,10 +352,11 @@ def scan_file(filepath, sponsor_set, dry_run=False, csv_only=False):
     licence_count = sum(1 for j in jobs if j.get('sponsor_licence'))
     
     if not dry_run and any(changes.values()):
-        data['sc_blocked'] = tags.get('sc_blocked', 0)
-        data['verified'] = tags.get('verified', 0) + tags.get('sponsor_verified', 0)
-        if 'daily_snapshots' in data:  # master.json has this key
-            data['licenced_sponsors'] = licence_count
+        if not was_list:
+            data['sc_blocked'] = tags.get('sc_blocked', 0)
+            data['verified'] = tags.get('verified', 0) + tags.get('sponsor_verified', 0)
+            if 'daily_snapshots' in data:
+                data['licenced_sponsors'] = licence_count
         
         with open(filepath, 'w') as f:
             json.dump(data, f, indent=2)
