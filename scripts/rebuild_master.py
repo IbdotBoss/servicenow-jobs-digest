@@ -94,6 +94,19 @@ def rebuild():
     # Convert to list and compute status
     jobs_list = list(all_jobs.values())
     
+    # Normalize source casing + legacy source field into sources array
+    SOURCE_ALIASES = {
+        'hunt_uk': 'Hunt UK',
+    }
+    for j in jobs_list:
+        sources = j.get('sources', [])
+        # Normalize aliases
+        j['sources'] = [SOURCE_ALIASES.get(s, s) for s in sources]
+        # Legacy single source field: merge into sources array
+        legacy_src = j.get('source', '')
+        if legacy_src and legacy_src not in j.get('sources', []):
+            j.setdefault('sources', []).append(SOURCE_ALIASES.get(legacy_src, legacy_src))
+
     # Dead sources — jobs from these are always expired
     DEAD_SOURCES = ['ComputerJobs', 'Totaljobs', 'CV-Library', 'Deerfoot', 'Reed']
     
@@ -110,8 +123,8 @@ def rebuild():
         
         days_since = (datetime.now() - datetime.strptime(j['last_seen'], "%Y-%m-%d")).days
         
-        # Dead source → expired
-        if j.get('source', '') in DEAD_SOURCES:
+        # Dead source → expired (check sources array, not legacy single source field)
+        if any(s in DEAD_SOURCES for s in j.get('sources', [])):
             j['status'] = 'expired'
             j['link_status'] = 'expired'
         # Empty or missing URL → expired
