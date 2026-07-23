@@ -1,6 +1,6 @@
 {
   "updated": "2026-07-23",
-  "updated_at": "2026-07-23 05:02:52",
+  "updated_at": "2026-07-23 05:07:25",
   "total": 39,
   "sources": {
     "JobServe": 25,
@@ -736,7 +736,7 @@
       "location": "United Kingdom",
       "salary_display": "Not listed",
       "date_posted": "2026-07-23",
-      "url": "https://huntukvisasponsors.com/jobs?q=servicenow",
+      "url": "https://uk.linkedin.com/jobs/view/servicenow-administrator-at-eversheds-sutherland-4439262179",
       "source": "Hunt UK",
       "source_type": "aggregator",
       "sn_role": true,
@@ -746,12 +746,10 @@
       "sc_clearance": false,
       "grad_scheme": false,
       "link_status": "live",
-      "visa_sponsorship": "sc_blocked",
+      "visa_sponsorship": "unknown",
       "sponsor_licence": true,
       "description": "ServiceNow - Administrator EVERSHEDS SUTHERLAND (INTERNATIONAL) LLP Ineligible We are Eversheds Sutherland, a global law firm, with more than 5,000 people across over 30 countries. We\u2019re full-service with deep niche and sector experience. Whatever challenge, wherever in the world, we\u2019re equipped and ready to meet it. We live our values, we\u2019re purposeful and purpose-led. So although the world is fast-moving and rapidly changing, we see it as a place where everyone can thrive. We\u2019re ambitious for ",
-      "scraped_at": "2026-07-23 05:02:23",
-      "sponsorship_scan": "Security clearance required",
-      "sponsorship_mentioned": true
+      "scraped_at": "2026-07-23 05:02:23"
     },
     {
       "title": "ServiceNow Developer",
@@ -759,7 +757,7 @@
       "location": "United Kingdom",
       "salary_display": "Not listed",
       "date_posted": "2026-07-23",
-      "url": "https://huntukvisasponsors.com/jobs?q=servicenow",
+      "url": "https://uk.linkedin.com/jobs/view/servicenow-developer-at-cognizant-4438480075",
       "source": "Hunt UK",
       "source_type": "aggregator",
       "sn_role": true,
@@ -769,12 +767,11 @@
       "sc_clearance": false,
       "grad_scheme": false,
       "link_status": "live",
-      "visa_sponsorship": "sc_blocked",
+      "visa_sponsorship": "unknown",
       "sponsor_licence": true,
       "description": "ServiceNow Developer Cognizant Worldwide Limited",
       "scraped_at": "2026-07-23 05:02:23",
-      "sponsorship_scan": "Security clearance required",
-      "sponsorship_mentioned": true
+      "sponsorship_scan": "linkedin_js (cannot read full description)"
     },
     {
       "title": "ServiceNow Developer",
@@ -782,7 +779,7 @@
       "location": "United Kingdom",
       "salary_display": "Not listed",
       "date_posted": "2026-07-23",
-      "url": "https://huntukvisasponsors.com/jobs?q=servicenow",
+      "url": "https://uk.linkedin.com/jobs/view/servicenow-developer-at-cognizant-4438480075",
       "source": "Hunt UK",
       "source_type": "aggregator",
       "sn_role": true,
@@ -792,12 +789,11 @@
       "sc_clearance": false,
       "grad_scheme": false,
       "link_status": "live",
-      "visa_sponsorship": "sc_blocked",
+      "visa_sponsorship": "unknown",
       "sponsor_licence": true,
       "description": "ServiceNow Developer Cognizant Worldwide Limited",
       "scraped_at": "2026-07-23 05:02:23",
-      "sponsorship_scan": "Security clearance required",
-      "sponsorship_mentioned": true
+      "sponsorship_scan": "linkedin_js (cannot read full description)"
     },
     {
       "title": "Senior ServiceNow Sales Professional",
@@ -805,7 +801,7 @@
       "location": "United Kingdom",
       "salary_display": "Not listed",
       "date_posted": "2026-07-23",
-      "url": "https://huntukvisasponsors.com/jobs?q=servicenow",
+      "url": "https://uk.linkedin.com/jobs/view/senior-servicenow-sales-professional-at-dxc-technology-4440246279",
       "source": "Hunt UK",
       "source_type": "aggregator",
       "sn_role": true,
@@ -815,12 +811,10 @@
       "sc_clearance": false,
       "grad_scheme": false,
       "link_status": "live",
-      "visa_sponsorship": "sc_blocked",
+      "visa_sponsorship": "unknown",
       "sponsor_licence": true,
       "description": "Senior ServiceNow Sales Professional CSC Computer Sciences Limited",
-      "scraped_at": "2026-07-23 05:02:23",
-      "sponsorship_scan": "Security clearance required",
-      "sponsorship_mentioned": true
+      "scraped_at": "2026-07-23 05:02:23"
     },
     {
       "title": "ServiceNow DevOps Delivery Leadership | Independent Consultant Engagement | 7-Month Assignment | Immediate Start",
@@ -828,7 +822,7 @@
       "location": "United Kingdom",
       "salary_display": "Not listed",
       "date_posted": "2026-07-23",
-      "url": "https://huntukvisasponsors.com/jobs?q=servicenow",
+      "url": "https://uk.linkedin.com/jobs/view/servicenow-devops-delivery-leadership-independent-consultant-engagement-7-month-assignment-immediate-start-at-bip-uk-4440953647",
       "source": "Hunt UK",
       "source_type": "aggregator",
       "sn_role": true,
@@ -838,14 +832,12 @@
       "sc_clearance": false,
       "grad_scheme": false,
       "link_status": "live",
-      "visa_sponsorship": "sc_blocked",
+      "visa_sponsorship": "unknown",
       "sponsor_licence": true,
       "description": "ServiceNow DevOps Delivery Leadership | Independent Consultant Engagement | 7-Month Assignment | Immediate Start Business Integration Partners SPA",
-      "scraped_at": "2026-07-23 05:02:23",
-      "sponsorship_scan": "Security clearance required",
-      "sponsorship_mentioned": true
+      "scraped_at": "2026-07-23 05:02:23"
     }
   ],
-  "sc_blocked": 11,
+  "sc_blocked": 6,
   "verified": 0
 }
