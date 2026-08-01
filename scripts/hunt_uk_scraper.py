@@ -164,8 +164,13 @@ def parse_jobs(page_text):
                   else 'hybrid' if 'hybrid' in tl
                   else 'onsite')
 
-        # Title cleanup: strip inline references like " - 277199"
-        clean_title = re.sub(r'\s*-\s*\d{2,}\s*$', '', line).strip()
+        # Extract URL from markdown link in title line, e.g. [Title](https://...)
+        url_m = re.search(r'\[[^\]]+\]\((https?://[^)]+)\)', line)
+        job_url = url_m.group(1).strip() if url_m else URL
+
+        # Title cleanup: strip markdown link wrapper and inline references like " - 277199"
+        clean_title = re.sub(r'\[[^\]]+\]\([^)]+\)', '', line).strip()
+        clean_title = re.sub(r'\s*-\s*\d{2,}\s*$', '', clean_title).strip()
 
         jobs.append({
             'title': clean_title,
@@ -173,7 +178,7 @@ def parse_jobs(page_text):
             'location': location,
             'salary_display': salary_display,
             'date_posted': TODAY,
-            'url': URL,
+            'url': job_url,
             'source': 'Hunt UK',
             'source_type': 'aggregator',
             'sn_role': True,
