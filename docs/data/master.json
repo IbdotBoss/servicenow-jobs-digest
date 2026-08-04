@@ -1,8 +1,8 @@
 {
-  "updated": "2026-08-03",
-  "total": 808,
+  "updated": "2026-08-04",
+  "total": 812,
   "total_active": 125,
-  "licenced_sponsors": 324,
+  "licenced_sponsors": 327,
   "daily_snapshots": [
     "2026-05-06",
     "2026-05-07",
@@ -74,11 +74,12 @@
     "2026-07-31",
     "2026-08-01",
     "2026-08-02",
-    "2026-08-03"
+    "2026-08-03",
+    "2026-08-04"
   ],
   "sources": {
-    "JobServe": 477,
-    "Hunt UK": 219,
+    "JobServe": 478,
+    "Hunt UK": 222,
     "LinkedIn": 105,
     "ServiceNow Careers": 22,
     "Nelson Frank": 11,
@@ -93,6 +94,117 @@
     "CV-Library": 1
   },
   "jobs": [
+    {
+      "title": "ServiceNow Developer",
+      "company": "Precise Placements Ltd",
+      "location": "London",
+      "salary_display": "\u00a390-110k + benefits",
+      "date_posted": "2026-08-03 11:11:55",
+      "url": "https://www.jobserve.com/gb/en/mob/job/366F2C9B126830394C/",
+      "source": "JobServe",
+      "source_type": "aggregator",
+      "sn_role": true,
+      "role_type": "developer",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "unknown",
+      "description": "Posted 18 hours ago",
+      "scraped_at": "2026-08-04 05:02:26",
+      "sponsor_licence": false,
+      "first_seen": "2026-08-04",
+      "last_seen": "2026-08-04",
+      "sources": [
+        "JobServe"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "Senior ServiceNow Engineer - Product Manager (GRC)",
+      "company": "FOCUS CLOUD GROUP LIMITED",
+      "location": "United Kingdom",
+      "salary_display": "Not listed",
+      "date_posted": "2026-08-04",
+      "url": "https://huntukvisasponsors.com/jobs?q=servicenow",
+      "source": "Hunt UK",
+      "source_type": "aggregator",
+      "sn_role": true,
+      "role_type": "manager",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "expired",
+      "visa_sponsorship": "unknown",
+      "sponsor_licence": true,
+      "description": "Senior ServiceNow Engineer - Product Manager (GRC) FOCUS CLOUD GROUP LIMITED",
+      "scraped_at": "2026-08-04 05:03:36",
+      "sponsorship_mentioned": true,
+      "first_seen": "2026-08-04",
+      "last_seen": "2026-08-04",
+      "sources": [
+        "Hunt UK"
+      ],
+      "status": "expired"
+    },
+    {
+      "title": "ServiceNow Release & Environments Lead",
+      "company": "BAE Systems Plc",
+      "location": "United Kingdom",
+      "salary_display": "Not listed",
+      "date_posted": "2026-08-04",
+      "url": "https://huntukvisasponsors.com/jobs?q=servicenow",
+      "source": "Hunt UK",
+      "source_type": "aggregator",
+      "sn_role": true,
+      "role_type": "manager",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "expired",
+      "visa_sponsorship": "unknown",
+      "sponsor_licence": true,
+      "description": "ServiceNow Release & Environments Lead BAE Systems Plc",
+      "scraped_at": "2026-08-04 05:03:36",
+      "sponsorship_mentioned": true,
+      "first_seen": "2026-08-04",
+      "last_seen": "2026-08-04",
+      "sources": [
+        "Hunt UK"
+      ],
+      "status": "expired"
+    },
+    {
+      "title": "ServiceNow Business Analyst",
+      "company": "BAE Systems Plc",
+      "location": "United Kingdom",
+      "salary_display": "Not listed",
+      "date_posted": "2026-08-04",
+      "url": "https://huntukvisasponsors.com/jobs?q=servicenow",
+      "source": "Hunt UK",
+      "source_type": "aggregator",
+      "sn_role": true,
+      "role_type": "other",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "expired",
+      "visa_sponsorship": "unknown",
+      "sponsor_licence": true,
+      "description": "ServiceNow Business Analyst BAE Systems Plc 97",
+      "scraped_at": "2026-08-04 05:03:36",
+      "sponsorship_mentioned": true,
+      "first_seen": "2026-08-04",
+      "last_seen": "2026-08-04",
+      "sources": [
+        "Hunt UK"
+      ],
+      "status": "expired"
+    },
     {
       "title": "ServiceNow Developer Contract - 6 months",
       "company": "CBSbutler Holdings Limited",
@@ -114,7 +226,7 @@
       "scraped_at": "2026-08-03 05:00:42",
       "sponsor_licence": false,
       "first_seen": "2026-08-03",
-      "last_seen": "2026-08-03",
+      "last_seen": "2026-08-04",
       "sources": [
         "JobServe"
       ],
@@ -142,7 +254,7 @@
       "scraped_at": "2026-08-03 05:02:22",
       "sponsorship_mentioned": true,
       "first_seen": "2026-08-03",
-      "last_seen": "2026-08-03",
+      "last_seen": "2026-08-04",
       "sources": [
         "Hunt UK"
       ],
@@ -169,7 +281,7 @@
       "description": "ServiceNow Platform and Solution Architect EDF ENERGY LAKE LIMITED",
       "scraped_at": "2026-08-03 05:02:22",
       "first_seen": "2026-08-03",
-      "last_seen": "2026-08-03",
+      "last_seen": "2026-08-04",
       "sources": [
         "Hunt UK"
       ],
@@ -253,7 +365,7 @@
       "scraped_at": "2026-08-02 05:02:43",
       "sponsorship_mentioned": true,
       "first_seen": "2026-08-02",
-      "last_seen": "2026-08-03",
+      "last_seen": "2026-08-04",
       "sources": [
         "Hunt UK"
       ],
@@ -1007,7 +1119,7 @@
       "location": "65k Annual GBP",
       "salary_display": "Not listed",
       "date_posted": "2026-07-28 06:53:29",
-      "url": "https://www.jobserve.com/gb/en/mob/job/5BF1659BF3BE9A2F20/",
+      "url": "https://www.jobserve.com/gb/en/mob/job/7028E62AFCAF12EE9C/",
       "source": "JobServe",
       "source_type": "aggregator",
       "sn_role": true,
@@ -1022,7 +1134,7 @@
       "scraped_at": "2026-07-29 05:01:43",
       "sponsor_licence": false,
       "first_seen": "2026-07-29",
-      "last_seen": "2026-07-30",
+      "last_seen": "2026-08-04",
       "sources": [
         "JobServe"
       ],
@@ -1049,7 +1161,7 @@
       "description": "Company Description It all started when engineer Fred Luddy wrote code that automated a tedious task for his coworker, Phyllis. She cried tears of joy. That moment inspired Fred to build a company that could do that for everyone\u2014freeing people from busywork so they could focus on meaningful work. To",
       "scraped_at": "2026-07-29 05:01:36",
       "first_seen": "2026-07-29",
-      "last_seen": "2026-08-03",
+      "last_seen": "2026-08-04",
       "sources": [
         "ServiceNow Careers"
       ],
@@ -1117,7 +1229,7 @@
       "location": "Competitive",
       "salary_display": "Not listed",
       "date_posted": "2026-07-27 09:36:22",
-      "url": "https://www.jobserve.com/gb/en/mob/job/E4D0A02070A34AD363/",
+      "url": "https://www.jobserve.com/gb/en/mob/job/652247D66DAD0FA2EB/",
       "source": "JobServe",
       "source_type": "aggregator",
       "sn_role": false,
@@ -1132,7 +1244,7 @@
       "scraped_at": "2026-07-28 05:01:15",
       "sponsor_licence": true,
       "first_seen": "2026-07-28",
-      "last_seen": "2026-07-29",
+      "last_seen": "2026-08-04",
       "sources": [
         "JobServe"
       ],
@@ -1186,7 +1298,7 @@
       "scraped_at": "2026-07-26 05:01:30",
       "sponsor_licence": false,
       "first_seen": "2026-07-26",
-      "last_seen": "2026-08-03",
+      "last_seen": "2026-08-04",
       "sources": [
         "JobServe"
       ],
@@ -1225,7 +1337,7 @@
       "location": "GBP",
       "salary_display": "Not listed",
       "date_posted": "2026-07-25 17:14:50",
-      "url": "https://www.jobserve.com/gb/en/mob/job/4D2A70CD19C7192ECA/",
+      "url": "https://www.jobserve.com/gb/en/mob/job/5698B826A2DA2A9E78/",
       "source": "JobServe",
       "source_type": "aggregator",
       "sn_role": false,
@@ -1240,7 +1352,7 @@
       "scraped_at": "2026-07-26 05:01:30",
       "sponsor_licence": true,
       "first_seen": "2026-07-26",
-      "last_seen": "2026-07-26",
+      "last_seen": "2026-08-04",
       "sources": [
         "JobServe"
       ],
@@ -2468,7 +2580,7 @@
       "sponsorship_mentioned": false,
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-07-21",
-      "last_seen": "2026-08-03",
+      "last_seen": "2026-08-04",
       "sources": [
         "JobServe"
       ],
@@ -2575,7 +2687,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "stale",
       "visa_sponsorship": "unknown",
       "description": "Posted 12 hours ago",
       "scraped_at": "2026-07-19 05:01:01",
@@ -2585,7 +2697,7 @@
       "sources": [
         "JobServe"
       ],
-      "status": "active"
+      "status": "stale"
     },
     {
       "title": "IT Support Engineer",
@@ -2918,7 +3030,7 @@
       "description": "Company Description It all started when engineer Fred Luddy wrote code that automated a tedious task for his coworker, Phyllis. She cried tears of joy. That moment inspired Fred to build a company that could do that for everyone\u2014freeing people from busywork so they could focus on meaningful work. To",
       "scraped_at": "2026-07-17 05:00:53",
       "first_seen": "2026-07-17",
-      "last_seen": "2026-08-03",
+      "last_seen": "2026-08-04",
       "sources": [
         "ServiceNow Careers"
       ],
@@ -3246,7 +3358,7 @@
       "description": "Company Description It all started when engineer Fred Luddy wrote code that automated a tedious task for his coworker, Phyllis. She cried tears of joy. That moment inspired Fred to build a company that could do that for everyone\u2014freeing people from busywork so they could focus on meaningful work. To",
       "scraped_at": "2026-07-16 05:01:01",
       "first_seen": "2026-07-16",
-      "last_seen": "2026-08-03",
+      "last_seen": "2026-08-04",
       "sources": [
         "ServiceNow Careers"
       ],
@@ -9934,7 +10046,7 @@
       "description": "Company Description It all started in sunny San Diego, California in 2004 when a visionary engineer, Fred Luddy, saw the potential to transform how we work. Fast forward to today \u2014 ServiceNow stands as a global market leader, bringing innovative AI-enhanced technology to over 8,100 customers, includ",
       "scraped_at": "2026-06-13 05:01:48",
       "first_seen": "2026-06-13",
-      "last_seen": "2026-08-03",
+      "last_seen": "2026-08-04",
       "sources": [
         "ServiceNow Careers"
       ],
@@ -10390,7 +10502,7 @@
       "description": "Company Description It all started when engineer Fred Luddy wrote code that automated a tedious task for his coworker, Phyllis. She cried tears of joy. That moment inspired Fred to build a company that could do that for everyone\u2014freeing people from busywork so they could focus on meaningful work. To",
       "scraped_at": "2026-06-11 05:01:29",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-08-03",
+      "last_seen": "2026-08-04",
       "sources": [
         "ServiceNow Careers"
       ],
@@ -11411,7 +11523,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "description": "Posted 1 day ago",
       "scraped_at": "2026-06-04 05:01:05",
@@ -11422,7 +11534,7 @@
       "sources": [
         "JobServe"
       ],
-      "status": "stale"
+      "status": "expired"
     },
     {
       "title": "ServiceNow Developer (SC Cleared) - Remote - Contract",
@@ -11829,7 +11941,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "description": "Posted 20 hours ago",
       "scraped_at": "2026-06-03 05:00:59",
@@ -11839,7 +11951,7 @@
       "sources": [
         "JobServe"
       ],
-      "status": "stale"
+      "status": "expired"
     },
     {
       "title": "ServiceNow Developer",
@@ -12127,7 +12239,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "description": "Posted 20 hours ago",
       "scraped_at": "2026-06-03 05:00:59",
@@ -12137,7 +12249,7 @@
       "sources": [
         "JobServe"
       ],
-      "status": "stale"
+      "status": "expired"
     },
     {
       "title": "IT Support",
@@ -12343,7 +12455,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "description": "Posted 7 hours ago",
       "scraped_at": "2026-06-03 05:00:59",
@@ -12353,7 +12465,7 @@
       "sources": [
         "JobServe"
       ],
-      "status": "stale"
+      "status": "expired"
     },
     {
       "title": "Enterprise Service Manager - ServiceNow Business Analyst - 100k",
@@ -14171,7 +14283,7 @@
       "location": "Up to \u00a380k + bonus + good package",
       "salary_display": "Up to \u00a380k + bonus + good package",
       "date_posted": "2026-05-20 15:18:07",
-      "url": "https://www.jobserve.com/gb/en/mob/job/6EBB9BECC69E6DB77B/",
+      "url": "https://www.jobserve.com/gb/en/mob/job/9327B49C571E301ABD/",
       "source": "JobServe",
       "source_type": "aggregator",
       "sn_role": false,
@@ -14186,7 +14298,7 @@
       "scraped_at": "2026-05-21 05:03:00",
       "sponsor_licence": true,
       "first_seen": "2026-05-21",
-      "last_seen": "2026-07-29",
+      "last_seen": "2026-08-04",
       "sources": [
         "JobServe"
       ],
@@ -14321,7 +14433,7 @@
       "description": "Company Description It all started in sunny San Diego, California in 2004 when a visionary engineer, Fred Luddy, saw the potential to transform how we work. Fast forward to today \u2014 ServiceNow stands as a global market leader, bringing innovative AI-enhanced technology to over 8,100 customers, includ",
       "scraped_at": "2026-05-21 05:03:21",
       "first_seen": "2026-05-21",
-      "last_seen": "2026-08-03",
+      "last_seen": "2026-08-04",
       "sources": [
         "ServiceNow Careers"
       ],
@@ -16585,7 +16697,7 @@
         "ServiceNow Careers"
       ],
       "first_seen": "2026-05-15",
-      "last_seen": "2026-08-03",
+      "last_seen": "2026-08-04",
       "status": "active"
     },
     {
@@ -19290,7 +19402,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "description": "Posted 6 days ago",
       "first_seen": "2026-05-08",
@@ -19299,7 +19411,7 @@
         "JobServe"
       ],
       "sponsor_licence": false,
-      "status": "stale"
+      "status": "expired"
     },
     {
       "title": "Public Sector/Enterprise Sales Account Manager - ServiceNow Partner.",
