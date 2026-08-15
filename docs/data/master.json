@@ -1,8 +1,8 @@
 {
-  "updated": "2026-08-14",
-  "total": 872,
-  "total_active": 108,
-  "licenced_sponsors": 364,
+  "updated": "2026-08-15",
+  "total": 885,
+  "total_active": 125,
+  "licenced_sponsors": 376,
   "daily_snapshots": [
     "2026-05-06",
     "2026-05-07",
@@ -79,13 +79,14 @@
     "2026-08-05",
     "2026-08-06",
     "2026-08-13",
-    "2026-08-14"
+    "2026-08-14",
+    "2026-08-15"
   ],
   "sources": {
-    "JobServe": 510,
-    "Hunt UK": 249,
+    "JobServe": 514,
+    "Hunt UK": 258,
     "LinkedIn": 105,
-    "ServiceNow Careers": 24,
+    "ServiceNow Careers": 25,
     "Nelson Frank": 11,
     "ComputerJobs": 9,
     "Reed": 2,
@@ -98,6 +99,358 @@
     "CV-Library": 1
   },
   "jobs": [
+    {
+      "title": "ServiceNow Developer (HRSD)",
+      "company": "Mpower Plus UK Ltd",
+      "location": "UK",
+      "salary_display": "Not listed",
+      "date_posted": "2026-08-14 07:00:24",
+      "url": "https://www.jobserve.com/gb/en/mob/job/A117B462358FA56176/",
+      "source": "JobServe",
+      "source_type": "aggregator",
+      "sn_role": true,
+      "role_type": "developer",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "unknown",
+      "description": "Posted 23 hours ago",
+      "scraped_at": "2026-08-15 05:00:46",
+      "sponsor_licence": true,
+      "first_seen": "2026-08-15",
+      "last_seen": "2026-08-15",
+      "sources": [
+        "JobServe"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "ITSM Reporting Analyst - Power BI - Banking",
+      "company": "Rothstein Recruitment Ltd",
+      "location": "EXCELLENT",
+      "salary_display": "Not listed",
+      "date_posted": "2026-08-14 12:09:05",
+      "url": "https://www.jobserve.com/gb/en/mob/job/D6435437520ABDBD83/",
+      "source": "JobServe",
+      "source_type": "aggregator",
+      "sn_role": false,
+      "role_type": "sn-adjacent",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "unknown",
+      "description": "Posted 17 hours ago",
+      "scraped_at": "2026-08-15 05:00:46",
+      "sponsor_licence": false,
+      "first_seen": "2026-08-15",
+      "last_seen": "2026-08-15",
+      "sources": [
+        "JobServe"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "IT Support Analyst",
+      "company": "South East Water",
+      "location": "29064.00 Annual GBP",
+      "salary_display": "Not listed",
+      "date_posted": "2026-08-14 20:51:57",
+      "url": "https://www.jobserve.com/gb/en/mob/job/84B5E24DD834ABEBDE/",
+      "source": "JobServe",
+      "source_type": "aggregator",
+      "sn_role": false,
+      "role_type": "sn-adjacent",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "unknown",
+      "description": "Posted 9 hours ago",
+      "scraped_at": "2026-08-15 05:00:46",
+      "sponsor_licence": true,
+      "first_seen": "2026-08-15",
+      "last_seen": "2026-08-15",
+      "sources": [
+        "JobServe"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "Partner Solution Engineer",
+      "company": "ServiceNow",
+      "location": "Staines, United Kingdom",
+      "salary_display": "Not listed",
+      "date_posted": "2026-08-14 07:57:40",
+      "url": "https://careers.servicenow.com/jobs/744000143458599/partner-solution-engineer/",
+      "source": "ServiceNow Careers",
+      "source_type": "direct",
+      "sn_role": true,
+      "role_type": "developer",
+      "remote": "hybrid",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "unknown",
+      "sponsor_licence": true,
+      "description": "Company Description It all started when engineer Fred Luddy wrote code that automated a tedious task for his coworker, Phyllis. She cried tears of joy. That moment inspired Fred to build a company that could do that for everyone\u2014freeing people from busywork so they could focus on meaningful work. To",
+      "scraped_at": "2026-08-15 05:00:39",
+      "first_seen": "2026-08-15",
+      "last_seen": "2026-08-15",
+      "sources": [
+        "ServiceNow Careers"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "ServiceNow Developer - HR",
+      "company": "PRACYVA LTD",
+      "location": "London Area, United Kingdom",
+      "salary_display": "Not listed",
+      "date_posted": "2026-08-15",
+      "url": "https://uk.linkedin.com/jobs/view/servicenow-developer-hr-at-pracyva-4449859930",
+      "source": "Hunt UK",
+      "source_type": "aggregator",
+      "sn_role": true,
+      "role_type": "developer",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "unknown",
+      "sponsor_licence": true,
+      "description": "Key responsibilities Design, configure, and develop solutions on the ServiceNow platform, with primary focus on HRSD (HR Case Management, HR Services, COEs, record producers, lifecycle events). Implement end-to-end solutions including business rules, client/server scripts, UI actions, Flow Designer, and Service Catalog. Build and maintain automated tests using ServiceNow ATF, ensuring regression coverage and platform stability. Collaborate with product owners, architects, and other engineers to ",
+      "scraped_at": "2026-08-15 05:04:08",
+      "first_seen": "2026-08-15",
+      "last_seen": "2026-08-15",
+      "sources": [
+        "Hunt UK"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "ServiceNow Developer",
+      "company": "Simplex Services (UK) Ltd",
+      "location": "London Area, United Kingdom",
+      "salary_display": "Not listed",
+      "date_posted": "2026-08-15",
+      "url": "https://uk.linkedin.com/jobs/view/servicenow-developer-at-simplex-services-4449854731",
+      "source": "Hunt UK",
+      "source_type": "aggregator",
+      "sn_role": true,
+      "role_type": "developer",
+      "remote": "onsite",
+      "employment": "contract",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "unknown",
+      "sponsor_licence": true,
+      "description": "Job Title: ServiceNow Developer (ITSM) Role Overview We are looking for an experienced ServiceNow Developer with strong expertise in ITSM implementation and ServiceNow platform development . The ideal candidate will have hands-on experience in developing, customizing, and integrating ServiceNow solutions while collaborating with business stakeholders to deliver scalable and efficient solutions. Location: London, UK Work Mode: Remote / Hybrid (UK: 1\u20132 days/week in office, flexible) Contract: Init",
+      "scraped_at": "2026-08-15 05:04:08",
+      "first_seen": "2026-08-15",
+      "last_seen": "2026-08-15",
+      "sources": [
+        "Hunt UK"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "Service Operations Specialist - ServiceNow",
+      "company": "Bracknell Tangs Management Ltd",
+      "location": "Manchester, United Kingdom",
+      "salary_display": "Not listed",
+      "date_posted": "2026-08-15",
+      "url": "https://external-workingatbooking.icims.com/jobs/29579/login",
+      "source": "Hunt UK",
+      "source_type": "aggregator",
+      "sn_role": true,
+      "role_type": "admin",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "unknown",
+      "sponsor_licence": true,
+      "description": "About Us: At Booking.com, data drives our decisions. Technology is at our core. And innovation is everywhere. But our company is more than datasets, lines of code or A/B tests. We\u2019re the thrill of the first night in a new place. The excitement of the next morning. The friends you encounter. The journeys you take. The sights you see. And the memories you make. Through our products, partners and people, we make it easier for everyone to experience the world. Role Overview : The Service Operations ",
+      "scraped_at": "2026-08-15 05:04:08",
+      "first_seen": "2026-08-15",
+      "last_seen": "2026-08-15",
+      "sources": [
+        "Hunt UK"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "Senior ServiceNow Developer",
+      "company": "Mphasis UK Limited",
+      "location": "London Area, United Kingdom",
+      "salary_display": "Not listed",
+      "date_posted": "2026-08-15",
+      "url": "https://uk.linkedin.com/jobs/view/senior-servicenow-developer-at-mphasis-4449143065",
+      "source": "Hunt UK",
+      "source_type": "aggregator",
+      "sn_role": true,
+      "role_type": "developer",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "unknown",
+      "sponsor_licence": true,
+      "description": "Job Title: Senior ServiceNow Developer Job Summary: We are seeking a highly skilled certified ServiceNow Developer with a strong background in system administration to join our team. The ideal candidate will be responsible for developing and managing ServiceNow workflows, ensuring seamless interaction with automation systems, and driving end-to-end automation initiatives. This role requires a deep understanding of ServiceNow administration and a proactive approach to problem-solving. Responsibil",
+      "scraped_at": "2026-08-15 05:04:08",
+      "first_seen": "2026-08-15",
+      "last_seen": "2026-08-15",
+      "sources": [
+        "Hunt UK"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "Track Lead - ServiceNow, IT Service Management",
+      "company": "HCL Technologies UK Limited",
+      "location": "",
+      "salary_display": "Not listed",
+      "date_posted": "2026-08-15",
+      "url": "https://careers.hcltech.com/job/Track-Lead-ServiceNow%2C-IT-Service-Management/120446-en_US",
+      "source": "Hunt UK",
+      "source_type": "aggregator",
+      "sn_role": true,
+      "role_type": "manager",
+      "remote": "onsite",
+      "employment": "contract",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "unknown",
+      "sponsor_licence": true,
+      "description": "Job Summary Service Level Management Lead 1. SLA Administration : Draft, negotiate, and standardize Service Level Agreements, maintaining a structured inventory of contracts and service catalogues. 2. Performance Monitoring : Oversee end-to-end SLA compliance by tracking key metrics (e.g., uptime, resolution timelines, latency) using tracking dashboards and reports. 3 . Breach Management : Perform gap analysis on SLA breaches, conduct root cause analysis (RCA), and recommend actions to prevent r",
+      "scraped_at": "2026-08-15 05:04:08",
+      "first_seen": "2026-08-15",
+      "last_seen": "2026-08-15",
+      "sources": [
+        "Hunt UK"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "ServiceNow Platform Lead",
+      "company": "Cityfibre Holdings Ltd",
+      "location": "London, England, United Kingdom",
+      "salary_display": "Not listed",
+      "date_posted": "2026-08-15",
+      "url": "https://jobs.smartrecruiters.com/CityFibre/744000141687398-servicenow-platform-lead-?oga=true",
+      "source": "Hunt UK",
+      "source_type": "aggregator",
+      "sn_role": true,
+      "role_type": "manager",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "unknown",
+      "sponsor_licence": true,
+      "description": "This hybrid role offers a great balance of home and office working. You\u2019ll join your colleagues in London at least two days a week. As the UK\u2019s largest independent full fibre network and wholesale platform of choice, we\u2019re busy setting new standards for what digital infrastructure can and should be. Our network is greener, more reliable and designed for the future. The products we run over it lead the way on speed, value and service - helping businesses to innovate, communities to thrive, and pe",
+      "scraped_at": "2026-08-15 05:04:08",
+      "sponsorship_scan": "fetch_error: HTTP Error 403: Forbidden",
+      "first_seen": "2026-08-15",
+      "last_seen": "2026-08-15",
+      "sources": [
+        "Hunt UK"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "SeniorAdministrator - ServiceNow,JavaScript",
+      "company": "HCL Technologies UK Limited",
+      "location": "",
+      "salary_display": "Not listed",
+      "date_posted": "2026-08-15",
+      "url": "https://careers.hcltech.com/job/SeniorAdministrator-ServiceNow%2CJavaScript/148562-en_US",
+      "source": "Hunt UK",
+      "source_type": "aggregator",
+      "sn_role": true,
+      "role_type": "admin",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "unknown",
+      "sponsor_licence": true,
+      "description": "Job Summary The ServiceNow functional consultant (FC)is responsible for recommending, coordinating and delivering solutions to user stores/enhancements within agreed delivery timelines on the ServiceNow platform. The Service Now FC will document functional requirement specification (FRS) , estimate work efforts, perform requirement gathering, suggest possible solutions with or without customization depending on the complexity of the user stories. The Functional Consultant is required to work wit",
+      "scraped_at": "2026-08-15 05:04:08",
+      "first_seen": "2026-08-15",
+      "last_seen": "2026-08-15",
+      "sources": [
+        "Hunt UK"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "ServiceNow - HAM Pro Specialist",
+      "company": "Square One Resources Ltd",
+      "location": "Coventry, England, United Kingdom",
+      "salary_display": "Not listed",
+      "date_posted": "2026-08-15",
+      "url": "https://uk.linkedin.com/jobs/view/servicenow-ham-pro-specialist-at-square-one-resources-4446637308",
+      "source": "Hunt UK",
+      "source_type": "aggregator",
+      "sn_role": true,
+      "role_type": "admin",
+      "remote": "onsite",
+      "employment": "contract",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "unknown",
+      "sponsor_licence": true,
+      "description": "Job Title: Senior ServiceNow IT Asset Management (HAM Pro) Consultant Location: Coventry, UK (Hybrid working) Day Rate: \u00a3400 - \u00a3450 (Inside IR35) Start Date: Immediate start Job Type: Contract position We are looking for an experienced Senior ServiceNow IT Asset Management (ITAM) Consultant with deep expertise in ServiceNow HAM Pro, SAM Pro and CMDB to lead the development and maturity of enterprise IT Asset Management capabilities. This role is ideal for someone who has successfully delivered S",
+      "scraped_at": "2026-08-15 05:04:08",
+      "first_seen": "2026-08-15",
+      "last_seen": "2026-08-15",
+      "sources": [
+        "Hunt UK"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "Senior Administrator - ServiceNow, IT Service Management",
+      "company": "HCL Technologies UK Limited",
+      "location": "",
+      "salary_display": "Not listed",
+      "date_posted": "2026-08-15",
+      "url": "https://careers.hcltech.com/job/Senior-Administrator-ServiceNow%2C-IT-Service-Management/126702-en_US",
+      "source": "Hunt UK",
+      "source_type": "aggregator",
+      "sn_role": true,
+      "role_type": "admin",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "unknown",
+      "sponsor_licence": true,
+      "description": "Job Summary An IT Service Management (ITSM) Level 2 (L2) professional resolves complex technical issues and manages escalated incidents that cannot be fixed by L1 support. They act as the crucial bridge between end-users, core infrastructure, and engineering teams to minimize downtime and restore services Key Responsibilities Incident Management: Handle advanced technical escalations, ensuring tickets are resolved within Service Level Agreements (SLAs). \u2022 System Troubleshooting: Diagnose and rep",
+      "scraped_at": "2026-08-15 05:04:08",
+      "first_seen": "2026-08-15",
+      "last_seen": "2026-08-15",
+      "sources": [
+        "Hunt UK"
+      ],
+      "status": "active"
+    },
     {
       "title": "ServiceNow Risk Consultant | Remote (w/client travel)",
       "company": "Akkodis",
@@ -119,7 +472,7 @@
       "scraped_at": "2026-08-14 05:01:48",
       "sponsor_licence": false,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-14",
+      "last_seen": "2026-08-15",
       "sources": [
         "JobServe"
       ],
@@ -147,7 +500,7 @@
       "sponsor_licence": false,
       "sponsorship_scan": "blocked_by_manual_tag: sc_blocked",
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-14",
+      "last_seen": "2026-08-15",
       "sources": [
         "JobServe"
       ],
@@ -174,7 +527,7 @@
       "scraped_at": "2026-08-14 05:01:48",
       "sponsor_licence": false,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-14",
+      "last_seen": "2026-08-15",
       "sources": [
         "JobServe"
       ],
@@ -202,7 +555,7 @@
       "sponsor_licence": true,
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-14",
+      "last_seen": "2026-08-15",
       "sources": [
         "JobServe"
       ],
@@ -211,10 +564,10 @@
     {
       "title": "Service Delivery Manager - ServiceNow",
       "company": "Bylor Services Limited",
-      "location": "United Kingdom",
+      "location": "Dartford, England, United Kingdom",
       "salary_display": "Not listed",
       "date_posted": "2026-08-14",
-      "url": "https://huntukvisasponsors.com/jobs?q=servicenow",
+      "url": "https://uk.linkedin.com/jobs/view/service-delivery-manager-servicenow-at-laing-o-rourke-4451107281",
       "source": "Hunt UK",
       "source_type": "aggregator",
       "sn_role": true,
@@ -223,26 +576,26 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "expired",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "sponsor_licence": true,
       "description": "Service Delivery Manager - ServiceNow Bylor Services Limited",
       "scraped_at": "2026-08-14 05:04:29",
       "sponsorship_mentioned": true,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-14",
+      "last_seen": "2026-08-15",
       "sources": [
         "Hunt UK"
       ],
-      "status": "expired"
+      "status": "active"
     },
     {
       "title": "Operational Lead - ServiceNow",
       "company": "Bylor Services Limited",
-      "location": "United Kingdom",
+      "location": "Dartford, England, United Kingdom",
       "salary_display": "Not listed",
       "date_posted": "2026-08-14",
-      "url": "https://huntukvisasponsors.com/jobs?q=servicenow",
+      "url": "https://uk.linkedin.com/jobs/view/operational-lead-servicenow-at-laing-o-rourke-4451109215",
       "source": "Hunt UK",
       "source_type": "aggregator",
       "sn_role": true,
@@ -251,18 +604,18 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "expired",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "sponsor_licence": true,
       "description": "Operational Lead - ServiceNow Bylor Services Limited",
       "scraped_at": "2026-08-14 05:04:29",
       "sponsorship_mentioned": true,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-14",
+      "last_seen": "2026-08-15",
       "sources": [
         "Hunt UK"
       ],
-      "status": "expired"
+      "status": "active"
     },
     {
       "title": "Service Operations Specialist - ServiceNow",
@@ -295,10 +648,10 @@
     {
       "title": "ServiceNow Architect",
       "company": "TAGMATIX360 LTD",
-      "location": "United Kingdom",
+      "location": "London Area, United Kingdom",
       "salary_display": "Not listed",
       "date_posted": "2026-08-14",
-      "url": "https://huntukvisasponsors.com/jobs?q=servicenow",
+      "url": "https://uk.linkedin.com/jobs/view/servicenow-architect-at-tagmatix360-4451518594",
       "source": "Hunt UK",
       "source_type": "aggregator",
       "sn_role": true,
@@ -307,18 +660,18 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "expired",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "sponsor_licence": true,
       "description": "ServiceNow Architect TAGMATIX360 LTD",
       "scraped_at": "2026-08-14 05:04:29",
       "sponsorship_mentioned": true,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-14",
+      "last_seen": "2026-08-15",
       "sources": [
         "Hunt UK"
       ],
-      "status": "expired"
+      "status": "active"
     },
     {
       "title": "ServiceNow Product Owner - Banking",
@@ -780,7 +1133,7 @@
       "description": "Company Description It all started in sunny San Diego, California in 2004 when a visionary engineer, Fred Luddy, saw the potential to transform how we work. Fast forward to today \u2014 ServiceNow stands as a global market leader, bringing innovative AI-enhanced technology to over 8,100 customers, includ",
       "scraped_at": "2026-08-13 05:02:57",
       "first_seen": "2026-08-13",
-      "last_seen": "2026-08-14",
+      "last_seen": "2026-08-15",
       "sources": [
         "ServiceNow Careers"
       ],
@@ -789,10 +1142,10 @@
     {
       "title": "ServiceNow Developer (HRSD)",
       "company": "PRACYVA LTD",
-      "location": "United Kingdom",
+      "location": "London Area, United Kingdom",
       "salary_display": "Not listed",
       "date_posted": "2026-08-13",
-      "url": "https://huntukvisasponsors.com/jobs?q=servicenow",
+      "url": "https://uk.linkedin.com/jobs/view/servicenow-developer-hrsd-at-pracyva-4448796193",
       "source": "Hunt UK",
       "source_type": "aggregator",
       "sn_role": true,
@@ -801,7 +1154,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "expired",
+      "link_status": "live",
       "visa_sponsorship": "sc_blocked",
       "sponsor_licence": true,
       "description": "ServiceNow Developer (HRSD) PRACYVA LTD",
@@ -809,19 +1162,19 @@
       "sponsorship_scan": "Security clearance required",
       "sponsorship_mentioned": true,
       "first_seen": "2026-08-13",
-      "last_seen": "2026-08-14",
+      "last_seen": "2026-08-15",
       "sources": [
         "Hunt UK"
       ],
-      "status": "expired"
+      "status": "active"
     },
     {
       "title": "Jira & ServiceNow Integration Developer/Consultant",
       "company": "PRACYVA LTD",
-      "location": "United Kingdom",
+      "location": "Horsham, England, United Kingdom",
       "salary_display": "Not listed",
       "date_posted": "2026-08-13",
-      "url": "https://huntukvisasponsors.com/jobs?q=servicenow",
+      "url": "https://uk.linkedin.com/jobs/view/jira-servicenow-integration-developer-consultant-at-pracyva-4449214161",
       "source": "Hunt UK",
       "source_type": "aggregator",
       "sn_role": true,
@@ -830,7 +1183,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "expired",
+      "link_status": "live",
       "visa_sponsorship": "sc_blocked",
       "sponsor_licence": true,
       "description": "Jira & ServiceNow Integration Developer/Consultant PRACYVA LTD",
@@ -838,19 +1191,19 @@
       "sponsorship_scan": "Security clearance required",
       "sponsorship_mentioned": true,
       "first_seen": "2026-08-13",
-      "last_seen": "2026-08-14",
+      "last_seen": "2026-08-15",
       "sources": [
         "Hunt UK"
       ],
-      "status": "expired"
+      "status": "active"
     },
     {
       "title": "M - Presales - ServiceNow",
       "company": "Cognizant Worldwide Limited",
-      "location": "United Kingdom",
+      "location": "Chennai, Tamil Nadu, India",
       "salary_display": "Not listed",
       "date_posted": "2026-08-13",
-      "url": "https://huntukvisasponsors.com/jobs?q=servicenow",
+      "url": "https://in.linkedin.com/jobs/view/m-presales-servicenow-at-cognizant-4450351067",
       "source": "Hunt UK",
       "source_type": "aggregator",
       "sn_role": true,
@@ -859,7 +1212,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "expired",
+      "link_status": "live",
       "visa_sponsorship": "sc_blocked",
       "sponsor_licence": true,
       "description": "M - Presales - ServiceNow Cognizant Worldwide Limited Chennai, Tamil Nadu, India \u2014 \u2014 6d ago",
@@ -867,19 +1220,19 @@
       "sponsorship_scan": "Security clearance required",
       "sponsorship_mentioned": true,
       "first_seen": "2026-08-13",
-      "last_seen": "2026-08-14",
+      "last_seen": "2026-08-15",
       "sources": [
         "Hunt UK"
       ],
-      "status": "expired"
+      "status": "active"
     },
     {
       "title": "Presales - ServiceNow",
       "company": "Cognizant Worldwide Limited",
-      "location": "United Kingdom",
+      "location": "Chennai, Tamil Nadu, India",
       "salary_display": "Not listed",
       "date_posted": "2026-08-13",
-      "url": "https://huntukvisasponsors.com/jobs?q=servicenow",
+      "url": "https://in.linkedin.com/jobs/view/presales-servicenow-at-cognizant-4450353028",
       "source": "Hunt UK",
       "source_type": "aggregator",
       "sn_role": true,
@@ -888,7 +1241,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "expired",
+      "link_status": "live",
       "visa_sponsorship": "sc_blocked",
       "sponsor_licence": true,
       "description": "Presales - ServiceNow Cognizant Worldwide Limited Chennai, Tamil Nadu, India \u2014 \u2014 6d ago",
@@ -896,19 +1249,19 @@
       "sponsorship_scan": "Security clearance required",
       "sponsorship_mentioned": true,
       "first_seen": "2026-08-13",
-      "last_seen": "2026-08-14",
+      "last_seen": "2026-08-15",
       "sources": [
         "Hunt UK"
       ],
-      "status": "expired"
+      "status": "active"
     },
     {
       "title": "ServiceNow Scrum Master / Business Analyst",
       "company": "ABERDEEN GROUP PLC",
-      "location": "United Kingdom",
+      "location": "Edinburgh",
       "salary_display": "Not listed",
       "date_posted": "2026-08-13",
-      "url": "https://huntukvisasponsors.com/jobs?q=servicenow",
+      "url": "https://abrdn.wd3.myworkdayjobs.com/abrdn/job/Edinburgh/ServiceNow-Scrum-Master---Business-Analyst_R0073882",
       "source": "Hunt UK",
       "source_type": "aggregator",
       "sn_role": true,
@@ -917,7 +1270,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "expired",
+      "link_status": "live",
       "visa_sponsorship": "sc_blocked",
       "sponsor_licence": true,
       "description": "ServiceNow Scrum Master / Business Analyst ABERDEEN GROUP PLC",
@@ -925,11 +1278,11 @@
       "sponsorship_scan": "Security clearance required",
       "sponsorship_mentioned": true,
       "first_seen": "2026-08-13",
-      "last_seen": "2026-08-14",
+      "last_seen": "2026-08-15",
       "sources": [
         "Hunt UK"
       ],
-      "status": "expired"
+      "status": "active"
     },
     {
       "title": "ServiceNow - HAM Pro Specialist",
@@ -963,10 +1316,10 @@
     {
       "title": "ServiceNow Architect, Telco Consulting",
       "company": "Cognizant Worldwide Limited",
-      "location": "United Kingdom",
+      "location": "London Colney, England, United Kingdom",
       "salary_display": "Not listed",
       "date_posted": "2026-08-13",
-      "url": "https://huntukvisasponsors.com/jobs?q=servicenow",
+      "url": "https://uk.linkedin.com/jobs/view/servicenow-architect-telco-consulting-at-cognizant-4448563822",
       "source": "Hunt UK",
       "source_type": "aggregator",
       "sn_role": true,
@@ -975,7 +1328,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "expired",
+      "link_status": "live",
       "visa_sponsorship": "sc_blocked",
       "sponsor_licence": true,
       "description": "ServiceNow Architect, Telco Consulting Cognizant Worldwide Limited",
@@ -983,19 +1336,19 @@
       "sponsorship_scan": "Security clearance required",
       "sponsorship_mentioned": true,
       "first_seen": "2026-08-13",
-      "last_seen": "2026-08-14",
+      "last_seen": "2026-08-15",
       "sources": [
         "Hunt UK"
       ],
-      "status": "expired"
+      "status": "active"
     },
     {
       "title": "ServiceNow Principal Solutions Architect",
       "company": "Sopra Steria Limited",
-      "location": "United Kingdom",
+      "location": "Anywhere, GBR",
       "salary_display": "Not listed",
       "date_posted": "2026-08-13",
-      "url": "https://huntukvisasponsors.com/jobs?q=servicenow",
+      "url": "https://careers.soprasteria.co.uk/uk/en/job/SOSTUK15902EXTERNALENUK",
       "source": "Hunt UK",
       "source_type": "aggregator",
       "sn_role": true,
@@ -1004,7 +1357,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "expired",
+      "link_status": "live",
       "visa_sponsorship": "sc_blocked",
       "sponsor_licence": true,
       "description": "ServiceNow Principal Solutions Architect Sopra Steria Limited Anywhere, GBR \u2014 \u2014 9d ago",
@@ -1012,19 +1365,19 @@
       "sponsorship_scan": "Security clearance required",
       "sponsorship_mentioned": true,
       "first_seen": "2026-08-13",
-      "last_seen": "2026-08-14",
+      "last_seen": "2026-08-15",
       "sources": [
         "Hunt UK"
       ],
-      "status": "expired"
+      "status": "active"
     },
     {
       "title": "ServiceNow Platform Owner",
       "company": "Sopra Steria Limited",
-      "location": "United Kingdom",
+      "location": "Anywhere, GBR",
       "salary_display": "Not listed",
       "date_posted": "2026-08-13",
-      "url": "https://huntukvisasponsors.com/jobs?q=servicenow",
+      "url": "https://careers.soprasteria.co.uk/uk/en/job/SOSTUK15901EXTERNALENUK",
       "source": "Hunt UK",
       "source_type": "aggregator",
       "sn_role": true,
@@ -1033,7 +1386,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "expired",
+      "link_status": "live",
       "visa_sponsorship": "sc_blocked",
       "sponsor_licence": true,
       "description": "ServiceNow Platform Owner Sopra Steria Limited Anywhere, GBR \u2014 \u2014 9d ago",
@@ -1041,19 +1394,19 @@
       "sponsorship_scan": "Security clearance required",
       "sponsorship_mentioned": true,
       "first_seen": "2026-08-13",
-      "last_seen": "2026-08-14",
+      "last_seen": "2026-08-15",
       "sources": [
         "Hunt UK"
       ],
-      "status": "expired"
+      "status": "active"
     },
     {
       "title": "ServiceNow ITAM Expert",
       "company": "Cognizant Worldwide Limited",
-      "location": "United Kingdom",
+      "location": "Chennai, Tamil Nadu, India",
       "salary_display": "Not listed",
       "date_posted": "2026-08-13",
-      "url": "https://huntukvisasponsors.com/jobs?q=servicenow",
+      "url": "https://in.linkedin.com/jobs/view/servicenow-itam-expert-at-cognizant-4380485996",
       "source": "Hunt UK",
       "source_type": "aggregator",
       "sn_role": true,
@@ -1062,7 +1415,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "expired",
+      "link_status": "live",
       "visa_sponsorship": "sc_blocked",
       "sponsor_licence": true,
       "description": "ServiceNow ITAM Expert Cognizant Worldwide Limited Chennai, Tamil Nadu, India \u2014 \u2014 9d ago",
@@ -1070,11 +1423,11 @@
       "sponsorship_scan": "Security clearance required",
       "sponsorship_mentioned": true,
       "first_seen": "2026-08-13",
-      "last_seen": "2026-08-14",
+      "last_seen": "2026-08-15",
       "sources": [
         "Hunt UK"
       ],
-      "status": "expired"
+      "status": "active"
     },
     {
       "title": "Service Now Business Analyst - Hybrid",
@@ -1722,7 +2075,7 @@
       "description": "Company Description It all started when engineer Fred Luddy wrote code that automated a tedious task for his coworker, Phyllis. She cried tears of joy. That moment inspired Fred to build a company that could do that for everyone\u2014freeing people from busywork so they could focus on meaningful work. To",
       "scraped_at": "2026-08-05 05:06:33",
       "first_seen": "2026-08-05",
-      "last_seen": "2026-08-14",
+      "last_seen": "2026-08-15",
       "sources": [
         "ServiceNow Careers"
       ],
@@ -2489,7 +2842,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "stale",
       "visa_sponsorship": "unknown",
       "description": "Posted 9 hours ago",
       "scraped_at": "2026-07-31 05:01:27",
@@ -2499,7 +2852,7 @@
       "sources": [
         "JobServe"
       ],
-      "status": "active"
+      "status": "stale"
     },
     {
       "title": "Benefit Operations Specialist",
@@ -2516,7 +2869,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "stale",
       "visa_sponsorship": "unknown",
       "description": "Posted 9 hours ago",
       "scraped_at": "2026-07-31 05:01:27",
@@ -2526,7 +2879,7 @@
         "JobServe"
       ],
       "sponsor_licence": false,
-      "status": "active"
+      "status": "stale"
     },
     {
       "title": "Service Desk Agent",
@@ -2543,7 +2896,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "stale",
       "visa_sponsorship": "unknown",
       "description": "Posted 23 hours ago",
       "scraped_at": "2026-07-30 05:05:14",
@@ -2553,7 +2906,7 @@
       "sources": [
         "JobServe"
       ],
-      "status": "active"
+      "status": "stale"
     },
     {
       "title": "ServiceNow Consultant Tech Lead",
@@ -2570,7 +2923,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "stale",
       "visa_sponsorship": "unknown",
       "sponsor_licence": true,
       "description": "ServiceNow Consultant Tech Lead GAZELLE GLOBAL CONSULTING LIMITED",
@@ -2581,7 +2934,7 @@
       "sources": [
         "Hunt UK"
       ],
-      "status": "active"
+      "status": "stale"
     },
     {
       "title": "ServiceNow Developer",
@@ -2796,7 +3149,7 @@
       "scraped_at": "2026-07-29 05:01:43",
       "sponsor_licence": false,
       "first_seen": "2026-07-29",
-      "last_seen": "2026-08-14",
+      "last_seen": "2026-08-15",
       "sources": [
         "JobServe"
       ],
@@ -2823,7 +3176,7 @@
       "description": "Company Description It all started when engineer Fred Luddy wrote code that automated a tedious task for his coworker, Phyllis. She cried tears of joy. That moment inspired Fred to build a company that could do that for everyone\u2014freeing people from busywork so they could focus on meaningful work. To",
       "scraped_at": "2026-07-29 05:01:36",
       "first_seen": "2026-07-29",
-      "last_seen": "2026-08-14",
+      "last_seen": "2026-08-15",
       "sources": [
         "ServiceNow Careers"
       ],
@@ -2960,7 +3313,7 @@
       "scraped_at": "2026-07-26 05:01:30",
       "sponsor_licence": false,
       "first_seen": "2026-07-26",
-      "last_seen": "2026-08-14",
+      "last_seen": "2026-08-15",
       "sources": [
         "JobServe"
       ],
@@ -3261,7 +3614,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "stale",
       "visa_sponsorship": "sc_blocked",
       "sponsor_licence": true,
       "description": "ServiceNow Tester Cognizant Worldwide Limited",
@@ -3273,7 +3626,7 @@
       "sources": [
         "Hunt UK"
       ],
-      "status": "active"
+      "status": "stale"
     },
     {
       "title": "ServiceNow - ServiceNow FSO Architect (CTA) - Manager - Tech Cons - Open Location",
@@ -3725,7 +4078,7 @@
       "location": "70k Annual GBP",
       "salary_display": "Not listed",
       "date_posted": "2026-07-22 10:23:55",
-      "url": "https://www.jobserve.com/gb/en/mob/job/2746B74C1FD8599D75/",
+      "url": "https://www.jobserve.com/gb/en/mob/job/AF91BDBFE73878DB84/",
       "source": "JobServe",
       "source_type": "aggregator",
       "sn_role": true,
@@ -3740,7 +4093,7 @@
       "scraped_at": "2026-07-23 05:01:43",
       "sponsor_licence": true,
       "first_seen": "2026-07-23",
-      "last_seen": "2026-08-05",
+      "last_seen": "2026-08-15",
       "sources": [
         "JobServe"
       ],
@@ -4376,7 +4729,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "stale",
       "visa_sponsorship": "unknown",
       "description": "Posted 17 hours ago",
       "scraped_at": "2026-07-19 05:01:01",
@@ -4386,7 +4739,7 @@
       "sources": [
         "JobServe"
       ],
-      "status": "active"
+      "status": "stale"
     },
     {
       "title": "ServiceNow DevOps Delivery Leadership | Independent Consultant Engagement | 7-Month Assignment | Immediate Start",
@@ -4692,7 +5045,7 @@
       "description": "Company Description It all started when engineer Fred Luddy wrote code that automated a tedious task for his coworker, Phyllis. She cried tears of joy. That moment inspired Fred to build a company that could do that for everyone\u2014freeing people from busywork so they could focus on meaningful work. To",
       "scraped_at": "2026-07-17 05:00:53",
       "first_seen": "2026-07-17",
-      "last_seen": "2026-08-14",
+      "last_seen": "2026-08-15",
       "sources": [
         "ServiceNow Careers"
       ],
@@ -5020,7 +5373,7 @@
       "description": "Company Description It all started when engineer Fred Luddy wrote code that automated a tedious task for his coworker, Phyllis. She cried tears of joy. That moment inspired Fred to build a company that could do that for everyone\u2014freeing people from busywork so they could focus on meaningful work. To",
       "scraped_at": "2026-07-16 05:01:01",
       "first_seen": "2026-07-16",
-      "last_seen": "2026-08-14",
+      "last_seen": "2026-08-15",
       "sources": [
         "ServiceNow Careers"
       ],
@@ -5550,7 +5903,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "stale",
       "visa_sponsorship": "unknown",
       "description": "Posted 18 hours ago",
       "scraped_at": "2026-07-11 05:00:49",
@@ -5560,7 +5913,7 @@
       "sources": [
         "JobServe"
       ],
-      "status": "active"
+      "status": "stale"
     },
     {
       "title": "ServiceNow Transformation Delivery Lead",
@@ -9516,7 +9869,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "stale",
       "visa_sponsorship": "unknown",
       "description": "Posted 11 hours ago",
       "scraped_at": "2026-06-24 05:02:25",
@@ -9526,7 +9879,7 @@
       "sources": [
         "JobServe"
       ],
-      "status": "active"
+      "status": "stale"
     },
     {
       "title": "Service Transition Manager",
@@ -11708,7 +12061,7 @@
       "description": "Company Description It all started in sunny San Diego, California in 2004 when a visionary engineer, Fred Luddy, saw the potential to transform how we work. Fast forward to today \u2014 ServiceNow stands as a global market leader, bringing innovative AI-enhanced technology to over 8,100 customers, includ",
       "scraped_at": "2026-06-13 05:01:48",
       "first_seen": "2026-06-13",
-      "last_seen": "2026-08-14",
+      "last_seen": "2026-08-15",
       "sources": [
         "ServiceNow Careers"
       ],
@@ -11867,7 +12220,7 @@
       "scraped_at": "2026-06-11 05:09:04",
       "sponsor_licence": false,
       "first_seen": "2026-06-11",
-      "last_seen": "2026-08-14",
+      "last_seen": "2026-08-15",
       "sources": [
         "JobServe"
       ],
@@ -12164,7 +12517,7 @@
       "description": "Company Description It all started when engineer Fred Luddy wrote code that automated a tedious task for his coworker, Phyllis. She cried tears of joy. That moment inspired Fred to build a company that could do that for everyone\u2014freeing people from busywork so they could focus on meaningful work. To",
       "scraped_at": "2026-06-11 05:01:29",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-08-14",
+      "last_seen": "2026-08-15",
       "sources": [
         "ServiceNow Careers"
       ],
@@ -12941,7 +13294,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "stale",
       "visa_sponsorship": "unknown",
       "description": "Posted 14 hours ago",
       "scraped_at": "2026-06-05 05:01:15",
@@ -12951,7 +13304,7 @@
       "sources": [
         "JobServe"
       ],
-      "status": "active"
+      "status": "stale"
     },
     {
       "title": "SC Cleared ServiceNow Developer - Fully Remote",
@@ -13657,7 +14010,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "stale",
       "visa_sponsorship": "unknown",
       "description": "Posted 1 day ago",
       "scraped_at": "2026-06-03 05:00:59",
@@ -13668,7 +14021,7 @@
         "JobServe",
         "Hunt UK"
       ],
-      "status": "active"
+      "status": "stale"
     },
     {
       "title": "ServiceNow Solution Architect",
@@ -16095,7 +16448,7 @@
       "description": "Company Description It all started in sunny San Diego, California in 2004 when a visionary engineer, Fred Luddy, saw the potential to transform how we work. Fast forward to today \u2014 ServiceNow stands as a global market leader, bringing innovative AI-enhanced technology to over 8,100 customers, includ",
       "scraped_at": "2026-05-21 05:03:21",
       "first_seen": "2026-05-21",
-      "last_seen": "2026-08-14",
+      "last_seen": "2026-08-15",
       "sources": [
         "ServiceNow Careers"
       ],
@@ -18359,7 +18712,7 @@
         "ServiceNow Careers"
       ],
       "first_seen": "2026-05-15",
-      "last_seen": "2026-08-14",
+      "last_seen": "2026-08-15",
       "status": "active"
     },
     {
@@ -19556,10 +19909,10 @@
     {
       "title": "ServiceNow Business Analyst, Associate",
       "company": "Aquiline Capital Partners Limited",
-      "location": "United Kingdom",
+      "location": "Edinburgh, Scotland, United Kingdom",
       "salary_display": "Not listed",
       "date_posted": "2026-05-07",
-      "url": "https://huntukvisasponsors.com/jobs?q=servicenow",
+      "url": "https://uk.linkedin.com/jobs/view/servicenow-business-analyst-associate-at-blackrock-4448878040",
       "source": "Hunt UK",
       "role_type": "analyst",
       "remote": "onsite",
@@ -19568,13 +19921,12 @@
       "description": "ServiceNow Business Analyst at Aquiline Capital Partners (BlackRock affiliate). Edinburgh.",
       "sponsor_licence": true,
       "first_seen": "2026-05-12",
-      "last_seen": "2026-08-14",
+      "last_seen": "2026-08-15",
       "sources": [
         "Hunt UK"
       ],
       "sponsorship_mentioned": true,
-      "status": "expired",
-      "link_status": "expired"
+      "status": "active"
     },
     {
       "title": "ServiceNow Engineer",
@@ -23444,12 +23796,12 @@
     {
       "title": "ServiceNow Technical Architect",
       "company": "Anson McCade",
-      "location": "London Area, United Kingdom (Hybrid)",
+      "location": "Manchester",
       "salary_display": "Not listed",
       "salary_min": 0,
       "salary_max": 0,
       "date_posted": "2026-05-06",
-      "url": "https://www.linkedin.com/jobs/view/4400101028",
+      "url": "https://www.jobserve.com/gb/en/mob/job/FF769ED97BED8F6B60/",
       "source": "LinkedIn",
       "source_type": "direct",
       "role_type": "architect",
@@ -23461,10 +23813,11 @@
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-05-07",
-      "status": "expired",
+      "last_seen": "2026-08-15",
+      "status": "active",
       "sources": [
-        "LinkedIn"
+        "LinkedIn",
+        "JobServe"
       ],
       "sponsor_licence": false
     },
