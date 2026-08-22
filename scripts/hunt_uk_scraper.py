@@ -22,6 +22,15 @@ except ImportError:
     print("ERROR: playwright not installed. pip3 install playwright && playwright install chromium")
     sys.exit(1)
 
+def _chrome_bin():
+    """Auto-discover a usable Chromium binary in the Playwright cache.
+    Returns None on platforms where Playwright manages its own browser (e.g. Windows),
+    so launch() falls back to default behaviour. On headless Linux VPS where the
+    pinned browser can't be downloaded, this picks up an already-cached build."""
+    import glob as _g
+    cands = sorted(_g.glob(os.path.expanduser('~/.cache/ms-playwright/chromium-*/chrome-linux/chrome')))
+    return cands[-1] if cands else None
+
 URL = 'https://huntukvisasponsors.com/jobs?q=servicenow'
 OUT = os.path.expanduser(
     '~/hermes-workspace/servicenow-jobs-digest/docs/data/hunt_uk_jobs.json')
@@ -201,6 +210,7 @@ def scrape():
     print(f'Fetching Hunt UK: {URL}')
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True,
+                                    executable_path=_chrome_bin(),
                                     args=['--no-sandbox', '--disable-setuid-sandbox'])
         page = browser.new_page(viewport={'width': 1280, 'height': 900})
         page.goto(URL, wait_until='domcontentloaded', timeout=35000)
