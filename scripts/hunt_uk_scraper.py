@@ -1,19 +1,21 @@
 #!/usr/bin/env python3
 """
-Hunt UK scraper v2.3 — standalone, Playwright-based.
+Hunt UK scraper v2.4 — Playwright href extraction.
 
-Text layout (single sweep):
-  TITLE (SN keyword)
-  [location or company first]
-  COMPANY NAME  = first substantial non-sentence line after title
-  [desc lines]
-  LOCATION, UK  = UK_RE match → end of listing
-  DATE (M/D/Y)  = date match → end of listing
+FIX (v2.4): The previous inner_text-based parser lost the job URL (hrefs are
+stripped by inner_text), so every job fell back to the search-page URL
+(huntukvisasponsors.com/jobs?q=servicenow). That URL is in rebuild_master's
+BAD_URL_PATTERNS, so ALL Hunt UK jobs were auto-expired and contributed ZERO
+active listings.
+
+This version queries the real <a href="/job/SLUG"> anchors and parses the
+card text for title/company/location. /job/ URLs pass the bad-URL filter, so
+Hunt UK jobs now contribute real, linkable, active listings.
 
 Output: docs/data/hunt_uk_jobs.json
 """
 
-import json, os, re, sys
+import json, os, re, glob as _g, sys
 from datetime import datetime
 
 try:
@@ -22,188 +24,110 @@ except ImportError:
     print("ERROR: playwright not installed. pip3 install playwright && playwright install chromium")
     sys.exit(1)
 
-def _chrome_bin():
-    """Auto-discover a usable Chromium binary in the Playwright cache.
-    Returns None on platforms where Playwright manages its own browser (e.g. Windows),
-    so launch() falls back to default behaviour. On headless Linux VPS where the
-    pinned browser can't be downloaded, this picks up an already-cached build."""
-    import glob as _g
-    cands = sorted(_g.glob(os.path.expanduser('~/.cache/ms-playwright/chromium-*/chrome-linux/chrome')))
-    return cands[-1] if cands else None
-
 URL = 'https://huntukvisasponsors.com/jobs?q=servicenow'
 OUT = os.path.expanduser(
     '~/hermes-workspace/servicenow-jobs-digest/docs/data/hunt_uk_jobs.json')
 TODAY      = datetime.now().strftime('%Y-%m-%d')
 SCRAPED_AT = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
-ROLE_KW = re.compile(r'\bservicenow|\bsnow\b', re.IGNORECASE)
+ROLE_KW = re.compile(r'servicenow|\bsnow\b', re.IGNORECASE)
 UK_RE   = re.compile(
     r'\b(UK|United Kingdom|England|Scotland|Wales|London|Manchester'
-    r'|Birmingham|Edinburgh|Glasgow|Bristol|Leeds)\b', re.IGNORECASE)
+    r'|Birmingham|Edinburgh|Glasgow|Bristol|Leeds|Reading|Sutton|Dartford'
+    r'|Prestwick|Colney|Anywhere)\b', re.IGNORECASE)
 SC_RE   = re.compile(
     r'security\s+(?:clearance|cleared)|sc\s+clearance|dv\s+clearance'
-    r'|developed\s+vetting|bpss',
-    re.IGNORECASE)
-
-def _is_noise_line(line):
-    """Return True if this line is a candidate-number, site nav, or page boilerplate."""
-    l = line.lower().strip()
-    # Pure number (candidate index / page number)
-    if l.isdigit():
-        return True
-    # Site nav / boilerplate
-    if l in ('home', 'favorites', 'browse jobs', 'save', 'delete', 'report',
-             'hunt uk visa sponsors', 'how does it work', 'log in', 'register',
-             'you.re seeing delayed', 'days delayed', 'all jobs listed',
-             'eligibility', 'check our', 'sign up'):
-        return True
-    if l.startswith('this job is with'):
-        return True
-    return False
+    r'|developed\s+vetting|bpss', re.IGNORECASE)
+# Sponsorship-likelihood tokens that appear inside the card text
+TOKENS = {'high', 'medium', 'low', 'ineligible'}
 
 
-def _looks_like_company(line):
-    """Heuristic: company names start with capital, aren't sentence-start capitalised."""
-    if not line or not line[0].isupper():
-        return False
-    # Don't pick up descriptive lines that happen to start with capital
-    starts_sentences = ('the', 'we ', 'our ', 'a ', 'an ', 'this ', 'join ',
-                        'about', 'job ', 'due to', 'if ', 'service', 'role')
-    low = line.lower()
-    if any(low.startswith(w) for w in starts_sentences):
-        return False
-    return True
+def _chrome_bin():
+    """Auto-discover a cached Chromium binary on headless Linux VPS."""
+    import glob as _g
+    cands = sorted(_g.glob(os.path.expanduser('~/.cache/ms-playwright/chromium-*/chrome-linux/chrome')))
+    return cands[-1] if cands else None
 
 
-def parse_jobs(page_text):
-    lines = [l.strip() for l in page_text.split('\n') if l.strip()]
-    jobs = []
+def classify(title):
+    t = title.lower()
+    if 'architect' in t:       return 'architect'
+    if 'developer' in t:       return 'developer'
+    if 'consultant' in t:      return 'consultant'
+    if 'presales' in t or 'pre-sales' in t: return 'consultant'
+    if 'manager' in t or 'lead' in t or 'director' in t: return 'manager'
+    if 'admin' in t:           return 'admin'
+    if 'specialist' in t:      return 'other'
+    if 'analyst' in t:         return 'analyst'
+    return 'other'
 
-    for i, line in enumerate(lines):
-        if not ROLE_KW.search(line) or len(line) < 12:
-            continue
 
-        # Reject page headings / boilerplate that happen to match ROLE_KW
-        noise_titles = (
-            'days delayed', 'listed below', 'all jobs listed',
-            'find jobs from', 'hunt uk visa', 'you.re seeing',
-            'browse the extensive',
-        )
-        if any(n in line.lower() for n in noise_titles):
-            continue
+def classify_remote(title):
+    t = title.lower()
+    if 'remote' in t:   return 'remote'
+    if 'hybrid' in t:   return 'hybrid'
+    return 'onsite'
 
-        # Reject long sentence-starts (descriptions, not job titles)
-        starts_sentences = ('we are', "we're", 'we’re', 'about the',
-                            'job summary',
-                            'job title', 'this role', 'due to', 'if you',
-                            'please', 'join ', 'you will be')
-        if any(line.lower().startswith(w) for w in starts_sentences):
-            continue
 
-        # Window: title + lines after
-        j = i + 1
-        company   = None
-        block_str = ''
+def classify_emp(title):
+    t = title.lower()
+    if 'contract' in t: return 'contract'
+    if 'temp' in t or 'fixed term' in t: return 'temporary'
+    return 'permanent'
 
-        while j < len(lines) and j < i + 22:
-            cur = lines[j]
 
-            # Another title → next listing
-            if ROLE_KW.search(cur):
-                break
+def parse_card(href, txt):
+    lines = [l.strip() for l in txt.split('\n') if l.strip()]
+    lines = [l for l in lines if l.lower() not in TOKENS]
+    if not lines:
+        return None
+    title = lines[0]
+    if not ROLE_KW.search(title):
+        return None
 
-            # UK location → end of listing body
-            if UK_RE.search(cur) and len(cur) < 80:
-                break
+    # Company is the line immediately after the title (stable card layout)
+    company = lines[1] if len(lines) > 1 else 'Unknown'
 
-            # US date → end
-            if re.match(r'^\d{1,2}/\d{1,2}/\d{2,4}$', cur):
-                break
+    # Location: a later line that looks like a place but is NOT the company
+    # name and not a pure company-style name (LIMITED/LTD).
+    location = 'United Kingdom'
+    for l in lines[2:]:
+        if UK_RE.search(l) and 'LIMITED' not in l.upper() and 'LTD' not in l.upper():
+            location = l.rstrip('—').strip() or 'United Kingdom'
+            break
 
-            block_str = (block_str + ' ' + cur) if block_str else cur
+    # Posted date (informational; card shows relative age)
+    posted = ''
+    for l in lines[1:]:
+        low = l.lower()
+        if re.search(r'\d+\s*(?:d|day|h|hour|w|week|mo|month)\s*ago', low) or low in ('just now', 'today'):
+            posted = l
+            break
 
-            # First non-noise, capitalised non-sentence line = company candidate
-            if company is None and not _is_noise_line(cur) and _looks_like_company(cur):
-                company = cur
+    block = ' '.join(lines)
+    sc = bool(SC_RE.search(block))
 
-            j += 1
-
-        if not company:
-            continue
-
-        listing_block = ' '.join(lines[i: j])
-
-        # UK location
-        loc_m = re.search(
-            r'(London|Manchester|Birmingham|Edinburgh|Glasgow|Bristol|Leeds'
-            r'|England|Scotland|Wales|United Kingdom|Denham|Reading)[\w\s,]*',
-            listing_block, re.IGNORECASE)
-        location = (loc_m.group(0).strip().rstrip(',')
-                    if loc_m else 'United Kingdom')
-
-        # Salary
-        sal_m = re.search(
-            r'[\£][\d,]+(?:\s*(?:to|-|–)\s*[\£][\d,]+)?(?:\s*(?:GBP|per\s+(?:annum|day|year)))?',
-            listing_block)
-        salary_display = sal_m.group(0) if sal_m else 'Not listed'
-
-        # SC
-        sc = bool(SC_RE.search(listing_block))
-
-        # Employment
-        bl = listing_block.lower()
-        emp = ('contract' if 'contract' in bl
-               else 'temporary' if ('temp' in bl or 'fixed term' in bl)
-               else 'permanent')
-
-        # Role type
-        tl = line.lower()
-        if 'architect' in tl:       rt = 'architect'
-        elif 'developer' in tl:     rt = 'developer'
-        elif 'consultant' in tl:    rt = 'consultant'
-        elif 'director' in tl:      rt = 'manager'
-        elif 'manager' in tl:       rt = 'manager'
-        elif 'lead' in tl:          rt = 'manager'
-        elif 'specialist' in tl:    rt = 'admin'
-        elif 'admin' in tl:         rt = 'admin'
-        else:                       rt = 'other'
-
-        remote = ('remote' if 'remote' in tl
-                  else 'hybrid' if 'hybrid' in tl
-                  else 'onsite')
-
-        # Extract URL from markdown link in title line, e.g. [Title](https://...)
-        url_m = re.search(r'\[[^\]]+\]\((https?://[^)]+)\)', line)
-        job_url = url_m.group(1).strip() if url_m else URL
-
-        # Title cleanup: strip markdown link wrapper and inline references like " - 277199"
-        clean_title = re.sub(r'\[[^\]]+\]\([^)]+\)', '', line).strip()
-        clean_title = re.sub(r'\s*-\s*\d{2,}\s*$', '', clean_title).strip()
-
-        jobs.append({
-            'title': clean_title,
-            'company': company,
-            'location': location,
-            'salary_display': salary_display,
-            'date_posted': TODAY,
-            'url': job_url,
-            'source': 'Hunt UK',
-            'source_type': 'aggregator',
-            'sn_role': True,
-            'role_type': rt,
-            'remote': remote,
-            'employment': emp,
-            'sc_clearance': sc,
-            'grad_scheme': False,
-            'link_status': 'live',
-            'visa_sponsorship': 'unknown',
-            'sponsor_licence': False,
-            'description': listing_block[:500],
-            'scraped_at': SCRAPED_AT,
-        })
-
-    return jobs
+    return {
+        'title': title,
+        'company': company,
+        'location': location,
+        'salary_display': 'Not listed',
+        'date_posted': TODAY,
+        'url': href,
+        'source': 'Hunt UK',
+        'source_type': 'aggregator',
+        'sn_role': True,
+        'role_type': classify(title),
+        'remote': classify_remote(title),
+        'employment': classify_emp(title),
+        'sc_clearance': sc,
+        'grad_scheme': False,
+        'link_status': 'live',
+        'visa_sponsorship': 'unknown',
+        'sponsor_licence': False,
+        'description': block[:500],
+        'scraped_at': SCRAPED_AT,
+    }
 
 
 def scrape():
@@ -214,22 +138,28 @@ def scrape():
                                     args=['--no-sandbox', '--disable-setuid-sandbox'])
         page = browser.new_page(viewport={'width': 1280, 'height': 900})
         page.goto(URL, wait_until='domcontentloaded', timeout=35000)
-        page.wait_for_timeout(5000)
-        raw = page.inner_text('body')
+        page.wait_for_timeout(6000)
+        cards = page.query_selector_all('a[href*="/job/"]')
+        jobs, seen = [], set()
+        for c in cards:
+            href = c.get_attribute('href') or ''
+            if '/job/' not in href or href in seen:
+                continue
+            seen.add(href)
+            j = parse_card(href, c.inner_text() or '')
+            if j:
+                jobs.append(j)
         browser.close()
-
-    jobs = parse_jobs(raw)
-    print(f'  Parsed {len(jobs)} Hunt UK SN jobs')
 
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     with open(OUT, 'w') as f:
         json.dump(jobs, f, indent=2, ensure_ascii=False)
 
-    print(f'\n  {len(jobs)} jobs -> {OUT}')
-    for j in jobs:
-        sc_b = "🔒" if j.get('sc_clearance') else "  "
-        print(f'  {sc_b} {j["title"][:62]} |'
-              f' {j["company"][:28]} | {j["location"]}')
+    real = sum(1 for j in jobs if '/job/' in j.get('url', ''))
+    print(f'\n✅ {len(jobs)} SN Hunt UK jobs ({real} with real /job/ URLs) → {OUT}')
+    for j in jobs[:6]:
+        sc_b = '🔒' if j.get('sc_clearance') else '  '
+        print(f'  {sc_b} {j["title"][:50]} | {j["company"][:24]} | {j["location"]}')
     return jobs
 
 
