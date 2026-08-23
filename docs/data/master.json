@@ -1,8 +1,8 @@
 {
-  "updated": "2026-08-22",
-  "total": 939,
-  "total_active": 128,
-  "licenced_sponsors": 398,
+  "updated": "2026-08-23",
+  "total": 952,
+  "total_active": 144,
+  "licenced_sponsors": 411,
   "daily_snapshots": [
     "2026-05-06",
     "2026-05-07",
@@ -87,11 +87,12 @@
     "2026-08-19",
     "2026-08-20",
     "2026-08-21",
-    "2026-08-22"
+    "2026-08-22",
+    "2026-08-23"
   ],
   "sources": {
-    "JobServe": 557,
-    "Hunt UK": 265,
+    "JobServe": 558,
+    "Hunt UK": 277,
     "LinkedIn": 105,
     "ServiceNow Careers": 29,
     "Nelson Frank": 11,
@@ -106,6 +107,383 @@
     "CV-Library": 1
   },
   "jobs": [
+    {
+      "title": "ServiceNow Platform Owner",
+      "company": "Morgan Philips Group",
+      "location": "70k - 85k Annual + Bonus and Benefits GBP",
+      "salary_display": "Not listed",
+      "date_posted": "2026-08-22 07:19:33",
+      "url": "https://www.jobserve.com/gb/en/mob/job/8CA44044D819600D2F/",
+      "source": "JobServe",
+      "source_type": "aggregator",
+      "sn_role": true,
+      "role_type": "other",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "sc_blocked",
+      "description": "Posted 22 hours ago",
+      "scraped_at": "2026-08-23 05:03:09",
+      "sponsor_licence": true,
+      "sponsorship_mentioned": false,
+      "sponsorship_scan": "Security clearance required",
+      "first_seen": "2026-08-23",
+      "last_seen": "2026-08-23",
+      "sources": [
+        "JobServe"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "ServiceNow Architect",
+      "company": "Infoplus Technologies UK Limited",
+      "location": "London Area, United Kingdom",
+      "salary_display": "Not listed",
+      "date_posted": "2026-08-23",
+      "url": "/job/servicenow-architect-at-infoplus-technologies-uk-limited-4pz1e9j6zz15",
+      "source": "Hunt UK",
+      "source_type": "aggregator",
+      "sn_role": true,
+      "role_type": "architect",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "unknown",
+      "sponsor_licence": true,
+      "description": "ServiceNow Architect Infoplus Technologies UK Limited London Area, United Kingdom \u2014 \u2014 5d ago",
+      "scraped_at": "2026-08-23 05:03:03",
+      "sponsorship_mentioned": false,
+      "sponsorship_scan": "fetch_error: unknown url type: '/job/servicenow-architect-at-infoplus-tec",
+      "first_seen": "2026-08-23",
+      "last_seen": "2026-08-23",
+      "sources": [
+        "Hunt UK"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "ServiceNow CSM Support",
+      "company": "Cognizant Worldwide Limited",
+      "location": "London Colney, England, United Kingdom",
+      "salary_display": "Not listed",
+      "date_posted": "2026-08-23",
+      "url": "/job/servicenow-csm-support-at-cognizant-h0gbldatmwmh",
+      "source": "Hunt UK",
+      "source_type": "aggregator",
+      "sn_role": true,
+      "role_type": "other",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "unknown",
+      "sponsor_licence": true,
+      "description": "ServiceNow CSM Support Cognizant Worldwide Limited London Colney, England, United Kingdom \u2014 5d ago",
+      "scraped_at": "2026-08-23 05:03:03",
+      "sponsorship_mentioned": false,
+      "sponsorship_scan": "fetch_error: unknown url type: '/job/servicenow-csm-support-at-cognizant-",
+      "first_seen": "2026-08-23",
+      "last_seen": "2026-08-23",
+      "sources": [
+        "Hunt UK"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "Senior Manager, Solution Architect (Private), ServiceNow, Technology & Transformation",
+      "company": "DELOITTE LLP",
+      "location": "England, United Kingdom",
+      "salary_display": "Not listed",
+      "date_posted": "2026-08-23",
+      "url": "/job/senior-manager-solution-architect-private-servicenow-technology-transformation-at-deloitte-q5iijus3yrh",
+      "source": "Hunt UK",
+      "source_type": "aggregator",
+      "sn_role": true,
+      "role_type": "architect",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "unknown",
+      "sponsor_licence": true,
+      "description": "Senior Manager, Solution Architect (Private), ServiceNow, Technology & Transformation DELOITTE LLP England, United Kingdom \u2014 \u2014 9d ago",
+      "scraped_at": "2026-08-23 05:03:03",
+      "sponsorship_mentioned": false,
+      "sponsorship_scan": "fetch_error: unknown url type: '/job/senior-manager-solution-architect-pr",
+      "first_seen": "2026-08-23",
+      "last_seen": "2026-08-23",
+      "sources": [
+        "Hunt UK"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "Senior Manager, Solution Architect (GPS), ServiceNow, Technology & Transformation",
+      "company": "DELOITTE LLP",
+      "location": "England, United Kingdom",
+      "salary_display": "Not listed",
+      "date_posted": "2026-08-23",
+      "url": "/job/senior-manager-solution-architect-gps-servicenow-technology-transformation-at-deloitte-mxrcgqhtxc-u",
+      "source": "Hunt UK",
+      "source_type": "aggregator",
+      "sn_role": true,
+      "role_type": "architect",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "unknown",
+      "sponsor_licence": true,
+      "description": "Senior Manager, Solution Architect (GPS), ServiceNow, Technology & Transformation DELOITTE LLP England, United Kingdom \u2014 \u2014 9d ago",
+      "scraped_at": "2026-08-23 05:03:03",
+      "sponsorship_mentioned": false,
+      "sponsorship_scan": "fetch_error: unknown url type: '/job/senior-manager-solution-architect-gp",
+      "first_seen": "2026-08-23",
+      "last_seen": "2026-08-23",
+      "sources": [
+        "Hunt UK"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "Senior Manager, Transformation Delivery Lead (FSI), ServiceNow, Technology & Transformation",
+      "company": "DELOITTE LLP",
+      "location": "England, United Kingdom",
+      "salary_display": "Not listed",
+      "date_posted": "2026-08-23",
+      "url": "/job/senior-manager-transformation-delivery-lead-fsi-servicenow-technology-transformation-at-deloitte-fiymqxwvsmgt",
+      "source": "Hunt UK",
+      "source_type": "aggregator",
+      "sn_role": true,
+      "role_type": "manager",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "unknown",
+      "sponsor_licence": true,
+      "description": "Senior Manager, Transformation Delivery Lead (FSI), ServiceNow, Technology & Transformation DELOITTE LLP England, United Kingdom \u2014 \u2014 10d ago",
+      "scraped_at": "2026-08-23 05:03:03",
+      "sponsorship_mentioned": false,
+      "sponsorship_scan": "fetch_error: unknown url type: '/job/senior-manager-transformation-delive",
+      "first_seen": "2026-08-23",
+      "last_seen": "2026-08-23",
+      "sources": [
+        "Hunt UK"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "Senior Consultant, Solution Architect (Private), ServiceNow, Technology & Transformation",
+      "company": "DELOITTE LLP",
+      "location": "England, United Kingdom",
+      "salary_display": "Not listed",
+      "date_posted": "2026-08-23",
+      "url": "/job/senior-consultant-solution-architect-private-servicenow-technology-transformation-at-deloitte-9gh8bds6gp",
+      "source": "Hunt UK",
+      "source_type": "aggregator",
+      "sn_role": true,
+      "role_type": "architect",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "unknown",
+      "sponsor_licence": true,
+      "description": "Senior Consultant, Solution Architect (Private), ServiceNow, Technology & Transformation DELOITTE LLP England, United Kingdom \u2014 \u2014 10d ago",
+      "scraped_at": "2026-08-23 05:03:03",
+      "sponsorship_mentioned": false,
+      "sponsorship_scan": "fetch_error: unknown url type: '/job/senior-consultant-solution-architect",
+      "first_seen": "2026-08-23",
+      "last_seen": "2026-08-23",
+      "sources": [
+        "Hunt UK"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "Senior Consultant, Solution Architect (GPS), ServiceNow, Technology & Transformation",
+      "company": "DELOITTE LLP",
+      "location": "England, United Kingdom",
+      "salary_display": "Not listed",
+      "date_posted": "2026-08-23",
+      "url": "/job/senior-consultant-solution-architect-gps-servicenow-technology-transformation-at-deloitte-qdwaumsmfroq",
+      "source": "Hunt UK",
+      "source_type": "aggregator",
+      "sn_role": true,
+      "role_type": "architect",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "unknown",
+      "sponsor_licence": true,
+      "description": "Senior Consultant, Solution Architect (GPS), ServiceNow, Technology & Transformation DELOITTE LLP England, United Kingdom \u2014 \u2014 10d ago",
+      "scraped_at": "2026-08-23 05:03:03",
+      "sponsorship_mentioned": false,
+      "sponsorship_scan": "fetch_error: unknown url type: '/job/senior-consultant-solution-architect",
+      "first_seen": "2026-08-23",
+      "last_seen": "2026-08-23",
+      "sources": [
+        "Hunt UK"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "Manager, Functional Lead (Private), ServiceNow, Technology & Transformation",
+      "company": "DELOITTE LLP",
+      "location": "England, United Kingdom",
+      "salary_display": "Not listed",
+      "date_posted": "2026-08-23",
+      "url": "/job/manager-functional-lead-private-servicenow-technology-transformation-at-deloitte-jfcqxqlwlr0",
+      "source": "Hunt UK",
+      "source_type": "aggregator",
+      "sn_role": true,
+      "role_type": "manager",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "unknown",
+      "sponsor_licence": true,
+      "description": "Manager, Functional Lead (Private), ServiceNow, Technology & Transformation DELOITTE LLP England, United Kingdom \u2014 \u2014 10d ago",
+      "scraped_at": "2026-08-23 05:03:03",
+      "sponsorship_mentioned": false,
+      "sponsorship_scan": "fetch_error: unknown url type: '/job/manager-functional-lead-private-serv",
+      "first_seen": "2026-08-23",
+      "last_seen": "2026-08-23",
+      "sources": [
+        "Hunt UK"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "Manager, Functional Lead (FSI), ServiceNow, Technology & Transformation",
+      "company": "DELOITTE LLP",
+      "location": "Scotland, United Kingdom",
+      "salary_display": "Not listed",
+      "date_posted": "2026-08-23",
+      "url": "/job/manager-functional-lead-fsi-servicenow-technology-transformation-at-deloitte-vdfhyuykyqt",
+      "source": "Hunt UK",
+      "source_type": "aggregator",
+      "sn_role": true,
+      "role_type": "manager",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "unknown",
+      "sponsor_licence": true,
+      "description": "Manager, Functional Lead (FSI), ServiceNow, Technology & Transformation DELOITTE LLP Scotland, United Kingdom \u2014 \u2014 10d ago",
+      "scraped_at": "2026-08-23 05:03:03",
+      "sponsorship_mentioned": false,
+      "sponsorship_scan": "fetch_error: unknown url type: '/job/manager-functional-lead-fsi-servicen",
+      "first_seen": "2026-08-23",
+      "last_seen": "2026-08-23",
+      "sources": [
+        "Hunt UK"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "Manager, Functional Lead (GPS), ServiceNow, Technology & Transformation",
+      "company": "DELOITTE LLP",
+      "location": "England, United Kingdom",
+      "salary_display": "Not listed",
+      "date_posted": "2026-08-23",
+      "url": "/job/manager-functional-lead-gps-servicenow-technology-transformation-at-deloitte-tnccaz6vwpjc",
+      "source": "Hunt UK",
+      "source_type": "aggregator",
+      "sn_role": true,
+      "role_type": "manager",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "unknown",
+      "sponsor_licence": true,
+      "description": "Manager, Functional Lead (GPS), ServiceNow, Technology & Transformation DELOITTE LLP England, United Kingdom \u2014 \u2014 10d ago",
+      "scraped_at": "2026-08-23 05:03:03",
+      "sponsorship_mentioned": false,
+      "sponsorship_scan": "fetch_error: unknown url type: '/job/manager-functional-lead-gps-servicen",
+      "first_seen": "2026-08-23",
+      "last_seen": "2026-08-23",
+      "sources": [
+        "Hunt UK"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "Senior Consultant, Senior Business Analyst, ServiceNow, Technology & Transformation",
+      "company": "DELOITTE LLP",
+      "location": "England, United Kingdom",
+      "salary_display": "Not listed",
+      "date_posted": "2026-08-23",
+      "url": "/job/senior-consultant-senior-business-analyst-servicenow-technology-transformation-at-deloitte-ybxqp47x-kly",
+      "source": "Hunt UK",
+      "source_type": "aggregator",
+      "sn_role": true,
+      "role_type": "consultant",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "unknown",
+      "sponsor_licence": true,
+      "description": "Senior Consultant, Senior Business Analyst, ServiceNow, Technology & Transformation DELOITTE LLP England, United Kingdom \u2014 \u2014 10d ago",
+      "scraped_at": "2026-08-23 05:03:03",
+      "sponsorship_mentioned": false,
+      "sponsorship_scan": "fetch_error: unknown url type: '/job/senior-consultant-senior-business-an",
+      "first_seen": "2026-08-23",
+      "last_seen": "2026-08-23",
+      "sources": [
+        "Hunt UK"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "Senior Manager, Transformation Delivery Lead (Private), ServiceNow, Technology & Transformation",
+      "company": "DELOITTE LLP",
+      "location": "England, United Kingdom",
+      "salary_display": "Not listed",
+      "date_posted": "2026-08-23",
+      "url": "/job/senior-manager-transformation-delivery-lead-private-servicenow-technology-transformation-at-deloitte-wueihrndeyc8",
+      "source": "Hunt UK",
+      "source_type": "aggregator",
+      "sn_role": true,
+      "role_type": "manager",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "unknown",
+      "sponsor_licence": true,
+      "description": "Senior Manager, Transformation Delivery Lead (Private), ServiceNow, Technology & Transformation DELOITTE LLP England, United Kingdom \u2014 \u2014 10d ago",
+      "scraped_at": "2026-08-23 05:03:03",
+      "sponsorship_mentioned": false,
+      "sponsorship_scan": "fetch_error: unknown url type: '/job/senior-manager-transformation-delive",
+      "first_seen": "2026-08-23",
+      "last_seen": "2026-08-23",
+      "sources": [
+        "Hunt UK"
+      ],
+      "status": "active"
+    },
     {
       "title": "ServiceNow Project Manager",
       "company": "Alexander Mann Solutions",
@@ -127,7 +505,7 @@
       "scraped_at": "2026-08-22 05:03:16",
       "sponsor_licence": true,
       "first_seen": "2026-08-22",
-      "last_seen": "2026-08-22",
+      "last_seen": "2026-08-23",
       "sources": [
         "JobServe"
       ],
@@ -154,7 +532,7 @@
       "scraped_at": "2026-08-22 05:03:16",
       "sponsor_licence": true,
       "first_seen": "2026-08-22",
-      "last_seen": "2026-08-22",
+      "last_seen": "2026-08-23",
       "sources": [
         "JobServe"
       ],
@@ -182,7 +560,7 @@
       "sponsor_licence": false,
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-08-22",
-      "last_seen": "2026-08-22",
+      "last_seen": "2026-08-23",
       "sources": [
         "JobServe"
       ],
@@ -210,7 +588,7 @@
       "sponsor_licence": true,
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-08-22",
-      "last_seen": "2026-08-22",
+      "last_seen": "2026-08-23",
       "sources": [
         "JobServe"
       ],
@@ -237,7 +615,7 @@
       "description": "Company Description It all started when engineer Fred Luddy wrote code that automated a tedious task for his coworker, Phyllis. She cried tears of joy. That moment inspired Fred to build a company that could do that for everyone\u2014freeing people from busywork so they could focus on meaningful work. To",
       "scraped_at": "2026-08-22 05:03:00",
       "first_seen": "2026-08-22",
-      "last_seen": "2026-08-22",
+      "last_seen": "2026-08-23",
       "sources": [
         "ServiceNow Careers"
       ],
@@ -264,7 +642,7 @@
       "description": "Company Description It all started when engineer Fred Luddy wrote code that automated a tedious task for his coworker, Phyllis. She cried tears of joy. That moment inspired Fred to build a company that could do that for everyone\u2014freeing people from busywork so they could focus on meaningful work. To",
       "scraped_at": "2026-08-22 05:03:00",
       "first_seen": "2026-08-22",
-      "last_seen": "2026-08-22",
+      "last_seen": "2026-08-23",
       "sources": [
         "ServiceNow Careers"
       ],
@@ -292,7 +670,7 @@
       "scraped_at": "2026-08-22 05:06:32",
       "sponsorship_scan": "fetch_error: unknown url type: '/job/servicenow-technical-lead-at-insight",
       "first_seen": "2026-08-22",
-      "last_seen": "2026-08-22",
+      "last_seen": "2026-08-23",
       "sources": [
         "Hunt UK"
       ],
@@ -320,7 +698,7 @@
       "scraped_at": "2026-08-22 05:06:32",
       "sponsorship_scan": "fetch_error: unknown url type: '/job/servicenow-architect-at-qualient-tec",
       "first_seen": "2026-08-22",
-      "last_seen": "2026-08-22",
+      "last_seen": "2026-08-23",
       "sources": [
         "Hunt UK"
       ],
@@ -348,7 +726,7 @@
       "scraped_at": "2026-08-22 05:06:32",
       "sponsorship_scan": "fetch_error: unknown url type: '/job/business-development-manager-service",
       "first_seen": "2026-08-22",
-      "last_seen": "2026-08-22",
+      "last_seen": "2026-08-23",
       "sources": [
         "Hunt UK"
       ],
@@ -376,7 +754,7 @@
       "scraped_at": "2026-08-22 05:06:32",
       "sponsorship_scan": "fetch_error: unknown url type: '/job/servicenow-itsm-at-cognizant-mlywgnm",
       "first_seen": "2026-08-22",
-      "last_seen": "2026-08-22",
+      "last_seen": "2026-08-23",
       "sources": [
         "Hunt UK"
       ],
@@ -404,7 +782,7 @@
       "scraped_at": "2026-08-22 05:06:32",
       "sponsorship_scan": "fetch_error: unknown url type: '/job/servicenow-administrator-at-cognizan",
       "first_seen": "2026-08-22",
-      "last_seen": "2026-08-22",
+      "last_seen": "2026-08-23",
       "sources": [
         "Hunt UK"
       ],
@@ -413,10 +791,10 @@
     {
       "title": "ServiceNow Developer",
       "company": "Infotel UK Consulting Ltd",
-      "location": "Prestwick, Scotland, United Kingdom",
+      "location": "Glasgow, Scotland, United Kingdom",
       "salary_display": "Not listed",
       "date_posted": "2026-08-22",
-      "url": "/job/servicenow-developer-at-infotel-uk-consulting-mwzu8mclzxvr",
+      "url": "/job/servicenow-developer-at-infotel-uk-consulting-escptugqdub7",
       "source": "Hunt UK",
       "source_type": "aggregator",
       "sn_role": true,
@@ -432,7 +810,7 @@
       "scraped_at": "2026-08-22 05:06:32",
       "sponsorship_scan": "fetch_error: unknown url type: '/job/servicenow-developer-at-infotel-uk-c",
       "first_seen": "2026-08-22",
-      "last_seen": "2026-08-22",
+      "last_seen": "2026-08-23",
       "sources": [
         "Hunt UK"
       ],
@@ -570,7 +948,7 @@
       "scraped_at": "2026-08-21 05:04:12",
       "sponsor_licence": false,
       "first_seen": "2026-08-21",
-      "last_seen": "2026-08-22",
+      "last_seen": "2026-08-23",
       "sources": [
         "JobServe"
       ],
@@ -652,7 +1030,7 @@
       "description": "Company Description It all started when engineer Fred Luddy wrote code that automated a tedious task for his coworker, Phyllis. She cried tears of joy. That moment inspired Fred to build a company that could do that for everyone\u2014freeing people from busywork so they could focus on meaningful work. To",
       "scraped_at": "2026-08-21 05:04:06",
       "first_seen": "2026-08-21",
-      "last_seen": "2026-08-22",
+      "last_seen": "2026-08-23",
       "sources": [
         "ServiceNow Careers"
       ],
@@ -1366,7 +1744,7 @@
       "description": "Company Description It all started in sunny San Diego, California in 2004 when a visionary engineer, Fred Luddy, saw the potential to transform how we work. Fast forward to today \u2014 ServiceNow stands as a global market leader, bringing innovative AI-enhanced technology to over 8,100 customers, includ",
       "scraped_at": "2026-08-18 05:01:09",
       "first_seen": "2026-08-18",
-      "last_seen": "2026-08-22",
+      "last_seen": "2026-08-23",
       "sources": [
         "ServiceNow Careers"
       ],
@@ -2582,7 +2960,7 @@
       "location": "170.00 Daily - 180.00 Daily Contract inside IR35 GBP",
       "salary_display": "Not listed",
       "date_posted": "2026-08-12 03:09:04",
-      "url": "https://www.jobserve.com/gb/en/mob/job/9DA5207CD9FDB30E94/",
+      "url": "https://www.jobserve.com/gb/en/mob/job/0F29417BF7B8CD30DE/",
       "source": "JobServe",
       "source_type": "aggregator",
       "sn_role": false,
@@ -2597,7 +2975,7 @@
       "scraped_at": "2026-08-13 05:03:07",
       "sponsor_licence": true,
       "first_seen": "2026-08-13",
-      "last_seen": "2026-08-13",
+      "last_seen": "2026-08-23",
       "sources": [
         "JobServe"
       ],
@@ -2624,7 +3002,7 @@
       "description": "Company Description It all started in sunny San Diego, California in 2004 when a visionary engineer, Fred Luddy, saw the potential to transform how we work. Fast forward to today \u2014 ServiceNow stands as a global market leader, bringing innovative AI-enhanced technology to over 8,100 customers, includ",
       "scraped_at": "2026-08-13 05:02:57",
       "first_seen": "2026-08-13",
-      "last_seen": "2026-08-22",
+      "last_seen": "2026-08-23",
       "sources": [
         "ServiceNow Careers"
       ],
@@ -4625,7 +5003,7 @@
       "location": "65k Annual GBP",
       "salary_display": "Not listed",
       "date_posted": "2026-07-28 06:53:29",
-      "url": "https://www.jobserve.com/gb/en/mob/job/19B0F8A7B513100FD8/",
+      "url": "https://www.jobserve.com/gb/en/mob/job/E0859E6DEC24D626F9/",
       "source": "JobServe",
       "source_type": "aggregator",
       "sn_role": true,
@@ -4640,7 +5018,7 @@
       "scraped_at": "2026-07-29 05:01:43",
       "sponsor_licence": false,
       "first_seen": "2026-07-29",
-      "last_seen": "2026-08-22",
+      "last_seen": "2026-08-23",
       "sources": [
         "JobServe"
       ],
@@ -4667,7 +5045,7 @@
       "description": "Company Description It all started when engineer Fred Luddy wrote code that automated a tedious task for his coworker, Phyllis. She cried tears of joy. That moment inspired Fred to build a company that could do that for everyone\u2014freeing people from busywork so they could focus on meaningful work. To",
       "scraped_at": "2026-07-29 05:01:36",
       "first_seen": "2026-07-29",
-      "last_seen": "2026-08-22",
+      "last_seen": "2026-08-23",
       "sources": [
         "ServiceNow Careers"
       ],
@@ -4867,10 +5245,10 @@
     {
       "title": "ServiceNow Developer (CMDB, Discovery, Service Mapping & Event Management)",
       "company": "OPAL WAVE SOLUTIONS LIMITED",
-      "location": "United Kingdom",
+      "location": "England, United Kingdom",
       "salary_display": "Not listed",
       "date_posted": "2026-07-22",
-      "url": "https://huntukvisasponsors.com/jobs?q=servicenow",
+      "url": "/job/servicenow-developer-cmdb-discovery-service-mapping-event-management-at-ntt-data-business-solutions-rav4ieoubmqv",
       "source": "Hunt UK",
       "source_type": "aggregator",
       "sn_role": true,
@@ -4879,26 +5257,26 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "expired",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "sponsor_licence": true,
       "description": "ServiceNow Developer (CMDB, Discovery, Service Mapping & Event Management) at OPAL WAVE SOLUTIONS LIMITED",
       "scraped_at": "2026-07-26 05:06:45",
       "sponsorship_mentioned": true,
       "first_seen": "2026-07-26",
-      "last_seen": "2026-07-31",
+      "last_seen": "2026-08-23",
       "sources": [
         "Hunt UK"
       ],
-      "status": "expired"
+      "status": "active"
     },
     {
       "title": "ServiceNow Developer (CMDB, HAM & SAM)",
       "company": "OPAL WAVE SOLUTIONS LIMITED",
-      "location": "United Kingdom",
+      "location": "England, United Kingdom",
       "salary_display": "Not listed",
       "date_posted": "2026-07-22",
-      "url": "https://huntukvisasponsors.com/jobs?q=servicenow",
+      "url": "/job/servicenow-developer-cmdb-ham-sam-at-ntt-data-business-solutions-z5hgqar4zmvc",
       "source": "Hunt UK",
       "source_type": "aggregator",
       "sn_role": true,
@@ -4907,18 +5285,18 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "expired",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "sponsor_licence": true,
       "description": "ServiceNow Developer (CMDB, HAM & SAM) at OPAL WAVE SOLUTIONS LIMITED",
       "scraped_at": "2026-07-26 05:06:45",
       "sponsorship_mentioned": true,
       "first_seen": "2026-07-26",
-      "last_seen": "2026-07-31",
+      "last_seen": "2026-08-23",
       "sources": [
         "Hunt UK"
       ],
-      "status": "expired"
+      "status": "active"
     },
     {
       "title": "ServiceNow Architect",
@@ -5367,7 +5745,7 @@
       "sponsorship_mentioned": true,
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-07-24",
-      "last_seen": "2026-08-22",
+      "last_seen": "2026-08-23",
       "sources": [
         "Hunt UK"
       ],
@@ -5584,7 +5962,7 @@
       "scraped_at": "2026-07-23 05:01:43",
       "sponsor_licence": true,
       "first_seen": "2026-07-23",
-      "last_seen": "2026-08-22",
+      "last_seen": "2026-08-23",
       "sources": [
         "JobServe"
       ],
@@ -6536,7 +6914,7 @@
       "description": "Company Description It all started when engineer Fred Luddy wrote code that automated a tedious task for his coworker, Phyllis. She cried tears of joy. That moment inspired Fred to build a company that could do that for everyone\u2014freeing people from busywork so they could focus on meaningful work. To",
       "scraped_at": "2026-07-17 05:00:53",
       "first_seen": "2026-07-17",
-      "last_seen": "2026-08-22",
+      "last_seen": "2026-08-23",
       "sources": [
         "ServiceNow Careers"
       ],
@@ -7125,7 +7503,7 @@
       "location": "100k Annual GBP",
       "salary_display": "Not listed",
       "date_posted": "2026-07-13 15:15:13",
-      "url": "https://www.jobserve.com/gb/en/mob/job/CAABBD6E4AF43AC578/",
+      "url": "https://www.jobserve.com/gb/en/mob/job/6AB32EF15E666E6287/",
       "source": "JobServe",
       "source_type": "aggregator",
       "sn_role": true,
@@ -7140,7 +7518,7 @@
       "scraped_at": "2026-07-15 05:01:50",
       "sponsor_licence": false,
       "first_seen": "2026-07-15",
-      "last_seen": "2026-08-22",
+      "last_seen": "2026-08-23",
       "sources": [
         "JobServe"
       ],
@@ -11510,29 +11888,29 @@
     {
       "title": "ServiceNow Technical Architect",
       "company": "Accenture (UK) Limited",
-      "location": "London, Manchester, or Edinburgh",
+      "location": "London, England, United Kingdom",
       "source": "Hunt UK",
       "source_type": "aggregator",
       "date_posted": "2026-06-17",
       "scraped_at": "2026-06-24 12:00:00",
-      "url": "https://huntukvisasponsors.com/jobs?q=servicenow",
+      "url": "/job/servicenow-technical-architect-at-accenture-uk-ireland-ht7uu7ehxyw",
       "visa_sponsorship": "unknown",
-      "salary_display": "Competitive, dependent on experience",
+      "salary_display": "Not listed",
       "role_type": "Permanent",
       "remote": "hybrid",
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "expired",
+      "link_status": "live",
       "description": "Accenture is a global professional services firm, a core partner to major cloud providers (ServiceNow, AWS, Azure, Google), and is recognized as the #1 ServiceNow service partner globally.",
       "sponsor_licence": true,
       "sponsorship_mentioned": true,
       "first_seen": "2026-06-24",
-      "last_seen": "2026-06-24",
+      "last_seen": "2026-08-23",
       "sources": [
         "Hunt UK"
       ],
-      "status": "expired"
+      "status": "active"
     },
     {
       "title": "ServiceNow FSO Architect (CTA) - Manager - Tech Cons",
@@ -11855,7 +12233,7 @@
       "scraped_at": "2026-06-23 05:01:08",
       "sponsor_licence": false,
       "first_seen": "2026-06-23",
-      "last_seen": "2026-08-22",
+      "last_seen": "2026-08-23",
       "sources": [
         "JobServe"
       ],
@@ -13552,7 +13930,7 @@
       "description": "Company Description It all started in sunny San Diego, California in 2004 when a visionary engineer, Fred Luddy, saw the potential to transform how we work. Fast forward to today \u2014 ServiceNow stands as a global market leader, bringing innovative AI-enhanced technology to over 8,100 customers, includ",
       "scraped_at": "2026-06-13 05:01:48",
       "first_seen": "2026-06-13",
-      "last_seen": "2026-08-22",
+      "last_seen": "2026-08-23",
       "sources": [
         "ServiceNow Careers"
       ],
@@ -16232,7 +16610,7 @@
       "employment": "contract",
       "sc_clearance": true,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "sc_blocked",
       "description": "Posted 19 hours ago",
       "scraped_at": "2026-05-29 05:10:28",
@@ -16242,7 +16620,7 @@
       "sources": [
         "JobServe"
       ],
-      "status": "stale"
+      "status": "expired"
     },
     {
       "title": "Technical Architect - ServiceNow - SC Cleared",
@@ -16340,7 +16718,7 @@
       "employment": "contract",
       "sc_clearance": true,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "sc_blocked",
       "description": "Posted 3 hours ago",
       "scraped_at": "2026-05-29 05:10:28",
@@ -16350,7 +16728,7 @@
       "sources": [
         "JobServe"
       ],
-      "status": "stale"
+      "status": "expired"
     },
     {
       "title": "ServiceNow Senior Technical Consultant - DV Cleared - Contract",
@@ -18149,7 +18527,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "description": "Posted 3 hours ago",
       "scraped_at": "2026-05-20 05:00:42",
@@ -18159,7 +18537,7 @@
       "sources": [
         "JobServe"
       ],
-      "status": "stale"
+      "status": "expired"
     },
     {
       "title": "IT Support Engineer - Imaging/Asset Management/Distrubution - 12 Month",
@@ -20284,7 +20662,7 @@
         "ServiceNow Careers"
       ],
       "first_seen": "2026-05-15",
-      "last_seen": "2026-08-22",
+      "last_seen": "2026-08-23",
       "status": "active"
     },
     {
@@ -25305,7 +25683,7 @@
       "visa_sponsorship": "unknown",
       "description": "",
       "first_seen": "2026-05-06",
-      "last_seen": "2026-08-22",
+      "last_seen": "2026-08-23",
       "status": "active",
       "sources": [
         "LinkedIn",
