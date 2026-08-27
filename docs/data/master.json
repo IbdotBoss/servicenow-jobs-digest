@@ -1,8 +1,8 @@
 {
-  "updated": "2026-08-26",
-  "total": 959,
-  "total_active": 157,
-  "licenced_sponsors": 417,
+  "updated": "2026-08-27",
+  "total": 963,
+  "total_active": 161,
+  "licenced_sponsors": 419,
   "daily_snapshots": [
     "2026-05-06",
     "2026-05-07",
@@ -91,10 +91,11 @@
     "2026-08-23",
     "2026-08-24",
     "2026-08-25",
-    "2026-08-26"
+    "2026-08-26",
+    "2026-08-27"
   ],
   "sources": {
-    "JobServe": 560,
+    "JobServe": 564,
     "Hunt UK": 282,
     "LinkedIn": 105,
     "ServiceNow Careers": 29,
@@ -110,6 +111,118 @@
     "CV-Library": 1
   },
   "jobs": [
+    {
+      "title": "ServiceNow Workflow Consultant",
+      "company": "Hays DT - Midlands",
+      "location": "London",
+      "salary_display": "\u00a3500 - \u00a3550 per day inside IR35",
+      "date_posted": "2026-08-26 12:20:31",
+      "url": "https://www.jobserve.com/gb/en/mob/job/01F9A77FB1A1E3145B/",
+      "source": "JobServe",
+      "source_type": "aggregator",
+      "sn_role": true,
+      "role_type": "consultant",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "unknown",
+      "description": "Posted 17 hours ago",
+      "scraped_at": "2026-08-27 05:02:46",
+      "sponsor_licence": false,
+      "sponsorship_mentioned": false,
+      "first_seen": "2026-08-27",
+      "last_seen": "2026-08-27",
+      "sources": [
+        "JobServe"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "ServiceNow Developer",
+      "company": "Littlefish",
+      "location": "United Kingdom",
+      "salary_display": "\u00a365k",
+      "date_posted": "2026-08-26 17:21:46",
+      "url": "https://www.jobserve.com/gb/en/mob/job/A14F38E6AD5DEB096B/",
+      "source": "JobServe",
+      "source_type": "aggregator",
+      "sn_role": true,
+      "role_type": "developer",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "unknown",
+      "description": "Posted 12 hours ago",
+      "scraped_at": "2026-08-27 05:02:46",
+      "sponsor_licence": false,
+      "sponsorship_mentioned": false,
+      "first_seen": "2026-08-27",
+      "last_seen": "2026-08-27",
+      "sources": [
+        "JobServe"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "Service Desk Analyst/IT Support Executive (L1 Support)",
+      "company": "Coforge U.K. Ltd",
+      "location": "London",
+      "salary_display": "Not listed",
+      "date_posted": "2026-08-26 10:20:04",
+      "url": "https://www.jobserve.com/gb/en/mob/job/4428B7DB24F683907E/",
+      "source": "JobServe",
+      "source_type": "aggregator",
+      "sn_role": false,
+      "role_type": "sn-adjacent",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "unknown",
+      "description": "Posted 19 hours ago",
+      "scraped_at": "2026-08-27 05:02:46",
+      "sponsor_licence": true,
+      "sponsorship_mentioned": false,
+      "first_seen": "2026-08-27",
+      "last_seen": "2026-08-27",
+      "sources": [
+        "JobServe"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "Service Desk Administrator",
+      "company": "Ricoh",
+      "location": "GBP",
+      "salary_display": "Not listed",
+      "date_posted": "2026-08-26 20:32:50",
+      "url": "https://www.jobserve.com/gb/en/mob/job/D1EFAE605D5935648C/",
+      "source": "JobServe",
+      "source_type": "aggregator",
+      "sn_role": false,
+      "role_type": "sn-adjacent",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "unknown",
+      "description": "Posted 9 hours ago",
+      "scraped_at": "2026-08-27 05:02:46",
+      "sponsor_licence": true,
+      "sponsorship_mentioned": false,
+      "first_seen": "2026-08-27",
+      "last_seen": "2026-08-27",
+      "sources": [
+        "JobServe"
+      ],
+      "status": "active"
+    },
     {
       "title": "Service Now Architect",
       "company": "Infoplus Technologies UK Ltd",
@@ -132,7 +245,7 @@
       "sponsor_licence": true,
       "sponsorship_mentioned": false,
       "first_seen": "2026-08-26",
-      "last_seen": "2026-08-26",
+      "last_seen": "2026-08-27",
       "sources": [
         "JobServe"
       ],
@@ -160,7 +273,7 @@
       "sponsor_licence": false,
       "sponsorship_mentioned": false,
       "first_seen": "2026-08-26",
-      "last_seen": "2026-08-26",
+      "last_seen": "2026-08-27",
       "sources": [
         "JobServe"
       ],
@@ -189,7 +302,7 @@
       "sponsorship_mentioned": false,
       "sponsorship_scan": "fetch_error: unknown url type: '/job/hr-servicenow-functional-project-lea",
       "first_seen": "2026-08-25",
-      "last_seen": "2026-08-26",
+      "last_seen": "2026-08-27",
       "sources": [
         "Hunt UK"
       ],
@@ -218,7 +331,7 @@
       "sponsorship_mentioned": false,
       "sponsorship_scan": "fetch_error: unknown url type: '/job/servicenow-technical-architect-senio",
       "first_seen": "2026-08-25",
-      "last_seen": "2026-08-26",
+      "last_seen": "2026-08-27",
       "sources": [
         "Hunt UK"
       ],
@@ -274,7 +387,7 @@
       "scraped_at": "2026-08-24 05:02:59",
       "sponsorship_scan": "fetch_error: unknown url type: '/job/servicenow-data-architect-at-infoplu",
       "first_seen": "2026-08-24",
-      "last_seen": "2026-08-26",
+      "last_seen": "2026-08-27",
       "sources": [
         "Hunt UK"
       ],
@@ -302,7 +415,7 @@
       "scraped_at": "2026-08-24 05:02:59",
       "sponsorship_scan": "fetch_error: unknown url type: '/job/servicenow-technical-architect-at-fo",
       "first_seen": "2026-08-24",
-      "last_seen": "2026-08-26",
+      "last_seen": "2026-08-27",
       "sources": [
         "Hunt UK"
       ],
@@ -360,7 +473,7 @@
       "sponsorship_mentioned": false,
       "sponsorship_scan": "fetch_error: unknown url type: '/job/servicenow-architect-at-infoplus-tec",
       "first_seen": "2026-08-23",
-      "last_seen": "2026-08-26",
+      "last_seen": "2026-08-27",
       "sources": [
         "Hunt UK"
       ],
@@ -389,7 +502,7 @@
       "sponsorship_mentioned": false,
       "sponsorship_scan": "fetch_error: unknown url type: '/job/servicenow-csm-support-at-cognizant-",
       "first_seen": "2026-08-23",
-      "last_seen": "2026-08-26",
+      "last_seen": "2026-08-27",
       "sources": [
         "Hunt UK"
       ],
@@ -418,7 +531,7 @@
       "sponsorship_mentioned": false,
       "sponsorship_scan": "fetch_error: unknown url type: '/job/senior-manager-solution-architect-pr",
       "first_seen": "2026-08-23",
-      "last_seen": "2026-08-26",
+      "last_seen": "2026-08-27",
       "sources": [
         "Hunt UK"
       ],
@@ -447,7 +560,7 @@
       "sponsorship_mentioned": false,
       "sponsorship_scan": "fetch_error: unknown url type: '/job/senior-manager-solution-architect-gp",
       "first_seen": "2026-08-23",
-      "last_seen": "2026-08-26",
+      "last_seen": "2026-08-27",
       "sources": [
         "Hunt UK"
       ],
@@ -476,7 +589,7 @@
       "sponsorship_mentioned": false,
       "sponsorship_scan": "fetch_error: unknown url type: '/job/senior-manager-transformation-delive",
       "first_seen": "2026-08-23",
-      "last_seen": "2026-08-26",
+      "last_seen": "2026-08-27",
       "sources": [
         "Hunt UK"
       ],
@@ -505,7 +618,7 @@
       "sponsorship_mentioned": false,
       "sponsorship_scan": "fetch_error: unknown url type: '/job/senior-consultant-solution-architect",
       "first_seen": "2026-08-23",
-      "last_seen": "2026-08-26",
+      "last_seen": "2026-08-27",
       "sources": [
         "Hunt UK"
       ],
@@ -534,7 +647,7 @@
       "sponsorship_mentioned": false,
       "sponsorship_scan": "fetch_error: unknown url type: '/job/senior-consultant-solution-architect",
       "first_seen": "2026-08-23",
-      "last_seen": "2026-08-26",
+      "last_seen": "2026-08-27",
       "sources": [
         "Hunt UK"
       ],
@@ -563,7 +676,7 @@
       "sponsorship_mentioned": false,
       "sponsorship_scan": "fetch_error: unknown url type: '/job/manager-functional-lead-private-serv",
       "first_seen": "2026-08-23",
-      "last_seen": "2026-08-26",
+      "last_seen": "2026-08-27",
       "sources": [
         "Hunt UK"
       ],
@@ -679,7 +792,7 @@
       "sponsorship_mentioned": false,
       "sponsorship_scan": "fetch_error: unknown url type: '/job/senior-manager-transformation-delive",
       "first_seen": "2026-08-23",
-      "last_seen": "2026-08-26",
+      "last_seen": "2026-08-27",
       "sources": [
         "Hunt UK"
       ],
@@ -816,7 +929,7 @@
       "description": "Company Description It all started when engineer Fred Luddy wrote code that automated a tedious task for his coworker, Phyllis. She cried tears of joy. That moment inspired Fred to build a company that could do that for everyone\u2014freeing people from busywork so they could focus on meaningful work. To",
       "scraped_at": "2026-08-22 05:03:00",
       "first_seen": "2026-08-22",
-      "last_seen": "2026-08-26",
+      "last_seen": "2026-08-27",
       "sources": [
         "ServiceNow Careers"
       ],
@@ -843,7 +956,7 @@
       "description": "Company Description It all started when engineer Fred Luddy wrote code that automated a tedious task for his coworker, Phyllis. She cried tears of joy. That moment inspired Fred to build a company that could do that for everyone\u2014freeing people from busywork so they could focus on meaningful work. To",
       "scraped_at": "2026-08-22 05:03:00",
       "first_seen": "2026-08-22",
-      "last_seen": "2026-08-26",
+      "last_seen": "2026-08-27",
       "sources": [
         "ServiceNow Careers"
       ],
@@ -871,7 +984,7 @@
       "scraped_at": "2026-08-22 05:06:32",
       "sponsorship_scan": "fetch_error: unknown url type: '/job/servicenow-technical-lead-at-insight",
       "first_seen": "2026-08-22",
-      "last_seen": "2026-08-26",
+      "last_seen": "2026-08-27",
       "sources": [
         "Hunt UK"
       ],
@@ -899,7 +1012,7 @@
       "scraped_at": "2026-08-22 05:06:32",
       "sponsorship_scan": "fetch_error: unknown url type: '/job/servicenow-architect-at-qualient-tec",
       "first_seen": "2026-08-22",
-      "last_seen": "2026-08-26",
+      "last_seen": "2026-08-27",
       "sources": [
         "Hunt UK"
       ],
@@ -927,7 +1040,7 @@
       "scraped_at": "2026-08-22 05:06:32",
       "sponsorship_scan": "fetch_error: unknown url type: '/job/business-development-manager-service",
       "first_seen": "2026-08-22",
-      "last_seen": "2026-08-26",
+      "last_seen": "2026-08-27",
       "sources": [
         "Hunt UK"
       ],
@@ -955,7 +1068,7 @@
       "scraped_at": "2026-08-22 05:06:32",
       "sponsorship_scan": "fetch_error: unknown url type: '/job/servicenow-itsm-at-cognizant-mlywgnm",
       "first_seen": "2026-08-22",
-      "last_seen": "2026-08-26",
+      "last_seen": "2026-08-27",
       "sources": [
         "Hunt UK"
       ],
@@ -983,7 +1096,7 @@
       "scraped_at": "2026-08-22 05:06:32",
       "sponsorship_scan": "fetch_error: unknown url type: '/job/servicenow-administrator-at-cognizan",
       "first_seen": "2026-08-22",
-      "last_seen": "2026-08-26",
+      "last_seen": "2026-08-27",
       "sources": [
         "Hunt UK"
       ],
@@ -1011,7 +1124,7 @@
       "scraped_at": "2026-08-22 05:06:32",
       "sponsorship_scan": "fetch_error: unknown url type: '/job/servicenow-developer-at-infotel-uk-c",
       "first_seen": "2026-08-22",
-      "last_seen": "2026-08-26",
+      "last_seen": "2026-08-27",
       "sources": [
         "Hunt UK"
       ],
@@ -1231,7 +1344,7 @@
       "description": "Company Description It all started when engineer Fred Luddy wrote code that automated a tedious task for his coworker, Phyllis. She cried tears of joy. That moment inspired Fred to build a company that could do that for everyone\u2014freeing people from busywork so they could focus on meaningful work. To",
       "scraped_at": "2026-08-21 05:04:06",
       "first_seen": "2026-08-21",
-      "last_seen": "2026-08-26",
+      "last_seen": "2026-08-27",
       "sources": [
         "ServiceNow Careers"
       ],
@@ -1672,7 +1785,7 @@
       "scraped_at": "2026-08-19 05:01:38",
       "sponsor_licence": false,
       "first_seen": "2026-08-19",
-      "last_seen": "2026-08-26",
+      "last_seen": "2026-08-27",
       "sources": [
         "JobServe"
       ],
@@ -1755,7 +1868,7 @@
       "sponsor_licence": true,
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-08-18",
-      "last_seen": "2026-08-26",
+      "last_seen": "2026-08-27",
       "sources": [
         "JobServe"
       ],
@@ -1954,10 +2067,10 @@
     {
       "title": "ServiceNow Developer",
       "company": "Morgan Philips UK Limited",
-      "location": "England",
-      "salary_display": "\u00a365k - \u00a375k per annum + and Benefits",
+      "location": "75k Annual GBP",
+      "salary_display": "Not listed",
       "date_posted": "2026-08-16 11:55:59",
-      "url": "https://www.jobserve.com/gb/en/mob/job/69C3A17759C6071EA8/",
+      "url": "https://www.jobserve.com/gb/en/mob/job/F9F973B379291C980C/",
       "source": "JobServe",
       "source_type": "aggregator",
       "sn_role": true,
@@ -1972,7 +2085,7 @@
       "scraped_at": "2026-08-17 05:03:57",
       "sponsor_licence": true,
       "first_seen": "2026-08-17",
-      "last_seen": "2026-08-26",
+      "last_seen": "2026-08-27",
       "sources": [
         "JobServe"
       ],
@@ -1981,10 +2094,10 @@
     {
       "title": "ServiceNow Principal Solutions Architect",
       "company": "Morgan Philips UK Limited",
-      "location": "England",
-      "salary_display": "\u00a385k - \u00a3110k per annum + Bonus and Benefits",
+      "location": "100k Annual GBP",
+      "salary_display": "Not listed",
       "date_posted": "2026-08-16 11:30:57",
-      "url": "https://www.jobserve.com/gb/en/mob/job/694C2E252DF314E4E6/",
+      "url": "https://www.jobserve.com/gb/en/mob/job/9209F1646ADF7D8ED6/",
       "source": "JobServe",
       "source_type": "aggregator",
       "sn_role": true,
@@ -1999,7 +2112,7 @@
       "scraped_at": "2026-08-17 05:03:57",
       "sponsor_licence": true,
       "first_seen": "2026-08-17",
-      "last_seen": "2026-08-26",
+      "last_seen": "2026-08-27",
       "sources": [
         "JobServe"
       ],
@@ -2597,7 +2710,7 @@
       "scraped_at": "2026-08-14 05:01:48",
       "sponsor_licence": false,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-26",
+      "last_seen": "2026-08-27",
       "sources": [
         "JobServe"
       ],
@@ -3203,7 +3316,7 @@
       "description": "Company Description It all started in sunny San Diego, California in 2004 when a visionary engineer, Fred Luddy, saw the potential to transform how we work. Fast forward to today \u2014 ServiceNow stands as a global market leader, bringing innovative AI-enhanced technology to over 8,100 customers, includ",
       "scraped_at": "2026-08-13 05:02:57",
       "first_seen": "2026-08-13",
-      "last_seen": "2026-08-26",
+      "last_seen": "2026-08-27",
       "sources": [
         "ServiceNow Careers"
       ],
@@ -5246,7 +5359,7 @@
       "description": "Company Description It all started when engineer Fred Luddy wrote code that automated a tedious task for his coworker, Phyllis. She cried tears of joy. That moment inspired Fred to build a company that could do that for everyone\u2014freeing people from busywork so they could focus on meaningful work. To",
       "scraped_at": "2026-07-29 05:01:36",
       "first_seen": "2026-07-29",
-      "last_seen": "2026-08-26",
+      "last_seen": "2026-08-27",
       "sources": [
         "ServiceNow Careers"
       ],
@@ -5465,7 +5578,7 @@
       "scraped_at": "2026-07-26 05:06:45",
       "sponsorship_mentioned": true,
       "first_seen": "2026-07-26",
-      "last_seen": "2026-08-26",
+      "last_seen": "2026-08-27",
       "sources": [
         "Hunt UK"
       ],
@@ -5493,7 +5606,7 @@
       "scraped_at": "2026-07-26 05:06:45",
       "sponsorship_mentioned": true,
       "first_seen": "2026-07-26",
-      "last_seen": "2026-08-26",
+      "last_seen": "2026-08-27",
       "sources": [
         "Hunt UK"
       ],
@@ -5521,7 +5634,7 @@
       "scraped_at": "2026-07-26 05:06:45",
       "sponsorship_mentioned": true,
       "first_seen": "2026-07-26",
-      "last_seen": "2026-08-26",
+      "last_seen": "2026-08-27",
       "sources": [
         "Hunt UK"
       ],
@@ -5946,7 +6059,7 @@
       "sponsorship_mentioned": true,
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-07-24",
-      "last_seen": "2026-08-26",
+      "last_seen": "2026-08-27",
       "sources": [
         "Hunt UK"
       ],
@@ -6805,7 +6918,7 @@
       "scraped_at": "2026-07-19 05:01:01",
       "sponsor_licence": false,
       "first_seen": "2026-07-19",
-      "last_seen": "2026-08-26",
+      "last_seen": "2026-08-27",
       "sources": [
         "JobServe"
       ],
@@ -7115,7 +7228,7 @@
       "description": "Company Description It all started when engineer Fred Luddy wrote code that automated a tedious task for his coworker, Phyllis. She cried tears of joy. That moment inspired Fred to build a company that could do that for everyone\u2014freeing people from busywork so they could focus on meaningful work. To",
       "scraped_at": "2026-07-17 05:00:53",
       "first_seen": "2026-07-17",
-      "last_seen": "2026-08-26",
+      "last_seen": "2026-08-27",
       "sources": [
         "ServiceNow Careers"
       ],
@@ -10802,7 +10915,7 @@
       "scraped_at": "2026-06-27 05:04:17",
       "sponsor_licence": false,
       "first_seen": "2026-06-27",
-      "last_seen": "2026-08-26",
+      "last_seen": "2026-08-27",
       "sources": [
         "JobServe"
       ],
@@ -11054,7 +11167,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "description": "Posted 15 hours ago",
       "scraped_at": "2026-06-26 05:00:43",
@@ -11064,7 +11177,7 @@
       "sources": [
         "JobServe"
       ],
-      "status": "stale"
+      "status": "expired"
     },
     {
       "title": "IT Service Desk Analyst",
@@ -12107,7 +12220,7 @@
       "sponsor_licence": true,
       "sponsorship_mentioned": true,
       "first_seen": "2026-06-24",
-      "last_seen": "2026-08-26",
+      "last_seen": "2026-08-27",
       "sources": [
         "Hunt UK"
       ],
@@ -12346,7 +12459,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "description": "Posted 21 hours ago",
       "scraped_at": "2026-06-23 05:01:08",
@@ -12356,7 +12469,7 @@
       "sources": [
         "JobServe"
       ],
-      "status": "stale"
+      "status": "expired"
     },
     {
       "title": "Service Desk Manager",
@@ -14131,7 +14244,7 @@
       "description": "Company Description It all started in sunny San Diego, California in 2004 when a visionary engineer, Fred Luddy, saw the potential to transform how we work. Fast forward to today \u2014 ServiceNow stands as a global market leader, bringing innovative AI-enhanced technology to over 8,100 customers, includ",
       "scraped_at": "2026-06-13 05:01:48",
       "first_seen": "2026-06-13",
-      "last_seen": "2026-08-26",
+      "last_seen": "2026-08-27",
       "sources": [
         "ServiceNow Careers"
       ],
@@ -16838,7 +16951,7 @@
       "employment": "permanent",
       "sc_clearance": true,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "sc_blocked",
       "description": "Posted 10 hours ago",
       "scraped_at": "2026-05-29 05:10:28",
@@ -16848,7 +16961,7 @@
       "sources": [
         "JobServe"
       ],
-      "status": "stale"
+      "status": "expired"
     },
     {
       "title": "Configuration Management Database Analyst",
@@ -20863,7 +20976,7 @@
         "ServiceNow Careers"
       ],
       "first_seen": "2026-05-15",
-      "last_seen": "2026-08-26",
+      "last_seen": "2026-08-27",
       "status": "active"
     },
     {
