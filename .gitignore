@@ -46,3 +46,5 @@ docs/data/.gitignore
 logs/
 *.log
 *.sqlite
+# secrets
+.env
