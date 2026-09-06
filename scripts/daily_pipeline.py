@@ -290,7 +290,7 @@ def git_commit_push():
     log(">>> Git commit & push...")
     # Only stage our data files + logs that matter
     ok1, out1 = run_subprocess(
-        ["git", "add", "docs/data/", "daily_pipeline.log"],
+        ["git", "add", "docs/data/"],
         timeout=30,
     )
     if not ok1:
