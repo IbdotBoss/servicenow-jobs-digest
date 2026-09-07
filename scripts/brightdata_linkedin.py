@@ -12,9 +12,8 @@ Why this exists:
 Two modes:
   1. URL mode (synchronous /scrape): pass a list of LinkedIn job URLs, get structured data.
      Max 20 URLs per sync request.
-  2. Discovery mode (async /trigger): pass {keyword, location} search input so BD
-     finds + scrapes matching LinkedIn jobs. Async only. Returns a snapshot_id; poll
-     /progress then download from /snapshot.
+  2. Discovery mode: use web_search (agent tool) or Bright Data Web Unlocker to find
+     LinkedIn job URLs matching a keyword+location, then scrape via /scrape.
 
 Output schema matches the legacy linkedin_job_scraper.py so daily_pipeline.py and
 rebuild_master.py keep working:
@@ -26,15 +25,18 @@ Key is read from BRIGHT_DATA_API_KEY env (loaded from .env if present). Never ha
 Usage:
   from brightdata_linkedin import BrightDataLinkedIn
   bd = BrightDataLinkedIn()                       # reads key from env/.env
-  jobs = bd.scrape_urls([url1, url2])             # sync, <=20
-  jobs = bd.discover(keyword='ServiceNow', location='Cambridge', dataset_id=...)  # async
+  bd.discover(keyword='ServiceNow', location='United Kingdom')  # returns list of jobs
+  # Or use the agent web_search tool for discovery, then:
+  bd.scrape_urls([url1, url2])             # sync, <=20
 """
 import os
 import sys
 import json
 import time
+import re
 import urllib.request
 import urllib.error
+import urllib.parse
 from datetime import datetime
 
 # ---- load .env if present (does not override real env) ----
@@ -105,6 +107,34 @@ class BrightDataLinkedIn:
         except Exception as e:  # noqa
             return 0, {'error': str(e)}
 
+    def _unlocker_get(self, url, zone=None):
+        """Fetch a URL via Bright Data Web Unlocker API (/request endpoint).
+
+        Handles anti-bot, Cloudflare, CAPTCHAs.  Returns decoded HTML text.
+        Zone name is read from BRIGHT_DATA_WEB_UNLOCKER_ZONE env var.
+        Raises RuntimeError if the zone is not configured.
+        """
+        if zone is None:
+            zone = os.environ.get('BRIGHT_DATA_WEB_UNLOCKER_ZONE', 'web_unlocker')
+        unlock_url = 'https://api.brightdata.com/request'
+        payload = json.dumps({
+            'zone': zone,
+            'url': url,
+            'format': 'raw',
+            'render': 'false',
+        }).encode('utf-8')
+        req = urllib.request.Request(unlock_url, data=payload, method='POST',
+            headers={
+                'Authorization': f'Bearer {self.api_key}',
+                'Content-Type': 'application/json',
+            })
+        try:
+            with urllib.request.urlopen(req, timeout=30) as r:
+                return r.read().decode('utf-8', 'ignore')
+        except urllib.error.HTTPError as e:
+            body = e.read().decode('utf-8', 'ignore')
+            raise RuntimeError(f"Unlocker API HTTP {e.code}: {body[:200]}")
+
     # ---- sync: scrape specific job URLs ----
     def scrape_urls(self, urls, dataset_id=LINKEDIN_JOBS_DATASET):
         if not urls:
@@ -122,51 +152,115 @@ class BrightDataLinkedIn:
         if status != 200 or 'error' in resp:
             print(f"❌ scrape_urls failed ({status}): {resp.get('error', resp)}")
             return []
-        # Sync /scrape returns data inline (list or {status, data})
         return self._normalize(resp)
 
-    # ---- async: discover by keyword+location ----
+    # ---- discover by keyword+location ----
     def discover(self, keyword, location=None, dataset_id=LINKEDIN_JOBS_DATASET,
                  poll_interval=20, max_wait=600):
-        """Trigger an async discovery job. Returns list of normalized jobs."""
-        payload = [{'keyword': keyword}]
+        """Discover LinkedIn jobs by keyword+location.
+
+        Bright Data's LinkedIn Jobs dataset (gd_lpfll7v5hcqtkxl6l) only accepts
+        concrete LinkedIn job URLs via /scrape — it cannot discover URLs by keyword.
+        To discover jobs we:
+          1. Fetch Google search results via the Bright Data Web Unlocker API
+             (/request endpoint with a zone). The zone name is read from the
+             BRIGHT_DATA_WEB_UNLOCKER_ZONE env var (default: 'web_unlocker').
+          2. Extract linkedin.com/jobs/view/... URLs from the search page HTML.
+          3. Scrape each URL via the /scrape (synchronous) endpoint.
+
+        If the Web Unlocker zone is not configured, falls back to a direct
+        urllib request (may be blocked on datacenter IPs) and ultimately
+        returns [] (LinkedIn is best-effort per the pipeline spec).
+        """
+        query = f"site:linkedin.com/jobs/view {keyword}"
         if location:
-            payload[0]['location'] = location
-        status, resp = self._post('trigger',
-                                  {'dataset_id': dataset_id, 'format': 'json',
-                                   'uncompressed_webhook': 'true'},
-                                  payload)
-        if status != 200 or 'snapshot_id' not in resp:
-            print(f"❌ discover trigger failed ({status}): {resp}")
+            query += f" {location}"
+        print(f"🔍 web_search: {query}")
+        urls = self._find_linkedin_job_urls(query, max_results=15)
+        if not urls:
+            if self.verbose:
+                print("  ⚠️ No LinkedIn job URLs found — LinkedIn degraded to 0 (best-effort)")
             return []
-        snap = resp['snapshot_id']
-        print(f"⏳ discovery triggered → snapshot_id={snap}")
-        data = self._wait_snapshot(snap, poll_interval, max_wait)
-        return self._normalize(data)
 
-    def _wait_snapshot(self, snapshot_id, poll_interval, max_wait):
-        waited = 0
-        while waited <= max_wait:
-            status, prog = self._get('progress', {'snapshot_id': snapshot_id})
-            if status == 200:
-                st = prog.get('status')
+        if self.verbose:
+            print(f"  Found {len(urls)} LinkedIn job URLs, scraping via Bright Data...")
+
+        # Bright Data /scrape accepts up to 20 URLs per request
+        all_jobs = []
+        for i in range(0, len(urls), 20):
+            batch = urls[i:i+20]
+            jobs = self.scrape_urls(batch, dataset_id)
+            all_jobs.extend(jobs)
+
+        # Filter to keyword-relevant roles
+        kw_lower = keyword.lower()
+        filtered = [j for j in all_jobs if kw_lower in (j.get('title', '') + j.get('description', '')).lower()]
+        if self.verbose:
+            print(f"  ✅ discover: {len(filtered)} keyword-relevant jobs out of {len(all_jobs)} scraped")
+        return filtered
+
+    def _find_linkedin_job_urls(self, query, max_results=15):
+        """Find real linkedin.com/jobs/view/... URLs.
+
+        Tries Bright Data Web Unlocker (/request) with a configurable zone name
+        first, then falls back to direct urllib.
+        """
+        search_url = "https://www.google.com/search?q=" + urllib.parse.quote(query)
+        urls = []
+
+        # Try Bright Data Web Unlocker with various zone names
+        zone_names = [
+            os.environ.get('BRIGHT_DATA_WEB_UNLOCKER_ZONE', 'web_unlocker'),
+            'serp',
+            'serp_api',
+            'unlocker',
+        ]
+        for zone in zone_names:
+            if not zone or zone in zone_names[:zone_names.index(zone)]:
+                continue
+            try:
+                html = self._unlocker_get(search_url, zone=zone)
+                if html and len(html) > 100:
+                    urls = self._extract_linkedin_urls(html, max_results)
+                    if urls:
+                        return urls
+            except Exception as e:
                 if self.verbose:
-                    print(f"   progress: {st} ({waited}s) — {prog.get('progress', '')}")
-                if st == 'ready':
-                    s2, data = self._get('snapshot', {'snapshot_id': snapshot_id})
-                    if s2 == 200:
-                        return data
-                    print(f"❌ snapshot fetch failed ({s2}): {data}")
-                    return None
-                if st in ('failed', 'error'):
-                    print(f"❌ snapshot {st}: {prog}")
-                    return None
-            time.sleep(poll_interval)
-            waited += poll_interval
-        print(f"⏱️ timed out after {max_wait}s waiting for snapshot {snapshot_id}")
-        return None
+                    print(f"  ⚠️ Web Unlocker zone='{zone}' failed: {e}")
+                continue
 
-    # ---- normalize Bright Data output → legacy schema ----
+        # Last resort: try direct urllib (may be blocked on datacenter IPs)
+        if self.verbose:
+            print("  ⚠️ All Web Unlocker zones failed — trying direct urllib (may be blocked)")
+        try:
+            req = urllib.request.Request(search_url, headers={
+                'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36',
+                'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+                'Accept-Language': 'en-US,en;q=0.9',
+            })
+            with urllib.request.urlopen(req, timeout=15) as r:
+                html = r.read().decode('utf-8', 'ignore')
+            urls = self._extract_linkedin_urls(html, max_results)
+        except Exception as e:
+            if self.verbose:
+                print(f"  ⚠️ Direct urllib also failed: {e}")
+
+        return urls
+
+    @staticmethod
+    def _extract_linkedin_urls(html, max_results):
+        """Extract linkedin.com/jobs/view/... URLs from HTML string."""
+        urls = []
+        pattern = r'https?://(?:www\.)?linkedin\.com/jobs/view/[^\s"&<>\)]+'
+        for m in re.finditer(pattern, html):
+            u = m.group(0)
+            if u not in urls:
+                urls.append(u)
+            if len(urls) >= max_results:
+                break
+        return urls
+
+    # ---- normalize Bright Data output -> legacy schema ----
     def _normalize(self, data):
         """Accept either a list of job dicts, or {status,data:[]}, or {jobs:[]}."""
         jobs = None

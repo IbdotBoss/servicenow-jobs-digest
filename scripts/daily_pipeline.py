@@ -330,10 +330,14 @@ def git_commit_push():
 
 
 def force_pages_rebuild():
-    """Force a GitHub Pages build to bust CDN cache."""
+    """Force a GitHub Pages build to bust CDN cache.
+    Uses full path to gh since cron runs with a minimal PATH."""
     log(">>> Forcing GitHub Pages rebuild...")
+    # Find gh — cron's PATH may not include ~/.local/bin
+    import shutil
+    gh_bin = shutil.which("gh") or os.path.expanduser("~/.local/bin/gh")
     ok, out = run_subprocess(
-        ["gh", "api", "-X", "POST",
+        [gh_bin, "api", "-X", "POST",
          f"repos/IbdotBoss/servicenow-jobs-digest/pages/builds"],
         timeout=30,
     )
