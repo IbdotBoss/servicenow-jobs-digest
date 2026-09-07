@@ -1,8 +1,8 @@
 {
   "updated": "2026-09-07",
-  "total": 1005,
-  "total_active": 114,
-  "licenced_sponsors": 439,
+  "total": 1010,
+  "total_active": 120,
+  "licenced_sponsors": 443,
   "daily_snapshots": [
     "2026-05-06",
     "2026-05-07",
@@ -104,7 +104,7 @@
   ],
   "sources": {
     "JobServe": 590,
-    "Hunt UK": 298,
+    "Hunt UK": 303,
     "LinkedIn": 105,
     "ServiceNow Careers": 29,
     "Nelson Frank": 11,
@@ -137,7 +137,7 @@
       "link_status": "live",
       "visa_sponsorship": "unknown",
       "description": "Posted 14 hours ago",
-      "scraped_at": "2026-09-07 05:00:09",
+      "scraped_at": "2026-09-07 05:20:42",
       "sponsor_licence": false,
       "sponsorship_mentioned": false,
       "first_seen": "2026-09-07",
@@ -164,8 +164,8 @@
       "grad_scheme": false,
       "link_status": "live",
       "visa_sponsorship": "unknown",
-      "description": "Posted 3 hours ago",
-      "scraped_at": "2026-09-07 05:00:09",
+      "description": "Posted 4 hours ago",
+      "scraped_at": "2026-09-07 05:20:42",
       "sponsor_licence": false,
       "sponsorship_mentioned": false,
       "first_seen": "2026-09-07",
@@ -192,14 +192,159 @@
       "grad_scheme": false,
       "link_status": "live",
       "visa_sponsorship": "unknown",
-      "description": "Posted 1 hour ago",
-      "scraped_at": "2026-09-07 05:00:09",
+      "description": "Posted 2 hours ago",
+      "scraped_at": "2026-09-07 05:20:42",
       "sponsor_licence": false,
       "sponsorship_mentioned": false,
       "first_seen": "2026-09-07",
       "last_seen": "2026-09-07",
       "sources": [
         "JobServe"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "ServiceNow Developer",
+      "company": "LOGIC AUTOMATION LTD",
+      "location": "London, England, United Kingdom",
+      "salary_display": "Not listed",
+      "date_posted": "2026-09-07",
+      "url": "/job/servicenow-developer-at-version-1-o8irhd205eif",
+      "source": "Hunt UK",
+      "source_type": "aggregator",
+      "sn_role": true,
+      "role_type": "developer",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "unknown",
+      "sponsor_licence": false,
+      "description": "ServiceNow Developer LOGIC AUTOMATION LTD London, England, United Kingdom Full-time \u2014 3d ago",
+      "scraped_at": "2026-09-07 05:20:47",
+      "sponsorship_mentioned": false,
+      "sponsorship_scan": "fetch_error: unknown url type: '/job/servicenow-developer-at-version-1-o8",
+      "first_seen": "2026-09-07",
+      "last_seen": "2026-09-07",
+      "sources": [
+        "Hunt UK"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "ServiceNow Technical Architect",
+      "company": "PRODAPT (UK) LIMITED",
+      "location": "READING, United Kingdom",
+      "salary_display": "Not listed",
+      "date_posted": "2026-09-07",
+      "url": "/job/servicenow-technical-architect-1xo1s0zpfbad",
+      "source": "Hunt UK",
+      "source_type": "aggregator",
+      "sn_role": true,
+      "role_type": "architect",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "unknown",
+      "sponsor_licence": true,
+      "description": "ServiceNow Technical Architect PRODAPT (UK) LIMITED READING, United Kingdom Full-time \u2014 4d ago",
+      "scraped_at": "2026-09-07 05:20:47",
+      "sponsorship_mentioned": false,
+      "sponsorship_scan": "fetch_error: unknown url type: '/job/servicenow-technical-architect-1xo1s",
+      "first_seen": "2026-09-07",
+      "last_seen": "2026-09-07",
+      "sources": [
+        "Hunt UK"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "ServiceNow Technical Consultant",
+      "company": "Forsyth Barnes Limited",
+      "location": "England, United Kingdom",
+      "salary_display": "Not listed",
+      "date_posted": "2026-09-07",
+      "url": "/job/servicenow-technical-consultant-at-forsyth-barnes-ubxmaduaium",
+      "source": "Hunt UK",
+      "source_type": "aggregator",
+      "sn_role": true,
+      "role_type": "consultant",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "unknown",
+      "sponsor_licence": true,
+      "description": "ServiceNow Technical Consultant Forsyth Barnes Limited England, United Kingdom Full-time \u2014 4d ago",
+      "scraped_at": "2026-09-07 05:20:47",
+      "sponsorship_mentioned": false,
+      "sponsorship_scan": "fetch_error: unknown url type: '/job/servicenow-technical-consultant-at-f",
+      "first_seen": "2026-09-07",
+      "last_seen": "2026-09-07",
+      "sources": [
+        "Hunt UK"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "ServiceNow Technical Lead",
+      "company": "PRODAPT (UK) LIMITED",
+      "location": "READING, United Kingdom",
+      "salary_display": "Not listed",
+      "date_posted": "2026-09-07",
+      "url": "/job/servicenow-technical-lead-ksbt3bfgoxzf",
+      "source": "Hunt UK",
+      "source_type": "aggregator",
+      "sn_role": true,
+      "role_type": "manager",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "unknown",
+      "sponsor_licence": true,
+      "description": "ServiceNow Technical Lead PRODAPT (UK) LIMITED READING, United Kingdom Full-time \u2014 4d ago",
+      "scraped_at": "2026-09-07 05:20:47",
+      "sponsorship_mentioned": false,
+      "sponsorship_scan": "fetch_error: unknown url type: '/job/servicenow-technical-lead-ksbt3bfgox",
+      "first_seen": "2026-09-07",
+      "last_seen": "2026-09-07",
+      "sources": [
+        "Hunt UK"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "ServiceNow Developer/Administrator - 12-Month Contract",
+      "company": "SABIO LTD",
+      "location": "London",
+      "salary_display": "Not listed",
+      "date_posted": "2026-09-07",
+      "url": "/job/servicenow-developeradministrator-12month-contract-9rr04gpbqcie",
+      "source": "Hunt UK",
+      "source_type": "aggregator",
+      "sn_role": true,
+      "role_type": "developer",
+      "remote": "onsite",
+      "employment": "contract",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "unknown",
+      "sponsor_licence": true,
+      "description": "ServiceNow Developer/Administrator - 12-Month Contract SABIO LTD London Contract \u2014 4d ago",
+      "scraped_at": "2026-09-07 05:20:47",
+      "sponsorship_mentioned": false,
+      "sponsorship_scan": "fetch_error: unknown url type: '/job/servicenow-developeradministrator-12",
+      "first_seen": "2026-09-07",
+      "last_seen": "2026-09-07",
+      "sources": [
+        "Hunt UK"
       ],
       "status": "active"
     },
@@ -726,7 +871,7 @@
       "sponsorship_scan": "fetch_error: unknown url type: '/job/servicenow-csm-consultant-at-testq-t",
       "sponsorship_mentioned": true,
       "first_seen": "2026-09-04",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-06",
       "sources": [
         "Hunt UK"
       ],
@@ -755,7 +900,7 @@
       "sponsorship_scan": "fetch_error: unknown url type: '/job/servicenow-csm-process-consultant-at",
       "sponsorship_mentioned": true,
       "first_seen": "2026-09-04",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-06",
       "sources": [
         "Hunt UK"
       ],
@@ -1517,7 +1662,7 @@
       "sponsorship_mentioned": true,
       "sponsorship_scan": "fetch_error: unknown url type: '/job/servicenow-technical-architect-senio",
       "first_seen": "2026-08-25",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-06",
       "sources": [
         "Hunt UK"
       ],
@@ -1776,7 +1921,7 @@
       "sponsorship_mentioned": true,
       "sponsorship_scan": "fetch_error: unknown url type: '/job/senior-manager-transformation-delive",
       "first_seen": "2026-08-23",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-06",
       "sources": [
         "Hunt UK"
       ],
@@ -1979,7 +2124,7 @@
       "sponsorship_mentioned": true,
       "sponsorship_scan": "fetch_error: unknown url type: '/job/senior-manager-transformation-delive",
       "first_seen": "2026-08-23",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-06",
       "sources": [
         "Hunt UK"
       ],
@@ -2155,7 +2300,7 @@
       "location": "Sutton, England, United Kingdom",
       "salary_display": "Not listed",
       "date_posted": "2026-08-22",
-      "url": "/job/servicenow-technical-lead-at-insight-global-lbjdmyn4ud48",
+      "url": "/job/servicenow-technical-lead-at-insight-global-dyi-hgectwet",
       "source": "Hunt UK",
       "source_type": "aggregator",
       "sn_role": true,
@@ -2171,7 +2316,7 @@
       "scraped_at": "2026-08-22 05:06:32",
       "sponsorship_scan": "fetch_error: unknown url type: '/job/servicenow-technical-lead-at-insight",
       "first_seen": "2026-08-22",
-      "last_seen": "2026-08-31",
+      "last_seen": "2026-09-07",
       "sources": [
         "Hunt UK"
       ],
@@ -2311,7 +2456,7 @@
       "scraped_at": "2026-08-22 05:06:32",
       "sponsorship_scan": "fetch_error: unknown url type: '/job/servicenow-developer-at-infotel-uk-c",
       "first_seen": "2026-08-22",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-06",
       "sources": [
         "Hunt UK"
       ],
@@ -8173,10 +8318,10 @@
     {
       "title": "Manager - ServiceNow - TC- UKI",
       "company": "FRANK HIRTH LIMITED",
-      "location": "United Kingdom",
+      "location": "London, England, United Kingdom",
       "salary_display": "Not listed",
       "date_posted": "2026-07-19",
-      "url": "https://huntukvisasponsors.com/jobs?q=servicenow",
+      "url": "/job/manager-servicenow-tc-uki-at-ey-3oembdjntghi",
       "source": "Hunt UK",
       "source_type": "aggregator",
       "sn_role": true,
@@ -8185,7 +8330,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "expired",
+      "link_status": "live",
       "visa_sponsorship": "sc_blocked",
       "sponsor_licence": true,
       "description": "Manager - ServiceNow - TC- UKI FRANK HIRTH LIMITED At EY, we\u2019re all in to shape your future with confidence. We\u2019ll help you succeed in a globally connected powerhouse of diverse teams and take your career wherever you want it to go. Join EY and help to build a better working world. At EY, you\u2019ll have the chance to build a career as unique as you are, with the global scale, support, inclusive culture, and technology to become the best version of you, we are counting on your unique voice and persp",
@@ -8193,11 +8338,11 @@
       "sponsorship_scan": "Security clearance required",
       "sponsorship_mentioned": true,
       "first_seen": "2026-07-19",
-      "last_seen": "2026-07-20",
+      "last_seen": "2026-09-07",
       "sources": [
         "Hunt UK"
       ],
-      "status": "expired"
+      "status": "active"
     },
     {
       "title": "Service Desk - Spanish + English",
