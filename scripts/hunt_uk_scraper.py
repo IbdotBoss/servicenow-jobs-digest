@@ -17,6 +17,7 @@ Output: docs/data/hunt_uk_jobs.json
 
 import json, os, re, glob as _g, sys
 from datetime import datetime
+from urllib.parse import urljoin
 
 try:
     from playwright.sync_api import sync_playwright
@@ -146,6 +147,11 @@ def scrape():
             if '/job/' not in href or href in seen:
                 continue
             seen.add(href)
+            # FIX: Hunt UK emits relative URLs (/job/...) — resolve to absolute so
+            # the sponsorship scanner can fetch the page for SC/DV text scanning.
+            # Relative URLs cause fetch_error: unknown url type: '/job/...'
+            if href.startswith('/job/'):
+                href = urljoin('https://huntukvisasponsors.com', href)
             j = parse_card(href, c.inner_text() or '')
             if j:
                 jobs.append(j)

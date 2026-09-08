@@ -319,10 +319,12 @@ def scan_file(filepath, sponsor_set, dry_run=False, csv_only=False):
     was_list = isinstance(data, list)
     
     changes = {'sc_blocked': 0, 'unavailable': 0, 'licence_flagged': 0}
+    scan_changed = False
     
     for j in jobs:
         current_sp = j.get('visa_sponsorship', 'unknown')
         current_licence = j.get('sponsor_licence', False)
+        current_scan = j.get('sponsorship_scan', None)
         
         if csv_only:
             # Just the sponsor CSV lookup
@@ -346,12 +348,14 @@ def scan_file(filepath, sponsor_set, dry_run=False, csv_only=False):
             changes[updates['visa_sponsorship']] = changes.get(updates['visa_sponsorship'], 0) + 1
         if 'sponsor_licence' in updates and updates['sponsor_licence'] != current_licence:
             changes['licence_flagged'] += 1
+        if 'sponsorship_scan' in updates and updates['sponsorship_scan'] != current_scan:
+            scan_changed = True
     
     # Recount totals
     tags = Counter(j.get('visa_sponsorship', 'unknown') for j in jobs)
     licence_count = sum(1 for j in jobs if j.get('sponsor_licence'))
     
-    if not dry_run and any(changes.values()):
+    if not dry_run and (any(changes.values()) or scan_changed):
         if not was_list:
             data['sc_blocked'] = tags.get('sc_blocked', 0)
             data['verified'] = tags.get('verified', 0) + tags.get('sponsor_verified', 0)
@@ -359,8 +363,7 @@ def scan_file(filepath, sponsor_set, dry_run=False, csv_only=False):
                 data['licenced_sponsors'] = licence_count
         
         with open(filepath, 'w') as f:
-            json.dump(data, f, indent=2)
-    
+            json.dump(data, f, indent=2)    
     return changes, tags, licence_count
 
 def main(dry_run=False, csv_only=False, file_path=None, skip_defaults=False):
