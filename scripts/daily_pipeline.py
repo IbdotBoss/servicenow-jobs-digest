@@ -170,7 +170,10 @@ def run_linkedin_brightdata():
     Uses discover() (async) — triggers a snapshot search for 'ServiceNow' in United Kingdom,
     polls for results, normalizes to the legacy schema.
 
-    Falls back gracefully to 0 jobs if BRIGHT_DATA_API_KEY is missing or the API fails.
+    Falls back to a pre-seeded URL file (data/linkedin_urls.txt) when the Web Unlocker
+    zone is not configured (datacenter IP can't reach Google). Each URL is one per line.
+
+    If BRIGHT_DATA_API_KEY is missing or the API fails, LinkedIn degrades to 0 (expected).
     """
     log(">>> Running LinkedIn (Bright Data)...")
     try:
@@ -189,6 +192,15 @@ def run_linkedin_brightdata():
     try:
         bd = BrightDataLinkedIn(api_key=api_key, verbose=False)
         jobs = bd.discover(keyword="ServiceNow", location="United Kingdom")
+        # If discover returned 0 (Web Unlocker zone not configured), try URL seed file
+        if not jobs:
+            seed_file = os.path.join(DATA_DIR, "linkedin_urls.txt")
+            if os.path.exists(seed_file):
+                with open(seed_file) as f:
+                    urls = [line.strip() for line in f if line.strip()]
+                if urls:
+                    log(f"  → Using {len(urls)} pre-seeded LinkedIn URLs from {seed_file}")
+                    jobs = bd.scrape_urls(urls)
         # Filter to SN-relevant roles
         sn_kw = ["servicenow", "snow", "itsm", "csm", "itom", "hrsd", "secops",
                  "csam", "grcc", "fsm"]
