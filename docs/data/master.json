@@ -1,7 +1,7 @@
 {
   "updated": "2026-10-12",
-  "total": 1240,
-  "total_active": 162,
+  "total": 1247,
+  "total_active": 170,
   "licenced_sponsors": 533,
   "daily_snapshots": [
     "2026-05-06",
@@ -139,7 +139,7 @@
   ],
   "sources": {
     "JobServe": 727,
-    "Hunt UK": 381,
+    "Hunt UK": 388,
     "LinkedIn": 113,
     "ServiceNow Careers": 37,
     "Nelson Frank": 11,
@@ -156,8 +156,8 @@
   "jobs": [
     {
       "title": "ServiceNow CSM Principal Engineer",
-      "company": "Unknown",
-      "location": "United Kingdom",
+      "company": "The Boston Consulting Group UK LLP",
+      "location": "London, United Kingdom",
       "salary_display": "Not listed",
       "date_posted": "2026-10-12",
       "url": "https://huntukvisasponsors.com/job/servicenow-csm-principal-engineer-7dvecrzudiwu",
@@ -172,8 +172,220 @@
       "link_status": "live",
       "visa_sponsorship": "unknown",
       "sponsor_licence": false,
-      "description": "ServiceNow CSM Principal Engineer",
-      "scraped_at": "2026-10-12 05:00:25",
+      "sponsor_likelihood_badge": "likely",
+      "posted_relative": "3d ago",
+      "description": "ServiceNow CSM Principal Engineer The Boston Consulting Group UK LLP London, United Kingdom Likely Full-time \u2014 3d ago",
+      "scraped_at": "2026-10-12 05:07:32",
+      "sponsorship_mentioned": false,
+      "first_seen": "2026-10-12",
+      "last_seen": "2026-10-12",
+      "sources": [
+        "Hunt UK"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "Manager, Lead Specialist, ServiceNow GRC Solution Architect, Global",
+      "company": "DELOITTE LLP",
+      "location": "England, United Kingdom",
+      "salary_display": "Not listed",
+      "date_posted": "2026-10-12",
+      "url": "https://huntukvisasponsors.com/job/manager-lead-specialist-servicenow-grc-solution-architect-global-at-deloitte-ssxh-c1qhhu",
+      "source": "Hunt UK",
+      "source_type": "aggregator",
+      "sn_role": true,
+      "role_type": "architect",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "unknown",
+      "sponsor_licence": false,
+      "sponsor_likelihood_badge": "likely",
+      "posted_relative": "4d ago",
+      "description": "Manager, Lead Specialist, ServiceNow GRC Solution Architect, Global DELOITTE LLP England, United Kingdom Likely Full-time \u2014 4d ago",
+      "scraped_at": "2026-10-12 05:07:32",
+      "sponsorship_mentioned": false,
+      "first_seen": "2026-10-12",
+      "last_seen": "2026-10-12",
+      "sources": [
+        "Hunt UK"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "Technical ServiceNow Architect",
+      "company": "METHODS BUSINESS AND DIGITAL TECHNOLOGY LIMITED",
+      "location": "Farnborough, England, United Kingdom",
+      "salary_display": "Not listed",
+      "date_posted": "2026-10-12",
+      "url": "https://huntukvisasponsors.com/job/technical-servicenow-architect-y1oa2cgdtc5r",
+      "source": "Hunt UK",
+      "source_type": "aggregator",
+      "sn_role": true,
+      "role_type": "architect",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "unknown",
+      "sponsor_licence": false,
+      "sponsor_likelihood_badge": "likely",
+      "posted_relative": "4d ago",
+      "description": "Technical ServiceNow Architect METHODS BUSINESS AND DIGITAL TECHNOLOGY LIMITED Farnborough, England, United Kingdom Likely Full-time \u2014 4d ago",
+      "scraped_at": "2026-10-12 05:07:32",
+      "sponsorship_mentioned": false,
+      "first_seen": "2026-10-12",
+      "last_seen": "2026-10-12",
+      "sources": [
+        "Hunt UK"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "ServiceNow Portal Developer",
+      "company": "METHODS BUSINESS AND DIGITAL TECHNOLOGY LIMITED",
+      "location": "Farnborough, England, United Kingdom",
+      "salary_display": "Not listed",
+      "date_posted": "2026-10-12",
+      "url": "https://huntukvisasponsors.com/job/servicenow-portal-developer-32x1yrqha4xe",
+      "source": "Hunt UK",
+      "source_type": "aggregator",
+      "sn_role": true,
+      "role_type": "developer",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "unknown",
+      "sponsor_licence": false,
+      "sponsor_likelihood_badge": "likely",
+      "posted_relative": "4d ago",
+      "description": "ServiceNow Portal Developer METHODS BUSINESS AND DIGITAL TECHNOLOGY LIMITED Farnborough, England, United Kingdom Likely \u2014 \u2014 4d ago",
+      "scraped_at": "2026-10-12 05:07:32",
+      "sponsorship_mentioned": false,
+      "first_seen": "2026-10-12",
+      "last_seen": "2026-10-12",
+      "sources": [
+        "Hunt UK"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "Enterprise Service Manager - ServiceNow",
+      "company": "CLIFFORD CHANCE LLP",
+      "location": "London, United Kingdom",
+      "salary_display": "Not listed",
+      "date_posted": "2026-10-12",
+      "url": "https://huntukvisasponsors.com/job/enterprise-service-manager-servicenow-xquzbegt28kp",
+      "source": "Hunt UK",
+      "source_type": "aggregator",
+      "sn_role": true,
+      "role_type": "manager",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "unknown",
+      "sponsor_licence": false,
+      "sponsor_likelihood_badge": "",
+      "posted_relative": "5d ago",
+      "description": "Enterprise Service Manager - ServiceNow CLIFFORD CHANCE LLP London, United Kingdom \u2014 Full-time \u2014 5d ago",
+      "scraped_at": "2026-10-12 05:07:32",
+      "sponsorship_mentioned": false,
+      "first_seen": "2026-10-12",
+      "last_seen": "2026-10-12",
+      "sources": [
+        "Hunt UK"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "Business Analyst (ServiceNow & Product Design)",
+      "company": "SYNECHRON LIMITED",
+      "location": "Glasgow, Scotland, United Kingdom",
+      "salary_display": "Not listed",
+      "date_posted": "2026-10-12",
+      "url": "https://huntukvisasponsors.com/job/business-analyst-servicenow-product-design-at-synechron-8yoeebb3veos",
+      "source": "Hunt UK",
+      "source_type": "aggregator",
+      "sn_role": true,
+      "role_type": "analyst",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "unknown",
+      "sponsor_licence": false,
+      "sponsor_likelihood_badge": "likely",
+      "posted_relative": "6d ago",
+      "description": "Business Analyst (ServiceNow & Product Design) SYNECHRON LIMITED Glasgow, Scotland, United Kingdom Likely Full-time \u2014 6d ago",
+      "scraped_at": "2026-10-12 05:07:32",
+      "sponsorship_mentioned": false,
+      "first_seen": "2026-10-12",
+      "last_seen": "2026-10-12",
+      "sources": [
+        "Hunt UK"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "Business Analyst \u2013 ServiceNow",
+      "company": "SYNECHRON LIMITED",
+      "location": "Glasgow, Scotland, United Kingdom",
+      "salary_display": "Not listed",
+      "date_posted": "2026-10-12",
+      "url": "https://huntukvisasponsors.com/job/business-analyst-percente2percent80percent93-servicenow-at-synechron-h7z89lmuairx",
+      "source": "Hunt UK",
+      "source_type": "aggregator",
+      "sn_role": true,
+      "role_type": "analyst",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "unknown",
+      "sponsor_licence": false,
+      "sponsor_likelihood_badge": "likely",
+      "posted_relative": "6d ago",
+      "description": "Business Analyst \u2013 ServiceNow SYNECHRON LIMITED Glasgow, Scotland, United Kingdom Likely Full-time \u2014 6d ago",
+      "scraped_at": "2026-10-12 05:07:32",
+      "sponsorship_mentioned": false,
+      "first_seen": "2026-10-12",
+      "last_seen": "2026-10-12",
+      "sources": [
+        "Hunt UK"
+      ],
+      "status": "active"
+    },
+    {
+      "title": "ServiceNow Consultant",
+      "company": "LSA RECRUIT LIMITED",
+      "location": "Greater London, England, United Kingdom",
+      "salary_display": "Not listed",
+      "date_posted": "2026-10-12",
+      "url": "https://huntukvisasponsors.com/job/servicenow-consultant-at-lsa-recruit-dcnjna8qp5ty",
+      "source": "Hunt UK",
+      "source_type": "aggregator",
+      "sn_role": true,
+      "role_type": "consultant",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "unknown",
+      "sponsor_licence": false,
+      "sponsor_likelihood_badge": "",
+      "posted_relative": "11d ago",
+      "description": "ServiceNow Consultant LSA RECRUIT LIMITED Greater London, England, United Kingdom \u2014 Contract \u2014 11d ago",
+      "scraped_at": "2026-10-12 05:07:32",
       "sponsorship_mentioned": false,
       "first_seen": "2026-10-12",
       "last_seen": "2026-10-12",
@@ -233,7 +445,7 @@
       "scraped_at": "2026-10-11 05:01:00",
       "sponsorship_mentioned": false,
       "first_seen": "2026-10-11",
-      "last_seen": "2026-10-12",
+      "last_seen": "2026-10-11",
       "sources": [
         "Hunt UK"
       ],
@@ -262,7 +474,7 @@
       "sponsorship_mentioned": false,
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-10-11",
-      "last_seen": "2026-10-12",
+      "last_seen": "2026-10-11",
       "sources": [
         "Hunt UK"
       ],
@@ -291,7 +503,7 @@
       "sponsorship_mentioned": false,
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-10-11",
-      "last_seen": "2026-10-12",
+      "last_seen": "2026-10-11",
       "sources": [
         "Hunt UK"
       ],
@@ -319,7 +531,7 @@
       "scraped_at": "2026-10-11 05:01:00",
       "sponsorship_mentioned": false,
       "first_seen": "2026-10-11",
-      "last_seen": "2026-10-12",
+      "last_seen": "2026-10-11",
       "sources": [
         "Hunt UK"
       ],
@@ -517,7 +729,7 @@
       "scraped_at": "2026-10-10 05:00:32",
       "sponsorship_mentioned": false,
       "first_seen": "2026-10-10",
-      "last_seen": "2026-10-12",
+      "last_seen": "2026-10-11",
       "sources": [
         "Hunt UK"
       ],
@@ -773,7 +985,7 @@
       "scraped_at": "2026-10-09 05:00:42",
       "sponsorship_mentioned": false,
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-12",
+      "last_seen": "2026-10-11",
       "sources": [
         "Hunt UK"
       ],
@@ -941,7 +1153,7 @@
       "scraped_at": "2026-10-08 05:00:27",
       "sponsorship_mentioned": false,
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-12",
+      "last_seen": "2026-10-11",
       "sources": [
         "Hunt UK"
       ],
@@ -1309,7 +1521,7 @@
       "scraped_at": "2026-10-06 05:00:39",
       "sponsorship_mentioned": false,
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-12",
+      "last_seen": "2026-10-11",
       "sources": [
         "Hunt UK"
       ],
@@ -1337,7 +1549,7 @@
       "scraped_at": "2026-10-06 05:00:39",
       "sponsorship_mentioned": false,
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-12",
+      "last_seen": "2026-10-11",
       "sources": [
         "Hunt UK"
       ],
@@ -1365,7 +1577,7 @@
       "scraped_at": "2026-10-06 05:00:39",
       "sponsorship_mentioned": false,
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-12",
+      "last_seen": "2026-10-11",
       "sources": [
         "Hunt UK"
       ],
@@ -1393,7 +1605,7 @@
       "scraped_at": "2026-10-06 05:00:39",
       "sponsorship_mentioned": false,
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-12",
+      "last_seen": "2026-10-11",
       "sources": [
         "Hunt UK"
       ],
@@ -1422,7 +1634,7 @@
       "sponsorship_mentioned": false,
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-12",
+      "last_seen": "2026-10-11",
       "sources": [
         "Hunt UK"
       ],
@@ -1450,7 +1662,7 @@
       "scraped_at": "2026-10-06 05:00:39",
       "sponsorship_mentioned": false,
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-12",
+      "last_seen": "2026-10-11",
       "sources": [
         "Hunt UK"
       ],
@@ -1479,7 +1691,7 @@
       "sponsorship_mentioned": false,
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-12",
+      "last_seen": "2026-10-11",
       "sources": [
         "Hunt UK"
       ],
@@ -1507,7 +1719,7 @@
       "scraped_at": "2026-10-06 05:00:39",
       "sponsorship_mentioned": false,
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-12",
+      "last_seen": "2026-10-11",
       "sources": [
         "Hunt UK"
       ],
@@ -1535,7 +1747,7 @@
       "scraped_at": "2026-10-06 05:00:39",
       "sponsorship_mentioned": false,
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-12",
+      "last_seen": "2026-10-11",
       "sources": [
         "Hunt UK"
       ],
@@ -1591,7 +1803,7 @@
       "scraped_at": "2026-10-06 05:00:39",
       "sponsorship_mentioned": false,
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-12",
+      "last_seen": "2026-10-11",
       "sources": [
         "Hunt UK"
       ],
@@ -1619,7 +1831,7 @@
       "scraped_at": "2026-10-06 05:00:39",
       "sponsorship_mentioned": false,
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-12",
+      "last_seen": "2026-10-11",
       "sources": [
         "Hunt UK"
       ],
@@ -1732,7 +1944,7 @@
       "scraped_at": "2026-10-06 05:00:39",
       "sponsorship_mentioned": false,
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-12",
+      "last_seen": "2026-10-11",
       "sources": [
         "Hunt UK"
       ],
@@ -1957,7 +2169,7 @@
       "scraped_at": "2026-10-05 05:00:32",
       "sponsorship_mentioned": true,
       "first_seen": "2026-10-05",
-      "last_seen": "2026-10-05",
+      "last_seen": "2026-10-12",
       "sources": [
         "Hunt UK"
       ],
@@ -2042,7 +2254,7 @@
       "sponsorship_mentioned": true,
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-10-04",
-      "last_seen": "2026-10-05",
+      "last_seen": "2026-10-12",
       "sources": [
         "Hunt UK"
       ],
@@ -2270,7 +2482,7 @@
       "scraped_at": "2026-10-03 05:01:18",
       "sponsorship_mentioned": true,
       "first_seen": "2026-10-03",
-      "last_seen": "2026-10-05",
+      "last_seen": "2026-10-12",
       "sources": [
         "Hunt UK"
       ],
@@ -2327,7 +2539,7 @@
       "sponsorship_mentioned": true,
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-10-03",
-      "last_seen": "2026-10-05",
+      "last_seen": "2026-10-12",
       "sources": [
         "Hunt UK"
       ],
@@ -2355,7 +2567,7 @@
       "scraped_at": "2026-10-03 05:01:18",
       "sponsorship_mentioned": true,
       "first_seen": "2026-10-03",
-      "last_seen": "2026-10-05",
+      "last_seen": "2026-10-12",
       "sources": [
         "Hunt UK"
       ],
@@ -2894,7 +3106,7 @@
       "sponsorship_mentioned": false,
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-09-28",
-      "last_seen": "2026-10-05",
+      "last_seen": "2026-10-12",
       "sources": [
         "Hunt UK"
       ],
@@ -2923,7 +3135,7 @@
       "sponsorship_mentioned": true,
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-09-28",
-      "last_seen": "2026-10-05",
+      "last_seen": "2026-10-12",
       "sources": [
         "Hunt UK"
       ],
@@ -2952,7 +3164,7 @@
       "sponsorship_mentioned": true,
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-09-28",
-      "last_seen": "2026-10-05",
+      "last_seen": "2026-10-12",
       "sources": [
         "Hunt UK"
       ],
@@ -3178,7 +3390,7 @@
       "scraped_at": "2026-09-26 05:00:29",
       "sponsorship_mentioned": false,
       "first_seen": "2026-09-26",
-      "last_seen": "2026-10-05",
+      "last_seen": "2026-10-12",
       "sources": [
         "Hunt UK"
       ],
@@ -3190,7 +3402,7 @@
       "location": "United Kingdom",
       "salary_display": "Not listed",
       "date_posted": "2026-09-26",
-      "url": "https://huntukvisasponsors.com/job/servicenow-architect-at-pracyva-lo27dzmumnw",
+      "url": "https://huntukvisasponsors.com/job/servicenow-architect-at-pracyva-zuwc6qswtvxb",
       "source": "Hunt UK",
       "source_type": "aggregator",
       "sn_role": true,
@@ -3206,7 +3418,7 @@
       "scraped_at": "2026-09-26 05:00:29",
       "sponsorship_mentioned": true,
       "first_seen": "2026-09-26",
-      "last_seen": "2026-10-03",
+      "last_seen": "2026-10-12",
       "sources": [
         "Hunt UK"
       ],
@@ -7529,7 +7741,7 @@
       "scraped_at": "2026-09-04 05:04:19",
       "sponsorship_mentioned": true,
       "first_seen": "2026-09-04",
-      "last_seen": "2026-10-05",
+      "last_seen": "2026-10-12",
       "sources": [
         "Hunt UK"
       ],
@@ -15804,7 +16016,7 @@
       "first_seen": "2026-07-12",
       "sponsorship_scan": "Security clearance required",
       "sponsorship_mentioned": true,
-      "last_seen": "2026-10-05",
+      "last_seen": "2026-10-12",
       "sources": [
         "Hunt UK",
         "Hunt UK"
@@ -20697,7 +20909,7 @@
       "description": "Senior ServiceNow Developer National Grid Electricity Distribution (South West) plc",
       "scraped_at": "2026-06-22 05:03:05",
       "first_seen": "2026-06-22",
-      "last_seen": "2026-10-05",
+      "last_seen": "2026-10-12",
       "sources": [
         "Hunt UK"
       ],
@@ -26784,7 +26996,7 @@
       "title": "ServiceNow Implementation Specialist",
       "company": "Nelson Frank",
       "agency": "Nelson Frank",
-      "location": "England, London, City of London",
+      "location": "London, United Kingdom",
       "country": "England",
       "salary": "\u00a375000.00 - \u00a395000 per annum + pension, bonus.",
       "salary_from": 75000,
@@ -26793,7 +27005,7 @@
       "job_type": "Permanent",
       " seniority": "Senior",
       "remote": false,
-      "url": "https://www.nelsonfrank.com/servicenow-jobs-in-united-kingdom",
+      "url": "https://www.nelsonfrank.com/jobs/?show_results=1&query=servicenow&location=London",
       "description": "UK - ServiceNow Consultants - up to \u00a395,000 + Bonus and Benfits <br /><br />I'm supporting a leading consultancy that is expanding its ServiceNow capability in the UK. We're seeking ServiceNow Implementation Consultants to join a high-performing and growing practice. HRSD experience is highly advantageous but not essential.<br /><br />Role Overview<br /><br /> * Contribute to or lead full lifecycle ServiceNow implementations across modules such as ITSM, ITOM, HRSD, SecOps, and CSM<br /> * Work directly with business and technical stakeholders to shape high-quality solutions<br /> * Support the development of best-practice frameworks and platform standards<br /> * Mentor junior colleagues (for senior-level applicants)<br /> * Occasional travel to client sites across the UK, with full flexibility<br /><br />Requirements<br /><br /> * Hands-on experience with the ServiceNow platform in consulting or delivery roles<br /> * Strong understanding of platform configuration, integrations, and delivery methodologies<br /> * Excellent communication and stakeholder engagement skills<br /> * Relevant ServiceNow certifications (CSA, CIS, CTA, etc.) are a strong plus<br /><br />What's Offered<br /><br /> * Highly competitive remuneration, dependent on experience and level<br /> * Clear career progression pathways within a growing ServiceNow practice<br /> * Flexible working arrangements<br /> * Opportunity to deliver impactful, enterprise-scale digital transformation projects<br /><br />If you're exploring your next move within the UK's ServiceNow market, I'd be happy to arrange a confidential discussion.<img src=\"https://counter.adcourier.com/bC5jb3guMTgzNzkuMTA3NjRAbmlnZWxmcmFuay5hcGxpdHJhay5jb20.gif\" />",
       "source": "Nelson Frank",
       "visa_sponsorship": "sc_blocked",
@@ -26802,12 +27014,12 @@
       "first_seen": "2026-05-20",
       "sponsor_licence": false,
       "agency_unknown": true,
-      "last_seen": "2026-07-12",
+      "last_seen": "2026-10-12",
       "sources": [
         "Nelson Frank"
       ],
-      "salary_display": "\u00a375,000 to \u00a395,000 GBP",
-      "status": "expired"
+      "salary_display": "GBP 70,000.00 to 90,000.00",
+      "status": "active"
     },
     {
       "title": "ServiceNow HRSD Architect",
