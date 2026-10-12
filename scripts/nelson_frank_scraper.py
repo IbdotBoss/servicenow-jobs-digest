@@ -33,9 +33,7 @@ def _chrome_bin():
     return cands[-1] if cands else None
 
 CATEGORY_URLS = [
-    ('https://www.nelsonfrank.com/servicenow-consultant-jobs', 'consultant'),
-    ('https://www.nelsonfrank.com/servicenow-other-jobs',       'other'),
-    ('https://www.nelsonfrank.com/servicenow-architect-jobs',   'architect'),
+    ('https://www.nelsonfrank.com/jobs/?show_results=1&query=servicenow&location=London', 'london'),
 ]
 
 OUT = os.path.expanduser(
@@ -83,91 +81,98 @@ def classify_emp(title):
     return 'contract' if 'contract' in tl else 'permanent'
 
 def parse_jobs_from_page(page_text):
-    """Parse job listings from fully rendered page text."""
+    """Parse job listings from fully rendered page text.
+
+    RECORD FORMAT (changed ~Aug 2026 — the old 'Save/Apply' card layout is gone):
+        Ref. No. a0MP900000AKMWTMA5
+        <blank>
+        TITLE
+        Published
+        October 10, 2026
+        Location
+        Chicago, Illinois, United States of America
+        Brand
+        Nelson Frank
+        Job Type
+        Contract
+        Salary/Rate
+        USD 60.00 to 100.00
+        Products
+        Netsuite
+        Job Description
+        ...
+
+    The category sub-pages (/servicenow-consultant-jobs etc.) now return an
+    UNFILTERED global listing (identical results across all three, most of them
+    US/France/Singapore) and /servicenow-other-jobs is a 404. So we target the
+    /jobs/ search endpoint with query=servicenow + location=London, which is
+    UK-relevant, then filter on the Location field.
+    """
     jobs = []
 
-    # Split into blocks: "Save\nApply" or "Save\nApply\n\nnew" are the delimiters
-    sep_re = re.compile(r'\nSave\s*\nApply(?:\s*\nnew)?')
-    blocks = sep_re.split(page_text)
-
-    for block in blocks:
-        block = block.strip()
-        if not block:
+    # Split into records on the 'Ref. No.' marker.
+    recs = re.split(r'Ref\. No\.\s*\S+', page_text)
+    for body in recs:
+        if not body.strip():
             continue
-
-        lines = [l.strip() for l in block.split('\n') if l.strip()]
-        if len(lines) < 4:
+        m = re.search(
+            r'\n\s*\n?\s*(?P<title>.+?)\s*\nPublished\s*\n\s*(?P<pub>.+?)'
+            r'\nLocation\s*\n\s*(?P<loc>.+?)'
+            r'\nBrand\s*\n\s*(?P<brand>.+?)\s*\n',
+            body, re.DOTALL)
+        if not m:
             continue
+        title = m.group('title').strip()
+        location = m.group('loc').strip()
+        brand = m.group('brand').strip()
+        published = m.group('pub').strip()
 
-        # ── Locate title ──
-        # Title is either:
-        #  a) lines[i+1] where lines[i] is a pure digit (job number), OR
-        #  b) lines[0] if lines[0] is a substantive title line (noise check below)
-        start_idx = None
-        for i, line in enumerate(lines):
-            if re.match(r'^\d+$', line):
-                # Lines before the number? Unlikely, but skip them
-                title_idx = i + 1
-                if title_idx < len(lines):
-                    start_idx = title_idx
-                break
-
-        if start_idx is None:
-            # No digit prefix — title is the first non-trivial line
-            start_idx = 0
-
-        title = lines[start_idx]
-
-        # Noise filters
-        # Drop page headings like "ServiceNow Consultant Jobs", "ServiceNow Architect Jobs"
-        if ' Jobs' in title or ' Jobs ' in title:
-            continue
-        if not SN_RE.search(title):
+        if not SN_RE.search(title) and not SN_RE.search(body[:600]):
             continue
         if NOISE_RE.search(title):
             continue
-
-        # ── Location ──
-        # Line after title is usually the location (but title itself might be
-        # a "add new" marker — check for "new" or "Browse the extensive range")
-        loc_idx = start_idx + 1
-        if lines[loc_idx].lower() in ('new', 'recently added', 'browse the extensive range'):
-            loc_idx += 1
-        location_line = lines[loc_idx] if loc_idx < len(lines) else ''
-
-        # Check UK across title + location_line + first 3 lines of desc
-        desc_lines = lines[loc_idx + 2: loc_idx + 10]  # skip LOCATION and SALARY
-        context = ' '.join(lines[start_idx: start_idx + 4] + desc_lines)
-        if not UK_RE.search(context) and not UK_RE.search(location_line):
+        if not UK_RE.search(location):
             continue
 
-        # ── Salary ──
-        salary_cand_idx = loc_idx + 1
-        salary = lines[salary_cand_idx] if salary_cand_idx < len(lines) else 'Not listed'
-        if not re.search(r'[\$\£]|GBP|USD|per\s+annum', salary, re.IGNORECASE):
-            salary = 'Not listed'
+        # Normalise 'October 10, 2026' -> '2026-10-10'
+        date_posted = TODAY
+        for fmt in ('%B %d, %Y', '%b %d, %Y'):
+            try:
+                date_posted = datetime.strptime(published, fmt).strftime('%Y-%m-%d')
+                break
+            except ValueError:
+                continue
 
-        # ── Description ──
-        desc_idx = next((i for i, l in enumerate(lines) if 'job description' in l.lower()), -1)
-        desc = ' '.join(lines[desc_idx + 1: desc_idx + 8])[:500] if desc_idx >= 0 else ''
+        # Salary
+        sal = re.search(r'Salary/Rate\s*\n\s*(.+?)\s*\n', body)
+        salary = sal.group(1).strip() if sal else 'Not listed'
 
-        # ── SC check ──
-        sc_text = context + ' ' + desc
-        sc = bool(SC_RE.search(sc_text))
+        # Job Type
+        jt = re.search(r'Job Type\s*\n\s*(.+?)\s*\n', body)
+        employment = (jt.group(1).strip().lower() if jt else 'permanent')
+        if employment not in ('contract', 'temporary', 'permanent'):
+            employment = 'permanent'
 
+        desc_m = re.search(r'Job Description\s*\n\s*\n?(.+)', body, re.DOTALL)
+        desc = re.sub(r'\s+', ' ', desc_m.group(1))[:500] if desc_m else ''
+
+        sc = bool(SC_RE.search(title + ' ' + desc))
+
+        # Employer is the Brand (agency subsidiary) — keep it, it's the real
+        # posting entity; Nelson Frank / Anderson Frank / Nigel Frank.
         jobs.append({
             'title': title,
-            'company': 'Nelson Frank (agency)',
-            'location': location_line if UK_RE.search(location_line) else 'United Kingdom',
+            'company': brand or 'Nelson Frank (agency)',
+            'location': location,
             'salary_display': salary,
-            'date_posted': TODAY,
-            'url': 'https://www.nelsonfrank.com/servicenow-jobs-in-united-kingdom',
+            'date_posted': date_posted,
+            'url': 'https://www.nelsonfrank.com/jobs/?show_results=1&query=servicenow&location=London',
             'source': 'Nelson Frank',
             'source_type': 'agency',
             'sn_role': True,
             'role_type': classify(title),
-            'remote': classify_remote(title),
-            'employment': classify_emp(title),
+            'remote': classify_remote(title + ' ' + desc),
+            'employment': employment,
             'sc_clearance': sc,
             'grad_scheme': False,
             'link_status': 'live',

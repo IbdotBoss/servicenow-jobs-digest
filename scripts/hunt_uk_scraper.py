@@ -41,6 +41,8 @@ SC_RE   = re.compile(
     r'|developed\s+vetting|bpss', re.IGNORECASE)
 # Sponsorship-likelihood tokens that appear inside the card text
 TOKENS = {'high', 'medium', 'low', 'ineligible'}
+# Hunt UK's own sponsorship verdict badge on each card
+BADGE_RE = re.compile(r'^(likely|unlikely|high|medium|low|ineligible)$', re.IGNORECASE)
 
 
 def _chrome_bin():
@@ -78,32 +80,99 @@ def classify_emp(title):
 
 
 def parse_card(href, txt):
+    """Parse a Hunt UK job card.
+
+    CARD LAYOUT (observed 2026-10-12): each job emits TWO anchors that share one
+    href — one wrapping the title, one wrapping the sponsorship badge ('Likely').
+    The company and location are NOT inside the title anchor; they live only in
+    the badge anchor's parent container, which renders the full card:
+
+        ServiceNow CSM Principal Engineer
+        The Boston Consulting Group UK LLP
+        London, United Kingdom
+        Likely
+        Full-time
+        —
+        3d ago
+
+    So we parse the anchor's parentElement text (the card), not the anchor text.
+    Reading only the anchor text yields company='Unknown' for every job, which
+    is exactly the v2.4 → today regression this fixes.
+    """
     lines = [l.strip() for l in txt.split('\n') if l.strip()]
     lines = [l for l in lines if l.lower() not in TOKENS]
     if not lines:
         return None
+
     title = lines[0]
     if not ROLE_KW.search(title):
         return None
 
-    # Company is the line immediately after the title (stable card layout)
-    company = lines[1] if len(lines) > 1 else 'Unknown'
-
-    # Location: a later line that looks like a place but is NOT the company
-    # name and not a pure company-style name (LIMITED/LTD).
+    # Walk the remaining lines and classify by shape rather than by fixed index.
+    # Title is lines[0]; the following lines are company / location / badge /
+    # employment-type / separator / age, in that order but not guaranteed.
+    company = 'Unknown'
     location = 'United Kingdom'
-    for l in lines[2:]:
-        if UK_RE.search(l) and 'LIMITED' not in l.upper() and 'LTD' not in l.upper():
+    badge = ''
+    posted = ''
+    rest = lines[1:]
+
+    # Company: the first line after the title that is not a UK location,
+    # not a badge, and not a relative-age string.
+    for l in rest:
+        low = l.lower()
+        if BADGE_RE.match(l) or low in ('—', '-', '|', 'full-time', 'part time',
+                                        'part-time', 'contract', 'temporary'):
+            continue
+        if UK_RE.search(l) and re.search(r',', l):
+            continue  # looks like "London, United Kingdom" — a location line
+        if re.search(r'\d+\s*(?:d|day|h|hour|w|week|mo|month)\s*ago', low) \
+                or low in ('just now', 'today', 'new'):
+            continue
+        if 'LIMITED' in l.upper() or 'LTD' in l.upper() or l.lower().startswith('at '):
+            company = l
+            break
+        company = l
+        break
+
+    # Location: first UK-matching line that isn't the company line. A company
+    # name can match UK_RE on its own ("The Boston Consulting Group UK LLP"),
+    # so require a comma (city, country) or an exact place-only line.
+    location = 'United Kingdom'
+    for l in rest:
+        if l == company:
+            continue
+        if 'LIMITED' in l.upper() or 'LTD' in l.upper() or 'LLP' in l.upper():
+            continue
+        if UK_RE.search(l) and (re.search(r',', l) or len(l.split()) <= 3):
             location = l.rstrip('—').strip() or 'United Kingdom'
             break
 
-    # Posted date (informational; card shows relative age)
-    posted = ''
-    for l in lines[1:]:
+    # Hunt UK's own sponsorship verdict — a real signal we were discarding.
+    for l in rest:
+        if BADGE_RE.match(l):
+            badge = l.lower()
+            break
+
+    # Posted date (card shows relative age; kept for display only).
+    for l in rest:
         low = l.lower()
-        if re.search(r'\d+\s*(?:d|day|h|hour|w|week|mo|month)\s*ago', low) or low in ('just now', 'today'):
+        if re.search(r'\d+\s*(?:d|day|h|hour|w|week|mo|month)\s*ago', low) \
+                or low in ('just now', 'today'):
             posted = l
             break
+
+    # Fallback: if the parent text gave us nothing usable, try the slug.
+    # Slugs embed the employer as "...-at-deloitte-ssxh-c1qhhu"; the trailing
+    # segments are a short hash, so require a meaningful length before use.
+    if company == 'Unknown':
+        m = re.search(r'-at-([a-z0-9-]+?)-[a-z0-9]{4,}(?:-[a-z0-9]{4,})?$', href)
+        if m:
+            slug_co = m.group(1).replace('-', ' ').strip()
+            # Reject hash fragments like 'ssxh' — keep only multi-word or
+            # longer-than-hash candidates.
+            if len(slug_co) >= 5 and not re.fullmatch(r'[a-z]{4,6}', slug_co):
+                company = slug_co.title()
 
     block = ' '.join(lines)
     sc = bool(SC_RE.search(block))
@@ -126,6 +195,8 @@ def parse_card(href, txt):
         'link_status': 'live',
         'visa_sponsorship': 'unknown',
         'sponsor_licence': False,
+        'sponsor_likelihood_badge': badge,
+        'posted_relative': posted,
         'description': block[:500],
         'scraped_at': SCRAPED_AT,
     }
@@ -140,21 +211,43 @@ def scrape():
         page = browser.new_page(viewport={'width': 1280, 'height': 900})
         page.goto(URL, wait_until='domcontentloaded', timeout=35000)
         page.wait_for_timeout(6000)
-        cards = page.query_selector_all('a[href*="/job/"]')
+        # SINGLE DOM PASS. Each job card emits two anchors sharing one href
+        # (title + sponsorship badge). Rather than guess per-anchor, walk the
+        # closest element that CONTAINS a comma-location line — that is the card
+        # container — and capture its text once per href.
+        card_data = page.evaluate("""() => {
+            const out = {};
+            const anchors = Array.from(document.querySelectorAll('a[href*="/job/"]'));
+            for (const a of anchors) {
+                const href = a.getAttribute('href') || '';
+                if (!href.includes('/job/')) continue;
+                // climb until the text has >=4 lines (title + company + loc + badge)
+                let node = a, best = '';
+                for (let d = 0; d < 5 && node; d++, node = node.parentElement) {
+                    const t = node.innerText || '';
+                    if (t.split('\\n').filter(s => s.trim()).length >= 4) { best = t; break; }
+                    if (t.length > best.length) best = t;
+                }
+                if (!best) best = a.innerText || '';
+                if (!out[href] || best.length > out[href].length) out[href] = best;
+            }
+            return out;
+        }""")
         jobs, seen = [], set()
-        for c in cards:
-            href = c.get_attribute('href') or ''
-            if '/job/' not in href or href in seen:
-                continue
-            seen.add(href)
+        for href_raw, card_text in card_data.items():
+            href = href_raw
             # FIX: Hunt UK emits relative URLs (/job/...) — resolve to absolute so
             # the sponsorship scanner can fetch the page for SC/DV text scanning.
             # Relative URLs cause fetch_error: unknown url type: '/job/...'
             if href.startswith('/job/'):
                 href = urljoin('https://huntukvisasponsors.com', href)
-            j = parse_card(href, c.inner_text() or '')
-            if j:
-                jobs.append(j)
+            if href in seen:
+                continue
+            j = parse_card(href, card_text)
+            if not j:
+                continue
+            seen.add(href)
+            jobs.append(j)
         browser.close()
 
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
@@ -162,10 +255,14 @@ def scrape():
         json.dump(jobs, f, indent=2, ensure_ascii=False)
 
     real = sum(1 for j in jobs if '/job/' in j.get('url', ''))
-    print(f'\n✅ {len(jobs)} SN Hunt UK jobs ({real} with real /job/ URLs) → {OUT}')
+    named = sum(1 for j in jobs if j.get('company') not in ('Unknown', '', None))
+    print(f'\n✅ {len(jobs)} SN Hunt UK jobs ({real} with real /job/ URLs, '
+          f'{named} with company names) → {OUT}')
     for j in jobs[:6]:
         sc_b = '🔒' if j.get('sc_clearance') else '  '
-        print(f'  {sc_b} {j["title"][:50]} | {j["company"][:24]} | {j["location"]}')
+        badge = j.get('sponsor_likelihood_badge') or '-'
+        print(f'  {sc_b} {j["title"][:44]:44s} | {j["company"][:26]:26s} '
+              f'| {j["location"][:26]:26s} | {badge}')
     return jobs
 
 
