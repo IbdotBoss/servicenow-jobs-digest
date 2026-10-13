@@ -101,6 +101,16 @@ def rebuild():
     
     # Convert to list and compute status
     jobs_list = list(all_jobs.values())
+
+    # NOTE (2026-10-13): company-name recovery for 'Unknown' rows was tried here and REMOVED.
+    # job_key includes company, so the Hunt UK parser break (Oct 6-11) stored 'Unknown' rows as
+    # SEPARATE master records that merge-level logic can never meet. A post-merge repair matching
+    # on title/URL is UNSAFE: 129 titles map to multiple employers ('servicenow developer' -> 76)
+    # and 17 URLs are shared aggregator links, so it would attribute the WRONG employer to live
+    # jobs and show a false 'Licenced Sponsor' badge. Left as a known cosmetic gap (28 active
+    # rows show 'Unknown'); these age out as the snapshots roll forward. Do not re-add without
+    # a stable per-listing identifier (e.g. Hunt UK slug) to key on.
+
     
     # Normalize source casing + legacy source field into sources array
     SOURCE_ALIASES = {
