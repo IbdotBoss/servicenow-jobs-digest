@@ -81,6 +81,14 @@ def rebuild():
                 for field in ['salary_display', 'salary_min', 'salary_max', 'url', 'location']:
                     if j.get(field):
                         existing[field] = j[field]
+                # Advance date_posted: a re-posted role must not keep its original date forever.
+                # Compare on day precision (snapshots mix date-only and datetime strings) and
+                # keep the more precise value. NEVER touches first_seen.
+                if j.get('date_posted'):
+                    mdp = (existing.get('date_posted') or '')[:10]
+                    sdp = (j.get('date_posted') or '')[:10]
+                    if sdp and sdp > mdp:
+                        existing['date_posted'] = j['date_posted']
                 # Propagate sponsor_licence: once true, stays true
                 if j.get('sponsor_licence'):
                     existing['sponsor_licence'] = True
