@@ -29,6 +29,11 @@ EXCLUDE_TITLE_KW = [
     'executive assistant', 'finance', 'legal', 'compliance officer',
     'customer advocate', 'president', 'strategy director',
     'program manager', 'program director', 'business strategy',
+    # Added 2026-10-14: commercial/GTM roles that survived the filter and
+    # shipped daily (Client Director HSBC, Client Director - Energy and
+    # Utilities, Director Sovereign Cloud Partner Development). Verified against
+    # the live RSS: 23 UK roles, 9 survived the old list, 3 were commercial.
+    'client director', 'partner development', 'presales', 'pre-sales',
 ]
 
 def classify_role(title_lower):
