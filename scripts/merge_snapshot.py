@@ -42,6 +42,13 @@ def normalize(job, default_source):
     job.setdefault("description", job.get("description", ""))
     if not job.get("date_posted"):
         job["date_posted"] = TODAY
+        # 2026-10-15: Bright Data returns NO posting date for LinkedIn jobs, so this
+        # is a placeholder, not a fact. Flag it so rebuild_master.py does not treat
+        # it as a maximum and drag date_posted forward on every merge (that made
+        # listings first seen 2026-09-09 display as "posted today" for 5 weeks).
+        # Only stamp the flag on the synthetic value — a scraper that DOES know the
+        # real date keeps date_reliable at its default (True).
+        job["date_reliable"] = False
     if not job.get("scraped_at"):
         job["scraped_at"] = TODAY
     return job

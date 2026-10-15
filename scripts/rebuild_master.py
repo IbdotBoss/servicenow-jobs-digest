@@ -84,7 +84,15 @@ def rebuild():
                 # Advance date_posted: a re-posted role must not keep its original date forever.
                 # Compare on day precision (snapshots mix date-only and datetime strings) and
                 # keep the more precise value. NEVER touches first_seen.
-                if j.get('date_posted'):
+                #
+                # 2026-10-15 FIX — date_reliable gate.
+                # Sources that cannot extract a real posting date have their scraper
+                # (merge_snapshot.normalize) stamp date_posted = TODAY as a placeholder.
+                # Without this gate that placeholder is a MAX, so every daily merge drags
+                # date_posted forward: 6 LinkedIn jobs first seen 2026-09-09 displayed
+                # "posted today" for five straight weeks. first_seen is the honest signal;
+                # only advance date_posted when the incoming value is trustworthy.
+                if j.get('date_posted') and j.get('date_reliable', True):
                     mdp = (existing.get('date_posted') or '')[:10]
                     sdp = (j.get('date_posted') or '')[:10]
                     if sdp and sdp > mdp:
@@ -138,6 +146,13 @@ def rebuild():
         # Fix: if date_posted is missing, use first_seen
         if not j.get('date_posted'):
             j['date_posted'] = j.get('first_seen', TODAY)
+            j['date_reliable'] = False   # derived, not scraped
+        # Backfill date_reliable on records that predate the flag (2026-10-15).
+        # A job whose date_posted is the synthetic snapshot stamp has last_seen == date_posted
+        # and was created before the flag existed. LinkedIn has no posting date at all, so
+        # its placeholder must never again be treated as a maximum by the merge loop above.
+        elif 'date_reliable' not in j:
+            j['date_reliable'] = True
         
         days_since = (datetime.now() - datetime.strptime(j['last_seen'], "%Y-%m-%d")).days
         
