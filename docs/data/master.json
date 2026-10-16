@@ -1,8 +1,8 @@
 {
-  "updated": "2026-10-15",
-  "total": 1268,
-  "total_active": 186,
-  "licenced_sponsors": 547,
+  "updated": "2026-10-16",
+  "total": 1274,
+  "total_active": 184,
+  "licenced_sponsors": 550,
   "daily_snapshots": [
     "2026-05-06",
     "2026-05-07",
@@ -138,13 +138,14 @@
     "2026-10-12",
     "2026-10-13",
     "2026-10-14",
-    "2026-10-15"
+    "2026-10-15",
+    "2026-10-16"
   ],
   "sources": {
-    "JobServe": 747,
+    "JobServe": 751,
     "Hunt UK": 392,
     "LinkedIn": 113,
-    "ServiceNow Careers": 34,
+    "ServiceNow Careers": 36,
     "Nelson Frank": 11,
     "ComputerJobs": 9,
     "Reed": 2,
@@ -157,6 +158,183 @@
     "CV-Library": 1
   },
   "jobs": [
+    {
+      "title": "ServiceNow Technical Consultants - CSDM/CMDB",
+      "company": "Henderson Scott",
+      "location": "England",
+      "salary_display": "\u00a3400 - \u00a3600 per day + Inside IR35",
+      "date_posted": "2026-10-15 11:43:08",
+      "url": "https://www.jobserve.com/gb/en/mob/job/2BD9DB9D93FAE0217B/",
+      "source": "JobServe",
+      "source_type": "aggregator",
+      "sn_role": true,
+      "role_type": "consultant",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "sc_blocked",
+      "description": "Posted 18 hours ago",
+      "scraped_at": "2026-10-16 05:00:10",
+      "sponsor_licence": true,
+      "sponsorship_mentioned": false,
+      "sponsorship_scan": "Security clearance required",
+      "first_seen": "2026-10-16",
+      "last_seen": "2026-10-16",
+      "sources": [
+        "JobServe"
+      ],
+      "date_reliable": true,
+      "status": "active"
+    },
+    {
+      "title": "TSOM ServiceNow Architect | Contract | London (Hybrid)",
+      "company": "Saunders Scott",
+      "location": "London",
+      "salary_display": "\u00a3550 per day (flexible for the right profile)",
+      "date_posted": "2026-10-15 10:58:43",
+      "url": "https://www.jobserve.com/gb/en/mob/job/EAC55E136E76B12748/",
+      "source": "JobServe",
+      "source_type": "aggregator",
+      "sn_role": true,
+      "role_type": "architect",
+      "remote": "hybrid",
+      "employment": "contract",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "unknown",
+      "description": "Posted 19 hours ago",
+      "scraped_at": "2026-10-16 05:00:10",
+      "sponsor_licence": false,
+      "sponsorship_mentioned": false,
+      "first_seen": "2026-10-16",
+      "last_seen": "2026-10-16",
+      "sources": [
+        "JobServe"
+      ],
+      "date_reliable": true,
+      "status": "active"
+    },
+    {
+      "title": "Service Desk Analyst",
+      "company": "Hays Specialist Recruitment",
+      "location": "Hampshire",
+      "salary_display": "Up to \u00a3250 per day + INSIDE",
+      "date_posted": "2026-10-15 12:36:19",
+      "url": "https://www.jobserve.com/gb/en/mob/job/EEE4D583D655E6BF35/",
+      "source": "JobServe",
+      "source_type": "aggregator",
+      "sn_role": false,
+      "role_type": "sn-adjacent",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "sc_blocked",
+      "description": "Posted 17 hours ago",
+      "scraped_at": "2026-10-16 05:00:10",
+      "sponsor_licence": false,
+      "sponsorship_mentioned": false,
+      "sponsorship_scan": "Security clearance required",
+      "first_seen": "2026-10-16",
+      "last_seen": "2026-10-16",
+      "sources": [
+        "JobServe"
+      ],
+      "date_reliable": true,
+      "status": "active"
+    },
+    {
+      "title": "ServiceNow developer",
+      "company": "FBI &amp;TMT",
+      "location": "100k Annual GBP",
+      "salary_display": "Not listed",
+      "date_posted": "2026-10-16 02:59:18",
+      "url": "https://www.jobserve.com/gb/en/mob/job/6C381A02B0F7DE0532/",
+      "source": "JobServe",
+      "source_type": "aggregator",
+      "sn_role": true,
+      "role_type": "developer",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "sc_blocked",
+      "description": "Posted 3 hours ago",
+      "scraped_at": "2026-10-16 05:00:10",
+      "sponsor_licence": false,
+      "sponsorship_mentioned": false,
+      "sponsorship_scan": "Security clearance required",
+      "first_seen": "2026-10-16",
+      "last_seen": "2026-10-16",
+      "sources": [
+        "JobServe"
+      ],
+      "date_reliable": true,
+      "status": "active"
+    },
+    {
+      "title": "PS, Solution Architect ( Armis/Veza)",
+      "company": "ServiceNow",
+      "location": "London, United Kingdom",
+      "salary_display": "Not listed",
+      "date_posted": "2026-10-15 17:49:15",
+      "url": "https://careers.servicenow.com/jobs/744000155822339/ps-solution-architect-armisveza/",
+      "source": "ServiceNow Careers",
+      "source_type": "employer",
+      "sn_role": true,
+      "role_type": "architect",
+      "remote": "hybrid",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "unknown",
+      "sponsor_licence": true,
+      "description": "Company Description It all started when engineer Fred Luddy wrote code that automated a tedious task for his coworker, Phyllis. She cried tears of joy. That moment inspired Fred to build a company that could do that for everyone\u2014freeing people from busywork so they could focus on meaningful work. To",
+      "scraped_at": "2026-10-16 05:01:01",
+      "sponsorship_mentioned": false,
+      "first_seen": "2026-10-16",
+      "last_seen": "2026-10-16",
+      "sources": [
+        "ServiceNow Careers"
+      ],
+      "date_reliable": true,
+      "status": "active"
+    },
+    {
+      "title": "Principal Workflow Architect - Core Business Solutions (HRSD & AI)",
+      "company": "ServiceNow",
+      "location": "Staines, United Kingdom",
+      "salary_display": "Not listed",
+      "date_posted": "2026-10-15 10:58:30",
+      "url": "https://careers.servicenow.com/jobs/744000155729699/principal-workflow-architect-core-business-solutions-hrsd-ai/",
+      "source": "ServiceNow Careers",
+      "source_type": "employer",
+      "sn_role": true,
+      "role_type": "architect",
+      "remote": "hybrid",
+      "employment": "permanent",
+      "sc_clearance": false,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "unknown",
+      "sponsor_licence": true,
+      "description": "Company Description It all started in sunny San Diego, California in 2004 when a visionary engineer, Fred Luddy, saw the potential to transform how we work. Fast forward to today \u2014 ServiceNow stands as a global market leader, bringing innovative AI-enhanced technology to over 8,100 customers, includ",
+      "scraped_at": "2026-10-16 05:01:01",
+      "sponsorship_mentioned": false,
+      "first_seen": "2026-10-16",
+      "last_seen": "2026-10-16",
+      "sources": [
+        "ServiceNow Careers"
+      ],
+      "date_reliable": true,
+      "status": "active"
+    },
     {
       "title": "ServiceNow ITOM Developer - 6-Month Contract - York - Inside IR35",
       "company": "Hamilton Barnes",
@@ -179,7 +357,7 @@
       "sponsor_licence": false,
       "sponsorship_mentioned": false,
       "first_seen": "2026-10-15",
-      "last_seen": "2026-10-15",
+      "last_seen": "2026-10-16",
       "sources": [
         "JobServe"
       ],
@@ -209,7 +387,7 @@
       "sponsorship_mentioned": false,
       "sponsorship_scan": "blocked_by_manual_tag: sc_blocked",
       "first_seen": "2026-10-15",
-      "last_seen": "2026-10-15",
+      "last_seen": "2026-10-16",
       "sources": [
         "JobServe"
       ],
@@ -238,7 +416,7 @@
       "sponsor_licence": false,
       "sponsorship_mentioned": false,
       "first_seen": "2026-10-15",
-      "last_seen": "2026-10-15",
+      "last_seen": "2026-10-16",
       "sources": [
         "JobServe"
       ],
@@ -268,7 +446,7 @@
       "sponsorship_mentioned": false,
       "sponsorship_scan": "blocked_by_manual_tag: sc_blocked",
       "first_seen": "2026-10-15",
-      "last_seen": "2026-10-15",
+      "last_seen": "2026-10-16",
       "sources": [
         "JobServe"
       ],
@@ -298,7 +476,7 @@
       "sponsorship_mentioned": false,
       "sponsorship_scan": "blocked_by_manual_tag: sc_blocked",
       "first_seen": "2026-10-15",
-      "last_seen": "2026-10-15",
+      "last_seen": "2026-10-16",
       "sources": [
         "JobServe"
       ],
@@ -327,7 +505,7 @@
       "sponsor_licence": false,
       "sponsorship_mentioned": false,
       "first_seen": "2026-10-15",
-      "last_seen": "2026-10-15",
+      "last_seen": "2026-10-16",
       "sources": [
         "JobServe"
       ],
@@ -357,7 +535,7 @@
       "sponsorship_mentioned": false,
       "sponsorship_scan": "blocked_by_manual_tag: sc_blocked",
       "first_seen": "2026-10-15",
-      "last_seen": "2026-10-15",
+      "last_seen": "2026-10-16",
       "sources": [
         "JobServe"
       ],
@@ -369,7 +547,7 @@
       "company": "METHODS BUSINESS AND DIGITAL TECHNOLOGY LIMITED",
       "location": "London, England, United Kingdom",
       "salary_display": "Not listed",
-      "date_posted": "2026-10-15",
+      "date_posted": "2026-10-16",
       "url": "https://huntukvisasponsors.com/job/lead-servicenow-architect-snow-itsm-itom-itbm-sam-579g0fwfup87",
       "source": "Hunt UK",
       "source_type": "aggregator",
@@ -388,7 +566,7 @@
       "scraped_at": "2026-10-15 05:00:46",
       "sponsorship_mentioned": true,
       "first_seen": "2026-10-15",
-      "last_seen": "2026-10-15",
+      "last_seen": "2026-10-16",
       "sources": [
         "Hunt UK"
       ],
@@ -417,7 +595,7 @@
       "scraped_at": "2026-10-15 05:00:53",
       "sponsorship_mentioned": false,
       "first_seen": "2026-10-15",
-      "last_seen": "2026-10-15",
+      "last_seen": "2026-10-16",
       "sources": [
         "ServiceNow Careers"
       ],
@@ -810,7 +988,7 @@
       "company": "Infotel UK Consulting Ltd",
       "location": "Prestwick, Scotland, United Kingdom",
       "salary_display": "Not listed",
-      "date_posted": "2026-10-15",
+      "date_posted": "2026-10-16",
       "url": "https://huntukvisasponsors.com/job/business-analyst-servicenow-at-infotel-uk-consulting-xg3tnldykx7",
       "source": "Hunt UK",
       "source_type": "aggregator",
@@ -829,7 +1007,7 @@
       "scraped_at": "2026-10-13 05:00:28",
       "sponsorship_mentioned": true,
       "first_seen": "2026-10-13",
-      "last_seen": "2026-10-15",
+      "last_seen": "2026-10-16",
       "sources": [
         "Hunt UK"
       ],
@@ -841,7 +1019,7 @@
       "company": "DELOITTE LLP",
       "location": "Belfast, Bristol, Edinburgh, Glasgow, London, Manchester",
       "salary_display": "Not listed",
-      "date_posted": "2026-10-15",
+      "date_posted": "2026-10-16",
       "url": "https://huntukvisasponsors.com/job/senior-consultant-senior-developer-private-servicenow-technology-transformation-taseb7kk0tbp",
       "source": "Hunt UK",
       "source_type": "aggregator",
@@ -860,7 +1038,7 @@
       "scraped_at": "2026-10-13 05:00:28",
       "sponsorship_mentioned": true,
       "first_seen": "2026-10-13",
-      "last_seen": "2026-10-15",
+      "last_seen": "2026-10-16",
       "sources": [
         "Hunt UK"
       ],
@@ -872,7 +1050,7 @@
       "company": "DELOITTE LLP",
       "location": "Belfast, Bristol, Edinburgh, Glasgow, London, Manchester",
       "salary_display": "Not listed",
-      "date_posted": "2026-10-15",
+      "date_posted": "2026-10-16",
       "url": "https://huntukvisasponsors.com/job/senior-consultant-senior-developer-gps-servicenow-technology-transformation-3nh0fon0gc0m",
       "source": "Hunt UK",
       "source_type": "aggregator",
@@ -891,7 +1069,7 @@
       "scraped_at": "2026-10-13 05:00:28",
       "sponsorship_mentioned": true,
       "first_seen": "2026-10-13",
-      "last_seen": "2026-10-15",
+      "last_seen": "2026-10-16",
       "sources": [
         "Hunt UK"
       ],
@@ -903,7 +1081,7 @@
       "company": "The Boston Consulting Group UK LLP",
       "location": "London, United Kingdom",
       "salary_display": "Not listed",
-      "date_posted": "2026-10-15",
+      "date_posted": "2026-10-16",
       "url": "https://huntukvisasponsors.com/job/servicenow-csm-principal-engineer-7dvecrzudiwu",
       "source": "Hunt UK",
       "source_type": "aggregator",
@@ -922,7 +1100,7 @@
       "scraped_at": "2026-10-12 05:07:32",
       "sponsorship_mentioned": true,
       "first_seen": "2026-10-12",
-      "last_seen": "2026-10-15",
+      "last_seen": "2026-10-16",
       "sources": [
         "Hunt UK"
       ],
@@ -934,7 +1112,7 @@
       "company": "DELOITTE LLP",
       "location": "England, United Kingdom",
       "salary_display": "Not listed",
-      "date_posted": "2026-10-15",
+      "date_posted": "2026-10-16",
       "url": "https://huntukvisasponsors.com/job/manager-lead-specialist-servicenow-grc-solution-architect-global-at-deloitte-ssxh-c1qhhu",
       "source": "Hunt UK",
       "source_type": "aggregator",
@@ -953,7 +1131,7 @@
       "scraped_at": "2026-10-12 05:07:32",
       "sponsorship_mentioned": true,
       "first_seen": "2026-10-12",
-      "last_seen": "2026-10-15",
+      "last_seen": "2026-10-16",
       "sources": [
         "Hunt UK"
       ],
@@ -965,7 +1143,7 @@
       "company": "METHODS BUSINESS AND DIGITAL TECHNOLOGY LIMITED",
       "location": "Farnborough, England, United Kingdom",
       "salary_display": "Not listed",
-      "date_posted": "2026-10-15",
+      "date_posted": "2026-10-16",
       "url": "https://huntukvisasponsors.com/job/technical-servicenow-architect-y1oa2cgdtc5r",
       "source": "Hunt UK",
       "source_type": "aggregator",
@@ -985,7 +1163,7 @@
       "sponsorship_mentioned": true,
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-10-12",
-      "last_seen": "2026-10-15",
+      "last_seen": "2026-10-16",
       "sources": [
         "Hunt UK"
       ],
@@ -997,7 +1175,7 @@
       "company": "METHODS BUSINESS AND DIGITAL TECHNOLOGY LIMITED",
       "location": "Farnborough, England, United Kingdom",
       "salary_display": "Not listed",
-      "date_posted": "2026-10-15",
+      "date_posted": "2026-10-16",
       "url": "https://huntukvisasponsors.com/job/servicenow-portal-developer-32x1yrqha4xe",
       "source": "Hunt UK",
       "source_type": "aggregator",
@@ -1017,7 +1195,7 @@
       "sponsorship_mentioned": true,
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-10-12",
-      "last_seen": "2026-10-15",
+      "last_seen": "2026-10-16",
       "sources": [
         "Hunt UK"
       ],
@@ -1029,7 +1207,7 @@
       "company": "CLIFFORD CHANCE LLP",
       "location": "London, United Kingdom",
       "salary_display": "Not listed",
-      "date_posted": "2026-10-15",
+      "date_posted": "2026-10-16",
       "url": "https://huntukvisasponsors.com/job/enterprise-service-manager-servicenow-xquzbegt28kp",
       "source": "Hunt UK",
       "source_type": "aggregator",
@@ -1040,7 +1218,7 @@
       "sc_clearance": false,
       "grad_scheme": false,
       "link_status": "live",
-      "visa_sponsorship": "unknown",
+      "visa_sponsorship": "sc_blocked",
       "sponsor_licence": true,
       "sponsor_likelihood_badge": "",
       "posted_relative": "5d ago",
@@ -1048,7 +1226,7 @@
       "scraped_at": "2026-10-12 05:07:32",
       "sponsorship_mentioned": true,
       "first_seen": "2026-10-12",
-      "last_seen": "2026-10-15",
+      "last_seen": "2026-10-16",
       "sources": [
         "Hunt UK"
       ],
@@ -1060,7 +1238,7 @@
       "company": "SYNECHRON LIMITED",
       "location": "Glasgow, Scotland, United Kingdom",
       "salary_display": "Not listed",
-      "date_posted": "2026-10-15",
+      "date_posted": "2026-10-16",
       "url": "https://huntukvisasponsors.com/job/business-analyst-servicenow-product-design-at-synechron-8yoeebb3veos",
       "source": "Hunt UK",
       "source_type": "aggregator",
@@ -1080,7 +1258,7 @@
       "sponsorship_mentioned": true,
       "sponsorship_scan": "Job states no visa sponsorship",
       "first_seen": "2026-10-12",
-      "last_seen": "2026-10-15",
+      "last_seen": "2026-10-16",
       "sources": [
         "Hunt UK"
       ],
@@ -1092,7 +1270,7 @@
       "company": "SYNECHRON LIMITED",
       "location": "Glasgow, Scotland, United Kingdom",
       "salary_display": "Not listed",
-      "date_posted": "2026-10-15",
+      "date_posted": "2026-10-16",
       "url": "https://huntukvisasponsors.com/job/business-analyst-percente2percent80percent93-servicenow-at-synechron-h7z89lmuairx",
       "source": "Hunt UK",
       "source_type": "aggregator",
@@ -1112,7 +1290,7 @@
       "sponsorship_mentioned": true,
       "sponsorship_scan": "Job states no visa sponsorship",
       "first_seen": "2026-10-12",
-      "last_seen": "2026-10-15",
+      "last_seen": "2026-10-16",
       "sources": [
         "Hunt UK"
       ],
@@ -1889,8 +2067,8 @@
       "company": "Hawk 3 Talent Solutions",
       "location": "27.5k Annual GBP",
       "salary_display": "Not listed",
-      "date_posted": "2026-10-07 16:29:08",
-      "url": "https://www.jobserve.com/gb/en/mob/job/F237CBDC82D1BD9B4D/",
+      "date_posted": "2026-10-16 01:59:10",
+      "url": "https://www.jobserve.com/gb/en/mob/job/AA608CCEBE2FC0A9C9/",
       "source": "JobServe",
       "source_type": "aggregator",
       "sn_role": false,
@@ -1906,7 +2084,7 @@
       "sponsor_licence": false,
       "sponsorship_mentioned": false,
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-09",
+      "last_seen": "2026-10-16",
       "sources": [
         "JobServe"
       ],
@@ -1964,7 +2142,7 @@
       "scraped_at": "2026-10-08 05:00:35",
       "sponsorship_mentioned": false,
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-15",
+      "last_seen": "2026-10-16",
       "sources": [
         "ServiceNow Careers"
       ],
@@ -2267,10 +2445,10 @@
     {
       "title": "DV Cleared ServiceNow Solution Architect",
       "company": "Conventus Recruitment",
-      "location": "100k Annual GBP",
+      "location": "115k Annual GBP",
       "salary_display": "Not listed",
-      "date_posted": "2026-10-06 03:36:03",
-      "url": "https://www.jobserve.com/gb/en/mob/job/F5F959FDE5A12915EE/",
+      "date_posted": "2026-10-16",
+      "url": "https://www.jobserve.com/gb/en/mob/job/5675C9A49684D2A43C/",
       "source": "JobServe",
       "source_type": "aggregator",
       "sn_role": true,
@@ -2287,7 +2465,7 @@
       "sponsorship_mentioned": false,
       "sponsorship_scan": "blocked_by_manual_tag: sc_blocked",
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-16",
       "sources": [
         "JobServe"
       ],
@@ -2970,7 +3148,7 @@
       "company": "DELOITTE LLP",
       "location": "Cardiff, Wales, United Kingdom",
       "salary_display": "Not listed",
-      "date_posted": "2026-10-15",
+      "date_posted": "2026-10-16",
       "url": "https://huntukvisasponsors.com/job/manager-lead-specialist-servicenow-cmdb-solution-architect-at-deloitte-n9imommlh7gm",
       "source": "Hunt UK",
       "source_type": "aggregator",
@@ -2987,7 +3165,7 @@
       "scraped_at": "2026-10-05 05:00:32",
       "sponsorship_mentioned": true,
       "first_seen": "2026-10-05",
-      "last_seen": "2026-10-15",
+      "last_seen": "2026-10-16",
       "sources": [
         "Hunt UK"
       ],
@@ -3057,7 +3235,7 @@
       "company": "UP3 Services Ltd",
       "location": "Greater London, England, United Kingdom",
       "salary_display": "Not listed",
-      "date_posted": "2026-10-15",
+      "date_posted": "2026-10-16",
       "url": "https://huntukvisasponsors.com/job/servicenow-managed-support-service-consultant-at-up3-kgisorow4bpr",
       "source": "Hunt UK",
       "source_type": "aggregator",
@@ -3075,7 +3253,7 @@
       "sponsorship_mentioned": true,
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-10-04",
-      "last_seen": "2026-10-15",
+      "last_seen": "2026-10-16",
       "sources": [
         "Hunt UK"
       ],
@@ -3087,8 +3265,8 @@
       "company": "Deerfoot Recruitment Solutions Limited",
       "location": "70k - 120k Annual Training Budget, Bonus, Package GBP",
       "salary_display": "Not listed",
-      "date_posted": "2026-10-08 04:36:16",
-      "url": "https://www.jobserve.com/gb/en/mob/job/9AA81F792AA61224D2/",
+      "date_posted": "2026-10-15 19:56:21",
+      "url": "https://www.jobserve.com/gb/en/mob/job/FF0272A963BF25CC3C/",
       "source": "JobServe",
       "source_type": "aggregator",
       "sn_role": true,
@@ -3105,7 +3283,7 @@
       "sponsorship_mentioned": false,
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-10-03",
-      "last_seen": "2026-10-09",
+      "last_seen": "2026-10-16",
       "sources": [
         "JobServe"
       ],
@@ -3294,7 +3472,7 @@
       "company": "Lenovo Technology (United Kingdom) Limited",
       "location": "Farnborough, England, United Kingdom",
       "salary_display": "Not listed",
-      "date_posted": "2026-10-15",
+      "date_posted": "2026-10-16",
       "url": "https://huntukvisasponsors.com/job/servicenow-offering-development-manager-at-lenovo-f29kj-45ernc",
       "source": "Hunt UK",
       "source_type": "aggregator",
@@ -3311,7 +3489,7 @@
       "scraped_at": "2026-10-03 05:01:18",
       "sponsorship_mentioned": true,
       "first_seen": "2026-10-03",
-      "last_seen": "2026-10-15",
+      "last_seen": "2026-10-16",
       "sources": [
         "Hunt UK"
       ],
@@ -3352,7 +3530,7 @@
       "company": "AUTOMATION LOGIC LTD",
       "location": "London, England, United Kingdom",
       "salary_display": "Not listed",
-      "date_posted": "2026-10-15",
+      "date_posted": "2026-10-16",
       "url": "https://huntukvisasponsors.com/job/senior-servicenow-architect-at-version-1-cmwzhgfxkdnd",
       "source": "Hunt UK",
       "source_type": "aggregator",
@@ -3370,7 +3548,7 @@
       "sponsorship_mentioned": true,
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-10-03",
-      "last_seen": "2026-10-15",
+      "last_seen": "2026-10-16",
       "sources": [
         "Hunt UK"
       ],
@@ -3544,7 +3722,7 @@
       "scraped_at": "2026-10-02 05:00:31",
       "sponsorship_mentioned": false,
       "first_seen": "2026-10-02",
-      "last_seen": "2026-10-15",
+      "last_seen": "2026-10-16",
       "sources": [
         "ServiceNow Careers"
       ],
@@ -3684,7 +3862,7 @@
       "employment": "permanent",
       "sc_clearance": true,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "stale",
       "visa_sponsorship": "sc_blocked",
       "description": "Posted 16 hours ago",
       "scraped_at": "2026-09-30 05:00:07",
@@ -3697,7 +3875,7 @@
         "JobServe"
       ],
       "date_reliable": true,
-      "status": "active"
+      "status": "stale"
     },
     {
       "title": "Desktop Support Engineer/Field Service IT Support",
@@ -3714,7 +3892,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "stale",
       "visa_sponsorship": "unknown",
       "description": "Posted 16 hours ago",
       "scraped_at": "2026-09-30 05:00:07",
@@ -3726,7 +3904,7 @@
         "JobServe"
       ],
       "date_reliable": true,
-      "status": "active"
+      "status": "stale"
     },
     {
       "title": "Head of IT Operations",
@@ -3772,7 +3950,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "stale",
       "visa_sponsorship": "unknown",
       "sponsor_licence": true,
       "description": "Company Description It all started when engineer Fred Luddy wrote code that automated a tedious task for his coworker, Phyllis. She cried tears of joy. That moment inspired Fred to build a company that could do that for everyone\u2014freeing people from busywork so they could focus on meaningful work. To",
@@ -3784,7 +3962,7 @@
         "ServiceNow Careers"
       ],
       "date_reliable": true,
-      "status": "active"
+      "status": "stale"
     },
     {
       "title": "ServiceNow Solutions Architect | IBM Maximo |Outside IR35",
@@ -3860,7 +4038,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "stale",
       "visa_sponsorship": "sc_blocked",
       "sponsor_licence": true,
       "description": "ServiceNow Enterprise Architect IXCEED SOLUTIONS LTD United Kingdom Contract \u2014 4d ago",
@@ -3873,7 +4051,7 @@
         "Hunt UK"
       ],
       "date_reliable": true,
-      "status": "active"
+      "status": "stale"
     },
     {
       "title": "Senior ServiceNow Architect",
@@ -3910,7 +4088,7 @@
       "company": "IBM UNITED KINGDOM LIMITED",
       "location": "Hursley, England, United Kingdom",
       "salary_display": "Not listed",
-      "date_posted": "2026-10-15",
+      "date_posted": "2026-10-16",
       "url": "https://huntukvisasponsors.com/job/servicenow-technical-consultant-at-ibm-bjifujkbtg-e",
       "source": "Hunt UK",
       "source_type": "aggregator",
@@ -3928,7 +4106,7 @@
       "sponsorship_mentioned": false,
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-09-28",
-      "last_seen": "2026-10-15",
+      "last_seen": "2026-10-16",
       "sources": [
         "Hunt UK"
       ],
@@ -6702,7 +6880,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "stale",
       "visa_sponsorship": "unknown",
       "description": "Posted 9 hours ago",
       "scraped_at": "2026-09-12 05:00:19",
@@ -6714,7 +6892,7 @@
         "JobServe"
       ],
       "date_reliable": true,
-      "status": "active"
+      "status": "stale"
     },
     {
       "title": "ServiceNow Developer Consultant",
@@ -6760,7 +6938,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "stale",
       "visa_sponsorship": "unknown",
       "sponsor_licence": true,
       "description": "Company Description Veza is the pioneer in identity security, purpose-built to answer the fundamental question enterprises face: who can and should take what action on what data. Veza's Access Graph platform maps an organization's entire identity ecosystem across users, groups, roles, policies, perm",
@@ -6772,7 +6950,7 @@
         "ServiceNow Careers"
       ],
       "date_reliable": true,
-      "status": "active"
+      "status": "stale"
     },
     {
       "title": "ServiceNow Architect | Contract | 700 - 800/day Outside IR35 |6 Months",
@@ -7436,7 +7614,7 @@
       "sponsorship_scan": "linkedin_js (cannot read full description)",
       "date_reliable": false,
       "first_seen": "2026-09-09",
-      "last_seen": "2026-10-15",
+      "last_seen": "2026-10-16",
       "sources": [
         "LinkedIn"
       ],
@@ -7464,7 +7642,7 @@
       "sponsorship_scan": "linkedin_js (cannot read full description)",
       "date_reliable": false,
       "first_seen": "2026-09-09",
-      "last_seen": "2026-10-15",
+      "last_seen": "2026-10-16",
       "sources": [
         "LinkedIn"
       ],
@@ -7492,7 +7670,7 @@
       "sponsorship_scan": "linkedin_js (cannot read full description)",
       "date_reliable": false,
       "first_seen": "2026-09-09",
-      "last_seen": "2026-10-15",
+      "last_seen": "2026-10-16",
       "sources": [
         "LinkedIn"
       ],
@@ -7501,8 +7679,8 @@
     {
       "title": "Senior ServiceNow Developer",
       "company": "N/A",
-      "location": "London, England, United Kingdom",
-      "url": "https://www.linkedin.com/jobs/view/senior-servicenow-developer-at-bt-group-4459993489?_l=en",
+      "location": "Birmingham, England, United Kingdom",
+      "url": "https://www.linkedin.com/jobs/view/senior-servicenow-developer-at-deutsche-bank-4424759593?_l=en",
       "source": "LinkedIn",
       "scraped_at": "2026-09-09 05:14:53",
       "visa_sponsorship": "unknown",
@@ -7520,7 +7698,7 @@
       "sponsorship_scan": "linkedin_js (cannot read full description)",
       "date_reliable": false,
       "first_seen": "2026-09-09",
-      "last_seen": "2026-10-15",
+      "last_seen": "2026-10-16",
       "sources": [
         "LinkedIn"
       ],
@@ -7548,7 +7726,7 @@
       "sponsorship_scan": "linkedin_js (cannot read full description)",
       "date_reliable": false,
       "first_seen": "2026-09-09",
-      "last_seen": "2026-10-15",
+      "last_seen": "2026-10-16",
       "sources": [
         "LinkedIn"
       ],
@@ -9966,7 +10144,7 @@
       "description": "Company Description It all started when engineer Fred Luddy wrote code that automated a tedious task for his coworker, Phyllis. She cried tears of joy. That moment inspired Fred to build a company that could do that for everyone\u2014freeing people from busywork so they could focus on meaningful work. To",
       "scraped_at": "2026-08-22 05:03:00",
       "first_seen": "2026-08-22",
-      "last_seen": "2026-10-15",
+      "last_seen": "2026-10-16",
       "sources": [
         "ServiceNow Careers"
       ],
@@ -10016,7 +10194,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "stale",
       "visa_sponsorship": "unavailable",
       "sponsor_licence": true,
       "description": "ServiceNow Technical Lead INSIGHT GLOBAL LIMITED Sutton, England, United Kingdom \u2014 \u2014 4d ago",
@@ -10028,7 +10206,7 @@
       ],
       "sponsorship_mentioned": true,
       "date_reliable": true,
-      "status": "active"
+      "status": "stale"
     },
     {
       "title": "servicenow Architect",
@@ -11126,7 +11304,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "stale",
       "visa_sponsorship": "unknown",
       "sponsor_licence": true,
       "description": "Company Description It all started in sunny San Diego, California in 2004 when a visionary engineer, Fred Luddy, saw the potential to transform how we work. Fast forward to today \u2014 ServiceNow stands as a global market leader, bringing innovative AI-enhanced technology to over 8,100 customers, includ",
@@ -11137,7 +11315,7 @@
         "ServiceNow Careers"
       ],
       "date_reliable": true,
-      "status": "active"
+      "status": "stale"
     },
     {
       "title": "ServiceNow Developer",
@@ -11379,7 +11557,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "description": "Posted 23 hours ago",
       "scraped_at": "2026-08-15 05:00:46",
@@ -11390,7 +11568,7 @@
         "JobServe"
       ],
       "date_reliable": true,
-      "status": "stale"
+      "status": "expired"
     },
     {
       "title": "ITSM Reporting Analyst - Power BI - Banking",
@@ -11407,7 +11585,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "description": "Posted 17 hours ago",
       "scraped_at": "2026-08-15 05:00:46",
@@ -11418,7 +11596,7 @@
         "JobServe"
       ],
       "date_reliable": true,
-      "status": "stale"
+      "status": "expired"
     },
     {
       "title": "IT Support Analyst",
@@ -11435,7 +11613,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "description": "Posted 9 hours ago",
       "scraped_at": "2026-08-15 05:00:46",
@@ -11446,7 +11624,7 @@
         "JobServe"
       ],
       "date_reliable": true,
-      "status": "stale"
+      "status": "expired"
     },
     {
       "title": "Partner Solution Engineer",
@@ -11548,7 +11726,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "sponsor_licence": true,
       "description": "About Us: At Booking.com, data drives our decisions. Technology is at our core. And innovation is everywhere. But our company is more than datasets, lines of code or A/B tests. We\u2019re the thrill of the first night in a new place. The excitement of the next morning. The friends you encounter. The journeys you take. The sights you see. And the memories you make. Through our products, partners and people, we make it easier for everyone to experience the world. Role Overview : The Service Operations ",
@@ -11559,7 +11737,7 @@
         "Hunt UK"
       ],
       "date_reliable": true,
-      "status": "stale"
+      "status": "expired"
     },
     {
       "title": "Senior ServiceNow Developer",
@@ -11633,7 +11811,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "sponsor_licence": true,
       "description": "This hybrid role offers a great balance of home and office working. You\u2019ll join your colleagues in London at least two days a week. As the UK\u2019s largest independent full fibre network and wholesale platform of choice, we\u2019re busy setting new standards for what digital infrastructure can and should be. Our network is greener, more reliable and designed for the future. The products we run over it lead the way on speed, value and service - helping businesses to innovate, communities to thrive, and pe",
@@ -11644,7 +11822,7 @@
         "Hunt UK"
       ],
       "date_reliable": true,
-      "status": "stale"
+      "status": "expired"
     },
     {
       "title": "SeniorAdministrator - ServiceNow,JavaScript",
@@ -11689,7 +11867,7 @@
       "employment": "contract",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "sponsor_licence": true,
       "description": "Job Title: Senior ServiceNow IT Asset Management (HAM Pro) Consultant Location: Coventry, UK (Hybrid working) Day Rate: \u00a3400 - \u00a3450 (Inside IR35) Start Date: Immediate start Job Type: Contract position We are looking for an experienced Senior ServiceNow IT Asset Management (ITAM) Consultant with deep expertise in ServiceNow HAM Pro, SAM Pro and CMDB to lead the development and maturity of enterprise IT Asset Management capabilities. This role is ideal for someone who has successfully delivered S",
@@ -11700,7 +11878,7 @@
         "Hunt UK"
       ],
       "date_reliable": true,
-      "status": "stale"
+      "status": "expired"
     },
     {
       "title": "Senior Administrator - ServiceNow, IT Service Management",
@@ -14525,7 +14703,7 @@
       "scraped_at": "2026-07-29 05:01:43",
       "sponsor_licence": false,
       "first_seen": "2026-07-29",
-      "last_seen": "2026-10-15",
+      "last_seen": "2026-10-16",
       "sources": [
         "JobServe"
       ],
@@ -17167,7 +17345,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "description": "Posted 20 hours ago",
       "scraped_at": "2026-07-12 05:00:53",
@@ -17179,7 +17357,7 @@
         "JobServe"
       ],
       "date_reliable": true,
-      "status": "stale"
+      "status": "expired"
     },
     {
       "title": "ServiceNow Business Analyst",
@@ -17209,7 +17387,7 @@
       "company": "Syntel Europe Limited",
       "location": "England, United Kingdom",
       "url": "https://huntukvisasponsors.com/job/senior-servicenow-technical-consultant-at-atos-hc5djm1mboat",
-      "date_posted": "2026-10-15",
+      "date_posted": "2026-10-16",
       "source": "Hunt UK",
       "visa_sponsorship": "sc_blocked",
       "sponsor_licence": true,
@@ -17218,7 +17396,7 @@
       "first_seen": "2026-07-12",
       "sponsorship_scan": "Security clearance required",
       "sponsorship_mentioned": true,
-      "last_seen": "2026-10-15",
+      "last_seen": "2026-10-16",
       "sources": [
         "Hunt UK",
         "Hunt UK"
@@ -22154,7 +22332,7 @@
       "company": "DELOITTE LLP",
       "location": "Belfast, Manchester",
       "salary_display": "Not listed",
-      "date_posted": "2026-10-15",
+      "date_posted": "2026-10-16",
       "url": "https://huntukvisasponsors.com/job/manager-servicenow-hrsd-hr-transformation-mq53swe8rk4f",
       "source": "Hunt UK",
       "source_type": "aggregator",
@@ -22170,7 +22348,7 @@
       "description": "Manager, ServiceNow HRSD, HR Transformation DELOITTE LLP",
       "scraped_at": "2026-06-22 05:03:05",
       "first_seen": "2026-06-22",
-      "last_seen": "2026-10-15",
+      "last_seen": "2026-10-16",
       "sources": [
         "Hunt UK"
       ],
@@ -22270,7 +22448,7 @@
       "company": "National Grid Electricity Distribution (South West) plc",
       "location": "Warwick, England, United Kingdom",
       "salary_display": "Not listed",
-      "date_posted": "2026-10-15",
+      "date_posted": "2026-10-16",
       "url": "https://huntukvisasponsors.com/job/senior-servicenow-developer-at-national-grid-ijtffjmrjyor",
       "source": "Hunt UK",
       "source_type": "aggregator",
@@ -22286,7 +22464,7 @@
       "description": "Senior ServiceNow Developer National Grid Electricity Distribution (South West) plc",
       "scraped_at": "2026-06-22 05:03:05",
       "first_seen": "2026-06-22",
-      "last_seen": "2026-10-15",
+      "last_seen": "2026-10-16",
       "sources": [
         "Hunt UK"
       ],
@@ -28616,7 +28794,7 @@
       "first_seen": "2026-05-20",
       "sponsor_licence": false,
       "agency_unknown": true,
-      "last_seen": "2026-10-15",
+      "last_seen": "2026-10-16",
       "sources": [
         "Nelson Frank"
       ],
@@ -30680,7 +30858,7 @@
         "ServiceNow Careers"
       ],
       "first_seen": "2026-05-15",
-      "last_seen": "2026-10-15",
+      "last_seen": "2026-10-16",
       "date_reliable": true,
       "status": "active"
     },
