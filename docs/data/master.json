@@ -153,7 +153,7 @@
   ],
   "sources": {
     "JobServe": 784,
-    "Hunt UK": 413,
+    "Hunt UK": 414,
     "LinkedIn": 113,
     "ServiceNow Careers": 37,
     "Nelson Frank": 11,
@@ -188,7 +188,6 @@
       "description": "Posted 8 hours ago",
       "scraped_at": "2026-10-26 05:00:45",
       "sponsor_licence": false,
-      "sponsorship_mentioned": false,
       "first_seen": "2026-10-26",
       "last_seen": "2026-10-26",
       "sources": [
@@ -217,7 +216,6 @@
       "description": "Posted 17 hours ago",
       "scraped_at": "2026-10-26 05:00:45",
       "sponsor_licence": true,
-      "sponsorship_mentioned": false,
       "first_seen": "2026-10-26",
       "last_seen": "2026-10-26",
       "sources": [
@@ -248,8 +246,8 @@
       "posted_relative": "4d ago",
       "description": "ServiceNow SOMT Architect X4 GROUP LTD London Area, United Kingdom Possible Contract \u2014 4d ago",
       "scraped_at": "2026-10-26 05:00:37",
-      "sponsorship_mentioned": true,
       "sponsorship_scan": "Security clearance required",
+      "sponsorship_mentioned": true,
       "first_seen": "2026-10-26",
       "last_seen": "2026-10-26",
       "sources": [
@@ -311,8 +309,8 @@
       "posted_relative": "4d ago",
       "description": "ServiceNow Developer OPAL WAVE SOLUTIONS LIMITED England, United Kingdom Unlikely Full-time \u2014 4d ago",
       "scraped_at": "2026-10-26 05:00:37",
-      "sponsorship_mentioned": true,
       "sponsorship_scan": "Security clearance required",
+      "sponsorship_mentioned": true,
       "first_seen": "2026-10-26",
       "last_seen": "2026-10-26",
       "sources": [
@@ -324,10 +322,10 @@
     {
       "title": "Lead Software Engineer (ServiceNow)",
       "company": "Department for Work and Pensions",
-      "location": "GBP",
+      "location": "Barwick In Elmet, England, United Kingdom",
       "salary_display": "Not listed",
-      "date_posted": "2026-10-24 09:03:42",
-      "url": "https://www.jobserve.com/gb/en/mob/job/FA44D10B32E5C91753/",
+      "date_posted": "2026-10-26",
+      "url": "https://huntukvisasponsors.com/job/lead-software-engineer-servicenow-at-department-for-work-and-pensions-dwp-j7ztmjyrn7x",
       "source": "JobServe",
       "source_type": "aggregator",
       "sn_role": true,
@@ -341,11 +339,12 @@
       "description": "Posted 19 hours ago",
       "scraped_at": "2026-10-25 05:00:15",
       "sponsor_licence": true,
-      "sponsorship_mentioned": false,
+      "sponsorship_mentioned": true,
       "first_seen": "2026-10-25",
       "last_seen": "2026-10-26",
       "sources": [
-        "JobServe"
+        "JobServe",
+        "Hunt UK"
       ],
       "date_reliable": true,
       "status": "active"
@@ -2768,10 +2767,10 @@
     {
       "title": "Manager, Lead Specialist, ServiceNow GRC Solution Architect, Global",
       "company": "DELOITTE LLP",
-      "location": "England, United Kingdom",
+      "location": "Aberdeen, Scotland, United Kingdom",
       "salary_display": "Not listed",
       "date_posted": "2026-10-26",
-      "url": "https://huntukvisasponsors.com/job/manager-lead-specialist-servicenow-grc-solution-architect-global-at-deloitte-ssxh-c1qhhu",
+      "url": "https://huntukvisasponsors.com/job/manager-lead-specialist-servicenow-grc-solution-architect-global-at-deloitte-suzwgxfzqpy",
       "source": "Hunt UK",
       "source_type": "aggregator",
       "sn_role": true,
@@ -9272,7 +9271,7 @@
       "sponsorship_scan": "linkedin_js (cannot read full description)",
       "date_reliable": false,
       "first_seen": "2026-09-09",
-      "last_seen": "2026-10-26",
+      "last_seen": "2026-10-25",
       "sources": [
         "LinkedIn"
       ],
@@ -9300,7 +9299,7 @@
       "sponsorship_scan": "linkedin_js (cannot read full description)",
       "date_reliable": false,
       "first_seen": "2026-09-09",
-      "last_seen": "2026-10-26",
+      "last_seen": "2026-10-25",
       "sources": [
         "LinkedIn"
       ],
@@ -9328,7 +9327,7 @@
       "sponsorship_scan": "linkedin_js (cannot read full description)",
       "date_reliable": false,
       "first_seen": "2026-09-09",
-      "last_seen": "2026-10-26",
+      "last_seen": "2026-10-25",
       "sources": [
         "LinkedIn"
       ],
@@ -9356,7 +9355,7 @@
       "sponsorship_scan": "linkedin_js (cannot read full description)",
       "date_reliable": false,
       "first_seen": "2026-09-09",
-      "last_seen": "2026-10-26",
+      "last_seen": "2026-10-25",
       "sources": [
         "LinkedIn"
       ],
@@ -9384,7 +9383,7 @@
       "sponsorship_scan": "linkedin_js (cannot read full description)",
       "date_reliable": false,
       "first_seen": "2026-09-09",
-      "last_seen": "2026-10-26",
+      "last_seen": "2026-10-25",
       "sources": [
         "LinkedIn"
       ],
@@ -11787,7 +11786,7 @@
       "location": "London, United Kingdom",
       "salary_display": "Not listed",
       "date_posted": "2026-10-22 16:44:59",
-      "url": "https://careers.servicenow.com/jobs/744000157188820/forward-deployed-solution-engineer-applied-ai-fde/",
+      "url": "https://careers.servicenow.com/jobs/744000156137939/forward-deployed-solution-engineer-applied-ai-fde/",
       "source": "ServiceNow Careers",
       "source_type": "employer",
       "sn_role": true,
