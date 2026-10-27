@@ -29,7 +29,8 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 23 hours ago",
       "scraped_at": "2026-07-23 05:01:43",
-      "sponsor_licence": false
+      "sponsor_licence": false,
+      "recruiter": false
     },
     {
       "title": "ServiceNow Designer (Telecoms)",
@@ -50,7 +51,8 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 1 day ago",
       "scraped_at": "2026-07-23 05:01:43",
-      "sponsor_licence": false
+      "sponsor_licence": false,
+      "recruiter": false
     },
     {
       "title": "ServiceNow Technical Consultant (Outside IR35, SC cleared)",
@@ -72,7 +74,8 @@
       "description": "Posted 15 hours ago",
       "scraped_at": "2026-07-23 05:01:43",
       "sponsor_licence": false,
-      "sponsorship_scan": "blocked_by_manual_tag: sc_blocked"
+      "sponsorship_scan": "blocked_by_manual_tag: sc_blocked",
+      "recruiter": false
     },
     {
       "title": "ServiceNow Administrator",
@@ -93,7 +96,8 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 14 hours ago",
       "scraped_at": "2026-07-23 05:01:43",
-      "sponsor_licence": false
+      "sponsor_licence": false,
+      "recruiter": false
     },
     {
       "title": "Senior ServiceNow IT Asset Management (HAM Pro) Consultant",
@@ -114,7 +118,8 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 18 hours ago",
       "scraped_at": "2026-07-23 05:01:43",
-      "sponsor_licence": true
+      "sponsor_licence": false,
+      "recruiter": true
     },
     {
       "title": "ServiceNow Service Mapping Specialist",
@@ -135,7 +140,8 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 18 hours ago",
       "scraped_at": "2026-07-23 05:01:43",
-      "sponsor_licence": true
+      "sponsor_licence": false,
+      "recruiter": true
     },
     {
       "title": "Client Deployment Engineer - Hedge Fund - Desktop Support/Deployment/ServiceNow/Windows",
@@ -156,7 +162,8 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 15 hours ago",
       "scraped_at": "2026-07-23 05:01:43",
-      "sponsor_licence": true
+      "sponsor_licence": true,
+      "recruiter": false
     },
     {
       "title": "Service Desk & Event Management Analyst",
@@ -177,7 +184,8 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 21 hours ago",
       "scraped_at": "2026-07-23 05:01:43",
-      "sponsor_licence": false
+      "sponsor_licence": false,
+      "recruiter": false
     },
     {
       "title": "HR Service Delivery Specialist - Insurance",
@@ -198,7 +206,8 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 19 hours ago",
       "scraped_at": "2026-07-23 05:01:43",
-      "sponsor_licence": false
+      "sponsor_licence": false,
+      "recruiter": false
     },
     {
       "title": "IT Service Delivery Manager",
@@ -219,7 +228,8 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 13 hours ago",
       "scraped_at": "2026-07-23 05:01:43",
-      "sponsor_licence": false
+      "sponsor_licence": false,
+      "recruiter": false
     },
     {
       "title": "Onsite IT Support Engineer - (PART TIME CONTRACT)",
@@ -240,7 +250,8 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 1 day ago",
       "scraped_at": "2026-07-23 05:01:43",
-      "sponsor_licence": false
+      "sponsor_licence": false,
+      "recruiter": false
     },
     {
       "title": "Senior Service Delivery Analyst - Hybrid",
@@ -262,7 +273,8 @@
       "description": "Posted 1 day ago",
       "scraped_at": "2026-07-23 05:01:43",
       "sponsor_licence": false,
-      "sponsorship_scan": "Security clearance required"
+      "sponsorship_scan": "Security clearance required",
+      "recruiter": false
     },
     {
       "title": "Senior Service Delivery Analyst - Hybrid",
@@ -284,7 +296,8 @@
       "description": "Posted 1 day ago",
       "scraped_at": "2026-07-23 05:01:43",
       "sponsor_licence": false,
-      "sponsorship_scan": "Security clearance required"
+      "sponsorship_scan": "Security clearance required",
+      "recruiter": false
     },
     {
       "title": "Senior Service Delivery Analyst Resource",
@@ -305,7 +318,8 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 1 day ago",
       "scraped_at": "2026-07-23 05:01:43",
-      "sponsor_licence": false
+      "sponsor_licence": false,
+      "recruiter": false
     },
     {
       "title": "ServiceNow Product Owner",
@@ -326,7 +340,8 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 28 mins ago",
       "scraped_at": "2026-07-23 05:01:43",
-      "sponsor_licence": false
+      "sponsor_licence": false,
+      "recruiter": false
     },
     {
       "title": "ServiceNow Developer - SC Cleared",
@@ -348,7 +363,8 @@
       "description": "Posted 21 hours ago",
       "scraped_at": "2026-07-23 05:01:43",
       "sponsor_licence": false,
-      "sponsorship_scan": "blocked_by_manual_tag: sc_blocked"
+      "sponsorship_scan": "blocked_by_manual_tag: sc_blocked",
+      "recruiter": true
     },
     {
       "title": "ServiceNow Solution Architect",
@@ -369,7 +385,8 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 1 day ago",
       "scraped_at": "2026-07-23 05:01:43",
-      "sponsor_licence": false
+      "sponsor_licence": false,
+      "recruiter": false
     },
     {
       "title": "ServiceNow developer",
@@ -390,7 +407,8 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 19 hours ago",
       "scraped_at": "2026-07-23 05:01:43",
-      "sponsor_licence": true
+      "sponsor_licence": true,
+      "recruiter": false
     },
     {
       "title": "ServiceNow developer",
@@ -411,7 +429,8 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 19 hours ago",
       "scraped_at": "2026-07-23 05:01:43",
-      "sponsor_licence": false
+      "sponsor_licence": false,
+      "recruiter": true
     },
     {
       "title": "ServiceNow Developer/Designer",
@@ -432,7 +451,8 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 19 hours ago",
       "scraped_at": "2026-07-23 05:01:43",
-      "sponsor_licence": true
+      "sponsor_licence": true,
+      "recruiter": false
     },
     {
       "title": "ITSM Sales Executive - ServiceNow/Halo/Freshworks/Avanti",
@@ -453,7 +473,8 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 4 hours ago",
       "scraped_at": "2026-07-23 05:01:43",
-      "sponsor_licence": true
+      "sponsor_licence": true,
+      "recruiter": false
     },
     {
       "title": "IT Asset Manager",
@@ -474,7 +495,8 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 6 hours ago",
       "scraped_at": "2026-07-23 05:01:43",
-      "sponsor_licence": false
+      "sponsor_licence": false,
+      "recruiter": true
     },
     {
       "title": "Change Manager",
@@ -496,7 +518,8 @@
       "description": "Posted 2 hours ago",
       "scraped_at": "2026-07-23 05:01:43",
       "sponsor_licence": true,
-      "sponsorship_scan": "Security clearance required"
+      "sponsorship_scan": "Security clearance required",
+      "recruiter": false
     },
     {
       "title": "OSM Migration Service Lead",
@@ -518,7 +541,8 @@
       "description": "Posted 7 hours ago",
       "scraped_at": "2026-07-23 05:01:43",
       "sponsor_licence": false,
-      "sponsorship_scan": "Security clearance required"
+      "sponsorship_scan": "Security clearance required",
+      "recruiter": false
     },
     {
       "title": "Benefit Operations Specialist",
@@ -539,7 +563,8 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 3 hours ago",
       "scraped_at": "2026-07-23 05:01:43",
-      "sponsor_licence": false
+      "sponsor_licence": false,
+      "recruiter": true
     },
     {
       "title": "Solution Consultant",
@@ -560,7 +585,8 @@
       "visa_sponsorship": "unknown",
       "sponsor_licence": true,
       "description": "Company Description It all started when engineer Fred Luddy wrote code that automated a tedious task for his coworker, Phyllis. She cried tears of joy. That moment inspired Fred to build a company that could do that for everyone\u2014freeing people from busywork so they could focus on meaningful work. To",
-      "scraped_at": "2026-07-23 05:02:20"
+      "scraped_at": "2026-07-23 05:02:20",
+      "recruiter": false
     },
     {
       "title": "Sr Staff Outbound Product Manager",
@@ -581,7 +607,8 @@
       "visa_sponsorship": "unknown",
       "sponsor_licence": true,
       "description": "Company Description It all started when engineer Fred Luddy wrote code that automated a tedious task for his coworker, Phyllis. She cried tears of joy. That moment inspired Fred to build a company that could do that for everyone\u2014freeing people from busywork so they could focus on meaningful work. To",
-      "scraped_at": "2026-07-23 05:02:20"
+      "scraped_at": "2026-07-23 05:02:20",
+      "recruiter": false
     },
     {
       "title": "Forward Deployed Solution Engineer \u2013 Applied AI FDE",
@@ -602,7 +629,8 @@
       "visa_sponsorship": "unknown",
       "sponsor_licence": true,
       "description": "Company Description It all started when engineer Fred Luddy wrote code that automated a tedious task for his coworker, Phyllis. She cried tears of joy. That moment inspired Fred to build a company that could do that for everyone\u2014freeing people from busywork so they could focus on meaningful work. To",
-      "scraped_at": "2026-07-23 05:02:20"
+      "scraped_at": "2026-07-23 05:02:20",
+      "recruiter": false
     },
     {
       "title": "Principal Platform Architect",
@@ -623,7 +651,8 @@
       "visa_sponsorship": "unknown",
       "sponsor_licence": true,
       "description": "Company Description It all started in sunny San Diego, California in 2004 when a visionary engineer, Fred Luddy, saw the potential to transform how we work. Fast forward to today \u2014 ServiceNow stands as a global market leader, bringing innovative AI-enhanced technology to over 8,100 customers, includ",
-      "scraped_at": "2026-07-23 05:02:20"
+      "scraped_at": "2026-07-23 05:02:20",
+      "recruiter": false
     },
     {
       "title": "Senior Platform Architect",
@@ -644,7 +673,8 @@
       "visa_sponsorship": "unknown",
       "sponsor_licence": true,
       "description": "Company Description It all started in sunny San Diego, California in 2004 when a visionary engineer, Fred Luddy, saw the potential to transform how we work. Fast forward to today \u2014 ServiceNow stands as a global market leader, bringing innovative AI-enhanced technology to over 8,100 customers, includ",
-      "scraped_at": "2026-07-23 05:02:20"
+      "scraped_at": "2026-07-23 05:02:20",
+      "recruiter": false
     },
     {
       "title": "Partner Manager UKI",
@@ -665,7 +695,8 @@
       "visa_sponsorship": "unknown",
       "sponsor_licence": true,
       "description": "Company Description It all started in sunny San Diego, California in 2004 when a visionary engineer, Fred Luddy, saw the potential to transform how we work. Fast forward to today \u2014 ServiceNow stands as a global market leader, bringing innovative AI-enhanced technology to over 8,100 customers, includ",
-      "scraped_at": "2026-07-23 05:02:20"
+      "scraped_at": "2026-07-23 05:02:20",
+      "recruiter": false
     },
     {
       "title": "Director, Platform Architects - EMEA UK/Ire",
@@ -686,7 +717,8 @@
       "visa_sponsorship": "unknown",
       "sponsor_licence": true,
       "description": "Company Description It all started in sunny San Diego, California in 2004 when a visionary engineer, Fred Luddy, saw the potential to transform how we work. Fast forward to today \u2014 ServiceNow stands as a global market leader, bringing innovative AI-enhanced technology to over 8,100 customers, includ",
-      "scraped_at": "2026-07-23 05:02:20"
+      "scraped_at": "2026-07-23 05:02:20",
+      "recruiter": false
     },
     {
       "title": "Senior Advisory Solution Consultant - Moveworks",
@@ -707,7 +739,8 @@
       "visa_sponsorship": "unknown",
       "sponsor_licence": true,
       "description": "Company Description It all started in sunny San Diego, California in 2004 when a visionary engineer, Fred Luddy, saw the potential to transform how we work. Fast forward to today \u2014 ServiceNow stands as a global market leader, bringing innovative AI-enhanced technology to over 8,100 customers, includ",
-      "scraped_at": "2026-07-23 05:02:20"
+      "scraped_at": "2026-07-23 05:02:20",
+      "recruiter": false
     },
     {
       "title": "ServiceNow - Administrator",
@@ -728,7 +761,8 @@
       "visa_sponsorship": "unknown",
       "sponsor_licence": true,
       "description": "ServiceNow - Administrator EVERSHEDS SUTHERLAND (INTERNATIONAL) LLP Ineligible We are Eversheds Sutherland, a global law firm, with more than 5,000 people across over 30 countries. We\u2019re full-service with deep niche and sector experience. Whatever challenge, wherever in the world, we\u2019re equipped and ready to meet it. We live our values, we\u2019re purposeful and purpose-led. So although the world is fast-moving and rapidly changing, we see it as a place where everyone can thrive. We\u2019re ambitious for ",
-      "scraped_at": "2026-07-23 05:02:23"
+      "scraped_at": "2026-07-23 05:02:23",
+      "recruiter": false
     },
     {
       "title": "ServiceNow Developer",
@@ -750,7 +784,8 @@
       "sponsor_licence": true,
       "description": "ServiceNow Developer Cognizant Worldwide Limited",
       "scraped_at": "2026-07-23 05:02:23",
-      "sponsorship_scan": "linkedin_js (cannot read full description)"
+      "sponsorship_scan": "linkedin_js (cannot read full description)",
+      "recruiter": false
     },
     {
       "title": "ServiceNow Developer",
@@ -772,7 +807,8 @@
       "sponsor_licence": true,
       "description": "ServiceNow Developer Cognizant Worldwide Limited",
       "scraped_at": "2026-07-23 05:02:23",
-      "sponsorship_scan": "linkedin_js (cannot read full description)"
+      "sponsorship_scan": "linkedin_js (cannot read full description)",
+      "recruiter": false
     },
     {
       "title": "Senior ServiceNow Sales Professional",
@@ -793,7 +829,8 @@
       "visa_sponsorship": "unknown",
       "sponsor_licence": true,
       "description": "Senior ServiceNow Sales Professional CSC Computer Sciences Limited",
-      "scraped_at": "2026-07-23 05:02:23"
+      "scraped_at": "2026-07-23 05:02:23",
+      "recruiter": false
     },
     {
       "title": "ServiceNow DevOps Delivery Leadership | Independent Consultant Engagement | 7-Month Assignment | Immediate Start",
@@ -814,7 +851,8 @@
       "visa_sponsorship": "unknown",
       "sponsor_licence": true,
       "description": "ServiceNow DevOps Delivery Leadership | Independent Consultant Engagement | 7-Month Assignment | Immediate Start Business Integration Partners SPA",
-      "scraped_at": "2026-07-23 05:02:23"
+      "scraped_at": "2026-07-23 05:02:23",
+      "recruiter": false
     }
   ],
   "sc_blocked": 6,

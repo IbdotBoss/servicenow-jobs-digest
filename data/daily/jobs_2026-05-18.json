@@ -18,7 +18,8 @@
     "visa_sponsorship": "unknown",
     "description": "Posted 2 hours ago",
     "scraped_at": "2026-05-18 13:42:01",
-    "sponsor_licence": false
+    "sponsor_licence": false,
+    "recruiter": true
   },
   {
     "title": "IT Asset Manager - Hardware",
@@ -39,7 +40,8 @@
     "visa_sponsorship": "unknown",
     "description": "Posted 46 mins ago",
     "scraped_at": "2026-05-18 13:42:01",
-    "sponsor_licence": false
+    "sponsor_licence": false,
+    "recruiter": false
   },
   {
     "title": "IT Support Manager - Halo ITSM, ITIL, DORA",
@@ -60,7 +62,8 @@
     "visa_sponsorship": "unknown",
     "description": "Posted 3 hours ago",
     "scraped_at": "2026-05-18 13:42:01",
-    "sponsor_licence": false
+    "sponsor_licence": false,
+    "recruiter": false
   },
   {
     "title": "Service Desk - Spanish + Portuguese Speaker",
@@ -81,7 +84,8 @@
     "visa_sponsorship": "unknown",
     "description": "Posted 2 hours ago",
     "scraped_at": "2026-05-18 13:42:01",
-    "sponsor_licence": true
+    "sponsor_licence": true,
+    "recruiter": false
   },
   {
     "title": "Public Sector/Enterprise Sales Account Manager - ServiceNow Partner.",
@@ -102,7 +106,8 @@
     "visa_sponsorship": "unknown",
     "description": "Posted 4 hours ago",
     "scraped_at": "2026-05-18 13:42:01",
-    "sponsor_licence": false
+    "sponsor_licence": false,
+    "recruiter": true
   },
   {
     "title": "IT Support Engineer",
@@ -123,7 +128,8 @@
     "visa_sponsorship": "unknown",
     "description": "Posted 1 day ago",
     "scraped_at": "2026-05-18 13:42:01",
-    "sponsor_licence": false
+    "sponsor_licence": false,
+    "recruiter": true
   },
   {
     "title": "ServiceNow Implementation Consultant",
@@ -144,7 +150,8 @@
     "grad_scheme": false,
     "link_status": "live",
     "description": "",
-    "date_reliable": false
+    "date_reliable": false,
+    "recruiter": false
   },
   {
     "title": "ServiceNow Implementation Specialist",
@@ -165,7 +172,8 @@
     "grad_scheme": false,
     "link_status": "live",
     "description": "",
-    "date_reliable": false
+    "date_reliable": false,
+    "recruiter": false
   },
   {
     "title": "ServiceNow Implementation Specialist",
@@ -186,7 +194,8 @@
     "grad_scheme": false,
     "link_status": "live",
     "description": "",
-    "date_reliable": false
+    "date_reliable": false,
+    "recruiter": false
   },
   {
     "title": "Servicenow Administrator",
@@ -207,7 +216,8 @@
     "grad_scheme": false,
     "link_status": "live",
     "description": "",
-    "date_reliable": false
+    "date_reliable": false,
+    "recruiter": false
   },
   {
     "title": "Alliance Manager ServiceNow - Eviden",
@@ -228,7 +238,8 @@
     "grad_scheme": false,
     "link_status": "live",
     "description": "",
-    "date_reliable": false
+    "date_reliable": false,
+    "recruiter": false
   },
   {
     "title": "Technical Manager - ServiceNow - (Financial Services)",
@@ -238,7 +249,7 @@
     "source": "LinkedIn",
     "scraped_at": "2026-05-16 05:01:59",
     "visa_sponsorship": "unknown",
-    "sponsor_licence": true,
+    "sponsor_licence": false,
     "source_type": "direct",
     "date_posted": "2026-05-18",
     "salary_display": "Not listed",
@@ -249,7 +260,8 @@
     "grad_scheme": false,
     "link_status": "live",
     "description": "",
-    "date_reliable": false
+    "date_reliable": false,
+    "recruiter": true
   },
   {
     "title": "ServiceNow Architect",
@@ -270,7 +282,8 @@
     "grad_scheme": false,
     "link_status": "live",
     "description": "",
-    "date_reliable": false
+    "date_reliable": false,
+    "recruiter": false
   },
   {
     "title": "ServiceNow Implementation Specialist",
@@ -291,7 +304,8 @@
     "grad_scheme": false,
     "link_status": "live",
     "description": "",
-    "date_reliable": false
+    "date_reliable": false,
+    "recruiter": false
   },
   {
     "title": "Key Account Director - Enterprise / Public Sector. ServiceNow Solutions SI/MSP",
@@ -312,7 +326,8 @@
     "link_status": "live",
     "description": "Reporting line: David Bartoli (Sales Director) Office location: The Ministry, London SE1 Hybrid working: 2-3 days a week UP3 is a fast-growing ServiceNow boutique working with complex, regulated organisations across public sector, CNI, transport, def",
     "sponsor_licence": false,
-    "visa_sponsorship": "agency_unknown"
+    "visa_sponsorship": "agency_unknown",
+    "recruiter": true
   },
   {
     "title": "CRM Architect",
@@ -333,7 +348,8 @@
     "visa_sponsorship": "unknown",
     "sponsor_licence": true,
     "description": "Company Description It all started in sunny San Diego, California in 2004 when a visionary engineer, Fred Luddy, saw the potential to transform how we work. Fast forward to today \u2014 ServiceNow stands as a global market leader, bringing innovative AI-enhanced technology to over 8,100 customers, includ",
-    "scraped_at": "2026-05-18 13:42:12"
+    "scraped_at": "2026-05-18 13:42:12",
+    "recruiter": false
   },
   {
     "title": "Principal Platform Architect",
@@ -354,7 +370,8 @@
     "visa_sponsorship": "unknown",
     "sponsor_licence": true,
     "description": "Company Description It all started in sunny San Diego, California in 2004 when a visionary engineer, Fred Luddy, saw the potential to transform how we work. Fast forward to today \u2014 ServiceNow stands as a global market leader, bringing innovative AI-enhanced technology to over 8,100 customers, includ",
-    "scraped_at": "2026-05-18 13:42:12"
+    "scraped_at": "2026-05-18 13:42:12",
+    "recruiter": false
   },
   {
     "title": "Senior Advisory Solution Consultant - Moveworks",
@@ -375,7 +392,8 @@
     "visa_sponsorship": "unknown",
     "sponsor_licence": true,
     "description": "Company Description It all started in sunny San Diego, California in 2004 when a visionary engineer, Fred Luddy, saw the potential to transform how we work. Fast forward to today \u2014 ServiceNow stands as a global market leader, bringing innovative AI-enhanced technology to over 8,100 customers, includ",
-    "scraped_at": "2026-05-18 13:42:12"
+    "scraped_at": "2026-05-18 13:42:12",
+    "recruiter": false
   },
   {
     "title": "Senior AI Agent Engineer \u2013 Moveworks | Customer Deployment",
@@ -396,7 +414,8 @@
     "visa_sponsorship": "unknown",
     "sponsor_licence": true,
     "description": "Company Description It all started in sunny San Diego, California in 2004 when a visionary engineer, Fred Luddy, saw the potential to transform how we work. Fast forward to today \u2014 ServiceNow stands as a global market leader, bringing innovative AI-enhanced technology to over 8,100 customers, includ",
-    "scraped_at": "2026-05-18 13:42:12"
+    "scraped_at": "2026-05-18 13:42:12",
+    "recruiter": false
   },
   {
     "title": "Staff AI Agent Engineer \u2013 Moveworks | Customer Deployment",
@@ -417,7 +436,8 @@
     "visa_sponsorship": "unknown",
     "sponsor_licence": true,
     "description": "Company Description It all started in sunny San Diego, California in 2004 when a visionary engineer, Fred Luddy, saw the potential to transform how we work. Fast forward to today \u2014 ServiceNow stands as a global market leader, bringing innovative AI-enhanced technology to over 8,100 customers, includ",
-    "scraped_at": "2026-05-18 13:42:12"
+    "scraped_at": "2026-05-18 13:42:12",
+    "recruiter": false
   },
   {
     "title": "AI Principle Technical Consultant",
@@ -438,7 +458,8 @@
     "visa_sponsorship": "unknown",
     "sponsor_licence": true,
     "description": "Company Description It all started in sunny San Diego, California in 2004 when a visionary engineer, Fred Luddy, saw the potential to transform how we work. Fast forward to today \u2014 ServiceNow stands as a global market leader, bringing innovative AI-enhanced technology to over 8,100 customers, includ",
-    "scraped_at": "2026-05-18 13:42:12"
+    "scraped_at": "2026-05-18 13:42:12",
+    "recruiter": false
   },
   {
     "title": "Developer Advocate \u2014 Agentic Platform - MoveWorks",
@@ -459,7 +480,8 @@
     "visa_sponsorship": "unknown",
     "sponsor_licence": true,
     "description": "Company Description It all started in sunny San Diego, California in 2004 when a visionary engineer, Fred Luddy, saw the potential to transform how we work. Fast forward to today \u2014 ServiceNow stands as a global market leader, bringing innovative AI-enhanced technology to over 8,100 customers, includ",
-    "scraped_at": "2026-05-18 13:42:12"
+    "scraped_at": "2026-05-18 13:42:12",
+    "recruiter": false
   },
   {
     "title": "Partner Manager",
@@ -480,7 +502,8 @@
     "visa_sponsorship": "unknown",
     "sponsor_licence": true,
     "description": "Company Description It all started in sunny San Diego, California in 2004 when a visionary engineer, Fred Luddy, saw the potential to transform how we work. Fast forward to today \u2014 ServiceNow stands as a global market leader, bringing innovative AI-enhanced technology to over 8,100 customers, includ",
-    "scraped_at": "2026-05-18 13:42:12"
+    "scraped_at": "2026-05-18 13:42:12",
+    "recruiter": false
   },
   {
     "id": "nf-sn-arch-sc-2026-05-18",
@@ -503,7 +526,8 @@
     "sponsor_licence": false,
     "description": "Security Clearance: Must be eligible for UK Security Clearance. Lead architecture and delivery of complex ServiceNow solutions across major digital transformation programmes at a leading UK consultancy.",
     "scraped_at": "2026-05-18T13:41:00",
-    "fallback_url": "https://www.nelsonfrank.com/servicenow-jobs-in-united-kingdom"
+    "fallback_url": "https://www.nelsonfrank.com/servicenow-jobs-in-united-kingdom",
+    "recruiter": false
   },
   {
     "id": "nf-sn-arch277-2026-05-18",
@@ -526,7 +550,8 @@
     "sponsor_licence": false,
     "description": "ServiceNow platform architecture and best practices. Design and implement complex workflows and integrations across ITSM modules.",
     "scraped_at": "2026-05-18T13:41:00",
-    "fallback_url": "https://www.nelsonfrank.com/servicenow-jobs-in-united-kingdom"
+    "fallback_url": "https://www.nelsonfrank.com/servicenow-jobs-in-united-kingdom",
+    "recruiter": false
   },
   {
     "id": "nf-sn-piececs-2026-05-18",
@@ -549,7 +574,8 @@
     "sponsor_licence": false,
     "description": "Capgemini DCX Business Technology UK role. Technical and strategic integrated ServiceNow solutions for CX, TX, and EX.",
     "scraped_at": "2026-05-18T13:41:00",
-    "fallback_url": "https://www.nelsonfrank.com/servicenow-jobs-in-united-kingdom"
+    "fallback_url": "https://www.nelsonfrank.com/servicenow-jobs-in-united-kingdom",
+    "recruiter": false
   },
   {
     "id": "huntuk-martinbaker-admin-2026-05-18",
@@ -573,7 +599,8 @@
     "sponsor_licence": true,
     "description": "Join the IT team to maintain, support, and improve the organisation's ServiceNow platform.",
     "scraped_at": "2026-05-18T13:41:00",
-    "fallback_url": "https://huntukvisasponsors.com/jobs?q=servicenow"
+    "fallback_url": "https://huntukvisasponsors.com/jobs?q=servicenow",
+    "recruiter": false
   },
   {
     "id": "huntuk-capgemini-platimp-2026-05-18",
@@ -596,7 +623,8 @@
     "sponsor_licence": true,
     "description": "Technical and strategic role focused on developing, customizing, and integrating ServiceNow solutions to improve CX, TX, and EX. DCX Business Technology UK.",
     "scraped_at": "2026-05-18T13:41:00",
-    "fallback_url": "https://huntukvisasponsors.com/jobs?q=servicenow"
+    "fallback_url": "https://huntukvisasponsors.com/jobs?q=servicenow",
+    "recruiter": false
   },
   {
     "id": "huntuk-altum-dir-2026-05-18",
@@ -620,7 +648,8 @@
     "sponsor_licence": true,
     "description": "Lead recovery and delivery of a high-profile major ServiceNow rollout across complex global customer services.",
     "scraped_at": "2026-05-18T13:41:00",
-    "fallback_url": "https://huntukvisasponsors.com/jobs?q=servicenow"
+    "fallback_url": "https://huntukvisasponsors.com/jobs?q=servicenow",
+    "recruiter": false
   },
   {
     "id": "huntuk-ubique-dir-2026-05-18",
@@ -644,7 +673,8 @@
     "sponsor_licence": true,
     "description": "18+ years IT exp, 10+ years program/delivery leadership. Lead large-scale ServiceNow transformation program.",
     "scraped_at": "2026-05-18T13:41:00",
-    "fallback_url": "https://huntukvisasponsors.com/jobs?q=servicenow"
+    "fallback_url": "https://huntukvisasponsors.com/jobs?q=servicenow",
+    "recruiter": false
   },
   {
     "id": "huntuk-computacenter-support-2026-05-18",
@@ -667,7 +697,8 @@
     "sponsor_licence": true,
     "description": "2nd line support for the 24/7 ServiceNow platform.",
     "scraped_at": "2026-05-18T13:41:00",
-    "fallback_url": "https://huntukvisasponsors.com/jobs?q=servicenow"
+    "fallback_url": "https://huntukvisasponsors.com/jobs?q=servicenow",
+    "recruiter": false
   },
   {
     "id": "huntuk-computacenter-ba-2026-05-18",
@@ -690,7 +721,8 @@
     "sponsor_licence": true,
     "description": "Implementing new functionality, application upgrades, standardisation, process improvements.",
     "scraped_at": "2026-05-18T13:41:00",
-    "fallback_url": "https://huntukvisasponsors.com/jobs?q=servicenow"
+    "fallback_url": "https://huntukvisasponsors.com/jobs?q=servicenow",
+    "recruiter": false
   },
   {
     "id": "huntuk-kinly-arch-2026-05-18",
@@ -713,6 +745,7 @@
     "sponsor_licence": true,
     "description": "Full-time permanent. Company will not engage recruitment agencies. Leads cloud platform and digital change.",
     "scraped_at": "2026-05-18T13:41:00",
-    "fallback_url": "https://huntukvisasponsors.com/jobs?q=servicenow"
+    "fallback_url": "https://huntukvisasponsors.com/jobs?q=servicenow",
+    "recruiter": false
   }
 ]

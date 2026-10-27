@@ -25,7 +25,8 @@
       "LinkedIn"
     ],
     "sponsor_licence": true,
-    "date_reliable": false
+    "date_reliable": false,
+    "recruiter": false
   },
   {
     "title": "ServiceNow Developer",
@@ -53,7 +54,8 @@
     "status": "active",
     "sources": [
       "Experis"
-    ]
+    ],
+    "recruiter": false
   },
   {
     "title": "ServiceNow HR Developer (Contract to Dec 2026)",
@@ -80,8 +82,9 @@
     "sources": [
       "LinkedIn"
     ],
-    "sponsor_licence": true,
-    "date_reliable": false
+    "sponsor_licence": false,
+    "date_reliable": false,
+    "recruiter": true
   },
   {
     "title": "Senior ServiceNow Developer / Architect",
@@ -110,7 +113,8 @@
     "sources": [
       "Hunt UK"
     ],
-    "sponsor_licence": true
+    "sponsor_licence": true,
+    "recruiter": false
   },
   {
     "title": "ServiceNow Senior Developer (11m Contract)",
@@ -138,7 +142,8 @@
     "sources": [
       "Hunt UK"
     ],
-    "sponsor_licence": true
+    "sponsor_licence": true,
+    "recruiter": false
   },
   {
     "title": "ServiceNow Developer, AVP",
@@ -166,7 +171,8 @@
     "sources": [
       "Hunt UK"
     ],
-    "sponsor_licence": false
+    "sponsor_licence": false,
+    "recruiter": false
   },
   {
     "title": "ServiceNow Developer",
@@ -194,7 +200,8 @@
     "sources": [
       "Hunt UK"
     ],
-    "sponsor_licence": true
+    "sponsor_licence": true,
+    "recruiter": false
   },
   {
     "title": "Graduate ServiceNow Technical Consultant 2026",
@@ -221,7 +228,8 @@
     "sources": [
       "Capgemini Careers"
     ],
-    "sponsor_licence": true
+    "sponsor_licence": true,
+    "recruiter": false
   },
   {
     "title": "ServiceNow Consultant - ITAM",
@@ -247,7 +255,8 @@
     "status": "expired",
     "sources": [
       "Reed"
-    ]
+    ],
+    "recruiter": false
   },
   {
     "title": "ServiceNow Developer",
@@ -275,7 +284,8 @@
       "LinkedIn"
     ],
     "sponsor_licence": true,
-    "date_reliable": false
+    "date_reliable": false,
+    "recruiter": false
   },
   {
     "title": "ServiceNow Developer (12-month FTC)",
@@ -302,7 +312,8 @@
     "status": "expired",
     "sources": [
       "Totaljobs"
-    ]
+    ],
+    "recruiter": false
   },
   {
     "title": "ServiceNow Implementation Specialist",
@@ -331,7 +342,8 @@
     "sources": [
       "Hunt UK"
     ],
-    "sponsor_licence": true
+    "sponsor_licence": true,
+    "recruiter": false
   },
   {
     "title": "ServiceNow Developer",
@@ -357,7 +369,8 @@
     "status": "expired",
     "sources": [
       "Deerfoot"
-    ]
+    ],
+    "recruiter": true
   },
   {
     "title": "ServiceNow IRM / SecOps Technical Consultant",
@@ -384,7 +397,8 @@
     "status": "active",
     "sources": [
       "Akkodis"
-    ]
+    ],
+    "recruiter": true
   },
   {
     "title": "ServiceNow HR Developer (HRSD)",
@@ -411,7 +425,8 @@
     "sources": [
       "ComputerJobs"
     ],
-    "sponsor_licence": false
+    "sponsor_licence": false,
+    "recruiter": true
   },
   {
     "title": "ServiceNow Architect",
@@ -438,7 +453,8 @@
     "status": "expired",
     "sources": [
       "CV-Library"
-    ]
+    ],
+    "recruiter": true
   },
   {
     "title": "ServiceNow Solution Architect (SC Cleared)",
@@ -466,7 +482,8 @@
     "sources": [
       "Hays"
     ],
-    "sponsor_licence": false
+    "sponsor_licence": false,
+    "recruiter": true
   },
   {
     "title": "ServiceNow Technical Consultant",
@@ -493,7 +510,8 @@
     "status": "active",
     "sources": [
       "Hays"
-    ]
+    ],
+    "recruiter": true
   },
   {
     "title": "ServiceNow SIR Engineer",
@@ -519,7 +537,8 @@
     "status": "expired",
     "sources": [
       "ComputerJobs"
-    ]
+    ],
+    "recruiter": true
   },
   {
     "title": "ServiceNow Architect (Telecoms TSM)",
@@ -545,7 +564,8 @@
     "status": "expired",
     "sources": [
       "ComputerJobs"
-    ]
+    ],
+    "recruiter": true
   },
   {
     "title": "Solution Architect ServiceNow",
@@ -574,7 +594,8 @@
     "sources": [
       "Hunt UK"
     ],
-    "sponsor_licence": false
+    "sponsor_licence": false,
+    "recruiter": false
   },
   {
     "title": "ServiceNow Functional Analyst",
@@ -601,7 +622,8 @@
     "status": "expired",
     "sources": [
       "ComputerJobs"
-    ]
+    ],
+    "recruiter": true
   },
   {
     "title": "ServiceNow Engineer",
@@ -628,7 +650,8 @@
     "sources": [
       "Hunt UK"
     ],
-    "sponsor_licence": false
+    "sponsor_licence": false,
+    "recruiter": false
   },
   {
     "title": "ServiceNow Technical Lead (Insurance/FSO)",
@@ -654,7 +677,8 @@
     "status": "expired",
     "sources": [
       "Hunt UK"
-    ]
+    ],
+    "recruiter": false
   },
   {
     "title": "ServiceNow Product Manager (Banking)",
@@ -682,7 +706,8 @@
     "sources": [
       "Hunt UK"
     ],
-    "sponsor_licence": false
+    "sponsor_licence": false,
+    "recruiter": true
   },
   {
     "title": "CMDB Specialist (ServiceNow)",
@@ -708,7 +733,8 @@
     "sources": [
       "Hunt UK"
     ],
-    "sponsor_licence": false
+    "sponsor_licence": false,
+    "recruiter": true
   },
   {
     "title": "ServiceNow Technical Consultant (DV Cleared)",
@@ -735,7 +761,8 @@
     "status": "expired",
     "sources": [
       "ComputerJobs"
-    ]
+    ],
+    "recruiter": false
   },
   {
     "title": "ServiceNow Technical Architect",
@@ -762,7 +789,8 @@
     "sources": [
       "JobServe"
     ],
-    "sponsor_licence": true
+    "sponsor_licence": true,
+    "recruiter": false
   },
   {
     "title": "ServiceNow ITOM Expert",
@@ -787,7 +815,8 @@
     "status": "expired",
     "sources": [
       "JobServe"
-    ]
+    ],
+    "recruiter": false
   },
   {
     "title": "ServiceNow Business Development Lead (UK)",
@@ -814,7 +843,8 @@
     "status": "expired",
     "sources": [
       "JobServe"
-    ]
+    ],
+    "recruiter": false
   },
   {
     "title": "ServiceNow Technical Architect (DV Cleared)",
@@ -841,7 +871,8 @@
     "status": "expired",
     "sources": [
       "ComputerJobs"
-    ]
+    ],
+    "recruiter": false
   },
   {
     "title": "ServiceNow Consultant (DWP)",
@@ -866,7 +897,8 @@
     "status": "expired",
     "sources": [
       "ComputerJobs"
-    ]
+    ],
+    "recruiter": false
   },
   {
     "title": "Solution Architect ServiceNow (Telecom/Satcom)",
@@ -890,7 +922,8 @@
     "status": "expired",
     "sources": [
       "ComputerJobs"
-    ]
+    ],
+    "recruiter": false
   },
   {
     "title": "SC Cleared ServiceNow Engineer",
@@ -915,7 +948,8 @@
     "status": "expired",
     "sources": [
       "JobServe"
-    ]
+    ],
+    "recruiter": false
   },
   {
     "title": "Senior Technical Consultant - ServiceNow",
@@ -941,7 +975,8 @@
     "sources": [
       "JobServe"
     ],
-    "sponsor_licence": false
+    "sponsor_licence": false,
+    "recruiter": false
   },
   {
     "title": "ServiceNow Solution Architect",
@@ -967,7 +1002,8 @@
     "sources": [
       "JobServe"
     ],
-    "sponsor_licence": false
+    "sponsor_licence": false,
+    "recruiter": false
   },
   {
     "title": "Solution Architect - ServiceNow (Enterprise Integrations)",
@@ -991,7 +1027,8 @@
     "status": "expired",
     "sources": [
       "ComputerJobs"
-    ]
+    ],
+    "recruiter": false
   },
   {
     "title": "ServiceNow Developer",
@@ -1018,7 +1055,8 @@
     "sources": [
       "LinkedIn"
     ],
-    "date_reliable": false
+    "date_reliable": false,
+    "recruiter": false
   },
   {
     "title": "ServiceNow Developer",
@@ -1046,7 +1084,8 @@
       "LinkedIn"
     ],
     "sponsor_licence": false,
-    "date_reliable": false
+    "date_reliable": false,
+    "recruiter": false
   },
   {
     "title": "ServiceNow Developer",
@@ -1074,7 +1113,8 @@
       "LinkedIn"
     ],
     "sponsor_licence": true,
-    "date_reliable": false
+    "date_reliable": false,
+    "recruiter": false
   },
   {
     "title": "ServiceNow System Admin",
@@ -1102,7 +1142,8 @@
       "LinkedIn"
     ],
     "sponsor_licence": true,
-    "date_reliable": false
+    "date_reliable": false,
+    "recruiter": false
   },
   {
     "title": "ServiceNow Developer",
@@ -1129,7 +1170,8 @@
     "sources": [
       "LinkedIn"
     ],
-    "date_reliable": false
+    "date_reliable": false,
+    "recruiter": false
   },
   {
     "title": "ServiceNow Developer",
@@ -1157,7 +1199,8 @@
       "LinkedIn"
     ],
     "sponsor_licence": true,
-    "date_reliable": false
+    "date_reliable": false,
+    "recruiter": false
   },
   {
     "title": "ServiceNow Business Analyst",
@@ -1185,7 +1228,8 @@
       "LinkedIn"
     ],
     "sponsor_licence": true,
-    "date_reliable": false
+    "date_reliable": false,
+    "recruiter": false
   },
   {
     "title": "ServiceNow Administrator",
@@ -1213,7 +1257,8 @@
       "LinkedIn"
     ],
     "sponsor_licence": true,
-    "date_reliable": false
+    "date_reliable": false,
+    "recruiter": false
   },
   {
     "title": "ServiceNow Business Development Lead (UK) | \u00a3180k OTE",
@@ -1240,7 +1285,8 @@
     "sources": [
       "LinkedIn"
     ],
-    "date_reliable": false
+    "date_reliable": false,
+    "recruiter": false
   },
   {
     "title": "Servicenow Consultant - Remote - \u00a350-75K + Bonus",
@@ -1267,7 +1313,8 @@
     "sources": [
       "LinkedIn"
     ],
-    "date_reliable": false
+    "date_reliable": false,
+    "recruiter": false
   },
   {
     "title": "ServiceNow Developer",
@@ -1294,7 +1341,8 @@
     "sources": [
       "LinkedIn"
     ],
-    "date_reliable": false
+    "date_reliable": false,
+    "recruiter": false
   },
   {
     "title": "ServiceNow Developer",
@@ -1322,7 +1370,8 @@
       "LinkedIn"
     ],
     "sponsor_licence": true,
-    "date_reliable": false
+    "date_reliable": false,
+    "recruiter": false
   },
   {
     "title": "ServiceNow Engagement Manager",
@@ -1349,7 +1398,8 @@
     "sources": [
       "LinkedIn"
     ],
-    "date_reliable": false
+    "date_reliable": false,
+    "recruiter": false
   },
   {
     "title": "ServiceNow Sales Specialist",
@@ -1377,7 +1427,8 @@
       "LinkedIn"
     ],
     "sponsor_licence": false,
-    "date_reliable": false
+    "date_reliable": false,
+    "recruiter": false
   },
   {
     "title": "ServiceNow Systems Administrator",
@@ -1404,7 +1455,8 @@
     "sources": [
       "LinkedIn"
     ],
-    "date_reliable": false
+    "date_reliable": false,
+    "recruiter": false
   },
   {
     "title": "CMDB Specialist (ServiceNow)",
@@ -1432,7 +1484,8 @@
       "LinkedIn"
     ],
     "sponsor_licence": false,
-    "date_reliable": false
+    "date_reliable": false,
+    "recruiter": true
   },
   {
     "title": "ServiceNow Developer",
@@ -1459,7 +1512,8 @@
     "sources": [
       "LinkedIn"
     ],
-    "date_reliable": false
+    "date_reliable": false,
+    "recruiter": true
   },
   {
     "title": "ServiceNow Configuration Analyst",
@@ -1487,7 +1541,8 @@
       "LinkedIn"
     ],
     "sponsor_licence": true,
-    "date_reliable": false
+    "date_reliable": false,
+    "recruiter": false
   },
   {
     "title": "Senior ServiceNow Transformation & Advisory Consultant Role",
@@ -1515,7 +1570,8 @@
       "LinkedIn"
     ],
     "sponsor_licence": true,
-    "date_reliable": false
+    "date_reliable": false,
+    "recruiter": false
   },
   {
     "title": "ServiceNow Platform Engineer",
@@ -1542,7 +1598,8 @@
     "sources": [
       "LinkedIn"
     ],
-    "date_reliable": false
+    "date_reliable": false,
+    "recruiter": false
   },
   {
     "title": "ServiceNow Platform Architect",
@@ -1570,7 +1627,8 @@
       "LinkedIn"
     ],
     "sponsor_licence": false,
-    "date_reliable": false
+    "date_reliable": false,
+    "recruiter": true
   },
   {
     "title": "ServiceNow Administrator",
@@ -1598,7 +1656,8 @@
       "LinkedIn"
     ],
     "sponsor_licence": false,
-    "date_reliable": false
+    "date_reliable": false,
+    "recruiter": false
   },
   {
     "title": "Senior ServiceNow Developer",
@@ -1626,7 +1685,8 @@
       "LinkedIn"
     ],
     "sponsor_licence": true,
-    "date_reliable": false
+    "date_reliable": false,
+    "recruiter": false
   },
   {
     "title": "ServiceNow Developer",
@@ -1653,7 +1713,8 @@
     "sources": [
       "LinkedIn"
     ],
-    "date_reliable": false
+    "date_reliable": false,
+    "recruiter": false
   },
   {
     "title": "ServiceNow Business Analyst",
@@ -1680,7 +1741,8 @@
     "sources": [
       "LinkedIn"
     ],
-    "date_reliable": false
+    "date_reliable": false,
+    "recruiter": false
   },
   {
     "title": "ServiceNow Test Analyst",
@@ -1707,7 +1769,8 @@
     "sources": [
       "LinkedIn"
     ],
-    "date_reliable": false
+    "date_reliable": false,
+    "recruiter": true
   },
   {
     "title": "ServiceNow Architect",
@@ -1735,7 +1798,8 @@
       "LinkedIn"
     ],
     "sponsor_licence": false,
-    "date_reliable": false
+    "date_reliable": false,
+    "recruiter": true
   },
   {
     "title": "ServiceNow Developer - GRC",
@@ -1762,7 +1826,8 @@
     "sources": [
       "LinkedIn"
     ],
-    "date_reliable": false
+    "date_reliable": false,
+    "recruiter": false
   },
   {
     "title": "Lead ServiceNow Developer",
@@ -1790,7 +1855,8 @@
       "LinkedIn"
     ],
     "sponsor_licence": true,
-    "date_reliable": false
+    "date_reliable": false,
+    "recruiter": false
   },
   {
     "title": "Senior ServiceNow SPM Developer",
@@ -1817,7 +1883,8 @@
     "sources": [
       "LinkedIn"
     ],
-    "date_reliable": false
+    "date_reliable": false,
+    "recruiter": true
   },
   {
     "title": "ServiceNow Engineer",
@@ -1845,7 +1912,8 @@
       "LinkedIn"
     ],
     "sponsor_licence": true,
-    "date_reliable": false
+    "date_reliable": false,
+    "recruiter": false
   },
   {
     "title": "ServiceNow Platform Support Analyst",
@@ -1873,7 +1941,8 @@
       "LinkedIn"
     ],
     "sponsor_licence": true,
-    "date_reliable": false
+    "date_reliable": false,
+    "recruiter": false
   },
   {
     "title": "Senior ServiceNow Consultant",
@@ -1900,7 +1969,8 @@
     "sources": [
       "LinkedIn"
     ],
-    "date_reliable": false
+    "date_reliable": false,
+    "recruiter": false
   },
   {
     "title": "ITSM Process Owner - Incident & Problem Management",
@@ -1928,7 +1998,8 @@
       "LinkedIn"
     ],
     "sponsor_licence": false,
-    "date_reliable": false
+    "date_reliable": false,
+    "recruiter": false
   },
   {
     "title": "ServiceNow Developer - Associate Manager",
@@ -1955,7 +2026,8 @@
     "sources": [
       "LinkedIn"
     ],
-    "date_reliable": false
+    "date_reliable": false,
+    "recruiter": false
   },
   {
     "title": "ServiceNow Solutions Advisory Lead",
@@ -1982,7 +2054,8 @@
     "sources": [
       "LinkedIn"
     ],
-    "date_reliable": false
+    "date_reliable": false,
+    "recruiter": false
   },
   {
     "title": "ServiceNow Implementation Specialist",
@@ -2010,7 +2083,8 @@
       "LinkedIn"
     ],
     "sponsor_licence": true,
-    "date_reliable": false
+    "date_reliable": false,
+    "recruiter": false
   },
   {
     "title": "ServiceNow Architect",
@@ -2038,7 +2112,8 @@
       "LinkedIn"
     ],
     "sponsor_licence": true,
-    "date_reliable": false
+    "date_reliable": false,
+    "recruiter": false
   },
   {
     "title": "ServiceNow TNI Senior Developer",
@@ -2065,7 +2140,8 @@
     "sources": [
       "LinkedIn"
     ],
-    "date_reliable": false
+    "date_reliable": false,
+    "recruiter": false
   },
   {
     "title": "Senior ServiceNow Developer, UK",
@@ -2092,7 +2168,8 @@
     "sources": [
       "LinkedIn"
     ],
-    "date_reliable": false
+    "date_reliable": false,
+    "recruiter": false
   },
   {
     "title": "ServiceNow Business Process Consultant",
@@ -2120,7 +2197,8 @@
       "LinkedIn"
     ],
     "sponsor_licence": true,
-    "date_reliable": false
+    "date_reliable": false,
+    "recruiter": false
   },
   {
     "title": "ServiceNow Advisory Consultant",
@@ -2148,7 +2226,8 @@
       "LinkedIn"
     ],
     "sponsor_licence": true,
-    "date_reliable": false
+    "date_reliable": false,
+    "recruiter": false
   },
   {
     "title": "Mid Level / Journeyman ServiceNow Developer",
@@ -2176,7 +2255,8 @@
       "LinkedIn"
     ],
     "sponsor_licence": false,
-    "date_reliable": false
+    "date_reliable": false,
+    "recruiter": false
   },
   {
     "title": "ServiceNow Technical Consultant | Up to \u00a365k",
@@ -2203,7 +2283,8 @@
     "sources": [
       "LinkedIn"
     ],
-    "date_reliable": false
+    "date_reliable": false,
+    "recruiter": false
   },
   {
     "title": "ServiceNow Green IT (ITSM) designer",
@@ -2230,7 +2311,8 @@
     "sources": [
       "LinkedIn"
     ],
-    "date_reliable": false
+    "date_reliable": false,
+    "recruiter": false
   },
   {
     "title": "ServiceNow Technical Architect",
@@ -2258,7 +2340,8 @@
       "LinkedIn"
     ],
     "sponsor_licence": false,
-    "date_reliable": false
+    "date_reliable": false,
+    "recruiter": true
   },
   {
     "title": "ServiceNow GTM / Solutions Sales Lead",
@@ -2285,7 +2368,8 @@
     "sources": [
       "LinkedIn"
     ],
-    "date_reliable": false
+    "date_reliable": false,
+    "recruiter": false
   },
   {
     "title": "ServiceNow Technical Consultant",
@@ -2313,7 +2397,8 @@
       "LinkedIn"
     ],
     "sponsor_licence": true,
-    "date_reliable": false
+    "date_reliable": false,
+    "recruiter": false
   },
   {
     "title": "Servicenow Program Director",
@@ -2341,7 +2426,8 @@
       "LinkedIn"
     ],
     "sponsor_licence": true,
-    "date_reliable": false
+    "date_reliable": false,
+    "recruiter": false
   },
   {
     "title": "ServiceNow Developer",
@@ -2368,7 +2454,8 @@
     "sources": [
       "LinkedIn"
     ],
-    "date_reliable": false
+    "date_reliable": false,
+    "recruiter": false
   },
   {
     "title": "ServiceNow Technical Architect",
@@ -2395,7 +2482,8 @@
     "sources": [
       "LinkedIn"
     ],
-    "date_reliable": false
+    "date_reliable": false,
+    "recruiter": false
   },
   {
     "title": "ITSM Resilience SME / IT Service Management SME \u2013 Third Party Management",
@@ -2422,7 +2510,8 @@
     "sources": [
       "LinkedIn"
     ],
-    "date_reliable": false
+    "date_reliable": false,
+    "recruiter": false
   },
   {
     "title": "ServiceNow Security Incident Response Engineer",
@@ -2450,7 +2539,8 @@
       "LinkedIn"
     ],
     "sponsor_licence": false,
-    "date_reliable": false
+    "date_reliable": false,
+    "recruiter": true
   },
   {
     "title": "ServiceNow Security Incident Response (SIR) Engineer",
@@ -2478,7 +2568,8 @@
       "LinkedIn"
     ],
     "sponsor_licence": false,
-    "date_reliable": false
+    "date_reliable": false,
+    "recruiter": true
   },
   {
     "title": "ServiceNow Technical Lead",
@@ -2506,7 +2597,8 @@
       "LinkedIn"
     ],
     "sponsor_licence": true,
-    "date_reliable": false
+    "date_reliable": false,
+    "recruiter": false
   },
   {
     "title": "ServiceNow (Customer Experience/Design) Lead",
@@ -2534,7 +2626,8 @@
       "LinkedIn"
     ],
     "sponsor_licence": true,
-    "date_reliable": false
+    "date_reliable": false,
+    "recruiter": false
   },
   {
     "title": "Senior IT Project Manager (ServiceNow)",
@@ -2562,6 +2655,7 @@
       "LinkedIn"
     ],
     "sponsor_licence": false,
-    "date_reliable": false
+    "date_reliable": false,
+    "recruiter": false
   }
 ]

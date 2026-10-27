@@ -29,7 +29,8 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 10 hours ago",
       "scraped_at": "2026-07-31 05:01:27",
-      "sponsor_licence": false
+      "sponsor_licence": false,
+      "recruiter": false
     },
     {
       "title": "ServiceNow Programme Manager |12-Month Contract | Outside IR35 | Remote",
@@ -50,7 +51,8 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 13 hours ago",
       "scraped_at": "2026-07-31 05:01:27",
-      "sponsor_licence": false
+      "sponsor_licence": false,
+      "recruiter": true
     },
     {
       "title": "ServiceNow Business Analyst - ServiceNow ITSM",
@@ -71,7 +73,8 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 14 hours ago",
       "scraped_at": "2026-07-31 05:01:27",
-      "sponsor_licence": false
+      "sponsor_licence": false,
+      "recruiter": false
     },
     {
       "title": "ServiceNow Developer",
@@ -92,7 +95,8 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 1 day ago",
       "scraped_at": "2026-07-31 05:01:27",
-      "sponsor_licence": true
+      "sponsor_licence": true,
+      "recruiter": false
     },
     {
       "title": "ServiceNow Event Management Delivery Lead",
@@ -113,7 +117,8 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 1 day ago",
       "scraped_at": "2026-07-31 05:01:27",
-      "sponsor_licence": false
+      "sponsor_licence": false,
+      "recruiter": false
     },
     {
       "title": "IT Service Desk Analyst",
@@ -134,7 +139,8 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 1 day ago",
       "scraped_at": "2026-07-31 05:01:27",
-      "sponsor_licence": false
+      "sponsor_licence": false,
+      "recruiter": true
     },
     {
       "title": "Outside IR35 - Oracle Service Delivery Manager (DV Cleared)",
@@ -156,7 +162,8 @@
       "description": "Posted 17 hours ago",
       "scraped_at": "2026-07-31 05:01:27",
       "sponsor_licence": false,
-      "sponsorship_scan": "blocked_by_manual_tag: sc_blocked"
+      "sponsorship_scan": "blocked_by_manual_tag: sc_blocked",
+      "recruiter": false
     },
     {
       "title": "ServiceNow Consultant",
@@ -177,7 +184,8 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 9 hours ago",
       "scraped_at": "2026-07-31 05:01:27",
-      "sponsor_licence": true
+      "sponsor_licence": true,
+      "recruiter": false
     },
     {
       "title": "ServiceNow developer",
@@ -198,7 +206,8 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 20 hours ago",
       "scraped_at": "2026-07-31 05:01:27",
-      "sponsor_licence": false
+      "sponsor_licence": false,
+      "recruiter": true
     },
     {
       "title": "Senior ServiceNow Sales Professional",
@@ -220,7 +229,8 @@
       "description": "Posted 6 hours ago",
       "scraped_at": "2026-07-31 05:01:27",
       "sponsor_licence": false,
-      "sponsorship_scan": "Security clearance required"
+      "sponsorship_scan": "Security clearance required",
+      "recruiter": false
     },
     {
       "title": "Service Desk Agent",
@@ -241,7 +251,8 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 1 day ago",
       "scraped_at": "2026-07-31 05:01:27",
-      "sponsor_licence": false
+      "sponsor_licence": false,
+      "recruiter": false
     },
     {
       "title": "IT Support Engineer",
@@ -262,7 +273,8 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 1 day ago",
       "scraped_at": "2026-07-31 05:01:27",
-      "sponsor_licence": false
+      "sponsor_licence": false,
+      "recruiter": false
     },
     {
       "title": "Benefit Operations Specialist",
@@ -282,7 +294,8 @@
       "link_status": "live",
       "visa_sponsorship": "unknown",
       "description": "Posted 9 hours ago",
-      "scraped_at": "2026-07-31 05:01:27"
+      "scraped_at": "2026-07-31 05:01:27",
+      "recruiter": false
     },
     {
       "title": "IT Asset Manager",
@@ -303,7 +316,8 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 9 hours ago",
       "scraped_at": "2026-07-31 05:01:27",
-      "sponsor_licence": false
+      "sponsor_licence": false,
+      "recruiter": true
     },
     {
       "title": "Principal Platform Architect",
@@ -324,7 +338,8 @@
       "visa_sponsorship": "unknown",
       "sponsor_licence": true,
       "description": "Company Description It all started in sunny San Diego, California in 2004 when a visionary engineer, Fred Luddy, saw the potential to transform how we work. Fast forward to today \u2014 ServiceNow stands as a global market leader, bringing innovative AI-enhanced technology to over 8,100 customers, includ",
-      "scraped_at": "2026-07-31 05:01:22"
+      "scraped_at": "2026-07-31 05:01:22",
+      "recruiter": false
     },
     {
       "title": "Sr Staff Outbound Product Manager",
@@ -345,7 +360,8 @@
       "visa_sponsorship": "unknown",
       "sponsor_licence": true,
       "description": "Company Description It all started when engineer Fred Luddy wrote code that automated a tedious task for his coworker, Phyllis. She cried tears of joy. That moment inspired Fred to build a company that could do that for everyone\u2014freeing people from busywork so they could focus on meaningful work. To",
-      "scraped_at": "2026-07-31 05:01:22"
+      "scraped_at": "2026-07-31 05:01:22",
+      "recruiter": false
     },
     {
       "title": "Forward Deployed Solution Engineer \u2013 Applied AI FDE",
@@ -366,7 +382,8 @@
       "visa_sponsorship": "unknown",
       "sponsor_licence": true,
       "description": "Company Description It all started when engineer Fred Luddy wrote code that automated a tedious task for his coworker, Phyllis. She cried tears of joy. That moment inspired Fred to build a company that could do that for everyone\u2014freeing people from busywork so they could focus on meaningful work. To",
-      "scraped_at": "2026-07-31 05:01:22"
+      "scraped_at": "2026-07-31 05:01:22",
+      "recruiter": false
     },
     {
       "title": "Senior Platform Architect",
@@ -387,7 +404,8 @@
       "visa_sponsorship": "unknown",
       "sponsor_licence": true,
       "description": "Company Description It all started in sunny San Diego, California in 2004 when a visionary engineer, Fred Luddy, saw the potential to transform how we work. Fast forward to today \u2014 ServiceNow stands as a global market leader, bringing innovative AI-enhanced technology to over 8,100 customers, includ",
-      "scraped_at": "2026-07-31 05:01:22"
+      "scraped_at": "2026-07-31 05:01:22",
+      "recruiter": false
     },
     {
       "title": "Director, Platform Architects - EMEA UK/Ire",
@@ -408,7 +426,8 @@
       "visa_sponsorship": "unknown",
       "sponsor_licence": true,
       "description": "Company Description It all started in sunny San Diego, California in 2004 when a visionary engineer, Fred Luddy, saw the potential to transform how we work. Fast forward to today \u2014 ServiceNow stands as a global market leader, bringing innovative AI-enhanced technology to over 8,100 customers, includ",
-      "scraped_at": "2026-07-31 05:01:22"
+      "scraped_at": "2026-07-31 05:01:22",
+      "recruiter": false
     },
     {
       "title": "ServiceNow Consultant Tech Lead",
@@ -427,10 +446,11 @@
       "grad_scheme": false,
       "link_status": "live",
       "visa_sponsorship": "unknown",
-      "sponsor_licence": true,
+      "sponsor_licence": false,
       "description": "ServiceNow Consultant Tech Lead GAZELLE GLOBAL CONSULTING LIMITED",
       "scraped_at": "2026-07-30 05:05:37",
-      "sponsorship_mentioned": true
+      "sponsorship_mentioned": true,
+      "recruiter": true
     },
     {
       "title": "ServiceNow Developer",
@@ -452,7 +472,8 @@
       "sponsor_licence": true,
       "description": "ServiceNow Developer DIAMOND FUNCTIONS LIMITED Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverr",
       "scraped_at": "2026-07-30 05:05:37",
-      "sponsorship_mentioned": true
+      "sponsorship_mentioned": true,
+      "recruiter": false
     },
     {
       "title": "CRM Product Manager - ServiceNow (Global role)",
@@ -474,7 +495,8 @@
       "sponsor_licence": true,
       "description": "CRM Product Manager - ServiceNow (Global role) Syntel Europe Limited Atos Group is a global leader in digital transformation with c. 70,000 employees and annual revenue of c. \u20ac 10 billion, operating in 67 countries under two brands \u2014 Atos for services and Eviden for products. European number one in cybersecurity, cloud and high-performance computing, Atos Group is committed to a secure and decarbonized future and provides tailored AI-powered, end-to-end solutions for all industries. Atos is a SE",
       "scraped_at": "2026-07-30 05:05:37",
-      "sponsorship_mentioned": true
+      "sponsorship_mentioned": true,
+      "recruiter": false
     },
     {
       "title": "ServiceNow Tester",
@@ -496,7 +518,8 @@
       "sponsor_licence": true,
       "description": "ServiceNow Tester Cognizant Worldwide Limited",
       "scraped_at": "2026-07-30 05:05:37",
-      "sponsorship_mentioned": true
+      "sponsorship_mentioned": true,
+      "recruiter": false
     },
     {
       "title": "ServiceNow Developer (CMDB, Discovery, Service Mapping & Event Management)",
@@ -518,7 +541,8 @@
       "sponsor_licence": true,
       "description": "ServiceNow Developer (CMDB, Discovery, Service Mapping & Event Management) OPAL WAVE SOLUTIONS LIMITED",
       "scraped_at": "2026-07-30 05:05:37",
-      "sponsorship_mentioned": true
+      "sponsorship_mentioned": true,
+      "recruiter": false
     },
     {
       "title": "ServiceNow Developer (CMDB, HAM & SAM)",
@@ -540,7 +564,8 @@
       "sponsor_licence": true,
       "description": "ServiceNow Developer (CMDB, HAM & SAM) OPAL WAVE SOLUTIONS LIMITED",
       "scraped_at": "2026-07-30 05:05:37",
-      "sponsorship_mentioned": true
+      "sponsorship_mentioned": true,
+      "recruiter": false
     },
     {
       "title": "ServiceNow Architect",
@@ -562,7 +587,8 @@
       "sponsor_licence": true,
       "description": "ServiceNow Architect OPAL WAVE SOLUTIONS LIMITED",
       "scraped_at": "2026-07-30 05:05:37",
-      "sponsorship_mentioned": true
+      "sponsorship_mentioned": true,
+      "recruiter": false
     },
     {
       "title": "ServiceNow Solution Architect",
@@ -584,7 +610,8 @@
       "sponsor_licence": true,
       "description": "ServiceNow Solution Architect Cognizant Worldwide Limited 100",
       "scraped_at": "2026-07-30 05:05:37",
-      "sponsorship_mentioned": true
+      "sponsorship_mentioned": true,
+      "recruiter": false
     },
     {
       "title": "ServiceNow Developer",
@@ -606,7 +633,8 @@
       "sponsor_licence": true,
       "description": "ServiceNow Developer Cognizant Worldwide Limited",
       "scraped_at": "2026-07-30 05:05:37",
-      "sponsorship_mentioned": true
+      "sponsorship_mentioned": true,
+      "recruiter": false
     },
     {
       "title": "ServiceNow Tester",
@@ -628,7 +656,8 @@
       "sponsor_licence": true,
       "description": "ServiceNow Tester Cognizant Worldwide Limited",
       "scraped_at": "2026-07-30 05:05:37",
-      "sponsorship_mentioned": true
+      "sponsorship_mentioned": true,
+      "recruiter": false
     }
   ],
   "sc_blocked": 2,

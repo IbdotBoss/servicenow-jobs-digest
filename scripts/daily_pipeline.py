@@ -402,6 +402,14 @@ def main():
 
     errors = []
 
+    # ── Step 0: Refresh the sponsor register (non-fatal: falls back to the newest copy) ──
+    log("\n" + "─" * 70)
+    log("STEP 0: Sponsor register")
+    log("─" * 70)
+    ok, out, err = run_script(os.path.join(REPO, "scripts/sponsor_register.py"), cwd=REPO, timeout=300)
+    if not ok:
+        log(f"  ⚠️ sponsor_register.py failed: {err.strip()[-200:]}", level="warn")
+
     # ── Step 1: Run scrapers ──────────────────────────────────────────────
     log("\n" + "─" * 70)
     log("STEP 1: Source scrapers")
@@ -438,13 +446,19 @@ def main():
     log("\n" + "─" * 70)
     log("STEP 3: Sponsorship scan (csv-only)")
     log("─" * 70)
-    scan_daily_snapshot(csv_only=True)
+    register_ok = scan_daily_snapshot(csv_only=True)
 
     # ── Step 4: Scan sponsorship (full page-fetch) ────────────────────────
     log("\n" + "─" * 70)
     log("STEP 4: Sponsorship scan (full page-fetch for SC/DV)")
     log("─" * 70)
     scan_daily_snapshot(csv_only=False)
+
+    # A day whose employers couldn't be checked against the register is not published:
+    # the site keeps the last checked data, and the summary carries the failure.
+    if not register_ok:
+        log("  ❌ Register check failed, so today is not published. The site keeps yesterday's data.", level="error")
+        return 1
 
     # ── Step 5: Rebuild master ────────────────────────────────────────────
     log("\n" + "─" * 70)

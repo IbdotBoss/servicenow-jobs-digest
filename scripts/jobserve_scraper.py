@@ -10,7 +10,6 @@ from datetime import datetime
 UA = 'Mozilla/5.0 (Linux; Android 10; Pixel 3) AppleWebKit/537.36'
 TODAY = datetime.now().strftime("%Y-%m-%d")
 OUT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "jobserve_jobs.json")
-SPONSOR_CSV = os.path.expanduser("~/hermes-workspace/Faajaa-Share/2026-05-06_-_Worker_and_Temporary_Worker.csv")
 COOKIE_FILE = '/tmp/js_cookies.txt'
 
 SN_TITLE_KW = ['servicenow', 'service-now', 'service now']
@@ -24,26 +23,6 @@ ADJACENT_KW = [
     'it support', 'it operations', 'service transition', 'release manager',
     'cmdb', 'csm', 'itom', 'itbm',
 ]
-
-# ── Sponsor loading ──
-def load_sponsors():
-    sponsors = set()
-    try:
-        with open(SPONSOR_CSV, 'r', encoding='utf-8-sig') as f:
-            for row in csv.DictReader(f):
-                if 'skilled worker' in row.get('Route','').lower() and 'a rating' in row.get('Type & Rating','').lower():
-                    sponsors.add(row.get('Organisation Name','').strip().lower())
-    except: pass
-    return sponsors
-
-def check_sponsor_licence(name, sponsors):
-    """Return True if company is on A-rated Skilled Worker register. Never returns 'verified'."""
-    if not name or name in ('N/A', '', '[view listing]'): return False
-    n = name.lower().strip().split(' - ')[0].split(' (')[0]
-    for s in sponsors:
-        if n in s or s in n:
-            return True
-    return False
 
 # ── Session creation ──
 def create_session():
@@ -221,8 +200,6 @@ def main():
         return []
     print(f"Session SHD: {shd}")
     
-    sponsors = load_sponsors()
-    print(f"Sponsors loaded: {len(sponsors)}")
     
     all_jobs = []
     empty_pages = 0
@@ -269,7 +246,7 @@ def main():
                 company, posted_dt = fetch_details(jid_match.group(1), COOKIE_FILE)
                 if company:
                     j['company'] = company
-                    j['sponsor_licence'] = check_sponsor_licence(company, sponsors)
+                    j['sponsor_licence'] = False  # decided by scan_sponsorship.py
                 if posted_dt:
                     j['date_posted'] = posted_dt  # Override with exact timestamp
     

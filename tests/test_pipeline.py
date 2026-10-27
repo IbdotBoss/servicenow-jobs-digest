@@ -120,7 +120,7 @@ class ScannerMention(unittest.TestCase):
 class SponsorMatch(unittest.TestCase):
     """Cases taken from the live data on 2026-10-27, when matching was by substring."""
     REGISTER = ["Gadgetxperts Limited", "Light Methods Limited", "Custom & Contract Power Solutions (CCPS) Ltd",
-                "Dhammakaya International Society of the United Kingdom", "IBM UK Ltd", "Allen Lane Limited",
+                "Dhammakaya International Society of the United Kingdom", "IBM UK Ltd", "Infotel UK Consulting Limited",
                 "Deloitte LLP", "Stott and May Professional Search Limited", "Ernst & Young LLP"]
 
     def setUp(self):
@@ -141,7 +141,7 @@ class SponsorMatch(unittest.TestCase):
 
     def test_same_employer_written_differently(self):
         self.assertTrue(self.licensed("IBM UNITED KINGDOM LIMITED"))
-        self.assertTrue(self.licensed("Allen Lane Ltd."))
+        self.assertTrue(self.licensed("Infotel UK Consulting Ltd"))
         self.assertTrue(self.licensed("Deloitte"))
         self.assertTrue(self.licensed("Ernst and Young"))
 

@@ -65,6 +65,8 @@ def sponsor_status(job):
         return "no"
     if v == "agency_unknown":
         return "agency"
+    if job.get("recruiter"):
+        return "recruiter"
     return "licensed" if job.get("sponsor_licence") else "unknown"
 
 

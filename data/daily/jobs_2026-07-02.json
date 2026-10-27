@@ -358,7 +358,7 @@
     "visa_sponsorship": "sc_blocked",
     "description": "Posted 1 day ago",
     "scraped_at": "2026-07-02 05:01:14",
-    "sponsor_licence": false,
+    "sponsor_licence": true,
     "sponsorship_scan": "Security clearance required"
   },
   {
@@ -1071,7 +1071,7 @@
     "grad_scheme": false,
     "link_status": "live",
     "visa_sponsorship": "sc_blocked",
-    "sponsor_licence": false,
+    "sponsor_licence": true,
     "description": "ServiceNow Platform Architect SYNERGIZE CONSULTING LTD",
     "scraped_at": "2026-07-02 05:02:48",
     "sponsorship_scan": "Security clearance required"
@@ -1093,7 +1093,7 @@
     "grad_scheme": false,
     "link_status": "live",
     "visa_sponsorship": "sc_blocked",
-    "sponsor_licence": false,
+    "sponsor_licence": true,
     "description": "ServiceNow Platform Developer SYNERGIZE CONSULTING LTD",
     "scraped_at": "2026-07-02 05:02:48",
     "sponsorship_scan": "Security clearance required"

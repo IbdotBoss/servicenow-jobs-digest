@@ -29,7 +29,8 @@
       "scraped_at": "2026-10-03 05:00:10",
       "sponsor_licence": false,
       "sponsorship_mentioned": false,
-      "sponsorship_scan": "Security clearance required"
+      "sponsorship_scan": "Security clearance required",
+      "recruiter": true
     },
     {
       "title": "ServiceNow",
@@ -52,7 +53,8 @@
       "scraped_at": "2026-10-03 05:00:10",
       "sponsor_licence": false,
       "sponsorship_mentioned": false,
-      "sponsorship_scan": "Security clearance required"
+      "sponsorship_scan": "Security clearance required",
+      "recruiter": false
     },
     {
       "title": "ServiceNow Solution Architect",
@@ -75,7 +77,8 @@
       "scraped_at": "2026-10-03 05:00:10",
       "sponsor_licence": false,
       "sponsorship_mentioned": false,
-      "sponsorship_scan": "Security clearance required"
+      "sponsorship_scan": "Security clearance required",
+      "recruiter": true
     },
     {
       "title": "SC Cleared Senior ServiceNow Technical Consultant - SecOps",
@@ -98,7 +101,8 @@
       "scraped_at": "2026-10-03 05:00:10",
       "sponsor_licence": false,
       "sponsorship_mentioned": false,
-      "sponsorship_scan": "blocked_by_manual_tag: sc_blocked"
+      "sponsorship_scan": "blocked_by_manual_tag: sc_blocked",
+      "recruiter": true
     },
     {
       "title": "Service Transition Manager/Release Manager (ITIL V3/V4 - EUC/ServcieNow)",
@@ -120,7 +124,8 @@
       "description": "Posted 1 day ago",
       "scraped_at": "2026-10-03 05:00:10",
       "sponsor_licence": false,
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "Helpdesk Analyst",
@@ -142,7 +147,8 @@
       "description": "Posted 18 hours ago",
       "scraped_at": "2026-10-03 05:00:10",
       "sponsor_licence": false,
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "IT Service Manager",
@@ -165,7 +171,8 @@
       "scraped_at": "2026-10-03 05:00:10",
       "sponsor_licence": false,
       "sponsorship_mentioned": false,
-      "sponsorship_scan": "Security clearance required"
+      "sponsorship_scan": "Security clearance required",
+      "recruiter": true
     },
     {
       "title": "IT Operations Manager",
@@ -187,7 +194,8 @@
       "description": "Posted 21 hours ago",
       "scraped_at": "2026-10-03 05:00:10",
       "sponsor_licence": false,
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "Service Desk Analyst - M365",
@@ -209,7 +217,8 @@
       "description": "Posted 1 day ago",
       "scraped_at": "2026-10-03 05:00:10",
       "sponsor_licence": false,
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "CMDB Application Developer & Reporting Specialist - Active SC Clearance",
@@ -232,7 +241,8 @@
       "scraped_at": "2026-10-03 05:00:10",
       "sponsor_licence": false,
       "sponsorship_mentioned": false,
-      "sponsorship_scan": "blocked_by_manual_tag: sc_blocked"
+      "sponsorship_scan": "blocked_by_manual_tag: sc_blocked",
+      "recruiter": false
     },
     {
       "title": "ServiceNow Consultant - up to &100,000 + Bonus - Hybrid",
@@ -254,7 +264,8 @@
       "description": "Posted 6 hours ago",
       "scraped_at": "2026-10-03 05:00:10",
       "sponsor_licence": false,
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "ServiceNow Solution Architect",
@@ -275,8 +286,9 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 15 hours ago",
       "scraped_at": "2026-10-03 05:00:10",
-      "sponsor_licence": true,
-      "sponsorship_mentioned": false
+      "sponsor_licence": false,
+      "sponsorship_mentioned": false,
+      "recruiter": true
     },
     {
       "title": "SACM Consultant",
@@ -298,7 +310,8 @@
       "description": "Posted 1 hour ago",
       "scraped_at": "2026-10-03 05:00:10",
       "sponsor_licence": false,
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "IT Helpdesk Analyst (German Speaking)",
@@ -320,7 +333,8 @@
       "description": "Posted 7 hours ago",
       "scraped_at": "2026-10-03 05:00:10",
       "sponsor_licence": false,
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": true
     },
     {
       "title": "Service Delivery Manager",
@@ -342,7 +356,8 @@
       "description": "Posted 1 day ago",
       "scraped_at": "2026-10-03 05:00:10",
       "sponsor_licence": false,
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": true
     },
     {
       "title": "ServiceNow Offering Development Manager",
@@ -364,7 +379,8 @@
       "sponsor_licence": true,
       "description": "ServiceNow Offering Development Manager Lenovo Technology (United Kingdom) Limited Farnborough, England, United Kingdom \u2014 Full-time \u2014 4d ago",
       "scraped_at": "2026-10-03 05:01:18",
-      "sponsorship_mentioned": true
+      "sponsorship_mentioned": true,
+      "recruiter": false
     },
     {
       "title": "Servicenow Plaltform Architect",
@@ -386,7 +402,8 @@
       "sponsor_licence": true,
       "description": "Servicenow Plaltform Architect PRACYVA LTD United Kingdom Contract \u2014 4d ago",
       "scraped_at": "2026-10-03 05:01:18",
-      "sponsorship_mentioned": true
+      "sponsorship_mentioned": true,
+      "recruiter": false
     },
     {
       "title": "ServiceNow System Administrator",
@@ -408,7 +425,8 @@
       "sponsor_licence": true,
       "description": "ServiceNow System Administrator Wavenet Limited Solihull, England, United Kingdom \u2014 Full-time \u2014 5d ago",
       "scraped_at": "2026-10-03 05:01:18",
-      "sponsorship_mentioned": true
+      "sponsorship_mentioned": true,
+      "recruiter": false
     },
     {
       "title": "Senior Servicenow Technical Consultant",
@@ -431,7 +449,8 @@
       "description": "Senior Servicenow Technical Consultant Syntel Europe Limited England, United Kingdom \u2014 Other \u2014 5d ago",
       "scraped_at": "2026-10-03 05:01:18",
       "sponsorship_mentioned": true,
-      "sponsorship_scan": "Security clearance required"
+      "sponsorship_scan": "Security clearance required",
+      "recruiter": false
     },
     {
       "title": "Servicenow Architect",
@@ -453,7 +472,8 @@
       "sponsor_licence": true,
       "description": "Servicenow Architect PRACYVA LTD United Kingdom Contract \u2014 5d ago",
       "scraped_at": "2026-10-03 05:01:18",
-      "sponsorship_mentioned": true
+      "sponsorship_mentioned": true,
+      "recruiter": false
     },
     {
       "title": "Senior ServiceNow Developer",
@@ -475,7 +495,8 @@
       "sponsor_licence": true,
       "description": "Senior ServiceNow Developer National Grid Electricity Distribution (South West) plc Warwick, England, United Kingdom Full-time \u2014 7d ago",
       "scraped_at": "2026-10-03 05:01:18",
-      "sponsorship_mentioned": true
+      "sponsorship_mentioned": true,
+      "recruiter": false
     },
     {
       "title": "Senior ServiceNow Architect",
@@ -498,7 +519,8 @@
       "description": "Senior ServiceNow Architect AUTOMATION LOGIC LTD London, England, United Kingdom Full-time \u2014 8d ago",
       "scraped_at": "2026-10-03 05:01:18",
       "sponsorship_mentioned": true,
-      "sponsorship_scan": "Security clearance required"
+      "sponsorship_scan": "Security clearance required",
+      "recruiter": false
     },
     {
       "title": "ServiceNow Technical Consultant",
@@ -521,7 +543,8 @@
       "description": "ServiceNow Technical Consultant IBM UNITED KINGDOM LIMITED Hursley, England, United Kingdom Full-time \u2014 8d ago",
       "scraped_at": "2026-10-03 05:01:18",
       "sponsorship_mentioned": false,
-      "sponsorship_scan": "Security clearance required"
+      "sponsorship_scan": "Security clearance required",
+      "recruiter": false
     },
     {
       "title": "Senior ServiceNow Architect",
@@ -543,7 +566,8 @@
       "sponsor_licence": true,
       "description": "Senior ServiceNow Architect EPAM Systems Ltd London, England, United Kingdom Full-time \u2014 9d ago",
       "scraped_at": "2026-10-03 05:01:18",
-      "sponsorship_mentioned": true
+      "sponsorship_mentioned": true,
+      "recruiter": false
     },
     {
       "title": "Senior ServiceNow Consultant",
@@ -565,7 +589,8 @@
       "sponsor_licence": true,
       "description": "Senior ServiceNow Consultant EPAM Systems Ltd London, England, United Kingdom Full-time \u2014 9d ago",
       "scraped_at": "2026-10-03 05:01:18",
-      "sponsorship_mentioned": true
+      "sponsorship_mentioned": true,
+      "recruiter": false
     },
     {
       "title": "ServiceNow Technical Architect",
@@ -587,7 +612,8 @@
       "sponsor_licence": true,
       "description": "ServiceNow Technical Architect UP3 Services Ltd London Area, United Kingdom Full-time \u2014 9d ago",
       "scraped_at": "2026-10-03 05:01:18",
-      "sponsorship_mentioned": true
+      "sponsorship_mentioned": true,
+      "recruiter": false
     },
     {
       "title": "Senior ServiceNow Business Analyst",
@@ -609,7 +635,8 @@
       "sponsor_licence": true,
       "description": "Senior ServiceNow Business Analyst Mphasis UK Limited London Area, United Kingdom Full-time \u2014 9d ago",
       "scraped_at": "2026-10-03 05:01:18",
-      "sponsorship_mentioned": true
+      "sponsorship_mentioned": true,
+      "recruiter": false
     },
     {
       "title": "Junior ServiceNow Consultant",
@@ -631,7 +658,8 @@
       "sponsor_licence": true,
       "description": "Junior ServiceNow Consultant AUTOMATION LOGIC LTD Belfast, Northern Ireland, United Kingdom Full-time \u2014 10d ago",
       "scraped_at": "2026-10-03 05:01:18",
-      "sponsorship_mentioned": true
+      "sponsorship_mentioned": true,
+      "recruiter": false
     },
     {
       "title": "ServiceNow Developer (Assistant Vice President)",
@@ -653,7 +681,8 @@
       "sponsor_licence": false,
       "description": "ServiceNow Developer (Assistant Vice President) LevelUP Talent Solutions Ltd London Area, United Kingdom Full-time \u2014 11d ago",
       "scraped_at": "2026-10-03 05:01:18",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": true
     },
     {
       "title": "ServiceNow Technical Consultant",
@@ -672,10 +701,11 @@
       "grad_scheme": false,
       "link_status": "live",
       "visa_sponsorship": "unknown",
-      "sponsor_licence": true,
+      "sponsor_licence": false,
       "description": "ServiceNow Technical Consultant GAZELLE GLOBAL CONSULTING LIMITED England, United Kingdom Contract \u2014 11d ago",
       "scraped_at": "2026-10-03 05:01:18",
-      "sponsorship_mentioned": true
+      "sponsorship_mentioned": true,
+      "recruiter": true
     },
     {
       "title": "ServiceNow Developer",
@@ -697,7 +727,8 @@
       "sponsor_licence": true,
       "description": "ServiceNow Developer METHODS BUSINESS AND DIGITAL TECHNOLOGY LIMITED London, England, United Kingdom Full-time \u2014 12d ago",
       "scraped_at": "2026-10-03 05:01:18",
-      "sponsorship_mentioned": true
+      "sponsorship_mentioned": true,
+      "recruiter": false
     },
     {
       "title": "ServiceNow Architect - Telecom",
@@ -719,7 +750,8 @@
       "sponsor_licence": true,
       "description": "ServiceNow Architect - Telecom Cognizant Worldwide Limited London Colney, England, United Kingdom Full-time \u2014 15d ago",
       "scraped_at": "2026-10-03 05:01:18",
-      "sponsorship_mentioned": true
+      "sponsorship_mentioned": true,
+      "recruiter": false
     },
     {
       "title": "ServiceNow CPQ Consultant",
@@ -741,7 +773,8 @@
       "sponsor_licence": true,
       "description": "ServiceNow CPQ Consultant X4 GROUP LTD United Kingdom Contract \u2014 16d ago",
       "scraped_at": "2026-10-03 05:01:18",
-      "sponsorship_mentioned": true
+      "sponsorship_mentioned": true,
+      "recruiter": false
     },
     {
       "title": "ServiceNow Architect",
@@ -760,10 +793,11 @@
       "grad_scheme": false,
       "link_status": "live",
       "visa_sponsorship": "unknown",
-      "sponsor_licence": false,
+      "sponsor_licence": true,
       "description": "ServiceNow Architect LTM UK & IRELAND LIMITED Stratford-Upon-Avon, England, United Kingdom Full-time \u2014 16d ago",
       "scraped_at": "2026-10-03 05:01:18",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "Senior ServiceNow Solution Architect",
@@ -782,10 +816,11 @@
       "grad_scheme": false,
       "link_status": "live",
       "visa_sponsorship": "unknown",
-      "sponsor_licence": false,
+      "sponsor_licence": true,
       "description": "Senior ServiceNow Solution Architect LTM UK & IRELAND LIMITED Stratford-Upon-Avon, England, United Kingdom Full-time \u2014 16d ago",
       "scraped_at": "2026-10-03 05:01:18",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "ServiceNow Platform and Solution Architect",
@@ -808,7 +843,8 @@
       "description": "ServiceNow Platform and Solution Architect EDF ENERGY LAKE LIMITED Exeter, England, United Kingdom Full-time \u2014 16d ago",
       "scraped_at": "2026-10-03 05:01:18",
       "sponsorship_mentioned": false,
-      "sponsorship_scan": "Security clearance required"
+      "sponsorship_scan": "Security clearance required",
+      "recruiter": false
     },
     {
       "title": "ServiceNow Functional Consultant",
@@ -827,10 +863,11 @@
       "grad_scheme": false,
       "link_status": "live",
       "visa_sponsorship": "unknown",
-      "sponsor_licence": false,
+      "sponsor_licence": true,
       "description": "ServiceNow Functional Consultant US3 GLOBAL CONSULTING LTD England, United Kingdom Contract \u2014 18d ago",
       "scraped_at": "2026-10-03 05:01:18",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "ServiceNow Senior Engagement Manager",
@@ -852,7 +889,8 @@
       "sponsor_licence": true,
       "description": "ServiceNow Senior Engagement Manager FOCUS CLOUD GROUP LIMITED United Kingdom Contract \u2014 19d ago",
       "scraped_at": "2026-10-03 05:01:18",
-      "sponsorship_mentioned": true
+      "sponsorship_mentioned": true,
+      "recruiter": false
     },
     {
       "title": "HR Platforms ServiceNow HRSD Manager",
@@ -874,7 +912,8 @@
       "sponsor_licence": true,
       "description": "HR Platforms ServiceNow HRSD Manager KPMG LLP United Kingdom Full-time \u2014 19d ago",
       "scraped_at": "2026-10-03 05:01:18",
-      "sponsorship_mentioned": true
+      "sponsorship_mentioned": true,
+      "recruiter": false
     },
     {
       "title": "SME - ServiceNow,JavaScript",
@@ -896,7 +935,8 @@
       "sponsor_licence": true,
       "description": "SME - ServiceNow,JavaScript HCL Technologies UK Limited City Of London, United Kingdom Full-time \u2014 22d ago",
       "scraped_at": "2026-10-03 05:01:18",
-      "sponsorship_mentioned": true
+      "sponsorship_mentioned": true,
+      "recruiter": false
     },
     {
       "title": "Forward Deployed Solution Engineer \u2013 Applied\u202fAI FDE",
@@ -918,7 +958,8 @@
       "sponsor_licence": true,
       "description": "Company Description It all started when engineer Fred Luddy wrote code that automated a tedious task for his coworker, Phyllis. She cried tears of joy. That moment inspired Fred to build a company that could do that for everyone\u2014freeing people from busywork so they could focus on meaningful work. To",
       "scraped_at": "2026-10-03 05:01:26",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "Manager,  Expert Services (Armis)",
@@ -940,7 +981,8 @@
       "sponsor_licence": true,
       "description": "Company Description It all started when engineer Fred Luddy wrote code that automated a tedious task for his coworker, Phyllis. She cried tears of joy. That moment inspired Fred to build a company that could do that for everyone\u2014freeing people from busywork so they could focus on meaningful work. To",
       "scraped_at": "2026-10-03 05:01:26",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "Principal Success Architect - AI Control Tower",
@@ -962,7 +1004,8 @@
       "sponsor_licence": true,
       "description": "Company Description It all started when engineer Fred Luddy wrote code that automated a tedious task for his coworker, Phyllis. She cried tears of joy. That moment inspired Fred to build a company that could do that for everyone\u2014freeing people from busywork so they could focus on meaningful work. To",
       "scraped_at": "2026-10-03 05:01:26",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "Principal Platform Architect",
@@ -984,7 +1027,8 @@
       "sponsor_licence": true,
       "description": "Company Description It all started when engineer Fred Luddy wrote code that automated a tedious task for his coworker, Phyllis. She cried tears of joy. That moment inspired Fred to build a company that could do that for everyone\u2014freeing people from busywork so they could focus on meaningful work. To",
       "scraped_at": "2026-10-03 05:01:26",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "Staff AI Agent Engineer \u2013 Moveworks | Customer Deployment",
@@ -1006,7 +1050,8 @@
       "sponsor_licence": true,
       "description": "Company Description It all started when engineer Fred Luddy wrote code that automated a tedious task for his coworker, Phyllis. She cried tears of joy. That moment inspired Fred to build a company that could do that for everyone\u2014freeing people from busywork so they could focus on meaningful work. To",
       "scraped_at": "2026-10-03 05:01:26",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "Senior Principal Platform Architect",
@@ -1028,7 +1073,8 @@
       "sponsor_licence": true,
       "description": "Company Description It all started in sunny San Diego, California in 2004 when a visionary engineer, Fred Luddy, saw the potential to transform how we work. Fast forward to today \u2014 ServiceNow stands as a global market leader, bringing innovative AI-enhanced technology to over 8,100 customers, includ",
       "scraped_at": "2026-10-03 05:01:26",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "Senior Platform Architect",
@@ -1050,7 +1096,8 @@
       "sponsor_licence": true,
       "description": "Company Description It all started in sunny San Diego, California in 2004 when a visionary engineer, Fred Luddy, saw the potential to transform how we work. Fast forward to today \u2014 ServiceNow stands as a global market leader, bringing innovative AI-enhanced technology to over 8,100 customers, includ",
       "scraped_at": "2026-10-03 05:01:26",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     }
   ],
   "sc_blocked": 10,

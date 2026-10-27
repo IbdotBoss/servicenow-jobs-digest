@@ -11,23 +11,27 @@ It answers one question for people who need a visa to work in the UK: which of t
 | Label | What was checked |
 |---|---|
 | Licensed sponsor | The employer's name matches an A-rated Skilled Worker sponsor on the register. |
+| Recruiter | A recruitment firm posted the role. A recruiter's licence covers its own staff, not the client's role. |
 | No register match | The name wasn't found. The employer may be registered under a different name. |
 | Needs SC or DV clearance | The listing asks for security clearance, which has UK residence requirements. |
-| Agency | A recruiter posted the role and the employer isn't named. A recruiter's licence doesn't cover its clients. |
+| Agency | The listing doesn't name the employer. |
 | No sponsorship | The listing says it won't sponsor. |
 
 A licensed employer *can* sponsor. That doesn't mean it will for a given role, so check the listing.
 
 Names are matched whole, after dropping endings like Ltd, PLC and UK. "IBM UNITED KINGDOM LIMITED" matches "IBM UK Ltd". "TXP" does not match "Gadgetxperts Limited". Until October 2026 the match was by substring, and that produced false badges like the TXP one.
 
+Recruiters are recognised by words in their name (recruit, resourcing, staffing, personnel, workforce, executive search) and by the list in `data/recruiters.txt`. When one slips through, add its name to that file.
+
 ## How it runs
 
 A scheduled job on a small VPS runs `daily_cron.sh` at 05:00 UTC. That runs `scripts/daily_pipeline.py`, which does this in order:
 
+0. **Register.** `sponsor_register.py` downloads the day's register CSV from gov.uk into `data/register/` and checks it looks right. If gov.uk is down it uses the newest copy it has, and the summary warns once that copy is more than a week old.
 1. **Scrape.** JobServe (mobile pages), LinkedIn (the public guest search), Hunt UK and Nelson Frank (Playwright), and ServiceNow's own careers feed (RSS).
 2. **Merge.** `merge_snapshot.py` writes the day's roles to `data/daily/jobs_YYYY-MM-DD.json`.
-3. **Check.** `scan_sponsorship.py` looks every employer up in the register, then reads each of the day's listing pages for clearance and "no sponsorship" wording.
-4. **Rebuild.** `rebuild_master.py` rebuilds `data/master.json` from every daily snapshot. The snapshots are the record, so the master can always be rebuilt.
+3. **Check.** `scan_sponsorship.py` looks every employer up in the register, then reads each of the day's listing pages for clearance and "no sponsorship" wording. It is the only step that decides whether an employer is licensed. If the register check fails, nothing is published that day and the site keeps the last checked data.
+4. **Rebuild.** `rebuild_master.py` rebuilds `data/master.json` from every daily snapshot. The snapshots are the record, so the master can always be rebuilt. A job's licence status comes from the newest snapshot it appears in, so a licence the register drops stops showing the next time the job is seen.
 5. **Export.** `export_site.py` writes what the site reads: `docs/data/active.json` (open roles) and `docs/data/archive/` (closed roles by month).
 6. **Publish.** The pipeline commits `data/` and `docs/data/` and pushes, and GitHub Pages serves `docs/`.
 
@@ -47,7 +51,7 @@ A role is open until it hasn't been seen for 14 days.
 | `u` | Link to the listing |
 | `src` | Where it was found |
 | `role` | `architect`, `developer`, `consultant`, `manager`, `analyst`, `admin`, `other`, or `sn-adjacent` |
-| `sp` | `licensed`, `unknown`, `clearance`, `agency` or `no`, as in the table above |
+| `sp` | `licensed`, `recruiter`, `unknown`, `clearance`, `agency` or `no`, as in the table above |
 | `m` | The listing mentions sponsorship (only set when nothing contradicts it) |
 | `fs`, `ls` | First and last day the role was seen |
 
@@ -62,6 +66,8 @@ daily_cron.sh, daily_cron.py   entry point for the scheduled run
 scripts/                       the pipeline, one script per step
 tests/                         unit tests for the export step and the sponsorship scanner
 data/                          history: daily snapshots, master.json, per-source files (not served)
+data/recruiters.txt            recruiters whose names don't say so; edit to fix a missed one
+data/register/                 the downloaded sponsor register, last 3 copies (not committed)
 docs/                          the site (index.html) and the files it reads (docs/data/)
 ```
 
@@ -74,9 +80,10 @@ pip install -r requirements.txt
 python3 -m playwright install chromium
 ```
 
-Download the register CSV from [gov.uk](https://www.gov.uk/government/publications/register-of-licensed-sponsors-workers) and point `SPONSOR_CSV` in `scripts/scan_sponsorship.py` at it. Then:
+Then:
 
 ```bash
+python3 scripts/sponsor_register.py               # download today's register from gov.uk
 python3 scripts/daily_pipeline.py --no-linkedin   # skip LinkedIn
 python3 scripts/export_site.py                    # rebuild only the site's files
 python3 -m unittest discover -s tests             # tests
@@ -86,8 +93,8 @@ python3 -m unittest discover -s tests             # tests
 
 ## Limits
 
-- The register copy in use is dated 6 May 2026. Employers licensed since then show as "No register match". The site shows the date.
 - Whole-name matching misses employers whose listing uses a trading name that differs from the registered one. That fails safe: a missed badge, never a false one.
+- Recruiter detection works from names. A recruiter with a plain name shows as a licensed sponsor until it's added to `data/recruiters.txt`.
 - Most listings don't state a work pattern, so most rows show none.
 - Indeed, Totaljobs and CV-Library block requests from the server, so they aren't sources.
 

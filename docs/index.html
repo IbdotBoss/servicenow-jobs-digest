@@ -190,6 +190,7 @@ footer .fine { grid-column: 1 / -1; color: var(--color-muted); border-top: 1px s
       <div><dt>Licensed sponsor</dt><dd>The employer is on the register.</dd></div>
       <div><dt>No register match</dt><dd>The name wasn't found. It may be registered under another name.</dd></div>
       <div><dt>Needs SC or DV clearance</dt><dd>Security clearance has UK residence requirements.</dd></div>
+      <div><dt>Recruiter</dt><dd>A recruitment firm posted it. Its licence, if any, covers its own staff, not the client's role.</dd></div>
       <div><dt>Agency, or No sponsorship</dt><dd>The employer isn't named, or the listing says it won't sponsor.</dd></div>
     </dl></div>
     <div><h2>Sources</h2><p id="sources"></p><p>A role leaves the list after 14 days without being seen again.</p></div>
@@ -208,7 +209,7 @@ fetch('data/active.json', { cache: 'no-cache' })
 
 function start(D) {
 const UPDATED = D.updated;
-const SP = { licensed: ['Licensed sponsor', 'Employer is on the register'], unknown: ['No register match', 'Not found under this name'], clearance: ['Needs SC or DV clearance', 'Residence rules apply'], agency: ['Agency', 'Employer not named'], no: ['No sponsorship', 'Stated in the listing'] };
+const SP = { licensed: ['Licensed sponsor', 'Employer is on the register'], unknown: ['No register match', 'Not found under this name'], clearance: ['Needs SC or DV clearance', 'Residence rules apply'], agency: ['Agency', 'Employer not named'], recruiter: ['Recruiter', 'Posted by a recruitment firm'], no: ['No sponsorship', 'Stated in the listing'] };
 const ROLE = { architect: 'Architect', developer: 'Developer', manager: 'Manager', consultant: 'Consultant', analyst: 'Analyst', admin: 'Administrator', other: 'Other ServiceNow', 'sn-adjacent': 'Next to ServiceNow' };
 const WORK = { remote: 'Remote', hybrid: 'Hybrid', '': 'Not stated' };
 const jobs = D.jobs.map(j => ({ ...j, w: j.r || '' }));

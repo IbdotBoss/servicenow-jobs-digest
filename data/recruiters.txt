@@ -1,0 +1,15 @@
+# Recruiters whose names don't say so. One employer per line, as the listing writes it;
+# matching ignores case and endings like Ltd, Limited, UK (scan_sponsorship.normalize_company).
+# A recruiter's sponsor licence covers its own staff, not the client roles it advertises,
+# so these show as "Recruiter" instead of "Licensed sponsor".
+# Names with recruit, resourcing, staffing, personnel, workforce or executive search in them
+# are caught without being listed here.
+Alexander Mann Solutions
+Allen Lane
+Gazelle Global Consulting
+Hackajob
+Korn Ferry
+Next Ventures
+Nonstop Consulting
+Square One Resources
+Stott and May Professional Search

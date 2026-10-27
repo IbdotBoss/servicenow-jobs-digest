@@ -30,7 +30,8 @@
       "scraped_at": "2026-10-10 05:00:10",
       "sponsor_licence": false,
       "sponsorship_mentioned": false,
-      "sponsorship_scan": "Security clearance required"
+      "sponsorship_scan": "Security clearance required",
+      "recruiter": false
     },
     {
       "title": "ServiceNow Developer",
@@ -52,7 +53,8 @@
       "description": "Posted 15 hours ago",
       "scraped_at": "2026-10-10 05:00:10",
       "sponsor_licence": false,
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": true
     },
     {
       "title": "Service Manager (ServiceNow)",
@@ -74,7 +76,8 @@
       "description": "Posted 1 day ago",
       "scraped_at": "2026-10-10 05:00:10",
       "sponsor_licence": false,
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": true
     },
     {
       "title": "Enterprise Service Manager - ServiceNow",
@@ -96,7 +99,8 @@
       "description": "Posted 17 hours ago",
       "scraped_at": "2026-10-10 05:00:10",
       "sponsor_licence": false,
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "Enterprise Service Manager - ServiceNow/HR Service Delivery",
@@ -118,7 +122,8 @@
       "description": "Posted 1 day ago",
       "scraped_at": "2026-10-10 05:00:10",
       "sponsor_licence": false,
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "SC Cleared ServiceNow Developer | HRSD & CSM | Public Sector",
@@ -141,7 +146,8 @@
       "scraped_at": "2026-10-10 05:00:10",
       "sponsor_licence": false,
       "sponsorship_mentioned": false,
-      "sponsorship_scan": "blocked_by_manual_tag: sc_blocked"
+      "sponsorship_scan": "blocked_by_manual_tag: sc_blocked",
+      "recruiter": true
     },
     {
       "title": "SC Cleared ServiceNow Developer | Public Sector | Inside IR35",
@@ -164,7 +170,8 @@
       "scraped_at": "2026-10-10 05:00:10",
       "sponsor_licence": false,
       "sponsorship_mentioned": false,
-      "sponsorship_scan": "blocked_by_manual_tag: sc_blocked"
+      "sponsorship_scan": "blocked_by_manual_tag: sc_blocked",
+      "recruiter": true
     },
     {
       "title": "Architecture & Platform Lead (SharePoint, ServiceNow, Confluence, LeanIX) - London and remote",
@@ -186,7 +193,8 @@
       "description": "Posted 20 hours ago",
       "scraped_at": "2026-10-10 05:00:10",
       "sponsor_licence": false,
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "Storage & Backup Engineer: NetBackup, Storage, ServiceNow",
@@ -209,7 +217,8 @@
       "scraped_at": "2026-10-10 05:00:10",
       "sponsor_licence": false,
       "sponsorship_mentioned": false,
-      "sponsorship_scan": "Security clearance required"
+      "sponsorship_scan": "Security clearance required",
+      "recruiter": false
     },
     {
       "title": "Knowledge Management Architecture Lead (SharePoint, Confluence, ServiceNow, LeanIX)",
@@ -231,7 +240,8 @@
       "description": "Posted 19 hours ago",
       "scraped_at": "2026-10-10 05:00:10",
       "sponsor_licence": false,
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "IT Asset Manager - ITAM ITIL Banking",
@@ -253,7 +263,8 @@
       "description": "Posted 1 day ago",
       "scraped_at": "2026-10-10 05:00:10",
       "sponsor_licence": false,
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "IT Support Engineer | \u00a3200 - \u00a3230 | Inside IR35 PAYE | 2-3 Months | Onsite Reigate",
@@ -275,7 +286,8 @@
       "description": "Posted 14 hours ago",
       "scraped_at": "2026-10-10 05:00:10",
       "sponsor_licence": false,
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": true
     },
     {
       "title": "CMDB Application Developer & Reporting Specialist - Active SC Clearance",
@@ -298,7 +310,8 @@
       "scraped_at": "2026-10-10 05:00:10",
       "sponsor_licence": false,
       "sponsorship_mentioned": false,
-      "sponsorship_scan": "blocked_by_manual_tag: sc_blocked"
+      "sponsorship_scan": "blocked_by_manual_tag: sc_blocked",
+      "recruiter": false
     },
     {
       "title": "ServiceNow Architect",
@@ -321,7 +334,8 @@
       "scraped_at": "2026-10-10 05:00:10",
       "sponsor_licence": false,
       "sponsorship_mentioned": false,
-      "sponsorship_scan": "Security clearance required"
+      "sponsorship_scan": "Security clearance required",
+      "recruiter": true
     },
     {
       "title": "ServiceNow Software Engineer",
@@ -343,7 +357,8 @@
       "description": "Posted 11 hours ago",
       "scraped_at": "2026-10-10 05:00:10",
       "sponsor_licence": false,
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "ServiceNow Transformation Consultant - Business Advisory",
@@ -365,7 +380,8 @@
       "description": "Posted 2 hours ago",
       "scraped_at": "2026-10-10 05:00:10",
       "sponsor_licence": false,
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "Senior ServiceNow Technical Consultant (on-site Erskine)",
@@ -386,8 +402,9 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 12 hours ago",
       "scraped_at": "2026-10-10 05:00:10",
-      "sponsor_licence": true,
-      "sponsorship_mentioned": false
+      "sponsor_licence": false,
+      "sponsorship_mentioned": false,
+      "recruiter": true
     },
     {
       "title": "SC Cleared Senior ServiceNow Technical Consultant - SecOps",
@@ -410,7 +427,8 @@
       "scraped_at": "2026-10-10 05:00:10",
       "sponsor_licence": false,
       "sponsorship_mentioned": false,
-      "sponsorship_scan": "blocked_by_manual_tag: sc_blocked"
+      "sponsorship_scan": "blocked_by_manual_tag: sc_blocked",
+      "recruiter": true
     },
     {
       "title": "Service Desk Analyst - AV Division",
@@ -432,7 +450,8 @@
       "description": "Posted 1 day ago",
       "scraped_at": "2026-10-10 05:00:10",
       "sponsor_licence": false,
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "Senior ServiceNow Developer",
@@ -454,7 +473,8 @@
       "description": "",
       "date_posted": "2026-10-10",
       "sponsorship_scan": "linkedin_js (cannot read full description)",
-      "date_reliable": false
+      "date_reliable": false,
+      "recruiter": false
     },
     {
       "title": "Senior ServiceNow Engineer, UK",
@@ -476,7 +496,8 @@
       "description": "",
       "date_posted": "2026-10-10",
       "sponsorship_scan": "linkedin_js (cannot read full description)",
-      "date_reliable": false
+      "date_reliable": false,
+      "recruiter": false
     },
     {
       "title": "ServiceNow Developer",
@@ -498,7 +519,8 @@
       "description": "",
       "date_posted": "2026-10-10",
       "sponsorship_scan": "linkedin_js (cannot read full description)",
-      "date_reliable": false
+      "date_reliable": false,
+      "recruiter": false
     },
     {
       "title": "ServiceNow Lead Technical Consultant - ITOM/AIOps",
@@ -520,7 +542,8 @@
       "description": "",
       "date_posted": "2026-10-10",
       "sponsorship_scan": "linkedin_js (cannot read full description)",
-      "date_reliable": false
+      "date_reliable": false,
+      "recruiter": false
     },
     {
       "title": "ServiceNow Technical Consultant",
@@ -542,7 +565,8 @@
       "description": "",
       "date_posted": "2026-10-10",
       "sponsorship_scan": "linkedin_js (cannot read full description)",
-      "date_reliable": false
+      "date_reliable": false,
+      "recruiter": false
     },
     {
       "title": "Business Analyst (ServiceNow & Product Design)",
@@ -564,7 +588,8 @@
       "sponsor_licence": false,
       "description": "Business Analyst (ServiceNow & Product Design)",
       "scraped_at": "2026-10-10 05:00:32",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "Business Analyst \u2013 ServiceNow",
@@ -586,7 +611,8 @@
       "sponsor_licence": false,
       "description": "Business Analyst \u2013 ServiceNow",
       "scraped_at": "2026-10-10 05:00:32",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "Manager, Lead Specialist, ServiceNow CMDB Solution Architect",
@@ -608,7 +634,8 @@
       "sponsor_licence": false,
       "description": "Manager, Lead Specialist, ServiceNow CMDB Solution Architect",
       "scraped_at": "2026-10-10 05:00:32",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "ServiceNow Managed Support Service Consultant",
@@ -630,7 +657,8 @@
       "sponsor_licence": false,
       "description": "ServiceNow Managed Support Service Consultant",
       "scraped_at": "2026-10-10 05:00:32",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "ServiceNow Consultant",
@@ -652,7 +680,8 @@
       "sponsor_licence": false,
       "description": "ServiceNow Consultant",
       "scraped_at": "2026-10-10 05:00:32",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "ServiceNow Offering Development Manager",
@@ -674,7 +703,8 @@
       "sponsor_licence": false,
       "description": "ServiceNow Offering Development Manager",
       "scraped_at": "2026-10-10 05:00:32",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "Senior Servicenow Technical Consultant",
@@ -697,7 +727,8 @@
       "description": "Senior Servicenow Technical Consultant",
       "scraped_at": "2026-10-10 05:00:32",
       "sponsorship_mentioned": false,
-      "sponsorship_scan": "Security clearance required"
+      "sponsorship_scan": "Security clearance required",
+      "recruiter": false
     },
     {
       "title": "Senior ServiceNow Developer",
@@ -719,7 +750,8 @@
       "sponsor_licence": false,
       "description": "Senior ServiceNow Developer",
       "scraped_at": "2026-10-10 05:00:32",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "Senior ServiceNow Architect",
@@ -742,7 +774,8 @@
       "description": "Senior ServiceNow Architect",
       "scraped_at": "2026-10-10 05:00:32",
       "sponsorship_mentioned": false,
-      "sponsorship_scan": "Security clearance required"
+      "sponsorship_scan": "Security clearance required",
+      "recruiter": false
     },
     {
       "title": "ServiceNow Technical Consultant",
@@ -765,7 +798,8 @@
       "description": "ServiceNow Technical Consultant",
       "scraped_at": "2026-10-10 05:00:32",
       "sponsorship_mentioned": false,
-      "sponsorship_scan": "Security clearance required"
+      "sponsorship_scan": "Security clearance required",
+      "recruiter": false
     },
     {
       "title": "Senior ServiceNow Consultant",
@@ -787,7 +821,8 @@
       "sponsor_licence": false,
       "description": "Senior ServiceNow Consultant",
       "scraped_at": "2026-10-10 05:00:32",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "ServiceNow Technical Architect",
@@ -809,7 +844,8 @@
       "sponsor_licence": false,
       "description": "ServiceNow Technical Architect",
       "scraped_at": "2026-10-10 05:00:32",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "Junior ServiceNow Consultant",
@@ -831,7 +867,8 @@
       "sponsor_licence": false,
       "description": "Junior ServiceNow Consultant",
       "scraped_at": "2026-10-10 05:00:32",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "ServiceNow Developer (Assistant Vice President)",
@@ -853,7 +890,8 @@
       "sponsor_licence": false,
       "description": "ServiceNow Developer (Assistant Vice President)",
       "scraped_at": "2026-10-10 05:00:32",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "ServiceNow Developer",
@@ -875,7 +913,8 @@
       "sponsor_licence": false,
       "description": "ServiceNow Developer",
       "scraped_at": "2026-10-10 05:00:32",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "ServiceNow Architect - Telecom",
@@ -897,7 +936,8 @@
       "sponsor_licence": false,
       "description": "ServiceNow Architect - Telecom",
       "scraped_at": "2026-10-10 05:00:32",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "ServiceNow Architect",
@@ -919,7 +959,8 @@
       "sponsor_licence": false,
       "description": "ServiceNow Architect",
       "scraped_at": "2026-10-10 05:00:32",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "Senior ServiceNow Solution Architect",
@@ -941,7 +982,8 @@
       "sponsor_licence": false,
       "description": "Senior ServiceNow Solution Architect",
       "scraped_at": "2026-10-10 05:00:32",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "ServiceNow Platform and Solution Architect",
@@ -964,7 +1006,8 @@
       "description": "ServiceNow Platform and Solution Architect",
       "scraped_at": "2026-10-10 05:00:32",
       "sponsorship_mentioned": false,
-      "sponsorship_scan": "Security clearance required"
+      "sponsorship_scan": "Security clearance required",
+      "recruiter": false
     },
     {
       "title": "ServiceNow Senior Engagement Manager",
@@ -986,7 +1029,8 @@
       "sponsor_licence": false,
       "description": "ServiceNow Senior Engagement Manager",
       "scraped_at": "2026-10-10 05:00:32",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "ServiceNow Functional Consultant",
@@ -1008,7 +1052,8 @@
       "sponsor_licence": false,
       "description": "ServiceNow Functional Consultant",
       "scraped_at": "2026-10-10 05:00:32",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "Senior Manager, Platform Architecture, Public Sector",
@@ -1030,7 +1075,8 @@
       "sponsor_licence": true,
       "description": "Company Description It all started in sunny San Diego, California in 2004 when a visionary engineer, Fred Luddy, saw the potential to transform how we work. Fast forward to today \u2014 ServiceNow stands as a global market leader, bringing innovative AI-enhanced technology to over 8,100 customers, includ",
       "scraped_at": "2026-10-10 05:00:40",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "Forward Deployed Solution Engineer \u2013 Applied\u202fAI FDE",
@@ -1052,7 +1098,8 @@
       "sponsor_licence": true,
       "description": "Company Description It all started when engineer Fred Luddy wrote code that automated a tedious task for his coworker, Phyllis. She cried tears of joy. That moment inspired Fred to build a company that could do that for everyone\u2014freeing people from busywork so they could focus on meaningful work. To",
       "scraped_at": "2026-10-10 05:00:40",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "Manager,  Expert Services (Armis)",
@@ -1074,7 +1121,8 @@
       "sponsor_licence": true,
       "description": "Company Description It all started when engineer Fred Luddy wrote code that automated a tedious task for his coworker, Phyllis. She cried tears of joy. That moment inspired Fred to build a company that could do that for everyone\u2014freeing people from busywork so they could focus on meaningful work. To",
       "scraped_at": "2026-10-10 05:00:40",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "Principal Platform Architect",
@@ -1096,7 +1144,8 @@
       "sponsor_licence": true,
       "description": "Company Description It all started when engineer Fred Luddy wrote code that automated a tedious task for his coworker, Phyllis. She cried tears of joy. That moment inspired Fred to build a company that could do that for everyone\u2014freeing people from busywork so they could focus on meaningful work. To",
       "scraped_at": "2026-10-10 05:00:40",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "Staff AI Agent Engineer \u2013 Moveworks | Customer Deployment",
@@ -1118,7 +1167,8 @@
       "sponsor_licence": true,
       "description": "Company Description It all started when engineer Fred Luddy wrote code that automated a tedious task for his coworker, Phyllis. She cried tears of joy. That moment inspired Fred to build a company that could do that for everyone\u2014freeing people from busywork so they could focus on meaningful work. To",
       "scraped_at": "2026-10-10 05:00:40",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "Senior Principal Platform Architect",
@@ -1140,7 +1190,8 @@
       "sponsor_licence": true,
       "description": "Company Description It all started in sunny San Diego, California in 2004 when a visionary engineer, Fred Luddy, saw the potential to transform how we work. Fast forward to today \u2014 ServiceNow stands as a global market leader, bringing innovative AI-enhanced technology to over 8,100 customers, includ",
       "scraped_at": "2026-10-10 05:00:40",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "Senior Platform Architect",
@@ -1162,7 +1213,8 @@
       "sponsor_licence": true,
       "description": "Company Description It all started in sunny San Diego, California in 2004 when a visionary engineer, Fred Luddy, saw the potential to transform how we work. Fast forward to today \u2014 ServiceNow stands as a global market leader, bringing innovative AI-enhanced technology to over 8,100 customers, includ",
       "scraped_at": "2026-10-10 05:00:40",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     }
   ],
   "sc_blocked": 11,

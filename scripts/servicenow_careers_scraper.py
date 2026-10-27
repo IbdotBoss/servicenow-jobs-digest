@@ -17,7 +17,6 @@ from datetime import datetime
 
 RSS_URL = 'https://careers.servicenow.com/jobs/xml/?rss=true'
 OUT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'data', 'servicenow_careers_jobs.json')
-SPONSOR_CSV = os.path.expanduser('~/hermes-workspace/Faajaa-Share/2026-05-06_-_Worker_and_Temporary_Worker.csv')
 UA = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36'
 TODAY = datetime.now().strftime('%Y-%m-%d')
 SCRAPED_AT = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
@@ -126,7 +125,7 @@ def scrape():
             'grad_scheme': False,
             'link_status': 'live',
             'visa_sponsorship': 'unknown',
-            'sponsor_licence': True,  # ServiceNow IS on the register
+            'sponsor_licence': False,  # decided by scan_sponsorship.py
             'description': desc_clean if desc_clean else '',
             'scraped_at': SCRAPED_AT,
         })

@@ -97,9 +97,10 @@ def rebuild():
                     sdp = (j.get('date_posted') or '')[:10]
                     if sdp and sdp > mdp:
                         existing['date_posted'] = j['date_posted']
-                # Propagate sponsor_licence: once true, stays true
-                if j.get('sponsor_licence'):
-                    existing['sponsor_licence'] = True
+                # sponsor_licence: the newest snapshot decides (snapshots are read oldest first),
+                # so a licence the register no longer lists stops showing as soon as the job is re-seen.
+                existing['sponsor_licence'] = bool(j.get('sponsor_licence'))
+                existing['recruiter'] = bool(j.get('recruiter'))
                 # Propagate sponsorship_mentioned: once true, stays true
                 if j.get('sponsorship_mentioned'):
                     existing['sponsorship_mentioned'] = True

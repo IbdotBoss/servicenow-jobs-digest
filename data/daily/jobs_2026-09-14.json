@@ -28,7 +28,8 @@
       "description": "",
       "date_posted": "2026-09-14",
       "sponsorship_scan": "linkedin_js (cannot read full description)",
-      "date_reliable": false
+      "date_reliable": false,
+      "recruiter": false
     },
     {
       "title": "ServiceNow Technical Consultant",
@@ -50,7 +51,8 @@
       "description": "",
       "date_posted": "2026-09-14",
       "sponsorship_scan": "linkedin_js (cannot read full description)",
-      "date_reliable": false
+      "date_reliable": false,
+      "recruiter": false
     },
     {
       "title": "ServiceNow Developer",
@@ -72,7 +74,8 @@
       "description": "",
       "date_posted": "2026-09-14",
       "sponsorship_scan": "linkedin_js (cannot read full description)",
-      "date_reliable": false
+      "date_reliable": false,
+      "recruiter": false
     },
     {
       "title": "ServiceNow Project Manager",
@@ -94,7 +97,8 @@
       "description": "",
       "date_posted": "2026-09-14",
       "sponsorship_scan": "linkedin_js (cannot read full description)",
-      "date_reliable": false
+      "date_reliable": false,
+      "recruiter": false
     },
     {
       "title": "Senior ServiceNow Developer",
@@ -116,7 +120,8 @@
       "description": "",
       "date_posted": "2026-09-14",
       "sponsorship_scan": "linkedin_js (cannot read full description)",
-      "date_reliable": false
+      "date_reliable": false,
+      "recruiter": false
     },
     {
       "title": "ServiceNow Technical Architect",
@@ -138,7 +143,8 @@
       "description": "",
       "date_posted": "2026-09-14",
       "sponsorship_scan": "linkedin_js (cannot read full description)",
-      "date_reliable": false
+      "date_reliable": false,
+      "recruiter": false
     },
     {
       "title": "Senior ServiceNow Engineer, UK",
@@ -160,7 +166,8 @@
       "description": "",
       "date_posted": "2026-09-14",
       "sponsorship_scan": "linkedin_js (cannot read full description)",
-      "date_reliable": false
+      "date_reliable": false,
+      "recruiter": false
     },
     {
       "title": "ServiceNow Lead Technical Consultant - ITOM/AIOps",
@@ -182,7 +189,8 @@
       "description": "",
       "date_posted": "2026-09-14",
       "sponsorship_scan": "linkedin_js (cannot read full description)",
-      "date_reliable": false
+      "date_reliable": false,
+      "recruiter": false
     },
     {
       "title": "SME - ServiceNow,JavaScript",
@@ -202,9 +210,10 @@
       "link_status": "live",
       "visa_sponsorship": "unknown",
       "sponsor_licence": true,
-      "description": "SME - ServiceNow,JavaScript HCL Technologies UK Limited City Of London, United Kingdom Full-time — 3d ago",
+      "description": "SME - ServiceNow,JavaScript HCL Technologies UK Limited City Of London, United Kingdom Full-time \u2014 3d ago",
       "scraped_at": "2026-09-14 05:00:17",
-      "sponsorship_mentioned": true
+      "sponsorship_mentioned": true,
+      "recruiter": false
     },
     {
       "title": "Senior ServiceNow GRC/ IRM Transformation & Advisory Consultant Role",
@@ -224,9 +233,10 @@
       "link_status": "live",
       "visa_sponsorship": "unknown",
       "sponsor_licence": false,
-      "description": "Senior ServiceNow GRC/ IRM Transformation & Advisory Consultant Role INFOSYS BPM UK LIMITED London, England, United Kingdom — — 3d ago",
+      "description": "Senior ServiceNow GRC/ IRM Transformation & Advisory Consultant Role INFOSYS BPM UK LIMITED London, England, United Kingdom \u2014 \u2014 3d ago",
       "scraped_at": "2026-09-14 05:00:17",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "ServiceNow Administrator",
@@ -246,9 +256,10 @@
       "link_status": "live",
       "visa_sponsorship": "unknown",
       "sponsor_licence": false,
-      "description": "ServiceNow Administrator MOTT MACDONALD SA LIMITED Newcastle Upon Tyne, GB Full-time — 3d ago",
+      "description": "ServiceNow Administrator MOTT MACDONALD SA LIMITED Newcastle Upon Tyne, GB Full-time \u2014 3d ago",
       "scraped_at": "2026-09-14 05:00:17",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "SME - Process Consulting, ServiceNow",
@@ -268,9 +279,10 @@
       "link_status": "live",
       "visa_sponsorship": "unknown",
       "sponsor_licence": true,
-      "description": "SME - Process Consulting, ServiceNow HCL Technologies UK Limited City Of London, United Kingdom Full-time — 3d ago",
+      "description": "SME - Process Consulting, ServiceNow HCL Technologies UK Limited City Of London, United Kingdom Full-time \u2014 3d ago",
       "scraped_at": "2026-09-14 05:00:17",
-      "sponsorship_mentioned": true
+      "sponsorship_mentioned": true,
+      "recruiter": false
     },
     {
       "title": "Operations Manager - ServiceNow",
@@ -290,9 +302,10 @@
       "link_status": "live",
       "visa_sponsorship": "unknown",
       "sponsor_licence": true,
-      "description": "Operations Manager - ServiceNow LAING O'ROURKE PLC. Dartford, England, United Kingdom Full-time — 4d ago",
+      "description": "Operations Manager - ServiceNow LAING O'ROURKE PLC. Dartford, England, United Kingdom Full-time \u2014 4d ago",
       "scraped_at": "2026-09-14 05:00:17",
-      "sponsorship_mentioned": true
+      "sponsorship_mentioned": true,
+      "recruiter": false
     },
     {
       "title": "ServiceNow Developer Consultant",
@@ -312,9 +325,10 @@
       "link_status": "live",
       "visa_sponsorship": "unknown",
       "sponsor_licence": true,
-      "description": "ServiceNow Developer Consultant ELEMIS LIMITED Remote Full-time — 5d ago",
+      "description": "ServiceNow Developer Consultant ELEMIS LIMITED Remote Full-time \u2014 5d ago",
       "scraped_at": "2026-09-14 05:00:17",
-      "sponsorship_mentioned": true
+      "sponsorship_mentioned": true,
+      "recruiter": false
     },
     {
       "title": "Manager - ServiceNow - TC- UKI",
@@ -334,10 +348,11 @@
       "link_status": "live",
       "visa_sponsorship": "sc_blocked",
       "sponsor_licence": true,
-      "description": "Manager - ServiceNow - TC- UKI FRANK HIRTH LIMITED London Area, United Kingdom Full-time — 8d ago",
+      "description": "Manager - ServiceNow - TC- UKI FRANK HIRTH LIMITED London Area, United Kingdom Full-time \u2014 8d ago",
       "scraped_at": "2026-09-14 05:00:17",
       "sponsorship_mentioned": true,
-      "sponsorship_scan": "Security clearance required"
+      "sponsorship_scan": "Security clearance required",
+      "recruiter": false
     },
     {
       "title": "Track Lead - ServiceNow, IT Service Management",
@@ -357,9 +372,10 @@
       "link_status": "live",
       "visa_sponsorship": "unknown",
       "sponsor_licence": true,
-      "description": "Track Lead - ServiceNow, IT Service Management HCL Technologies UK Limited Leeds District (b), United Kingdom Full-time — 7d ago",
+      "description": "Track Lead - ServiceNow, IT Service Management HCL Technologies UK Limited Leeds District (b), United Kingdom Full-time \u2014 7d ago",
       "scraped_at": "2026-09-14 05:00:17",
-      "sponsorship_mentioned": true
+      "sponsorship_mentioned": true,
+      "recruiter": false
     },
     {
       "title": "Solutions Architect - ServiceNow",
@@ -379,9 +395,10 @@
       "link_status": "live",
       "visa_sponsorship": "unknown",
       "sponsor_licence": true,
-      "description": "Solutions Architect - ServiceNow Infotel UK Consulting Ltd Glasgow, Scotland, United Kingdom Full-time — 10d ago",
+      "description": "Solutions Architect - ServiceNow Infotel UK Consulting Ltd Glasgow, Scotland, United Kingdom Full-time \u2014 10d ago",
       "scraped_at": "2026-09-14 05:00:17",
-      "sponsorship_mentioned": true
+      "sponsorship_mentioned": true,
+      "recruiter": false
     },
     {
       "title": "ServiceNow Developer",
@@ -401,9 +418,10 @@
       "link_status": "live",
       "visa_sponsorship": "unknown",
       "sponsor_licence": false,
-      "description": "ServiceNow Developer LOGIC AUTOMATION LTD London, England, United Kingdom Full-time — 10d ago",
+      "description": "ServiceNow Developer LOGIC AUTOMATION LTD London, England, United Kingdom Full-time \u2014 10d ago",
       "scraped_at": "2026-09-14 05:00:17",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "ServiceNow Technical Architect",
@@ -423,9 +441,10 @@
       "link_status": "live",
       "visa_sponsorship": "unknown",
       "sponsor_licence": true,
-      "description": "ServiceNow Technical Architect PRODAPT (UK) LIMITED READING, United Kingdom Full-time — 11d ago",
+      "description": "ServiceNow Technical Architect PRODAPT (UK) LIMITED READING, United Kingdom Full-time \u2014 11d ago",
       "scraped_at": "2026-09-14 05:00:17",
-      "sponsorship_mentioned": true
+      "sponsorship_mentioned": true,
+      "recruiter": false
     },
     {
       "title": "ServiceNow Technical Consultant",
@@ -445,10 +464,11 @@
       "link_status": "live",
       "visa_sponsorship": "sc_blocked",
       "sponsor_licence": true,
-      "description": "ServiceNow Technical Consultant Forsyth Barnes Limited England, United Kingdom Full-time — 11d ago",
+      "description": "ServiceNow Technical Consultant Forsyth Barnes Limited England, United Kingdom Full-time \u2014 11d ago",
       "scraped_at": "2026-09-14 05:00:17",
       "sponsorship_mentioned": true,
-      "sponsorship_scan": "Security clearance required"
+      "sponsorship_scan": "Security clearance required",
+      "recruiter": false
     },
     {
       "title": "ServiceNow Technical Lead",
@@ -468,9 +488,10 @@
       "link_status": "live",
       "visa_sponsorship": "unknown",
       "sponsor_licence": true,
-      "description": "ServiceNow Technical Lead PRODAPT (UK) LIMITED READING, United Kingdom Full-time — 11d ago",
+      "description": "ServiceNow Technical Lead PRODAPT (UK) LIMITED READING, United Kingdom Full-time \u2014 11d ago",
       "scraped_at": "2026-09-14 05:00:17",
-      "sponsorship_mentioned": true
+      "sponsorship_mentioned": true,
+      "recruiter": false
     },
     {
       "title": "VodafoneThree - ServiceNow Data & Platform Lead",
@@ -490,10 +511,11 @@
       "link_status": "live",
       "visa_sponsorship": "sc_blocked",
       "sponsor_licence": true,
-      "description": "VodafoneThree - ServiceNow Data & Platform Lead Vodafone IoT UK Limited Farnborough - Ively Road, GB Full-time — 11d ago",
+      "description": "VodafoneThree - ServiceNow Data & Platform Lead Vodafone IoT UK Limited Farnborough - Ively Road, GB Full-time \u2014 11d ago",
       "scraped_at": "2026-09-14 05:00:17",
       "sponsorship_mentioned": true,
-      "sponsorship_scan": "Security clearance required"
+      "sponsorship_scan": "Security clearance required",
+      "recruiter": false
     },
     {
       "title": "ServiceNow Developer/Administrator - 12-Month Contract",
@@ -513,9 +535,10 @@
       "link_status": "live",
       "visa_sponsorship": "unknown",
       "sponsor_licence": true,
-      "description": "ServiceNow Developer/Administrator - 12-Month Contract SABIO LTD London Contract — 11d ago",
+      "description": "ServiceNow Developer/Administrator - 12-Month Contract SABIO LTD London Contract \u2014 11d ago",
       "scraped_at": "2026-09-14 05:00:17",
-      "sponsorship_mentioned": true
+      "sponsorship_mentioned": true,
+      "recruiter": false
     },
     {
       "title": "HRIS Functional Lead (Essential: ServiceNow Experience)",
@@ -535,9 +558,10 @@
       "link_status": "live",
       "visa_sponsorship": "unknown",
       "sponsor_licence": false,
-      "description": "HRIS Functional Lead (Essential: ServiceNow Experience) CBRE HANA OPERATIONS LIMITED London, England, United Kingdom Full-time — 11d ago",
+      "description": "HRIS Functional Lead (Essential: ServiceNow Experience) CBRE HANA OPERATIONS LIMITED London, England, United Kingdom Full-time \u2014 11d ago",
       "scraped_at": "2026-09-14 05:00:17",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "ServiceNow Project Manager",
@@ -557,9 +581,10 @@
       "link_status": "live",
       "visa_sponsorship": "unknown",
       "sponsor_licence": true,
-      "description": "ServiceNow Project Manager OPAL WAVE SOLUTIONS LIMITED London, England, United Kingdom Full-time — 13d ago",
+      "description": "ServiceNow Project Manager OPAL WAVE SOLUTIONS LIMITED London, England, United Kingdom Full-time \u2014 13d ago",
       "scraped_at": "2026-09-14 05:00:17",
-      "sponsorship_mentioned": true
+      "sponsorship_mentioned": true,
+      "recruiter": false
     },
     {
       "title": "HR ServiceNow Functional Project Lead (Servicenow HRSD)",
@@ -579,9 +604,10 @@
       "link_status": "live",
       "visa_sponsorship": "unknown",
       "sponsor_licence": false,
-      "description": "HR ServiceNow Functional Project Lead (Servicenow HRSD) CBRE HANA OPERATIONS LIMITED London, England, United Kingdom Full-time — 24d ago",
+      "description": "HR ServiceNow Functional Project Lead (Servicenow HRSD) CBRE HANA OPERATIONS LIMITED London, England, United Kingdom Full-time \u2014 24d ago",
       "scraped_at": "2026-09-14 05:00:17",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "Senior ServiceNow Technical Consultant",
@@ -601,10 +627,11 @@
       "link_status": "live",
       "visa_sponsorship": "sc_blocked",
       "sponsor_licence": true,
-      "description": "Senior ServiceNow Technical Consultant SOPRA STERIA SERVICES LIMITED Anywhere, GBR Other — 18d ago",
+      "description": "Senior ServiceNow Technical Consultant SOPRA STERIA SERVICES LIMITED Anywhere, GBR Other \u2014 18d ago",
       "scraped_at": "2026-09-14 05:00:17",
       "sponsorship_mentioned": true,
-      "sponsorship_scan": "Security clearance required"
+      "sponsorship_scan": "Security clearance required",
+      "recruiter": false
     },
     {
       "title": "Administrator - Process Consulting, ServiceNow",
@@ -624,9 +651,10 @@
       "link_status": "live",
       "visa_sponsorship": "unknown",
       "sponsor_licence": true,
-      "description": "Administrator - Process Consulting, ServiceNow HCL Technologies UK Limited City Of London, United Kingdom Full-time — 17d ago",
+      "description": "Administrator - Process Consulting, ServiceNow HCL Technologies UK Limited City Of London, United Kingdom Full-time \u2014 17d ago",
       "scraped_at": "2026-09-14 05:00:17",
-      "sponsorship_mentioned": true
+      "sponsorship_mentioned": true,
+      "recruiter": false
     },
     {
       "title": "Manager - ServiceNow - TC- UKI",
@@ -646,9 +674,10 @@
       "link_status": "live",
       "visa_sponsorship": "unknown",
       "sponsor_licence": false,
-      "description": "Manager - ServiceNow - TC- UKI EY London, GB, SE1 2AF Full-time — 19d ago",
+      "description": "Manager - ServiceNow - TC- UKI EY London, GB, SE1 2AF Full-time \u2014 19d ago",
       "scraped_at": "2026-09-14 05:00:17",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "Consultant, Business Analyst, ServiceNow, Technology & Transformation",
@@ -668,10 +697,11 @@
       "link_status": "live",
       "visa_sponsorship": "sc_blocked",
       "sponsor_licence": true,
-      "description": "Consultant, Business Analyst, ServiceNow, Technology & Transformation DELOITTE LLP Scotland, United Kingdom Full-time — 20d ago",
+      "description": "Consultant, Business Analyst, ServiceNow, Technology & Transformation DELOITTE LLP Scotland, United Kingdom Full-time \u2014 20d ago",
       "scraped_at": "2026-09-14 05:00:17",
       "sponsorship_mentioned": true,
-      "sponsorship_scan": "Security clearance required"
+      "sponsorship_scan": "Security clearance required",
+      "recruiter": false
     },
     {
       "title": "Senior ServiceNow Engineer",
@@ -691,9 +721,10 @@
       "link_status": "live",
       "visa_sponsorship": "unknown",
       "sponsor_licence": true,
-      "description": "Senior ServiceNow Engineer BARINGA PARTNERS LLP Remote, United Kingdom Full-time — 20d ago",
+      "description": "Senior ServiceNow Engineer BARINGA PARTNERS LLP Remote, United Kingdom Full-time \u2014 20d ago",
       "scraped_at": "2026-09-14 05:00:17",
-      "sponsorship_mentioned": true
+      "sponsorship_mentioned": true,
+      "recruiter": false
     },
     {
       "title": "ServiceNow HAM Consultant",
@@ -712,10 +743,11 @@
       "grad_scheme": false,
       "link_status": "live",
       "visa_sponsorship": "unknown",
-      "sponsor_licence": true,
-      "description": "ServiceNow HAM Consultant GAZELLE GLOBAL CONSULTING LIMITED West Midlands, England, United Kingdom Contract — 20d ago",
+      "sponsor_licence": false,
+      "description": "ServiceNow HAM Consultant GAZELLE GLOBAL CONSULTING LIMITED West Midlands, England, United Kingdom Contract \u2014 20d ago",
       "scraped_at": "2026-09-14 05:00:17",
-      "sponsorship_mentioned": true
+      "sponsorship_mentioned": true,
+      "recruiter": true
     },
     {
       "title": "Engagement Manager - Veza",
@@ -737,7 +769,8 @@
       "sponsor_licence": true,
       "description": "Company Description Veza is the pioneer in identity security, purpose-built to answer the fundamental question enterprises face: who can and should take what action on what data. Veza's Access Graph platform maps an organization's entire identity ecosystem across users, groups, roles, policies, perm",
       "scraped_at": "2026-09-14 05:00:25",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "Senior Commercial Growth AE",
@@ -757,9 +790,10 @@
       "link_status": "live",
       "visa_sponsorship": "unknown",
       "sponsor_licence": true,
-      "description": "Company Description It all started in sunny San Diego, California in 2004 when a visionary engineer, Fred Luddy, saw the potential to transform how we work. Fast forward to today — ServiceNow stands as a global market leader, bringing innovative AI-enhanced technology to over 8,100 customers, includ",
+      "description": "Company Description It all started in sunny San Diego, California in 2004 when a visionary engineer, Fred Luddy, saw the potential to transform how we work. Fast forward to today \u2014 ServiceNow stands as a global market leader, bringing innovative AI-enhanced technology to over 8,100 customers, includ",
       "scraped_at": "2026-09-14 05:00:25",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "Solution Architect - Pyramid Analytics (BI)",
@@ -779,9 +813,10 @@
       "link_status": "live",
       "visa_sponsorship": "unknown",
       "sponsor_licence": true,
-      "description": "Company Description It all started when engineer Fred Luddy wrote code that automated a tedious task for his coworker, Phyllis. She cried tears of joy. That moment inspired Fred to build a company that could do that for everyone—freeing people from busywork so they could focus on meaningful work. To",
+      "description": "Company Description It all started when engineer Fred Luddy wrote code that automated a tedious task for his coworker, Phyllis. She cried tears of joy. That moment inspired Fred to build a company that could do that for everyone\u2014freeing people from busywork so they could focus on meaningful work. To",
       "scraped_at": "2026-09-14 05:00:25",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "Sr Staff Outbound Product Manager",
@@ -801,12 +836,13 @@
       "link_status": "live",
       "visa_sponsorship": "unknown",
       "sponsor_licence": true,
-      "description": "Company Description It all started when engineer Fred Luddy wrote code that automated a tedious task for his coworker, Phyllis. She cried tears of joy. That moment inspired Fred to build a company that could do that for everyone—freeing people from busywork so they could focus on meaningful work. To",
+      "description": "Company Description It all started when engineer Fred Luddy wrote code that automated a tedious task for his coworker, Phyllis. She cried tears of joy. That moment inspired Fred to build a company that could do that for everyone\u2014freeing people from busywork so they could focus on meaningful work. To",
       "scraped_at": "2026-09-14 05:00:25",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
-      "title": "Forward Deployed Solution Engineer – Applied AI FDE",
+      "title": "Forward Deployed Solution Engineer \u2013 Applied\u202fAI FDE",
       "company": "ServiceNow",
       "location": "London, United Kingdom",
       "salary_display": "Not listed",
@@ -823,9 +859,10 @@
       "link_status": "live",
       "visa_sponsorship": "unknown",
       "sponsor_licence": true,
-      "description": "Company Description It all started when engineer Fred Luddy wrote code that automated a tedious task for his coworker, Phyllis. She cried tears of joy. That moment inspired Fred to build a company that could do that for everyone—freeing people from busywork so they could focus on meaningful work. To",
+      "description": "Company Description It all started when engineer Fred Luddy wrote code that automated a tedious task for his coworker, Phyllis. She cried tears of joy. That moment inspired Fred to build a company that could do that for everyone\u2014freeing people from busywork so they could focus on meaningful work. To",
       "scraped_at": "2026-09-14 05:00:25",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "Partner Solution Engineer UK&I or EMEA North",
@@ -845,12 +882,13 @@
       "link_status": "live",
       "visa_sponsorship": "unknown",
       "sponsor_licence": true,
-      "description": "Company Description It all started when engineer Fred Luddy wrote code that automated a tedious task for his coworker, Phyllis. She cried tears of joy. That moment inspired Fred to build a company that could do that for everyone—freeing people from busywork so they could focus on meaningful work. To",
+      "description": "Company Description It all started when engineer Fred Luddy wrote code that automated a tedious task for his coworker, Phyllis. She cried tears of joy. That moment inspired Fred to build a company that could do that for everyone\u2014freeing people from busywork so they could focus on meaningful work. To",
       "scraped_at": "2026-09-14 05:00:25",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
-      "title": "Staff AI Agent Engineer – Moveworks | Customer Deployment",
+      "title": "Staff AI Agent Engineer \u2013 Moveworks | Customer Deployment",
       "company": "ServiceNow",
       "location": "Staines, United Kingdom",
       "salary_display": "Not listed",
@@ -867,9 +905,10 @@
       "link_status": "live",
       "visa_sponsorship": "unknown",
       "sponsor_licence": true,
-      "description": "Company Description It all started when engineer Fred Luddy wrote code that automated a tedious task for his coworker, Phyllis. She cried tears of joy. That moment inspired Fred to build a company that could do that for everyone—freeing people from busywork so they could focus on meaningful work. To",
+      "description": "Company Description It all started when engineer Fred Luddy wrote code that automated a tedious task for his coworker, Phyllis. She cried tears of joy. That moment inspired Fred to build a company that could do that for everyone\u2014freeing people from busywork so they could focus on meaningful work. To",
       "scraped_at": "2026-09-14 05:00:25",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "Senior Principal Platform Architect",
@@ -889,9 +928,10 @@
       "link_status": "live",
       "visa_sponsorship": "unknown",
       "sponsor_licence": true,
-      "description": "Company Description It all started in sunny San Diego, California in 2004 when a visionary engineer, Fred Luddy, saw the potential to transform how we work. Fast forward to today — ServiceNow stands as a global market leader, bringing innovative AI-enhanced technology to over 8,100 customers, includ",
+      "description": "Company Description It all started in sunny San Diego, California in 2004 when a visionary engineer, Fred Luddy, saw the potential to transform how we work. Fast forward to today \u2014 ServiceNow stands as a global market leader, bringing innovative AI-enhanced technology to over 8,100 customers, includ",
       "scraped_at": "2026-09-14 05:00:25",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "Senior Platform Architect",
@@ -911,9 +951,10 @@
       "link_status": "live",
       "visa_sponsorship": "unknown",
       "sponsor_licence": true,
-      "description": "Company Description It all started in sunny San Diego, California in 2004 when a visionary engineer, Fred Luddy, saw the potential to transform how we work. Fast forward to today — ServiceNow stands as a global market leader, bringing innovative AI-enhanced technology to over 8,100 customers, includ",
+      "description": "Company Description It all started in sunny San Diego, California in 2004 when a visionary engineer, Fred Luddy, saw the potential to transform how we work. Fast forward to today \u2014 ServiceNow stands as a global market leader, bringing innovative AI-enhanced technology to over 8,100 customers, includ",
       "scraped_at": "2026-09-14 05:00:25",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     }
   ],
   "sc_blocked": 5,

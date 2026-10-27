@@ -27,8 +27,9 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 1 day ago",
       "scraped_at": "2026-08-23 05:03:09",
-      "sponsor_licence": true,
-      "sponsorship_mentioned": false
+      "sponsor_licence": false,
+      "sponsorship_mentioned": false,
+      "recruiter": true
     },
     {
       "title": "ServiceNow Event Management Delivery Lead",
@@ -49,8 +50,9 @@
       "visa_sponsorship": "unknown",
       "description": "Posted 1 day ago",
       "scraped_at": "2026-08-23 05:03:09",
-      "sponsor_licence": true,
-      "sponsorship_mentioned": false
+      "sponsor_licence": false,
+      "sponsorship_mentioned": false,
+      "recruiter": true
     },
     {
       "title": "Senior Project Manager - ServiceNow",
@@ -73,7 +75,8 @@
       "scraped_at": "2026-08-23 05:03:09",
       "sponsor_licence": false,
       "sponsorship_mentioned": false,
-      "sponsorship_scan": "Security clearance required"
+      "sponsorship_scan": "Security clearance required",
+      "recruiter": true
     },
     {
       "title": "ServiceNow developer",
@@ -95,7 +98,8 @@
       "description": "Posted 1 day ago",
       "scraped_at": "2026-08-23 05:03:09",
       "sponsor_licence": false,
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": true
     },
     {
       "title": "ServiceNow Architect",
@@ -117,7 +121,8 @@
       "description": "Posted 1 day ago",
       "scraped_at": "2026-08-23 05:03:09",
       "sponsor_licence": false,
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": true
     },
     {
       "title": "ServiceNow developer",
@@ -139,7 +144,8 @@
       "description": "Posted 4 hours ago",
       "scraped_at": "2026-08-23 05:03:09",
       "sponsor_licence": false,
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": true
     },
     {
       "title": "ServiceNow Technical Architect",
@@ -161,7 +167,8 @@
       "description": "Posted 1 day ago",
       "scraped_at": "2026-08-23 05:03:09",
       "sponsor_licence": false,
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "ServiceNow ITOM Consultant - Event Management - Contract",
@@ -183,7 +190,8 @@
       "description": "Posted 1 day ago",
       "scraped_at": "2026-08-23 05:03:09",
       "sponsor_licence": false,
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": true
     },
     {
       "title": "ServiceNow Platform Owner",
@@ -206,7 +214,8 @@
       "scraped_at": "2026-08-23 05:03:09",
       "sponsor_licence": true,
       "sponsorship_mentioned": false,
-      "sponsorship_scan": "Security clearance required"
+      "sponsorship_scan": "Security clearance required",
+      "recruiter": false
     },
     {
       "title": "ServiceNow Developer/Designer",
@@ -228,7 +237,8 @@
       "description": "Posted 1 day ago",
       "scraped_at": "2026-08-23 05:03:09",
       "sponsor_licence": true,
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "Senior Project Manager - ServiceNow",
@@ -251,7 +261,8 @@
       "scraped_at": "2026-08-23 05:03:09",
       "sponsor_licence": false,
       "sponsorship_mentioned": false,
-      "sponsorship_scan": "Security clearance required"
+      "sponsorship_scan": "Security clearance required",
+      "recruiter": false
     },
     {
       "title": "Deskside & Field IT Support Engineer",
@@ -273,7 +284,8 @@
       "description": "Posted 4 hours ago",
       "scraped_at": "2026-08-23 05:03:09",
       "sponsor_licence": true,
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "ServiceNow Developer (CMDB, Discovery, Service Mapping & Event Management)",
@@ -295,7 +307,8 @@
       "sponsor_licence": true,
       "description": "ServiceNow Developer (CMDB, Discovery, Service Mapping & Event Management) OPAL WAVE SOLUTIONS LIMITED England, United Kingdom \u2014 \u2014 3d ago",
       "scraped_at": "2026-08-23 05:03:03",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "ServiceNow Developer (CMDB, HAM & SAM)",
@@ -317,7 +330,8 @@
       "sponsor_licence": true,
       "description": "ServiceNow Developer (CMDB, HAM & SAM) OPAL WAVE SOLUTIONS LIMITED England, United Kingdom \u2014 \u2014 3d ago",
       "scraped_at": "2026-08-23 05:03:03",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "ServiceNow Presales Architect",
@@ -339,7 +353,8 @@
       "sponsor_licence": true,
       "description": "ServiceNow Presales Architect OPAL WAVE SOLUTIONS LIMITED England, United Kingdom \u2014 \u2014 4d ago",
       "scraped_at": "2026-08-23 05:03:03",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "ServiceNow Technical Lead",
@@ -361,7 +376,8 @@
       "sponsor_licence": true,
       "description": "ServiceNow Technical Lead INSIGHT GLOBAL LIMITED Sutton, England, United Kingdom \u2014 \u2014 5d ago",
       "scraped_at": "2026-08-23 05:03:03",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "ServiceNow Architect",
@@ -383,7 +399,8 @@
       "sponsor_licence": true,
       "description": "ServiceNow Architect Infoplus Technologies UK Limited London Area, United Kingdom \u2014 \u2014 5d ago",
       "scraped_at": "2026-08-23 05:03:03",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "servicenow Architect",
@@ -405,7 +422,8 @@
       "sponsor_licence": true,
       "description": "servicenow Architect QUALIENT TECHNOLOGY SOLUTIONS UK LIMITED London Area, United Kingdom \u2014 \u2014 5d ago",
       "scraped_at": "2026-08-23 05:03:03",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "Business Development Manager - ServiceNow",
@@ -427,7 +445,8 @@
       "sponsor_licence": true,
       "description": "Business Development Manager - ServiceNow KPMG IFRG LIMITED United Kingdom \u2014 5d ago",
       "scraped_at": "2026-08-23 05:03:03",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "ServiceNow CSM Support",
@@ -449,7 +468,8 @@
       "sponsor_licence": true,
       "description": "ServiceNow CSM Support Cognizant Worldwide Limited London Colney, England, United Kingdom \u2014 5d ago",
       "scraped_at": "2026-08-23 05:03:03",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "ServiceNow ITSM",
@@ -471,7 +491,8 @@
       "sponsor_licence": true,
       "description": "ServiceNow ITSM Cognizant Worldwide Limited London Colney, England, United Kingdom \u2014 \u2014 6d ago",
       "scraped_at": "2026-08-23 05:03:03",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "ServiceNow Administrator",
@@ -493,7 +514,8 @@
       "sponsor_licence": true,
       "description": "ServiceNow Administrator Cognizant Worldwide Limited London Colney, England, United Kingdom \u2014 6d ago",
       "scraped_at": "2026-08-23 05:03:03",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "Senior Manager, Solution Architect (Private), ServiceNow, Technology & Transformation",
@@ -515,7 +537,8 @@
       "sponsor_licence": true,
       "description": "Senior Manager, Solution Architect (Private), ServiceNow, Technology & Transformation DELOITTE LLP England, United Kingdom \u2014 \u2014 9d ago",
       "scraped_at": "2026-08-23 05:03:03",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "Senior Manager, Solution Architect (GPS), ServiceNow, Technology & Transformation",
@@ -537,7 +560,8 @@
       "sponsor_licence": true,
       "description": "Senior Manager, Solution Architect (GPS), ServiceNow, Technology & Transformation DELOITTE LLP England, United Kingdom \u2014 \u2014 9d ago",
       "scraped_at": "2026-08-23 05:03:03",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "ServiceNow Developer",
@@ -559,7 +583,8 @@
       "sponsor_licence": true,
       "description": "ServiceNow Developer Infotel UK Consulting Ltd Glasgow, Scotland, United Kingdom \u2014 \u2014 10d ago",
       "scraped_at": "2026-08-23 05:03:03",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "ServiceNow Technical Architect",
@@ -581,7 +606,8 @@
       "sponsor_licence": true,
       "description": "ServiceNow Technical Architect Accenture (UK) Limited London, England, United Kingdom \u2014 \u2014 10d ago",
       "scraped_at": "2026-08-23 05:03:03",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "Senior Manager, Transformation Delivery Lead (FSI), ServiceNow, Technology & Transformation",
@@ -603,7 +629,8 @@
       "sponsor_licence": true,
       "description": "Senior Manager, Transformation Delivery Lead (FSI), ServiceNow, Technology & Transformation DELOITTE LLP England, United Kingdom \u2014 \u2014 10d ago",
       "scraped_at": "2026-08-23 05:03:03",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "Senior Consultant, Solution Architect (Private), ServiceNow, Technology & Transformation",
@@ -625,7 +652,8 @@
       "sponsor_licence": true,
       "description": "Senior Consultant, Solution Architect (Private), ServiceNow, Technology & Transformation DELOITTE LLP England, United Kingdom \u2014 \u2014 10d ago",
       "scraped_at": "2026-08-23 05:03:03",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "Senior Consultant, Solution Architect (GPS), ServiceNow, Technology & Transformation",
@@ -647,7 +675,8 @@
       "sponsor_licence": true,
       "description": "Senior Consultant, Solution Architect (GPS), ServiceNow, Technology & Transformation DELOITTE LLP England, United Kingdom \u2014 \u2014 10d ago",
       "scraped_at": "2026-08-23 05:03:03",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "Manager, Functional Lead (Private), ServiceNow, Technology & Transformation",
@@ -669,7 +698,8 @@
       "sponsor_licence": true,
       "description": "Manager, Functional Lead (Private), ServiceNow, Technology & Transformation DELOITTE LLP England, United Kingdom \u2014 \u2014 10d ago",
       "scraped_at": "2026-08-23 05:03:03",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "Manager, Functional Lead (FSI), ServiceNow, Technology & Transformation",
@@ -691,7 +721,8 @@
       "sponsor_licence": true,
       "description": "Manager, Functional Lead (FSI), ServiceNow, Technology & Transformation DELOITTE LLP Scotland, United Kingdom \u2014 \u2014 10d ago",
       "scraped_at": "2026-08-23 05:03:03",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "Manager, Functional Lead (GPS), ServiceNow, Technology & Transformation",
@@ -713,7 +744,8 @@
       "sponsor_licence": true,
       "description": "Manager, Functional Lead (GPS), ServiceNow, Technology & Transformation DELOITTE LLP England, United Kingdom \u2014 \u2014 10d ago",
       "scraped_at": "2026-08-23 05:03:03",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "Senior Consultant, Senior Business Analyst, ServiceNow, Technology & Transformation",
@@ -735,7 +767,8 @@
       "sponsor_licence": true,
       "description": "Senior Consultant, Senior Business Analyst, ServiceNow, Technology & Transformation DELOITTE LLP England, United Kingdom \u2014 \u2014 10d ago",
       "scraped_at": "2026-08-23 05:03:03",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "Senior Manager, Transformation Delivery Lead (Private), ServiceNow, Technology & Transformation",
@@ -757,7 +790,8 @@
       "sponsor_licence": true,
       "description": "Senior Manager, Transformation Delivery Lead (Private), ServiceNow, Technology & Transformation DELOITTE LLP England, United Kingdom \u2014 \u2014 10d ago",
       "scraped_at": "2026-08-23 05:03:03",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "Forward Deployed Solution Engineer \u2013 Applied\u202fAI FDE",
@@ -779,7 +813,8 @@
       "sponsor_licence": true,
       "description": "Company Description It all started when engineer Fred Luddy wrote code that automated a tedious task for his coworker, Phyllis. She cried tears of joy. That moment inspired Fred to build a company that could do that for everyone\u2014freeing people from busywork so they could focus on meaningful work. To",
       "scraped_at": "2026-08-23 05:03:03",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "Implementation Manager - Moveworks",
@@ -801,7 +836,8 @@
       "sponsor_licence": true,
       "description": "Company Description It all started when engineer Fred Luddy wrote code that automated a tedious task for his coworker, Phyllis. She cried tears of joy. That moment inspired Fred to build a company that could do that for everyone\u2014freeing people from busywork so they could focus on meaningful work. To",
       "scraped_at": "2026-08-23 05:03:03",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "Partner Solution Engineer UK&I or EMEA North",
@@ -823,7 +859,8 @@
       "sponsor_licence": true,
       "description": "Company Description It all started when engineer Fred Luddy wrote code that automated a tedious task for his coworker, Phyllis. She cried tears of joy. That moment inspired Fred to build a company that could do that for everyone\u2014freeing people from busywork so they could focus on meaningful work. To",
       "scraped_at": "2026-08-23 05:03:03",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "Senior Commercial Growth AE",
@@ -845,7 +882,8 @@
       "sponsor_licence": true,
       "description": "Company Description It all started in sunny San Diego, California in 2004 when a visionary engineer, Fred Luddy, saw the potential to transform how we work. Fast forward to today \u2014 ServiceNow stands as a global market leader, bringing innovative AI-enhanced technology to over 8,100 customers, includ",
       "scraped_at": "2026-08-23 05:03:03",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "Staff AI Agent Engineer \u2013 Moveworks | Customer Deployment",
@@ -867,7 +905,8 @@
       "sponsor_licence": true,
       "description": "Company Description It all started when engineer Fred Luddy wrote code that automated a tedious task for his coworker, Phyllis. She cried tears of joy. That moment inspired Fred to build a company that could do that for everyone\u2014freeing people from busywork so they could focus on meaningful work. To",
       "scraped_at": "2026-08-23 05:03:03",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "Senior Principal Platform Architect",
@@ -889,7 +928,8 @@
       "sponsor_licence": true,
       "description": "Company Description It all started in sunny San Diego, California in 2004 when a visionary engineer, Fred Luddy, saw the potential to transform how we work. Fast forward to today \u2014 ServiceNow stands as a global market leader, bringing innovative AI-enhanced technology to over 8,100 customers, includ",
       "scraped_at": "2026-08-23 05:03:03",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "Sr Staff Outbound Product Manager",
@@ -911,7 +951,8 @@
       "sponsor_licence": true,
       "description": "Company Description It all started when engineer Fred Luddy wrote code that automated a tedious task for his coworker, Phyllis. She cried tears of joy. That moment inspired Fred to build a company that could do that for everyone\u2014freeing people from busywork so they could focus on meaningful work. To",
       "scraped_at": "2026-08-23 05:03:03",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     },
     {
       "title": "Senior Platform Architect",
@@ -933,7 +974,8 @@
       "sponsor_licence": true,
       "description": "Company Description It all started in sunny San Diego, California in 2004 when a visionary engineer, Fred Luddy, saw the potential to transform how we work. Fast forward to today \u2014 ServiceNow stands as a global market leader, bringing innovative AI-enhanced technology to over 8,100 customers, includ",
       "scraped_at": "2026-08-23 05:03:03",
-      "sponsorship_mentioned": false
+      "sponsorship_mentioned": false,
+      "recruiter": false
     }
   ],
   "sc_blocked": 3,

@@ -20,7 +20,9 @@ import html as htmlmod
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 JOBS_FILE = os.path.join(REPO, "data/jobs.json")
 MASTER_FILE = os.path.join(REPO, "data/master.json")
-SPONSOR_CSV = os.path.expanduser("~/hermes-workspace/Faajaa-Share/2026-05-06_-_Worker_and_Temporary_Worker.csv")
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from sponsor_register import current as _current_register  # noqa: E402
+SPONSOR_CSV = _current_register()  # newest copy in data/register/, refreshed by step 0 of the pipeline
 UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36"
 
 # Patterns that mean NO sponsorship
@@ -104,9 +106,26 @@ COMPANY_NAME_BLACKLIST = {
 }
 
 AGENCY_KEYWORDS = [
-    'recruitment', 'recruiting', 'staffing', 'personnel',
+    'recruit', 'staffing', 'personnel', 'workforce', 'executive search',
     'talent solutions', 'resource solutions', 'resourcing',
 ]
+
+# Recruiters whose names don't say so: data/recruiters.txt, one per line, editable without code.
+RECRUITERS_FILE = os.path.join(REPO, 'data', 'recruiters.txt')
+
+
+_RECRUITERS = None
+
+
+def _load_recruiters():
+    global _RECRUITERS
+    if _RECRUITERS is None:
+        try:
+            with open(RECRUITERS_FILE, encoding='utf-8') as f:
+                _RECRUITERS = {normalize_company(l) for l in f if l.strip() and not l.lstrip().startswith('#')}
+        except OSError:
+            _RECRUITERS = set()
+    return _RECRUITERS
 
 # Well-known recruitment agencies whose sponsor licence
 # doesn't transfer to the actual employer they're posting for.
@@ -144,6 +163,8 @@ def is_agency(company_name):
         if norm.endswith(suffix):
             norm = norm[:-len(suffix)].strip()
     if norm in KNOWN_AGENCIES:
+        return True
+    if normalize_company(company_name) in _load_recruiters():
         return True
     return False
 
@@ -329,6 +350,9 @@ def scan_file(filepath, sponsor_set, dry_run=False, csv_only=False):
         current_licence = j.get('sponsor_licence', False)
         current_scan = j.get('sponsorship_scan', None)
         
+        # Recorded on every job so the page can say "Recruiter" instead of hiding a real licence.
+        j['recruiter'] = is_agency(j.get('company', ''))
+
         if csv_only:
             # Just the sponsor CSV lookup
             updates = {}

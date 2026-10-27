@@ -42,6 +42,7 @@ env/
 
 # Project-specific
 data/jobs.json
+data/register/
 logs/
 *.log
 *.sqlite
