@@ -301,9 +301,9 @@ document.getElementById('n-new').textContent = nNew;
 const srcs = [...new Set(jobs.map(j => j.src))].sort();
 document.getElementById('sources').textContent = 'Listings from ' + srcs.join(', ') + '.';
 const sample = document.getElementById('sample');
-sample.append(el('span', 'k', 'title,company,location,sponsor,first_seen'), '\n');
-jobs.filter(j => j.sp === 'licensed').slice(0, 4).forEach(j => sample.append([j.t, j.c, j.l, j.sp, j.fs].map(v => /[,"]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v).join(',') + '\n'));
-document.getElementById('sample-cap').textContent = 'Four lines from today\'s file. It holds all ' + jobs.length + ' open roles.';
+// Real entries, exactly as the file stores them, so the band never describes a format the file doesn't have.
+D.jobs.filter(j => j.sp === 'licensed').slice(0, 2).forEach(j => sample.append(JSON.stringify(j, null, 1).replace(/\n\s*/g, ' ') + '\n\n'));
+document.getElementById('sample-cap').textContent = "Two entries from today's file, as stored: t is the title, c the employer, sp the register result, fs the day first seen. It holds all " + jobs.length + ' open roles.';
 
 const q = document.getElementById('q'), sortSel = document.getElementById('sort');
 q.value = state.q; sortSel.value = state.sort;

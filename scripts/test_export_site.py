@@ -45,6 +45,8 @@ class CleanCompany(unittest.TestCase):
 
     def test_placeholder_is_empty(self):
         self.assertEqual(ex.clean_company("[view listing]"), "")
+        self.assertEqual(ex.clean_company("N/A"), "")
+        self.assertEqual(ex.clean_company("Unknown"), "")
 
     def test_mixed_case_untouched(self):
         self.assertEqual(ex.clean_company("Ubique Systems UK Limited"), "Ubique Systems UK Limited")

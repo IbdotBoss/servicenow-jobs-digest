@@ -25,6 +25,8 @@ ARCHIVE_DIR = os.path.join(DATA_DIR, "archive")
 SOURCE_NAMES = {"hunt_uk": "Hunt UK"}
 # In an all-caps company name, words of four letters or fewer are usually acronyms (EPAM, KPMG, UK), except these.
 SHORT_WORDS = {"LTD": "Ltd", "INC": "Inc", "CO": "Co"}
+# Scraper placeholders for a missing employer; the page says "Employer not named" instead.
+PLACEHOLDERS = {"[view listing]", "unknown", "n/a", "na", "tbc", "confidential", "-"}
 
 
 def _squash(s):
@@ -45,7 +47,7 @@ def clean_title(title):
 
 def clean_company(company):
     c = _squash(company)
-    if c.lower() == "[view listing]":
+    if c.lower() in PLACEHOLDERS:
         return ""
     letters = re.sub(r"[^A-Za-z]", "", c)
     if len(letters) > 4 and letters.isupper():
