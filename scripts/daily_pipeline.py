@@ -452,6 +452,17 @@ def main():
     log("─" * 70)
     rebuild_master()
 
+    # ── Step 5b: Export the page's data (active.json + monthly archive) ──
+    log("\n" + "─" * 70)
+    log("STEP 5b: Export site data")
+    log("─" * 70)
+    ok, out, err = run_script(os.path.join(REPO, "scripts/export_site.py"), cwd=REPO, timeout=60)
+    if ok:
+        log(f"  ✅ {out.strip()}")
+    else:
+        log(f"  ❌ export_site failed: {err.strip()[-300:]}", level="error")
+        errors.append("export_site failed")
+
     # ── Step 6: Git commit & push ─────────────────────────────────────────
     log("\n" + "─" * 70)
     log("STEP 6: Git commit & push")

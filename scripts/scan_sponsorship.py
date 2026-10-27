@@ -33,6 +33,8 @@ NO_SPONSOR_PATTERNS = [
     (r'will\s+not\s+sponsor', 'Will not sponsor'),
     (r'(?:cannot|do\s+not)\s+(?:offer\s+)?visa\s+(?:sponsorship|sponsor)', 'Cannot offer visa sponsorship'),
     (r'this\s+(?:role|position|job)\s+(?:is\s+)?not\s+eligible\s+for\s+(?:visa\s+)?sponsorship', 'Role not eligible for sponsorship'),
+    # "cannot offer Skilled Worker visa sponsorship": a refusal with words between the verb and "sponsor"
+    (r"(?:cannot|can't|unable\s+to|not\s+able\s+to|will\s+not|won't|do\s+not|don't)\s+(?:\w+\s+){0,4}sponsor", 'Job cannot sponsor'),
 ]
 
 # Patterns for SC/DV clearance (blocks sponsorship)
@@ -219,6 +221,16 @@ def scan_text(text):
     
     return None, None
 
+def mentions_sponsorship(text):
+    """True when the text offers sponsorship and nothing in it refuses or blocks it.
+    "We cannot offer Skilled Worker visa sponsorship" matches a mention pattern too,
+    so a refusal or a clearance requirement anywhere in the text wins."""
+    tag, _ = scan_text(text)
+    if tag:
+        return False
+    text_lower = text.lower()
+    return any(re.search(pattern, text_lower) for pattern, _ in SPONSOR_MENTIONED_PATTERNS)
+
 def scan_job(job, sponsor_set):
     """Scan a single job. Returns dict of { field: value } updates."""
     updates = {}
@@ -297,10 +309,8 @@ def scan_job(job, sponsor_set):
     if company and sponsor_set:
         has_licence, _ = company_has_licence(company, sponsor_set)
         if has_licence:
-            for pattern, _ in SPONSOR_MENTIONED_PATTERNS:
-                if re.search(pattern, html_text.lower()):
-                    updates['sponsorship_mentioned'] = True
-                    break
+            if mentions_sponsorship(html_text):
+                updates['sponsorship_mentioned'] = True
     
     return updates
 

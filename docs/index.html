@@ -1,928 +1,321 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ServiceNow Jobs UK | Sponsor Licence Checked</title>
-<meta name="description" content="ServiceNow jobs in the UK cross-referenced against the UK Government sponsor register. A sponsor licence means the company can legally sponsor — verify with the specific listing.">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ServiceNow Jobs UK</title>
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta name="description" content="Open ServiceNow roles in the UK, checked each morning against the Home Office register of licensed sponsors.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --background: #fafafa;
-    --foreground: #0a0a0a;
-    --card: #ffffff;
-    --card-foreground: #0a0a0a;
-    --primary: #2563eb;
-    --primary-foreground: #fafafa;
-    --primary-light: #eff6ff;
-    --primary-border: #bfdbfe;
-    --secondary: #f4f4f5;
-    --secondary-foreground: #18181b;
-    --muted: #f4f4f5;
-    --muted-foreground: #737373;
-    --accent: #f4f4f5;
-    --accent-foreground: #18181b;
-    --destructive: #ef4444;
-    --destructive-light: #fef2f2;
-    --destructive-border: #fecaca;
-    --warning: #d97706;
-    --warning-light: #fffbeb;
-    --warning-border: #fde68a;
-    --info: #2563eb;
-    --info-light: #eff6ff;
-    --info-border: #bfdbfe;
-    --success: #059669;
-    --success-light: #ecfdf5;
-    --border: #e4e4e7;
-    --ring: #2563eb;
-    --radius: 0.5rem;
-    --radius-sm: 0.375rem;
-    --radius-full: 9999px;
-    --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  }
-  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    font-family: var(--font); font-size: 14px; line-height: 1.5;
-    color: var(--foreground); background: var(--background);
-    -webkit-font-smoothing: antialiased;
-  }
+/* v5 · identity: Almanac (slate stock, the ruled sheet, mono figures, one magenta) · structure: ServiceNow University search
+ * (a dark band carrying one pill search, facets on the left, results as rows) · rule: what you press is round, what you read is ruled.
+ * Measured references, 2026-10-27: servicenow.com (pills 500px, #032D42 ground) and learning.servicenow.com/lxp search
+ * (52px pill input r100, facet heads 18/700, result titles 18/700, chips r100). No ServiceNow font, logo or green. */
+:root {
+  color-scheme: light;
+  --color-band: oklch(19% 0.028 238); --color-band-2: oklch(26% 0.030 238); --color-band-ink: oklch(96% 0.008 238); --color-band-muted: oklch(78% 0.018 238);
+  --color-paper: oklch(87% 0.012 245); --color-sheet: oklch(96% 0.006 245); --color-sheet-2: oklch(92.5% 0.009 245);
+  --color-ink: oklch(18% 0.022 245); --color-ink-2: oklch(27% 0.020 245); --color-muted: oklch(42% 0.016 245);
+  --color-rule: oklch(80% 0.012 240); --color-rule-2: oklch(32% 0.018 240);
+  --color-accent: oklch(45% 0.18 350); --color-accent-2: oklch(38% 0.16 350); --color-accent-soft: oklch(92% 0.035 350); --color-accent-on-band: oklch(78% 0.13 350);
+  --color-focus: oklch(55% 0.19 350);
+  --font: "Instrument Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-figure: "IBM Plex Mono", ui-monospace, monospace;
+  --text-sm: 0.875rem; --text-md: 1rem; --text-lg: 1.125rem; --text-display: clamp(2rem, 1.4rem + 2.4vw, 2.75rem);
+  --space-xs: 4px; --space-sm: 8px; --space-md: 12px; --space-lg: 16px; --space-xl: 24px; --space-2xl: 40px;
+  --pill: 999px; --measure: 80rem;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; }
+html, body { overflow-x: clip; }
+body { background: var(--color-paper); color: var(--color-ink-2); font: 400 var(--text-md)/1.5 var(--font); }
+a { color: var(--color-ink); text-decoration-color: var(--color-accent); text-underline-offset: 0.15em; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; }
+.wrap { max-width: var(--measure); margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.num { font-family: var(--font-figure); font-variant-numeric: tabular-nums; }
 
-  /* ── Header ── */
-  .site-header {
-    position: sticky; top: 0; z-index: 50;
-    background: var(--background);
-    border-bottom: 1px solid var(--border);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-  }
-  .header-inner { max-width: 1152px; margin: 0 auto; padding: 16px 24px; }
-  .header-top {
-    display: flex; flex-direction: column; gap: 12px;
-  }
-  @media (min-width: 768px) {
-    .header-top { flex-direction: row; align-items: center; justify-content: space-between; }
-  }
-  .header-brand { display: flex; align-items: center; gap: 12px; }
-  .brand-icon {
-    display: flex; align-items: center; justify-content: center;
-    width: 40px; height: 40px; border-radius: var(--radius);
-    background: var(--primary); color: var(--primary-foreground);
-    font-weight: 700; font-size: 18px; flex-shrink: 0;
-  }
-  .brand-text h1 { font-size: 20px; font-weight: 600; letter-spacing: -0.02em; }
-  .brand-text p { font-size: 13px; color: var(--muted-foreground); }
-  .header-stats { display: flex; align-items: center; gap: 12px; font-size: 13px; flex-shrink: 0; }
-  .header-stat { display: flex; align-items: center; gap: 4px; color: var(--muted-foreground); }
-  .header-stat strong { color: var(--foreground); font-weight: 600; }
-  .header-stat.licenced strong { color: var(--primary); }
-  .header-stat.sc strong { color: var(--destructive); }
-  .header-divider { width: 1px; height: 16px; background: var(--border); }
-  .header-sources {
-    margin-top: 8px; font-size: 12px; color: var(--muted-foreground);
-    padding-top: 8px; border-top: 1px solid var(--border);
-  }
-  .header-sources a { color: var(--primary); text-decoration: none; }
-  .header-sources a:hover { text-decoration: underline; }
+/* The band: masthead and search, one dark field, as the University search page does it */
+.band { background: var(--color-band); color: var(--color-band-ink); }
+.mast { display: flex; justify-content: space-between; align-items: baseline; gap: var(--space-sm) var(--space-xl); flex-wrap: wrap; padding-block: var(--space-lg); border-bottom: 1px solid var(--color-band-2); }
+.wordmark { font: 600 var(--text-md)/1.2 var(--font); letter-spacing: -0.01em; }
+.edition { font-size: var(--text-sm); color: var(--color-band-muted); }
+.hero { padding-block: var(--space-2xl) var(--space-2xl); display: grid; gap: var(--space-lg); }
+.hero h1 { font: 500 var(--text-display)/1.08 var(--font); letter-spacing: -0.025em; max-width: 24ch; text-wrap: balance; }
+.hero h1 a { color: inherit; text-decoration-color: var(--color-accent-on-band); text-decoration-thickness: 2px; text-underline-offset: 0.12em; }
+.hero h1 .num { font-weight: 500; letter-spacing: -0.04em; }
+.hero p { color: var(--color-band-muted); max-width: 60ch; }
+.hero p a { color: var(--color-band-ink); text-decoration-color: var(--color-accent-on-band); }
+.search { position: relative; max-width: 40rem; margin-top: var(--space-sm); }
+.search input { width: 100%; height: 52px; border-radius: var(--pill); border: 0; padding: 0 var(--space-xl) 0 52px; font: 400 var(--text-md)/1 var(--font); color: var(--color-ink); background: var(--color-sheet); }
+.search svg { position: absolute; left: 20px; top: 50%; transform: translateY(-50%); color: var(--color-muted); pointer-events: none; }
+.lenses { display: flex; flex-wrap: wrap; gap: var(--space-sm); }
+.lenses button { font: 500 var(--text-sm)/1 var(--font); height: 36px; padding: 0 var(--space-lg); border-radius: var(--pill); border: 1px solid var(--color-band-muted); background: transparent; color: var(--color-band-ink); cursor: pointer; }
+.lenses button .num { margin-left: 6px; color: var(--color-band-muted); }
+.lenses button[aria-pressed="true"] { background: var(--color-band-ink); border-color: var(--color-band-ink); color: var(--color-ink); }
+.lenses button[aria-pressed="true"] .num { color: var(--color-ink-2); }
+.lenses button:hover:not([aria-pressed="true"]) { background: var(--color-band-2); }
 
-  /* ── Filter / Controls bar ── */
-  .controls-bar {
-    border-bottom: 1px solid var(--border);
-    background: var(--secondary);
-  }
-  .controls-inner {
-    max-width: 1152px; margin: 0 auto; padding: 12px 24px;
-    display: flex; flex-direction: column; gap: 12px;
-  }
-  @media (min-width: 1024px) {
-    .controls-inner { flex-direction: row; align-items: center; justify-content: space-between; }
-  }
-  .role-pills { display: flex; flex-wrap: wrap; gap: 4px; }
-  .pill {
-    display: inline-flex; align-items: center; gap: 4px;
-    padding: 5px 14px; border-radius: var(--radius-full);
-    font-size: 13px; font-weight: 500; font-family: var(--font);
-    cursor: pointer; border: 1px solid transparent;
-    background: var(--secondary); color: var(--secondary-foreground);
-    transition: all 0.15s; white-space: nowrap;
-  }
-  .pill:hover { background: var(--muted); }
-  .pill.active { background: var(--primary); color: var(--primary-foreground); border-color: var(--primary); }
-  .pill:focus-visible { outline: 2px solid var(--ring); outline-offset: 2px; }
+/* Body: facets left, the sheet right */
+.body { display: grid; grid-template-columns: 15rem minmax(0, 1fr); gap: var(--space-xl); padding-block: var(--space-xl) var(--space-2xl); align-items: start; }
+.facets { display: grid; gap: var(--space-xl); }
+.facets > summary { display: none; }
+fieldset { border: 0; padding: 0; min-width: 0; }
+fieldset + fieldset, .facet-clear { margin-top: var(--space-xl); }
+legend { font: 600 var(--text-md)/1.3 var(--font); color: var(--color-ink); padding-bottom: var(--space-sm); margin-bottom: var(--space-sm); border-bottom: 2px solid var(--color-rule-2); width: 100%; }
+.opt { display: flex; align-items: center; gap: var(--space-sm); font-size: var(--text-sm); color: var(--color-ink-2); padding-block: 5px; cursor: pointer; }
+.opt input { width: 16px; height: 16px; accent-color: var(--color-accent); margin: 0; flex: none; }
+.opt span:first-of-type { flex: 1; }
+.opt .num { color: var(--color-muted); font-size: var(--text-sm); }
+.opt.zero { color: var(--color-muted); }
+.facet-clear { font: 500 var(--text-sm)/1 var(--font); color: var(--color-ink); background: none; border: 0; padding: 0; text-decoration: underline; text-decoration-color: var(--color-accent); text-underline-offset: 0.15em; cursor: pointer; justify-self: start; }
 
-  .controls-right { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; }
-  .toggle-group { display: flex; align-items: center; gap: 6px; font-size: 13px; }
-  .toggle {
-    position: relative; width: 32px; height: 18px;
-    background: var(--border); border-radius: var(--radius-full);
-    cursor: pointer; transition: background 0.2s; flex-shrink: 0;
-    border: none; padding: 0;
-  }
-  .toggle.on { background: var(--primary); }
-  .toggle::after {
-    content: ''; position: absolute; top: 2px; left: 2px;
-    width: 14px; height: 14px; background: white;
-    border-radius: 50%; transition: transform 0.2s;
-  }
-  .toggle.on::after { transform: translateX(14px); }
-  .toggle-label { color: var(--foreground); font-weight: 500; cursor: pointer; user-select: none; }
-  .sort-select {
-    font-size: 13px; padding: 5px 28px 5px 10px;
-    border: 1px solid var(--border); border-radius: var(--radius-sm);
-    background: var(--card); color: var(--foreground);
-    cursor: pointer; font-family: var(--font);
-    appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23737373' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
-    background-repeat: no-repeat; background-position: right 8px center;
-  }
+.sheet { background: var(--color-sheet); border-top: 2px solid var(--color-ink); min-width: 0; }
+.sheet-head { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--space-sm) var(--space-lg); padding: var(--space-lg) var(--space-xl); border-bottom: 1px solid var(--color-rule); }
+.sheet-head h2 { font: 600 var(--text-lg)/1.3 var(--font); color: var(--color-ink); }
+.sheet-head h2 .num { font-weight: 500; }
+.sort { display: flex; align-items: center; gap: var(--space-sm); font-size: var(--text-sm); color: var(--color-muted); }
+.sort select { font: 500 var(--text-sm)/1 var(--font); color: var(--color-ink); height: 36px; padding: 0 var(--space-md); border-radius: var(--pill); border: 1px solid var(--color-rule-2); background: var(--color-sheet); }
 
-  /* ── Date selector ── */
-  .date-bar { max-width: 1152px; margin: 0 auto; padding: 16px 24px 0; display: flex; align-items: center; gap: 10px; font-size: 13px; color: var(--muted-foreground); }
-  .date-bar select {
-    font-size: 12px; padding: 4px 24px 4px 8px; border: 1px solid var(--border); border-radius: var(--radius-sm);
-    background: var(--card); color: var(--foreground); cursor: pointer; font-family: var(--font);
-    appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='%23737373' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
-    background-repeat: no-repeat; background-position: right 6px center;
-  }
-  .search-wrap { margin-left: auto; position: relative; }
-  .search-wrap svg { position: absolute; left: 10px; top: 50%; transform: translateY(-50%); pointer-events: none; color: var(--muted-foreground); }
-  .search-input {
-    font-size: 13px; padding: 6px 12px 6px 34px; width: 220px;
-    border: 1px solid var(--border); border-radius: var(--radius-sm);
-    background: var(--card); color: var(--foreground); font-family: var(--font);
-    outline: none; transition: border-color 0.15s, box-shadow 0.15s;
-  }
-  .search-input::placeholder { color: var(--muted-foreground); }
-  .search-input:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(37,99,235,0.1); }
-  .search-clear {
-    position: absolute; right: 8px; top: 50%; transform: translateY(-50%);
-    background: none; border: none; cursor: pointer; color: var(--muted-foreground);
-    font-size: 16px; line-height: 1; padding: 0; display: none;
-  }
-  .search-clear.visible { display: block; }
-  @media (max-width: 640px) {
-    .date-bar { flex-wrap: wrap; }
-    .search-wrap { margin-left: 0; width: 100%; }
-    .search-input { width: 100%; }
-  }
+ol.results { list-style: none; padding: 0; }
+.result { display: grid; grid-template-columns: minmax(0, 1fr) 14rem; gap: var(--space-sm) var(--space-xl); padding: var(--space-lg) var(--space-xl); border-bottom: 1px solid var(--color-rule); }
+.result:hover { background: var(--color-sheet-2); }
+.meta { display: flex; flex-wrap: wrap; gap: var(--space-xs) var(--space-md); font-size: var(--text-sm); color: var(--color-muted); }
+.meta .new { color: var(--color-ink); font-weight: 600; }
+.result h3 { font: 600 var(--text-lg)/1.3 var(--font); margin-top: 2px; }
+.result h3 a { text-decoration: none; overflow-wrap: anywhere; }
+.result h3 a:hover { text-decoration: underline; text-decoration-color: var(--color-accent); }
+.result h3 a:visited { color: var(--color-muted); }
+.who { font-size: var(--text-sm); color: var(--color-ink-2); }
+.chips { display: flex; flex-wrap: wrap; gap: var(--space-xs) var(--space-sm); margin-top: var(--space-sm); }
+.chip { font-size: var(--text-sm); line-height: 1; padding: 6px 10px; border-radius: var(--pill); background: var(--color-sheet-2); color: var(--color-ink-2); }
+.chip.pay { font-family: var(--font-figure); }
+.reg { align-self: start; font-size: var(--text-sm); border-left: 1px solid var(--color-rule); padding-left: var(--space-lg); }
+.reg b { display: block; font-weight: 600; color: var(--color-ink); }
+.reg .why { color: var(--color-muted); }
+.reg[data-sp="licensed"] { border-left: 2px solid var(--color-accent); }
+.reg[data-sp="licensed"] b { color: var(--color-accent-2); }
+.reg[data-sp="clearance"], .reg[data-sp="no"] { border-left: 2px solid var(--color-ink); }
+.empty { padding: var(--space-2xl) var(--space-xl); }
+.empty button { margin-top: var(--space-md); font: 500 var(--text-sm)/1 var(--font); height: 36px; padding: 0 var(--space-lg); border-radius: var(--pill); border: 0; background: var(--color-accent); color: var(--color-sheet); cursor: pointer; }
+.empty button:hover { background: var(--color-accent-2); }
 
-  /* ── Main content ── */
-  .main-content { max-width: 1152px; margin: 0 auto; padding: 16px 24px 64px; }
-  .result-summary { margin-bottom: 16px; font-size: 13px; color: var(--muted-foreground); }
-  .result-summary strong { color: var(--foreground); font-weight: 600; }
+/* The file, and the method */
+.file .wrap { display: grid; gap: var(--space-xl); grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); padding-block: var(--space-2xl); }
+.file h2 { font: 500 var(--text-display)/1.08 var(--font); letter-spacing: -0.025em; }
+.file p { color: var(--color-band-muted); margin-top: var(--space-sm); max-width: 50ch; }
+.file p a { color: var(--color-band-ink); text-decoration-color: var(--color-accent-on-band); }
+.state { padding: var(--space-2xl) var(--space-xl); color: var(--color-muted); }
+.state.error { color: var(--color-ink); }
+.file pre { min-width: 0; overflow-x: auto; font: 400 var(--text-sm)/1.7 var(--font-figure); border-block: 1px solid var(--color-band-2); padding-block: var(--space-md); }
+.file pre .k { color: var(--color-accent-on-band); }
+.file .cap { font-size: var(--text-sm); color: var(--color-band-muted); margin-top: var(--space-sm); }
+footer .wrap { display: grid; gap: var(--space-xl); grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr)); padding-block: var(--space-2xl); font-size: var(--text-sm); }
+footer h2 { font: 600 var(--text-md)/1.3 var(--font); color: var(--color-ink); padding-bottom: var(--space-sm); margin-bottom: var(--space-sm); border-bottom: 2px solid var(--color-rule-2); }
+footer dl { display: grid; gap: var(--space-sm); }
+footer dt { font-weight: 600; color: var(--color-ink); }
+footer .fine { grid-column: 1 / -1; color: var(--color-muted); border-top: 1px solid var(--color-rule); padding-top: var(--space-lg); }
 
-  /* ── Job card grid ── */
-  .job-grid { display: flex; flex-direction: column; gap: 16px; }
-
-  .job-card {
-    position: relative; background: var(--card); border: 1px solid var(--border);
-    border-radius: var(--radius); padding: 20px;
-    transition: all 0.2s;
-  }
-  .job-card:hover { border-color: var(--primary-border); box-shadow: 0 4px 12px rgba(37,99,235,0.06); }
-  .job-card.expired { opacity: 0.6; }
-  .job-card.expired:hover { opacity: 0.75; }
-  .job-card:focus-within { border-color: var(--primary-border); box-shadow: 0 0 0 3px rgba(37,99,235,0.1); }
-
-  /* Card top-right badges */
-  .card-badges { position: absolute; right: 20px; top: 20px; display: flex; align-items: center; gap: 6px; }
-  .card-tag {
-    display: inline-flex; align-items: center; gap: 3px;
-    font-size: 11px; font-weight: 600; padding: 2px 8px;
-    border-radius: var(--radius-sm); border: 1px solid;
-    text-transform: uppercase; letter-spacing: 0.03em;
-  }
-  .card-tag.grad { color: var(--info); background: var(--info-light); border-color: var(--info-border); }
-  .card-tag.stale { color: var(--warning); background: var(--warning-light); border-color: var(--warning-border); }
-  .card-tag.expired-tag { color: var(--destructive); background: var(--destructive-light); border-color: var(--destructive-border); }
-
-  /* Card content */
-  .card-title {
-    font-size: 17px; font-weight: 600; line-height: 1.35; margin-bottom: 4px;
-    padding-right: 100px; letter-spacing: -0.01em;
-  }
-  .card-title a { color: var(--foreground); text-decoration: none; transition: color 0.15s; }
-  .card-title a:hover { color: var(--primary); }
-  .card-title a:visited { color: var(--muted-foreground); }
-  .card-title a:visited:hover { color: var(--primary); }
-  .card-title a:focus-visible { outline: 2px solid var(--ring); outline-offset: 2px; border-radius: 2px; }
-  .card-title span { color: var(--muted-foreground); }
-
-  .card-company {
-    display: flex; align-items: center; gap: 6px; font-size: 13px;
-    color: var(--muted-foreground); margin-bottom: 12px;
-  }
-  .card-company .company-name { font-weight: 500; color: var(--foreground); }
-
-  .card-meta {
-    display: flex; flex-wrap: wrap; align-items: center; gap: 12px;
-    font-size: 13px; color: var(--muted-foreground); margin-bottom: 12px;
-  }
-  .card-meta-item { display: inline-flex; align-items: center; gap: 4px; }
-  .card-meta-item svg { flex-shrink: 0; }
-  .meta-badge {
-    display: inline-flex; font-size: 11px; font-weight: 500;
-    padding: 1px 6px; border-radius: var(--radius-sm);
-    background: var(--secondary); color: var(--secondary-foreground);
-    margin-left: 2px;
-  }
-
-  /* Sponsorship badges */
-  .card-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 0; }
-  .sponsor-tag {
-    display: inline-flex; align-items: center; gap: 4px;
-    font-size: 12px; font-weight: 600; padding: 3px 10px;
-    border-radius: var(--radius-sm); border: 1px solid;
-  }
-  .sponsor-tag.licenced { color: var(--primary); background: var(--primary-light); border-color: var(--primary-border); }
-  .sponsor-tag.sc-blocked { color: var(--destructive); background: var(--destructive-light); border-color: var(--destructive-border); }
-  .sponsor-tag.unknown { color: var(--muted-foreground); background: var(--muted); border-color: var(--border); }
-  .sponsor-tag.agency { color: var(--muted-foreground); background: var(--secondary); border-color: var(--border); }
-  .sponsor-tag.unavailable { color: var(--destructive); background: var(--destructive-light); border-color: var(--destructive-border); }
-  .sponsor-tag svg { flex-shrink: 0; }
-
-  /* Card bottom row */
-  .card-footer {
-    display: flex; align-items: center; justify-content: space-between;
-    padding-top: 16px; margin-top: 16px; border-top: 1px solid var(--border);
-  }
-  .card-source { font-size: 12px; color: var(--muted-foreground); display: flex; align-items: center; gap: 4px; }
-  .card-apply {
-    display: inline-flex; align-items: center; gap: 4px;
-    padding: 6px 14px; border-radius: var(--radius-sm);
-    background: var(--primary); color: var(--primary-foreground);
-    font-size: 13px; font-weight: 500; text-decoration: none;
-    transition: background 0.15s; font-family: var(--font);
-  }
-  .card-apply:hover { background: #1d4ed8; }
-  .card-apply:focus-visible { outline: 2px solid var(--ring); outline-offset: 2px; }
-  .card-apply.disabled { opacity: 0.5; pointer-events: none; cursor: default; }
-
-  /* Card note */
-  .card-note {
-    font-size: 12px; margin-top: 10px; padding: 6px 10px;
-    border-radius: var(--radius-sm); line-height: 1.4;
-  }
-  .card-note.sc { color: #991b1b; background: var(--destructive-light); }
-  .card-note.agency { color: #374151; background: var(--secondary); }
-  .card-note.unavailable { color: #991b1b; background: var(--destructive-light); }
-  .card-note.mentioned { color: #065f46; background: var(--success-light); }
-  .card-note.js-warn { color: var(--warning); background: var(--warning-light); }
-
-  /* Fallback link */
-  .card-fallback { font-size: 12px; color: var(--muted-foreground); margin-top: 4px; }
-  .card-fallback a { color: var(--primary); }
-
-  /* ── States ── */
-  .loading-state, .error-state, .no-results {
-    text-align: center; padding: 80px 20px; color: var(--muted-foreground);
-  }
-  .loading-spinner {
-    width: 24px; height: 24px; margin: 0 auto 14px;
-    border: 2.5px solid var(--border); border-top-color: var(--primary);
-    border-radius: 50%; animation: spin 0.8s linear infinite;
-  }
-  @keyframes spin { to { transform: rotate(360deg); } }
-  .error-state p { color: var(--destructive); font-size: 14px; margin-bottom: 12px; }
-  .no-results button, .error-state button {
-    margin-top: 12px; padding: 8px 20px; border: 1px solid var(--border);
-    border-radius: var(--radius-sm); background: var(--card);
-    color: var(--foreground); font-size: 13px; cursor: pointer; font-family: var(--font);
-  }
-  .no-results button:hover, .error-state button:hover { background: var(--secondary); }
-
-  /* ── Footer ── */
-  .site-footer { border-top: 1px solid var(--border); background: var(--secondary); }
-  .footer-inner { max-width: 1152px; margin: 0 auto; padding: 32px 24px; }
-
-  .footer-info {
-    background: var(--primary-light); border: 1px solid var(--primary-border);
-    border-radius: var(--radius); padding: 16px 20px; margin-bottom: 32px;
-    display: flex; align-items: flex-start; gap: 12px;
-  }
-  .footer-info svg { flex-shrink: 0; margin-top: 2px; }
-  .footer-info h3 { font-size: 15px; font-weight: 600; margin-bottom: 4px; color: var(--foreground); }
-  .footer-info p { font-size: 13px; color: var(--muted-foreground); line-height: 1.6; }
-  .footer-info a { color: var(--primary); text-decoration: none; }
-  .footer-info a:hover { text-decoration: underline; }
-
-  .footer-glossary { margin-bottom: 32px; }
-  .footer-glossary h3 { font-size: 15px; font-weight: 600; margin-bottom: 16px; }
-  .glossary-grid { display: grid; gap: 16px; }
-  @media (min-width: 640px) { .glossary-grid { grid-template-columns: 1fr 1fr; } }
-  @media (min-width: 1024px) { .glossary-grid { grid-template-columns: 1fr 1fr 1fr; } }
-  .glossary-item dt { font-weight: 500; font-size: 13px; color: var(--foreground); }
-  .glossary-item dd { font-size: 13px; color: var(--muted-foreground); margin-top: 2px; }
-
-  .footer-credits {
-    display: flex; flex-direction: column; align-items: center; gap: 16px;
-    padding-top: 20px; border-top: 1px solid var(--border);
-    font-size: 13px; color: var(--muted-foreground);
-  }
-  @media (min-width: 640px) { .footer-credits { flex-direction: row; justify-content: space-between; } }
-  .footer-credits a { color: var(--foreground); text-decoration: none; }
-  .footer-credits a:hover { color: var(--primary); }
-
-  /* ── Mobile ── */
-  @media (max-width: 640px) {
-    .header-inner, .controls-inner, .main-content, .footer-inner { padding-left: 16px; padding-right: 16px; }
-    .card-title { font-size: 15px; padding-right: 0; }
-    .card-badges { position: static; margin-bottom: 8px; }
-    .card-meta { gap: 8px; }
-    .card-footer { flex-direction: column; align-items: stretch; gap: 10px; }
-    .card-apply { text-align: center; justify-content: center; }
-    .header-stats { flex-wrap: wrap; gap: 8px; }
-    .header-divider { display: none; }
-    .controls-right { gap: 10px; }
-    .date-bar { padding: 12px 16px 0; }
-  }
-
-  /* ── Adjacent roles section ── */
-  .adjacent-section { margin-top: 32px; }
-  .adjacent-section[open] { margin-top: 32px; }
-  .adjacent-header {
-    display: flex; align-items: center; gap: 10px;
-    padding: 14px 0; cursor: pointer; user-select: none;
-    border-top: 2px solid var(--border);
-    font-size: 14px; font-weight: 600; color: var(--muted-foreground);
-    list-style: none; transition: color 0.15s;
-  }
-  .adjacent-header:hover { color: var(--foreground); }
-  .adjacent-header::-webkit-details-marker { display: none; }
-  .adjacent-header::marker { display: none; content: ''; }
-  .adjacent-header::before {
-    content: '▶'; display: inline-block; font-size: 10px;
-    transition: transform 0.2s; width: 14px; flex-shrink: 0;
-    color: var(--muted-foreground);
-  }
-  .adjacent-section[open] .adjacent-header::before { transform: rotate(90deg); }
-  .adjacent-count {
-    font-size: 12px; font-weight: 500; color: var(--muted-foreground);
-    padding: 1px 8px; border-radius: var(--radius-full);
-    background: var(--secondary);
-  }
-  .adjacent-section .job-card {
-    border-color: var(--border);
-    background: var(--background);
-  }
-  .adjacent-section .job-card:hover {
-    border-color: var(--border);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-  }
-  .adjacent-label {
-    display: inline-flex; align-items: center; gap: 3px;
-    font-size: 10px; font-weight: 600; text-transform: uppercase;
-    letter-spacing: 0.04em; padding: 1px 6px; border-radius: 3px;
-    color: var(--muted-foreground); background: var(--secondary);
-    margin-right: 4px;
-  }
+@media (max-width: 860px) {
+  .body { grid-template-columns: minmax(0, 1fr); }
+  .facets { background: var(--color-sheet); border-top: 2px solid var(--color-ink); padding: 0 var(--space-lg); gap: var(--space-lg); }
+  .facets > summary { display: block; cursor: pointer; padding-block: var(--space-md); font: 600 var(--text-md)/1.3 var(--font); color: var(--color-ink); }
+  .facets[open] { padding-bottom: var(--space-lg); }
+  .result { grid-template-columns: minmax(0, 1fr); padding-inline: var(--space-lg); }
+  .sheet-head { padding-inline: var(--space-lg); }
+  .reg { border-left-width: 2px; }
+}
 </style>
 </head>
 <body>
 
-<!-- ====== HEADER ====== -->
-<header class="site-header">
-  <div class="header-inner">
-    <div class="header-top">
-      <div class="header-brand">
-        <div class="brand-icon">SN</div>
-        <div class="brand-text">
-          <h1>ServiceNow Jobs UK</h1>
-          <p>Companies cross-referenced with UK sponsor register</p>
-        </div>
-      </div>
-      <div class="header-stats" id="header-stats">
-        <span class="header-stat"><strong id="stat-total">—</strong> roles</span>
-        <span class="header-divider"></span>
-        <span class="header-stat licenced"><strong id="stat-licenced">—</strong> licenced</span>
-        <span class="header-divider"></span>
-        <span class="header-stat sc"><strong id="stat-sc">—</strong> SC-blocked</span>
-      </div>
+<div class="band">
+  <header class="mast wrap">
+    <span class="wordmark">ServiceNow Jobs UK</span>
+    <span class="edition" id="edition"></span>
+  </header>
+  <section class="hero wrap">
+    <h1 id="headline">Open ServiceNow roles in the UK, checked every morning.</h1>
+    <p>Every open ServiceNow role we can find in the UK, each employer checked against the Home Office register of licensed sponsors. <a href="#method">How the check works</a></p>
+    <label class="search">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="q" type="search" placeholder="Search a title, company or place" autocomplete="off" aria-label="Search a title, company or place">
+    </label>
+    <div class="lenses" role="group" aria-label="Show">
+      <button data-lens="all">All roles<span class="num" id="n-all"></span></button>
+      <button data-lens="sponsor">Licensed sponsors<span class="num" id="n-sponsor"></span></button>
+      <button data-lens="new">New today<span class="num" id="n-new"></span></button>
     </div>
-    <p class="header-sources" id="header-sources">
-      Updated <strong id="update-date">daily</strong>. Data from LinkedIn, JobServe, Hunt UK, ServiceNow Careers, Nelson Frank. Cross-referenced with <a href="https://www.gov.uk/government/publications/register-of-licensed-sponsors-workers" target="_blank" rel="noopener">UK Government sponsor register</a>.
-    </p>
-  </div>
-</header>
-
-<!-- ====== FILTERS ====== -->
-<div class="controls-bar">
-  <div class="controls-inner" style="flex-wrap:wrap; gap:8px 16px">
-    <div style="display:flex;align-items:center;gap:6px">
-      <span style="font-size:11px;font-weight:600;color:var(--muted-foreground);text-transform:uppercase;letter-spacing:0.06em;white-space:nowrap">Role</span>
-      <div class="role-pills" id="role-filters">
-        <button class="pill active" data-value="all">All</button>
-        <button class="pill" data-value="developer">Developer</button>
-        <button class="pill" data-value="architect">Architect</button>
-        <button class="pill" data-value="consultant">Consultant</button>
-        <button class="pill" data-value="admin">Admin</button>
-        <button class="pill" data-value="manager">Manager</button>
-        <button class="pill" data-value="analyst">Analyst</button>
-      </div>
-    </div>
-    <div style="display:flex;align-items:center;gap:6px">
-      <span style="font-size:11px;font-weight:600;color:var(--muted-foreground);text-transform:uppercase;letter-spacing:0.06em;white-space:nowrap">Source</span>
-      <div class="role-pills" id="source-filters" style="margin-top:0">
-        <button class="pill active" data-value="all">All</button>
-        <button class="pill" data-value="LinkedIn">LinkedIn</button>
-        <button class="pill" data-value="JobServe">JobServe</button>
-        <button class="pill" data-value="Hunt UK">Hunt UK</button>
-        <button class="pill" data-value="ServiceNow Careers">SN Careers</button>
-        <button class="pill" data-value="Nelson Frank">N. Frank</button>
-      </div>
-    </div>
-    <div class="controls-right">
-      <div class="toggle-group">
-        <button class="toggle" id="toggle-licenced" aria-label="Show licenced only" onclick="toggleFilter('licenced')"></button>
-        <span class="toggle-label" onclick="document.getElementById('toggle-licenced').click()">Licenced only</span>
-      </div>
-      <div class="toggle-group">
-        <button class="toggle on" id="toggle-expired" aria-label="Hide expired" onclick="toggleFilter('expired')"></button>
-        <span class="toggle-label" onclick="document.getElementById('toggle-expired').click()">Hide expired</span>
-      </div>
-      <select class="sort-select" id="sort-select">
-        <option value="date">Sort: Newest</option>
-        <option value="salary">Sort: Salary</option>
-        <option value="company">Sort: Company</option>
-      </select>
-    </div>
-  </div>
+  </section>
 </div>
 
-<div class="date-bar">
-  <label for="date-select">Viewing:</label>
-  <select id="date-select">
-    <option value="all">All Active (215+ jobs)</option>
-    <option value="today">Today</option>
-  </select>
-  <span id="date-count"></span>
-  <div class="search-wrap">
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-    <input type="text" class="search-input" id="search-input" placeholder="Search title or company…" autocomplete="off">
-    <button class="search-clear" id="search-clear" aria-label="Clear search">&times;</button>
-  </div>
-</div>
-
-<!-- ====== JOB LIST ====== -->
-<main class="main-content">
-  <div class="result-summary" id="result-summary" style="display:none">
-    Showing <strong id="showing-count">0</strong> of <strong id="total-count">0</strong> jobs
-  </div>
-
-  <div class="job-grid" id="job-grid"></div>
-
-  <details class="adjacent-section" id="adjacent-section" style="display:none">
-    <summary class="adjacent-header">
-      IT-Adjacent Roles <span class="adjacent-count" id="adjacent-count">0</span>
-    </summary>
-    <div class="job-grid" id="adjacent-grid"></div>
+<main class="body wrap">
+  <details class="facets" id="facets" open>
+    <summary>Filters</summary>
+    <fieldset><legend>Sponsor register</legend><div id="f-sp"></div></fieldset>
+    <fieldset><legend>Role</legend><div id="f-role"></div></fieldset>
+    <fieldset><legend>Work pattern</legend><div id="f-r"></div></fieldset>
+    <fieldset><legend>Found on</legend><div id="f-src"></div></fieldset>
+    <button class="facet-clear" id="facet-clear" hidden>Clear filters</button>
   </details>
 
-  <div class="loading-state" id="loading-state">
-    <div class="loading-spinner"></div>
-    <p>Loading jobs…</p>
-  </div>
-  <div class="error-state" id="error-state" style="display:none">
-    <p>Failed to load job data. The data file may be rebuilding.</p>
-    <button onclick="location.reload()">Try again</button>
-  </div>
-  <div class="no-results" id="no-results" style="display:none">
-    <p>No jobs match your filters</p>
-    <button id="clear-filters-btn">Clear all filters</button>
-  </div>
+  <section class="sheet" aria-labelledby="results-title">
+    <div class="sheet-head">
+      <h2 id="results-title" aria-live="polite"></h2>
+      <label class="sort">Sort
+        <select id="sort"><option value="new">Newest first</option><option value="company">Company</option><option value="pay">Pay listed first</option></select>
+      </label>
+    </div>
+    <ol class="results" id="results"><li class="state" id="loading">Loading today's roles…</li></ol>
+    <div class="empty" id="empty" hidden><p>No roles match these filters.</p><button id="clear">Clear filters</button></div>
+  </section>
 </main>
 
-<!-- ====== FOOTER ====== -->
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-info">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--primary)"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg>
-      <div>
-        <h3>What does "Licenced Sponsor" mean?</h3>
-        <p>Companies with a UK visa sponsor licence can legally sponsor skilled workers for a work visa. We cross-reference job listings with the official <a href="https://www.gov.uk/government/publications/register-of-licensed-sponsors-workers" target="_blank" rel="noopener">UK Government register</a> to verify sponsorship capability. Note: having a licence does not guarantee they will sponsor your specific role.</p>
-      </div>
+<section class="band file" aria-labelledby="file-title">
+  <div class="wrap">
+    <div>
+      <h2 id="file-title">The same list, as one file.</h2>
+      <p>Every open role is in <a href="data/active.json">data/active.json</a>, rebuilt each morning. Older roles move to a <a href="data/archive/index.json">monthly archive</a>. Free to use.</p>
     </div>
+    <div><pre id="sample"></pre><p class="cap" id="sample-cap"></p></div>
+  </div>
+</section>
 
-    <div class="footer-glossary">
-      <h3>Glossary</h3>
-      <dl class="glossary-grid">
-        <div class="glossary-item"><dt>SC Clearance</dt><dd>Security Check — basic UK security clearance for sensitive roles. Takes 6–8 weeks.</dd></div>
-        <div class="glossary-item"><dt>DV Clearance</dt><dd>Developed Vetting — highest level of UK security clearance. Takes 6–9 months.</dd></div>
-        <div class="glossary-item"><dt>5yr UK Residency</dt><dd>Requirement to have lived continuously in the UK for 5 years (often for security clearance).</dd></div>
-        <div class="glossary-item"><dt>Stale Listing</dt><dd>Job posted more than 14 days ago that may no longer be available.</dd></div>
-        <div class="glossary-item"><dt>Licenced Company</dt><dd>Company holds an A-rated Skilled Worker sponsor licence. Does not guarantee sponsorship for this role.</dd></div>
-        <div class="glossary-item"><dt>Sponsorship Mentioned</dt><dd>The job listing explicitly states visa sponsorship is available. Always confirm with employer.</dd></div>
-      </dl>
-    </div>
-
-    <div class="footer-credits">
-      <p>Built for the ServiceNow community. Not affiliated with ServiceNow, Inc.</p>
-      <p><a href="https://github.com/IbdotBoss/servicenow-jobs-digest">GitHub</a> · Built by Mr Faajii &amp; Stage</p>
-    </div>
+<footer id="method">
+  <div class="wrap">
+    <div><h2>How the check works</h2><p>Each employer's name is matched against the Home Office register of licensed sponsors every morning. A match means the employer can sponsor a visa. It doesn't mean this role will. Agencies are kept apart, because an agency's licence doesn't cover the employer it recruits for.</p></div>
+    <div><h2>What the register column says</h2><dl>
+      <div><dt>Licensed sponsor</dt><dd>The employer is on the register.</dd></div>
+      <div><dt>No register match</dt><dd>The name wasn't found. It may be registered under another name.</dd></div>
+      <div><dt>Needs SC or DV clearance</dt><dd>Security clearance has UK residence requirements.</dd></div>
+      <div><dt>Agency, or No sponsorship</dt><dd>The employer isn't named, or the listing says it won't sponsor.</dd></div>
+    </dl></div>
+    <div><h2>Sources</h2><p id="sources"></p><p>A role leaves the list after 14 days without being seen again.</p></div>
+    <p class="fine">An independent list, not affiliated with or endorsed by ServiceNow, Inc. Code on <a href="https://github.com/IbdotBoss/servicenow-jobs-digest">GitHub</a>.</p>
   </div>
 </footer>
 
 <script>
-/* ── SVG icons (inline for zero network requests) ── */
-const ICONS = {
-  building: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 12h4"/><path d="M10 8h4"/><path d="M14 21v-3a2 2 0 0 0-4 0v3"/><path d="M6 10H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2"/><path d="M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16"/></svg>',
-  mapPin: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>',
-  banknote: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="12" x="2" y="6" rx="2"/><circle cx="12" cy="12" r="2"/><path d="M6 12h.01M18 12h.01"/></svg>',
-  calendar: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg>',
-  shield: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg>',
-  alertTriangle: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>',
-  grad: '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>',
-  externalLink: '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>'
+fetch('data/active.json', { cache: 'no-cache' })
+  .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+  .then(start, () => {
+    const li = document.getElementById('loading');
+    li.className = 'state error';
+    li.textContent = "Today's list didn't load. It may be mid-update: try again in a minute.";
+  });
+
+function start(D) {
+const UPDATED = D.updated;
+const SP = { licensed: ['Licensed sponsor', 'Employer is on the register'], unknown: ['No register match', 'Not found under this name'], clearance: ['Needs SC or DV clearance', 'Residence rules apply'], agency: ['Agency', 'Employer not named'], no: ['No sponsorship', 'Stated in the listing'] };
+const ROLE = { architect: 'Architect', developer: 'Developer', manager: 'Manager', consultant: 'Consultant', analyst: 'Analyst', admin: 'Administrator', other: 'Other ServiceNow', 'sn-adjacent': 'Next to ServiceNow' };
+const WORK = { remote: 'Remote', hybrid: 'Hybrid', '': 'Not stated' };
+const jobs = D.jobs.map(j => ({ ...j, w: j.r || '' }));
+const core = jobs.filter(j => j.role !== 'sn-adjacent');
+const isNew = j => j.fs === UPDATED;
+const longDate = d => new Date(d + 'T12:00:00Z').toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
+const shortDate = d => new Date(d + 'T12:00:00Z').toLocaleDateString('en-GB', { day: 'numeric', month: 'short', timeZone: 'UTC' });
+
+// Facets are OR within a group, AND across groups. Everything lives in the URL so a view can be shared.
+const P = new URLSearchParams(location.search);
+const list = k => (P.get(k) || '').split(',').filter(Boolean);
+const state = { lens: P.get('show') || 'all', q: P.get('q') || '', sort: P.get('sort') || 'new', sp: list('sp'), role: list('role'), w: list('w'), src: list('src') };
+const FACETS = [['sp', 'f-sp', v => SP[v][0], Object.keys(SP)], ['role', 'f-role', v => ROLE[v] || v], ['w', 'f-r', v => WORK[v]], ['src', 'f-src', v => v]];
+function saveUrl() {
+  const p = new URLSearchParams();
+  if (state.lens !== 'all') p.set('show', state.lens);
+  if (state.q) p.set('q', state.q);
+  if (state.sort !== 'new') p.set('sort', state.sort);
+  for (const [k] of FACETS) if (state[k].length) p.set(k, state[k].join(','));
+  try { history.replaceState(null, '', p.toString() ? '?' + p : location.pathname); } catch (e) {}
+}
+function el(tag, cls, text) { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+
+function passes(j, skip) {
+  if (state.lens === 'sponsor' && j.sp !== 'licensed') return false;
+  if (state.lens === 'new' && !isNew(j)) return false;
+  if (state.q) { const q = state.q.toLowerCase(); if (![j.t, j.c, j.l].some(v => (v || '').toLowerCase().includes(q))) return false; }
+  for (const [k] of FACETS) if (k !== skip && state[k].length && !state[k].includes(j[k])) return false;
+  return true;
+}
+function result(j) {
+  const li = el('li', 'result');
+  const main = el('div');
+  const meta = el('div', 'meta');
+  meta.append(el('span', isNew(j) ? 'new' : null, isNew(j) ? 'New today' : 'First seen ' + shortDate(j.fs)), el('span', null, 'via ' + j.src));
+  const h = el('h3'); const a = el('a', null, j.t); a.href = j.u; a.target = '_blank'; a.rel = 'noopener'; h.append(a);
+  const who = el('p', 'who', [j.c || 'Employer not named', j.l].filter(Boolean).join(', '));
+  const chips = el('div', 'chips');
+  chips.append(el('span', 'chip', ROLE[j.role] || j.role));
+  if (j.r) chips.append(el('span', 'chip', WORK[j.r]));
+  if (j.s) chips.append(el('span', 'chip pay', j.s));
+  main.append(meta, h, who, chips);
+  const reg = el('div', 'reg'); reg.dataset.sp = j.sp;
+  // The scanner's "mentioned" flag also fires on "no sponsorship", so trust it only where nothing contradicts it.
+  const why = j.m && (j.sp === 'licensed' || j.sp === 'unknown') ? 'Listing mentions sponsorship' : SP[j.sp][1];
+  reg.append(el('b', null, SP[j.sp][0]), el('span', 'why', why));
+  li.append(main, reg);
+  return li;
+}
+function renderFacets() {
+  for (const [k, id, label, order] of FACETS) {
+    const counts = {};
+    jobs.filter(j => passes(j, k)).forEach(j => counts[j[k]] = (counts[j[k]] || 0) + 1);
+    const values = order || [...new Set(jobs.map(j => j[k]))].sort((a, b) => label(a).localeCompare(label(b)));
+    document.getElementById(id).replaceChildren(...values.map(v => {
+      const n = counts[v] || 0;
+      const lab = el('label', 'opt' + (n ? '' : ' zero'));
+      const box = el('input'); box.type = 'checkbox'; box.checked = state[k].includes(v);
+      box.addEventListener('change', () => { state[k] = box.checked ? [...state[k], v] : state[k].filter(x => x !== v); render(); });
+      lab.append(box, el('span', null, label(v)), el('span', 'num', n));
+      return lab;
+    }));
+  }
+  document.getElementById('facet-clear').hidden = !FACETS.some(([k]) => state[k].length);
+}
+const BY = {
+  new: (a, b) => b.fs.localeCompare(a.fs) || (b.p || '').localeCompare(a.p || ''),
+  company: (a, b) => (a.c || '~').localeCompare(b.c || '~'),
+  pay: (a, b) => (!!b.s - !!a.s) || b.fs.localeCompare(a.fs),
 };
-
-let allJobs = [];
-let filters = { role: 'all', source: 'all', licenced: false, hideExpired: true };
-let sortBy = 'date';
-let currentView = 'all';
-let masterJobs = [];
-let dailySnapshots = [];
-let lastUpdated = '';
-let searchQuery = '';
-
-/* ── Init ── */
-async function init() {
-  document.getElementById('loading-state').style.display = 'block';
-  try {
-    const masterResp = await fetch('data/master.json?t=' + Date.now());
-    if (!masterResp.ok) throw new Error('HTTP ' + masterResp.status);
-    const masterData = await masterResp.json();
-    masterJobs = (masterData.jobs || []).filter(j => j.status === 'active');
-    dailySnapshots = (masterData.daily_snapshots || []).sort().reverse();
-    lastUpdated = masterData.updated || 'daily';
-
-    const select = document.getElementById('date-select');
-    dailySnapshots.forEach(date => {
-      const opt = document.createElement('option');
-      opt.value = date; opt.textContent = date;
-      select.appendChild(opt);
-    });
-
-    applyDateFilter('all');
-    document.getElementById('loading-state').style.display = 'none';
-  } catch (err) {
-    console.error('Failed to load:', err);
-    document.getElementById('loading-state').style.display = 'none';
-    document.getElementById('error-state').style.display = 'block';
-  }
-}
-
-/* ── Date filtering (single source: masterJobs) ── */
-function applyDateFilter(view) {
-  currentView = view;
-  const today = new Date().toISOString().slice(0, 10);
-  
-  if (view === 'all') {
-    allJobs = [...masterJobs];
-    document.getElementById('date-count').textContent = allJobs.length + ' active jobs';
-  } else if (view === 'today') {
-    allJobs = masterJobs.filter(j => {
-      const dp = j.date_posted || '';
-      const fs = j.first_seen || '';
-      return dp === today || fs === today;
-    });
-    document.getElementById('date-count').textContent = allJobs.length + ' jobs posted today';
-  } else {
-    allJobs = masterJobs.filter(j => {
-      const dp = j.date_posted || '';
-      const fs = j.first_seen || '';
-      return dp === view || fs === view;
-    });
-    document.getElementById('date-count').textContent = allJobs.length + ' jobs on ' + view;
-  }
-  
-  updateHeaderStats();
-  render();
-  document.getElementById('update-date').textContent = lastUpdated;
-}
-
-document.getElementById('date-select').addEventListener('change', e => applyDateFilter(e.target.value));
-
-/* ── Header stats ── */
-function updateHeaderStats() {
-  const total = allJobs.length;
-  const licenced = allJobs.filter(j => j.sponsor_licence).length;
-  const sc = allJobs.filter(j => j.visa_sponsorship === 'sc_blocked').length;
-  document.getElementById('stat-total').textContent = total;
-  document.getElementById('stat-licenced').textContent = licenced;
-  document.getElementById('stat-sc').textContent = sc;
-}
-
-/* ── Filtering ── */
-function getFiltered() {
-  return allJobs.filter(j => {
-    if (filters.role !== 'all' && j.role_type !== filters.role) return false;
-    if (filters.source !== 'all' && j.source !== filters.source) return false;
-    if (filters.licenced && !j.sponsor_licence) return false;
-    if (filters.hideExpired && j.link_status === 'expired') return false;
-    if (searchQuery) {
-      const q = searchQuery.toLowerCase();
-      const title = (j.title || '').toLowerCase();
-      const company = (j.company || '').toLowerCase();
-      const location = (j.location || '').toLowerCase();
-      if (!title.includes(q) && !company.includes(q) && !location.includes(q)) return false;
-    }
-    return true;
-  });
-}
-
-/* ── Sorting ── */
-function sortJobs(jobs) {
-  return [...jobs].sort((a, b) => {
-    if (sortBy === 'date') {
-      // Newest first. Handles both 'YYYY-MM-DD' and 'YYYY-MM-DD HH:MM:SS'
-      const da = a.date_posted || '';
-      const db = b.date_posted || '';
-      // Push empty dates to bottom
-      if (!da && !db) return (a.title || '').localeCompare(b.title || '');
-      if (!da) return 1;
-      if (!db) return -1;
-      // Descending: newest first (string sort works for both date and datetime)
-      const d = db.localeCompare(da);
-      if (d !== 0) return d;
-      // Secondary: scraped_at or first_seen (newer first)
-      const ta = a.scraped_at || a.first_seen || '';
-      const tb = b.scraped_at || b.first_seen || '';
-      if (!ta && !tb) return (a.title || '').localeCompare(b.title || '');
-      if (!ta) return 1;
-      if (!tb) return -1;
-      return tb.localeCompare(ta);
-    }
-    if (sortBy === 'salary') {
-      const sa = a.salary_max || a.salary_min || 0;
-      const sb = b.salary_max || b.salary_min || 0;
-      const s = sb - sa;
-      if (s !== 0) return s;
-      return (a.title || '').localeCompare(b.title || '');
-    }
-    if (sortBy === 'company') {
-      let ca = (a.company || '').replace('[view listing]', 'via JobServe');
-      let cb = (b.company || '').replace('[view listing]', 'via JobServe');
-      const c = ca.localeCompare(cb);
-      if (c !== 0) return c;
-      // Secondary: date (newest first)
-      const da = a.date_posted || '';
-      const db = b.date_posted || '';
-      if (!da && !db) return 0;
-      if (!da) return 1;
-      if (!db) return -1;
-      return db.localeCompare(da);
-    }
-    return 0;
-  });
-}
-
-/* ── Sponsor tag HTML ── */
-function sponsorTagHtml(j) {
-  let sp = j.visa_sponsorship || 'unknown';
-  const isLicenced = j.sponsor_licence;
-  if (sp === 'verified') sp = 'licenced';
-
-  // Build tags array
-  let tags = [];
-  if (isLicenced) {
-    tags.push('<span class="sponsor-tag licenced">' + ICONS.shield + 'Licenced Sponsor</span>');
-  } else if (sp === 'unknown' && j.company && j.company !== '[view listing]') {
-    tags.push('<span class="sponsor-tag unknown">' + ICONS.alertTriangle + 'Sponsorship Unknown</span>');
-  }
-
-  if (sp === 'sc_blocked') {
-    tags.push('<span class="sponsor-tag sc-blocked">' + ICONS.alertTriangle + 'SC/DV Required</span>');
-  }
-  if (sp === 'agency_unknown') {
-    tags.push('<span class="sponsor-tag agency">Agency</span>');
-  }
-  if (sp === 'unavailable') {
-    tags.push('<span class="sponsor-tag unavailable">No Sponsorship</span>');
-  }
-  return tags.join('');
-}
-
-/* ── Note HTML ── */
-function noteHtml(j) {
-  const sp = j.visa_sponsorship;
-  const isJobServe = j.company === '[view listing]' || j.source === 'JobServe';
-  if (sp === 'unavailable') {
-    return '<div class="card-note unavailable">Visa sponsorship NOT available for this role.</div>';
-  }
-  if (sp === 'sc_blocked') {
-    return '<div class="card-note sc">SC/DV clearance required — 5yr UK residency. Sponsorship not possible.</div>';
-  }
-  if (sp === 'agency_unknown') {
-    return '<div class="card-note agency">Agency listing — sponsorship depends on actual employer.</div>';
-  }
-  if (j.sponsorship_mentioned) {
-    return '<div class="card-note mentioned">✓ Sponsorship mentioned in listing — confirm with employer.</div>';
-  }
-  if (isJobServe && !j.sponsor_licence && j.company === '[view listing]') {
-    return '<div class="card-note js-warn">Posted via JobServe — company name not listed. Sponsorship unknown.</div>';
-  }
-  return '';
-}
-
-/* ── Fallback link ── */
-function fallbackHtml(j) {
-  if ((j.link_status === 'expired' || j.link_status === 'stale') && j.fallback_url) {
-    let company = j.company || '';
-    if (company === '[view listing]') company = 'JobServe';
-    return '<div class="card-fallback">Company page: <a href="' + j.fallback_url + '" target="_blank" rel="noopener">' + company + ' careers →</a></div>';
-  }
-  return '';
-}
-
-/* ── Render card HTML (shared by SN and adjacent) ── */
-function cardHtml(j, isAdjacent) {
-  const isExpired = j.link_status === 'expired';
-  const isStale = j.link_status === 'stale';
-  const rowClass = isExpired ? ' expired' : '';
-
-  // Badges (top right)
-  let badges = '';
-  if (j.grad_scheme) badges += '<span class="card-tag grad">' + ICONS.grad + 'Graduate</span>';
-  if (isStale) badges += '<span class="card-tag stale">Stale</span>';
-  if (isExpired) badges += '<span class="card-tag expired-tag">Expired</span>';
-  const badgesHtml = badges ? '<div class="card-badges">' + badges + '</div>' : '';
-
-  // Title
-  let canApply = j.url && !isExpired;
-  let titleHtml = (canApply
-    ? '<a href="' + j.url + '" target="_blank" rel="noopener">' + j.title + '</a>'
-    : '<span>' + j.title + '</span>');
-
-  // Company
-  let companyName = j.company || '';
-  if (companyName === '[view listing]') companyName = 'via JobServe';
-  let adjacentLabel = isAdjacent ? '<span class="adjacent-label">IT-Adjacent</span>' : '';
-
-  // Meta items
-  let metaItems = [];
-  if (j.location) {
-    let locationHtml = ICONS.mapPin + '<span>' + j.location + '</span>';
-    if (j.remote === 'remote') locationHtml += '<span class="meta-badge">Remote</span>';
-    else if (j.remote === 'hybrid') locationHtml += '<span class="meta-badge">Hybrid</span>';
-    else if (j.remote === 'on-site' || j.remote === 'onsite') locationHtml += '<span class="meta-badge">On-site</span>';
-    metaItems.push('<span class="card-meta-item">' + locationHtml + '</span>');
-  }
-  let salary = j.salary_display || '';
-  if (salary && salary !== 'Not listed') {
-    metaItems.push('<span class="card-meta-item">' + ICONS.banknote + '<span>' + salary + '</span></span>');
-  }
-  if (j.date_posted) {
-    metaItems.push('<span class="card-meta-item">' + ICONS.calendar + '<span>' + j.date_posted + '</span></span>');
-  }
-  let metaHtml = metaItems.length ? '<div class="card-meta">' + metaItems.join('') + '</div>' : '';
-
-  // Sponsorship tags
-  let sponsorTags = sponsorTagHtml(j);
-  let tagsHtml = sponsorTags ? '<div class="card-tags">' + sponsorTags + '</div>' : '';
-
-  // Note
-  let note = noteHtml(j);
-
-  // Fallback
-  let fallback = fallbackHtml(j);
-
-  // Footer
-  let sourceLine = j.source ? 'via ' + j.source : '';
-  if (j.source_type === 'agency') sourceLine += ' · agency';
-  let applyBtn = canApply
-    ? '<a class="card-apply" href="' + j.url + '" target="_blank" rel="noopener">Apply ' + ICONS.externalLink + '</a>'
-    : '<span class="card-apply disabled">Expired</span>';
-
-  return '<article class="job-card' + rowClass + '">' +
-    badgesHtml +
-    '<div class="card-title">' + titleHtml + '</div>' +
-    '<div class="card-company">' + adjacentLabel + ICONS.building + '<span class="company-name">' + companyName + '</span></div>' +
-    metaHtml +
-    tagsHtml +
-    note +
-    fallback +
-    '<div class="card-footer">' +
-      '<span class="card-source">' + sourceLine + '</span>' +
-      applyBtn +
-    '</div>' +
-  '</article>';
-}
-
-/* ── Render ── */
+const TITLES = { all: 'All open roles', sponsor: 'Roles at licensed sponsors', new: 'New today' };
 function render() {
-  const filtered = getFiltered();
-  const sorted = sortJobs(filtered);
-
-  // Split into SN and adjacent (adjacent only shown when no role filter active)
-  const snJobs = sorted.filter(j => j.role_type !== 'sn-adjacent');
-  const adjJobs = sorted.filter(j => j.role_type === 'sn-adjacent');
-
-  const showingSN = filters.role === 'all' ? snJobs.length : sorted.length; // role filter excludes adjacent
-  document.getElementById('showing-count').textContent = showingSN;
-  document.getElementById('total-count').textContent = allJobs.filter(j => j.role_type !== 'sn-adjacent').length;
-  document.getElementById('result-summary').style.display = snJobs.length > 0 ? 'block' : 'none';
-
-  const grid = document.getElementById('job-grid');
-  const no = document.getElementById('no-results');
-  const adjSection = document.getElementById('adjacent-section');
-  const adjGrid = document.getElementById('adjacent-grid');
-  const adjCount = document.getElementById('adjacent-count');
-
-  if (snJobs.length === 0 && adjJobs.length === 0) {
-    grid.innerHTML = '';
-    adjSection.style.display = 'none';
-    no.style.display = 'block';
-    return;
-  }
-  no.style.display = 'none';
-
-  // SN jobs
-  grid.innerHTML = snJobs.map(j => cardHtml(j, false)).join('');
-
-  // Adjacent section
-  if (adjJobs.length > 0 && filters.role === 'all' && !filters.licenced) {
-    adjSection.style.display = '';
-    adjCount.textContent = adjJobs.length + ' today';
-    adjGrid.innerHTML = adjJobs.map(j => cardHtml(j, true)).join('');
-  } else {
-    adjSection.style.display = 'none';
-  }
+  document.querySelectorAll('.lenses button').forEach(b => b.setAttribute('aria-pressed', b.dataset.lens === state.lens));
+  const shown = jobs.filter(j => passes(j)).sort(BY[state.sort]);
+  document.getElementById('results').replaceChildren(...shown.map(result));
+  document.getElementById('empty').hidden = !!shown.length;
+  document.getElementById('results-title').replaceChildren(TITLES[state.lens], ' ', el('span', 'num', '(' + shown.length + ')'));
+  renderFacets();
+  saveUrl();
 }
 
-/* ── Toggle filters ── */
-function toggleFilter(type) {
-  if (type === 'licenced') {
-    filters.licenced = !filters.licenced;
-    document.getElementById('toggle-licenced').classList.toggle('on', filters.licenced);
-  } else if (type === 'expired') {
-    filters.hideExpired = !filters.hideExpired;
-    document.getElementById('toggle-expired').classList.toggle('on', filters.hideExpired);
-  }
-  render();
+const nSponsor = jobs.filter(j => j.sp === 'licensed').length;
+const nNew = jobs.filter(isNew).length;
+document.getElementById('edition').textContent = 'Edition of ' + longDate(UPDATED);
+const fig = (n, lens) => { const a = el('a', 'num', String(n)); a.href = '#results-title'; a.addEventListener('click', e => { e.preventDefault(); state.lens = lens; render(); document.getElementById('results-title').scrollIntoView(); }); return a; };
+document.getElementById('headline').replaceChildren(el('span', 'num', jobs.length), ' open roles. ', fig(nSponsor, 'sponsor'), ' at licensed sponsors, ', fig(nNew, 'new'), ' new today.');
+document.getElementById('n-all').textContent = jobs.length;
+document.getElementById('n-sponsor').textContent = nSponsor;
+document.getElementById('n-new').textContent = nNew;
+const srcs = [...new Set(jobs.map(j => j.src))].sort();
+document.getElementById('sources').textContent = 'Listings from ' + srcs.join(', ') + '.';
+const sample = document.getElementById('sample');
+sample.append(el('span', 'k', 'title,company,location,sponsor,first_seen'), '\n');
+jobs.filter(j => j.sp === 'licensed').slice(0, 4).forEach(j => sample.append([j.t, j.c, j.l, j.sp, j.fs].map(v => /[,"]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v).join(',') + '\n'));
+document.getElementById('sample-cap').textContent = 'Four lines from today\'s file. It holds all ' + jobs.length + ' open roles.';
+
+const q = document.getElementById('q'), sortSel = document.getElementById('sort');
+q.value = state.q; sortSel.value = state.sort;
+q.addEventListener('input', () => { state.q = q.value.trim(); render(); });
+sortSel.addEventListener('change', () => { state.sort = sortSel.value; render(); });
+document.querySelectorAll('.lenses button').forEach(b => b.addEventListener('click', () => { state.lens = b.dataset.lens; render(); }));
+const clearAll = () => { Object.assign(state, { lens: 'all', q: '', sp: [], role: [], w: [], src: [] }); q.value = ''; render(); };
+document.getElementById('clear').addEventListener('click', clearAll);
+document.getElementById('facet-clear').addEventListener('click', () => { for (const [k] of FACETS) state[k] = []; render(); });
+if (matchMedia('(max-width: 860px)').matches) document.getElementById('facets').open = false;
+render();
 }
-
-/* ── Event listeners ── */
-document.getElementById('role-filters').addEventListener('click', e => {
-  const pill = e.target.closest('.pill');
-  if (!pill) return;
-  document.querySelectorAll('#role-filters .pill').forEach(p => p.classList.remove('active'));
-  pill.classList.add('active');
-  filters.role = pill.dataset.value;
-  render();
-});
-
-document.getElementById('source-filters').addEventListener('click', e => {
-  const pill = e.target.closest('.pill');
-  if (!pill) return;
-  document.querySelectorAll('#source-filters .pill').forEach(p => p.classList.remove('active'));
-  pill.classList.add('active');
-  filters.source = pill.dataset.value;
-  render();
-});
-
-document.getElementById('sort-select').addEventListener('change', e => {
-  sortBy = e.target.value;
-  render();
-});
-
-document.getElementById('clear-filters-btn')?.addEventListener('click', () => {
-  filters = { role: 'all', source: 'all', licenced: false, hideExpired: true };
-  document.getElementById('toggle-licenced').classList.remove('on');
-  document.getElementById('toggle-expired').classList.add('on');
-  document.querySelectorAll('#role-filters .pill').forEach(p => p.classList.remove('active'));
-  document.querySelector('#role-filters .pill[data-value="all"]').classList.add('active');
-  document.querySelectorAll('#source-filters .pill').forEach(p => p.classList.remove('active'));
-  document.querySelector('#source-filters .pill[data-value="all"]').classList.add('active');
-  document.getElementById('sort-select').value = 'date';
-  sortBy = 'date';
-  searchInput.value = '';
-  searchQuery = '';
-  searchClear.classList.remove('visible');
-  render();
-});
-
-/* ── Search ── */
-const searchInput = document.getElementById('search-input');
-const searchClear = document.getElementById('search-clear');
-searchInput.addEventListener('input', () => {
-  searchQuery = searchInput.value.trim();
-  searchClear.classList.toggle('visible', searchQuery.length > 0);
-  render();
-});
-searchClear.addEventListener('click', () => {
-  searchInput.value = '';
-  searchQuery = '';
-  searchClear.classList.remove('visible');
-  render();
-  searchInput.focus();
-});
-
-/* ── Boot ── */
-init();
 </script>
-
 </body>
 </html>
