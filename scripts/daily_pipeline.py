@@ -11,8 +11,8 @@ Runs the full daily pipeline:
   6. Git commit + push
   7. Force GitHub Pages rebuild
 
-LinkedIn via Bright Data (brightdata_linkedin.py) — replaces dead Brave-cookie source.
-If BRIGHT_DATA_API_KEY is missing or the call fails, LinkedIn degrades to 0 (expected).
+LinkedIn: the free guest search (linkedin_guest.py, no account) for "servicenow",
+plus Bright Data re-checking the seeded URLs when BRIGHT_DATA_API_KEY is set.
 
 Usage:
   python3 scripts/daily_pipeline.py            # normal daily run
@@ -175,18 +175,25 @@ def run_linkedin_brightdata():
 
     If BRIGHT_DATA_API_KEY is missing or the API fails, LinkedIn degrades to 0 (expected).
     """
-    log(">>> Running LinkedIn (Bright Data)...")
+    log(">>> Running LinkedIn (guest search)...")
+    guest = []
+    try:
+        from linkedin_guest import search
+        guest = search("servicenow", days=2, pages=6)
+        for j in guest:
+            j["role_type"] = _role_type(j["title"])
+            j["sn_role"] = True
+        log(f"  → guest search: {len(guest)} cards")
+    except Exception as e:
+        log(f"  ⚠️ LinkedIn guest search failed ({e}) — continuing", level="warn")
+
     try:
         from brightdata_linkedin import BrightDataLinkedIn
     except ImportError:
-        log("  ⚠️ brightdata_linkedin.py not importable — skipping LinkedIn", level="warn")
-        write_empty_linkedin_json()
-        return True
-
+        BrightDataLinkedIn = None
     api_key = os.environ.get("BRIGHT_DATA_API_KEY")
-    if not api_key:
-        log("  ⚠️ BRIGHT_DATA_API_KEY not set — skipping LinkedIn", level="warn")
-        write_empty_linkedin_json()
+    if not (BrightDataLinkedIn and api_key):
+        write_linkedin_json(_sn_only(guest), "guest only")
         return True
 
     try:
@@ -201,25 +208,47 @@ def run_linkedin_brightdata():
                 if urls:
                     log(f"  → Using {len(urls)} pre-seeded LinkedIn URLs from {seed_file}")
                     jobs = bd.scrape_urls(urls)
-        # Filter to SN-relevant roles
-        sn_kw = ["servicenow", "snow", "itsm", "csm", "itom", "hrsd", "secops",
-                 "csam", "grcc", "fsm"]
-        filtered = []
-        for j in jobs:
-            title = (j.get("title", "") or "").lower()
-            if any(k in title for k in sn_kw):
-                filtered.append(j)
-
-        os.makedirs(DATA_DIR, exist_ok=True)
-        out_path = os.path.join(DATA_DIR, "linkedin_jobs.json")
-        with open(out_path, "w") as f:
-            json.dump(filtered, f, indent=2, ensure_ascii=False)
-        log(f"  ✅ LinkedIn (Bright Data): {len(filtered)} jobs")
+        # Guest cards first: they carry the real posting date, Bright Data does not.
+        ids = {_job_id(j.get("url")) for j in guest}
+        jobs = guest + [j for j in jobs if _job_id(j.get("url")) not in ids]
+        write_linkedin_json(_sn_only(jobs), "guest + Bright Data")
         return True
     except Exception as e:
         log(f"  ⚠️ Bright Data LinkedIn failed ({e}) — continuing", level="warn")
-        write_empty_linkedin_json()
+        write_linkedin_json(_sn_only(guest), "guest only")
         return True
+
+
+SN_KW = ["servicenow", "snow", "itsm", "csm", "itom", "hrsd", "secops",
+         "csam", "grcc", "fsm"]
+
+
+def _sn_only(jobs):
+    return [j for j in jobs if any(k in (j.get("title") or "").lower() for k in SN_KW)]
+
+
+def _job_id(url):
+    import re
+    m = re.search(r"(\d{8,})", url or "")
+    return m.group(1) if m else url
+
+
+def _role_type(title):
+    t = title.lower()
+    for kw, kind in (("architect", "architect"), ("developer", "developer"),
+                     ("engineer", "developer"), ("consultant", "consultant"),
+                     ("manager", "manager"), ("lead", "manager"), ("director", "manager"),
+                     ("admin", "admin"), ("analyst", "analyst")):
+        if kw in t:
+            return kind
+    return "other"
+
+
+def write_linkedin_json(jobs, how):
+    os.makedirs(DATA_DIR, exist_ok=True)
+    with open(os.path.join(DATA_DIR, "linkedin_jobs.json"), "w") as f:
+        json.dump(jobs, f, indent=2, ensure_ascii=False)
+    log(f"  ✅ LinkedIn ({how}): {len(jobs)} jobs")
 
 
 def write_empty_linkedin_json():
