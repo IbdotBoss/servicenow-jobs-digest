@@ -12,7 +12,7 @@ This version queries the real <a href="/job/SLUG"> anchors and parses the
 card text for title/company/location. /job/ URLs pass the bad-URL filter, so
 Hunt UK jobs now contribute real, linkable, active listings.
 
-Output: docs/data/hunt_uk_jobs.json
+Output: data/hunt_uk_jobs.json
 """
 
 import json, os, re, glob as _g, sys
@@ -26,8 +26,8 @@ except ImportError:
     sys.exit(1)
 
 URL = 'https://huntukvisasponsors.com/jobs?q=servicenow'
-OUT = os.path.expanduser(
-    '~/hermes-workspace/servicenow-jobs-digest/docs/data/hunt_uk_jobs.json')
+OUT = os.path.join(
+    os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'data', 'hunt_uk_jobs.json')
 TODAY      = datetime.now().strftime('%Y-%m-%d')
 SCRAPED_AT = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 

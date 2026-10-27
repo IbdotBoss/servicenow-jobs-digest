@@ -36,8 +36,8 @@ CATEGORY_URLS = [
     ('https://www.nelsonfrank.com/jobs/?show_results=1&query=servicenow&location=London', 'london'),
 ]
 
-OUT = os.path.expanduser(
-    '~/hermes-workspace/servicenow-jobs-digest/docs/data/nelson_frank_jobs.json'
+OUT = os.path.join(
+    os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'data', 'nelson_frank_jobs.json'
 )
 TODAY = datetime.now().strftime('%Y-%m-%d')
 SCRAPED_AT = datetime.now().strftime('%Y-%m-%d %H:%M:%S')

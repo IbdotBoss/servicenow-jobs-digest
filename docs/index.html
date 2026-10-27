@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ServiceNow Jobs UK</title>
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
-<meta name="description" content="Open ServiceNow roles in the UK, checked each morning against the Home Office register of licensed sponsors.">
+<meta name="description" content="Open ServiceNow roles in the UK, updated daily, each employer checked against the Home Office register of licensed sponsors.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -185,7 +185,7 @@ footer .fine { grid-column: 1 / -1; color: var(--color-muted); border-top: 1px s
 
 <footer id="method">
   <div class="wrap">
-    <div><h2>How the check works</h2><p>Each employer's name is matched against the Home Office register of licensed sponsors every morning. A match means the employer can sponsor a visa. It doesn't mean this role will. Agencies are kept apart, because an agency's licence doesn't cover the employer it recruits for.</p></div>
+    <div><h2>How the check works</h2><p>Each employer's name is matched against the Home Office register of licensed sponsors (Skilled Worker route, A-rated)<span id="register-date"></span>. The whole name has to match, ignoring endings such as Ltd, PLC and UK. A match means the employer can sponsor a visa. It doesn't mean this role will. Agencies are kept apart, because an agency's licence doesn't cover the employer it recruits for.</p></div>
     <div><h2>What the register column says</h2><dl>
       <div><dt>Licensed sponsor</dt><dd>The employer is on the register.</dd></div>
       <div><dt>No register match</dt><dd>The name wasn't found. It may be registered under another name.</dd></div>
@@ -293,6 +293,7 @@ function render() {
 const nSponsor = jobs.filter(j => j.sp === 'licensed').length;
 const nNew = jobs.filter(isNew).length;
 document.getElementById('edition').textContent = 'Edition of ' + longDate(UPDATED);
+if (D.register) document.getElementById('register-date').textContent = ', using the copy published on ' + longDate(D.register).replace(/^\w+, /, '');
 const fig = (n, lens) => { const a = el('a', 'num', String(n)); a.href = '#results-title'; a.addEventListener('click', e => { e.preventDefault(); state.lens = lens; render(); document.getElementById('results-title').scrollIntoView(); }); return a; };
 document.getElementById('headline').replaceChildren(el('span', 'num', jobs.length), ' open roles. ', fig(nSponsor, 'sponsor'), ' at licensed sponsors, ', fig(nNew, 'new'), ' new today.');
 document.getElementById('n-all').textContent = jobs.length;

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Export the files the public page reads, from master.json.
+Export the files the public page reads, from data/master.json.
 
   docs/data/active.json            open roles only, slim fields, display-clean text (~60 KB)
   docs/data/archive/YYYY-MM.json   stale and expired roles, by the month they were last seen
@@ -16,9 +16,11 @@ import os
 import re
 from collections import defaultdict
 
+from scan_sponsorship import SPONSOR_CSV
+
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(REPO, "docs", "data")
-MASTER_FILE = os.path.join(DATA_DIR, "master.json")
+MASTER_FILE = os.path.join(REPO, "data", "master.json")
 ACTIVE_FILE = os.path.join(DATA_DIR, "active.json")
 ARCHIVE_DIR = os.path.join(DATA_DIR, "archive")
 
@@ -111,7 +113,10 @@ def main():
         master = json.load(f)
     active, archive = split(master.get("jobs", []))
     updated = master.get("updated", "")
-    _write(ACTIVE_FILE, {"updated": updated, "jobs": [slim(j) for j in active]})
+    # The date of the register copy in use, read from its filename, so the page can say how current the check is.
+    register = re.search(r"\d{4}-\d{2}-\d{2}", os.path.basename(SPONSOR_CSV))
+    _write(ACTIVE_FILE, {"updated": updated, "register": register.group(0) if register else "",
+                         "jobs": [slim(j) for j in active]})
     for month, jobs in archive.items():
         _write(os.path.join(ARCHIVE_DIR, f"{month}.json"),
                {"month": month, "jobs": [dict(slim(j), status=j.get("status")) for j in jobs]})

@@ -9,7 +9,7 @@ from datetime import datetime
 
 UA = 'Mozilla/5.0 (Linux; Android 10; Pixel 3) AppleWebKit/537.36'
 TODAY = datetime.now().strftime("%Y-%m-%d")
-OUT = os.path.expanduser("~/hermes-workspace/servicenow-jobs-digest/docs/data/jobserve_jobs.json")
+OUT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "jobserve_jobs.json")
 SPONSOR_CSV = os.path.expanduser("~/hermes-workspace/Faajaa-Share/2026-05-06_-_Worker_and_Temporary_Worker.csv")
 COOKIE_FILE = '/tmp/js_cookies.txt'
 

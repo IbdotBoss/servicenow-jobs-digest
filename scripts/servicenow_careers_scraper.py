@@ -5,7 +5,7 @@ Parses the official ServiceNow careers RSS XML feed for UK-based technical roles
 ServiceNow is on the A-rated Skilled Worker sponsor register — every job is a guaranteed sponsor.
 
 Source: https://careers.servicenow.com/jobs/xml/?rss=true
-Output: docs/data/servicenow_careers_jobs.json
+Output: data/servicenow_careers_jobs.json
 
 Usage: python3 scripts/servicenow_careers_scraper.py
 """
@@ -16,7 +16,7 @@ import json, os, re, csv
 from datetime import datetime
 
 RSS_URL = 'https://careers.servicenow.com/jobs/xml/?rss=true'
-OUT = os.path.expanduser('~/hermes-workspace/servicenow-jobs-digest/docs/data/servicenow_careers_jobs.json')
+OUT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'data', 'servicenow_careers_jobs.json')
 SPONSOR_CSV = os.path.expanduser('~/hermes-workspace/Faajaa-Share/2026-05-06_-_Worker_and_Temporary_Worker.csv')
 UA = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36'
 TODAY = datetime.now().strftime('%Y-%m-%d')

@@ -29,8 +29,8 @@ import logging
 from logging.handlers import RotatingFileHandler
 from datetime import datetime
 
-REPO = os.path.expanduser("~/hermes-workspace/servicenow-jobs-digest")
-DATA_DIR = os.path.join(REPO, "docs", "data")
+REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DATA_DIR = os.path.join(REPO, "data")  # history and source files; the site reads docs/data
 DAILY_DIR = os.path.join(DATA_DIR, "daily")
 TODAY = datetime.now().strftime("%Y-%m-%d")
 
@@ -331,7 +331,7 @@ def git_commit_push():
     log(">>> Git commit & push...")
     # Only stage our data files + logs that matter
     ok1, out1 = run_subprocess(
-        ["git", "add", "docs/data/"],
+        ["git", "add", "docs/data/", "data/"],
         timeout=30,
     )
     if not ok1:
@@ -489,7 +489,7 @@ def main():
             tags[t] = tags.get(t, 0) + 1
         log(f"\n📊 FINAL STATE:")
         log(f"  Live: https://ibdotboss.github.io/servicenow-jobs-digest/")
-        log(f"  Data: https://ibdotboss.github.io/servicenow-jobs-digest/data/master.json")
+        log(f"  Data: https://ibdotboss.github.io/servicenow-jobs-digest/data/active.json")
         log(f"  Total: {master['total']} | Active: {master['total_active']} | Licenced: {master['licenced_sponsors']}")
         log(f"  Tags: {tags}")
         log(f"  Snapshots: {len(master.get('daily_snapshots', []))}")

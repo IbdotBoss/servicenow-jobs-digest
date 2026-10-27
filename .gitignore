@@ -41,8 +41,7 @@ env/
 *.toc
 
 # Project-specific
-docs/data/jobs.json
-docs/data/.gitignore
+data/jobs.json
 logs/
 *.log
 *.sqlite

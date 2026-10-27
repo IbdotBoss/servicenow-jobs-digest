@@ -11,7 +11,7 @@ import json, os, glob
 from datetime import datetime, timedelta
 from collections import Counter
 
-REPO = os.path.expanduser("~/hermes-workspace/servicenow-jobs-digest/docs/data")
+REPO = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data")
 DAILY_DIR = os.path.join(REPO, "daily")
 MASTER_FILE = os.path.join(REPO, "master.json")
 JOBS_FILE = os.path.join(REPO, "jobs.json")  # active jobs copy for index page

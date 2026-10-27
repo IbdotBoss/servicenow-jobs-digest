@@ -17,9 +17,9 @@ from pathlib import Path
 from collections import Counter
 import html as htmlmod
 
-REPO = os.path.expanduser("~/hermes-workspace/servicenow-jobs-digest")
-JOBS_FILE = os.path.join(REPO, "docs/data/jobs.json")
-MASTER_FILE = os.path.join(REPO, "docs/data/master.json")
+REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+JOBS_FILE = os.path.join(REPO, "data/jobs.json")
+MASTER_FILE = os.path.join(REPO, "data/master.json")
 SPONSOR_CSV = os.path.expanduser("~/hermes-workspace/Faajaa-Share/2026-05-06_-_Worker_and_Temporary_Worker.csv")
 UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36"
 
@@ -62,32 +62,37 @@ def load_sponsor_set():
                 name = row.get('Organisation Name', '').strip()
                 if name and 'skilled worker' in route and 'a rating' in rating:
                     # Normalize: lowercase, strip common suffixes
-                    normalized = name.lower().strip()
-                    sponsors.add(normalized)
+                    sponsors.add(normalize_company(name))
         print(f"[INFO] Loaded {len(sponsors)} A-rated Skilled Worker sponsors")
     except Exception as e:
         print(f"[ERROR] Failed to load sponsor CSV: {e}")
     
     return sponsors
 
+_LEGAL_TAIL = re.compile(r"\s+(ltd|limited|plc|llp|lp|inc|incorporated|corporation|corp|co|company|uk|gb|"
+                         r"united kingdom|group|holdings|services|solutions|technologies|technology|consulting)$")
+
+
 def normalize_company(name):
-    """Normalize company name for fuzzy matching against sponsor register."""
+    """One canonical form for an employer name, applied to BOTH the register and the listing.
+
+    "IBM UNITED KINGDOM LIMITED" and "IBM UK Ltd" both become "ibm"; "Stott & May" and
+    "Stott and May" agree. Matching is equality on this form, never a substring.
+    """
     if not name:
         return ''
-    n = name.lower().strip()
-    # Strip common legal suffixes
-    for suffix in [' ltd', ' limited', ' plc', ' uk limited', ' uk', ' (uk)', '(uk)',
-                   ' corporation', ' inc', ' incorporated', ' group', ' holdings',
-                   ' services', ' solutions', ' technologies', ' consulting']:
-        if n.endswith(suffix):
-            n = n[:-len(suffix)].strip()
-    # Strip parenthetical qualifiers
-    import re as re_mod
-    n = re_mod.sub(r'\s*\([^)]*\)\s*', ' ', n).strip()
-    # Strip trailing qualifiers after dash
-    if ' - ' in n:
-        n = n.split(' - ')[0].strip()
-    return n
+    n = name.lower()
+    if ' - ' in n:  # "Alexander Mann Solutions - Public Sector Resourcing"
+        n = n.split(' - ')[0]
+    n = n.replace('&', ' and ')
+    n = re.sub(r'\([^)]*\)', ' ', n)
+    n = re.sub(r'[^a-z0-9 ]+', ' ', n)
+    n = re.sub(r'\s+', ' ', n).strip()
+    while True:
+        m = _LEGAL_TAIL.search(n)
+        if not m or m.start() == 0:
+            return n
+        n = n[:m.start()].strip()
 
 # Company names that should NEVER match the sponsor register,
 # even if a substring happens to appear in the CSV.
@@ -95,12 +100,12 @@ def normalize_company(name):
 # Pitfall #53: recruitment agencies post on behalf of clients — the
 #   agency's licence doesn't apply to the end employer.
 COMPANY_NAME_BLACKLIST = {
-    'agency', '[view listing]', 'confidential', 'unknown', '', 'none',
+    'agency', '[view listing]', 'confidential', 'unknown', '', 'none', 'n/a', 'na', 'united kingdom',
 }
 
 AGENCY_KEYWORDS = [
     'recruitment', 'recruiting', 'staffing', 'personnel',
-    'talent solutions', 'resource solutions',
+    'talent solutions', 'resource solutions', 'resourcing',
 ]
 
 # Well-known recruitment agencies whose sponsor licence
@@ -161,21 +166,9 @@ def company_has_licence(company_name, sponsor_set):
     if is_agency(company_name):
         return False, f'agency_name:{raw}'
     
-    # Exact match first
-    if raw in sponsor_set:
-        return True, 'exact'
-    
-    # Normalized match
     norm = normalize_company(company_name)
     if norm and norm in sponsor_set:
-        return True, 'normalized'
-    
-    # Partial match: check if any sponsor contains the normalized name or vice-versa
-    if norm and len(norm) > 2:
-        for s in sponsor_set:
-            if norm in s or s in norm:
-                return True, 'partial'
-    
+        return True, 'whole_name'
     return False, ''
 
 def fetch_page(url):

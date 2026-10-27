@@ -10,7 +10,7 @@ import subprocess
 import sys
 import os
 
-REPO = os.path.expanduser("~/hermes-workspace/servicenow-jobs-digest")
+REPO = os.path.dirname(os.path.abspath(__file__))
 
 def main():
     print("=" * 60)
