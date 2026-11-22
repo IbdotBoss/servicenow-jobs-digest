@@ -1,7 +1,7 @@
 {
-  "updated": "2026-11-21",
-  "total": 1634,
-  "total_active": 249,
+  "updated": "2026-11-22",
+  "total": 1635,
+  "total_active": 242,
   "licenced_sponsors": 573,
   "daily_snapshots": [
     "2026-05-06",
@@ -175,10 +175,11 @@
     "2026-11-18",
     "2026-11-19",
     "2026-11-20",
-    "2026-11-21"
+    "2026-11-21",
+    "2026-11-22"
   ],
   "sources": {
-    "JobServe": 914,
+    "JobServe": 915,
     "Hunt UK": 429,
     "LinkedIn": 268,
     "ServiceNow Careers": 50,
@@ -194,6 +195,37 @@
     "CV-Library": 1
   },
   "jobs": [
+    {
+      "title": "ITSM & Integration Architect - DV Cleared",
+      "company": "LA International Computer Consultants Ltd",
+      "location": "Excellent Rates Negotiable",
+      "salary_display": "Not listed",
+      "date_posted": "2026-11-21 13:17:35",
+      "url": "https://www.jobserve.com/gb/en/mob/job/DCEEEF5167229CCE5F/",
+      "source": "JobServe",
+      "source_type": "aggregator",
+      "sn_role": false,
+      "role_type": "sn-adjacent",
+      "remote": "onsite",
+      "employment": "permanent",
+      "sc_clearance": true,
+      "grad_scheme": false,
+      "link_status": "live",
+      "visa_sponsorship": "sc_blocked",
+      "description": "Posted 15 hours ago",
+      "scraped_at": "2026-11-22 05:00:31",
+      "sponsor_licence": false,
+      "sponsorship_mentioned": false,
+      "recruiter": false,
+      "sponsorship_scan": "blocked_by_manual_tag: sc_blocked",
+      "first_seen": "2026-11-22",
+      "last_seen": "2026-11-22",
+      "sources": [
+        "JobServe"
+      ],
+      "date_reliable": true,
+      "status": "active"
+    },
     {
       "title": "ServiceNow Technical Consultant | SecOps - IRM - GRC | Outside IR35",
       "company": "Opus Recruitment Solutions Ltd",
@@ -217,7 +249,7 @@
       "sponsorship_mentioned": false,
       "recruiter": true,
       "first_seen": "2026-11-21",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "sources": [
         "JobServe"
       ],
@@ -248,7 +280,7 @@
       "recruiter": false,
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-11-21",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "sources": [
         "JobServe"
       ],
@@ -279,7 +311,7 @@
       "recruiter": false,
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-11-21",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "sources": [
         "JobServe"
       ],
@@ -310,7 +342,7 @@
       "recruiter": false,
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-11-21",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "sources": [
         "JobServe"
       ],
@@ -341,7 +373,7 @@
       "recruiter": true,
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-11-21",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "sources": [
         "JobServe"
       ],
@@ -372,7 +404,7 @@
       "recruiter": false,
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-11-21",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "sources": [
         "JobServe"
       ],
@@ -663,7 +695,7 @@
       "sponsorship_mentioned": false,
       "recruiter": false,
       "first_seen": "2026-11-21",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "sources": [
         "ServiceNow Careers"
       ],
@@ -693,7 +725,7 @@
       "sponsorship_mentioned": false,
       "recruiter": false,
       "first_seen": "2026-11-21",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "sources": [
         "ServiceNow Careers"
       ],
@@ -723,7 +755,7 @@
       "sponsorship_mentioned": false,
       "recruiter": false,
       "first_seen": "2026-11-21",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "sources": [
         "ServiceNow Careers"
       ],
@@ -919,8 +951,8 @@
       "company": "Exalto Consulting Ltd",
       "location": "84999.00 Annual GBP",
       "salary_display": "Not listed",
-      "date_posted": "2026-11-19 21:55:32",
-      "url": "https://www.jobserve.com/gb/en/mob/job/AEF3140FA10A00D056/",
+      "date_posted": "2026-11-21 05:15:00",
+      "url": "https://www.jobserve.com/gb/en/mob/job/7B2F699D28EE621E8C/",
       "source": "JobServe",
       "source_type": "aggregator",
       "sn_role": true,
@@ -937,7 +969,7 @@
       "sponsorship_mentioned": false,
       "recruiter": false,
       "first_seen": "2026-11-20",
-      "last_seen": "2026-11-20",
+      "last_seen": "2026-11-22",
       "sources": [
         "JobServe"
       ],
@@ -967,7 +999,7 @@
       "sponsorship_mentioned": false,
       "recruiter": false,
       "first_seen": "2026-11-20",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "sources": [
         "ServiceNow Careers"
       ],
@@ -2989,7 +3021,7 @@
       "sponsorship_mentioned": false,
       "recruiter": false,
       "first_seen": "2026-11-13",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "sources": [
         "ServiceNow Careers"
       ],
@@ -4291,7 +4323,7 @@
       "sponsorship_mentioned": false,
       "recruiter": false,
       "first_seen": "2026-11-10",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "sources": [
         "ServiceNow Careers"
       ],
@@ -4491,7 +4523,7 @@
       "employment": "permanent",
       "sc_clearance": true,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "stale",
       "visa_sponsorship": "sc_blocked",
       "description": "Posted 5 hours ago",
       "scraped_at": "2026-11-07 05:00:59",
@@ -4505,7 +4537,7 @@
         "JobServe"
       ],
       "date_reliable": true,
-      "status": "active"
+      "status": "stale"
     },
     {
       "title": "Lead Software Engineer (ServiceNow)",
@@ -4695,7 +4727,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "stale",
       "visa_sponsorship": "unknown",
       "sponsor_licence": true,
       "sponsorship_mentioned": false,
@@ -4709,7 +4741,7 @@
         "LinkedIn"
       ],
       "date_reliable": true,
-      "status": "active"
+      "status": "stale"
     },
     {
       "title": "ServiceNow Tech Lead, UK",
@@ -4724,7 +4756,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "stale",
       "visa_sponsorship": "unknown",
       "sponsor_licence": false,
       "sponsorship_mentioned": false,
@@ -4738,7 +4770,7 @@
         "LinkedIn"
       ],
       "date_reliable": true,
-      "status": "active"
+      "status": "stale"
     },
     {
       "title": "Director, Global Employment Law, EMEA",
@@ -4763,7 +4795,7 @@
       "sponsorship_mentioned": false,
       "recruiter": false,
       "first_seen": "2026-11-07",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "sources": [
         "ServiceNow Careers"
       ],
@@ -4785,7 +4817,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "stale",
       "visa_sponsorship": "unknown",
       "description": "Posted 13 hours ago",
       "scraped_at": "2026-11-06 05:01:01",
@@ -4798,7 +4830,7 @@
         "JobServe"
       ],
       "date_reliable": true,
-      "status": "active"
+      "status": "stale"
     },
     {
       "title": "Senior ServiceNow Developer | SC Cleared | HRSD",
@@ -4815,7 +4847,7 @@
       "employment": "permanent",
       "sc_clearance": true,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "stale",
       "visa_sponsorship": "sc_blocked",
       "description": "Posted 12 hours ago",
       "scraped_at": "2026-11-06 05:01:01",
@@ -4829,7 +4861,7 @@
         "JobServe"
       ],
       "date_reliable": true,
-      "status": "active"
+      "status": "stale"
     },
     {
       "title": "Senior Technical Consultant - ServiceNow (ITSM/CSM/ATF)",
@@ -4846,7 +4878,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "stale",
       "visa_sponsorship": "unknown",
       "description": "Posted 18 hours ago",
       "scraped_at": "2026-11-06 05:01:01",
@@ -4859,7 +4891,7 @@
         "JobServe"
       ],
       "date_reliable": true,
-      "status": "active"
+      "status": "stale"
     },
     {
       "title": "ServiceNow Solutions Developer",
@@ -4874,7 +4906,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "stale",
       "visa_sponsorship": "unknown",
       "sponsor_licence": false,
       "sponsorship_mentioned": false,
@@ -4888,7 +4920,7 @@
         "LinkedIn"
       ],
       "date_reliable": true,
-      "status": "active"
+      "status": "stale"
     },
     {
       "title": "IT SecOps Manager",
@@ -6277,7 +6309,7 @@
       "recruiter": false,
       "sponsorship_scan": "Job cannot sponsor",
       "first_seen": "2026-11-02",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "sources": [
         "Hunt UK"
       ],
@@ -6309,7 +6341,7 @@
       "sponsorship_mentioned": true,
       "recruiter": false,
       "first_seen": "2026-11-02",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "sources": [
         "Hunt UK"
       ],
@@ -6341,7 +6373,7 @@
       "sponsorship_mentioned": false,
       "recruiter": true,
       "first_seen": "2026-11-02",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "sources": [
         "Hunt UK"
       ],
@@ -6462,7 +6494,7 @@
       "recruiter": false,
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-11-01",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "sources": [
         "Hunt UK"
       ],
@@ -6495,7 +6527,7 @@
       "recruiter": false,
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-11-01",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "sources": [
         "Hunt UK"
       ],
@@ -6528,7 +6560,7 @@
       "recruiter": false,
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-11-01",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "sources": [
         "Hunt UK"
       ],
@@ -6561,7 +6593,7 @@
       "recruiter": false,
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-11-01",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "sources": [
         "Hunt UK"
       ],
@@ -6593,7 +6625,7 @@
       "sponsorship_mentioned": true,
       "recruiter": false,
       "first_seen": "2026-11-01",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "sources": [
         "Hunt UK"
       ],
@@ -6625,7 +6657,7 @@
       "sponsorship_mentioned": true,
       "recruiter": false,
       "first_seen": "2026-11-01",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "sources": [
         "Hunt UK"
       ],
@@ -6944,7 +6976,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "live",
+      "link_status": "stale",
       "visa_sponsorship": "unknown",
       "sponsor_licence": true,
       "sponsorship_mentioned": false,
@@ -6958,7 +6990,7 @@
         "LinkedIn"
       ],
       "date_reliable": true,
-      "status": "active"
+      "status": "stale"
     },
     {
       "title": "Director of Data Engineering - ServiceNow Configuration Management (Enterprise Technology)",
@@ -7638,7 +7670,7 @@
       "recruiter": false,
       "sponsorship_scan": "Will not sponsor",
       "first_seen": "2026-10-30",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "sources": [
         "Hunt UK"
       ],
@@ -7671,7 +7703,7 @@
       "recruiter": false,
       "sponsorship_scan": "5yr UK residency required",
       "first_seen": "2026-10-30",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "sources": [
         "Hunt UK"
       ],
@@ -9218,7 +9250,7 @@
       "recruiter": false,
       "sponsorship_scan": "Will not sponsor",
       "first_seen": "2026-10-27",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "sources": [
         "Hunt UK"
       ],
@@ -9248,7 +9280,7 @@
       "sponsorship_mentioned": false,
       "recruiter": false,
       "first_seen": "2026-10-27",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "sources": [
         "ServiceNow Careers"
       ],
@@ -9369,7 +9401,7 @@
       "sponsorship_mentioned": true,
       "recruiter": false,
       "first_seen": "2026-10-26",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "sources": [
         "Hunt UK"
       ],
@@ -9401,7 +9433,7 @@
       "sponsorship_mentioned": true,
       "recruiter": false,
       "first_seen": "2026-10-26",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "sources": [
         "Hunt UK"
       ],
@@ -9434,7 +9466,7 @@
       "sponsorship_mentioned": true,
       "recruiter": false,
       "first_seen": "2026-10-26",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "sources": [
         "Hunt UK"
       ],
@@ -9464,7 +9496,7 @@
       "sponsorship_mentioned": true,
       "recruiter": false,
       "first_seen": "2026-10-25",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "sources": [
         "JobServe",
         "Hunt UK"
@@ -9681,7 +9713,7 @@
       "sponsorship_mentioned": true,
       "recruiter": false,
       "first_seen": "2026-10-24",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "sources": [
         "Hunt UK"
       ],
@@ -9802,7 +9834,7 @@
       "sponsorship_scan": "Security clearance required",
       "recruiter": false,
       "first_seen": "2026-10-23",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "sources": [
         "JobServe"
       ],
@@ -9835,7 +9867,7 @@
       "sponsorship_scan": "Security clearance required",
       "recruiter": false,
       "first_seen": "2026-10-23",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "sources": [
         "Hunt UK"
       ],
@@ -10265,7 +10297,7 @@
       "sponsorship_mentioned": false,
       "recruiter": false,
       "first_seen": "2026-10-22",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "sources": [
         "ServiceNow Careers"
       ],
@@ -10631,7 +10663,7 @@
       "sponsorship_mentioned": false,
       "recruiter": false,
       "first_seen": "2026-10-20",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "sources": [
         "JobServe"
       ],
@@ -10723,7 +10755,7 @@
       "sponsorship_mentioned": true,
       "recruiter": false,
       "first_seen": "2026-10-20",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "sources": [
         "Hunt UK"
       ],
@@ -10755,7 +10787,7 @@
       "sponsorship_mentioned": false,
       "recruiter": false,
       "first_seen": "2026-10-20",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "sources": [
         "Hunt UK"
       ],
@@ -10787,7 +10819,7 @@
       "sponsorship_mentioned": false,
       "recruiter": false,
       "first_seen": "2026-10-20",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "sources": [
         "Hunt UK"
       ],
@@ -11102,7 +11134,7 @@
       "sponsorship_mentioned": false,
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-10-16",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "sources": [
         "JobServe"
       ],
@@ -11162,7 +11194,7 @@
       "scraped_at": "2026-10-16 05:01:01",
       "sponsorship_mentioned": false,
       "first_seen": "2026-10-16",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "sources": [
         "ServiceNow Careers"
       ],
@@ -13035,7 +13067,7 @@
       "scraped_at": "2026-10-08 05:00:35",
       "sponsorship_mentioned": false,
       "first_seen": "2026-10-08",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "sources": [
         "ServiceNow Careers"
       ],
@@ -15368,7 +15400,7 @@
       "sponsorship_mentioned": false,
       "recruiter": true,
       "first_seen": "2026-09-26",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "sources": [
         "Hunt UK"
       ],
@@ -15941,7 +15973,7 @@
       "sponsorship_scan": "Security clearance required",
       "recruiter": false,
       "first_seen": "2026-09-24",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "sources": [
         "Hunt UK"
       ],
@@ -16145,7 +16177,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "unknown",
       "description": "Posted 21 hours ago",
       "scraped_at": "2026-09-21 05:00:10",
@@ -16158,7 +16190,7 @@
         "JobServe"
       ],
       "date_reliable": true,
-      "status": "stale"
+      "status": "expired"
     },
     {
       "title": "ServiceNow CPQ Consultant",
@@ -16697,7 +16729,7 @@
       "sponsorship_mentioned": false,
       "recruiter": false,
       "first_seen": "2026-09-19",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "sources": [
         "ServiceNow Careers"
       ],
@@ -18202,7 +18234,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "sc_blocked",
       "description": "Posted 22 hours ago",
       "scraped_at": "2026-09-11 05:00:15",
@@ -18216,7 +18248,7 @@
         "JobServe"
       ],
       "date_reliable": true,
-      "status": "stale"
+      "status": "expired"
     },
     {
       "title": "Senior ServiceNow Technical Consultant",
@@ -18721,7 +18753,7 @@
       "date_reliable": false,
       "recruiter": false,
       "first_seen": "2026-09-09",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "sources": [
         "LinkedIn"
       ],
@@ -18779,7 +18811,7 @@
       "date_reliable": false,
       "recruiter": false,
       "first_seen": "2026-09-09",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "sources": [
         "LinkedIn"
       ],
@@ -19298,8 +19330,8 @@
       "company": "DGH Recruitment",
       "location": "95k Annual GBP",
       "salary_display": "Not listed",
-      "date_posted": "2026-11-19 01:39:44",
-      "url": "https://www.jobserve.com/gb/en/mob/job/AA670C67558ED9A3D4/",
+      "date_posted": "2026-11-21 05:15:01",
+      "url": "https://www.jobserve.com/gb/en/mob/job/6F4FA901EC4E8202C8/",
       "source": "JobServe",
       "source_type": "aggregator",
       "sn_role": true,
@@ -19316,7 +19348,7 @@
       "sponsorship_mentioned": false,
       "recruiter": true,
       "first_seen": "2026-09-06",
-      "last_seen": "2026-11-20",
+      "last_seen": "2026-11-22",
       "sources": [
         "JobServe",
         "LinkedIn"
@@ -21310,7 +21342,7 @@
       "scraped_at": "2026-08-22 05:03:00",
       "recruiter": false,
       "first_seen": "2026-08-22",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "sources": [
         "ServiceNow Careers"
       ],
@@ -26471,7 +26503,7 @@
       "sponsorship_mentioned": true,
       "sponsorship_scan": "Security clearance required",
       "first_seen": "2026-07-25",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "sources": [
         "Hunt UK"
       ],
@@ -27959,7 +27991,7 @@
       "employment": "permanent",
       "sc_clearance": false,
       "grad_scheme": false,
-      "link_status": "stale",
+      "link_status": "live",
       "visa_sponsorship": "sc_blocked",
       "description": "Posted 14 hours ago",
       "scraped_at": "2026-07-17 05:00:54",
@@ -27972,7 +28004,7 @@
         "JobServe"
       ],
       "date_reliable": true,
-      "status": "stale"
+      "status": "expired"
     },
     {
       "title": "ServiceNow developer",
@@ -32759,7 +32791,7 @@
       "sponsorship_mentioned": false,
       "recruiter": true,
       "first_seen": "2026-06-25",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "sources": [
         "JobServe"
       ],
@@ -40571,7 +40603,7 @@
       "sponsor_licence": false,
       "agency_unknown": true,
       "recruiter": false,
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "sources": [
         "Nelson Frank"
       ],
@@ -42699,7 +42731,7 @@
         "ServiceNow Careers"
       ],
       "first_seen": "2026-05-15",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "recruiter": false,
       "date_reliable": true,
       "status": "active"
