@@ -1,11 +1,31 @@
 [
   {
+    "title": "ServiceNow Developer",
+    "company": "Cognizant",
+    "location": "London Colney, England, United Kingdom",
+    "url": "https://www.linkedin.com/jobs/view/4493104149/",
+    "date_posted": "2026-11-21",
+    "source": "LinkedIn",
+    "role_type": "developer",
+    "sn_role": true
+  },
+  {
+    "title": "ServiceNow CSM Principal Engineer",
+    "company": "Boston Consulting Group (BCG)",
+    "location": "London, England, United Kingdom",
+    "url": "https://www.linkedin.com/jobs/view/4476853727/",
+    "date_posted": "2026-11-22",
+    "source": "LinkedIn",
+    "role_type": "developer",
+    "sn_role": true
+  },
+  {
     "title": "Senior ServiceNow Developer",
     "company": "N/A",
     "location": "Birmingham, England, United Kingdom",
     "url": "https://www.linkedin.com/jobs/view/senior-servicenow-developer-at-deutsche-bank-4424759593?_l=en",
     "source": "LinkedIn",
-    "scraped_at": "2026-11-22 05:01:12",
+    "scraped_at": "2026-11-23 05:01:07",
     "visa_sponsorship": "unknown",
     "sponsor_licence": false
   },
@@ -15,7 +35,7 @@
     "location": "London, England, United Kingdom",
     "url": "https://www.linkedin.com/jobs/view/servicenow-developer-at-version-1-4460765355?_l=en",
     "source": "LinkedIn",
-    "scraped_at": "2026-11-22 05:01:12",
+    "scraped_at": "2026-11-23 05:01:07",
     "visa_sponsorship": "unknown",
     "sponsor_licence": false
   }
