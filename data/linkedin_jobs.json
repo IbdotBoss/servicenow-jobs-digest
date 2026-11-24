@@ -1,12 +1,12 @@
 [
   {
-    "title": "ServiceNow Developer",
-    "company": "Cognizant",
-    "location": "London Colney, England, United Kingdom",
-    "url": "https://www.linkedin.com/jobs/view/4493104149/",
-    "date_posted": "2026-11-21",
+    "title": "ServiceNow Architect",
+    "company": "Methods",
+    "location": "London, England, United Kingdom",
+    "url": "https://www.linkedin.com/jobs/view/4476006508/",
+    "date_posted": "2026-11-23",
     "source": "LinkedIn",
-    "role_type": "developer",
+    "role_type": "architect",
     "sn_role": true
   },
   {
@@ -20,12 +20,52 @@
     "sn_role": true
   },
   {
+    "title": "ServiceNow Solution Consultant",
+    "company": "SoftServe",
+    "location": "United Kingdom",
+    "url": "https://www.linkedin.com/jobs/view/4493909116/",
+    "date_posted": "2026-11-23",
+    "source": "LinkedIn",
+    "role_type": "consultant",
+    "sn_role": true
+  },
+  {
+    "title": "ServiceNow Product Owner",
+    "company": "Darwin Recruitment",
+    "location": "London, England, United Kingdom",
+    "url": "https://www.linkedin.com/jobs/view/4494005215/",
+    "date_posted": "2026-11-23",
+    "source": "LinkedIn",
+    "role_type": "other",
+    "sn_role": true
+  },
+  {
+    "title": "ServiceNow Architect",
+    "company": "NTT DATA Business Solutions",
+    "location": "England, United Kingdom",
+    "url": "https://www.linkedin.com/jobs/view/4493738743/",
+    "date_posted": "2026-11-23",
+    "source": "LinkedIn",
+    "role_type": "architect",
+    "sn_role": true
+  },
+  {
+    "title": "ServiceNow ITOM Technical Architect",
+    "company": "Gazelle Global",
+    "location": "United Kingdom",
+    "url": "https://www.linkedin.com/jobs/view/4490877145/",
+    "date_posted": "2026-11-23",
+    "source": "LinkedIn",
+    "role_type": "architect",
+    "sn_role": true
+  },
+  {
     "title": "Senior ServiceNow Developer",
     "company": "N/A",
     "location": "Birmingham, England, United Kingdom",
     "url": "https://www.linkedin.com/jobs/view/senior-servicenow-developer-at-deutsche-bank-4424759593?_l=en",
     "source": "LinkedIn",
-    "scraped_at": "2026-11-23 05:01:07",
+    "scraped_at": "2026-11-24 05:01:14",
     "visa_sponsorship": "unknown",
     "sponsor_licence": false
   },
@@ -35,7 +75,7 @@
     "location": "London, England, United Kingdom",
     "url": "https://www.linkedin.com/jobs/view/servicenow-developer-at-version-1-4460765355?_l=en",
     "source": "LinkedIn",
-    "scraped_at": "2026-11-23 05:01:07",
+    "scraped_at": "2026-11-24 05:01:14",
     "visa_sponsorship": "unknown",
     "sponsor_licence": false
   }
