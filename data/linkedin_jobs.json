@@ -1,73 +1,63 @@
 [
   {
-    "title": "ServiceNow Architect",
+    "title": "ServiceNow Developer",
     "company": "Methods",
     "location": "London, England, United Kingdom",
-    "url": "https://www.linkedin.com/jobs/view/4476006508/",
-    "date_posted": "2026-11-23",
-    "source": "LinkedIn",
-    "role_type": "architect",
-    "sn_role": true
-  },
-  {
-    "title": "ServiceNow CSM Principal Engineer",
-    "company": "Boston Consulting Group (BCG)",
-    "location": "London, England, United Kingdom",
-    "url": "https://www.linkedin.com/jobs/view/4476853727/",
-    "date_posted": "2026-11-22",
+    "url": "https://www.linkedin.com/jobs/view/4467393380/",
+    "date_posted": "2026-11-24",
     "source": "LinkedIn",
     "role_type": "developer",
     "sn_role": true
   },
   {
-    "title": "ServiceNow Solution Consultant",
-    "company": "SoftServe",
-    "location": "United Kingdom",
-    "url": "https://www.linkedin.com/jobs/view/4493909116/",
-    "date_posted": "2026-11-23",
+    "title": "ServiceNow Lead Technical Developer(L3/L4)",
+    "company": "Cognizant",
+    "location": "London Area, United Kingdom",
+    "url": "https://www.linkedin.com/jobs/view/4494178464/",
+    "date_posted": "2026-11-24",
     "source": "LinkedIn",
-    "role_type": "consultant",
-    "sn_role": true
-  },
-  {
-    "title": "ServiceNow Product Owner",
-    "company": "Darwin Recruitment",
-    "location": "London, England, United Kingdom",
-    "url": "https://www.linkedin.com/jobs/view/4494005215/",
-    "date_posted": "2026-11-23",
-    "source": "LinkedIn",
-    "role_type": "other",
+    "role_type": "developer",
     "sn_role": true
   },
   {
     "title": "ServiceNow Architect",
+    "company": "Falcon Smart IT (FalconSmartIT)",
+    "location": "London Area, United Kingdom",
+    "url": "https://www.linkedin.com/jobs/view/4494311912/",
+    "date_posted": "2026-11-24",
+    "source": "LinkedIn",
+    "role_type": "architect",
+    "sn_role": true
+  },
+  {
+    "title": "ServiceNow Architect",
+    "company": "Methods",
+    "location": "Birmingham, England, United Kingdom",
+    "url": "https://www.linkedin.com/jobs/view/4476012243/",
+    "date_posted": "2026-11-24",
+    "source": "LinkedIn",
+    "role_type": "architect",
+    "sn_role": true
+  },
+  {
+    "title": "Senior ServiceNow Solution Architect",
+    "company": "KPMG UK",
+    "location": "London Area, United Kingdom",
+    "url": "https://www.linkedin.com/jobs/view/4333478391/",
+    "date_posted": "2026-11-24",
+    "source": "LinkedIn",
+    "role_type": "architect",
+    "sn_role": true
+  },
+  {
+    "title": "ServiceNow Application Support Consultant (AMS)",
     "company": "NTT DATA Business Solutions",
     "location": "England, United Kingdom",
-    "url": "https://www.linkedin.com/jobs/view/4493738743/",
-    "date_posted": "2026-11-23",
+    "url": "https://www.linkedin.com/jobs/view/4494336061/",
+    "date_posted": "2026-11-24",
     "source": "LinkedIn",
-    "role_type": "architect",
+    "role_type": "consultant",
     "sn_role": true
-  },
-  {
-    "title": "ServiceNow ITOM Technical Architect",
-    "company": "Gazelle Global",
-    "location": "United Kingdom",
-    "url": "https://www.linkedin.com/jobs/view/4490877145/",
-    "date_posted": "2026-11-23",
-    "source": "LinkedIn",
-    "role_type": "architect",
-    "sn_role": true
-  },
-  {
-    "title": "Senior ServiceNow Developer",
-    "company": "N/A",
-    "location": "Birmingham, England, United Kingdom",
-    "url": "https://www.linkedin.com/jobs/view/senior-servicenow-developer-at-deutsche-bank-4424759593?_l=en",
-    "source": "LinkedIn",
-    "scraped_at": "2026-11-24 05:01:14",
-    "visa_sponsorship": "unknown",
-    "sponsor_licence": false
   },
   {
     "title": "ServiceNow Developer",
@@ -75,7 +65,17 @@
     "location": "London, England, United Kingdom",
     "url": "https://www.linkedin.com/jobs/view/servicenow-developer-at-version-1-4460765355?_l=en",
     "source": "LinkedIn",
-    "scraped_at": "2026-11-24 05:01:14",
+    "scraped_at": "2026-11-25 05:01:28",
+    "visa_sponsorship": "unknown",
+    "sponsor_licence": false
+  },
+  {
+    "title": "Senior ServiceNow Developer",
+    "company": "N/A",
+    "location": "Birmingham, England, United Kingdom",
+    "url": "https://www.linkedin.com/jobs/view/senior-servicenow-developer-at-deutsche-bank-4424759593?_l=en",
+    "source": "LinkedIn",
+    "scraped_at": "2026-11-25 05:01:28",
     "visa_sponsorship": "unknown",
     "sponsor_licence": false
   }
